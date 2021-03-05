@@ -7,6 +7,8 @@
 
 /public/ma.js
 /public/getdata.js
+# /build/getdata.js
+# /build/ma.js
 /server
 /.pnp
 
