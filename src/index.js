@@ -24,6 +24,8 @@ const db = low(adapter)
 db.set('options',{flag:true}).write()
 
 // axios.defaults.baseURL = "http://localhost:4000/"
+// https://github.com/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
+const imgServer = 'https://github.com/wrrwrr111/pretty-derby/raw/master/public/'
 
 async function getdbd(){
   let res = await axios.get('http://urarawin.com/dbd')
@@ -34,7 +36,7 @@ async function getdbd(){
     // 不需要同步
 
   }else{
-    res = await axios.get('http://urarawin.com/db')
+    res = await axios.get('https://raw.githubusercontent.com/wrrwrr111/pretty-derby/master/public/db.json')
     db.set('players',res.data.players).write()
     db.set('supports',res.data.supports).write()
     db.set('skills',res.data.skills).write()
@@ -69,7 +71,7 @@ const PlayerCard = (props)=>{
 
   return (
     <>
-      <Image src={props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
+      <Image src={imgServer+props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
       <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
         <Divider>适应</Divider>
@@ -103,7 +105,7 @@ const SupportCard = (props)=>{
 
   return (
     <>
-      <Image src={props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
+      <Image src={imgServer+props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
       <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
         <SupportDetail data={props.data}></SupportDetail>
@@ -188,7 +190,7 @@ const SkillBox = (props)=>{
     return(
       <Popover content={SkillItem} title={skill.name} className='skill-button'>
         <Button size={'large'} className={'skill-button-'+skill.rare}>
-          <Image src={skill.imgUrl} preview={false} width={26}></Image>
+          <Image src={imgServer+skill.imgUrl} preview={false} width={26}></Image>
           {skill.name}
         </Button>
       </Popover>
@@ -343,7 +345,7 @@ Support.defaultProps={
     return (
       <>
             <Col span={12}>
-              <img src={props.data.imgUrl} width={'50%'}></img>
+              <img src={imgServer+props.data.imgUrl} width={'50%'}></img>
             </Col>
             <Col span={24}>
               <SkillList skillList={props.data.possessionSkill} flag={props.flag}></SkillList>
@@ -537,7 +539,7 @@ Support.defaultProps={
         { skillList.filter(item=>item.rare === rare).map(skill=>
           <Popover content={<p key={skill.id}>{skill.describe}</p>} title={skill.name} key={skill.id} className={'skill-button'}>
             <Button size={'large'} className={'skill-button-'+rare}>
-            <Image src={skill.imgUrl} preview={false} width={26}></Image>
+            <Image src={imgServer+skill.imgUrl} preview={false} width={26}></Image>
             {skill.name}
             </Button>
           </Popover>
