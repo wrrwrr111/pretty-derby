@@ -4,7 +4,7 @@
 /node_modules
 /server/node_modules
 /server/tool
-/public/img/z.jpg
+
 /public/ma.js
 /public/getdata.js
 /server
@@ -16,7 +16,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
