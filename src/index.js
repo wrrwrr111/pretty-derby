@@ -33,7 +33,7 @@ const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 async function getdbd(){
   let res = await axios.get(cdnServer+'dbd.json')
   let localTime = db.get('updateTime').value()
-  console.log(localTime ,res.data.updateTime)
+  console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
   if (localTime && localTime === res.data.updateTime){
     console.log('latest 不需要同步')
     // 不需要同步
