@@ -37,11 +37,11 @@ async function getdbd(){
   let res = await axios.get(cdnServer+'dbd.json')
   let localTime = db.get('updateTime').value()
   console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
-  if (localTime && localTime === res.data.updateTime){
-    console.log('latest 不需要同步')
-    // 不需要同步
+  // if (localTime && localTime === res.data.updateTime){
+  //   console.log('latest 不需要同步')
+  //   // 不需要同步
 
-  }else{
+  // }else{
     console.log("同步")
     res = await axios.get(cdnServer+'db.json')
     db.set('players',res.data.players).write()
@@ -50,7 +50,7 @@ async function getdbd(){
     db.set('events',res.data.events).write()
     db.set('updateTime',res.data.updateTime).write()
     //重新加载
-  }
+  // }
   ReactDOM.render((<App></App>),document.getElementById('root'),);
 }
 getdbd()
