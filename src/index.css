@@ -25,26 +25,28 @@
   vertical-align: super;
 }
 .skill-button-レア{
-  border-color: yellow;
+  background-color: #eccc68;
 }
 .skill-button-固有{
-  border-color: purple;
+  background-color: #9b59b6;
 }
 
-.race-row p{
+.race-row-0 {
+  background-color: #CCCCCC;
+}
+.race-row-1 {
+  background-color: #99CCCC;
+}
+.race-row-2 {
+  background-color: #99CCCC;
+}
+.race-row-3 {
+  background-color: #CCCCCC;
+}
+.race-name p{
+  font-size:20px
+}
+.race-detail p{
   margin:0;
   font-size:8px;
-}
-
-.race-col-0 p{
-  background-color:#70f3ff;
-}
-.race-col-1 p{
-  background-color: #44cef6;
-}
-.race-col-2 p{
-  background-color: #3eede7;
-}
-.race-col-3 p{
-  background-color: #1685a9;
 }

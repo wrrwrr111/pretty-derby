@@ -2,8 +2,6 @@ import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route ,Link} from 'react-router-dom';
 
-import low from 'lowdb';
-import LocalStorage from 'lowdb/adapters/LocalStorage'
 
 import axios from 'axios'
 
@@ -12,16 +10,18 @@ import {Row,Col} from 'antd'
 import { Image } from 'antd';
 import { Layout, Menu,  } from 'antd';
 import { Modal, Button,Popover } from 'antd';
-import { Checkbox,  } from 'antd';
+import { Checkbox,Table  } from 'antd';
 import { Divider, } from 'antd';
 
 import './index.css'
+import db from './db.js'
+import Race from './race.js'
 
 const CheckboxGroup = Checkbox.Group
 
-const adapter = new LocalStorage('db')
-const db = low(adapter)
-db.set('options',{flag:true}).write()
+
+// const adapter = new LocalStorage('db')
+// const db = low(adapter)
 
 // axios.defaults.baseURL = "http://localhost:4000/"
 // https://github.com/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
@@ -33,27 +33,29 @@ const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 // https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 
-async function getdbd(){
-  let res = await axios.get('http://urarawin.com/dbd')
-  let localTime = db.get('updateTime').value()
-  console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
-  if (localTime && localTime === res.data.updateTime){
-    console.log('latest 不需要同步')
-    // 不需要同步
+// async function getdbd(){
+//   let res = await axios.get('http://urarawin.com/dbd')
+//   let localTime = db.get('updateTime').value()
+//   console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
+//   if (localTime && localTime === res.data.updateTime){
+//   // if (0){
+//     console.log('latest 不需要同步')
+//     // 不需要同步
 
-  }else{
-    console.log("同步")
-    res = await axios.get('http://urarawin.com/db')
-    db.set('players',res.data.players).write()
-    db.set('supports',res.data.supports).write()
-    db.set('skills',res.data.skills).write()
-    db.set('events',res.data.events).write()
-    db.set('updateTime',res.data.updateTime).write()
-    //重新加载
-  }
-  ReactDOM.render((<App></App>),document.getElementById('root'),);
-}
-getdbd()
+//   }else{
+//     console.log("同步")
+//     res = await axios.get('http://urarawin.com/db')
+//     db.set('players',res.data.players).write()
+//     db.set('supports',res.data.supports).write()
+//     db.set('skills',res.data.skills).write()
+//     db.set('events',res.data.events).write()
+//     db.set('updateTime',res.data.updateTime).write()
+//     db.set('races',res.data.races).write()
+//     //重新加载
+//   }
+//   ReactDOM.render((<App></App>),document.getElementById('root'),);
+// }
+// getdbd()
 
 const { Header, Content, Footer } = Layout;
 
@@ -88,7 +90,7 @@ const PlayerCard = (props)=>{
         <Divider>技能</Divider>
         <SkillList skillList={props.data.skillList}></SkillList>
         <Divider>事件</Divider>
-        <EventList eventList={props.data.eventList}></EventList>
+        <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
       </Modal>
     </>
   )
@@ -128,7 +130,7 @@ const SupportDetail = (props)=>{
       <Divider>自带技能</Divider>
       <SkillList skillList={props.data.possessionSkill}></SkillList>
       <Divider>事件</Divider>
-      <EventList eventList={props.data.eventList}></EventList>
+      <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
     </>
   )
 }
@@ -207,7 +209,7 @@ const SkillBox = (props)=>{
 //todo 需要翻译
 const EventList = (props)=>{
   const eventIdList = props.eventList
-  const eventList = eventIdList.map(id=>db.get('events').find({id:id}).value())
+  const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
   return (
     <>
     <Divider>多选</Divider>
@@ -232,29 +234,35 @@ const EventBox = (props)=>{
 
     return(
       <Popover content={ChoiceItem} title={props.event.name}>
-        <Button type="primary">{props.event.name}</Button>
+        <Button>{props.event.name}</Button>
       </Popover>
     )
 
 }
 const RaceList = (props) =>{
   return (
-    <Row className={'race-row'} gutter={[8,8]}>
+    <Row className={'race-row'}>
       {
-        props.raceList.map((race,index)=>
+        props.raceList.map((race,index)=>{
+          // 忽略出道战
+          if(race[1][2]){
+            return(
           <Col span={12} key={index}>
-            <Row>
+            <Row className={'race-row-'+index%4}>
 
-          <Col span={4} className={'race-col-'+index%4}>
-            <p>{race[0]}</p>
-          </Col>
-          <Col span = {20} className={'race-col-'+index%4}>
-          {race[1].map((item,index)=>
-            <p key={index}>{item}</p>
-            )}
-          </Col>
+              <Col span={4} className={'race-name'} >
+                <p>{race[0]}</p>
+              </Col>
+              <Col span = {20} className={'race-detail'}>
+              {race[1].map((item,index)=>
+                  <p key={index}>{item}</p>
+                  )}
+              </Col>
             </Row>
           </Col>
+            )
+          }
+        }
       )}
     </Row>
   )
@@ -361,7 +369,7 @@ Support.defaultProps={
               <SkillList skillList={props.data.trainingEventSkill}></SkillList>
             </Col>
             <Col span={24}>
-              <EventList eventList={props.data.eventList}></EventList>
+              <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
             </Col>
       </>
     )
@@ -414,7 +422,7 @@ Support.defaultProps={
     return(
       <Row className='nurturing-box' gutter={[16,16]}>
         <Col span = {9}>
-          <Button onClick={showPlayer}>选择马娘</Button>
+          <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
           <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
           {player.id&&
           <>
@@ -450,7 +458,7 @@ Support.defaultProps={
 
         <Col span = {9}>
           {player.id&&
-            <EventList eventList={player.eventList} ></EventList>
+            <EventList eventList={player.eventList} pid={player.id}></EventList>
           }
         </Col>
         <Col span = {5}>
@@ -570,6 +578,9 @@ Support.defaultProps={
     </>)
 
   }
+
+
+
   const App = ()=>{
       return (
     <Router>
@@ -579,6 +590,7 @@ Support.defaultProps={
             <Menu.Item key="1" ><Link to='/'>角色</Link></Menu.Item>
             <Menu.Item key="2" ><Link to='/support'>支援卡</Link></Menu.Item>
             <Menu.Item key="4"><Link to='/skill'>技能</Link></Menu.Item>
+            <Menu.Item key="5"><Link to='/race'>比赛</Link></Menu.Item>
             <Menu.Item key="3"><Link to='/nurturing'>育成</Link></Menu.Item>
           </Menu>
         </Header>
@@ -587,6 +599,7 @@ Support.defaultProps={
           <Route path="/support" component={Support}/>
           <Route path="/nurturing" component={Nurturing}/>
           <Route path="/skill" component={Skill}/>
+          <Route path="/race" component={Race}/>
         </Content>
       </Layout>
       <Footer>
@@ -609,4 +622,4 @@ Support.defaultProps={
       )
   }
 
-// ReactDOM.render((<App></App>),document.getElementById('root'),);
+ReactDOM.render((<App></App>),document.getElementById('root'),);
