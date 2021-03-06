@@ -27,6 +27,9 @@ db.set('options',{flag:true}).write()
 // https://github.com/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 // const cdnServer = 'https://github.com/wrrwrr111/pretty-derby/raw/master/public/'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+// https://purge.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/dbd.json
+// https://purge.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/db.json
+
 
 // https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 
@@ -39,6 +42,7 @@ async function getdbd(){
     // 不需要同步
 
   }else{
+    console.log("同步")
     res = await axios.get(cdnServer+'db.json')
     db.set('players',res.data.players).write()
     db.set('supports',res.data.supports).write()
@@ -502,10 +506,13 @@ Support.defaultProps={
       tempSkillList = allSkillList.filter(skill=>{
         let flag = 0;
         checkedValues.map(value=>{
-          if(value==='normal' && skill.describe.indexOf('＜') === -1 && skill.describe.indexOf('＞') === -1){
-            flag = 1
-          }else if(skill.describe.indexOf(value)!==-1){
-            flag = 1
+          if(skill.describe){
+
+            if(value==='normal' && skill.describe.indexOf('＜') === -1 && skill.describe.indexOf('＞') === -1){
+              flag = 1
+            }else if(skill.describe.indexOf(value)!==-1){
+              flag = 1
+            }
           }
         })
         return flag
