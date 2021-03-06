@@ -34,23 +34,23 @@ const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 // https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 
 async function getdbd(){
-  let res = await axios.get(cdnServer+'dbd.json')
+  let res = await axios.get('http://urarawin.com/dbd')
   let localTime = db.get('updateTime').value()
   console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
-  // if (localTime && localTime === res.data.updateTime){
-  //   console.log('latest 不需要同步')
-  //   // 不需要同步
+  if (localTime && localTime === res.data.updateTime){
+    console.log('latest 不需要同步')
+    // 不需要同步
 
-  // }else{
+  }else{
     console.log("同步")
-    res = await axios.get(cdnServer+'db.json')
+    res = await axios.get('http://urarawin.com/db')
     db.set('players',res.data.players).write()
     db.set('supports',res.data.supports).write()
     db.set('skills',res.data.skills).write()
     db.set('events',res.data.events).write()
     db.set('updateTime',res.data.updateTime).write()
     //重新加载
-  // }
+  }
   ReactDOM.render((<App></App>),document.getElementById('root'),);
 }
 getdbd()
@@ -355,13 +355,13 @@ Support.defaultProps={
               <img src={cdnServer+props.data.imgUrl} width={'50%'}></img>
             </Col>
             <Col span={24}>
-              <SkillList skillList={props.data.possessionSkill} flag={props.flag}></SkillList>
+              <SkillList skillList={props.data.possessionSkill} ></SkillList>
             </Col>
             <Col span={24}>
-              <SkillList skillList={props.data.trainingEventSkill} flag={props.flag}></SkillList>
+              <SkillList skillList={props.data.trainingEventSkill}></SkillList>
             </Col>
             <Col span={24}>
-              <EventList eventList={props.data.eventList} flag={props.flag}></EventList>
+              <EventList eventList={props.data.eventList}></EventList>
             </Col>
       </>
     )
@@ -371,6 +371,7 @@ Support.defaultProps={
 
     const [isPlayerVisible, setIsPlayerVisible] = useState(false);
     const [isSupportVisible, setIsSupportVisible] = useState(false);
+    const [needSelect,setNeedSelect] = useState(false)
     const [flag, setFlag] = useState(1);
     const [supportIndex, setSupportIndex] = useState(1);
 
@@ -390,10 +391,16 @@ Support.defaultProps={
     }
 
     const showSupport = (index) => {
+      setNeedSelect(true)
       setIsSupportVisible(true);
       setSupportIndex(index)
-      setFlag(db.get('options').value().flag)
     };
+    const showSupport2 = (index) => {
+      setNeedSelect(false)
+      setIsSupportVisible(true);
+      setSupportIndex(index)
+    };
+
     const closeSupport = () => {
       setIsSupportVisible(false);
     };
@@ -408,6 +415,7 @@ Support.defaultProps={
       <Row className='nurturing-box' gutter={[16,16]}>
         <Col span = {9}>
           <Button onClick={showPlayer}>选择马娘</Button>
+          <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
           {player.id&&
           <>
             <SkillList skillList={player.skillList} flag={flag}></SkillList>
@@ -420,7 +428,7 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(1)}>选择辅助卡</Button>
             </Col>
-            {supports[1].id &&<NurturingSupport data={supports[1]} flag={flag}></NurturingSupport>}
+            {supports[1].id &&<NurturingSupport data={supports[1]} ></NurturingSupport>}
           </Row>
         </Col>
         <Col span = {5}>
@@ -428,7 +436,7 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(2)}>选择辅助卡</Button>
             </Col>
-            {supports[2].id &&<NurturingSupport data={supports[2]} flag={flag}></NurturingSupport>}
+            {supports[2].id &&<NurturingSupport data={supports[2]} ></NurturingSupport>}
           </Row>
         </Col>
         <Col span = {5}>
@@ -436,13 +444,13 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(3)}>选择辅助卡</Button>
             </Col>
-            {supports[3].id &&<NurturingSupport data={supports[3]} flag={flag}></NurturingSupport>}
+            {supports[3].id &&<NurturingSupport data={supports[3]} ></NurturingSupport>}
           </Row>
         </Col>
 
         <Col span = {9}>
           {player.id&&
-            <EventList eventList={player.eventList} flag={flag}></EventList>
+            <EventList eventList={player.eventList} ></EventList>
           }
         </Col>
         <Col span = {5}>
@@ -450,7 +458,7 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(4)}>选择辅助卡</Button>
             </Col>
-            {supports[4].id &&<NurturingSupport data={supports[4]} flag={flag}></NurturingSupport>}
+            {supports[4].id &&<NurturingSupport data={supports[4]}></NurturingSupport>}
           </Row>
         </Col>
         <Col span = {5}>
@@ -458,7 +466,7 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(5)}>选择辅助卡</Button>
             </Col>
-            {supports[5].id &&<NurturingSupport data={supports[5]} flag={flag}></NurturingSupport>}
+            {supports[5].id &&<NurturingSupport data={supports[5]}></NurturingSupport>}
           </Row>
         </Col>
         <Col span = {5}>
@@ -466,14 +474,14 @@ Support.defaultProps={
             <Col span={12}>
               <Button onClick={()=>showSupport(6)}>选择辅助卡</Button>
             </Col>
-            {supports[6].id &&<NurturingSupport data={supports[6]} flag={flag}></NurturingSupport>}
+            {supports[6].id &&<NurturingSupport data={supports[6]} ></NurturingSupport>}
           </Row>
         </Col>
         <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={'80%'}>
           <Player onSelect={handleSelectPlayer}></Player>
         </Modal>
         <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
-          <Support onSelect={handleSelectSupport}></Support>
+          <Support onSelect={needSelect?handleSelectSupport:null}></Support>
         </Modal>
       </Row>
     )
