@@ -83,14 +83,27 @@ const {Column,ColumnGroup} = Table
   })
 
   const Race = (props) =>{
-    const allRaceList = db.get('races').value()
-    console.log(db.get('races').value())
+    const allRaceList = db.get('races').value().map((race,index)=>{
+                      race.key=index
+                      return race
+                    })
+    const [selectedRowKeys,setSelectedRowKeys] = useState([])
     // const columns = [{title:'',dataIndex:'',key:''}]
-    function onChange(pagination, filters, sorter, extra) {
-       console.log('params', pagination, filters, sorter, extra);
+    const onSelectChange = (selectedRowKeys,selectedRows)=>{
+      props.onSelect(selectedRows)
+      setSelectedRowKeys(selectedRowKeys)
+    }
+    const rowSelection = {
+      selectedRowKeys,
+      onChange:onSelectChange
+    }
+    // 筛选发生变化时清空已经选择的内容
+    const onChange = (pagination, filters, sorter, extra) => {
+      props.onSelect([])
+      setSelectedRowKeys([])
     }
     return(
-      <Table columns={columns} dataSource={allRaceList} onChange={onChange} pagination={false}/>
+      <Table rowSelection={rowSelection} columns={columns} dataSource={allRaceList} onChange={onChange} pagination={false}/>
       )
   }
 

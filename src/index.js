@@ -10,15 +10,16 @@ import {Row,Col} from 'antd'
 import { Image } from 'antd';
 import { Layout, Menu,  } from 'antd';
 import { Modal, Button,Popover } from 'antd';
-import { Checkbox,Table  } from 'antd';
+import { Checkbox  } from 'antd';
 import { Divider, } from 'antd';
+import { Table,Drawer } from 'antd';
 
 import './index.css'
 import db from './db.js'
 import Race from './race.js'
 
 const CheckboxGroup = Checkbox.Group
-
+const {Column,ColumnGroup} = Table
 
 // const adapter = new LocalStorage('db')
 // const db = low(adapter)
@@ -377,18 +378,21 @@ Support.defaultProps={
 
   const Nurturing = () =>{
 
-    const [isPlayerVisible, setIsPlayerVisible] = useState(false);
-    const [isSupportVisible, setIsSupportVisible] = useState(false);
     const [needSelect,setNeedSelect] = useState(false)
-    const [flag, setFlag] = useState(1);
-    const [supportIndex, setSupportIndex] = useState(1);
-
+    const [isPlayerVisible, setIsPlayerVisible] = useState(false);
     const [player, setPlayer] = useState({});
+
+    const [isSupportVisible, setIsSupportVisible] = useState(false);
+    const [supportIndex, setSupportIndex] = useState(1);
     const [supports, setSupports] = useState({1:{},2:{},3:{},4:{},5:{},6:{}});
+
+    const [isRaceVisible, setIsRaceVisible] = useState(false);
+    const [races,setRaces] = useState([])
+    const [visible, setVisible] = useState(false);
+
 
     const showPlayer = () => {
       setIsPlayerVisible(true);
-      setFlag(db.get('options').value().flag)
     };
     const closePlayer = () => {
       setIsPlayerVisible(false);
@@ -418,18 +422,55 @@ Support.defaultProps={
       setSupports(Object.assign({},supports,newData))
       setIsSupportVisible(false);
     }
+    const showRace = ()=>{
+      setNeedSelect(true)
+      setIsRaceVisible(true);
+    }
+    const closeRace = () => {
+      setIsRaceVisible(false);
+    };
+    const handleSelectRace = (data)=>{
+      setRaces(data);
+    }
+    const showDrawer = ()=>{
+      setVisible(true)
+    }
+    const onDrawerClose = (data)=>{
+      setVisible(false)
+    }
 
     return(
       <Row className='nurturing-box' gutter={[16,16]}>
+        <Drawer
+          title="关注赛事 (可以按esc退出)"
+          onClose={onDrawerClose}
+          visible={visible}
+          getContainer={false}
+          style={{ position: 'absolute' }}
+          closable={true}
+          placement="left"
+          mask={false}
+          maskClosable={false}
+          width={'35%'}
+        >
+          {/* {races.map(race=>
+            <p>{race.name}</p>
+            )} */}
+          <Table dataSource={races} pagination={false}>
+            <Column title="名称" dataIndex="name" key="name" />
+            <Column title="时间" dataIndex="date" key="date" />
+            <Column title="级别" dataIndex="grade" key="grade" />
+            <Column title="类型" dataIndex="distanceType" key="distanceType" />
+          </Table>
+        </Drawer>
         <Col span = {9}>
           <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
           <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
-          {player.id&&
-          <>
-            <SkillList skillList={player.skillList} flag={flag}></SkillList>
-            <RaceList raceList={player.raceList}></RaceList>
-          </>
-          }
+          <Button onClick={showRace}>选择关注赛事</Button>
+          <Button onClick={showDrawer}>查看关注赛事</Button>
+          <SkillList skillList={player.id?player.skillList:[]}></SkillList>
+          <RaceList raceList={player.id?player.raceList:[]}></RaceList>
+
           </Col>
         <Col span = {5}>
           <Row>
@@ -490,6 +531,9 @@ Support.defaultProps={
         </Modal>
         <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
           <Support onSelect={needSelect?handleSelectSupport:null}></Support>
+        </Modal>
+        <Modal visible={isRaceVisible} onOk={closeRace} onCancel={closeRace} width={'80%'}>
+          <Race onSelect={needSelect?handleSelectRace:null}></Race>
         </Modal>
       </Row>
     )
