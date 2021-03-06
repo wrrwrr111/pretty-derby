@@ -5,10 +5,10 @@
 /server/node_modules
 /server/tool
 
-/public/ma.js
-/public/getdata.js
-/build/getdata.js
-/build/ma.js
+# /public/ma.js
+# /public/getdata.js
+# /build/getdata.js
+# /build/ma.js
 /server
 /.pnp
 
@@ -18,7 +18,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store

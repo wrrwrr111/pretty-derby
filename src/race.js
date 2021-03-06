@@ -103,7 +103,7 @@ const {Column,ColumnGroup} = Table
       setSelectedRowKeys([])
     }
     return(
-      <Table rowSelection={rowSelection} columns={columns} dataSource={allRaceList} onChange={onChange} pagination={false}/>
+      <Table rowSelection={props.onSelect?rowSelection:null} columns={columns} dataSource={allRaceList} onChange={onChange} pagination={false}/>
       )
   }
 

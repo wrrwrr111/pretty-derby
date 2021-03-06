@@ -441,7 +441,15 @@ Support.defaultProps={
 
     return(
       <Row className='nurturing-box' gutter={[16,16]}>
-        <Drawer
+
+        <Col span = {9}>
+          <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
+          <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
+          <Button onClick={showRace}>选择关注赛事</Button>
+          <Button onClick={showDrawer}>查看关注赛事</Button>
+          <SkillList skillList={player.id?player.skillList:[]}></SkillList>
+          <RaceList raceList={player.id?player.raceList:[]}></RaceList>
+          <Drawer
           title="关注赛事 (可以按esc退出)"
           onClose={onDrawerClose}
           visible={visible}
@@ -451,7 +459,7 @@ Support.defaultProps={
           placement="left"
           mask={false}
           maskClosable={false}
-          width={'35%'}
+          width={'100%'}
         >
           {/* {races.map(race=>
             <p>{race.name}</p>
@@ -463,15 +471,7 @@ Support.defaultProps={
             <Column title="类型" dataIndex="distanceType" key="distanceType" />
           </Table>
         </Drawer>
-        <Col span = {9}>
-          <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-          <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
-          <Button onClick={showRace}>选择关注赛事</Button>
-          <Button onClick={showDrawer}>查看关注赛事</Button>
-          <SkillList skillList={player.id?player.skillList:[]}></SkillList>
-          <RaceList raceList={player.id?player.raceList:[]}></RaceList>
-
-          </Col>
+        </Col>
         <Col span = {5}>
           <Row>
             <Col span={12}>
@@ -648,6 +648,11 @@ Support.defaultProps={
       </Layout>
       <Footer>
         <Row gutter={[16,16]}>
+          <Col>
+            <Button>
+            <Link to={'https://github.com/wrrwrr111/pretty-derby'}>GitHub</Link>
+            </Button>
+          </Col>
           <Col>
           <Popover content={<Image src={'img/z.jpg'} width={200}></Image>}>
               <Button placement="bottom">zfb</Button>
