@@ -7,10 +7,10 @@
     padding-left:8px;
 }
 .list-row:nth-child(odd) p{
-        background-color: aqua;
+        background-color: #cccccc;
     }
 .list-row:nth-child(even) p{
-        background-color:aquamarine;
+        background-color:#99cccc;
     }
 /* .nurturing-box{
   display:grid;

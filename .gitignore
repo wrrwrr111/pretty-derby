@@ -5,8 +5,8 @@
 /server/node_modules
 /server/tool
 
-# /public/ma.js
-# /public/getdata.js
+/ma.js
+/getdata.js
 # /build/getdata.js
 # /build/ma.js
 /server
