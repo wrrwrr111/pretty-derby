@@ -447,7 +447,9 @@ Support.defaultProps={
           <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
           <Button onClick={showRace}>选择关注赛事</Button>
           <Button onClick={showDrawer}>查看关注赛事</Button>
+          <Divider></Divider>
           <SkillList skillList={player.id?player.skillList:[]}></SkillList>
+          <Divider></Divider>
           <RaceList raceList={player.id?player.raceList:[]}></RaceList>
           <Drawer
           title="关注赛事 (可以按esc退出)"
@@ -645,13 +647,10 @@ Support.defaultProps={
           <Route path="/skill" component={Skill}/>
           <Route path="/race" component={Race}/>
         </Content>
-      </Layout>
       <Footer>
         <Row gutter={[16,16]}>
           <Col>
-            <Button>
-            <Link to={'https://github.com/wrrwrr111/pretty-derby'}>GitHub</Link>
-            </Button>
+            <iframe src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
           </Col>
           <Col>
           <Popover content={<Image src={'img/z.jpg'} width={200}></Image>}>
@@ -667,6 +666,7 @@ Support.defaultProps={
           </Col>
         </Row>
       </Footer>
+      </Layout>
     </Router>
       )
   }
