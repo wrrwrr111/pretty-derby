@@ -2,13 +2,13 @@ import low from 'lowdb';
 import LocalStorage from 'lowdb/adapters/LocalStorage'
 
 import axios from 'axios'
-// import jsonDb from './assert/db.json'
+import jsonDb from './assert/db.json'
 
 const adapter = new LocalStorage('db')
 const db = low(adapter)
 
 // console.log(jsonDb)
-
+/*
 async function getdbd(){
   let res = await axios.get('http://urarawin.com/dbd')
   let localTime = db.get('updateTime').value()
@@ -33,5 +33,17 @@ async function getdbd(){
   }
 }
 getdbd()
-
+*/
+db.set('players',jsonDb.players).write()
+db.set('supports',jsonDb.supports).write()
+db.set('skills',jsonDb.skills).write()
+db.set('events',jsonDb.events).write()
+db.set('updateTime',jsonDb.updateTime).write()
+db.set('races',jsonDb.races).write()
+//重新加载
+db.get('selected').value()||db.set('selected',{
+  supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
+  player:{},
+  races:[]
+}).write()
 export  default db

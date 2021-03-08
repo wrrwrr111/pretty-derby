@@ -8,14 +8,17 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "ant-design": "^1.0.0",
-    "antd": "^4.13.0",
+    "antd": "^4.13.1",
     "axios": "^0.21.1",
+    "babel-plugin-import": "^1.13.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "crawler": "^1.3.0",
+    "customize-cra": "^1.0.0",
     "lowdb": "^1.0.0",
     "morgan": "^1.10.0",
     "react": "^17.0.1",
+    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -23,11 +26,11 @@
     "web-vitals": "^1.0.1"
   },
   "proxy": "http://urarawin.com",
-    "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
