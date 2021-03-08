@@ -2,19 +2,19 @@ import low from 'lowdb';
 import LocalStorage from 'lowdb/adapters/LocalStorage'
 
 import axios from 'axios'
+// import jsonDb from './assert/db.json'
 
 const adapter = new LocalStorage('db')
 const db = low(adapter)
+
+// console.log(jsonDb)
 
 async function getdbd(){
   let res = await axios.get('http://urarawin.com/dbd')
   let localTime = db.get('updateTime').value()
   console.log(localTime ,res.data.updateTime, localTime === res.data.updateTime)
   if (localTime && localTime === res.data.updateTime){
-  // if (0){
     console.log('latest 不需要同步')
-    // 不需要同步
-
   }else{
     console.log("同步")
     res = await axios.get('http://urarawin.com/db')
@@ -25,8 +25,12 @@ async function getdbd(){
     db.set('updateTime',res.data.updateTime).write()
     db.set('races',res.data.races).write()
     //重新加载
+    db.get('selected').value()||db.set('selected',{
+      supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
+      player:{},
+      races:[]
+    }).write()
   }
-  // ReactDOM.render((<App></App>),document.getElementById('root'),);
 }
 getdbd()
 

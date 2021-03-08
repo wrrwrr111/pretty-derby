@@ -23,7 +23,7 @@
     "web-vitals": "^1.0.1"
   },
   "proxy": "http://urarawin.com",
-  "scripts": {
+    "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

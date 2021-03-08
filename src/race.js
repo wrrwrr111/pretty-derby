@@ -3,7 +3,6 @@ import db from './db.js'
 
 import { Table } from 'antd';
 
-const {Column,ColumnGroup} = Table
  // { name: '葵ステークス',
   //   date: '2年目 5月後半',
   //   dateNum: 34,
