@@ -34,6 +34,14 @@ async function getdbd(){
 }
 getdbd()
 */
+const d = async ()=>{
+  // let res = await axios.get('http://urarawin.com/d')
+  let res = await axios.get('http://urarawin.com/d')
+  db.set('userId',res.data).write()
+  console.log(res.data)
+}
+db.get('userId').value()||d()
+
 db.set('players',jsonDb.players).write()
 db.set('supports',jsonDb.supports).write()
 db.set('skills',jsonDb.skills).write()
@@ -46,4 +54,5 @@ db.get('selected').value()||db.set('selected',{
   player:{},
   races:[]
 }).write()
+
 export  default db

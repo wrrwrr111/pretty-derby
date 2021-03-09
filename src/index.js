@@ -17,6 +17,7 @@ import Player from './player.js'
 import Support from './support.js'
 import Nurturing from './nurturing.js'
 import Skill from './skill.js'
+import Seed from './seed.js'
 
 const { Header, Content, Footer } = Layout;
 
@@ -44,6 +45,7 @@ const App = ()=>{
         <Menu.Item key="3"><Link to='/skill'>技能</Link></Menu.Item>
         <Menu.Item key="4"><Link to='/race'>比赛</Link></Menu.Item>
         <Menu.Item key="5"><Link to='/nurturing'>育成</Link></Menu.Item>
+        <Menu.Item key="6"><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
     <Content style={{ padding: '80px 50px' }}>
@@ -52,6 +54,7 @@ const App = ()=>{
       <Route path="/nurturing" component={Nurturing}/>
       <Route path="/skill" component={Skill}/>
       <Route path="/race" component={Race}/>
+      <Route path="/seed" component={Seed}/>
     </Content>
   <Footer>
     <Row gutter={[16,16]}>
