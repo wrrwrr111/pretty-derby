@@ -10,7 +10,18 @@ import db from './db.js'
 
 import Player from './player.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+// db.set('userId',null).write()
 const userId = db.get('userId').value()
+// console.log(userId)
+if(!userId){
+  const d = async ()=>{
+    // let res = await axios.get('http://urarawin.com/d')
+    let res = await axios.get('http://urarawin.com/d')
+    userId = res.data
+    // console.log(userId,res.data)
+    db.set('userId',res.data).write()
+  }
+}
 /*
 userId 随机生成
 种马玩家id

@@ -60,7 +60,7 @@ const App = ()=>{
     <Row gutter={[16,16]}>
       <Col span={2}>
         <Popover content={<p>育成界面出现问题时重置</p>}>
-          <Button placement="bottom" onClick={reload}>清空育成缓存</Button>
+          <Button placement="bottom" onClick={reload}>清空育成</Button>
          </Popover>
       </Col>
       <Col span={16}></Col>

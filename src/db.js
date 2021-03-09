@@ -37,8 +37,8 @@ getdbd()
 const d = async ()=>{
   // let res = await axios.get('http://urarawin.com/d')
   let res = await axios.get('http://urarawin.com/d')
-  db.set('userId',res.data).write()
   console.log(res.data)
+  db.set('userId',res.data).write()
 }
 db.get('userId').value()||d()
 
