@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
+import { useTranslation, Trans, Translation } from 'react-i18next'
 import db from './db.js'
-
-import { Divider,Row,Col,Button,Image,Modal,Checkbox} from 'antd';
+import t from './components/t.js'
+import { Divider,Row,Col,Button,Image,Modal,Checkbox,Card} from 'antd';
 
 import EventList from './components/event-list.js'
 import SkillList from './components/skill-list.js'
@@ -32,7 +33,12 @@ const PlayerCard = (props)=>{
 
   return (
     <>
-      <Image src={cdnServer+props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
+      <Card cover={
+        <Image src={cdnServer+props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
+
+      }>
+        <Card.Meta title={t(props.data.name)} ></Card.Meta>
+      </Card>
       <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
         <Divider>适应</Divider>

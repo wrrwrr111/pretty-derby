@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
-import { InputNumber,Row,Alert,Image,Button,message,Divider,
+import { InputNumber,Row,Alert,Image,Button,Divider,
   Table,Modal,Col,Radio,Rate,Form,Slider,PageHeader,Input,Space} from 'antd';
-
+import {message} from 'antd'
 //test
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 

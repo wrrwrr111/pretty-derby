@@ -3,7 +3,7 @@ import { Divider,Row,Popover,Image,Button,Checkbox,Modal,PageHeader} from 'antd'
 
 import db from './db.js'
 import Support from './support.js'
-
+import t from './components/t.js'
 const CheckboxGroup = Checkbox.Group
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -103,7 +103,12 @@ const Skill = () =>{
       <Row gutter={[8,8]} key={rare}>
       <Divider>{rareLabel[rare]}</Divider>
       { skillList.filter(item=>item.rare === rare).map(skill=>
-        <Popover content={<p key={skill.id}>{skill.describe}</p>} title={skill.name} key={skill.id} className={'skill-button'}>
+        <Popover content={<>
+          <p>{t(skill.name)}</p>
+          <p>{skill.describe}</p>
+          <p>{t(skill.describe)}</p>
+          </>
+        } title={skill.name} key={skill.id} className={'skill-button'}>
           <Button size={'large'} className={'skill-button-'+rare} onClick={()=>showModal(skill)}>
           <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
           {skill.name}
@@ -112,7 +117,7 @@ const Skill = () =>{
         )
       }
       <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
-        <PageHeader title={skillName}></PageHeader>
+        <PageHeader title={skillName}>{t(skillName)}</PageHeader>
         <Support supportList={skillSupportList} ></Support>
       </Modal>
       </Row>

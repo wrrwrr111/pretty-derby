@@ -4,8 +4,9 @@ import { HashRouter as Router, Route ,Link} from 'react-router-dom';
 
 import 'antd/dist/antd.css';
 import { Row,Col,Image,Layout,Menu,Button,Popover} from 'antd'
-
+import {message} from 'antd'
 import './index.css'
+
 // import db from './db.js'
 // import EventList from './components/event-list.js'
 // import SkillList from './components/skill-list.js'
@@ -35,6 +36,7 @@ const App = ()=>{
       races:[]
     }).write()
   }
+  message.info('翻译目前为机翻版本，需要后期校正')
   return (
 <Router>
     <Layout className="layout">
