@@ -41,6 +41,7 @@ const PlayerCard = (props)=>{
       </Card>
       <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
+        <span>{t(props.data.name)}</span>
         <Divider>适应</Divider>
         <AdaptBox player={props.data}></AdaptBox>
         <Divider>成长</Divider>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route ,Link} from 'react-router-dom';
 
@@ -29,6 +29,23 @@ const { Header, Content, Footer } = Layout;
 // https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 
 const App = ()=>{
+  let lan = db.get('lan').value()
+  console.log('!!!!!',lan)
+  const [langText,setLangText] = useState(lan=='zh'?'English':'中文')
+  const changeLan=()=>{
+    if(lan=='zh'){
+      lan='en'
+      db.set('lan','en').write()
+      setLangText('中文')
+      message.info('Refresh the website ')
+    }else{
+      lan='zh'
+      db.set('lan','zh').write()
+      setLangText('English')
+      message.info('刷新页面')
+    }
+    // window.opener.location.reload()
+  }
   const reload =()=>{
     db.set('selected',{
       supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
@@ -60,6 +77,9 @@ const App = ()=>{
     </Content>
   <Footer>
     <Row gutter={[16,16]}>
+      <Col span={2}>
+        <Button onClick={changeLan}>{langText}</Button>
+      </Col>
       <Col span={2}>
         <Popover content={<p>育成界面出现问题时重置</p>}>
           <Button placement="bottom" onClick={reload}>清空育成</Button>

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import db from './db.js'
-
+import t from './components/t.js'
 import { Divider,Row,Col,Image,Modal} from 'antd';
 
 import EventList from './components/event-list.js'
@@ -30,6 +30,7 @@ const SupportCard = (props)=>{
       <Image src={cdnServer+props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
       <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
+          <p>{t(props.data.name)}</p>
         <Divider>培训技能</Divider>
           <SkillList skillList={props.data.trainingEventSkill}></SkillList>
           <Divider>自带技能</Divider>

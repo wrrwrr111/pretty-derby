@@ -1,6 +1,6 @@
 import React from 'react';
 import db from '../db.js'
-
+import t from './t.js'
 import { Divider,Row,Col,Popover,Button } from 'antd';
 
 const EventList = (props)=>{
@@ -29,7 +29,10 @@ const EventBox = (props)=>{
     })
 
     return(
-      <Popover content={ChoiceItem} title={props.event.name}>
+      <Popover content={<>
+        <p>{t(props.event.name)}</p>
+        {ChoiceItem}
+      </>} title={props.event.name}>
         <Button>{props.event.name}</Button>
       </Popover>
     )
