@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pretty-derby/static/css/main.f3ca7f2c.chunk.css",
-    "main.js": "/pretty-derby/static/js/main.38876c2c.chunk.js",
-    "main.js.map": "/pretty-derby/static/js/main.38876c2c.chunk.js.map",
+    "main.css": "/pretty-derby/static/css/main.d1139f38.chunk.css",
+    "main.js": "/pretty-derby/static/js/main.ef154a51.chunk.js",
+    "main.js.map": "/pretty-derby/static/js/main.ef154a51.chunk.js.map",
     "runtime-main.js": "/pretty-derby/static/js/runtime-main.3929a206.js",
     "runtime-main.js.map": "/pretty-derby/static/js/runtime-main.3929a206.js.map",
     "static/css/2.66cad836.chunk.css": "/pretty-derby/static/css/2.66cad836.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.1cb698bc.chunk.js.map": "/pretty-derby/static/js/2.1cb698bc.chunk.js.map",
     "index.html": "/pretty-derby/index.html",
     "static/css/2.66cad836.chunk.css.map": "/pretty-derby/static/css/2.66cad836.chunk.css.map",
-    "static/css/main.f3ca7f2c.chunk.css.map": "/pretty-derby/static/css/main.f3ca7f2c.chunk.css.map",
+    "static/css/main.d1139f38.chunk.css.map": "/pretty-derby/static/css/main.d1139f38.chunk.css.map",
     "static/js/2.1cb698bc.chunk.js.LICENSE.txt": "/pretty-derby/static/js/2.1cb698bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3929a206.js",
     "static/css/2.66cad836.chunk.css",
     "static/js/2.1cb698bc.chunk.js",
-    "static/css/main.f3ca7f2c.chunk.css",
-    "static/js/main.38876c2c.chunk.js"
+    "static/css/main.d1139f38.chunk.css",
+    "static/js/main.ef154a51.chunk.js"
   ]
 }
