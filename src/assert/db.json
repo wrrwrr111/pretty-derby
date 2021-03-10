@@ -17760,7 +17760,8 @@
       "name": "全身全霊",
       "rare": "レア",
       "id": "z8o7DIWJkt",
-      "imgUrl": "img/skills/z8o7DIWJkt.png"
+      "imgUrl": "img/skills/z8o7DIWJkt.png",
+      "describe": "ラストスパートで速度が上がる"
     },
     {
       "name": "道悪◯",
@@ -17787,7 +17788,8 @@
       "name": "逃亡者",
       "rare": "レア",
       "id": "sFdvYuvNPG",
-      "imgUrl": "img/skills/sFdvYuvNPG.png"
+      "imgUrl": "img/skills/sFdvYuvNPG.png",
+      "describe": "最終コーナーで先頭をキープしやすくなる＜作戦・逃げ＞"
     },
     {
       "name": "急ぎ足",
@@ -17849,7 +17851,8 @@
       "name": "曲線のソムリエ",
       "rare": "レア",
       "id": "UTa1_vkW946",
-      "imgUrl": "img/skills/UTa1_vkW946.png"
+      "imgUrl": "img/skills/UTa1_vkW946.png",
+      "describe": "華麗なコーナーワークで加速力が上がる"
     },
     {
       "name": "後方待機",
@@ -17960,7 +17963,8 @@
       "name": "好転一息",
       "rare": "レア",
       "id": "JjcNnong1J",
-      "imgUrl": "img/skills/JjcNnong1J.png"
+      "imgUrl": "img/skills/JjcNnong1J.png",
+      "describe": "直線で持久力が回復する"
     },
     {
       "name": "東京レース場◯",
@@ -18001,7 +18005,8 @@
       "name": "キラーチューン",
       "rare": "レア",
       "id": "NXiO9P0Hav",
-      "imgUrl": "img/skills/NXiO9P0Hav.png"
+      "imgUrl": "img/skills/NXiO9P0Hav.png",
+      "describe": "レース中盤に前の方だと好位置を取りやすくなる＜中距離＞"
     },
     {
       "name": "二の矢",
@@ -18070,7 +18075,8 @@
       "name": "迅速果断",
       "rare": "レア",
       "id": "7fkScOPnxBk",
-      "imgUrl": "img/skills/7fkScOPnxBk.png"
+      "imgUrl": "img/skills/7fkScOPnxBk.png",
+      "describe": "レース中盤で速度が上がる＜作戦・差し＞"
     },
     {
       "name": "差し焦り",
@@ -18174,7 +18180,8 @@
       "name": "乗り換え上手",
       "rare": "レア",
       "id": "KghBRzfD2Mn",
-      "imgUrl": "img/skills/KghBRzfD2Mn.png"
+      "imgUrl": "img/skills/KghBRzfD2Mn.png",
+      "describe": "レース終盤で加速力が上がる＜作戦・差し＞"
     },
     {
       "name": "曇りの日◯",
@@ -18341,7 +18348,8 @@
       "name": "コンセントレーション",
       "rare": "レア",
       "id": "aPzi71LUG",
-      "imgUrl": "img/skills/aPzi71LUG.png"
+      "imgUrl": "img/skills/aPzi71LUG.png",
+      "describe": "スタートが得意になり出遅れる時間がわずかに少なくなる"
     },
     {
       "name": "追込焦り",
@@ -18725,139 +18733,162 @@
       "name": "技巧派",
       "imgUrl": "img/skills/jc0BPGDlN.png",
       "rare": "レア",
-      "id": "jc0BPGDlN"
+      "id": "jc0BPGDlN",
+      "describe": "コース取りが少しスムーズになる＜作戦・先行＞"
     },
     {
       "name": "ライトニングステップ",
       "imgUrl": "img/skills/6VaiCBLg6d.png",
       "rare": "レア",
-      "id": "6VaiCBLg6d"
+      "id": "6VaiCBLg6d",
+      "describe": "レース中盤に後ろの方にいると囲まれにくくなる＜中距離＞"
     },
     {
       "name": "ギアチェンジ",
       "imgUrl": "img/skills/bgrvkn7y8.png",
       "rare": "レア",
-      "id": "bgrvkn7y8"
+      "id": "bgrvkn7y8",
+      "describe": "レース中盤に前の方にいると抜かしやすくなる＜マイル＞"
     },
     {
       "name": "アクセル全開！",
       "imgUrl": "img/skills/TQAn5U05MN.png",
       "rare": "レア",
-      "id": "TQAn5U05MN"
+      "id": "TQAn5U05MN",
+      "describe": "レース中盤に追い抜くと加速力が上がる＜マイル＞"
     },
     {
       "name": "マイルの支配者",
       "imgUrl": "img/skills/w5fVCG04h.png",
       "rare": "レア",
-      "id": "w5fVCG04h"
+      "id": "w5fVCG04h",
+      "describe": "レース序盤に先頭だと差を広げやすくなる＜マイル＞"
     },
     {
       "name": "先陣の心得",
       "imgUrl": "img/skills/KICQ9Wi5Oj.png",
       "rare": "レア",
-      "id": "KICQ9Wi5Oj"
+      "id": "KICQ9Wi5Oj",
+      "describe": "レース中盤に大きく差をつけ先頭だとリードを保ちやすい＜長距離＞"
     },
     {
       "name": "余裕綽々",
       "imgUrl": "img/skills/esqCDJMpyY.png",
       "rare": "レア",
-      "id": "esqCDJMpyY"
+      "id": "esqCDJMpyY",
+      "describe": "レース序盤で疲れにくくなる＜作戦・先行＞"
     },
     {
       "name": "独占力",
       "imgUrl": "img/skills/auwbUbKcy.png",
       "rare": "レア",
-      "id": "auwbUbKcy"
+      "id": "auwbUbKcy",
+      "describe": "レース終盤に後ろの方にいると前の速度を下げる＜中距離＞"
     },
     {
       "name": "弧線のプロフェッサー",
       "imgUrl": "img/skills/1Fbl_klNqq.png",
       "rare": "レア",
-      "id": "1Fbl_klNqq"
+      "id": "1Fbl_klNqq",
+      "describe": "コーナーが得意になり速度が上がる"
     },
     {
       "name": "決意の直滑降",
       "imgUrl": "img/skills/SYuVON6-y.png",
       "rare": "レア",
-      "id": "SYuVON6-y"
+      "id": "SYuVON6-y",
+      "describe": "下り坂が少し得意になる＜作戦・先行＞"
     },
     {
       "name": "視界良好！異常なし！",
       "imgUrl": "img/skills/u5nBUgDaZ.png",
       "rare": "レア",
-      "id": "u5nBUgDaZ"
+      "id": "u5nBUgDaZ",
+      "describe": "左右に移動すると状況を把握して視野が少し広くなる＜作戦・追込＞"
     },
     {
       "name": "下校後のスペシャリスト",
       "imgUrl": "img/skills/jbvFhWVL5A.png",
       "rare": "レア",
-      "id": "jbvFhWVL5A"
+      "id": "jbvFhWVL5A",
+      "describe": "下り坂で疲れにくくなる＜作戦・追込＞"
     },
     {
       "name": "レースプランナー",
       "imgUrl": "img/skills/ec5gPDKBP.png",
       "rare": "レア",
-      "id": "ec5gPDKBP"
+      "id": "ec5gPDKBP",
+      "describe": "レース中盤で疲れにくくなる＜作戦・先行＞"
     },
     {
       "name": "千里眼",
       "imgUrl": "img/skills/1L6wASW9P.png",
       "rare": "レア",
-      "id": "1L6wASW9P"
+      "id": "1L6wASW9P",
+      "describe": "レース序盤に観察力が高まり視野を広く持てる＜中距離＞"
     },
     {
       "name": "幻惑のかく乱",
       "imgUrl": "img/skills/caw6Iqy4c.png",
       "rare": "レア",
-      "id": "caw6Iqy4c"
+      "id": "caw6Iqy4c",
+      "describe": "レース終盤に前の方にいると後方の視野が少し狭くなる＜作戦・先行＞"
     },
     {
       "name": "レーンの魔術師",
       "imgUrl": "img/skills/_CVo7uOMlW.png",
       "rare": "レア",
-      "id": "_CVo7uOMlW"
+      "id": "_CVo7uOMlW",
+      "describe": "レース終盤にコース取りがうまくなる"
     },
     {
       "name": "ノンストップガール",
       "imgUrl": "img/skills/LlNleFbUc.png",
       "rare": "レア",
-      "id": "LlNleFbUc"
+      "id": "LlNleFbUc",
+      "describe": "ラストスパートで前が塞がれた時の立ち回りがうまくなる"
     },
     {
       "name": "昇り龍",
       "imgUrl": "img/skills/js7Tquw5-.png",
       "rare": "レア",
-      "id": "js7Tquw5-"
+      "id": "js7Tquw5-",
+      "describe": "最終コーナーで外から追い抜くと速度が上がる＜作戦・差し＞"
     },
     {
       "name": "努力家",
       "imgUrl": "img/skills/Q4DPtdTC7.png",
       "rare": "レア",
-      "id": "Q4DPtdTC7"
+      "id": "Q4DPtdTC7",
+      "describe": "追い抜きが少し成功しやすくなる＜作戦・差し＞"
     },
     {
       "name": "圧倒的リード",
       "imgUrl": "img/skills/iCXuxTHYl2.png",
       "rare": "レア",
-      "id": "iCXuxTHYl2"
+      "id": "iCXuxTHYl2",
+      "describe": "レース中盤に大きく差をつけ先頭だとリードを保ちやすい＜短距離＞"
     },
     {
       "name": "鋼の意志",
       "imgUrl": "img/skills/dxo1m2BKz.png",
       "rare": "レア",
-      "id": "dxo1m2BKz"
+      "id": "dxo1m2BKz",
+      "describe": "レース序盤に前が詰まった時に隠れて持久力がわずかに回復する"
     },
     {
       "name": "不屈の心",
       "imgUrl": "img/skills/gRnzIz9Bmq.png",
       "rare": "レア",
-      "id": "gRnzIz9Bmq"
+      "id": "gRnzIz9Bmq",
+      "describe": "レース中盤に追い抜かれると持久力が回復する"
     },
     {
       "name": "奇術師",
       "imgUrl": "img/skills/nrxPn-cyq.png",
       "rare": "レア",
-      "id": "nrxPn-cyq"
+      "id": "nrxPn-cyq",
+      "describe": "レース終盤で前方のウマ娘の視野が狭くなる＜長距離＞"
     },
     {
       "name": "トリック(後)",
@@ -18869,31 +18900,36 @@
       "name": "スーパーラッキーセブン",
       "imgUrl": "img/skills/WmP7ZJPgZd.png",
       "rare": "レア",
-      "id": "WmP7ZJPgZd"
+      "id": "WmP7ZJPgZd",
+      "describe": "枠番が7の時に良いことが起きる場合がある"
     },
     {
       "name": "魅惑のささやき",
       "imgUrl": "img/skills/Lj1rYv-zWc.png",
       "rare": "レア",
-      "id": "Lj1rYv-zWc"
+      "id": "Lj1rYv-zWc",
+      "describe": "レース中盤にすぐ前のウマ娘を戸惑わせる＜中距離＞"
     },
     {
       "name": "八方にらみ",
       "imgUrl": "img/skills/r5zwRcqgP2.png",
       "rare": "レア",
-      "id": "r5zwRcqgP2"
+      "id": "r5zwRcqgP2",
+      "describe": "レース終盤に他のウマ娘が動揺する＜作戦・差し＞"
     },
     {
       "name": "電撃の煌めき",
       "imgUrl": "img/skills/N-jsbECj9.png",
       "rare": "レア",
-      "id": "N-jsbECj9"
+      "id": "N-jsbECj9",
+      "describe": "レース終盤に後ろの方だとスパートしやすくなる＜短距離＞"
     },
     {
       "name": "大局観",
       "imgUrl": "img/skills/__TnxX7YCe.png",
       "rare": "レア",
-      "id": "__TnxX7YCe"
+      "id": "__TnxX7YCe",
+      "describe": "レース中盤に観察力が高まり視野を広く持てる＜作戦・差し＞"
     },
     {
       "name": "G00 1stF∞",
@@ -18913,7 +18949,8 @@
       "name": "切り開く者",
       "imgUrl": "img/skills/dLvlJ2JpRY.png",
       "rare": "レア",
-      "id": "dLvlJ2JpRY"
+      "id": "dLvlJ2JpRY",
+      "describe": "レース中盤に先頭だと疲れにくくなる＜中距離＞"
     }
   ],
   "events": [
@@ -54179,7 +54216,7 @@
       "pid": "5NnIs-nF3"
     }
   ],
-  "updateTime": 1615382934455,
+  "updateTime": 1615385938518,
   "races": [
     {
       "name": "中京ジュニアステークス",
