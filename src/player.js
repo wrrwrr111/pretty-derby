@@ -98,58 +98,89 @@ const GrowBox = (props)=>
     <Col span = {5}>{props.player.wisdomGrow}</Col>
   </Row>
 //todo filter
-const Player = (props)=>{
-  const allPlayerList = db.get('players').value()
-  const [playerList,setPlayerList] = useState(allPlayerList)
-  const [checkedList, setCheckedList] = useState([]);
-
-  const plainOptions = [
-    {label:'草地',value:'grass'},
-    {label:'泥地',value:'dirt'},
-    {label:'短距',value:'shortDistance'},
-    {label:'英里',value:'mile'},
-    {label:'中距',value:'mediumDistance'},
-    {label:'长距',value:'longDistance'},
-    {label:'逃',value:'escape'},
-    {label:'先',value:'leading'},
-    {label:'差',value:'insert'},
-    {label:'追',value:'tracking'}]
-
-
-  const onChange=(checkedValues)=>{
-    setCheckedList(checkedValues)
-    let tempList = allPlayerList.filter(player=>{
-      let flag = 1;
-      checkedValues.forEach(attr=>{
-        if(player[attr]!=='A'){
-          flag = 0
-        }
-      })
-      return flag
-    })
-    setPlayerList(tempList)
+class Player extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {list:props.playerList}
   }
-  const resetCheckbox=()=>{
-    setCheckedList([])
-    setPlayerList(allPlayerList)
+  componentDidUpdate(prevProps){
+    if(this.props.playerList !== prevProps.playerList){
+      this.setState({list:this.props.playerList})
+    }
   }
-  return (
-    <>
-    <Button onClick={resetCheckbox}>重置</Button>
-    <CheckboxGroup options={plainOptions} value={checkedList} onChange={onChange} />
-    {
-      ['3','2','1'].map(rare=>(
-        <Row gutter={[16,16]} key={rare}>
-        <Divider>{rare}星</Divider>
-      {playerList.filter(item=>item.rare===rare).map(player=>
-        <Col xxl={2} lg={3} sm={4} xs={6} key={player.id}>
-          <PlayerCard data={player} onSelect={props.onSelect}></PlayerCard>
-        </Col>)
-      }
-      </Row>
-      ))
-    }</>
-  )
+  render(){
+    return(
+      <>
+        {
+          ['3','2','1'].map(rare=>(
+            <Row gutter={[16,16]} key={rare}>
+            <Divider>{rare}星</Divider>
+          {this.state.list.filter(item=>item.rare===rare).map(player=>
+            <Col xxl={2} lg={3} sm={4} xs={6} key={player.id}>
+              <PlayerCard data={player} onSelect={this.props.onSelect}></PlayerCard>
+            </Col>)
+          }
+          </Row>
+          ))
+        }</>
+    )
+  }
 }
+Player.defaultProps={
+  playerList:db.get('players').value()
+}
+// const Player = (props)=>{
+//   const allPlayerList = db.get('players').value()
+//   const [playerList,setPlayerList] = useState(allPlayerList)
+//   const [checkedList, setCheckedList] = useState([]);
+
+//   const plainOptions = [
+//     {label:'草地',value:'grass'},
+//     {label:'泥地',value:'dirt'},
+//     {label:'短距',value:'shortDistance'},
+//     {label:'英里',value:'mile'},
+//     {label:'中距',value:'mediumDistance'},
+//     {label:'长距',value:'longDistance'},
+//     {label:'逃',value:'escape'},
+//     {label:'先',value:'leading'},
+//     {label:'差',value:'insert'},
+//     {label:'追',value:'tracking'}]
+
+
+//   const onChange=(checkedValues)=>{
+//     setCheckedList(checkedValues)
+//     let tempList = allPlayerList.filter(player=>{
+//       let flag = 1;
+//       checkedValues.forEach(attr=>{
+//         if(player[attr]!=='A'){
+//           flag = 0
+//         }
+//       })
+//       return flag
+//     })
+//     setPlayerList(tempList)
+//   }
+//   const resetCheckbox=()=>{
+//     setCheckedList([])
+//     setPlayerList(allPlayerList)
+//   }
+//   return (
+//     <>
+//     <Button onClick={resetCheckbox}>重置</Button>
+//     <CheckboxGroup options={plainOptions} value={checkedList} onChange={onChange} />
+//     {
+//       ['3','2','1'].map(rare=>(
+//         <Row gutter={[16,16]} key={rare}>
+//         <Divider>{rare}星</Divider>
+//       {playerList.filter(item=>item.rare===rare).map(player=>
+//         <Col xxl={2} lg={3} sm={4} xs={6} key={player.id}>
+//           <PlayerCard data={player} onSelect={props.onSelect}></PlayerCard>
+//         </Col>)
+//       }
+//       </Row>
+//       ))
+//     }</>
+//   )
+// }
 
 export  default Player
