@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import { useTranslation, Trans, Translation } from 'react-i18next'
 import db from './db.js'
 import t from './components/t.js'
 import { Divider,Row,Col,Button,Image,Modal,Checkbox,Card} from 'antd';

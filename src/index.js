@@ -31,15 +31,15 @@ const { Header, Content, Footer } = Layout;
 const App = ()=>{
   let lan = db.get('lan').value()
   console.log('!!!!!',lan)
-  const [langText,setLangText] = useState(lan=='zh'?'English':'中文')
+  const [langText,setLangText] = useState(lan==='zh'?'English':'中文')
   const changeLan=()=>{
-    if(lan=='zh'){
-      lan='en'
+    if(lan === 'zh'){
+      lan = 'en'
       db.set('lan','en').write()
       setLangText('中文')
       message.info('Refresh the website ')
     }else{
-      lan='zh'
+      lan = 'zh'
       db.set('lan','zh').write()
       setLangText('English')
       message.info('刷新页面')

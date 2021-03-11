@@ -3,7 +3,7 @@ import { InputNumber,Row,Alert,Image,Button,Divider,
   Table,Modal,Col,Radio,Rate,Form,Slider,PageHeader,Input,Space} from 'antd';
 import {message} from 'antd'
 //test
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import {PlusOutlined } from '@ant-design/icons';
 
 import axios from 'axios'
 import db from './db.js'
@@ -12,16 +12,18 @@ import Player from './player.js'
 import Support from './support.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 // db.set('userId',null).write()
-const userId = db.get('userId').value()
+let userId = db.get('userId').value()
 // console.log(userId)
+const d = async ()=>{
+  console.log("!!!!d")
+  // let res = await axios.get('http://urarawin.com/d')
+  let res = await axios.get('http://urarawin.com/d')
+  userId = res.data
+  // console.log(userId,res.data)
+  db.set('userId',res.data).write()
+}
 if(!userId){
-  const d = async ()=>{
-    // let res = await axios.get('http://urarawin.com/d')
-    let res = await axios.get('http://urarawin.com/d')
-    userId = res.data
-    // console.log(userId,res.data)
-    db.set('userId',res.data).write()
-  }
+  d()
 }
 /*
 userId 随机生成
@@ -63,10 +65,8 @@ const redLabels = {
 
 const PlayerInput = ({ value = {}, onChange }) => {
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
-  const [playerIndex, setPlayerIndex] = useState(0);
   const [data, setData] = useState({});
   const showPlayer = (index) => {
-    setPlayerIndex(index)
     setIsPlayerVisible(true);
   };
   const closePlayer = () => {
@@ -98,10 +98,8 @@ const PlayerInput = ({ value = {}, onChange }) => {
 };
 const SupportInput = ({ value = {}, onChange }) => {
   const [isSupportVisible, setIsSupportVisible] = useState(false);
-  const [SupportIndex, setSupportIndex] = useState(0);
   const [data, setData] = useState({});
   const showSupport = (index) => {
-    setSupportIndex(index)
     setIsSupportVisible(true);
   };
   const closeSupport = () => {
@@ -132,8 +130,6 @@ const SupportInput = ({ value = {}, onChange }) => {
   );
 };
 const SeedInput = (props)=>{
-  const [value,setValue] = useState('')
-  // const localForm = db.get('form').value()
   const [form] = Form.useForm();
   const [seed,setSeed] = useState({})
 
@@ -244,7 +240,7 @@ const SeedInput = (props)=>{
   }
   return(
     <Form name={'因子信息'} form={form} onFinish={onFinish} className={'seed-form'}>
-<Alert message='目前每人只能配置一个种子 自觉维护自己的信息' type='info'></Alert>
+<Alert message='目前每人只能配置一个种子 自觉维护自己的信息；第一次添加前先刷新 否则可能失败' type='info'></Alert>
       <Row gutter={24}>{getFields()}</Row>
       <Row justify='end'>
         <Col span={3}>
@@ -252,12 +248,12 @@ const SeedInput = (props)=>{
             <SupportInput></SupportInput>
           </Form.Item>
         </Col>
-        <Col span={4}>
+        <Col span={4} offset={1}>
           <Form.Item label='辅助卡突破' name={'supportLevel'} initialValue={0}>
             <Rate count={4} />
           </Form.Item>
         </Col>
-        <Col span={4}>
+        <Col span={4} offset={1}>
           <Form.Item label='玩家id' name='gameId' rules={[{ required: true ,type:'number',min:10000000}]}>
             <InputNumber placeholder="id" style={{ width:'100%' }}></InputNumber>
           </Form.Item>
@@ -281,8 +277,8 @@ const SearchOne = (props)=>{
           <>
             {fields.map((field, index) => (
               <Space key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="baseline">
-                <Row>
-                  <Col span={24}>
+                <Row justify='center'>
+                  <Col span={20}>
 
                 <Form.Item {...field}
                   name={[field.name,'attr']}
@@ -324,26 +320,26 @@ const SearchOne = (props)=>{
                   <Rate count={props.max} />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={5}>
                 <Button type="dashed" onClick={() => remove(field.name)}>移除</Button>
               </Col>
                 </Row>
-
-
                 </Space>
             ))}
+            <Row justify='center'>
             <Form.Item>
               <Button
                 type="dashed"
                 onClick={() => add()}
                 // style={{ width: '60%' }}
                 icon={<PlusOutlined />}
-              >
+                >
                 添加过滤条件
               </Button>
 
               <Form.ErrorList errors={errors} />
             </Form.Item>
+            </Row>
           </>
         )}
       </Form.List>
@@ -417,7 +413,7 @@ const SearchForm = (props)=>{
       </Row>
       <Row justify='end'>
       <Form.Item>
-        <Button htmlType="button" onClick={onReset}>
+        <Button htmlType="button" onClick={()=>onReset()}>
           重置
         </Button>
       </Form.Item>
@@ -437,7 +433,6 @@ const PlayerImage = (props)=>{
 }
 const SupportImage = (props)=>{
   let support = db.get('supports').find({id:props.id}).value()
-  console.log(support && support.imgUrl)
   let imgUrl = ''
   if(support){
     imgUrl =  support.imgUrl
@@ -485,6 +480,8 @@ const columns = [
             </Col>
           </Row>
         )
+      }else{
+        return null
       }
     })
   )},
@@ -501,6 +498,8 @@ const columns = [
             </Col>
           </Row>
         )
+      }else{
+        return null
       }
     })
     )},
@@ -539,8 +538,7 @@ const Seed = ()=>{
   <>
   <Row justify='center'>
     <Col span={2}>
-    <Button onClick={showSeedInput}>配置我的种子</Button>
-    <Alert message='试运行' type='info'></Alert>
+    <Button onClick={()=>showSeedInput()}>配置我的种子</Button>
     </Col>
     <Col span={20}>
       <SearchForm search={search}></SearchForm>
@@ -548,7 +546,7 @@ const Seed = ()=>{
   </Row>
   <Divider>结果</Divider>
     <Row justify='center'>
-      <Table columns={columns} dataSource={seedList} pagination={false}/>
+      <Table columns={columns} dataSource={seedList} pagination={false} rowKey={'id'}/>
     </Row>
   <Modal visible={isSeedInputVisible} onOk={closeSeedInput} onCancel={closeSeedInput} footer={null} width={'80%'}>
     <SeedInput onFinish={closeSeedInput}></SeedInput>
