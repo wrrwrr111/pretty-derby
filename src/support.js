@@ -3,8 +3,8 @@ import db from './db.js'
 import t from './components/t.js'
 import { Divider,Row,Col,Image,Modal} from 'antd';
 
-import EventList from './components/event-list.js'
-import SkillList from './components/skill-list.js'
+import {EventList} from './components/event.js'
+import {SkillList} from './components/skill.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 

@@ -38,4 +38,4 @@ const EventBox = (props)=>{
     )
 }
 
-export  default EventList
+export {EventList}

@@ -10,22 +10,22 @@ const SkillList = (props)=>{
 
   return (
     <Row gutter={[8,8]}>
-      {skillList.map((skillId)=><SkillBox key={skillId} id={skillId}></SkillBox>)}
+      {skillList.map((skillId)=><SkillButton key={skillId} id={skillId}></SkillButton>)}
       </Row>
   )
 }
-const SkillBox = (props)=>{
-  const skill = db.get('skills').find({id:props.id}).value()
+const SkillButton = (props)=>{
+  const skill = props.skill || db.get('skills').find({id:props.id}).value()
 
     return(
       <Popover content={<>
-      <p>{t(skill.name)}</p>
-      <p>{skill.describe}</p>
-      <p>{t(skill.describe)}</p>
+      <p>{'技能名称： '+t(skill.name)}</p>
+      <p>{'技能描述： '+skill.describe}</p>
+      <p>{'技能描述： '+t(skill.describe)}</p>
       {/* <p>{skill.condition}</p> */}
-      <p>{t(skill.condition)}</p>
+      <p>{'触发条件： '+t(skill.condition)}</p>
       </>} title={skill.name} className='skill-button'>
-        <Button size={'large'} className={'skill-button-'+skill.rare}>
+        <Button size={'large'} className={'skill-button-'+skill.rare} onClick={()=>props.onClick&&props.onClick(skill)}>
           <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
           {skill.name}
         </Button>
@@ -33,4 +33,4 @@ const SkillBox = (props)=>{
     )
 }
 
-export  default SkillList
+export {SkillList,SkillButton}

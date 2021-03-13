@@ -3,8 +3,8 @@ import db from './db.js'
 import t from './components/t.js'
 import { Divider,Row,Col,Button,Image,Modal,Checkbox,Card} from 'antd';
 
-import EventList from './components/event-list.js'
-import SkillList from './components/skill-list.js'
+import {EventList} from './components/event.js'
+import {SkillList} from './components/skill.js'
 
 const CheckboxGroup = Checkbox.Group
 
@@ -86,7 +86,7 @@ const AdaptBox = (props)=>
 const GrowBox = (props)=>
   <Row gutter={[8, 8]}>
     <Col span = {4}>速度/スピード</Col>
-    <Col span = {4}>体力/スタミナ</Col>
+    <Col span = {4}>耐力/スタミナ</Col>
     <Col span = {4}>力量/パワー</Col>
     <Col span = {4}>毅力/根性</Col>
     <Col span = {5}>智慧/賢さ</Col>
