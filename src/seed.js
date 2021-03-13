@@ -254,8 +254,18 @@ const SeedInput = (props)=>{
           </Form.Item>
         </Col>
         <Col span={4} offset={1}>
-          <Form.Item label='玩家id' name='gameId' rules={[{ required: true ,type:'number',min:10000000}]}>
-            <InputNumber placeholder="id" style={{ width:'100%' }}></InputNumber>
+          <Form.Item label='玩家id' name='gameId' rules={[{ required: true},
+          ({ getFieldValue }) => ({
+            validator(_, value) {
+              console.log("!!!!",value)
+              if (value.match(/^[0-9]\d*$/g) && value.length==9) {
+                return Promise.resolve();
+              }
+              return Promise.reject(new Error('输入正确的9位数id'));
+            },
+          }),
+          ]}>
+            <Input placeholder="id" style={{ width:'100%' }}></Input>
           </Form.Item>
         </Col>
         <Col span={2} offset={2}>
@@ -510,7 +520,7 @@ const columns = [
     render:(text,record)=>(
     <Row>
       <Rate count={4} value={record['supportLevel']} disabled></Rate>
-    </Row>)},    
+    </Row>)},
 
 ]
 const Seed = ()=>{
