@@ -162,7 +162,8 @@ const Skill = () =>{
           <p>{t(skill.name)}</p>
           <p>{skill.describe}</p>
           <p>{t(skill.describe)}</p>
-          <p>{skill.condition}</p>
+          {/* <p>{skill.condition}</p> */}
+          <p>{t(skill.condition)}</p>
           </>
         } title={skill.name} key={skill.id} className={'skill-button'}>
           <Button size={'large'} className={'skill-button-'+rare} onClick={()=>showModal(skill)}>

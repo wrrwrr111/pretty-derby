@@ -22,7 +22,8 @@ const SkillBox = (props)=>{
       <p>{t(skill.name)}</p>
       <p>{skill.describe}</p>
       <p>{t(skill.describe)}</p>
-      <p>{skill.condition}</p>
+      {/* <p>{skill.condition}</p> */}
+      <p>{t(skill.condition)}</p>
       </>} title={skill.name} className='skill-button'>
         <Button size={'large'} className={'skill-button-'+skill.rare}>
           <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
