@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Divider,Row,Popover,Image,Button,Checkbox,Modal,PageHeader} from 'antd';
+import { Divider,Row,Col,Tooltip,Image,Button,Checkbox,Modal,PageHeader,Switch} from 'antd';
 
 import db from './db.js'
 import Support from './support.js'
@@ -11,9 +11,19 @@ const CheckboxGroup = Checkbox.Group
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const Skill = () =>{
+  // 所有技能列表
   const allSkillList = db.get('skills').orderBy('db_id').value()
   const allSupportList = db.get('supports').value()
   const allPlayerList = db.get('players').value()
+  const mySupports = db.get('mySupports').value()
+  let mySkillList = new Set()
+  mySupports.forEach(supportId=>{
+    let support = db.get('supports').find({id:supportId}).value()
+    support.skillList.forEach(skillId=>{
+      mySkillList.add(skillId)
+    })
+  })
+
   const [skillList,setSkillList] = useState(allSkillList)
   const [skillSupportList,setSkillSupportList] = useState(allSupportList)
   const [skillPlayerList,setSkillPlayerList] = useState(allPlayerList)
@@ -23,7 +33,7 @@ const Skill = () =>{
 
   const [checkedList1, setCheckedList1] = useState([]);
   const [checkedList2, setCheckedList2] = useState([]);
-
+  const [mode,setMode] = useState(mySkillList.size)
   const checkOptions1 = [
     {label:'通用',value:'normal'},
     {label:'短距',value:'＜短距離＞'},
@@ -36,11 +46,11 @@ const Skill = () =>{
     {label:'追',value:'＜作戦・追込＞'}
   ]
   const checkOptions2 =[
-  {label:'速度被动',value:'10011'},
-  {label:'耐力被动',value:'10021'},
-  {label:'力量被动',value:'10031'},
-  {label:'毅力被动',value:'10041'},
-  {label:'智力被动',value:'10051'},
+    {label:'速度被动',value:'10011'},
+    {label:'耐力被动',value:'10021'},
+    {label:'力量被动',value:'10031'},
+    {label:'毅力被动',value:'10041'},
+    {label:'智力被动',value:'10051'},
     {label:'速度提高',value:'20011'},
     {label:'耐力恢复',value:'20021'},
     // {label:'20031',value:'20031'},
@@ -65,7 +75,6 @@ const Skill = () =>{
     updateSkillList(checkedList1,checkedValues)
   }
   const updateSkillList = (check1,check2)=>{
-    console.log(check1,check2)
     let tempSkillList = allSkillList
     if(check1.length){
       tempSkillList = tempSkillList.filter(skill=>{
@@ -96,20 +105,6 @@ const Skill = () =>{
       })
     }
     setSkillList(tempSkillList)
-    // //更新support
-    // if(tempSkillList.length === allSkillList.length){
-    //   setSupportList(allSupportList)
-    // }else{
-    //   let tempSupportList = allSupportList.filter(support=>{
-    //     let flag = 0;
-    //     tempSkillList.forEach(skill=>{
-    //       if(support.skillList.indexOf(skill.id)!==-1)
-    //       flag = 1
-    //     })
-    //     return flag
-    //   })
-    //   setSupportList(tempSupportList)
-    // }
   }
   const resetCheckbox=()=>{
     setCheckedList1([])
@@ -149,16 +144,32 @@ const Skill = () =>{
     const handleCancel = () => {
       setIsModalVisible(false);
     };
+    const changeMode = ()=>{
+      setMode(!mode)
+    }
   const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
   return(<>
-  <Button onClick={resetCheckbox}>重置</Button>
-  <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
-  <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2}
-  style={{width:'80%'}} />
+  <Row>
+    <Col span={2}>
+      <Button onClick={resetCheckbox}>重置</Button>
+    </Col>
+    <Col span={18}>
+      <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
+    </Col>
+    <Col span={4}>
+      <Tooltip title="可以在支援卡页面配置">
+        <p>显示拥有支援卡</p>
+      </Tooltip>
+      <Switch checked={mode} onChange={changeMode} />
+    </Col>
+    <Col span={20}>
+      <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
+    </Col>
+  </Row>
     {['ノーマル','レア','固有'].map(rare=>
       <Row gutter={[8,8]} key={rare}>
       <Divider>{rareLabel[rare]}</Divider>
-      { skillList.filter(item=>item.rare === rare).map(skill=>
+      { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
           <SkillButton skill={skill} key={skill.id} onClick={showModal}></SkillButton>
         )
       }

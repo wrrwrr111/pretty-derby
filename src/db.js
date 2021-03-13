@@ -24,13 +24,13 @@ db.set('updateTime',jsonDb.updateTime).write()
 db.set('races',jsonDb.races).write()
 db.set('zh',jsonDb.zh).write()
 db.set('en',jsonDb.en).write()
-db.has('lan').value()||db.set('lan','zh').write()
 // db.set('lan','en').write()
 //重新加载
+db.has('lan').value()||db.set('lan','zh').write()
 db.get('selected').value()||db.set('selected',{
   supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
   player:{},
   races:[]
 }).write()
-
+db.get('mySupports').value()||db.set('mySupports',[]).write()
 export  default db

@@ -66,3 +66,14 @@
 .ant-card-body{
   padding:8px
 }
+.chosen-card{
+
+}
+.un-chosen-card{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
