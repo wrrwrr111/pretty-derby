@@ -4703,6 +4703,16 @@
         "5ntiBjDYDn",
         "wNmEERNbDJ4"
       ],
+      "eventList": [
+        "CAP6Cha2gR",
+        "h7kqIi0qVPg",
+        "L4ONRhOlMWV",
+        "bV83tbjgUWR",
+        "AJZMf5R_1TI"
+      ],
+      "id": "akfG_iI3B",
+      "gwId": "257459",
+      "imgUrl": "img/supports/akfG_iI3B.png",
       "baseAbility": {
         "name": "輝く景色の、その先に",
         "ability": [
@@ -4844,17 +4854,7 @@
             "一緒にトレーニングをするとスキルPtの上昇量がアップ"
           ]
         ]
-      ],
-      "eventList": [
-        "CAP6Cha2gR",
-        "h7kqIi0qVPg",
-        "L4ONRhOlMWV",
-        "bV83tbjgUWR",
-        "AJZMf5R_1TI"
-      ],
-      "id": "akfG_iI3B",
-      "gwId": "257459",
-      "imgUrl": "img/supports/akfG_iI3B.png"
+      ]
     },
     {
       "name": "トウカイテイオー",
