@@ -5,15 +5,16 @@
 /server/node_modules
 /server/tool
 
-/ma.js
-/getdata.js
 # /build/getdata.js
 # /build/ma.js
 /server
 /.pnp
 
 .pnp.js
-/tool
+# tool
+tool/
+pd-tool/
+tool/node_modules
 # testing
 /coverage
 
