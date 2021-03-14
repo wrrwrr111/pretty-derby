@@ -69,11 +69,6 @@
 .chosen-card{
 
 }
-.un-chosen-card{
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: gray;
+.un-chosen-card img{
+  opacity:0.5
 }
