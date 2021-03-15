@@ -47,7 +47,9 @@ class Support extends React.Component{
     this.state = {
       list:props.supportList,
       chooseMode:false,
+      showMode:false,
       chosenList:db.get('mySupports').value()||[]}
+
   }
   componentDidUpdate(prevProps){
     if(this.props.supportList !== prevProps.supportList){
@@ -56,6 +58,10 @@ class Support extends React.Component{
   }
   changeChooseMode=()=>{
     this.setState({chooseMode:!this.state.chooseMode})
+    this.setState({showMode:!this.state.chooseMode})
+  }
+  changeShowMode=()=>{
+    this.setState({showMode:!this.state.showMode})
   }
   onSelect=(item)=>{
     let index = this.state.chosenList.indexOf(item.id)
@@ -70,6 +76,7 @@ class Support extends React.Component{
   render(){
     return (
       <>
+      <Button onClick={this.changeShowMode}>切换显示模式</Button>
       <Button onClick={this.changeChooseMode}>配置卡组</Button>
       {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
       {/* <p>{JSON.stringify(this.state.chosenList)}</p> */}
@@ -79,7 +86,7 @@ class Support extends React.Component{
             <Divider>{rare}</Divider>
             {this.state.list.filter(item=>item.rare===rare).map(support=>
               <Col xxl={2} lg={3} sm={4} xs={6} key={support.id}
-              className={this.state.chosenList.indexOf(support.id)!==-1?'chosen-card':'un-chosen-card'}
+              className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}
               // className={'un-chosen-card'}
               >
                 <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
