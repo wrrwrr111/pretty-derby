@@ -10,7 +10,7 @@ const db = low(adapter)
 
 const d = async ()=>{
   // let res = await axios.get('http://urarawin.com/d')
-  let res = await axios.get('http://urarawin.com/d')
+  let res = await axios.get('http://urarawin.com/api/d')
   console.log(res.data)
   db.set('userId',res.data).write()
 }
