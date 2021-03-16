@@ -6,6 +6,13 @@ import { Divider,Row,Col,Popover,Button } from 'antd';
 const EventList = (props)=>{
   const eventIdList = props.eventList
   const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
+  if(props.type==='multi'){
+    return(<>
+      <Divider>多选</Divider>
+      {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
+    </>
+    )
+  }
   return (
     <>
     <Divider>多选</Divider>

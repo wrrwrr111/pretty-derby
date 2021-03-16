@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "ant-design": "^1.0.0",
     "antd": "^4.13.1",
+    "antd-mobile": "^2.3.4",
     "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.3",
     "cookie-parser": "^1.4.5",

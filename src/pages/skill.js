@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
-import { Divider,Row,Col,Tooltip,Image,Button,Checkbox,Modal,PageHeader,Switch} from 'antd';
+import { Divider,Row,Col,Tooltip,Button,Checkbox,Modal,PageHeader,Switch} from 'antd';
 
-import db from './db.js'
+import db from '../db.js'
 import Support from './support.js'
 import Player from './player.js'
-import t from './components/t.js'
-import {SkillButton} from './components/skill.js'
+import t from '../components/t.js'
+import {SkillButton} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
 
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+// const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const Skill = () =>{
   // 所有技能列表
@@ -96,7 +96,7 @@ const Skill = () =>{
         let flag = 0;
         check2.forEach(value=>{
           if(skill.icon_id){
-            if(skill.icon_id[0] == value[0] && skill.icon_id[3] == value[3] ){
+            if(skill.icon_id[0] === value[0] && skill.icon_id[3] === value[3] ){
               flag = 1
             }
           }

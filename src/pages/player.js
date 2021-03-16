@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import db from './db.js'
-import t from './components/t.js'
-import { Divider,Row,Col,Button,Image,Modal,Checkbox,Card} from 'antd';
+import db from '../db.js'
+import t from '../components/t.js'
+import { Divider,Row,Col,Image,Modal,Checkbox,Card} from 'antd';
 
-import {EventList} from './components/event.js'
-import {SkillList} from './components/skill.js'
+import {EventList} from '../components/event.js'
+import {SkillList} from '../components/skill.js'
 
 const CheckboxGroup = Checkbox.Group
 
@@ -116,7 +116,7 @@ class Player extends React.Component{
             <Row gutter={[16,16]} key={rare}>
             <Divider>{rare}星</Divider>
           {this.state.list.filter(item=>item.rare===rare).map(player=>
-            <Col xxl={2} lg={3} sm={4} xs={6} key={player.id}>
+            <Col xxl={2} lg={3} sm={6} xs={6} key={player.id}>
               <PlayerCard data={player} onSelect={this.props.onSelect}></PlayerCard>
             </Col>)
           }
@@ -129,58 +129,5 @@ class Player extends React.Component{
 Player.defaultProps={
   playerList:db.get('players').value()
 }
-// const Player = (props)=>{
-//   const allPlayerList = db.get('players').value()
-//   const [playerList,setPlayerList] = useState(allPlayerList)
-//   const [checkedList, setCheckedList] = useState([]);
-
-//   const plainOptions = [
-//     {label:'草地',value:'grass'},
-//     {label:'泥地',value:'dirt'},
-//     {label:'短距',value:'shortDistance'},
-//     {label:'英里',value:'mile'},
-//     {label:'中距',value:'mediumDistance'},
-//     {label:'长距',value:'longDistance'},
-//     {label:'逃',value:'escape'},
-//     {label:'先',value:'leading'},
-//     {label:'差',value:'insert'},
-//     {label:'追',value:'tracking'}]
-
-
-//   const onChange=(checkedValues)=>{
-//     setCheckedList(checkedValues)
-//     let tempList = allPlayerList.filter(player=>{
-//       let flag = 1;
-//       checkedValues.forEach(attr=>{
-//         if(player[attr]!=='A'){
-//           flag = 0
-//         }
-//       })
-//       return flag
-//     })
-//     setPlayerList(tempList)
-//   }
-//   const resetCheckbox=()=>{
-//     setCheckedList([])
-//     setPlayerList(allPlayerList)
-//   }
-//   return (
-//     <>
-//     <Button onClick={resetCheckbox}>重置</Button>
-//     <CheckboxGroup options={plainOptions} value={checkedList} onChange={onChange} />
-//     {
-//       ['3','2','1'].map(rare=>(
-//         <Row gutter={[16,16]} key={rare}>
-//         <Divider>{rare}星</Divider>
-//       {playerList.filter(item=>item.rare===rare).map(player=>
-//         <Col xxl={2} lg={3} sm={4} xs={6} key={player.id}>
-//           <PlayerCard data={player} onSelect={props.onSelect}></PlayerCard>
-//         </Col>)
-//       }
-//       </Row>
-//       ))
-//     }</>
-//   )
-// }
 
 export  default Player

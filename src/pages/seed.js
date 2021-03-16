@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
-import { InputNumber,Row,Alert,Image,Button,Divider,
+import { Row,Alert,Image,Button,Divider,
   Table,Modal,Col,Radio,Rate,Form,Slider,PageHeader,Input,Space} from 'antd';
 import {message} from 'antd'
 //test
 import {PlusOutlined } from '@ant-design/icons';
 
 import axios from 'axios'
-import db from './db.js'
+import db from '../db.js'
 
 import Player from './player.js'
 import Support from './support.js'
@@ -258,7 +258,7 @@ const SeedInput = (props)=>{
           ({ getFieldValue }) => ({
             validator(_, value) {
               console.log("!!!!",value)
-              if (value.match(/^[0-9]\d*$/g) && value.length==9) {
+              if (value.match(/^[0-9]\d*$/g) && value.length===9) {
                 return Promise.resolve();
               }
               return Promise.reject(new Error('输入正确的9位数id'));

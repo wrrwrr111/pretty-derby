@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import db from './db.js'
+import db from '../db.js'
 
 import { Divider,Row,Col,Modal,Button,Drawer,Table} from 'antd';
 
-import {EventList} from './components/event.js'
-import {SkillList} from './components/skill.js'
+import {EventList} from '../components/event.js'
+import {SkillList} from '../components/skill.js'
 
 import Race from './race.js'
 import Player from './player.js'

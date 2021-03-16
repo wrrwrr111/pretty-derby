@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import db from './db.js'
+import db from '../db.js'
 
 import { Table } from 'antd';
 
@@ -65,21 +65,24 @@ import { Table } from 'antd';
   const labels = ["name", "date", "class", "grade",
                   "place", "ground", "distance",
                   "distanceType", "direction", "side"]
-  const columns = labels.map(label=> {
-    if(filterList['class']){
-      return {
-        title:label,
-        dataIndex:label,
-        filters:filterList[label],
-        onFilter: (value, record) => record[label] === value,
+  const mediumLabels = ["name", "date", "class","grade","ground","distanceType",]
+  const getColumns = (labels)=>{
+    return labels.map(label=> {
+      if(filterList['class']){
+        return {
+          title:label,
+          dataIndex:label,
+          filters:filterList[label],
+          onFilter: (value, record) => record[label] === value,
+        }
+      }else{
+        return{
+          title:label,
+          dataIndex:label
+        }
       }
-    }else{
-      return{
-        title:label,
-        dataIndex:label
-      }
-    }
-  })
+    })
+  }
 
   const Race = (props) =>{
     const allRaceList = db.get('races').value().map((race,index)=>{
@@ -87,7 +90,10 @@ import { Table } from 'antd';
                       return race
                     })
     const [selectedRowKeys,setSelectedRowKeys] = useState([])
-    // const columns = [{title:'',dataIndex:'',key:''}]
+    let columns = getColumns(labels)
+    if(props.type==='medium'){
+      columns = getColumns(mediumLabels)
+    }
     const onSelectChange = (selectedRowKeys,selectedRows)=>{
       props.onSelect(selectedRows)
       setSelectedRowKeys(selectedRowKeys)
@@ -102,7 +108,8 @@ import { Table } from 'antd';
       setSelectedRowKeys([])
     }
     return(
-      <Table rowSelection={props.onSelect?rowSelection:null} columns={columns} dataSource={allRaceList} onChange={onChange} pagination={false}/>
+      <Table rowSelection={props.onSelect?rowSelection:null} columns={columns}
+      dataSource={allRaceList} onChange={onChange} pagination={false}/>
       )
   }
 

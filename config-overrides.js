@@ -5,6 +5,10 @@ module.exports = override(
     libraryDirectory:'es',
     style:'css'
   }),
+  fixBabelImports('import',{
+    libraryName:'antd-mobile',
+    style:true
+  }),
   (config)=>{
     const paths = require('react-scripts/config/paths');
 
