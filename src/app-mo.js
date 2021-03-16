@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Route ,Link} from 'react-router-dom';
 
-
-import { Drawer, List, NavBar, Icon } from 'antd-mobile';
+import {Image,Button,Popover} from 'antd'
+import { Drawer, List, NavBar, Icon, WhiteSpace } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.min.css';
 
 
@@ -39,6 +39,22 @@ class App1 extends React.Component {
           <List.Item >{item.label}</List.Item>
         </Link>
       )}
+
+      <List.Item style={{marginTop:200}}>
+      <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
+      </List.Item>
+      <List.Item>
+      <Popover content={<Image src={'img/q.jpg'} width={300}></Image>}>
+        <a target="_blank" rel="noreferrer" href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi">
+          <Button placement="bottom">加入QQ群</Button>
+        </a>
+      </Popover>
+      </List.Item>
+      <List.Item>
+      <Popover content={<><Image src={'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
+        <Button placement="bottom">捐助</Button>
+      </Popover>
+      </List.Item>
     </List>)
 
     return (
