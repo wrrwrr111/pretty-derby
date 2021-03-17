@@ -14,17 +14,7 @@ const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 // db.set('userId',null).write()
 let userId = db.get('userId').value()
 // console.log(userId)
-const d = async ()=>{
-  console.log("!!!!d")
-  // let res = await axios.get('http://urarawin.com/d')
-  let res = await axios.get('http://urarawin.com/d')
-  userId = res.data
-  // console.log(userId,res.data)
-  db.set('userId',res.data).write()
-}
-if(!userId){
-  d()
-}
+
 /*
 userId 随机生成
 种马玩家id

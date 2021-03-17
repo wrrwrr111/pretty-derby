@@ -144,7 +144,7 @@ const Nurturing = () =>{
         <Flex wrap='wrap'>
           <img src={cdnServer+player.imgUrl} alt={player.name} width={'20%'} flex='0 0 auto'></img>
           {skillShow&&
-          <Flex.Item style={{flex:'1 0 auto',width:'78%'}}>
+          <Flex.Item style={{flex:'1 0 auto',width:'80%',margin:0,paddingLeft:8}}>
             <SkillList skillList={player.id?player.skillList:[]}></SkillList>
           </Flex.Item>
           }
