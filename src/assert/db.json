@@ -19320,7 +19320,7 @@
       "rare": "レア",
       "id": "0hNrL5bQB",
       "imgUrl": "img/skills/0hNrL5bQB.png",
-      "describe": "直線に入ると息を入れて疲れにくくなる",
+      "describe": "直線に入ると息を入れて疲れにくくなる＜長距離＞",
       "condition": "distance_type==4&straight_random==1",
       "rarity": "2",
       "db_id": "200741",
