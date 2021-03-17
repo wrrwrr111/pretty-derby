@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/pretty-derby/static/css/main.5c78f31c.chunk.css",
-    "main.js": "/pretty-derby/static/js/main.d40665af.chunk.js",
-    "main.js.map": "/pretty-derby/static/js/main.d40665af.chunk.js.map",
+    "main.js": "/pretty-derby/static/js/main.179022dd.chunk.js",
+    "main.js.map": "/pretty-derby/static/js/main.179022dd.chunk.js.map",
     "runtime-main.js": "/pretty-derby/static/js/runtime-main.3929a206.js",
     "runtime-main.js.map": "/pretty-derby/static/js/runtime-main.3929a206.js.map",
-    "static/css/2.4d2618eb.chunk.css": "/pretty-derby/static/css/2.4d2618eb.chunk.css",
-    "static/js/2.3e342c9b.chunk.js": "/pretty-derby/static/js/2.3e342c9b.chunk.js",
-    "static/js/2.3e342c9b.chunk.js.map": "/pretty-derby/static/js/2.3e342c9b.chunk.js.map",
+    "static/css/2.b0c15320.chunk.css": "/pretty-derby/static/css/2.b0c15320.chunk.css",
+    "static/js/2.aa2ea5b7.chunk.js": "/pretty-derby/static/js/2.aa2ea5b7.chunk.js",
+    "static/js/2.aa2ea5b7.chunk.js.map": "/pretty-derby/static/js/2.aa2ea5b7.chunk.js.map",
     "index.html": "/pretty-derby/index.html",
-    "static/css/2.4d2618eb.chunk.css.map": "/pretty-derby/static/css/2.4d2618eb.chunk.css.map",
+    "static/css/2.b0c15320.chunk.css.map": "/pretty-derby/static/css/2.b0c15320.chunk.css.map",
     "static/css/main.5c78f31c.chunk.css.map": "/pretty-derby/static/css/main.5c78f31c.chunk.css.map",
-    "static/js/2.3e342c9b.chunk.js.LICENSE.txt": "/pretty-derby/static/js/2.3e342c9b.chunk.js.LICENSE.txt",
+    "static/js/2.aa2ea5b7.chunk.js.LICENSE.txt": "/pretty-derby/static/js/2.aa2ea5b7.chunk.js.LICENSE.txt",
     "static/media/index.less": "/pretty-derby/static/media/index.e998c2a4.less"
   },
   "entrypoints": [
     "static/js/runtime-main.3929a206.js",
-    "static/css/2.4d2618eb.chunk.css",
-    "static/js/2.3e342c9b.chunk.js",
+    "static/css/2.b0c15320.chunk.css",
+    "static/js/2.aa2ea5b7.chunk.js",
     "static/css/main.5c78f31c.chunk.css",
-    "static/js/main.d40665af.chunk.js"
+    "static/js/main.179022dd.chunk.js"
   ]
 }
