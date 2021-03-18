@@ -1545,7 +1545,7 @@
     "accumulatetime>=2&blocked_all_continuetime>=1": "赛事进行时间≥2，四周被阻隔时间≥1",
     "is_finalcorner==1&is_lastspurt==1&straight_random==1&corner==0&distance_diff_rate>=75": "最终弯道，最后冲刺，最终直线，自身处于队伍位置≥75%",
     "remain_distance==200&order==1&bashin_diff_behind>=1": "剩余距离=200，名次=1，距离后方马马身≥1",
-    "always==1": "always=1（不知道啥意思）",
+    "always==1": "无条件",
     "phase==0&accumulatetime>=5&blocked_front_continuetime>=1": "序盘，赛事进行时间≥5，前方被阻隔时间≥1",
     "phase_random==0": "序盘",
     "phase==1&change_order_onetime<0": "中盘，超过至少一人",
