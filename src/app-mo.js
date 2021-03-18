@@ -33,7 +33,7 @@ class App1 extends React.Component {
       player:{},
       races:[]
     }).write()
-    db.set('myDecks',[]).write()
+    // db.set('myDecks',[]).write()
   }
   render() {
     const routers = [{path:'/',label:'角色'},
