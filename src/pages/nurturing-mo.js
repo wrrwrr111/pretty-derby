@@ -6,6 +6,7 @@ import { Flex } from 'antd-mobile';
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
+import {BuffButton} from '../components/buff.js'
 
 import Race from './race.js'
 import Player from './player.js'
@@ -134,6 +135,7 @@ const Nurturing = () =>{
         <Flex wrap='wrap'>
           <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
           <Button onClick={showSupport2}>辅助卡查询</Button>
+          <BuffButton></BuffButton>
           <Button onClick={showRace}>选择关注赛事</Button>
           <Button onClick={showDrawer}>查看关注赛事</Button>
           <Button onClick={changeSkillShow}>是否显示技能</Button>
@@ -160,9 +162,9 @@ const Nurturing = () =>{
         style={{ position: 'absolute' }}
         closable={true}
         placement="left"
-        mask={false}
-        maskClosable={false}
-        width='100%'
+        mask={true}
+        maskClosable={true}
+        width='95%'
         >
         {/* {races.map(race=>
           <p>{race.name}</p>

@@ -5,6 +5,7 @@ import { Divider,Row,Col,Modal,Button,Drawer,Table} from 'antd';
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
+import {BuffButton} from '../components/buff.js'
 
 import Race from './race.js'
 import Player from './player.js'
@@ -146,7 +147,8 @@ const Nurturing = () =>{
 
       <Col span = {9}>
         <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-        <Button onClick={showSupport2}>临时辅助卡事件查询</Button>
+        <Button onClick={showSupport2}>辅助卡查询</Button>
+        <BuffButton></BuffButton>
         <Button onClick={showRace}>选择关注赛事</Button>
         <Button onClick={showDrawer}>查看关注赛事</Button>
         <Divider></Divider>
@@ -154,16 +156,16 @@ const Nurturing = () =>{
         <Divider></Divider>
         <RaceList raceList={player.id?player.raceList:[]}></RaceList>
         <Drawer
-        title="关注赛事 (可以按esc退出)"
+        title="关注赛事"
         onClose={onDrawerClose}
         visible={visible}
         getContainer={false}
         style={{ position: 'absolute' }}
         closable={true}
         placement="left"
-        mask={false}
-        maskClosable={false}
-        width={'100%'}
+        mask={true}
+        maskClosable={true}
+        width={'95%'}
       >
         {/* {races.map(race=>
           <p>{race.name}</p>
