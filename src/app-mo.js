@@ -5,6 +5,7 @@ import {Image,Button,Popover} from 'antd'
 import { Drawer, List, NavBar, Icon, WhiteSpace } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.min.css';
 
+import db from './db.js'
 
 import Race from './pages/race.js'
 import Player from './pages/player.js'
@@ -25,6 +26,14 @@ class App1 extends React.Component {
   onSelect = (label) => {
     this.setState({title:label});
     this.onOpenChange()
+  }
+  reload =()=>{
+    db.set('selected',{
+      supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
+      player:{},
+      races:[]
+    }).write()
+    db.set('myDecks',[]).write()
   }
   render() {
     const routers = [{path:'/',label:'角色'},
@@ -54,6 +63,9 @@ class App1 extends React.Component {
       <Popover content={<><Image src={'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
         <Button placement="bottom">捐助</Button>
       </Popover>
+      </List.Item>
+      <List.Item>
+        <Button placement="bottom" onClick={this.reload}>重置育成</Button>
       </List.Item>
     </List>)
 

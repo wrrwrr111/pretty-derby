@@ -39,6 +39,7 @@ const AppPc = ()=>{
       player:{},
       races:[]
     }).write()
+    db.set('myDecks',[]).write()
   }
   return (
       // <UserAgentProvider ua={window.navigator.userAgent}>

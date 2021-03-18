@@ -18,9 +18,9 @@
   height:100%
 } */
 .skill-button{
-  margin-right:4px;
-  margin-bottom:4px;
+  margin:0
 }
+
 .skill-button span{
   vertical-align: super;
 }
@@ -30,7 +30,9 @@
 .skill-button-固有{
   background-color: #9b59b6;
 }
-
+.event-button{
+  margin:0
+}
 .race-row-0 {
   background-color: #CCCCCC;
 }

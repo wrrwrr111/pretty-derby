@@ -9,7 +9,7 @@ const SkillList = (props)=>{
   const skillList = props.skillList
 
   return (
-    <Row gutter={[8,8]}>
+    <Row gutter={0}>
       {skillList.map((skillId)=><SkillButton key={skillId} id={skillId}></SkillButton>)}
       </Row>
   )

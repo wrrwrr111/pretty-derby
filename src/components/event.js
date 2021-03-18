@@ -40,7 +40,7 @@ const EventBox = (props)=>{
         <p>{t(props.event.name)}</p>
         {ChoiceItem}
       </>} title={props.event.name}>
-        <Button>{props.event.name}</Button>
+        <Button className='event-button'>{props.event.name}</Button>
       </Popover>
     )
 }

@@ -65,7 +65,7 @@ import { Table } from 'antd';
   const labels = ["name", "date", "class", "grade",
                   "place", "ground", "distance",
                   "distanceType", "direction", "side"]
-  const mediumLabels = ["name", "date", "class","grade","ground","distanceType",]
+  const mediumLabels = ["name", "date", "class","grade","ground","distanceType"]
   const getColumns = (labels)=>{
     return labels.map(label=> {
       if(filterList['class']){
