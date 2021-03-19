@@ -73,7 +73,7 @@ const AppPc = ()=>{
           <Button placement="bottom" onClick={reload}>清空育成</Button>
          </Popover>
       </Col>
-      <Col span={16}></Col>
+      <Col span={14}></Col>
       <Col span={2}>
       <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
           <Button placement="bottom">捐助</Button>
