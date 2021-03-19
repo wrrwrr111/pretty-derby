@@ -15,7 +15,7 @@ import Skill from './pages/skill.js'
 import Seed from './pages/seed.js'
 
 const { Header, Content, Footer } = Layout;
-
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 const AppPc = ()=>{
   let lan = db.get('lan').value()
   const [langText,setLangText] = useState(lan==='zh'?'English':'中文')
@@ -75,7 +75,7 @@ const AppPc = ()=>{
       </Col>
       <Col span={16}></Col>
       <Col span={2}>
-      <Popover content={<><Image src={'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
+      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
           <Button placement="bottom">捐助</Button>
         </Popover>
       </Col>
@@ -83,7 +83,7 @@ const AppPc = ()=>{
         <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
       </Col>
       <Col span={2}>
-      <Popover content={<Image src={'img/q.jpg'} width={300}></Image>}>
+      <Popover content={<Image src={cdnServer+'img/q.jpg'} width={300}></Image>}>
         <a target="_blank" rel="noreferrer" href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi">
           <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="轻 松 赛 马" title="轻 松 赛 马" />
         </a>

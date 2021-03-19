@@ -1,5 +1,5 @@
 # urarawin
-[http://wrarawin.com](http://wrarawin.com)
+[http://urarawin.com](http://urarawin.com)
 
 ## `yarn start`
 
