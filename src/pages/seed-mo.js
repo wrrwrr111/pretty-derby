@@ -272,7 +272,7 @@ const SeedCard = (props) =>{
 const Seed = ()=>{
   const [seedList,setSeedList] = useState([])
   const search = async (value)=>{
-    const res = await axios.post('http://urarawin.com/api/search',value)
+    const res = await axios.post('https://urarawin.com/api/search',value)
     if(res.data){
       if(res.data.length){
         setSeedList([...res.data])

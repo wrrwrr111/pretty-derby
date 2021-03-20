@@ -194,7 +194,7 @@ const Nurturing = () =>{
   return(
     <Row className='nurturing-box' gutter={[32,8]}>
 
-      <Col span = {7}>
+      <Col sm={7} xs={24}>
         <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>辅助卡查询</Button>
         <Button onClick={showRace}>选择关注赛事</Button>
@@ -257,10 +257,10 @@ const Nurturing = () =>{
           <EventList eventList={player.eventList} pid={player.id}></EventList>
         }
       </Col>
-      <Col span = {17}>
+      <Col sm={17} xs={24}>
         <Row gutter={[16,16]}>
         {[0,1,2,3,4,5].map(index=>
-          <Col span={8} key={index}>
+          <Col sm={8} xs={24} key={index}>
             <Button onClick={()=>showSupport(index)}>选择辅助卡</Button>
             {supports[index]&&supports[index].id &&<NurturingSupport data={supports[index]} ></NurturingSupport>}
           </Col>

@@ -164,7 +164,7 @@ const SeedInput = (props)=>{
         formData['white']=formData[`whiteNum-${i}`]
       }
     })
-    const res = await axios.post('http://urarawin.com/api/add',formData)
+    const res = await axios.post('https://urarawin.com/api/add',formData)
     if(res.data && res.data.success){
       message.info('成功添加')
       props.onFinish()
@@ -523,7 +523,7 @@ const Seed = ()=>{
     setIsSeedInputVisible(false);
   };
   const search = async (value)=>{
-    const res = await axios.post('http://urarawin.com/api/search',value)
+    const res = await axios.post('https://urarawin.com/api/search',value)
     if(res.data){
       if(res.data.length){
         setSeedList([...res.data])
