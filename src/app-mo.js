@@ -11,6 +11,7 @@ import Race from './pages/race.js'
 import Player from './pages/player.js'
 import Support from './pages/support.js'
 import NurturingMO from './pages/nurturing-mo.js'
+import NurturingMO2 from './pages/nurturing-mo2.js'
 import Skill from './pages/skill.js'
 import SeedMo from './pages/seed-mo.js'
 
@@ -37,10 +38,11 @@ class App1 extends React.Component {
   }
   render() {
     const routers = [{path:'/',label:'角色'},
-    {path:'/support',label:'支援卡'},
+    {path:'support',label:'支援卡'},
     {path:'skill',label:'技能'},
     {path:'race',label:'比赛'},
     {path:'nurturing',label:'育成'},
+    {path:'nurturing2',label:'育成new'},
     {path:'seed',label:'种🐎'}]
     const linkList=(<List>
       {routers.map(item=>
@@ -90,6 +92,7 @@ class App1 extends React.Component {
           <Route path="/support" component={Support}/>
           <Route path="/skill" component={Skill}/>
           <Route path="/nurturing" component={NurturingMO}/>
+          <Route path="/nurturing2" component={NurturingMO2}/>
           <Route path="/seed" component={SeedMo}/>
           <Route path="/race" component={Race}/>
       </Drawer>
