@@ -11,6 +11,7 @@ import Race from './pages/race.js'
 import Player from './pages/player.js'
 import Support from './pages/support.js'
 import Nurturing from './pages/nurturing.js'
+import Nurturing2 from './pages/nurturing2.js'
 import Skill from './pages/skill.js'
 import Seed from './pages/seed.js'
 
@@ -52,14 +53,16 @@ const AppPc = ()=>{
         <Menu.Item key="3"><Link to='/skill'>技能</Link></Menu.Item>
         <Menu.Item key="4"><Link to='/race'>比赛</Link></Menu.Item>
         <Menu.Item key="5"><Link to='/nurturing'>育成</Link></Menu.Item>
+        <Menu.Item key="7"><Link to='/nurturing2'>育成new</Link></Menu.Item>
         <Menu.Item key="6"><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
-    <Content style={{ padding: '80px 50px' }}>
+    <Content style={{ padding: '72px 16px' }}>
       <Route exact path="/" component={Player}/>
       <Route path="/support" component={Support}/>
       <Route path="/skill" component={Skill}/>
       <Route path="/nurturing" component={Nurturing}/>
+      <Route path="/nurturing2" component={Nurturing2}/>
       <Route path="/seed" component={Seed}/>
       <Route path="/race" component={Race}/>
     </Content>

@@ -18,21 +18,30 @@
   height:100%
 } */
 .skill-button{
-  margin:0
+  margin:1%;
+  border:2px solid;
+  border-radius:20px;
+  height:36px;
+  padding:3px 10px;
+  font-size:16px;
+  background-color: rgba(2555,255,255,0.8);
+}
+.event-button{
+  margin:1%;
+  border:2px;
+  background-color: rgba(2555,255,255,0.8);
 }
 
 .skill-button span{
   vertical-align: super;
 }
-.skill-button-レア{
-  background-color: #eccc68;
+.skill-button-2{
+  background-color: rgba(236, 204, 104,0.8);
 }
-.skill-button-固有{
-  background-color: #9b59b6;
+.skill-button-3{
+  background-color: rgba(155, 89, 182,0.8);
 }
-.event-button{
-  margin:0
-}
+
 .race-row-0 {
   background-color: #CCCCCC;
 }
@@ -92,6 +101,10 @@
   width: 300px;
   padding: 0;
 }
-.am-list-item-middle:active{
+.am-list-item-middle{
   background-color: #99cccc;
+}
+
+.support-card{
+  background-color: rgba(241, 242, 246,0.7);
 }

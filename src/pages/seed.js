@@ -130,7 +130,7 @@ const SeedInput = (props)=>{
     // db.set('form',form).write()
     // 修整成需要的数据
     const formData = {...tmpSeed}
-    formData.userId = userId
+    formData.userId = userId || db.get('userId').value()
     let updateTime = new Date().getTime()
     formData.updateTime=updateTime
     formData['playerId-0'] = value['player-0'].id

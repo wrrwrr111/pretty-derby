@@ -8,7 +8,7 @@ const EventList = (props)=>{
   const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
   if(props.type==='multi'){
     return(<>
-      <Divider>多选</Divider>
+      {/* <Divider>多选</Divider> */}
       {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
     </>
     )
@@ -24,8 +24,8 @@ const EventList = (props)=>{
 }
 const EventBox = (props)=>{
   const ChoiceItem = props.event.choiceList.map((choice,index)=>{
-    const ResultItem = choice[1].map((result)=>
-        <p key={result}>{result}</p>
+    const ResultItem = choice[1].map((result,index)=>
+        <p key={index}>{result}</p>
       )
       return(
         <Row key={index} gutter={[8,8]} className="list-row">
