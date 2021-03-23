@@ -5,7 +5,9 @@ import { Picker, List,Flex,Card } from 'antd-mobile';
 import { Image,Button,Divider,Modal,Rate,Form} from 'antd';
 import {message} from 'antd'
 //test
-import {PlusOutlined,SmileOutlined,FrownOutlined } from '@ant-design/icons';
+import {PlusOutlined,SmileOutlined,FrownOutlined,CopyOutlined } from '@ant-design/icons';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+
 import axios from 'axios'
 import db from '../db.js'
 
@@ -246,7 +248,12 @@ const Seed = ()=>{
     const data = props.data
     return (
       <Card>
-        <Card.Header title={data.gameId}></Card.Header>
+        <Flex>
+            <p style={{fontSize:'1.5em'}}>{data.gameId}</p>
+            <CopyToClipboard text={data.gameId} onCopy={()=>message.info('成功')}>
+              <Button shape="circle" icon={<CopyOutlined />}/>
+            </CopyToClipboard>
+        </Flex>
         <Flex>
           <Flex.Item>
             <PlayerImage id={data['playerId-0']}></PlayerImage>

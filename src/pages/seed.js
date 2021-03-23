@@ -3,8 +3,8 @@ import { Row,Alert,Image,Button,Divider,
   Table,Modal,Col,Radio,Rate,Form,Slider,PageHeader,Input,Space} from 'antd';
 import {message} from 'antd'
 //test
-import {PlusOutlined } from '@ant-design/icons';
-import {SmileOutlined,FrownOutlined} from '@ant-design/icons'
+import {PlusOutlined,SmileOutlined,FrownOutlined,CopyOutlined } from '@ant-design/icons';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import axios from 'axios'
 import db from '../db.js'
@@ -451,7 +451,12 @@ const Seed = ()=>{
 
   const columns = [
     {title:'玩家id',dataIndex:'gameId',key:'gameId',render:(text,seed)=>(<>
-      <Row>{(text)}</Row>
+      <Row>
+        <p>{text}</p> 
+        <CopyToClipboard text={text} onCopy={()=>message.info('成功')}>
+          <Button shape="circle" icon={<CopyOutlined />}/>
+        </CopyToClipboard>
+      </Row>
       <Row align='middle'>
         <Button shape="circle" icon={<SmileOutlined />} onClick={()=>like(seed)}/>
         <p>{seed.likes?seed.likes.length:0}</p>
