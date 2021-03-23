@@ -554,15 +554,15 @@ const Seed = ()=>{
     if(!userId){
       message.info('刷新后重试')
       return
-    }else if(seed.likes.indexOf(userId)!==-1 ){
+    }else if(seed.likes&&seed.likes.indexOf(userId)!==-1 ){
       return
     }
     let id = seed.id
     const res = await axios.post('https://urarawin.com/api/like',{id,userId})
     if(res.data){
       message.info('成功')
-      seed.likes.push(userId)
-      seed.dislikes.splice(seed.dislikes.indexOf(userId),1)
+      seed.likes?seed.likes.push(userId):seed.likes=[userId]
+      seed.dislikes&&seed.dislikes.splice(seed.dislikes.indexOf(userId),1)
     }
     setSeedList([...seedList])
   }
@@ -570,15 +570,15 @@ const Seed = ()=>{
     if(!userId){
       message.info('刷新后重试')
       return
-    }else if(seed.dislikes.indexOf(userId)!==-1 ){
+    }else if(seed.dislikes&&seed.dislikes.indexOf(userId)!==-1 ){
       return
     }
     let id = seed.id
     const res = await axios.post('https://urarawin.com/api/dislike',{id,userId})
     if(res.data){
       message.info('成功')
-      seed.dislikes.push(userId)
-      seed.likes.splice(seed.likes.indexOf(userId),1)
+      seed.likes&&seed.likes.splice(seed.likes.indexOf(userId),1)
+      seed.dislikes?seed.dislikes.push(userId):seed.dislikes=[userId]
     }
     setSeedList([...seedList])
   }
