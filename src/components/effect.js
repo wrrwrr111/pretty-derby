@@ -6,23 +6,8 @@ import t from './t.js'
 
 const { Column, ColumnGroup } = Table;
 
-// init: 10
-// limit_lv5: -1
-// limit_lv10: -1
-// limit_lv15: -1
-// limit_lv20: -1
-// limit_lv25: 15
-// limit_lv30: 15
-// limit_lv35: -1
-// limit_lv40: -1
-// limit_lv45: 20
-// limit_lv50: -1
 const EffectTable = (props)=>{
   const effects = db.get('effects').value()
-  // cosnt maxEffect = (effect)=>{
-  //   let list =[]
-  //   return Math.max()
-  // }
   let columns = [
     {title:'效果',dataIndex:'type',key:'type',render:type=><Popover content={<>
       <p>{effects[type].name}</p>

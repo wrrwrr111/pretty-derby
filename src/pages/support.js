@@ -32,7 +32,7 @@ const SupportCard = (props)=>{
       <Modal title={`${props.data.name}----${t(props.data.charaName)}`} 
         visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
-          <Row justify='space-around'>
+          <Row justify='space-around' align='middle'>
             <Col span={6}>
               <Image src={cdnServer+props.data.imgUrl} preview={false} width={'100%'} />
             </Col>

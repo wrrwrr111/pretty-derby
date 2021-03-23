@@ -5,15 +5,14 @@ import { Picker, List,Flex,Card } from 'antd-mobile';
 import { Image,Button,Divider,Modal,Rate,Form} from 'antd';
 import {message} from 'antd'
 //test
-import {PlusOutlined } from '@ant-design/icons';
-
+import {PlusOutlined,SmileOutlined,FrownOutlined } from '@ant-design/icons';
 import axios from 'axios'
 import db from '../db.js'
 
 import Player from './player.js'
 import Support from './support.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
-// db.set('userId',null).write()
+let userId = db.get('userId').value()
 
 const blueLabels={
   'speed':'速度',
@@ -242,34 +241,42 @@ const SupportImage = (props)=>{
         width={80} preview={false}></Image>
 }
 
-const SeedCard = (props) =>{
-  const data = props.data
-  return (
-    <Card>
-      <Card.Header title={data.gameId}></Card.Header>
-      <Flex>
-        <Flex.Item>
-          <PlayerImage id={data['playerId-0']}></PlayerImage>
-          <SupportImage id={data['supportId']}></SupportImage>
-        </Flex.Item>
-        <Flex.Item>
-          <p>{`${blueLabels[data['blue-0']]}: ${data['blueLevel-0']}`}</p>
-          <p>{`${redLabels[data['red-0']]}: ${data['redLevel-0']}`}</p>
-          {Object.keys(blueLabels).map(key=>
-          data[key]?<p key={key}>{`总计 ${blueLabels[key]}: ${data[key]}`}</p>:null
-          )}
-          {Object.keys(redLabels).map(key=>
-          data[key]?<p key={key}>{`总计 ${redLabels[key]}: ${data[key]}`}</p>:null
-          )}
-          <p>{`突破等级: ${data['supportLevel']||0}`}</p>
-          <p></p>
-        </Flex.Item>
-      </Flex>
-    </Card>
-  )
-}
-
 const Seed = ()=>{
+  const SeedCard = (props) =>{
+    const data = props.data
+    return (
+      <Card>
+        <Card.Header title={data.gameId}></Card.Header>
+        <Flex>
+          <Flex.Item>
+            <PlayerImage id={data['playerId-0']}></PlayerImage>
+            <SupportImage id={data['supportId']}></SupportImage>
+            <Flex align='middle'>
+              <Button shape="circle" icon={<SmileOutlined />} onClick={()=>like(data)}/>
+              <p>{data.likes?data.likes.length:0}</p>
+            </Flex>
+            <Flex align='middle'>
+              <Button shape="circle" icon={<FrownOutlined />} onClick={()=>dislike(data)}/>
+              <p>{data.dislikes?data.dislikes.length:0}</p>
+            </Flex>
+          </Flex.Item>
+          <Flex.Item>
+            <p>{`${blueLabels[data['blue-0']]}: ${data['blueLevel-0']}`}</p>
+            <p>{`${redLabels[data['red-0']]}: ${data['redLevel-0']}`}</p>
+            {Object.keys(blueLabels).map(key=>
+            data[key]?<p key={key}>{`总计 ${blueLabels[key]}: ${data[key]}`}</p>:null
+            )}
+            {Object.keys(redLabels).map(key=>
+            data[key]?<p key={key}>{`总计 ${redLabels[key]}: ${data[key]}`}</p>:null
+            )}
+            <p>{`突破等级: ${data['supportLevel']||0}`}</p>
+            <p></p>
+          </Flex.Item>
+        </Flex>
+      </Card>
+    )
+  }
+
   const [seedList,setSeedList] = useState([])
   const search = async (value)=>{
     const res = await axios.post('https://urarawin.com/api/search',value)
@@ -282,6 +289,38 @@ const Seed = ()=>{
     }else{
       message.info('出错了')
     }
+  }
+  const like = async (seed) =>{
+    if(!userId){
+      message.info('刷新后重试')
+      return
+    }else if(seed.likes.indexOf(userId)!==-1 ){
+      return
+    }
+    let id = seed.id
+    const res = await axios.post('https://urarawin.com/api/like',{id,userId})
+    if(res.data){
+      message.info('成功')
+      seed.likes.push(userId)
+      seed.dislikes.splice(seed.dislikes.indexOf(userId),1)
+    }
+    setSeedList([...seedList])
+  }
+  const dislike = async (seed)=>{
+    if(!userId){
+      message.info('刷新后重试')
+      return
+    }else if(seed.dislikes.indexOf(userId)!==-1 ){
+      return
+    }
+    let id = seed.id
+    const res = await axios.post('https://urarawin.com/api/dislike',{id,userId})
+    if(res.data){
+      message.info('成功')
+      seed.dislikes.push(userId)
+      seed.likes.splice(seed.likes.indexOf(userId),1)
+    }
+    setSeedList([...seedList])
   }
   return(
   <>
