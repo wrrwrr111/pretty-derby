@@ -2,7 +2,7 @@ import low from 'lowdb';
 import LocalStorage from 'lowdb/adapters/LocalStorage'
 
 import axios from 'axios'
-import jsonDb from './assert/db.json'
+import jsonDB from './assert/db.json'
 
 const adapter = new LocalStorage('db')
 const db = low(adapter)
@@ -16,15 +16,16 @@ const d = async ()=>{
 }
 db.get('userId').value()||d()
 
-db.set('players',jsonDb.players).write()
-db.set('supports',jsonDb.supports).write()
-db.set('skills',jsonDb.skills).write()
-db.set('events',jsonDb.events).write()
-db.set('updateTime',jsonDb.updateTime).write()
-db.set('races',jsonDb.races).write()
-db.set('buffs',jsonDb.buffs).write()
-db.set('zh',jsonDb.zh).write()
-db.set('en',jsonDb.en).write()
+db.set('players',jsonDB.players).write()
+db.set('supports',jsonDB.supports).write()
+db.set('skills',jsonDB.skills).write()
+db.set('events',jsonDB.events).write()
+db.set('updateTime',jsonDB.updateTime).write()
+db.set('races',jsonDB.races).write()
+db.set('buffs',jsonDB.buffs).write()
+db.set('effects',jsonDB.effects).write()
+db.set('zh',jsonDB.zh).write()
+db.set('en',jsonDB.en).write()
 // db.set('lan','en').write()
 //重新加载
 db.has('lan').value()||db.set('lan','zh').write()

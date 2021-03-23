@@ -5,6 +5,7 @@ import { Divider,Row,Col,Image,Modal,Button} from 'antd';
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
+import {EffectTable} from '../components/effect.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -36,7 +37,9 @@ const SupportCard = (props)=>{
           <Divider>自带技能</Divider>
           <SkillList skillList={props.data.possessionSkill}></SkillList>
           <Divider>事件</Divider>
-        <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
+          <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
+          <Divider>育成效果</Divider>
+          <EffectTable effects={props.data.effects} rarity={props.data.rarity}></EffectTable>
       </Modal>
     </>
   )
