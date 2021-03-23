@@ -30,9 +30,9 @@ const EffectTable = (props)=>{
       <p>{effects[type].description}</p>
       <p>{t(effects[type].description)}</p>
     </>}>
-      {t(effects[type].name)}
+      <p>{t(effects[type].name)}</p>
     </Popover>},
-    {title:'init',dataIndex:'init',key:'init',render:text=>text},
+    {title:'初始',dataIndex:'init',key:'init',render:text=>text},
     {title:'lv20',dataIndex:'limit_lv20',key:'limit_lv50',render:(text,record)=>
       Math.max(record.init,record.limit_lv5,record.limit_lv10,record.limit_lv15,record.limit_lv20)},
     {title:'lv25',dataIndex:'limit_lv25',key:'limit_lv25',render:(text,record)=>
@@ -56,18 +56,7 @@ const EffectTable = (props)=>{
   }else if(props.rarity === 1){
     columns = columns.slice(0,columns.length-2)
   }
-    // {title:'lv5',dataIndex:'limit_lv5',key:'limit_lv5',render:text=>text},
-    // {title:'lv10',dataIndex:'limit_lv10',key:'limit_lv10',render:text=>text},
-    // {title:'lv15',dataIndex:'limit_lv15',key:'limit_lv15',render:text=>text},
-    // {title:'lv20',dataIndex:'limit_lv20',key:'limit_lv20',render:text=>text},
-    // {title:'lv25',dataIndex:'limit_lv25',key:'limit_lv25',render:text=>text},
-    // {title:'lv30',dataIndex:'limit_lv30',key:'limit_lv30',render:text=>text},
-    // {title:'lv35',dataIndex:'limit_lv35',key:'limit_lv35',render:text=>text},
-    // {title:'lv40',dataIndex:'limit_lv40',key:'limit_lv40',render:text=>text},
-    // {title:'lv45',dataIndex:'limit_lv45',key:'limit_lv45',render:text=>text},
-    // {title:'lv50',dataIndex:'limit_lv50',key:'limit_lv50',render:text=>text},
 
-  console.log(props.data)
   return(<Table columns={columns} dataSource={props.effects} rowKey='type' pagination={false}></Table>)
 }
 export {EffectTable}

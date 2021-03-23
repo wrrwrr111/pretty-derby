@@ -61,12 +61,15 @@
   font-size:1em;
   color:black
 }
+.ant-divider{
+  margin:4px 0;
+}
 .ant-divider-with-text{
   margin:4px 0;
 }
 
 .ant-divider-horizontal{
-  margin:12px 0;
+  margin:4px 0;
 }
 .seed-form{
   background-color:#CCCCCC;
