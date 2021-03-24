@@ -57,7 +57,7 @@ const AppPc = ()=>{
         <Menu.Item key="6"><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
-    <Content style={{ padding: '72px 16px'}} >
+    <Content style={{ padding: '64px 0px'}} >
       <Route exact path="/" component={Player}/>
       <Route path="/support" component={Support}/>
       <Route path="/skill" component={Skill}/>
