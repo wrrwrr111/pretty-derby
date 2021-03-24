@@ -2,6 +2,9 @@
     margin-right: 8px;
     margin-bottom: 8px;
 }
+.ant-btn span{
+  vertical-align: super;
+}
 
 .list-row p{
     padding-left:8px;
@@ -12,12 +15,7 @@
 .list-row:nth-child(even) p{
         background-color:#99cccc;
     }
-/* .nurturing-box{
-  display:grid;
-  width:100%;
-  height:100%
-} */
-.skill-button{
+.skill-btn{
   border-radius:20px;
   height:36px;
   padding:3px 10px;
@@ -25,21 +23,19 @@
   border:2px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(2555,255,255,0.8);
 }
+
+.skill-btn-2{
+  background-color: rgba(236, 204, 104,0.8);
+}
+.skill-btn-3{
+  background-color: rgba(155, 89, 182,0.8);
+}
+
 .event-button{
   border:2px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(2555,255,255,0.8);
 }
 
-.skill-button span{
-  vertical-align: super;
-}
-
-.skill-button-2{
-  background-color: rgba(236, 204, 104,0.8);
-}
-.skill-button-3{
-  background-color: rgba(155, 89, 182,0.8);
-}
 
 .race-row-0 {
   background-color: #CCCCCC;
@@ -107,6 +103,13 @@
   background-color: #99cccc;
 }
 
-.support-card{
-  background-color: rgba(241, 242, 246,0.7);
+.gray-cover{
+  background-color: rgba(33, 33, 33,0.7);
+}
+.nur-sup-img{
+  /* filter:blur(3px);
+  -webkit-filter:blur(3px);
+  -moz-filter:blur(3px);
+  -ms-filter:blur(3px);
+  -o-filter:blur(3px); */
 }

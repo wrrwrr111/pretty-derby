@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import { HashRouter as Router, Route ,Link} from 'react-router-dom';
-import 'antd/dist/antd.css';
 import {Row,Col,Image,Layout,Menu,Button,Popover} from 'antd'
 import {message} from 'antd'
+import 'antd/dist/antd.css';
 import './index.css'
 
 import db from './db.js'
@@ -57,7 +57,7 @@ const AppPc = ()=>{
         <Menu.Item key="6"><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
-    <Content style={{ padding: '72px 16px' }}>
+    <Content style={{ padding: '72px 16px'}} >
       <Route exact path="/" component={Player}/>
       <Route path="/support" component={Support}/>
       <Route path="/skill" component={Skill}/>

@@ -26,7 +26,7 @@ const SkillButton = (props)=>{
       <p>{'触发条件： '+t(skill.condition)}</p>
       </>} title={skill.name}
       >
-        <Button className={'skill-button skill-button-'+skill.rarity} onClick={()=>props.onClick&&props.onClick(skill)}>
+        <Button className={'skill-btn skill-btn-'+skill.rarity} onClick={()=>props.onClick&&props.onClick(skill)}>
           <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
           {skill.name}
         </Button>

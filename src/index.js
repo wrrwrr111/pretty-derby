@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import { UserAgentProvider, UserAgent, withUserAgent } from 'react-ua';
 
-import './index.css'
+// import './index.css'
 
 // import db from './db.js'
 // import EventList from './components/event-list.js'
