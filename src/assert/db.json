@@ -22520,71 +22520,6 @@
           ]
         ]
       ],
-      "supportAbilityLate": [
-        [
-          "最大",
-          [
-            "友情ボーナス35%",
-            "友情トレーニング発生による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "やる気効果アップ40％",
-            "一緒にトレーニングをしたときのやる気による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "力量ボーナス1",
-            "一緒にトレーニングをすると力量の上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "初期絆ゲージアップ25",
-            "育成開始時の初期絆ゲージがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "レースボーナス5％",
-            "レースに出走した結果で得られるステータスの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ファン数ボーナス15％",
-            "レースに出走した結果で得られるファンの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ヒントLvアップLv3",
-            "ヒントイベントで得られるヒントLvがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ヒント発生率アップ40％",
-            "ヒントイベントが発生する確率がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "得意率アップ65",
-            "得意トレーニングに配置される確率がアップ"
-          ]
-        ]
-      ],
       "eventList": [
         "7p03g6rxut",
         "MgD4rT1XC9",
@@ -22592,7 +22527,146 @@
         "KSWPdG1cYG",
         "pZZr8kEaRR"
       ],
-      "charaName": "メジロパーマー"
+      "charaName": "メジロパーマー",
+      "db_id": 30027,
+      "effects": [
+        {
+          "id": 30027,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 35
+        },
+        {
+          "id": 30027,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 30,
+          "limit_lv30": 30,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30027,
+          "type": 5,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30027,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30027,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30027,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": 10,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30027,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 2,
+          "limit_lv50": 3
+        },
+        {
+          "id": 30027,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": 40
+        },
+        {
+          "id": 30027,
+          "type": 19,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 50,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 65
+        }
+      ],
+      "rarity": 3
     },
     {
       "gwId": "262812",
@@ -22691,71 +22765,137 @@
           ]
         ]
       ],
-      "supportAbilityLate": [
-        [
-          "最大",
-          [
-            "友情ボーナス25%",
-            "友情トレーニング発生による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "トレーニング効果アップ10％",
-            "一緒にトレーニングしたときの効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "初期賢さアップ30",
-            "育成開始時の初期賢さがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "初期絆ゲージアップ20",
-            "育成開始時の初期絆ゲージがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "レースボーナス5％",
-            "レースに出走した結果で得られるステータスの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ファン数ボーナス15％",
-            "レースに出走した結果で得られるファンの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "得意率アップ35",
-            "得意トレーニングに配置される確率がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "スキルPtボーナス1",
-            "一緒にトレーニングをするとスキルPtの上昇量がアップ"
-          ]
-        ]
-      ],
       "eventList": [
         "Fd9Xfy-WkX",
         "YB7iRukrz7",
         "Z6aXwKsxE7",
         "nRXNknB8vl"
       ],
-      "charaName": "イクノディクタス"
+      "charaName": "イクノディクタス",
+      "db_id": 20025,
+      "effects": [
+        {
+          "id": 20025,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 8,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 13,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 25,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 10,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 5,
+          "limit_lv15": -1,
+          "limit_lv20": 20,
+          "limit_lv25": 20,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 35,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20025,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 2
     },
     {
       "gwId": "262811",
@@ -22845,63 +22985,121 @@
           ]
         ]
       ],
-      "supportAbilityLate": [
-        [
-          "最大",
-          [
-            "友情ボーナス20%",
-            "友情トレーニング発生による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "やる気効果アップ25％",
-            "一緒にトレーニングをしたときのやる気による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "力量ボーナス1",
-            "一緒にトレーニングをすると力量の上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "初期絆ゲージアップ20",
-            "育成開始時の初期絆ゲージがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "レースボーナス5%",
-            "レースに出走した結果で得られるステータスの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ファン数ボーナス10％",
-            "レースに出走した結果で得られるファンの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "得意率アップ50",
-            "得意トレーニングに配置される確率がアップ"
-          ]
-        ]
-      ],
       "eventList": [
         "JjTIRON2o",
         "Q_0O8cxyDM",
         "AZY_8cU9k"
       ],
-      "charaName": "メジロパーマー"
+      "charaName": "メジロパーマー",
+      "db_id": 10054,
+      "effects": [
+        {
+          "id": 10054,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 25,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 5,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": 1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 5,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 10,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10054,
+          "type": 19,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 35,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 50,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1
     },
     {
       "gwId": "262810",
@@ -22987,62 +23185,120 @@
           ]
         ]
       ],
-      "supportAbilityLate": [
-        [
-          "最大",
-          [
-            "友情ボーナス15%",
-            "友情トレーニング発生による効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "トレーニング効果アップ10％",
-            "一緒にトレーニングしたときの効果アップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "初期賢さアップ25",
-            "育成開始時の初期賢さがアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "レースボーナス5％",
-            "レースに出走した結果で得られるステータスの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "ファン数ボーナス15％",
-            "レースに出走した結果で得られるファンの上昇量がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "得意率アップ35",
-            "得意トレーニングに配置される確率がアップ"
-          ]
-        ],
-        [
-          "最大",
-          [
-            "スキルPtボーナス1",
-            "一緒にトレーニングをするとスキルPtの上昇量がアップ"
-          ]
-        ]
-      ],
       "eventList": [
         "LHSZSEQwh2",
         "5ShZ6vpeTR"
       ],
-      "charaName": "イクノディクタス"
+      "charaName": "イクノディクタス",
+      "db_id": 10053,
+      "effects": [
+        {
+          "id": 10053,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 15,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 8,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 10,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 13,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 25,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 5,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 15,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 35,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10053,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1
     }
   ],
   "skills": [
