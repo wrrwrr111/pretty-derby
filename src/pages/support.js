@@ -29,24 +29,24 @@ const SupportCard = (props)=>{
   return (
     <>
       <Image src={cdnServer+props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
-      <Modal title={`${props.data.name}----${t(props.data.charaName)}`} 
+      <Modal title={`${props.data.name}----${t(props.data.charaName)}`}
         visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
           <Row justify='space-around' align='middle'>
-            <Col span={6}>
+            <Col span={4}>
               <Image src={cdnServer+props.data.imgUrl} preview={false} width={'100%'} />
             </Col>
-            <Col span={16}>
-              <Divider>培训技能</Divider>
+            <Col span={19}>
+            <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
+              <Divider style={{margin:'4px 0'}}>培训技能</Divider>
               <SkillList skillList={props.data.trainingEventSkill}></SkillList>
-              <Divider>自带技能</Divider>
+              <Divider style={{margin:'4px 0'}}>自带技能</Divider>
               <SkillList skillList={props.data.possessionSkill}></SkillList>
             </Col>
 
             <Divider>育成效果</Divider>
             <EffectTable effects={props.data.effects} rarity={props.data.rarity}></EffectTable>
 
-            <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
           </Row>
       </Modal>
     </>

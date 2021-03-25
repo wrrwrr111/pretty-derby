@@ -15,9 +15,9 @@ const EventList = (props)=>{
   }
   return (
     <>
-    <Divider>多选</Divider>
+    <Divider style={{margin:'4px 0'}}>多选</Divider>
     {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
-    <Divider>单选</Divider>
+    <Divider style={{margin:'4px 0'}}>单选</Divider>
     {eventList.filter(event=>event.choiceList.length <= 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
     </>
   )
