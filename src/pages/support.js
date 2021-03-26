@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
 import db from '../db.js'
 import t from '../components/t.js'
-import { Divider,Row,Col,Image,Modal,Button} from 'antd';
+import { Divider,Row,Col,Image,Modal,Button,Checkbox} from 'antd';
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {EffectTable} from '../components/effect.js'
+
+const CheckboxGroup = Checkbox.Group
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -59,8 +61,11 @@ class Support extends React.Component{
       list:props.supportList,
       chooseMode:false,
       showMode:false,
-      chosenList:db.get('mySupports').value()||[]}
-
+      chosenList:db.get('mySupports').value()||[],
+      checkedList:[]}
+    this.effects = db.get('effects').value()
+    this.checkOptions = Object.keys(this.effects)
+                          .map(key=>{return {label:t(this.effects[key].name),value:key}})
   }
   componentDidUpdate(prevProps){
     if(this.props.supportList !== prevProps.supportList){
@@ -84,11 +89,36 @@ class Support extends React.Component{
     db.update('mySupports',this.state.chosenList).write()
     this.setState({})
   }
+  onChange = (checkedValues)=>{
+    let tempList = this.props.supportList
+    if(checkedValues.length){
+      tempList = tempList.filter(support=>{
+        let flag = 0;
+        checkedValues.forEach(value=>{
+          support.effects.forEach(effect=>{
+            if(effect.type == value){
+              flag += 1
+            }
+          })
+        })
+        return flag == checkedValues.length
+      })
+    }
+    this.setState({
+      checkedList:checkedValues,
+      list:tempList
+    })
+  }
   render(){
     return (
       <>
       <Button onClick={this.changeShowMode}>切换显示模式</Button>
       <Button onClick={this.changeChooseMode}>配置卡组</Button>
+      <Row justify="space-around">
+        <Col span={22}>
+          <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
+        </Col>
+      </Row>
       {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
       {/* <p>{JSON.stringify(this.state.chosenList)}</p> */}
       {
