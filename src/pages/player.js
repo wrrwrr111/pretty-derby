@@ -110,7 +110,8 @@ class Player extends React.Component{
   }
   render(){
     return(
-      <>
+      <Row justify="space-around">
+        <Col span={22}>
         {
           ['3','2','1'].map(rare=>(
             <Row gutter={[16,16]} key={rare}>
@@ -122,7 +123,9 @@ class Player extends React.Component{
           }
           </Row>
           ))
-        }</>
+        }
+        </Col>
+      </Row>
     )
   }
 }

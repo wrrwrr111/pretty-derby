@@ -111,25 +111,23 @@ class Support extends React.Component{
   }
   render(){
     return (
-      <>
-      <Button onClick={this.changeShowMode}>切换显示模式</Button>
-      <Button onClick={this.changeChooseMode}>配置卡组</Button>
       <Row justify="space-around">
+        <Col span={22}>
+          <Button onClick={this.changeShowMode}>切换显示模式</Button>
+          <Button onClick={this.changeChooseMode}>配置卡组</Button>
+          {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
+        </Col>
         <Col span={22}>
           <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
         </Col>
-      </Row>
-      {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
-      {/* <p>{JSON.stringify(this.state.chosenList)}</p> */}
+        <Col span={22}>
       {
         ['SSR','SR','R'].map(rare=>
           <Row gutter={[16,16]} key={rare}>
             <Divider>{rare}</Divider>
             {this.state.list.filter(item=>item.rare===rare).map(support=>
               <Col xxl={2} lg={3} sm={4} xs={6} key={support.id}
-              className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}
-              // className={'un-chosen-card'}
-              >
+              className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
                 <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
                 chooseMode={this.props.chooseMode}></SupportCard>
               </Col>)
@@ -137,7 +135,8 @@ class Support extends React.Component{
           </Row>
         )
       }
-      </>
+        </Col>
+      </Row>
       )
   }
 }
