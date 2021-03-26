@@ -181,7 +181,7 @@ const Nurturing = () =>{
     <Row className='nurturing-box' gutter={[16,16]}>
       <Col sm={8} xs={24}>
         <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-        <Button onClick={showSupport2}>辅助卡查询</Button>
+        <Button onClick={showSupport2}>支援卡查询</Button>
         {/* <Button onClick={showRace}>选择关注赛事</Button>
         <Popover content = {
           <Table dataSource={races} pagination={false}>
@@ -246,11 +246,11 @@ const Nurturing = () =>{
         <Row justify="space-around">
         {[0,1,2,3,4,5].map(index=>
           <Col span={7} key={index} style={{}}>
-            <Tooltip title="选择辅助卡">
+            <Tooltip title="选择支援卡">
               <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}></Button>
             </Tooltip>
             {supports[index]&&supports[index].id&&
-          
+
             <Popover mask={true} content={<>
               <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
               <Divider style={{margin:'8px 0'}}></Divider>

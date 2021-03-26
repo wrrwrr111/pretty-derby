@@ -1,9 +1,10 @@
 import React,{useState} from 'react';
 import { HashRouter as Router, Route ,Link} from 'react-router-dom';
-import {Row,Col,Image,Layout,Menu,Button,Popover} from 'antd'
+import {Row,Col,Image,Layout,Menu,Button,Popover,Popconfirm} from 'antd'
 import {message} from 'antd'
 import 'antd/dist/antd.css';
 import './index.css'
+
 
 import db from './db.js'
 
@@ -15,8 +16,11 @@ import Nurturing2 from './pages/nurturing2.js'
 import Skill from './pages/skill.js'
 import Seed from './pages/seed.js'
 
+import IntroIndex from './components/intro.js'
+
 const { Header, Content, Footer } = Layout;
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+
 const AppPc = ()=>{
   let lan = db.get('lan').value()
   const [langText,setLangText] = useState(lan==='zh'?'English':'中文')
@@ -32,29 +36,33 @@ const AppPc = ()=>{
       setLangText('English')
       message.info('刷新页面')
     }
-    // window.opener.location.reload()
   }
-  const reload =()=>{
+  const resetNur =()=>{
     db.set('selected',{
-      supports:{1:{},2:{},3:{},4:{},5:{},6:{}},
+      supports:{0:{},1:{},2:{},3:{},4:{},5:{}},
       player:{},
       races:[]
     }).write()
-    // db.set('myDecks',[]).write()
+    db.set('myDecks',[]).write()
   }
+  const resetIntro = ()=>{
+    localStorage.setItem('introV',null)
+  }
+
   return (
       // <UserAgentProvider ua={window.navigator.userAgent}>
 <Router>
+    <IntroIndex></IntroIndex>
     <Layout className="layout">
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <Menu theme="dark" mode="horizontal">
-        <Menu.Item key="1"><Link to='/'>角色</Link></Menu.Item>
-        <Menu.Item key="2"><Link to='/support'>支援卡</Link></Menu.Item>
-        <Menu.Item key="3"><Link to='/skill'>技能</Link></Menu.Item>
-        <Menu.Item key="4"><Link to='/race'>比赛</Link></Menu.Item>
-        <Menu.Item key="5"><Link to='/nurturing'>育成</Link></Menu.Item>
-        <Menu.Item key="7"><Link to='/nurturing2'>育成new</Link></Menu.Item>
-        <Menu.Item key="6"><Link to='/seed'>种🐎</Link></Menu.Item>
+        <Menu.Item key="1" className='menu-player'><Link to='/'>角色</Link></Menu.Item>
+        <Menu.Item key="2" className='menu-support'><Link to='/support'>支援卡</Link></Menu.Item>
+        <Menu.Item key="3" className='menu-skill'><Link to='/skill'>技能</Link></Menu.Item>
+        <Menu.Item key="4" className='menu-race'><Link to='/race'>比赛</Link></Menu.Item>
+        <Menu.Item key="5" className='menu-nurturing'><Link to='/nurturing'>育成</Link></Menu.Item>
+        <Menu.Item key="7" className='menu-nurturing2'><Link to='/nurturing2'>育成new</Link></Menu.Item>
+        <Menu.Item key="6" className='menu-seed'><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
     <Content style={{ padding: '64px 0px'}} >
@@ -72,11 +80,18 @@ const AppPc = ()=>{
         <Button onClick={changeLan}>{langText}</Button>
       </Col>
       <Col span={2}>
-        <Popover content={<p>育成界面出现问题时重置</p>}>
-          <Button placement="bottom" onClick={reload}>清空育成</Button>
+        <Popover content={<p>点击后刷新</p>}>
+          <Button className='reset-intro' placement="bottom" onClick={resetIntro}>重置引导</Button>
          </Popover>
       </Col>
-      <Col span={14}></Col>
+      <Col span={3}>
+        <Popconfirm title="确认初始化？" onConfirm={resetNur}>
+          <Popover content={<p>初始化育成页面</p>}>
+            <Button className='reset-nur' placement="bottom">初始化育成</Button>
+          </Popover>
+        </Popconfirm>
+      </Col>
+      <Col span={11}></Col>
       <Col span={2}>
       <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
           <Button placement="bottom">捐助</Button>

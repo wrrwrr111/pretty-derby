@@ -134,7 +134,7 @@ const Nurturing = () =>{
       <Flex.Item>
         <Flex wrap='wrap'>
           <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-          <Button onClick={showSupport2}>辅助卡查询</Button>
+          <Button onClick={showSupport2}>支援卡查询</Button>
           <BuffButton></BuffButton>
           <Button onClick={showRace}>选择关注赛事</Button>
           <Button onClick={showDrawer}>查看关注赛事</Button>
@@ -185,7 +185,7 @@ const Nurturing = () =>{
         <Flex wrap='wrap' key={index}>
       {supports[index].id ?<>
         <Flex.Item style={{flex:'1 0 auto',width:'20%'}}>
-          <Button onClick={()=>showSupport(index)}>选择辅助卡</Button>
+          <Button onClick={()=>showSupport(index)}>选择支援卡</Button>
           <img src={cdnServer+supports[index].imgUrl} alt={supports[index].name} width='100%'></img>
         </Flex.Item>
           {skillShow&&
@@ -197,7 +197,7 @@ const Nurturing = () =>{
             <EventList eventList={supports[index].eventList} pid={supports[index].id} type={'multi'}></EventList>
           </Flex.Item>
           </>:
-        <Button onClick={()=>showSupport(index)}>选择辅助卡</Button>}
+        <Button onClick={()=>showSupport(index)}>选择支援卡</Button>}
       <Divider></Divider>
       </Flex>
       )}

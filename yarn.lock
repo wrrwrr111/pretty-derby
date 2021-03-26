@@ -6524,6 +6524,16 @@
     "intl-messageformat-parser" "6.4.3"
     "tslib" "^2.1.0"
 
+"intro.js-react@^0.3.0":
+  "integrity" "sha512-9rIAZ4k1eh2J06XNWIg43RnG1GmFuCtpnTpf0u4lGW7X4ARh+ZjDVh/r2P8SO45+QOhYi45hy+ql2ASLOe6HoA=="
+  "resolved" "https://registry.npmjs.org/intro.js-react/-/intro.js-react-0.3.0.tgz"
+  "version" "0.3.0"
+
+"intro.js@^2.5.0", "intro.js@^3.4.0":
+  "integrity" "sha512-LlOM5izNtkPEtjusCYDZs6Nt9JrykpUuqWh5bfQJtWVMWtg2vGzxzJDGrTdF9XUzVZvWzVIdkga/M/z8AX6hlg=="
+  "resolved" "https://registry.npmjs.org/intro.js/-/intro.js-3.4.0.tgz"
+  "version" "3.4.0"
+
 "ip-regex@^2.1.0":
   "integrity" "sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk="
   "resolved" "https://registry.npm.taobao.org/ip-regex/download/ip-regex-2.1.0.tgz?cache=0&sync_timestamp=1611327284339&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fip-regex%2Fdownload%2Fip-regex-2.1.0.tgz"
@@ -10834,7 +10844,7 @@
     "raf" "^3.1.0"
     "tween-functions" "^1.0.1"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.3.0 || 17", "react@^17.0.1", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.9.0":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0-alpha", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.3.0 || 17", "react@^17.0.1", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.9.0":
   "integrity" "sha1-bgYAQWvVdXTj+G2S7bo9kAhyYSc="
   "resolved" "https://registry.npm.taobao.org/react/download/react-17.0.1.tgz?cache=0&sync_timestamp=1614788661710&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-17.0.1.tgz"
   "version" "17.0.1"
