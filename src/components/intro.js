@@ -52,10 +52,10 @@ const IntroIndex = (props)=>{
         <p>【卡组】卡组保存、读取、删除</p>
       </>,
         href:'/nurturing2'
-      },{
-        title:'种马和支援卡分享',
-        element:'.menu-seed',
-        intro:<>
+    },{
+      title:'种马和支援卡分享',
+      element:'.menu-seed',
+      intro:<>
         <p>通过条件搜索种马和支援卡信息</p>
         <p>【配置种子】添加自己的种马和支援卡信息分享</p>
       </>,
@@ -73,8 +73,7 @@ const IntroIndex = (props)=>{
       intro:<>
       <p>点击后刷新重新观看引导</p>
     </>,
-  }
-  ]
+  }]
 
   const onExit = ()=>{
     setStepsEnabled(false)

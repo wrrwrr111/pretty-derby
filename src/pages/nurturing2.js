@@ -183,7 +183,7 @@ const Nurturing = () =>{
   return(
     <Row className='' gutter={[16,16]}>
       <Col sm={8} xs={24}>
-        <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
+        <Button className='add-player' type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>支援卡查询</Button>
         <Button onClick={showRace}>选择关注赛事</Button>
         <Button onClick={showDrawer}>查看关注赛事</Button>
