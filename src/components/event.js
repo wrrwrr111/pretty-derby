@@ -29,7 +29,10 @@ const EventBox = (props)=>{
       )
       return(
         <Row key={index} gutter={[8,8]} className="list-row">
-          <Col span={12}><p>{choice[0]}</p></Col>
+          <Col span={12}>
+            <p>{choice[0]}</p>
+            <p>{t(choice[0])}</p>
+          </Col>
           <Col span={12}>{ResultItem}</Col>
         </Row>
       )
