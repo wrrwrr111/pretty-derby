@@ -24,6 +24,9 @@ const SkillButton = (props)=>{
       <p>{'技能描述： '+t(skill.describe)}</p>
       <p>{skill.condition}</p>
       <p>{'触发条件： '+t(skill.condition)}</p>
+      <p>{'技能数值： '+skill.ability_value}</p>
+      <p>{'持续时间： '+skill.ability_time+'s'}</p>
+      <p>{'冷却时间： '+skill.cooldown+'s'}</p>
       </>} title={skill.name}
       >
         <Button className={'skill-btn skill-btn-'+skill.rarity} onClick={()=>props.onClick&&props.onClick(skill)}>
