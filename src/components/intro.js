@@ -76,6 +76,7 @@ const IntroIndex = (props)=>{
   }]
 
   const onExit = ()=>{
+    localStorage.setItem('introV',introV)
     setStepsEnabled(false)
   }
   const onBeforeChange = (nextStepIndex)=>{
@@ -83,6 +84,7 @@ const IntroIndex = (props)=>{
   }
   const onComplete = ()=>{
     localStorage.setItem('introV',introV)
+    setStepsEnabled(false)
   }
   return (
     <Steps
