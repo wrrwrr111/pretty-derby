@@ -95,8 +95,9 @@ const Skill = () =>{
       tempSkillList = tempSkillList.filter(skill=>{
         let flag = 0;
         check2.forEach(value=>{
-          if(skill.icon_id){
-            if(skill.icon_id[0] === value[0] && skill.icon_id[3] === value[3] ){
+          let str = skill.icon_id +''
+          if(str){
+            if(str[0] === value[0] && str[3] === value[3] ){
               flag = 1
             }
           }

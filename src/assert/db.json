@@ -4916,6 +4916,332 @@
           ]
         ]
       ]
+    },
+    {
+      "gwId": "266048",
+      "name": "メジロマックイーン(新勝負服)",
+      "imgUrl": "img/players/zTxOqfQfU.png",
+      "id": "zTxOqfQfU",
+      "rare": "3",
+      "grass": "A",
+      "dirt": "E",
+      "shortDistance": "G",
+      "mile": "F",
+      "longDistance": "A",
+      "mediumDistance": "A",
+      "escape": "B",
+      "leading": "A",
+      "insert": "D",
+      "tracking": "F",
+      "speedGrow": "0%",
+      "staminaGrow": "10%",
+      "powerGrow": "10%",
+      "gutsGrow": "0%",
+      "wisdomGrow": "10%",
+      "skillList": [
+        "PpXL26h_Jq",
+        "EOM5PqtmZUs",
+        "svT-34r60",
+        "1uUvVaL7z-k",
+        "SSm3I2jNB9R",
+        "0hNrL5bQB",
+        "F0uv7PX7rF0",
+        "OxpmVCloF"
+      ],
+      "uniqueSkillList": [
+        "PpXL26h_Jq"
+      ],
+      "initialSkillList": [
+        "EOM5PqtmZUs",
+        "svT-34r60",
+        "1uUvVaL7z-k"
+      ],
+      "awakeningSkillList": [
+        "SSm3I2jNB9R",
+        "0hNrL5bQB",
+        "F0uv7PX7rF0",
+        "OxpmVCloF"
+      ],
+      "eventList": [
+        "tLrj2-Niy",
+        "Hkwy2bvxps",
+        "60PhEw8vAs",
+        "yrVaGmnjiI",
+        "yI7nrDxzGE",
+        "tY4-TOFR_1",
+        "U1ZdhCunke",
+        "dz71K2Dz7y",
+        "pPv_bkWmvr",
+        "Q1k0KCfHoP",
+        "yF0aXXwKQT",
+        "g3NPm7AnaX",
+        "3hnRKUut-d",
+        "RdSGq_xOnB",
+        "6iddBNfYb0O",
+        "BW0hZmy8Dxh",
+        "UN_v_HkNqK4",
+        "rdUxT526awp",
+        "lRhq3yfS0-g",
+        "v_3nrjdW5pZ",
+        "CH5wq0gMBi4",
+        "83LSmmosb8z",
+        "J-0L6pfhM_W",
+        "iIjH30rSp0y",
+        "bUK0WvQvalw",
+        "FCoX1Oe1D",
+        "LPxwOH3Vqu",
+        "P2yHkYNdLq",
+        "Q-ctHdl0XP",
+        "uQGMrqcBKJ",
+        "i6SzhF6YwZ",
+        "YjlHEYq2z6",
+        "IolOsttDTV",
+        "G6H8xsDoG9",
+        "8NBBQfPPzk",
+        "Ys1Z8fPihu",
+        "4ICbTulnst",
+        "MisQgppI7s",
+        "H2OtQ1O1XV",
+        "mK9IEHW72-",
+        "fUyxbyY3bz",
+        "HeQ1L2Q4rRB",
+        "kz2FFhCj6FD",
+        "Yb57P85pqyO",
+        "5vWwa3H9Bz4",
+        "z0dmXd4wmQo",
+        "1WgC1uhBcZE",
+        "GK1yIQk61zF",
+        "ft2AoIPkKHA",
+        "j8S6aiaVtiu"
+      ],
+      "raceList": [
+        [
+          "目標1",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：-"
+          ]
+        ],
+        [
+          "目標2",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：ジュニア級12月後半"
+          ]
+        ],
+        [
+          "目標3",
+          [
+            "神戸新聞杯で3着以内",
+            "時期：クラシック級9月後半",
+            "ファン:1750人以上",
+            "G2 / 阪神 / 芝 / 2400m(中距離) / 右外"
+          ]
+        ],
+        [
+          "目標4",
+          [
+            "菊花賞で3着以内",
+            "時期：クラシック級10月後半",
+            "ファン:7500人以上",
+            "G1 / 京都 / 芝 / 3000m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標5",
+          [
+            "天皇賞(春)で1着",
+            "時期：シニア級4月後半",
+            "ファン:20000人以上",
+            "G1 / 京都 / 芝 / 3200m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標6",
+          [
+            "宝塚記念で2着以内",
+            "時期：シニア級6月後半",
+            "ファン:20000人以上",
+            "G1 / 阪神 / 芝 / 2200m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標7",
+          [
+            "天皇賞(秋)で1着",
+            "時期：シニア級10月後半",
+            "ファン:20000人以上",
+            "G1 / 東京 / 芝 / 2000m(中距離) / 左"
+          ]
+        ]
+      ]
+    },
+    {
+      "gwId": "266047",
+      "name": "トウカイテイオー(新勝負服)",
+      "imgUrl": "img/players/ZkLLZhGL5.png",
+      "id": "ZkLLZhGL5",
+      "rare": "3",
+      "grass": "A",
+      "dirt": "G",
+      "shortDistance": "F",
+      "mile": "E",
+      "longDistance": "A",
+      "mediumDistance": "B",
+      "escape": "D",
+      "leading": "A",
+      "insert": "C",
+      "tracking": "E",
+      "speedGrow": "10%",
+      "staminaGrow": "10%",
+      "powerGrow": "0%",
+      "gutsGrow": "10%",
+      "wisdomGrow": "0%",
+      "skillList": [
+        "2N6jhYM5qT",
+        "jKEl8WzeoS",
+        "ja6Jl89t4x",
+        "sWVG7_tDNvo",
+        "3gvF368iuVV",
+        "ec5gPDKBP",
+        "uL6kGjM4qUj",
+        "S_0SAtXO5M"
+      ],
+      "uniqueSkillList": [
+        "2N6jhYM5qT"
+      ],
+      "initialSkillList": [
+        "jKEl8WzeoS",
+        "ja6Jl89t4x",
+        "sWVG7_tDNvo"
+      ],
+      "awakeningSkillList": [
+        "3gvF368iuVV",
+        "ec5gPDKBP",
+        "uL6kGjM4qUj",
+        "S_0SAtXO5M"
+      ],
+      "eventList": [
+        "4FkLvLYJHc",
+        "XfLMBCuYgk",
+        "AUa5TIEbsL",
+        "lW6Hw2SAyt",
+        "nURj9TK5sN",
+        "r1sPlJcpEi",
+        "6JjTLB9_bg",
+        "H9s5gKO3M2",
+        "ULt569IRQH",
+        "O8m1k2a03q",
+        "6qX0a9uSj1",
+        "Ho7WkRQJ7d",
+        "toFfZc1Gwze",
+        "6CtCrWy_FcW",
+        "ES_ZgMS5pux",
+        "PCUIgsjB7VB",
+        "2z7gm1ECzHH",
+        "V3MVEpd9Rh1",
+        "FFTW2UedWdV",
+        "4QTCUUVbGlq",
+        "jXLzIDgapnN",
+        "DPSTL4rhPRX",
+        "mnl4SS3SzMg",
+        "CCz4pTzIrgU",
+        "T8wRj8MP2jb",
+        "I-cQPikFDto",
+        "DIZZaojrIfO",
+        "l-72ghVYJEC",
+        "yZlgSOJvDVj",
+        "UbCRxvEQ96f",
+        "6qhJ9LM-W7D",
+        "OeI1rJM0wE4",
+        "sxTstL2wyQn",
+        "LZ2lOeKsn7X",
+        "Pr40NhAc9bs",
+        "rI8r2mP6Sbt",
+        "0PW-Die8Cks",
+        "5CFFt8_ckno",
+        "ZrK-szpWk58",
+        "3oEMRlHMXKU",
+        "Sm1iZCrWV26",
+        "sxTstL2wyQn",
+        "LbUclHQt7rJ",
+        "YbmHL7TDH8Y",
+        "4Hj5dG_9mAQ",
+        "3KpL0D-mePS",
+        "vonEKFKB-Kr"
+      ],
+      "raceList": [
+        [
+          "目標1",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：-"
+          ]
+        ],
+        [
+          "目標2",
+          [
+            "若駒Sで3着以内",
+            "時期：クラシック級1月後半",
+            "ファン:350人以上",
+            "OP / 京都 / 芝 / 2000m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標3",
+          [
+            "皐月賞で5着以内",
+            "時期：クラシック級4月前半",
+            "ファン:4500人以上",
+            "G1 / 中山 / 芝 / 2000m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標4",
+          [
+            "日本ダービーで5着以内",
+            "時期：クラシック級5月後半",
+            "ファン:6000人以上",
+            "G1 / 東京 / 芝 / 2400m(中距離) / 左"
+          ]
+        ],
+        [
+          "目標5",
+          [
+            "菊花賞で3着以内",
+            "時期：クラシック級10月後半",
+            "ファン:7500人以上",
+            "G1 / 京都 / 芝 / 3000m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標6",
+          [
+            "天皇賞(春)で3着以内",
+            "時期：シニア級4月後半",
+            "ファン:20000人以上",
+            "G1 / 京都 / 芝 / 3200m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標7",
+          [
+            "ジャパンCで2着以内",
+            "時期：シニア級11月後半",
+            "ファン:25000人以上",
+            "G1 / 東京 / 芝 / 2400m(中距離) / 左"
+          ]
+        ],
+        [
+          "目標8",
+          [
+            "有馬記念で1着",
+            "時期：シニア級12月後半",
+            "ファン:25000人以上",
+            "G1 / 中山 / 芝 / 2500m(長距離) / 右内"
+          ]
+        ]
+      ]
     }
   ],
   "supports": [
@@ -23299,6 +23625,1238 @@
         }
       ],
       "rarity": 1
+    },
+    {
+      "gwId": "266053",
+      "name": "Just keep going.",
+      "rare": "SSR",
+      "imgUrl": "img/supports/VvMG2TUZy.png",
+      "charaName": "マチカネタンホイザ",
+      "id": "VvMG2TUZy",
+      "skillList": [
+        "OgWF-kQ5K",
+        "eFBBCUmUjK",
+        "SYn_JOvSTq5",
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "trainingEventSkill": [
+        "OgWF-kQ5K",
+        "eFBBCUmUjK",
+        "SYn_JOvSTq5"
+      ],
+      "possessionSkill": [
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "baseAbility": {
+        "name": "Just keep going.",
+        "ability": [
+          [
+            "Lv40~",
+            [
+              "友情ボーナスと初期根性(毅力)アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "Gww0sdQhO9",
+        "TS5QOGFRcs",
+        "W_-vv1GGs9",
+        "1xIN8INI5W",
+        "EfVqcIAAT8"
+      ],
+      "db_id": 30030,
+      "effects": [
+        {
+          "id": 30030,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30030,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30030,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30030,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30030,
+          "type": 12,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 35
+        },
+        {
+          "id": 30030,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 1,
+          "limit_lv30": 1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30030,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30030,
+          "type": 19,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 50,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 65
+        }
+      ],
+      "rarity": 3
+    },
+    {
+      "gwId": "266054",
+      "name": "むじゃむじゃむじゃき",
+      "rare": "SR",
+      "imgUrl": "img/supports/VhJD342WqH.png",
+      "charaName": "ナイスネイチャ",
+      "id": "VhJD342WqH",
+      "skillList": [
+        "F0uv7PX7rF0",
+        "O-c-BZW-2n",
+        "05d0vsFOou",
+        "hVb7XZv49Wo",
+        "ai9tE5d7yv9",
+        "p71TuCN_n-G",
+        "km-O9_GIc_X",
+        "EzWa29JdgX",
+        "LXINgxRd1tx",
+        "0Fh2q7Uid5"
+      ],
+      "trainingEventSkill": [
+        "F0uv7PX7rF0",
+        "O-c-BZW-2n"
+      ],
+      "possessionSkill": [
+        "05d0vsFOou",
+        "hVb7XZv49Wo",
+        "ai9tE5d7yv9",
+        "p71TuCN_n-G",
+        "km-O9_GIc_X",
+        "EzWa29JdgX",
+        "LXINgxRd1tx",
+        "0Fh2q7Uid5"
+      ],
+      "baseAbility": {
+        "name": "むじゃむじゃむじゃき",
+        "ability": [
+          [
+            "Lv35~",
+            [
+              "トレーニング効果アップ(提升)と初期賢さ(智力)アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "jjX1eMxQ0l",
+        "CqxOZTYNmy",
+        "GKEhEA35qX",
+        "I3yBrTAtgx"
+      ],
+      "db_id": 20026,
+      "effects": [
+        {
+          "id": 20026,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": 15,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": 20,
+          "limit_lv25": 20,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 30,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 7,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 14,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 25,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20026,
+          "type": 31,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 1,
+          "limit_lv35": 3,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 2
+    },
+    {
+      "gwId": "266299",
+      "name": "迫る熱に押されて",
+      "rare": "SSR",
+      "imgUrl": "img/supports/5WcbjIR7H.png",
+      "charaName": "キタサンブラック",
+      "id": "5WcbjIR7H",
+      "skillList": [
+        "EOM5PqtmZUs",
+        "1Fbl_klNqq",
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "trainingEventSkill": [
+        "EOM5PqtmZUs",
+        "1Fbl_klNqq"
+      ],
+      "possessionSkill": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "baseAbility": {
+        "name": "迫る熱に押されて",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "トレーニング効果アップ(提升)と得意率アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "Ji8b1jTYuZ",
+        "kIKwZKQUPh",
+        "YCvzWqOTGG",
+        "c6te_JTQ3g",
+        "0mLFvNKhu3"
+      ],
+      "db_id": 30028,
+      "effects": [
+        {
+          "id": 30028,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 5,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 14,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 35
+        },
+        {
+          "id": 30028,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": 10,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 1,
+          "limit_lv30": 1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 2,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30028,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": 80
+        }
+      ],
+      "rarity": 3
+    },
+    {
+      "gwId": "266300",
+      "name": "その背中を越えて",
+      "rare": "SSR",
+      "imgUrl": "img/supports/wyz7djOUrz.png",
+      "charaName": "サトノダイヤモンド",
+      "id": "wyz7djOUrz",
+      "skillList": [
+        "FxF2hL65X7A",
+        "dxo1m2BKz",
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "trainingEventSkill": [
+        "FxF2hL65X7A",
+        "dxo1m2BKz"
+      ],
+      "possessionSkill": [
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "baseAbility": {
+        "name": "その背中を越えて",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "やる気(干劲)効果アップ(提升)と初期絆ゲージアップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [],
+      "db_id": 30029,
+      "effects": [
+        {
+          "id": 30029,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 15,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 20,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30029,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 30,
+          "limit_lv30": 30,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30029,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30029,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": 10
+        },
+        {
+          "id": 30029,
+          "type": 10,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": -1,
+          "limit_lv25": 15,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 20,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30029,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30029,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 10
+        },
+        {
+          "id": 30029,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 20
+        },
+        {
+          "id": 30029,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 5,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 35,
+          "limit_lv30": 35,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 50,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 3
+    },
+    {
+      "gwId": "266315",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/V3uyHLcvP.png",
+      "charaName": "キタサンブラック",
+      "id": "V3uyHLcvP",
+      "skillList": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "trainingEventSkill": [],
+      "possessionSkill": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [
+        "t_b_-a9kTX",
+        "zUhvzAtcNT"
+      ],
+      "db_id": 10055,
+      "effects": [
+        {
+          "id": 10055,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 15,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 25,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 5,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 5,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 14,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 25,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": 1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 5,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 10,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": 1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 2,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10055,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 30,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1
+    },
+    {
+      "gwId": "266314",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/upkB_bjDt8.png",
+      "charaName": "サトノダイヤモンド",
+      "id": "upkB_bjDt8",
+      "skillList": [
+        "FxF2hL65X7A",
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "trainingEventSkill": [
+        "FxF2hL65X7A"
+      ],
+      "possessionSkill": [
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [
+        "qELYJnV75",
+        "OGzzL0G8-4"
+      ],
+      "db_id": 10056,
+      "effects": [
+        {
+          "id": 10056,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 15,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 25,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 10,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 5,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 15,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10056,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 35,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1
+    },
+    {
+      "gwId": "266313",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/704fcWlDE.png",
+      "charaName": "マチカネタンホイザ",
+      "id": "704fcWlDE",
+      "skillList": [
+        "OgWF-kQ5K",
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "trainingEventSkill": [
+        "OgWF-kQ5K"
+      ],
+      "possessionSkill": [
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [
+        "w6VBLVJEF7",
+        "OM1NLZqlPv"
+      ],
+      "db_id": 10057,
+      "effects": [
+        {
+          "id": 10057,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 15,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 8,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 10,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 12,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 25,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 5,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 15,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10057,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 35,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1
     }
   ],
   "skills": [
@@ -23309,9 +24867,12 @@
       "describe": "最終直線で差を付けて先頭にいるとさらなる脚を使って、速度を上げる",
       "id": "DgsLX_ZZm",
       "condition": "is_finalcorner==1&corner==0&order==1&bashin_diff_behind>=1",
-      "rarity": "1",
-      "db_id": "900021",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100021,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "集中力",
@@ -23320,9 +24881,12 @@
       "imgUrl": "img/skills/Eb4G1G0HCZ.png",
       "describe": "スタートが得意になり出遅れる時間がわずかに少なくなる",
       "condition": "always==1",
-      "rarity": "1",
-      "db_id": "200432",
-      "icon_id": "20061"
+      "rarity": 1,
+      "db_id": 200432,
+      "icon_id": 20061,
+      "ability_value": 9000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "押し切り準備",
@@ -23331,9 +24895,12 @@
       "id": "QgSW6XNJIR",
       "imgUrl": "img/skills/QgSW6XNJIR.png",
       "condition": "running_style==1&is_finalcorner_random==1&order==1",
-      "rarity": "1",
-      "db_id": "200552",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200552,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "前途洋々",
@@ -23342,9 +24909,12 @@
       "id": "0pi3rtNhlS",
       "imgUrl": "img/skills/0pi3rtNhlS.png",
       "condition": "distance_type==3&phase_random==1&order==1",
-      "rarity": "1",
-      "db_id": "200712",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200712,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "シューティングスター",
@@ -23353,9 +24923,12 @@
       "id": "h0sNs3O0lxP",
       "imgUrl": "img/skills/h0sNs3O0lxP.png",
       "condition": "phase>=2&order>=2&order_rate<=50&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "900011",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100011,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "末脚",
@@ -23364,9 +24937,12 @@
       "imgUrl": "img/skills/PXqe7XPh2Zi.png",
       "describe": "ラストスパートで速度がわずかに上がる",
       "condition": "is_lastspurt==1&phase_random==3",
-      "rarity": "1",
-      "db_id": "200512",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200512,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "食い下がり",
@@ -23375,9 +24951,12 @@
       "id": "-cFPxDA8Xjr",
       "imgUrl": "img/skills/-cFPxDA8Xjr.png",
       "condition": "distance_type==3&is_finalcorner==1&corner!=0&change_order_onetime>0",
-      "rarity": "1",
-      "db_id": "200732",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200732,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "栄養補給",
@@ -23386,9 +24965,12 @@
       "imgUrl": "img/skills/Lv5bWWlO15w.png",
       "describe": "レース中盤に持久力がわずかに回復する＜作戦・先行＞",
       "condition": "running_style==2&phase_random==1",
-      "rarity": "1",
-      "db_id": "201352",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201352,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "紅焔ギア/LP1211-M",
@@ -23397,9 +24979,12 @@
       "describe": "最終コーナー以降で前の方にいるとギアを変えて加速力が上がる",
       "id": "myZXHJEw_n-",
       "condition": "is_finalcorner==1&order<=5&order_rate<=50",
-      "rarity": "1",
-      "db_id": "900041",
-      "icon_id": "20041"
+      "rarity": 5,
+      "db_id": 100041,
+      "icon_id": 20043,
+      "ability_value": 4000,
+      "ability_time": 40000,
+      "cooldown": 5000000
     },
     {
       "name": "直線巧者",
@@ -23408,9 +24993,12 @@
       "imgUrl": "img/skills/EOM5PqtmZUs.png",
       "describe": "直線で速度がわずかに上がる",
       "condition": "straight_random==1",
-      "rarity": "1",
-      "db_id": "200362",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200362,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 9000,
+      "cooldown": 300000
     },
     {
       "name": "先駆け",
@@ -23419,9 +25007,12 @@
       "id": "uVou821dyV5",
       "imgUrl": "img/skills/uVou821dyV5.png",
       "condition": "running_style==1&phase==0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "200532",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200532,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "ギアシフト",
@@ -23430,9 +25021,12 @@
       "id": "kjP0LurWRte",
       "imgUrl": "img/skills/kjP0LurWRte.png",
       "condition": "distance_type==2&phase_random==1&order_rate<=50",
-      "rarity": "1",
-      "db_id": "201052",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201052,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "究極テイオーステップ",
@@ -23441,9 +25035,12 @@
       "describe": "最終直線で前と差が詰まると華麗な脚取りで速度がすごく上がる",
       "id": "48R1doyq2",
       "condition": "is_finalcorner==1&corner==0&order<=3&bashin_diff_infront<=1&is_overtake==1",
-      "rarity": "1",
-      "db_id": "900031",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100031,
+      "icon_id": 20013,
+      "ability_value": 4500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "ポジションセンス",
@@ -23452,9 +25049,12 @@
       "id": "jKEl8WzeoS",
       "imgUrl": "img/skills/jKEl8WzeoS.png",
       "condition": "phase_random==0",
-      "rarity": "1",
-      "db_id": "200452",
-      "icon_id": "20051"
+      "rarity": 1,
+      "db_id": 200452,
+      "icon_id": 20051,
+      "ability_value": 250,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "イナズマステップ",
@@ -23463,9 +25063,12 @@
       "id": "2J6U9FBm-v",
       "imgUrl": "img/skills/2J6U9FBm-v.png",
       "condition": "distance_type==3&phase_random==1&order_rate>50",
-      "rarity": "1",
-      "db_id": "201132",
-      "icon_id": "20051"
+      "rarity": 1,
+      "db_id": 201132,
+      "icon_id": 20051,
+      "ability_value": 250,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "巧みなステップ",
@@ -23474,9 +25077,12 @@
       "id": "JGGr2Flc0W",
       "imgUrl": "img/skills/JGGr2Flc0W.png",
       "condition": "running_style==2&is_move_lane==1@running_style==2&is_move_lane==2",
-      "rarity": "1",
-      "db_id": "201332",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201332,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "勝利の鼓動",
@@ -23485,20 +25091,26 @@
       "describe": "残り200m地点で前の方にいると道を開いてすごく抜け出しやすくなる",
       "id": "kPsZdhHk9St",
       "condition": "order>=2&order<=5&order_rate<=50&remain_distance<=201&remain_distance>=199",
-      "rarity": "1",
-      "db_id": "900061",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100061,
+      "icon_id": 20013,
+      "ability_value": 4500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "コーナー加速◯",
+      "name": "コーナー加速○",
       "rare": "ノーマル",
       "describe": "華麗なコーナーワークで加速力がわずかに上がる",
       "id": "hVb7XZv49Wo",
       "imgUrl": "img/skills/hVb7XZv49Wo.png",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "1",
-      "db_id": "200342",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200342,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "アクセラレーション",
@@ -23507,9 +25119,12 @@
       "id": "yXC1jWCGva4",
       "imgUrl": "img/skills/yXC1jWCGva4.png",
       "condition": "distance_type==2&phase==1&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "201062",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201062,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "ヴィクトリーショット！",
@@ -23518,20 +25133,26 @@
       "describe": "最終コーナーで好位置にいると弾みを付けて加速力が上がる",
       "id": "KhoIX86TV1Z",
       "condition": "is_finalcorner==1&corner!=0&order>=3&order_rate<=50",
-      "rarity": "1",
-      "db_id": "900101",
-      "icon_id": "20041"
+      "rarity": 5,
+      "db_id": 100101,
+      "icon_id": 20043,
+      "ability_value": 4000,
+      "ability_time": 40000,
+      "cooldown": 5000000
     },
     {
-      "name": "先行のコツ◯",
+      "name": "先行のコツ○",
       "rare": "ノーマル",
       "describe": "良い位置に少しつきやすくなる＜作戦・先行＞",
       "id": "Eqc5btQZy-c",
       "imgUrl": "img/skills/Eqc5btQZy-c.png",
       "condition": "running_style==2",
-      "rarity": "1",
-      "db_id": "201532",
-      "icon_id": "10051"
+      "rarity": 1,
+      "db_id": 201532,
+      "icon_id": 10051,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "汝、皇帝の神威を見よ",
@@ -23540,20 +25161,26 @@
       "describe": "レース終盤に3回追い抜くと最終直線で速度がすごく上がる",
       "id": "-IAMMjBCK",
       "condition": "is_finalcorner==1&change_order_up_end_after>=3&corner==0",
-      "rarity": "1",
-      "db_id": "900171",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100171,
+      "icon_id": 20013,
+      "ability_value": 4500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "コーナー巧者◯",
+      "name": "コーナー巧者○",
       "rare": "ノーマル",
       "describe": "コーナーが得意になり速度がわずかに上がる",
       "id": "oif2oTQXUs",
       "imgUrl": "img/skills/oif2oTQXUs.png",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "1",
-      "db_id": "200332",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200332,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "好位追走",
@@ -23562,9 +25189,12 @@
       "id": "ja6Jl89t4x",
       "imgUrl": "img/skills/ja6Jl89t4x.png",
       "condition": "running_style==2&phase_random==1&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200572",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200572,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "束縛",
@@ -23573,9 +25203,12 @@
       "id": "UXE6SzJoT2",
       "imgUrl": "img/skills/UXE6SzJoT2.png",
       "condition": "distance_type==3&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "201152",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 201152,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "貴顕の使命を果たすべく",
@@ -23584,20 +25217,26 @@
       "describe": "最終コーナーで前の方にいると抜かさせない覚悟を決めて速度が上がる",
       "id": "fgdulkVijat",
       "condition": "is_finalcorner==1&corner!=0&distance_diff_rate<=30",
-      "rarity": "1",
-      "db_id": "900131",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100131,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "春ウマ娘◯",
+      "name": "春ウマ娘○",
       "rare": "ノーマル",
       "describe": "春のレースが少し得意になる",
       "id": "3gvF368iuVV",
       "imgUrl": "img/skills/3gvF368iuVV.png",
       "condition": "season==1@season==5",
-      "rarity": "1",
-      "db_id": "200172",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200172,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "リードキープ",
@@ -23606,9 +25245,12 @@
       "id": "l-5BXd7fw1Y",
       "imgUrl": "img/skills/l-5BXd7fw1Y.png",
       "condition": "distance_type==4&phase_random==1&bashin_diff_behind>=3&order==1",
-      "rarity": "1",
-      "db_id": "201192",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201192,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "波乱注意砲！",
@@ -23617,9 +25259,12 @@
       "describe": "レース中間からロングスパートをかけて速度がわずかに上がる",
       "id": "W2FgL9QXA_9",
       "condition": "distance_rate>=50&distance_rate<=60&order_rate>50",
-      "rarity": "3",
-      "db_id": "10071",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10071,
+      "icon_id": 20013,
+      "ability_value": 1500,
+      "ability_time": 60000,
+      "cooldown": 5000000
     },
     {
       "name": "追い上げ",
@@ -23628,9 +25273,12 @@
       "id": "kAHwB6HlnJ9",
       "imgUrl": "img/skills/kAHwB6HlnJ9.png",
       "condition": "distance_type==4&phase==2&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "201212",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201212,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "お見通し",
@@ -23639,9 +25287,12 @@
       "id": "bRUFNj3qF_7",
       "imgUrl": "img/skills/bRUFNj3qF_7.png",
       "condition": "running_style==4&is_move_lane==1@running_style==4&is_move_lane==2",
-      "rarity": "1",
-      "db_id": "201472",
-      "icon_id": "20091"
+      "rarity": 1,
+      "db_id": 201472,
+      "icon_id": 20091,
+      "ability_value": 50000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ウマ好み",
@@ -23650,9 +25301,12 @@
       "id": "eqNsnm5rHdT",
       "imgUrl": "img/skills/eqNsnm5rHdT.png",
       "condition": "near_count==4@near_count==5@near_count==6@near_count==7",
-      "rarity": "1",
-      "db_id": "201591",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201591,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ブルーローズチェイサー",
@@ -23661,9 +25315,12 @@
       "describe": "最終直線で抜け出した時に強い意志を持って速度が上がる",
       "id": "fWdrrX1fQDm",
       "condition": "is_finalcorner==1&corner==0&order<=4&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "900301",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100301,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "深呼吸",
@@ -23672,9 +25329,12 @@
       "id": "1uUvVaL7z-k",
       "imgUrl": "img/skills/1uUvVaL7z-k.png",
       "condition": "distance_type==4&straight_random==1",
-      "rarity": "1",
-      "db_id": "200742",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200742,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "先行けん制",
@@ -23683,9 +25343,12 @@
       "id": "c2AOqaGlw0R",
       "imgUrl": "img/skills/c2AOqaGlw0R.png",
       "condition": "running_style_count_senko_otherself>=1&phase_random==0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "200861",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200861,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "直滑降",
@@ -23694,9 +25357,12 @@
       "id": "lyYPrWT4R2E",
       "imgUrl": "img/skills/lyYPrWT4R2E.png",
       "condition": "running_style==2&slope==2",
-      "rarity": "1",
-      "db_id": "201342",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201342,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "レッドエース",
@@ -23705,20 +25371,26 @@
       "describe": "レース後半で1番をキープし続ける力をわずかに発揮する",
       "id": "NQEEPBr6i",
       "condition": "distance_rate>=50&order==1&bashin_diff_behind<=1",
-      "rarity": "3",
-      "db_id": "10091",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10091,
+      "icon_id": 20013,
+      "ability_value": 1500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "対抗意識◯",
+      "name": "対抗意識○",
       "rare": "ノーマル",
       "describe": "自分と同じ作戦のウマ娘が6人以上だと能力を少し発揮しやすい",
       "id": "y5wUlGVnlY",
       "imgUrl": "img/skills/y5wUlGVnlY.png",
       "condition": "running_style_count_same>=6",
-      "rarity": "1",
-      "db_id": "200282",
-      "icon_id": "10031"
+      "rarity": 1,
+      "db_id": 200282,
+      "icon_id": 10031,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "テンポアップ",
@@ -23727,9 +25399,12 @@
       "id": "QgJT1woGQD",
       "imgUrl": "img/skills/QgJT1woGQD.png",
       "condition": "distance_type==3&phase_random==1&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200722",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200722,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 9000,
+      "cooldown": 5000000
     },
     {
       "name": "アクセルX",
@@ -23738,9 +25413,12 @@
       "describe": "残り200mを切って前の方にいると競り合いに強くなり速度が少し上がる",
       "id": "dBPVMJwZx4A",
       "condition": "order>=3&order_rate<=50&remain_distance<=200&bashin_diff_infront<=1@order>=3&order_rate<=50&remain_distance<=200&bashin_diff_behind<=1",
-      "rarity": "3",
-      "db_id": "10081",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10081,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "直線回復",
@@ -23749,9 +25427,12 @@
       "id": "lKRcNtJj8PI",
       "imgUrl": "img/skills/lKRcNtJj8PI.png",
       "condition": "straight_random==1",
-      "rarity": "1",
-      "db_id": "200382",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200382,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "差し切り体勢",
@@ -23760,9 +25441,12 @@
       "id": "J9ZtYuirNxI",
       "imgUrl": "img/skills/J9ZtYuirNxI.png",
       "condition": "running_style==3&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "200602",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200602,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "上昇気流",
@@ -23771,9 +25455,12 @@
       "id": "R75SzzE1BT3",
       "imgUrl": "img/skills/R75SzzE1BT3.png",
       "condition": "distance_type==2&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "200702",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200702,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "精神一到",
@@ -23782,9 +25469,12 @@
       "describe": "最終直線で後ろの方から追い抜くと末脚を使って速度が少し上がる",
       "id": "rW8AKuk4bcI",
       "condition": "is_finalcorner==1&corner==0&change_order_onetime<0&order>=4",
-      "rarity": "3",
-      "db_id": "10111",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10111,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "先行焦り",
@@ -23793,9 +25483,12 @@
       "id": "XLmiCDe5aGx",
       "imgUrl": "img/skills/XLmiCDe5aGx.png",
       "condition": "running_style_count_senko_otherself>=1&phase_random==1",
-      "rarity": "1",
-      "db_id": "200871",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200871,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "熱血☆アミーゴ",
@@ -23804,9 +25497,12 @@
       "describe": "最終直線で余力を持って前にいるとわずかに優位を保ちやすくなる",
       "id": "SXC17SCa3s1",
       "condition": "is_finalcorner==1&corner==0&hp_per>=30&order<=2",
-      "rarity": "3",
-      "db_id": "10141",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10141,
+      "icon_id": 20013,
+      "ability_value": 1500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "ホークアイ",
@@ -23815,20 +25511,26 @@
       "id": "NYUyPNzqpcz",
       "imgUrl": "img/skills/NYUyPNzqpcz.png",
       "condition": "distance_type==3&phase_random==0",
-      "rarity": "1",
-      "db_id": "201122",
-      "icon_id": "20091"
+      "rarity": 1,
+      "db_id": 201122,
+      "icon_id": 20091,
+      "ability_value": 100000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "先行直線◯",
+      "name": "先行直線○",
       "rare": "ノーマル",
       "describe": "直線で速度がわずかに上がる＜作戦・先行＞",
       "id": "XUMkn4ziiYT",
       "imgUrl": "img/skills/XUMkn4ziiYT.png",
       "condition": "running_style==2&straight_random==1",
-      "rarity": "1",
-      "db_id": "201312",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201312,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "エンプレス・プライド",
@@ -23837,9 +25539,12 @@
       "describe": "最終コーナーで後ろから追い抜くと女帝たる走りで速度が少し上がる",
       "id": "QYX4d38LeS",
       "condition": "is_finalcorner==1&corner!=0&order>=4&change_order_onetime<0",
-      "rarity": "3",
-      "db_id": "10181",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10181,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "臨機応変",
@@ -23848,9 +25553,12 @@
       "imgUrl": "img/skills/p71TuCN_n-G.png",
       "describe": "レース終盤にコース取りが少しうまくなる",
       "condition": "phase_random==2",
-      "rarity": "1",
-      "db_id": "200502",
-      "icon_id": "20051"
+      "rarity": 1,
+      "db_id": 200502,
+      "icon_id": 20051,
+      "ability_value": 250,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "かく乱",
@@ -23859,9 +25567,12 @@
       "id": "9VXUG7uU3a-",
       "imgUrl": "img/skills/9VXUG7uU3a-.png",
       "condition": "running_style==2&phase_random==2&order_rate<=50",
-      "rarity": "1",
-      "db_id": "201372",
-      "icon_id": "30071"
+      "rarity": 1,
+      "db_id": 201372,
+      "icon_id": 30071,
+      "ability_value": -30000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "勝利のキッス☆",
@@ -23870,9 +25581,12 @@
       "describe": "最終コーナーで前の方で競り合うと直線でわずかに抜け出しやすくなる",
       "id": "aIKAfks7LQR",
       "condition": "is_finalcorner==1&corner!=0&blocked_side_continuetime>=2&order<=3",
-      "rarity": "3",
-      "db_id": "10241",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10241,
+      "icon_id": 20013,
+      "ability_value": 1500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "先頭プライド",
@@ -23881,9 +25595,12 @@
       "id": "wNmEERNbDJ4",
       "imgUrl": "img/skills/wNmEERNbDJ4.png",
       "condition": "running_style==1&phase==0&change_order_onetime>0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201272",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201272,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "クリアハート",
@@ -23892,20 +25609,26 @@
       "describe": "レース中盤で好位置にいる時に持久力が少し回復する",
       "id": "Yh5z-cdHPX0",
       "condition": "phase_random==1&order>=2&order_rate<=40",
-      "rarity": "3",
-      "db_id": "10451",
-      "icon_id": "20023"
+      "rarity": 3,
+      "db_id": 10451,
+      "icon_id": 20023,
+      "ability_value": 350,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "コーナー回復◯",
+      "name": "コーナー回復○",
       "rare": "ノーマル",
       "describe": "無駄のないコーナリングで持久力がわずかに回復する",
       "id": "uL6kGjM4qUj",
       "imgUrl": "img/skills/uL6kGjM4qUj.png",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "1",
-      "db_id": "200352",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200352,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "燃えろ筋肉！",
@@ -23914,20 +25637,26 @@
       "describe": "レース終盤のコーナーで前の位置につこうとして加速力が少し上がる",
       "id": "fjNd_D7SKeq",
       "condition": "phase>=2&corner!=0&order_rate>=65&order_rate<=70",
-      "rarity": "3",
-      "db_id": "10271",
-      "icon_id": "20043"
+      "rarity": 3,
+      "db_id": 10271,
+      "icon_id": 20043,
+      "ability_value": 3000,
+      "ability_time": 40000,
+      "cooldown": 5000000
     },
     {
-      "name": "雨の日◯",
+      "name": "雨の日○",
       "rare": "ノーマル",
       "describe": "雨の日のレースが少し得意になる",
       "id": "lHAMfGoOtw2",
       "imgUrl": "img/skills/lHAMfGoOtw2.png",
       "condition": "weather==3",
-      "rarity": "1",
-      "db_id": "200232",
-      "icon_id": "10041"
+      "rarity": 1,
+      "db_id": 200232,
+      "icon_id": 10041,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "外差し準備",
@@ -23936,9 +25665,12 @@
       "imgUrl": "img/skills/TSDcq3oKT8s.png",
       "describe": "最終コーナーで外から追い抜くと速度がわずかに上がる＜作戦・差し＞",
       "condition": "running_style==3&is_finalcorner==1&corner!=0&is_behind_in==1&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "200612",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200612,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "全力Vサインッ！",
@@ -23947,20 +25679,26 @@
       "describe": "最終直線で競り合いに負けない気持ちが湧き、速度が少し上がる",
       "id": "ZnE10iy5kU",
       "condition": "is_finalcorner==1&corner==0&order<=5&blocked_side_continuetime>=2",
-      "rarity": "3",
-      "db_id": "10351",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10351,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "良バ場◯",
+      "name": "良バ場○",
       "rare": "ノーマル",
       "describe": "「良」のバ場状態が少し得意になる",
       "id": "sC9UYQ01L1",
       "imgUrl": "img/skills/sC9UYQ01L1.png",
       "condition": "ground_condition==1",
-      "rarity": "1",
-      "db_id": "200152",
-      "icon_id": "10031"
+      "rarity": 1,
+      "db_id": 200152,
+      "icon_id": 10031,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "がんばり屋",
@@ -23969,42 +25707,54 @@
       "id": "icbSWcsud_",
       "imgUrl": "img/skills/icbSWcsud_.png",
       "condition": "running_style==3&is_overtake==1&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201402",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201402,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "introduction:My body",
+      "name": "introduction：My body",
       "imgUrl": "img/skills/zKS7pG9cT.png",
       "rare": "固有",
       "describe": "レース後半のコーナーで控えていると持久力が少し回復する",
       "id": "zKS7pG9cT",
       "condition": "distance_rate>=50&corner!=0&order>=3&order_rate<=40",
-      "rarity": "3",
-      "db_id": "10321",
-      "icon_id": "20023"
+      "rarity": 3,
+      "db_id": 10321,
+      "icon_id": 20023,
+      "ability_value": 350,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "根幹距離◯",
+      "name": "根幹距離○",
       "rare": "ノーマル",
       "describe": "根幹距離（400mの倍数）が少し得意になる",
       "id": "g2vte-S15S",
       "imgUrl": "img/skills/g2vte-S15S.png",
       "condition": "is_basis_distance==1",
-      "rarity": "1",
-      "db_id": "200132",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200132,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "学級委員長＋速さ＝バクシン",
+      "name": "学級委員長+速さ＝バクシン",
       "imgUrl": "img/skills/-Fxes7PC_lN.png",
       "rare": "固有",
       "describe": "レース後半に前の方で競り合うとバクシン力（？）を発揮、速度が少し上がる",
       "id": "-Fxes7PC_lN",
       "condition": "distance_rate>=50&order<=3&blocked_side_continuetime>=2",
-      "rarity": "3",
-      "db_id": "10411",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10411,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "スプリントギア",
@@ -24013,9 +25763,12 @@
       "id": "eItZM_rb3Wm",
       "imgUrl": "img/skills/eItZM_rb3Wm.png",
       "condition": "distance_type==1&straight_random==1",
-      "rarity": "1",
-      "db_id": "200652",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200652,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "逃げ焦り",
@@ -24024,9 +25777,12 @@
       "id": "15yASdQCW1R",
       "imgUrl": "img/skills/15yASdQCW1R.png",
       "condition": "running_style_count_nige_otherself>=1&phase_random==1",
-      "rarity": "1",
-      "db_id": "200841",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200841,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "来てください来てください！",
@@ -24035,9 +25791,12 @@
       "describe": "レース終盤に前方が詰まるとお告げの力で少し道を切り開く",
       "id": "xWYcPAHCGJA",
       "condition": "phase>=2&order>=3&blocked_front==1",
-      "rarity": "3",
-      "db_id": "10561",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10561,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "目くらまし",
@@ -24046,9 +25805,12 @@
       "id": "LHAdVLATPFj",
       "imgUrl": "img/skills/LHAdVLATPFj.png",
       "condition": "distance_type==4&phase_random==2",
-      "rarity": "1",
-      "db_id": "201232",
-      "icon_id": "30071"
+      "rarity": 1,
+      "db_id": 201232,
+      "icon_id": 30071,
+      "ability_value": -50000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "小休憩",
@@ -24057,9 +25819,12 @@
       "imgUrl": "img/skills/LXINgxRd1tx.png",
       "describe": "レース終盤に持久力がわずかに回復する＜作戦・差し＞",
       "condition": "running_style==3&phase_random==2",
-      "rarity": "1",
-      "db_id": "201422",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201422,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "ラッキーセブン",
@@ -24068,9 +25833,12 @@
       "id": "KprPYh4Atix",
       "imgUrl": "img/skills/KprPYh4Atix.png",
       "condition": "random_lot==50&post_number==7",
-      "rarity": "1",
-      "db_id": "201562",
-      "icon_id": "10061"
+      "rarity": 1,
+      "db_id": 201562,
+      "icon_id": 10061,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "ワクワクよーいドン",
@@ -24079,9 +25847,12 @@
       "describe": "最終コーナーで後ろの方にいると近くのウマ娘を見て持久力を少し回復する",
       "id": "JjHm1h5Xzpy",
       "condition": "is_finalcorner==1&corner!=0&order_rate>50&near_count>=1",
-      "rarity": "3",
-      "db_id": "10521",
-      "icon_id": "20023"
+      "rarity": 3,
+      "db_id": 10521,
+      "icon_id": 20023,
+      "ability_value": 350,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "隠れ蓑",
@@ -24090,9 +25861,12 @@
       "id": "ai9tE5d7yv9",
       "imgUrl": "img/skills/ai9tE5d7yv9.png",
       "condition": "phase==0&accumulatetime>=5&blocked_front_continuetime>=1",
-      "rarity": "1",
-      "db_id": "200442",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200442,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "十万バリキ",
@@ -24101,9 +25875,12 @@
       "id": "bMYtMDrz4Xv",
       "imgUrl": "img/skills/bMYtMDrz4Xv.png",
       "condition": "running_style==3&slope==1",
-      "rarity": "1",
-      "db_id": "201412",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201412,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "アタシもたまには、ね？",
@@ -24112,20 +25889,26 @@
       "describe": "レース終盤で3番手の時に負けそうになると闘志に火が付き速度が少し上がる",
       "id": "HIQhEWZGW",
       "condition": "phase>=2&order==3&bashin_diff_behind<=1",
-      "rarity": "3",
-      "db_id": "10601",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10601,
+      "icon_id": 20013,
+      "ability_value": 2500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "小倉レース場◯",
+      "name": "小倉レース場○",
       "rare": "ノーマル",
       "describe": "小倉レース場が少し得意になる",
       "id": "05d0vsFOou",
       "imgUrl": "img/skills/05d0vsFOou.png",
       "condition": "track_id==10010",
-      "rarity": "1",
-      "db_id": "200122",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200122,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "ささやき",
@@ -24134,9 +25917,12 @@
       "id": "EzWa29JdgX",
       "imgUrl": "img/skills/EzWa29JdgX.png",
       "condition": "distance_type==3&phase==1&blocked_front_continuetime>=1",
-      "rarity": "1",
-      "db_id": "201162",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 201162,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "鋭い眼光",
@@ -24145,9 +25931,12 @@
       "id": "0Fh2q7Uid5",
       "imgUrl": "img/skills/0Fh2q7Uid5.png",
       "condition": "running_style==3&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "201442",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 201442,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "Call me KING",
@@ -24156,20 +25945,26 @@
       "describe": "レースを冷静に運ぶことができると残り200mで実力発揮、速度が上がる",
       "id": "f9XzmmL32cE",
       "condition": "temptation_count==0&remain_distance<=201&remain_distance>=199&order>=5&order_rate<=60",
-      "rarity": "3",
-      "db_id": "10611",
-      "icon_id": "20013"
+      "rarity": 3,
+      "db_id": 10611,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "外枠得意◯",
+      "name": "外枠得意○",
       "rare": "ノーマル",
       "describe": "枠番が6〜8のレースが少し得意になる",
       "id": "8lBE6C1ZAig",
       "imgUrl": "img/skills/8lBE6C1ZAig.png",
       "condition": "post_number>=6",
-      "rarity": "1",
-      "db_id": "200262",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200262,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "詰め寄り",
@@ -24178,9 +25973,12 @@
       "id": "-Q7uZbEhnpv",
       "imgUrl": "img/skills/-Q7uZbEhnpv.png",
       "condition": "distance_type==1&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "200672",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200672,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "読解力",
@@ -24189,9 +25987,12 @@
       "id": "qnisLy5mzVG",
       "imgUrl": "img/skills/qnisLy5mzVG.png",
       "condition": "running_style==3&phase_random==1",
-      "rarity": "1",
-      "db_id": "201432",
-      "icon_id": "20091"
+      "rarity": 1,
+      "db_id": 201432,
+      "icon_id": 20091,
+      "ability_value": 50000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ヴィットーリアに捧ぐ舞踏",
@@ -24200,20 +26001,26 @@
       "describe": "最終コーナーで前の方で競り合うと王たる輝きで速度が上がる",
       "id": "ahTxJT1cM",
       "condition": "is_finalcorner==1&corner!=0&bashin_diff_infront<=1&bashin_diff_behind<=1&blocked_side_continuetime>=2&order<=4",
-      "rarity": "1",
-      "db_id": "900151",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100151,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
-      "name": "非根幹距離◯",
+      "name": "非根幹距離○",
       "rare": "ノーマル",
       "describe": "非根幹距離（400mの倍数以外）が少し得意になる",
       "id": "F2XBLBFCVh",
       "imgUrl": "img/skills/F2XBLBFCVh.png",
       "condition": "is_basis_distance==0",
-      "rarity": "1",
-      "db_id": "200142",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200142,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "抜け出し準備",
@@ -24222,9 +26029,12 @@
       "id": "tiXFXDrN4c",
       "imgUrl": "img/skills/tiXFXDrN4c.png",
       "condition": "running_style==2&is_finalcorner_random==1&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200582",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200582,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "別腹タンク",
@@ -24233,9 +26043,12 @@
       "id": "AEZfYT48j",
       "imgUrl": "img/skills/AEZfYT48j.png",
       "condition": "distance_type==4&is_hp_empty_onetime==1",
-      "rarity": "1",
-      "db_id": "200762",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200762,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "全身全霊",
@@ -24244,42 +26057,54 @@
       "imgUrl": "img/skills/z8o7DIWJkt.png",
       "describe": "ラストスパートで速度が上がる",
       "condition": "is_lastspurt==1&phase_random==3",
-      "rarity": "2",
-      "db_id": "200511",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200511,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
-      "name": "道悪◯",
+      "name": "道悪○",
       "rare": "ノーマル",
       "id": "bS56RDj_-m",
       "imgUrl": "img/skills/bS56RDj_-m.png",
       "describe": "「稍重」「重」「不良」のバ場状態が 少し得意になる",
       "condition": "ground_condition==2@ground_condition==3@ground_condition==4",
-      "rarity": "1",
-      "db_id": "200162",
-      "icon_id": "10031"
+      "rarity": 1,
+      "db_id": 200162,
+      "icon_id": 10031,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "差しのコツ◯",
+      "name": "差しのコツ○",
       "rare": "ノーマル",
       "describe": "良い位置に少しつきやすくなる＜作戦・差し＞",
       "id": "7sHwpYODM1",
       "imgUrl": "img/skills/7sHwpYODM1.png",
       "condition": "running_style==3",
-      "rarity": "1",
-      "db_id": "201542",
-      "icon_id": "10051"
+      "rarity": 1,
+      "db_id": 201542,
+      "icon_id": 10051,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "左回り◯",
+      "name": "左回り○",
       "rare": "ノーマル",
       "id": "v4yZ3Ty12L",
       "imgUrl": "img/skills/v4yZ3Ty12L.png",
       "describe": "左回りコースが少し得意になる",
       "condition": "rotation==2",
-      "rarity": "1",
-      "db_id": "200022",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200022,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "逃亡者",
@@ -24288,9 +26113,12 @@
       "imgUrl": "img/skills/sFdvYuvNPG.png",
       "describe": "最終コーナーで先頭をキープしやすくなる＜作戦・逃げ＞",
       "condition": "running_style==1&is_finalcorner_random==1&order==1",
-      "rarity": "2",
-      "db_id": "200551",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200551,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "急ぎ足",
@@ -24299,42 +26127,54 @@
       "imgUrl": "img/skills/jc-y8pTTJW.png",
       "describe": "レース中盤でわずかに前に行きやすくなる＜作戦・逃げ＞",
       "condition": "running_style==1&phase_random==1&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200542",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200542,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "逃げ直線◯",
+      "name": "逃げ直線○",
       "rare": "ノーマル",
       "id": "DTD9YJiYLG",
       "imgUrl": "img/skills/DTD9YJiYLG.png",
       "describe": "直線で速度がわずかに上がる＜作戦・逃げ＞",
       "condition": "running_style==1&straight_random==1",
-      "rarity": "1",
-      "db_id": "201242",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201242,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "逃げコーナー◯",
+      "name": "逃げコーナー○",
       "rare": "ノーマル",
       "id": "7QS24fzU0j",
       "imgUrl": "img/skills/7QS24fzU0j.png",
       "describe": "コーナーで速度がわずかに上がる＜作戦・逃げ＞",
       "condition": "running_style==1&corner_random==1@running_style==1&corner_random==2@running_style==1&corner_random==3@running_style==1&corner_random==4",
-      "rarity": "1",
-      "db_id": "201252",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201252,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "逃げのコツ◯",
+      "name": "逃げのコツ○",
       "rare": "ノーマル",
       "describe": "良い位置に少しつきやすくなる＜作戦・逃げ＞",
       "id": "5ntiBjDYDn",
       "imgUrl": "img/skills/5ntiBjDYDn.png",
       "condition": "running_style==1",
-      "rarity": "1",
-      "db_id": "201522",
-      "icon_id": "10051"
+      "rarity": 1,
+      "db_id": 201522,
+      "icon_id": 10051,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "一陣の風",
@@ -24343,9 +26183,12 @@
       "id": "csitt7JdQAp",
       "imgUrl": "img/skills/csitt7JdQAp.png",
       "condition": "straight_random==1",
-      "rarity": "2",
-      "db_id": "200371",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200371,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "垂れウマ回避",
@@ -24354,9 +26197,12 @@
       "imgUrl": "img/skills/iZfjbk3QWoo.png",
       "describe": "ラストスパートで前が塞がれた時の立ち回りがわずかにうまくなる",
       "condition": "blocked_front_continuetime>=1&is_lastspurt==1&hp_per>=1",
-      "rarity": "1",
-      "db_id": "200492",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200492,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 300000
     },
     {
       "name": "軽やかステップ",
@@ -24365,20 +26211,26 @@
       "imgUrl": "img/skills/sWVG7_tDNvo.png",
       "describe": "左右に動いてもわずかに疲れにくくなる＜中距離＞",
       "condition": "distance_type==3&is_move_lane==1&accumulatetime>=10@distance_type==3&is_move_lane==2&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201142",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201142,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "阪神レース場◯",
+      "name": "阪神レース場○",
       "rare": "ノーマル",
       "describe": "阪神レース場が少し得意になる",
       "id": "tw7oPO88tQj",
       "imgUrl": "img/skills/tw7oPO88tQj.png",
       "condition": "track_id==10009",
-      "rarity": "1",
-      "db_id": "200052",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200052,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "曲線のソムリエ",
@@ -24387,9 +26239,12 @@
       "imgUrl": "img/skills/UTa1_vkW946.png",
       "describe": "華麗なコーナーワークで加速力が上がる",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "2",
-      "db_id": "200341",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200341,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "後方待機",
@@ -24398,9 +26253,12 @@
       "imgUrl": "img/skills/d2COzXtV8DN.png",
       "describe": "レース中盤に脚を溜めてわずかに疲れにくくなる＜作戦・追込＞",
       "condition": "running_style==4&phase_random==1&distance_diff_rate>=75",
-      "rarity": "1",
-      "db_id": "200622",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200622,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "直線一気",
@@ -24409,9 +26267,12 @@
       "id": "ItcIKNc1Z9Z",
       "imgUrl": "img/skills/ItcIKNc1Z9Z.png",
       "condition": "running_style==4&is_lastspurt==1&corner==0",
-      "rarity": "1",
-      "db_id": "200642",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200642,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 9000,
+      "cooldown": 5000000
     },
     {
       "name": "内弁慶",
@@ -24420,9 +26281,12 @@
       "id": "x_8glfWv1Fs",
       "imgUrl": "img/skills/x_8glfWv1Fs.png",
       "condition": "distance_type==4&is_finalcorner==1&corner!=0&lane_type==0",
-      "rarity": "1",
-      "db_id": "200752",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200752,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "下校の楽しみ",
@@ -24431,9 +26295,12 @@
       "imgUrl": "img/skills/cxTTQ6XO30p.png",
       "describe": "下り坂でわずかに疲れにくくなる＜作戦・追込み＞",
       "condition": "running_style==4&slope==2&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201482",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201482,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "策士",
@@ -24442,9 +26309,12 @@
       "id": "0YpQpWZzi6h",
       "imgUrl": "img/skills/0YpQpWZzi6h.png",
       "condition": "running_style==4&phase_random==2&order_rate>50",
-      "rarity": "1",
-      "db_id": "201502",
-      "icon_id": "20091"
+      "rarity": 1,
+      "db_id": 201502,
+      "icon_id": 20091,
+      "ability_value": 50000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "まなざし",
@@ -24453,20 +26323,26 @@
       "id": "Djf2lAc6xg9",
       "imgUrl": "img/skills/Djf2lAc6xg9.png",
       "condition": "running_style==4&phase_random==2&order>=2",
-      "rarity": "1",
-      "db_id": "201512",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 201512,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "追込のコツ◯",
+      "name": "追込のコツ○",
       "rare": "ノーマル",
       "describe": "良い位置に少しつきやすくなる＜作戦・追込＞",
       "id": "UWTzb7OZAmy",
       "imgUrl": "img/skills/UWTzb7OZAmy.png",
       "condition": "running_style==4",
-      "rarity": "1",
-      "db_id": "201552",
-      "icon_id": "10051"
+      "rarity": 1,
+      "db_id": 201552,
+      "icon_id": 10051,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "登山家",
@@ -24475,9 +26351,12 @@
       "imgUrl": "img/skills/LPSw5Uqv2Im.png",
       "describe": "上り坂がわずかに上手くなる",
       "condition": "slope==1",
-      "rarity": "1",
-      "db_id": "201581",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201581,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "地固め",
@@ -24486,9 +26365,12 @@
       "id": "Glsbej10heR",
       "imgUrl": "img/skills/Glsbej10heR.png",
       "condition": "activate_count_start>=3",
-      "rarity": "1",
-      "db_id": "201601",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201601,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "シンパシー",
@@ -24497,9 +26379,12 @@
       "id": "FCmcOWojHie",
       "imgUrl": "img/skills/FCmcOWojHie.png",
       "condition": "same_skill_horse_count>=5",
-      "rarity": "1",
-      "db_id": "201631",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 201631,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "先行駆け引き",
@@ -24508,20 +26393,26 @@
       "id": "P50lJVeGI",
       "imgUrl": "img/skills/P50lJVeGI.png",
       "condition": "running_style_temptation_count_senko>=1&is_temptation==0",
-      "rarity": "1",
-      "db_id": "200801",
-      "icon_id": "30041"
+      "rarity": 1,
+      "db_id": 200801,
+      "icon_id": 30041,
+      "ability_value": 50000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "徹底マーク◯",
+      "name": "徹底マーク○",
       "rare": "ノーマル",
       "describe": "1番人気のウマ娘と作戦が同じだと能力を少し発揮しやすい",
       "id": "j0mwyy-ni9",
       "imgUrl": "img/skills/j0mwyy-ni9.png",
       "condition": "running_style_equal_popularity_one==1",
-      "rarity": "1",
-      "db_id": "200292",
-      "icon_id": "10041"
+      "rarity": 1,
+      "db_id": 200292,
+      "icon_id": 10041,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "豪脚",
@@ -24530,20 +26421,26 @@
       "imgUrl": "img/skills/P6sYgUx1Zc.png",
       "describe": "レース終盤に後ろの方だと追い抜く力が上がる＜マイル＞",
       "condition": "distance_type==2&phase_random==2&order_rate>50",
-      "rarity": "2",
-      "db_id": "200701",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200701,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "中山レース場◯",
+      "name": "中山レース場○",
       "rare": "ノーマル",
       "describe": "中山レース場が少し得意になる",
       "id": "xHXHWreyfm",
       "imgUrl": "img/skills/xHXHWreyfm.png",
       "condition": "track_id==10005",
-      "rarity": "1",
-      "db_id": "200042",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200042,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "位置取り押し上げ",
@@ -24552,9 +26449,12 @@
       "imgUrl": "img/skills/gGqvq_Mnmp.png",
       "describe": "レース中盤で速度がわずかに上がる＜作戦・差し＞",
       "condition": "running_style==3&phase_random==1&order_rate>50",
-      "rarity": "1",
-      "db_id": "200592",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200592,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "好転一息",
@@ -24563,20 +26463,26 @@
       "imgUrl": "img/skills/JjcNnong1J.png",
       "describe": "直線で持久力が回復する",
       "condition": "straight_random==1",
-      "rarity": "2",
-      "db_id": "200381",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200381,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
-      "name": "東京レース場◯",
+      "name": "東京レース場○",
       "rare": "ノーマル",
       "describe": "東京レース場が少し得意になる",
       "id": "rhdXTPc3OP",
       "imgUrl": "img/skills/rhdXTPc3OP.png",
       "condition": "track_id==10006",
-      "rarity": "1",
-      "db_id": "200032",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200032,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "直線加速",
@@ -24585,42 +26491,54 @@
       "imgUrl": "img/skills/nIXLmrCxB8.png",
       "describe": "直線で加速力がわずかに上がる",
       "condition": "straight_random==1",
-      "rarity": "1",
-      "db_id": "200372",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200372,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
-      "name": "マイル直線◯",
+      "name": "マイル直線○",
       "rare": "ノーマル",
       "id": "I8e5R8e_iI",
       "imgUrl": "img/skills/I8e5R8e_iI.png",
       "describe": "直線で速度がわずかに上がる＜マイル＞",
       "condition": "distance_type==2&straight_random==1",
-      "rarity": "1",
-      "db_id": "201032",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201032,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "中距離直線◯",
+      "name": "中距離直線○",
       "rare": "ノーマル",
       "id": "EfTxxN-wUe",
       "imgUrl": "img/skills/EfTxxN-wUe.png",
       "describe": "直線で速度がわずかに上がる＜中距離＞",
       "condition": "distance_type==3&straight_random==1",
-      "rarity": "1",
-      "db_id": "201102",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201102,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "晴れの日◯",
+      "name": "晴れの日○",
       "rare": "ノーマル",
       "describe": "晴れの日のレースが少し得意になる",
       "id": "25hjl_Nca",
       "imgUrl": "img/skills/25hjl_Nca.png",
       "condition": "weather==1",
-      "rarity": "1",
-      "db_id": "200212",
-      "icon_id": "10041"
+      "rarity": 1,
+      "db_id": 200212,
+      "icon_id": 10041,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "キラーチューン",
@@ -24629,9 +26547,12 @@
       "imgUrl": "img/skills/NXiO9P0Hav.png",
       "describe": "レース中盤に前の方だと好位置を取りやすくなる＜中距離＞",
       "condition": "distance_type==3&phase_random==1&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200721",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200721,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 9000,
+      "cooldown": 5000000
     },
     {
       "name": "二の矢",
@@ -24640,9 +26561,12 @@
       "id": "kRIwW1iFqu",
       "imgUrl": "img/skills/kRIwW1iFqu.png",
       "condition": "running_style==1&phase_random==1&order_rate>50",
-      "rarity": "1",
-      "db_id": "201292",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201292,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "脱出術",
@@ -24651,31 +26575,40 @@
       "id": "aXsN6g4uUw",
       "imgUrl": "img/skills/aXsN6g4uUw.png",
       "condition": "running_style==1&phase_random==1&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200541",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200541,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "内枠得意◯",
+      "name": "内枠得意○",
       "rare": "ノーマル",
       "describe": "枠番が1〜3のレースが少し得意になる",
       "id": "G0Ymj859aM",
       "imgUrl": "img/skills/G0Ymj859aM.png",
       "condition": "post_number<=3",
-      "rarity": "1",
-      "db_id": "200252",
-      "icon_id": "10051"
+      "rarity": 1,
+      "db_id": 200252,
+      "icon_id": 10051,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "伏兵◯",
+      "name": "伏兵○",
       "rare": "ノーマル",
       "id": "O-c-BZW-2n",
       "imgUrl": "img/skills/O-c-BZW-2n.png",
       "describe": "4番人気以下のレースで能力を少し発揮しやすい",
       "condition": "popularity>=4",
-      "rarity": "1",
-      "db_id": "200302",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200302,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "トリック（前）",
@@ -24684,9 +26617,12 @@
       "id": "kryBJgZKl3",
       "imgUrl": "img/skills/kryBJgZKl3.png",
       "condition": "phase==1&order_rate<=50&temptation_count_behind>=1",
-      "rarity": "1",
-      "db_id": "200771",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200771,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "差し駆け引き",
@@ -24695,9 +26631,12 @@
       "id": "L15Z0Cp_2t",
       "imgUrl": "img/skills/L15Z0Cp_2t.png",
       "condition": "running_style_temptation_count_sashi>=1&is_temptation==0",
-      "rarity": "1",
-      "db_id": "200811",
-      "icon_id": "30041"
+      "rarity": 1,
+      "db_id": 200811,
+      "icon_id": 30041,
+      "ability_value": 50000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "先行ためらい",
@@ -24706,9 +26645,12 @@
       "imgUrl": "img/skills/Cz9RY9VLaQ.png",
       "describe": "レース終盤に作戦・先行のウマ娘をためらわせて速度をわずかに下げる",
       "condition": "running_style_count_senko_otherself>=1&phase_random==2",
-      "rarity": "1",
-      "db_id": "200881",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 200881,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "尻尾上がり",
@@ -24717,9 +26659,12 @@
       "id": "jggyQ_cKuX",
       "imgUrl": "img/skills/jggyQ_cKuX.png",
       "condition": "activate_count_middle>=3",
-      "rarity": "1",
-      "db_id": "201611",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201611,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ウマ込み冷静",
@@ -24728,9 +26673,12 @@
       "id": "SYn_JOvSTq5",
       "imgUrl": "img/skills/SYn_JOvSTq5.png",
       "condition": "phase==1&blocked_all_continuetime>=1",
-      "rarity": "1",
-      "db_id": "200482",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200482,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "迅速果断",
@@ -24739,9 +26687,12 @@
       "imgUrl": "img/skills/7fkScOPnxBk.png",
       "describe": "レース中盤で速度が上がる＜作戦・差し＞",
       "condition": "running_style==3&phase_random==1&order_rate>50",
-      "rarity": "2",
-      "db_id": "200591",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200591,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "差し焦り",
@@ -24750,42 +26701,54 @@
       "id": "NaS8ZJQuuW9",
       "imgUrl": "img/skills/NaS8ZJQuuW9.png",
       "condition": "running_style_count_sashi_otherself>=1&phase_random==1",
-      "rarity": "1",
-      "db_id": "200901",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200901,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "中距離コーナー◯",
+      "name": "中距離コーナー○",
       "rare": "ノーマル",
       "id": "lSFwxam1V3y",
       "imgUrl": "img/skills/lSFwxam1V3y.png",
       "describe": "コーナーで速度がわずかに上がる＜中距離＞",
       "condition": "distance_type==3&corner_random==1@distance_type==3&corner_random==2@distance_type==3&corner_random==3@distance_type==3&corner_random==4",
-      "rarity": "1",
-      "db_id": "201112",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201112,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "右回り◯",
+      "name": "右回り○",
       "rare": "ノーマル",
       "describe": "右回りコースが少し得意になる",
       "id": "390SN0eX6K-",
       "imgUrl": "img/skills/390SN0eX6K-.png",
       "condition": "rotation==1",
-      "rarity": "1",
-      "db_id": "200012",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200012,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "秋ウマ娘◯",
+      "name": "秋ウマ娘○",
       "rare": "ノーマル",
       "describe": "秋のレースが少し得意になる",
       "id": "SSm3I2jNB9R",
       "imgUrl": "img/skills/SSm3I2jNB9R.png",
       "condition": "season==3",
-      "rarity": "1",
-      "db_id": "200192",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200192,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "じゃじゃウマ娘",
@@ -24794,9 +26757,12 @@
       "id": "0ynXCgPRn",
       "imgUrl": "img/skills/0ynXCgPRn.png",
       "condition": "running_style==1&slope==1&accumulatetime>=10",
-      "rarity": "2",
-      "db_id": "201281",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 201281,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "勢い任せ",
@@ -24805,9 +26771,12 @@
       "id": "v5YiZc1QYa",
       "imgUrl": "img/skills/v5YiZc1QYa.png",
       "condition": "running_style==1&slope==1&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201282",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201282,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "スリップストリーム",
@@ -24816,9 +26785,12 @@
       "id": "tqno0TLG_c",
       "imgUrl": "img/skills/tqno0TLG_c.png",
       "condition": "infront_near_lane_time>=3&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201651",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201651,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 300000
     },
     {
       "name": "遊びはおしまいっ！",
@@ -24827,9 +26799,12 @@
       "id": "9KMbcURPVA",
       "imgUrl": "img/skills/9KMbcURPVA.png",
       "condition": "behind_near_lane_time>=3&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201661",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201661,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 300000
     },
     {
       "name": "ペースキープ",
@@ -24838,9 +26813,12 @@
       "imgUrl": "img/skills/Q_eeNK9Ekb.png",
       "describe": "レース中盤に追い抜かれると持久力がわずかに回復する",
       "condition": "phase==1&change_order_onetime>0",
-      "rarity": "1",
-      "db_id": "200472",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200472,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "勝利への執念",
@@ -24849,9 +26827,12 @@
       "id": "g4y4F3VKNS",
       "imgUrl": "img/skills/g4y4F3VKNS.png",
       "condition": "distance_type==3&is_finalcorner==1&corner!=0&change_order_onetime>0",
-      "rarity": "2",
-      "db_id": "200731",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200731,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "冷静",
@@ -24860,20 +26841,26 @@
       "id": "yXQdlz0vfo",
       "imgUrl": "img/skills/yXQdlz0vfo.png",
       "condition": "running_style==4&blocked_front_continuetime>=1&accumulatetime>=10",
-      "rarity": "1",
-      "db_id": "201492",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201492,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "差しコーナー◯",
+      "name": "差しコーナー○",
       "rare": "ノーマル",
       "id": "6IIADrYBkD3",
       "imgUrl": "img/skills/6IIADrYBkD3.png",
       "describe": "コーナーで速度がわずかに上がる",
       "condition": "running_style==3&corner_random==1@running_style==3&corner_random==2@running_style==3&corner_random==3@running_style==3&corner_random==4",
-      "rarity": "1",
-      "db_id": "201392",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201392,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "乗り換え上手",
@@ -24882,20 +26869,26 @@
       "imgUrl": "img/skills/KghBRzfD2Mn.png",
       "describe": "レース終盤で加速力が上がる＜作戦・差し＞",
       "condition": "running_style==3&phase_random==2&order_rate>50",
-      "rarity": "2",
-      "db_id": "200601",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200601,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
-      "name": "曇りの日◯",
+      "name": "曇りの日○",
       "rare": "ノーマル",
       "id": "Pog9-5rAwcp",
       "imgUrl": "img/skills/Pog9-5rAwcp.png",
       "describe": "曇りの日のレースが少し得意になる",
       "condition": "weather==2",
-      "rarity": "1",
-      "db_id": "200222",
-      "icon_id": "10041"
+      "rarity": 1,
+      "db_id": 200222,
+      "icon_id": 10041,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "スプリントターボ",
@@ -24904,9 +26897,12 @@
       "imgUrl": "img/skills/-nAInyDnl.png",
       "describe": "直線で加速力が上がる＜短距離＞",
       "condition": "distance_type==1&straight_random==1",
-      "rarity": "2",
-      "db_id": "200651",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200651,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "逃げ駆け引き",
@@ -24915,31 +26911,40 @@
       "id": "SaHLQ505_i",
       "imgUrl": "img/skills/SaHLQ505_i.png",
       "condition": "running_style_temptation_count_nige>=1&is_temptation==0",
-      "rarity": "1",
-      "db_id": "200791",
-      "icon_id": "30041"
+      "rarity": 1,
+      "db_id": 200791,
+      "icon_id": 30041,
+      "ability_value": 50000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "短距離直線◯",
+      "name": "短距離直線○",
       "rare": "ノーマル",
       "describe": "直線で速度がわずかに上がる＜短距離＞",
       "id": "hhMyzgZYBB",
       "imgUrl": "img/skills/hhMyzgZYBB.png",
       "condition": "distance_type==1&straight_random==1",
-      "rarity": "1",
-      "db_id": "200962",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200962,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "短距離コーナー◯",
+      "name": "短距離コーナー○",
       "rare": "ノーマル",
       "describe": "コーナーで速度がわずかに上がる",
       "id": "mkWKmQpx34",
       "imgUrl": "img/skills/mkWKmQpx34.png",
       "condition": "distance_type==1&corner_random==1@distance_type==1&corner_random==2@distance_type==1&corner_random==3@distance_type==1&corner_random==4",
-      "rarity": "1",
-      "db_id": "200972",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200972,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "大きなリード",
@@ -24948,9 +26953,12 @@
       "imgUrl": "img/skills/-z8y7Nbp14.png",
       "describe": "レース中盤に大きく差をつけ先頭だとリードをわずかに保ちやすい＜短距離＞",
       "condition": "distance_type==1&distance_rate<=50&bashin_diff_behind>=5&order==1",
-      "rarity": "1",
-      "db_id": "200982",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200982,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "善後策",
@@ -24959,9 +26967,12 @@
       "imgUrl": "img/skills/HFa5ebwAvh.png",
       "describe": "レース中盤に前の方にいるとわずかに抜かしやすくなる＜短距離＞",
       "condition": "distance_type==1&phase_random==1&order>=2&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200992",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 200992,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "後方釘付",
@@ -24970,9 +26981,12 @@
       "id": "p5b0VM9RQN",
       "imgUrl": "img/skills/p5b0VM9RQN.png",
       "condition": "distance_type==1&phase_random==0&order<=3&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201012",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 201012,
+      "icon_id": 30011,
+      "ability_value": -2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "慧眼",
@@ -24981,20 +26995,26 @@
       "id": "TAWzpjS-KL",
       "imgUrl": "img/skills/TAWzpjS-KL.png",
       "condition": "distance_type==2&phase_random==0&accumulatetime>=5&order_rate>50",
-      "rarity": "2",
-      "db_id": "200691",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200691,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "札幌レース場◯",
+      "name": "札幌レース場○",
       "rare": "ノーマル",
       "describe": "札幌レース場が少し得意になる",
       "id": "Q3PG9Vh_kG",
       "imgUrl": "img/skills/Q3PG9Vh_kG.png",
       "condition": "track_id==10001",
-      "rarity": "1",
-      "db_id": "200082",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200082,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "展開窺い",
@@ -25003,9 +27023,12 @@
       "id": "YPlwrOopwv",
       "imgUrl": "img/skills/YPlwrOopwv.png",
       "condition": "distance_type==2&phase_random==0&accumulatetime>=5&order_rate>50",
-      "rarity": "1",
-      "db_id": "200692",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200692,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "注目の踊り子",
@@ -25014,20 +27037,26 @@
       "id": "htEWvBPOJ42",
       "imgUrl": "img/skills/htEWvBPOJ42.png",
       "condition": "phase_random==0",
-      "rarity": "2",
-      "db_id": "200451",
-      "icon_id": "20052"
+      "rarity": 2,
+      "db_id": 200451,
+      "icon_id": 20052,
+      "ability_value": 350,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "大井レース場◯",
+      "name": "大井レース場○",
       "rare": "ノーマル",
       "describe": "大井レース場が少し得意になる",
       "id": "Hj6vvpKfYI6",
       "imgUrl": "img/skills/Hj6vvpKfYI6.png",
       "condition": "track_id==10101",
-      "rarity": "1",
-      "db_id": "200952",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200952,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "リスタート",
@@ -25036,9 +27065,12 @@
       "id": "SS1D9xDGOc-",
       "imgUrl": "img/skills/SS1D9xDGOc-.png",
       "condition": "running_style==1&phase_random==0&order_rate>50&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201302",
-      "icon_id": "30021"
+      "rarity": 1,
+      "db_id": 201302,
+      "icon_id": 30021,
+      "ability_value": -1000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "円弧のマエストロ",
@@ -25047,9 +27079,12 @@
       "imgUrl": "img/skills/6EmNJO1pu5B.png",
       "describe": "無駄のないコーナリングで持久力が回復する",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "2",
-      "db_id": "200351",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200351,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "ペースアップ",
@@ -25058,9 +27093,12 @@
       "imgUrl": "img/skills/F0uv7PX7rF0.png",
       "describe": "レース中盤に追い抜くと速度がわずかに上がる",
       "condition": "phase==1&change_order_onetime<0",
-      "rarity": "1",
-      "db_id": "200462",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200462,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "ハヤテ一文字",
@@ -25069,20 +27107,26 @@
       "id": "OxpmVCloF",
       "imgUrl": "img/skills/OxpmVCloF.png",
       "condition": "straight_random==1",
-      "rarity": "2",
-      "db_id": "200361",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200361,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 9000,
+      "cooldown": 300000
     },
     {
-      "name": "先行コーナー◯",
+      "name": "先行コーナー○",
       "rare": "ノーマル",
       "id": "84p-yg3Ueb",
       "imgUrl": "img/skills/84p-yg3Ueb.png",
       "describe": "コーナーで速度がわずかに上がる＜作戦・先行＞",
       "condition": "running_style==2&corner_random==1@running_style==2&corner_random==2@running_style==2&corner_random==3@running_style==2&corner_random==4",
-      "rarity": "1",
-      "db_id": "201322",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201322,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "プランX",
@@ -25091,9 +27135,12 @@
       "id": "HPbtjxZGK_",
       "imgUrl": "img/skills/HPbtjxZGK_.png",
       "condition": "distance_type==1&phase_random==1&order>=2&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200991",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200991,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "様子見",
@@ -25102,9 +27149,12 @@
       "id": "oaAhd5EJA-",
       "imgUrl": "img/skills/oaAhd5EJA-.png",
       "condition": "distance_type==1&phase_random==1&order_rate>50",
-      "rarity": "1",
-      "db_id": "200662",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200662,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "積極策",
@@ -25113,9 +27163,12 @@
       "imgUrl": "img/skills/4UzBy2XIey.png",
       "describe": "レース序盤に先頭だとわずかに差を広げやすくなる＜マイル＞",
       "condition": "distance_type==2&phase_random==0&accumulatetime>=5&order==1",
-      "rarity": "1",
-      "db_id": "200682",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200682,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "仕掛け準備",
@@ -25124,9 +27177,12 @@
       "id": "mSO3j9vhSj",
       "imgUrl": "img/skills/mSO3j9vhSj.png",
       "condition": "distance_type==1&phase_random==1",
-      "rarity": "1",
-      "db_id": "201002",
-      "icon_id": "20051"
+      "rarity": 1,
+      "db_id": 201002,
+      "icon_id": 20051,
+      "ability_value": 250,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "抜け駆け禁止",
@@ -25135,9 +27191,12 @@
       "id": "FlCRR8dj0w",
       "imgUrl": "img/skills/FlCRR8dj0w.png",
       "condition": "distance_type==1&phase_random==0&order_rate>50&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201022",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 201022,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "コンセントレーション",
@@ -25146,9 +27205,12 @@
       "imgUrl": "img/skills/aPzi71LUG.png",
       "describe": "スタートが得意になり出遅れる時間がわずかに少なくなる",
       "condition": "always==1",
-      "rarity": "2",
-      "db_id": "200431",
-      "icon_id": "20062"
+      "rarity": 2,
+      "db_id": 200431,
+      "icon_id": 20062,
+      "ability_value": 4000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "追込焦り",
@@ -25157,31 +27219,40 @@
       "imgUrl": "img/skills/BYfvUdzD_1.png",
       "describe": "レース中盤に作戦・追込のウマ娘を焦らせてわずかに疲れやすくする",
       "condition": "running_style_count_oikomi_otherself>=1&phase_random==1",
-      "rarity": "1",
-      "db_id": "200931",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200931,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "夏ウマ娘◯",
+      "name": "夏ウマ娘○",
       "rare": "ノーマル",
       "describe": "夏のレースが少し得意になる",
       "id": "-jp8NdG7Fj",
       "imgUrl": "img/skills/-jp8NdG7Fj.png",
       "condition": "season==2",
-      "rarity": "1",
-      "db_id": "200182",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200182,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "マイルコーナー◯",
+      "name": "マイルコーナー○",
       "rare": "ノーマル",
       "describe": "コーナーで速度がわずかに上がる＜マイル＞",
       "id": "MvkUZQL8La",
       "imgUrl": "img/skills/MvkUZQL8La.png",
       "condition": "distance_type==2&corner_random==1@distance_type==2&corner_random==2@distance_type==2&corner_random==3@distance_type==2&corner_random==4",
-      "rarity": "1",
-      "db_id": "201042",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201042,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "負けん気",
@@ -25190,9 +27261,12 @@
       "imgUrl": "img/skills/JfZuGZHSjLl.png",
       "describe": "追い抜きがわずかに成功しやすくなる＜マイル＞",
       "condition": "distance_type==2&is_overtake==1&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201072",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201072,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "まき直し",
@@ -25201,9 +27275,12 @@
       "id": "opt2JDLR2Qn",
       "imgUrl": "img/skills/opt2JDLR2Qn.png",
       "condition": "running_style==2&phase_random==1&order_rate>50",
-      "rarity": "1",
-      "db_id": "201362",
-      "icon_id": "20041"
+      "rarity": 1,
+      "db_id": 201362,
+      "icon_id": 20041,
+      "ability_value": 2000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "追込ためらい",
@@ -25212,9 +27289,12 @@
       "imgUrl": "img/skills/UCeak6nB8Il.png",
       "describe": "レース終盤に作戦・追込のウマ娘をためらわせて速度をわずかに下げる",
       "condition": "running_style_count_oikomi_otherself>=1&phase_random==2",
-      "rarity": "1",
-      "db_id": "200941",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 200941,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "仕掛け抜群",
@@ -25223,20 +27303,26 @@
       "id": "gNXLQ6JGMHl",
       "imgUrl": "img/skills/gNXLQ6JGMHl.png",
       "condition": "running_style==4&phase_random==2&distance_diff_rate>=75",
-      "rarity": "1",
-      "db_id": "200632",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 200632,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "追込直線◯",
+      "name": "追込直線○",
       "rare": "ノーマル",
       "describe": "直線で速度がわずかに上がる＜作戦・追込＞",
       "id": "yrq4A49ikg1",
       "imgUrl": "img/skills/yrq4A49ikg1.png",
       "condition": "running_style==4&straight_random==1",
-      "rarity": "1",
-      "db_id": "201452",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201452,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "布石",
@@ -25245,20 +27331,26 @@
       "id": "IEk0vPRrL",
       "imgUrl": "img/skills/IEk0vPRrL.png",
       "condition": "distance_type==2&phase_random==0&order_rate>50&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201092",
-      "icon_id": "30021"
+      "rarity": 1,
+      "db_id": 201092,
+      "icon_id": 30021,
+      "ability_value": -1000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "差し直線◯",
+      "name": "差し直線○",
       "rare": "ノーマル",
       "describe": "直線で速度がわずかに上がる＜作戦・差し＞",
       "id": "eqLjmnsF9A",
       "imgUrl": "img/skills/eqLjmnsF9A.png",
       "condition": "running_style==3&straight_random==1",
-      "rarity": "1",
-      "db_id": "201382",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201382,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "追込駆け引き",
@@ -25267,20 +27359,26 @@
       "id": "wSG89AzUCb",
       "imgUrl": "img/skills/wSG89AzUCb.png",
       "condition": "running_style_temptation_count_oikomi>=1&is_temptation==0",
-      "rarity": "1",
-      "db_id": "200821",
-      "icon_id": "30041"
+      "rarity": 1,
+      "db_id": 200821,
+      "icon_id": 30041,
+      "ability_value": 50000,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "長距離直線◯",
+      "name": "長距離直線○",
       "rare": "ノーマル",
       "describe": "直線で速度がわずかに上がる＜長距離＞",
       "id": "HeU_5aMTZ",
       "imgUrl": "img/skills/HeU_5aMTZ.png",
       "condition": "distance_type==4&straight_random==1",
-      "rarity": "1",
-      "db_id": "201172",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201172,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "パス上手",
@@ -25289,31 +27387,40 @@
       "id": "47kEAZPiqw",
       "imgUrl": "img/skills/47kEAZPiqw.png",
       "condition": "distance_type==4&is_overtake==1&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "201202",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201202,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "雪の日◯",
+      "name": "雪の日○",
       "rare": "ノーマル",
       "describe": "雪の日のレースが少し得意になる",
       "id": "mBguZT4euk",
       "imgUrl": "img/skills/mBguZT4euk.png",
       "condition": "weather==4",
-      "rarity": "1",
-      "db_id": "200242",
-      "icon_id": "10041"
+      "rarity": 1,
+      "db_id": 200242,
+      "icon_id": 10041,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "冬ウマ娘◯",
+      "name": "冬ウマ娘○",
       "rare": "ノーマル",
       "describe": "冬のレースが少し得意になる",
       "id": "Zv48j8Nvoj",
       "imgUrl": "img/skills/Zv48j8Nvoj.png",
       "condition": "season==4",
-      "rarity": "1",
-      "db_id": "200202",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200202,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "逃げけん制",
@@ -25322,20 +27429,26 @@
       "id": "OgWF-kQ5K",
       "imgUrl": "img/skills/OgWF-kQ5K.png",
       "condition": "running_style_count_nige_otherself>=1&phase_random==0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "200831",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200831,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "追込コーナー◯",
+      "name": "追込コーナー○",
       "rare": "ノーマル",
       "describe": "コーナーで速度がわずかに上がる＜作戦・追込＞",
       "id": "8on9aldN12",
       "imgUrl": "img/skills/8on9aldN12.png",
       "condition": "running_style==4&corner_random==1@running_style==4&corner_random==2@running_style==4&corner_random==3@running_style==4&corner_random==4",
-      "rarity": "1",
-      "db_id": "201462",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201462,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "一匹狼",
@@ -25344,9 +27457,12 @@
       "id": "nG8aNw6Udb",
       "imgUrl": "img/skills/nG8aNw6Udb.png",
       "condition": "same_skill_horse_count==1",
-      "rarity": "1",
-      "db_id": "201641",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 201641,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "逃げためらい",
@@ -25355,20 +27471,26 @@
       "id": "FxF2hL65X7A",
       "imgUrl": "img/skills/FxF2hL65X7A.png",
       "condition": "running_style_count_nige_otherself>=1&phase_random==2",
-      "rarity": "1",
-      "db_id": "200851",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 200851,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "函館レース場◯",
+      "name": "函館レース場○",
       "rare": "ノーマル",
       "describe": "函館レース場が少し得意になる",
       "id": "P7IoiVX-r",
       "imgUrl": "img/skills/P7IoiVX-r.png",
       "condition": "track_id==10002",
-      "rarity": "1",
-      "db_id": "200092",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200092,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "トリック（後）",
@@ -25377,9 +27499,12 @@
       "id": "LJhtg10qUP",
       "imgUrl": "img/skills/LJhtg10qUP.png",
       "condition": "phase==1&order_rate>50&temptation_count_infront>=1",
-      "rarity": "1",
-      "db_id": "200781",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200781,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "スリーセブン",
@@ -25388,9 +27513,12 @@
       "imgUrl": "img/skills/OftmxU3NST.png",
       "describe": "残り距離が777mの時にわずかに元気が出る",
       "condition": "remain_distance<=778&remain_distance>=776",
-      "rarity": "1",
-      "db_id": "201571",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201571,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "ふり絞り",
@@ -25399,20 +27527,26 @@
       "id": "5PPzFiHFNv",
       "imgUrl": "img/skills/5PPzFiHFNv.png",
       "condition": "activate_count_end_after>=3",
-      "rarity": "1",
-      "db_id": "201621",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 201621,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "京都レース場◯",
+      "name": "京都レース場○",
       "rare": "ノーマル",
       "describe": "京都レース場が少し得意になる",
       "id": "Qd7mNuxlUv",
       "imgUrl": "img/skills/Qd7mNuxlUv.png",
       "condition": "track_id==10008",
-      "rarity": "1",
-      "db_id": "200062",
-      "icon_id": "10021"
+      "rarity": 1,
+      "db_id": 200062,
+      "icon_id": 10021,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "差しためらい",
@@ -25421,31 +27555,40 @@
       "imgUrl": "img/skills/km-O9_GIc_X.png",
       "describe": "レース終盤に作戦・差しのウマ娘をためらわせて速度をわずかに下げる",
       "condition": "running_style_count_sashi_otherself>=1&phase_random==2",
-      "rarity": "1",
-      "db_id": "200911",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 200911,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "おひとり様◯",
+      "name": "おひとり様○",
       "rare": "ノーマル",
       "describe": "自分と同じ作戦のウマ娘がいないと能力を少し発揮しやすい",
       "id": "jl20E8T4D",
       "imgUrl": "img/skills/jl20E8T4D.png",
       "condition": "running_style_count_same<=1",
-      "rarity": "1",
-      "db_id": "200272",
-      "icon_id": "10011"
+      "rarity": 1,
+      "db_id": 200272,
+      "icon_id": 10011,
+      "ability_value": 400000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
-      "name": "長距離コーナー◯",
+      "name": "長距離コーナー○",
       "rare": "ノーマル",
       "id": "DPWZ3NqLr",
       "imgUrl": "img/skills/DPWZ3NqLr.png",
       "describe": "コーナーで速度がわずかに上がる＜長距離＞",
       "condition": "distance_type==4&corner_random==1@distance_type==4&corner_random==2@distance_type==4&corner_random==3@distance_type==4&corner_random==4",
-      "rarity": "1",
-      "db_id": "201182",
-      "icon_id": "20011"
+      "rarity": 1,
+      "db_id": 201182,
+      "icon_id": 20011,
+      "ability_value": 1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "差しけん制",
@@ -25454,9 +27597,12 @@
       "imgUrl": "img/skills/c-r9-RqUfD.png",
       "describe": "レース序盤に作戦・差しのウマ娘をけん制してわずかに疲れやすくする",
       "condition": "running_style_count_sashi_otherself>=1&phase_random==0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "200891",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200891,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "追込けん制",
@@ -25465,9 +27611,12 @@
       "id": "7BrUKNhCVI",
       "imgUrl": "img/skills/7BrUKNhCVI.png",
       "condition": "running_style_count_oikomi_otherself>=1&phase_random==0&accumulatetime>=5",
-      "rarity": "1",
-      "db_id": "200921",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200921,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "クールダウン",
@@ -25476,9 +27625,12 @@
       "imgUrl": "img/skills/0hNrL5bQB.png",
       "describe": "直線に入ると息を入れて疲れにくくなる＜長距離＞",
       "condition": "distance_type==4&straight_random==1",
-      "rarity": "2",
-      "db_id": "200741",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200741,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "どこ吹く風",
@@ -25487,9 +27639,12 @@
       "id": "eFBBCUmUjK",
       "imgUrl": "img/skills/eFBBCUmUjK.png",
       "condition": "phase==1&blocked_all_continuetime>=1",
-      "rarity": "2",
-      "db_id": "200481",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200481,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "火事場のバ鹿力",
@@ -25498,9 +27653,12 @@
       "id": "XQhxFy-iv",
       "imgUrl": "img/skills/XQhxFy-iv.png",
       "condition": "distance_type==4&is_hp_empty_onetime==1",
-      "rarity": "2",
-      "db_id": "200761",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200761,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "食いしん坊",
@@ -25509,9 +27667,12 @@
       "imgUrl": "img/skills/KdtxzRWEj.png",
       "describe": "レース中盤に持久力が回復する＜作戦・先行＞",
       "condition": "running_style==2&phase_random==1",
-      "rarity": "2",
-      "db_id": "201351",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 201351,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "スタミナキープ",
@@ -25520,9 +27681,12 @@
       "imgUrl": "img/skills/svT-34r60.png",
       "describe": "レース序盤でわずかに疲れにくくなる＜作戦・先行＞",
       "condition": "running_style==2&phase_random==0&accumulatetime>=5&order_rate<=50",
-      "rarity": "1",
-      "db_id": "200562",
-      "icon_id": "20021"
+      "rarity": 1,
+      "db_id": 200562,
+      "icon_id": 20021,
+      "ability_value": 150,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "スピードスター",
@@ -25531,9 +27695,12 @@
       "imgUrl": "img/skills/XsEAXKi5f.png",
       "describe": "最終コーナーで抜け出しやすくなる＜作戦・先行＞",
       "condition": "running_style==2&is_finalcorner_random==1&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200581",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200581,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "スピードイーター",
@@ -25542,9 +27709,12 @@
       "id": "3Z3l4acJm",
       "imgUrl": "img/skills/3Z3l4acJm.png",
       "condition": "distance_type==2&phase_random==1&order==1",
-      "rarity": "1",
-      "db_id": "201082",
-      "icon_id": "30011"
+      "rarity": 1,
+      "db_id": 201082,
+      "icon_id": 30011,
+      "ability_value": -1500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "スタミナイーター",
@@ -25553,9 +27723,12 @@
       "id": "lMGZIre6t",
       "imgUrl": "img/skills/lMGZIre6t.png",
       "condition": "distance_type==4&phase_random==1&order>=5",
-      "rarity": "1",
-      "db_id": "201222",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 201222,
+      "icon_id": 30051,
+      "ability_value": -50,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "技巧派",
@@ -25564,9 +27737,12 @@
       "id": "jc0BPGDlN",
       "describe": "コース取りが少しスムーズになる＜作戦・先行＞",
       "condition": "running_style==2&is_move_lane==1@running_style==2&is_move_lane==2",
-      "rarity": "2",
-      "db_id": "201331",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 201331,
+      "icon_id": 20042,
+      "ability_value": 3000,
+      "ability_time": 18000,
+      "cooldown": 5000000
     },
     {
       "name": "ライトニングステップ",
@@ -25575,9 +27751,12 @@
       "id": "6VaiCBLg6d",
       "describe": "レース中盤に後ろの方にいると囲まれにくくなる＜中距離＞",
       "condition": "distance_type==3&phase_random==1&order_rate>50",
-      "rarity": "2",
-      "db_id": "201131",
-      "icon_id": "20052"
+      "rarity": 2,
+      "db_id": 201131,
+      "icon_id": 20052,
+      "ability_value": 350,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ギアチェンジ",
@@ -25586,9 +27765,12 @@
       "id": "bgrvkn7y8",
       "describe": "レース中盤に前の方にいると抜かしやすくなる＜マイル＞",
       "condition": "distance_type==2&phase_random==1&order_rate<=50",
-      "rarity": "2",
-      "db_id": "201051",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 201051,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "アクセル全開！",
@@ -25597,9 +27779,12 @@
       "id": "TQAn5U05MN",
       "describe": "レース中盤に追い抜くと加速力が上がる＜マイル＞",
       "condition": "distance_type==2&phase==1&change_order_onetime<0",
-      "rarity": "2",
-      "db_id": "201061",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 201061,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "マイルの支配者",
@@ -25608,9 +27793,12 @@
       "id": "w5fVCG04h",
       "describe": "レース序盤に先頭だと差を広げやすくなる＜マイル＞",
       "condition": "distance_type==2&phase_random==0&accumulatetime>=5&order==1",
-      "rarity": "2",
-      "db_id": "200681",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200681,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "先陣の心得",
@@ -25619,9 +27807,12 @@
       "id": "KICQ9Wi5Oj",
       "describe": "レース中盤に大きく差をつけ先頭だとリードを保ちやすい＜長距離＞",
       "condition": "distance_type==4&phase_random==1&bashin_diff_behind>=3&order==1",
-      "rarity": "2",
-      "db_id": "201191",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 201191,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "余裕綽々",
@@ -25630,9 +27821,12 @@
       "id": "esqCDJMpyY",
       "describe": "レース序盤で疲れにくくなる＜作戦・先行＞",
       "condition": "running_style==2&phase_random==0&accumulatetime>=5&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200561",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200561,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "独占力",
@@ -25641,9 +27835,12 @@
       "id": "auwbUbKcy",
       "describe": "レース終盤に後ろの方にいると前の速度を下げる＜中距離＞",
       "condition": "distance_type==3&phase_random==2&order_rate>50",
-      "rarity": "2",
-      "db_id": "201151",
-      "icon_id": "30012"
+      "rarity": 2,
+      "db_id": 201151,
+      "icon_id": 30012,
+      "ability_value": -2500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "弧線のプロフェッサー",
@@ -25652,9 +27849,12 @@
       "id": "1Fbl_klNqq",
       "describe": "コーナーが得意になり速度が上がる",
       "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
-      "rarity": "2",
-      "db_id": "200331",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200331,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 18000,
+      "cooldown": 300000
     },
     {
       "name": "決意の直滑降",
@@ -25663,9 +27863,12 @@
       "id": "SYuVON6-y",
       "describe": "下り坂が少し得意になる＜作戦・先行＞",
       "condition": "running_style==2&slope==2",
-      "rarity": "2",
-      "db_id": "201341",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 201341,
+      "icon_id": 20042,
+      "ability_value": 3000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "視界良好！異常なし！",
@@ -25674,9 +27877,12 @@
       "id": "u5nBUgDaZ",
       "describe": "左右に移動すると状況を把握して視野が少し広くなる＜作戦・追込＞",
       "condition": "running_style==4&is_move_lane==1@running_style==4&is_move_lane==2",
-      "rarity": "2",
-      "db_id": "201471",
-      "icon_id": "20092"
+      "rarity": 2,
+      "db_id": 201471,
+      "icon_id": 20092,
+      "ability_value": 100000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "下校後のスペシャリスト",
@@ -25685,9 +27891,12 @@
       "id": "jbvFhWVL5A",
       "describe": "下り坂で疲れにくくなる＜作戦・追込＞",
       "condition": "running_style==4&slope==2&accumulatetime>=10",
-      "rarity": "2",
-      "db_id": "201481",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 201481,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "レースプランナー",
@@ -25696,9 +27905,12 @@
       "id": "ec5gPDKBP",
       "describe": "レース中盤で疲れにくくなる＜作戦・先行＞",
       "condition": "running_style==2&phase_random==1&order_rate<=50",
-      "rarity": "2",
-      "db_id": "200571",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200571,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "千里眼",
@@ -25707,9 +27919,12 @@
       "id": "1L6wASW9P",
       "describe": "レース序盤に観察力が高まり視野を広く持てる＜中距離＞",
       "condition": "distance_type==3&phase_random==0",
-      "rarity": "2",
-      "db_id": "201121",
-      "icon_id": "20092"
+      "rarity": 2,
+      "db_id": 201121,
+      "icon_id": 20092,
+      "ability_value": 150000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "幻惑のかく乱",
@@ -25718,9 +27933,12 @@
       "id": "caw6Iqy4c",
       "describe": "レース終盤に前の方にいると後方の視野が少し狭くなる＜作戦・先行＞",
       "condition": "running_style==2&phase_random==2&order_rate<=50",
-      "rarity": "2",
-      "db_id": "201371",
-      "icon_id": "30072"
+      "rarity": 2,
+      "db_id": 201371,
+      "icon_id": 30072,
+      "ability_value": -50000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "レーンの魔術師",
@@ -25729,9 +27947,12 @@
       "id": "_CVo7uOMlW",
       "describe": "レース終盤にコース取りがうまくなる",
       "condition": "phase_random==2",
-      "rarity": "2",
-      "db_id": "200501",
-      "icon_id": "20052"
+      "rarity": 2,
+      "db_id": 200501,
+      "icon_id": 20052,
+      "ability_value": 350,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "ノンストップガール",
@@ -25740,9 +27961,12 @@
       "id": "LlNleFbUc",
       "describe": "ラストスパートで前が塞がれた時の立ち回りがうまくなる",
       "condition": "blocked_front_continuetime>=1&is_lastspurt==1&hp_per>=1",
-      "rarity": "2",
-      "db_id": "200491",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200491,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 30000,
+      "cooldown": 300000
     },
     {
       "name": "昇り龍",
@@ -25751,9 +27975,12 @@
       "id": "js7Tquw5-",
       "describe": "最終コーナーで外から追い抜くと速度が上がる＜作戦・差し＞",
       "condition": "running_style==3&is_finalcorner==1&corner!=0&is_behind_in==1&change_order_onetime<0",
-      "rarity": "2",
-      "db_id": "200611",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200611,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "努力家",
@@ -25762,9 +27989,12 @@
       "id": "Q4DPtdTC7",
       "describe": "追い抜きが少し成功しやすくなる＜作戦・差し＞",
       "condition": "running_style==3&is_overtake==1&accumulatetime>=5",
-      "rarity": "2",
-      "db_id": "201401",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 201401,
+      "icon_id": 20042,
+      "ability_value": 3000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "圧倒的リード",
@@ -25773,9 +28003,12 @@
       "id": "iCXuxTHYl2",
       "describe": "レース中盤に大きく差をつけ先頭だとリードを保ちやすい＜短距離＞",
       "condition": "distance_type==1&distance_rate<=50&bashin_diff_behind>=5&order==1",
-      "rarity": "2",
-      "db_id": "200981",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200981,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "鋼の意志",
@@ -25784,9 +28017,12 @@
       "id": "dxo1m2BKz",
       "describe": "レース序盤に前が詰まった時に隠れて持久力がわずかに回復する",
       "condition": "phase==0&accumulatetime>=5&blocked_front_continuetime>=1",
-      "rarity": "2",
-      "db_id": "200441",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200441,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "不屈の心",
@@ -25795,9 +28031,12 @@
       "id": "gRnzIz9Bmq",
       "describe": "レース中盤に追い抜かれると持久力が回復する",
       "condition": "phase==1&change_order_onetime>0",
-      "rarity": "2",
-      "db_id": "200471",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200471,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 300000
     },
     {
       "name": "奇術師",
@@ -25806,19 +28045,25 @@
       "id": "nrxPn-cyq",
       "describe": "レース終盤で前方のウマ娘の視野が狭くなる＜長距離＞",
       "condition": "distance_type==4&phase_random==2",
-      "rarity": "2",
-      "db_id": "201231",
-      "icon_id": "30072"
+      "rarity": 2,
+      "db_id": 201231,
+      "icon_id": 30072,
+      "ability_value": -100000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "トリック(後)",
+      "name": "トリック（後）",
       "imgUrl": "img/skills/D9s0HhBzm-.png",
       "rare": "ノーマル",
       "id": "D9s0HhBzm-",
       "condition": "phase==1&order_rate>50&temptation_count_infront>=1",
-      "rarity": "1",
-      "db_id": "200781",
-      "icon_id": "30051"
+      "rarity": 1,
+      "db_id": 200781,
+      "icon_id": 30051,
+      "ability_value": -100,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "スーパーラッキーセブン",
@@ -25827,9 +28072,12 @@
       "id": "WmP7ZJPgZd",
       "describe": "枠番が7の時に良いことが起きる場合がある",
       "condition": "random_lot==50&post_number==7",
-      "rarity": "2",
-      "db_id": "201561",
-      "icon_id": "10062"
+      "rarity": 2,
+      "db_id": 201561,
+      "icon_id": 10062,
+      "ability_value": 600000,
+      "ability_time": -1,
+      "cooldown": 0
     },
     {
       "name": "魅惑のささやき",
@@ -25838,9 +28086,12 @@
       "id": "Lj1rYv-zWc",
       "describe": "レース中盤にすぐ前のウマ娘を戸惑わせる＜中距離＞",
       "condition": "distance_type==3&phase==1&blocked_front_continuetime>=1",
-      "rarity": "2",
-      "db_id": "201161",
-      "icon_id": "30052"
+      "rarity": 2,
+      "db_id": 201161,
+      "icon_id": 30052,
+      "ability_value": -300,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "八方にらみ",
@@ -25849,9 +28100,12 @@
       "id": "r5zwRcqgP2",
       "describe": "レース終盤に他のウマ娘が動揺する＜作戦・差し＞",
       "condition": "running_style==3&phase_random==2&order_rate>50",
-      "rarity": "2",
-      "db_id": "201441",
-      "icon_id": "30052"
+      "rarity": 2,
+      "db_id": 201441,
+      "icon_id": 30052,
+      "ability_value": -300,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
       "name": "電撃の煌めき",
@@ -25860,9 +28114,12 @@
       "id": "N-jsbECj9",
       "describe": "レース終盤に後ろの方だとスパートしやすくなる＜短距離＞",
       "condition": "distance_type==1&phase_random==2&order_rate>50",
-      "rarity": "2",
-      "db_id": "200671",
-      "icon_id": "20012"
+      "rarity": 2,
+      "db_id": 200671,
+      "icon_id": 20012,
+      "ability_value": 3500,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
       "name": "大局観",
@@ -25871,20 +28128,26 @@
       "id": "__TnxX7YCe",
       "describe": "レース中盤に観察力が高まり視野を広く持てる＜作戦・差し＞",
       "condition": "running_style==3&phase_random==1",
-      "rarity": "2",
-      "db_id": "201431",
-      "icon_id": "20092"
+      "rarity": 2,
+      "db_id": 201431,
+      "icon_id": 20092,
+      "ability_value": 150000,
+      "ability_time": 30000,
+      "cooldown": 5000000
     },
     {
-      "name": "G00 1stF∞",
+      "name": "G00 1st.F∞;",
       "imgUrl": "img/skills/23pWh27nT.png",
       "rare": "固有",
       "describe": "最終直線までみずから崩れることなく前の方にいると速度が上がる",
       "id": "23pWh27nT",
       "condition": "is_badstart==0&temptation_count==0&order<=3&is_finalcorner==1&corner==0",
-      "rarity": "1",
-      "db_id": "900261",
-      "icon_id": "20011"
+      "rarity": 5,
+      "db_id": 100261,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
     },
     {
       "name": "先手必勝",
@@ -25893,9 +28156,12 @@
       "id": "Ka6n_UhCMK",
       "describe": "レース序盤で前に行きやすくなる＜作戦・逃げ＞",
       "condition": "running_style==1&phase==0&accumulatetime>=5",
-      "rarity": "2",
-      "db_id": "200531",
-      "icon_id": "20042"
+      "rarity": 2,
+      "db_id": 200531,
+      "icon_id": 20042,
+      "ability_value": 4000,
+      "ability_time": 12000,
+      "cooldown": 5000000
     },
     {
       "name": "切り開く者",
@@ -25904,16 +28170,81 @@
       "id": "dLvlJ2JpRY",
       "describe": "レース中盤に先頭だと疲れにくくなる＜中距離＞",
       "condition": "distance_type==3&phase_random==1&order==1",
-      "rarity": "2",
-      "db_id": "200711",
-      "icon_id": "20022"
+      "rarity": 2,
+      "db_id": 200711,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
     },
     {
-      "name": "win Q.E.D",
+      "name": "∴win Q.E.D.",
       "imgUrl": "img/skills/s5lH9NTrBI.png",
       "rare": "固有",
       "describe": "最終コーナーで前の方で追い抜くと勝利の方程式を導き、速度を上げる",
-      "id": "s5lH9NTrBI"
+      "id": "s5lH9NTrBI",
+      "condition": "is_finalcorner==1&corner!=0&change_order_onetime<0&order<=4",
+      "rarity": 5,
+      "db_id": 100231,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
+    },
+    {
+      "name": "最強の名を懸けて",
+      "imgUrl": "img/skills/PpXL26h_Jq.png",
+      "rare": "固有",
+      "describe": "最終コーナー以降に前めで力が尽きかけ詰められると速度が上がる",
+      "id": "PpXL26h_Jq",
+      "condition": "is_finalcorner==1&hp_per<=35&order<=3&order_rate<=50&bashin_diff_behind<=1&overtake_target_time>=1",
+      "rarity": 5,
+      "db_id": 110131,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
+    },
+    {
+      "name": "絶対は、ボクだ",
+      "imgUrl": "img/skills/2N6jhYM5qT.png",
+      "rare": "固有",
+      "describe": "最終直線で前の方で追いすがっていると不屈の闘志で速度が上がる",
+      "id": "2N6jhYM5qT",
+      "condition": "is_finalcorner==1&corner==0&is_overtake==1&order<=5&order_rate<=50&overtake_target_no_order_up_time>=2",
+      "rarity": 5,
+      "db_id": 110031,
+      "icon_id": 20013,
+      "ability_value": 3500,
+      "ability_time": 50000,
+      "cooldown": 5000000
+    },
+    {
+      "name": "神業ステップ",
+      "imgUrl": "img/skills/S_0SAtXO5M.png",
+      "rare": "レア",
+      "id": "S_0SAtXO5M",
+      "condition": "distance_type==3&is_move_lane==1&accumulatetime>=10@distance_type==3&is_move_lane==2&accumulatetime>=10",
+      "rarity": 2,
+      "db_id": 201141,
+      "icon_id": 20022,
+      "ability_value": 550,
+      "ability_time": -1,
+      "cooldown": 5000000
+    },
+    {
+      "name": "危険回避",
+      "imgUrl": "img/skills/OIb1Ol2eaw.png",
+      "rare": "ノーマル",
+      "describe": "レース序盤に少し囲まれにくくなる",
+      "id": "OIb1Ol2eaw",
+      "condition": "running_style==1&phase==0&blocked_all_continuetime>=1",
+      "rarity": 1,
+      "db_id": 201262,
+      "icon_id": 20051,
+      "ability_value": 250,
+      "ability_time": 30000,
+      "cooldown": 5000000
     }
   ],
   "events": [
@@ -30115,7 +32446,7 @@
         [
           "コラッ！安静に！",
           [
-            "成功時:『練習上手◯』になる",
+            "成功時:『練習上手○』になる",
             "失敗時:干劲下降",
             "選択したトレーニングのステータス-10",
             "『練習ベタ』になる"
@@ -35472,7 +37803,7 @@
           "選択肢なし",
           [
             "スキルPt+10",
-            "『愛嬌◯』になる"
+            "『愛嬌○』になる"
           ]
         ]
       ],
@@ -38034,7 +40365,7 @@
         [
           "手すりショートカットだ！",
           [
-            "『差しコーナー◯』のヒントLv+1",
+            "『差しコーナー○』のヒントLv+1",
             "ウイニングチケットの絆ゲージ+5"
           ]
         ],
@@ -39809,7 +42140,7 @@
           [
             "体力-20",
             "干劲提升",
-            "『右回り◯』のヒントLv+1~3",
+            "『右回り○』のヒントLv+1~3",
             "マチカネフクキタルの絆ゲージ+5"
           ]
         ]
@@ -40722,7 +43053,7 @@
         [
           "手すりショートカットだ！",
           [
-            "『差しコーナー◯』のヒントLv+1",
+            "『差しコーナー○』のヒントLv+1",
             "ウイニングチケットの絆ゲージ+5"
           ]
         ],
@@ -40985,7 +43316,7 @@
           "やりたいようにやればいい",
           [
             "干劲下降",
-            "『おひとり様◯』のヒントLv+5"
+            "『おひとり様○』のヒントLv+5"
           ]
         ]
       ],
@@ -41052,7 +43383,7 @@
         [
           "もう一度スズメを探しに行こう",
           [
-            "『愛嬌◯』になる",
+            "『愛嬌○』になる",
             "スイープトウショウの絆ゲージ+5"
           ]
         ]
@@ -45626,7 +47957,7 @@
           [
             "干劲下降",
             "速度-10",
-            "ランダムで『練習上手◯』になる"
+            "ランダムで『練習上手○』になる"
           ]
         ]
       ],
@@ -56982,7 +59313,7 @@
         [
           "手すりショートカットだ！",
           [
-            "『差しコーナー◯』のヒントLv+1",
+            "『差しコーナー○』のヒントLv+1",
             "ウイニングチケットの絆ゲージ+5"
           ]
         ],
@@ -59222,7 +61553,7 @@
           "選択肢なし",
           [
             "力量+10",
-            "ランダムで『練習上手◯』になる"
+            "ランダムで『練習上手○』になる"
           ]
         ]
       ],
@@ -59501,7 +61832,7 @@
         [
           "レースで勝てる秘孔を狙う",
           [
-            "成功時:『コーナー回復◯』取得",
+            "成功時:『コーナー回復○』取得",
             "『直線回復』取得",
             "失敗時:体力-20",
             "干劲下降"
@@ -59522,7 +61853,7 @@
           [
             "成功時:体力+20",
             "干劲提升",
-            "『愛嬌◯』になる",
+            "『愛嬌○』になる",
             "失敗時:体力-20",
             "干劲下降",
             "『練習ベタ』になる"
@@ -64466,9 +66797,2490 @@
       ],
       "id": "V8BP2QetJI",
       "pid": "4UN9zKF73Ks"
+    },
+    {
+      "name": "孤島の女王",
+      "choiceList": [
+        [
+          "食料",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "体力",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "yrVaGmnjiI",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "覚悟と使命の証",
+      "choiceList": [
+        [
+          "軽く走ろう",
+          [
+            "スピード(速度)+10",
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "お菓子でも食べよう",
+          [
+            "パワー(力量)+20"
+          ]
+        ]
+      ],
+      "id": "GaeTuD_QdL",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース場グルメの誘惑",
+      "choiceList": [
+        [
+          "一緒に食べよう",
+          [
+            "体力+30",
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "パワー(力量)+5",
+            "『太り気味』になる"
+          ]
+        ],
+        [
+          "我慢しよう",
+          [
+            "根性(毅力)+15",
+            "スキルPt(技能点数)+5"
+          ]
+        ]
+      ],
+      "id": "yI7nrDxzGE",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ラーメン3杯分の誘惑",
+      "choiceList": [
+        [
+          "安心しろ、体重管理はバッチリだ！",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "後でラーメン3杯分、走ろう！！",
+          [
+            "スピード(速度)＋5",
+            "スタミナ(耐力)＋5"
+          ]
+        ]
+      ],
+      "id": "tY4-TOFR_1",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "銀幕の2人",
+      "choiceList": [
+        [
+          "『5時間インフェルノ』",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "『大脱獄』",
+          [
+            "賢さ(智力)+5",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "U1ZdhCunke",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "栗祭り襲来！",
+      "choiceList": [
+        [
+          "ちょっと控えよう",
+          [
+            "体力+10",
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "お腹いっぱい食べよう",
+          [
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "パワー(力量)+5",
+            "『太り気味』になる"
+          ]
+        ]
+      ],
+      "id": "dz71K2Dz7y",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夜中のファンサ特訓",
+      "choiceList": [
+        [
+          "い、今きたところ",
+          [
+            "根性(毅力)+20"
+          ]
+        ],
+        [
+          "すごくよかったぞ",
+          [
+            "スピード(速度)+20"
+          ]
+        ]
+      ],
+      "id": "OhFStKLNc1",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "その名はホヤ！",
+      "choiceList": [
+        [
+          "他の物も見てみよう",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "食すべき",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "pPv_bkWmvr",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "思い出クッキング",
+      "choiceList": [
+        [
+          "ゆっくり一緒に食べよう",
+          [
+            "体力+15"
+          ]
+        ],
+        [
+          "一気に飲み干す",
+          [
+            "『先駆け』のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "Q1k0KCfHoP",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ご令嬢の風格",
+      "choiceList": [
+        [
+          "かっこいいな、と思って",
+          [
+            "スタミナ(耐力)+10",
+            "パワー(力量)+10",
+            "ランダムで(有概率)『練習上手○』になる"
+          ]
+        ],
+        [
+          "隣に立つ努力をしないと、と思って",
+          [
+            "賢さ(智力)+20",
+            "ランダムで(有概率)『練習上手○』になる"
+          ]
+        ]
+      ],
+      "id": "ul-gaucQnv",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "掘り出し物",
+      "choiceList": [
+        [
+          "『3星レストランの秘蔵レシピ』かな",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "『ゴールドシップのサイン色紙』かな",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "yF0aXXwKQT",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "追加の自主トレ",
+      "choiceList": [
+        [
+          "なら、徹底的に追い込もう！",
+          [
+            "体力-5",
+            "直前のトレーニングに応じたステータス(能力)+5",
+            "秋川理事長の絆ゲージ+5"
+          ]
+        ],
+        [
+          "効率を考えれば許可できない",
+          [
+            "体力+5"
+          ]
+        ]
+      ],
+      "id": "g3NPm7AnaX",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ダンスレッスン",
+      "choiceList": [
+        [
+          "よかったら特訓付き合うよ",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "まず曲の理解から始めるのはどうだ？",
+          [
+            "賢さ(智力)+10"
+          ]
+        ]
+      ],
+      "id": "3hnRKUut-d",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "正月だしゆっくりしよう",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "いつも通りのトレーニングだ",
+          [
+            "全ステータス(能力)+5"
+          ]
+        ],
+        [
+          "福袋を買いに行こう！",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "RdSGq_xOnB",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "新年の抱負",
+      "choiceList": [
+        [
+          "しっかり基礎体力を付けよう",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "まずは昼食を食べに行こう",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "コースの研究をしよう",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "6iddBNfYb0O",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（2年目）にて",
+      "choiceList": [
+        [
+          "体の強さから、とか……？",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "やっぱり根性じゃないか",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "BW0hZmy8Dxh",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G1)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+10",
+            "スキルPt(技能点数)+45"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "UN_v_HkNqK4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース入着",
+      "choiceList": [
+        [
+          "マックイーンなら上がっていける！",
+          [
+            "体力-20",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30",
+            "ランダムで(有概率)『集中力』のヒントLv+1"
+          ]
+        ],
+        [
+          "もっと実力をつけよう",
+          [
+            "体力-5~30",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "rdUxT526awp",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース敗北",
+      "choiceList": [
+        [
+          "その悔しさを糧にしよう！",
+          [
+            "体力-15",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "だったら逃げ出す？",
+          [
+            "体力-33",
+            "スタミナ(耐力)+3",
+            "スキルPt(技能点数)+21"
+          ]
+        ]
+      ],
+      "id": "lRhq3yfS0-g",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "エキサイティングお嬢様",
+      "choiceList": [
+        [
+          "すごい叫び声だった！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "すごいタオル回しだった！",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "v_3nrjdW5pZ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "果てなき王国",
+      "choiceList": [
+        [
+          "フランス",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "ニューカレドニア",
+          [
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "メジロ王国",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "CH5wq0gMBi4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G2)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "83LSmmosb8z",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G3)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "J-0L6pfhM_W",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(OP)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+5",
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "iIjH30rSp0y",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "責められるべきはトレーナー？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "賢さ(智力)+5"
+          ]
+        ]
+      ],
+      "id": "bUK0WvQvalw",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "あの日からずっと",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+5"
+          ]
+        ]
+      ],
+      "id": "FCoX1Oe1D",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ライアンとの戦い、始まる",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "LPxwOH3Vqu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "『天皇賞』にかける想い",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+5"
+          ]
+        ]
+      ],
+      "id": "P2yHkYNdLq",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "目標達成の後に・邁進！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)3種を+3",
+            "スキルPt(技能点数)+20",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "Q-ctHdl0XP",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "全然平気……です？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "パワー(力量)-5"
+          ]
+        ]
+      ],
+      "id": "uQGMrqcBKJ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "早朝に駆けろ",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-10",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "i6SzhF6YwZ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "すべって、おちた……",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "YjlHEYq2z6",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "来襲！スペース野球ゾンビ",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力+15",
+            "やる気(干劲)ダウン(下降)",
+            "根性(毅力)-5",
+            "ランダムで(有概率)『なまけ癖』になる"
+          ]
+        ]
+      ],
+      "id": "IolOsttDTV",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "メジロマックイーン登場！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+120"
+          ]
+        ]
+      ],
+      "id": "G6H8xsDoG9",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "名指導",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+10",
+            "ランダムで(有概率)『練習上手◯』取得"
+          ]
+        ]
+      ],
+      "id": "8NBBQfPPzk",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "限界トレーニング",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+30",
+            "『切れ者』になる"
+          ]
+        ]
+      ],
+      "id": "Ys1Z8fPihu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "デビュー戦の後に",
+      "choiceList": [
+        [
+          "1位(出立、悠々と)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(栄光の楯へと)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "(3位以下)栄光の楯へと",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "4ICbTulnst",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "神戸新聞杯の後に",
+      "choiceList": [
+        [
+          "1位(勝負の予感)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+35",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "MisQgppI7s",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "菊花賞の後に",
+      "choiceList": [
+        [
+          "3位(恥じて叱って、進め)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "H2OtQ1O1XV",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "天皇賞（秋）の後に",
+      "choiceList": [
+        [
+          "1位(未踏の栄光)",
+          [
+            "全ステータス(能力)+3",
+            "スキルPt(技能点数)+51"
+          ]
+        ]
+      ],
+      "id": "mK9IEHW72-",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "宝塚記念の後に",
+      "choiceList": [
+        [
+          "2位(覚悟を刻みて)",
+          [
+            "全ステータス(能力)+2",
+            "スキルPt(技能点数)+51"
+          ]
+        ]
+      ],
+      "id": "fUyxbyY3bz",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "あんし〜ん笹針師、参☆上",
+      "choiceList": [
+        [
+          "強いウマ娘になれる秘孔を狙う",
+          [
+            "成功時:5種ステータス(能力)+20",
+            "失敗時:やる気(干劲)ダウン(下降)",
+            "全ステータス(能力)-15",
+            "『夜ふかし気味』になる"
+          ]
+        ],
+        [
+          "レースで勝てる秘孔を狙う",
+          [
+            "成功時:『コーナー回復◯』取得",
+            "『直線回復』取得",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ],
+        [
+          "元気で健康になれる秘孔を狙う",
+          [
+            "成功時:体力の最大値+12",
+            "体力+40",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "魅力アップの秘孔を狙う",
+          [
+            "成功時:体力+20",
+            "やる気(干劲)アップ(提升)",
+            "『愛嬌◯』になる",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "不安なのでやめておく",
+          [
+            "体力+10"
+          ]
+        ]
+      ],
+      "id": "HeQ1L2Q4rRB",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "福引チャンス！",
+      "choiceList": [
+        [
+          "特賞(温泉旅行券)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)+10"
+          ]
+        ],
+        [
+          "1等(特上にんじんハンバーグ)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10"
+          ]
+        ],
+        [
+          "2等(にんじん山盛り)",
+          [
+            "体力+20",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "3等(にんじん1本)",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "はずれ",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "kz2FFhCj6FD",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "Yb57P85pqyO",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ファンレター",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "5vWwa3H9Bz4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "クリスマス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "z0dmXd4wmQo",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ファン感謝祭",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-5",
+            "スキルPt(技能点数)+25"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "1WgC1uhBcZE",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（2年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "GK1yIQk61zF",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（3年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "ft2AoIPkKHA",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "『月刊トゥインクル増刊号』",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+3",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "j8S6aiaVtiu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ネバー･ギブ･アップ･ワガハイ！",
+      "choiceList": [
+        [
+          "ちゃんとした舞台で戦うんだろ？",
+          [
+            "スタミナ(耐力)+15",
+            "根性(毅力)+5",
+            "ランダムで(有概率)『練習上手〇』になる"
+          ]
+        ],
+        [
+          "競うなら準備が必要",
+          [
+            "パワー(力量)+5",
+            "賢さ(智力)+15"
+          ]
+        ]
+      ],
+      "id": "AUa5TIEbsL",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カラオケでパワーアップ！？",
+      "choiceList": [
+        [
+          "危ないテイオー！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "間に合わない…！",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "lW6Hw2SAyt",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "わがままテイオーと思い出の景色",
+      "choiceList": [
+        [
+          "よし、ゴミ拾いは任せたぞ！",
+          [
+            "根性(毅力)+20"
+          ]
+        ],
+        [
+          "よし、落書き消しは任せたぞ！",
+          [
+            "スピード(速度)+10",
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "znUo8i9gQG",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "力のヒミツ！",
+      "choiceList": [
+        [
+          "そういうことじゃない気が…",
+          [
+            "体力+10",
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "そう！ご飯を食べよう！",
+          [
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "『太り気味』になる"
+          ]
+        ]
+      ],
+      "id": "nURj9TK5sN",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "\"女帝\"vs.\"帝王\"",
+      "choiceList": [
+        [
+          "当たって砕けろだ！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "戦略練って頑張ろうな！",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "r1sPlJcpEi",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオーの武者修行",
+      "choiceList": [
+        [
+          "トレーニングじゃ物足りないか？",
+          [
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ],
+        [
+          "いい友だちが出来たんだな",
+          [
+            "『抜け出し準備』ヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "6JjTLB9_bg",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カイチョーみたいな勝負服",
+      "choiceList": [
+        [
+          "タイは？",
+          [
+            "スピード(速度)+10",
+            "賢さ(智力)+10",
+            "確率で『注目株』になる"
+          ]
+        ],
+        [
+          "マントは？",
+          [
+            "スタミナ(耐力)+10",
+            "根性(毅力)+10",
+            "確率で『注目株』になる"
+          ]
+        ]
+      ],
+      "id": "T8_yEkPVu0",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カイチョーとダジャレ",
+      "choiceList": [
+        [
+          "買うのか？",
+          [
+            "スタミナ(耐力)+5",
+            "パワー(力量)+5"
+          ]
+        ],
+        [
+          "帰るか？",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "H9s5gKO3M2",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "褒められちゃった！",
+      "choiceList": [
+        [
+          "楽しませてくれるから、ついね",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "期待に応えてくれるから、ついね",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "ULt569IRQH",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "叱られちゃった",
+      "choiceList": [
+        [
+          "それはルール違反だろう",
+          [
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "ちゃんと俺を見てほしい",
+          [
+            "パワー(力量)+5",
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "O8m1k2a03q",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオーのジンクス",
+      "choiceList": [
+        [
+          "今はどうだ？",
+          [
+            "スタミナ(耐力)+20"
+          ]
+        ],
+        [
+          "テイオーのジンクスかな？",
+          [
+            "賢さ(智力)+20"
+          ]
+        ]
+      ],
+      "id": "2uch362Zph",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ボクとみんなとカップケーキ",
+      "choiceList": [
+        [
+          "半分こすればいい",
+          [
+            "体力+5",
+            "やる気(干劲)アップ(提升)"
+          ]
+        ],
+        [
+          "勝負すればいい",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "6qX0a9uSj1",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオー、ウマドルになる！？",
+      "choiceList": [
+        [
+          "数曲だけ見ていこうかな",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "用事があるからごめん",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "Ho7WkRQJ7d",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ボクとマヤノとオトナの時間",
+      "choiceList": [
+        [
+          "大人の味は次の機会にしたら？",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "甘いものが食べたくなってきたな〜",
+          [
+            "賢さ(智力)+10"
+          ]
+        ]
+      ],
+      "id": "toFfZc1Gwze",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "気づいちゃった！",
+      "choiceList": [
+        [
+          "テイオーの走りが好きだから",
+          [
+            "スピード(速度)+5",
+            "スタミナ(耐力)+5"
+          ]
+        ],
+        [
+          "約束を守りたいから",
+          [
+            "根性(毅力)+5",
+            "賢さ(智力)+5"
+          ]
+        ],
+        [
+          "多分テイオーと同じだよ",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "6CtCrWy_FcW",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ダンスレッスン",
+      "choiceList": [
+        [
+          "バランス感覚を鍛えよう",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "全身の筋力をつけよう",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "ES_ZgMS5pux",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "追加の自主トレ",
+      "choiceList": [
+        [
+          "じゃあ試してみようか",
+          [
+            "体力-5",
+            "直前のトレーニングに応じたステータス(能力)+5",
+            "秋川理事長の絆ゲージ+5"
+          ]
+        ],
+        [
+          "比べるまでもない",
+          [
+            "体力+5"
+          ]
+        ]
+      ],
+      "id": "PCUIgsjB7VB",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿(2年目)にて",
+      "choiceList": [
+        [
+          "じゃあ水中バレーをしようか",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "じゃあ素潜りをしようか",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "2z7gm1ECzHH",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "新年の抱負",
+      "choiceList": [
+        [
+          "最後まで走り抜く根性作り！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "しっかり走るための体調管理！",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "持ち味を活かす技術向上！",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "V3MVEpd9Rh1",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "『テイオーの健康に気を配ります』って",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "『テイオーの実力向上に努めます』って",
+          [
+            "全ステータス(能力)+5"
+          ]
+        ],
+        [
+          "『テイオーをスキルアップさせます』って",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "FFTW2UedWdV",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース勝利！",
+      "choiceList": [
+        [
+          "さすがだな！",
+          [
+            "体力-15",
+            "スピード(速度)+5",
+            "スキルPt(技能点数)+30※上昇するステータス(能力)と値はランダム"
+          ]
+        ],
+        [
+          "まだこんなものじゃないだろう？",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "4QTCUUVbGlq",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース入着",
+      "choiceList": [
+        [
+          "それだけ悔しがれるのも才能",
+          [
+            "体力-20",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "なら次は1着をとるぞ！",
+          [
+            "体力-5~30",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "jXLzIDgapnN",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "無茶は厳禁！",
+      "choiceList": [
+        [
+          "無理はしないでほしい",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "その体で走れるのか？",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "DPSTL4rhPRX",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース敗北",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "なら証明してやろう！",
+          [
+            "体力-15~35",
+            "5種ステータス(能力)からランダムに(随机)1種を+3~5",
+            "スキルPt(技能点数)+24~30"
+          ]
+        ]
+      ],
+      "id": "mnl4SS3SzMg",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "お大事に！",
+      "choiceList": [
+        [
+          "きっちり休ませる",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-5"
+          ]
+        ],
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "CCz4pTzIrgU",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "…ボクは健康だもん",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)-5",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "T8wRj8MP2jb",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "負っけないぞー！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-10",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "I-cQPikFDto",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ノーエンカウント",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "DIZZaojrIfO",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "圧倒的な高さの目標",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "l-72ghVYJEC",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "地VS天",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "yZlgSOJvDVj",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシックに向けた記者会見",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+5"
+          ]
+        ]
+      ],
+      "id": "UbCRxvEQ96f",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "足りないものは",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5",
+            "スキルPt(技能点数)+30",
+            "ランダムで(有概率)『切れ者』になる"
+          ]
+        ]
+      ],
+      "id": "6qhJ9LM-W7D",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "菊花賞に出るんだ！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "OeI1rJM0wE4",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ファンレター",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "sxTstL2wyQn",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "デビュー戦の後に",
+      "choiceList": [
+        [
+          "1位(帝王、発進！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムに(随机)『集中力』のヒントLv+1"
+          ]
+        ],
+        [
+          "2位",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "LZ2lOeKsn7X",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "若駒Sの後に",
+      "choiceList": [
+        [
+          "1位(三冠へ！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(三冠へ！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "Pr40NhAc9bs",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "皐月賞の後に",
+      "choiceList": [
+        [
+          "1位(一冠めっ！)",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(挑戦は終わらない！)",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "rI8r2mP6Sbt",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "日本ダービーの後に",
+      "choiceList": [
+        [
+          "1位(二冠めっ！)",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "『垂れウマ回避』のヒントLv+1",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(下は見ない！)",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下(下は見ない！)",
+          [
+            "5種ステータス(能力)を+1",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "0PW-Die8Cks",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "菊花賞の後に",
+      "choiceList": [
+        [
+          "1位",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下(ゴールはまだ先！)",
+          [
+            "5種ステータス(能力)を+1",
+            "スキルPt(技能点数)+45",
+            "ランダムで(有概率)『垂れウマ回避』のヒントLv+1",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "5CFFt8_ckno",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "あんし〜ん笹針師、参☆上",
+      "choiceList": [
+        [
+          "強いウマ娘になれる秘孔を狙う",
+          [
+            "成功時:5種ステータス(能力)+20",
+            "失敗時:やる気(干劲)ダウン(下降)",
+            "全ステータス(能力)-15",
+            "『夜ふかし気味』になる"
+          ]
+        ],
+        [
+          "レースで勝てる秘孔を狙う",
+          [
+            "成功時:『コーナー回復◯』取得",
+            "『直線回復』取得",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ],
+        [
+          "元気で健康になれる秘孔を狙う",
+          [
+            "成功時:体力の最大値+12",
+            "体力+40",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "魅力アップの秘孔を狙う",
+          [
+            "成功時:体力+20",
+            "やる気(干劲)アップ(提升)",
+            "『愛嬌◯』になる",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "不安なのでやめておく",
+          [
+            "体力+10"
+          ]
+        ]
+      ],
+      "id": "ZrK-szpWk58",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "福引チャンス！",
+      "choiceList": [
+        [
+          "特賞(温泉旅行券)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)+10"
+          ]
+        ],
+        [
+          "1等(特上にんじんハンバーグ)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10"
+          ]
+        ],
+        [
+          "2等(にんじん山盛り)",
+          [
+            "体力+20",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "3等(にんじん1本)",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "はずれ",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "3oEMRlHMXKU",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "Sm1iZCrWV26",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クリスマス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "LbUclHQt7rJ",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ファン感謝祭",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-5",
+            "スキルPt(技能点数)+25"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "YbmHL7TDH8Y",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿（2年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "4Hj5dG_9mAQ",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿（3年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "3KpL0D-mePS",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "『月刊トゥインクル増刊号』",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+3",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "vonEKFKB-Kr",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "これも普通の努力です！",
+      "choiceList": [
+        [
+          "その機敏さは普通じゃないような",
+          [
+            "パワー(力量)+10",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ],
+        [
+          "普通とは言えないパワーだ",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "Gww0sdQhO9",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "これも普通のハプニング！？",
+      "choiceList": [
+        [
+          "力強い走りだった！",
+          [
+            "スタミナ(耐力)+5",
+            "根性(毅力)+10",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "TS5QOGFRcs",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "求む、個性！",
+      "choiceList": [
+        [
+          "他のウマ娘に相談するとか",
+          [
+            "やる気(干劲)アップ(提升)",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ],
+        [
+          "そのままでいいと思うよ",
+          [
+            "体力+30",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "W_-vv1GGs9",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "目指せ、いたずらっ子！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "パワー(力量)+5",
+            "スキルPt(技能点数)+10",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "1xIN8INI5W",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "個性的な走り方",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "EfVqcIAAT8",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "（ニャンとも）ガラじゃない",
+      "choiceList": [
+        [
+          "癒やされることも大事だと伝える",
+          [
+            "体力+20",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ],
+        [
+          "クレバーに入店する方法を伝える",
+          [
+            "体力+10",
+            "賢さ(智力)+5",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "jjX1eMxQ0l",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "（美味しい）おせっかい",
+      "choiceList": [
+        [
+          "大根おろし",
+          [
+            "『ペースアップ(提升)』のヒントLv+1",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ],
+        [
+          "天ぷら祭り",
+          [
+            "やる気(干劲)アップ(提升)",
+            "体力最大値+4"
+          ]
+        ]
+      ],
+      "id": "CqxOZTYNmy",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "背、追いかけて",
+      "choiceList": [
+        [
+          "ネイチャも若いな〜",
+          [
+            "体力+5",
+            "賢さ(智力)+3",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "GKEhEA35qX",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "背、追い風を受けて",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力+10",
+            "賢さ(智力)+5",
+            "伏兵◯のヒントLv+3",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "I3yBrTAtgx",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "あぁ、友情",
+      "choiceList": [
+        [
+          "すごく力強かったぞ",
+          [
+            "やる気(干劲)アップ(提升)",
+            "パワー(力量)+5",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "本番に備えるだけだな！",
+          [
+            "体力+10",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "Ji8b1jTYuZ",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "あぁ、故郷",
+      "choiceList": [
+        [
+          "質のよいシューズがいいかも",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+10",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "トレーニングの教本がよさそう",
+          [
+            "練習上手◯",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "kIKwZKQUPh",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "輝き追いかけて",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+2",
+            "パワー(力量)+2",
+            "賢さ(智力)+2",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "YCvzWqOTGG",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "情けは人のためならず",
+      "choiceList": [
+        [
+          "早く治さないとな",
+          [
+            "体力が10回復",
+            "やる気(干劲)アップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "この元気に負けてられないぞ！",
+          [
+            "スピード(速度)+10",
+            "直線巧者のヒントLvアップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "c6te_JTQ3g",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "2人で行くこの花道",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+10",
+            "パワー(力量)+10",
+            "孤高のプロフェッサーのヒントLvアップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "0mLFvNKhu3",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "あぁ、友情",
+      "choiceList": [
+        [
+          "すごく力強かったぞ",
+          [
+            "やる気(干劲)アップ(提升)",
+            "パワー(力量)+5",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "本番に備えるだけだな！",
+          [
+            "体力+10",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "t_b_-a9kTX",
+      "pid": "V3uyHLcvP"
+    },
+    {
+      "name": "あぁ、故郷",
+      "choiceList": [
+        [
+          "質のよいシューズがいいかも",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+10",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "トレーニングの教本がよさそう",
+          [
+            "練習上手◯",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "zUhvzAtcNT",
+      "pid": "V3uyHLcvP"
+    },
+    {
+      "name": "これも普通の努力です！",
+      "choiceList": [
+        [
+          "その機敏さは普通じゃないような",
+          [
+            "パワー(力量)+10",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ],
+        [
+          "普通とは言えないパワーだ",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "w6VBLVJEF7",
+      "pid": "704fcWlDE"
+    },
+    {
+      "name": "これも普通のハプニング！？",
+      "choiceList": [
+        [
+          "力強い走りだった！",
+          [
+            "スタミナ(耐力)+5",
+            "根性(毅力)+10",
+            "マチカネタンホイザの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "OM1NLZqlPv",
+      "pid": "704fcWlDE"
+    },
+    {
+      "name": "同室のあの子~そうだと思いましたわ~",
+      "choiceList": [
+        [
+          "いい友人なんだってな",
+          [
+            "『ウマ込み冷静』のヒントLv+2"
+          ]
+        ],
+        [
+          "君の夢を大事にしたいんだって",
+          [
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "tLrj2-Niy",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "メジロ家のあの子たち~難しい選択~",
+      "choiceList": [
+        [
+          "危ないから逃げるべき",
+          [
+            "スピード(速度)+10",
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "留まってチャンスを活かすべき",
+          [
+            "スタミナ(耐力)+7",
+            "根性(毅力)+7",
+            "賢さ(智力)+7"
+          ]
+        ]
+      ],
+      "id": "Hkwy2bvxps",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ライバルのあの子~どんな舞台でも~",
+      "choiceList": [
+        [
+          "リスペクトしてるんだな",
+          [
+            "『ポジションセンス』のヒントLv+2",
+            "ランダムで(有概率)『注目株』になる"
+          ]
+        ],
+        [
+          "大丈夫、君には君の良さがある",
+          [
+            "賢さ(智力)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "60PhEw8vAs",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "好敵手と書いて友と呼ぶ！",
+      "choiceList": [
+        [
+          "お互い問題を出し合って競い合おう",
+          [
+            "『スタミナ(耐力)キープ』のヒントLv+2"
+          ]
+        ],
+        [
+          "そんなに優劣をつけたいなら走ってくるんだ",
+          [
+            "スピード(速度)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "4FkLvLYJHc",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ワガハイがテイオー先輩だ！",
+      "choiceList": [
+        [
+          "生徒会長みたいでカッコよかった",
+          [
+            "『コーナー加速◯』のヒントLv+2"
+          ]
+        ],
+        [
+          "憧れの的として頑張って行こう！",
+          [
+            "賢さ(智力)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "XfLMBCuYgk",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "新しいもの、大好きです！",
+      "choiceList": [
+        [
+          "ティーカップで飲むのか？",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "メロンソーダは初めて？",
+          [
+            "体力-10",
+            "スタミナ(耐力)+20"
+          ]
+        ]
+      ],
+      "id": "qELYJnV75",
+      "pid": "upkB_bjDt8"
+    },
+    {
+      "name": "難しいこと、大好きです！",
+      "choiceList": [
+        [
+          "よし、やってみよう！",
+          [
+            "スタミナ(耐力)+5",
+            "根性(毅力)+10",
+            "サトノダイヤモンドの絆ゲージ+5"
+          ]
+        ],
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "OGzzL0G8-4",
+      "pid": "upkB_bjDt8"
     }
   ],
-  "updateTime": 1616942572684,
+  "updateTime": 1617107920014,
   "races": [
     {
       "name": "中京ジュニアステークス",
