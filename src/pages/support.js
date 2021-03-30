@@ -130,6 +130,7 @@ class Support extends React.Component{
               className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
                 <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
                 chooseMode={this.props.chooseMode}></SupportCard>
+                {/* {support.effects} */}
               </Col>)
             }
           </Row>
