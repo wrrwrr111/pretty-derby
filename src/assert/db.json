@@ -4916,6 +4916,331 @@
           ]
         ]
       ]
+    },
+    {
+      "gwId": "266048",
+      "name": "メジロマックイーン(新勝負服)",
+      "imgUrl": "img/players/zTxOqfQfU.png",
+      "id": "zTxOqfQfU",
+      "grass": "A",
+      "dirt": "E",
+      "shortDistance": "G",
+      "mile": "F",
+      "longDistance": "A",
+      "mediumDistance": "A",
+      "escape": "B",
+      "leading": "A",
+      "insert": "D",
+      "tracking": "F",
+      "speedGrow": "0%",
+      "staminaGrow": "10%",
+      "powerGrow": "10%",
+      "gutsGrow": "0%",
+      "wisdomGrow": "10%",
+      "skillList": [
+        "PpXL26h_Jq",
+        "EOM5PqtmZUs",
+        "svT-34r60",
+        "1uUvVaL7z-k",
+        "SSm3I2jNB9R",
+        "0hNrL5bQB",
+        "F0uv7PX7rF0",
+        "OxpmVCloF"
+      ],
+      "uniqueSkillList": [
+        "PpXL26h_Jq"
+      ],
+      "initialSkillList": [
+        "EOM5PqtmZUs",
+        "svT-34r60",
+        "1uUvVaL7z-k"
+      ],
+      "awakeningSkillList": [
+        "SSm3I2jNB9R",
+        "0hNrL5bQB",
+        "F0uv7PX7rF0",
+        "OxpmVCloF"
+      ],
+      "eventList": [
+        "yrVaGmnjiI",
+        "GaeTuD_QdL",
+        "yI7nrDxzGE",
+        "tY4-TOFR_1",
+        "U1ZdhCunke",
+        "dz71K2Dz7y",
+        "OhFStKLNc1",
+        "pPv_bkWmvr",
+        "Q1k0KCfHoP",
+        "ul-gaucQnv",
+        "yF0aXXwKQT",
+        "g3NPm7AnaX",
+        "3hnRKUut-d",
+        "RdSGq_xOnB",
+        "6iddBNfYb0O",
+        "BW0hZmy8Dxh",
+        "UN_v_HkNqK4",
+        "rdUxT526awp",
+        "lRhq3yfS0-g",
+        "v_3nrjdW5pZ",
+        "CH5wq0gMBi4",
+        "83LSmmosb8z",
+        "J-0L6pfhM_W",
+        "iIjH30rSp0y",
+        "bUK0WvQvalw",
+        "FCoX1Oe1D",
+        "LPxwOH3Vqu",
+        "P2yHkYNdLq",
+        "Q-ctHdl0XP",
+        "uQGMrqcBKJ",
+        "i6SzhF6YwZ",
+        "YjlHEYq2z6",
+        "IolOsttDTV",
+        "G6H8xsDoG9",
+        "8NBBQfPPzk",
+        "Ys1Z8fPihu",
+        "4ICbTulnst",
+        "MisQgppI7s",
+        "H2OtQ1O1XV",
+        "mK9IEHW72-",
+        "fUyxbyY3bz",
+        "HeQ1L2Q4rRB",
+        "kz2FFhCj6FD",
+        "Yb57P85pqyO",
+        "5vWwa3H9Bz4",
+        "z0dmXd4wmQo",
+        "1WgC1uhBcZE",
+        "GK1yIQk61zF",
+        "ft2AoIPkKHA",
+        "j8S6aiaVtiu"
+      ],
+      "raceList": [
+        [
+          "目標1",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：-"
+          ]
+        ],
+        [
+          "目標2",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：ジュニア級12月後半"
+          ]
+        ],
+        [
+          "目標3",
+          [
+            "神戸新聞杯で3着以内",
+            "時期：クラシック級9月後半",
+            "ファン:1750人以上",
+            "G2 / 阪神 / 芝 / 2400m(中距離) / 右外"
+          ]
+        ],
+        [
+          "目標4",
+          [
+            "菊花賞で3着以内",
+            "時期：クラシック級10月後半",
+            "ファン:7500人以上",
+            "G1 / 京都 / 芝 / 3000m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標5",
+          [
+            "天皇賞(春)で1着",
+            "時期：シニア級4月後半",
+            "ファン:20000人以上",
+            "G1 / 京都 / 芝 / 3200m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標6",
+          [
+            "宝塚記念で2着以内",
+            "時期：シニア級6月後半",
+            "ファン:20000人以上",
+            "G1 / 阪神 / 芝 / 2200m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標7",
+          [
+            "天皇賞(秋)で1着",
+            "時期：シニア級10月後半",
+            "ファン:20000人以上",
+            "G1 / 東京 / 芝 / 2000m(中距離) / 左"
+          ]
+        ]
+      ]
+    },
+    {
+      "gwId": "266047",
+      "name": "トウカイテイオー(新勝負服)",
+      "imgUrl": "img/players/ZkLLZhGL5.png",
+      "id": "ZkLLZhGL5",
+      "grass": "A",
+      "dirt": "G",
+      "shortDistance": "F",
+      "mile": "E",
+      "longDistance": "A",
+      "mediumDistance": "B",
+      "escape": "D",
+      "leading": "A",
+      "insert": "C",
+      "tracking": "E",
+      "speedGrow": "10%",
+      "staminaGrow": "10%",
+      "powerGrow": "0%",
+      "gutsGrow": "10%",
+      "wisdomGrow": "0%",
+      "skillList": [
+        "2N6jhYM5qT",
+        "jKEl8WzeoS",
+        "ja6Jl89t4x",
+        "sWVG7_tDNvo",
+        "3gvF368iuVV",
+        "ec5gPDKBP",
+        "uL6kGjM4qUj",
+        "S_0SAtXO5M"
+      ],
+      "uniqueSkillList": [
+        "2N6jhYM5qT"
+      ],
+      "initialSkillList": [
+        "jKEl8WzeoS",
+        "ja6Jl89t4x",
+        "sWVG7_tDNvo"
+      ],
+      "awakeningSkillList": [
+        "3gvF368iuVV",
+        "ec5gPDKBP",
+        "uL6kGjM4qUj",
+        "S_0SAtXO5M"
+      ],
+      "eventList": [
+        "AUa5TIEbsL",
+        "lW6Hw2SAyt",
+        "znUo8i9gQG",
+        "nURj9TK5sN",
+        "r1sPlJcpEi",
+        "6JjTLB9_bg",
+        "T8_yEkPVu0",
+        "H9s5gKO3M2",
+        "ULt569IRQH",
+        "O8m1k2a03q",
+        "2uch362Zph",
+        "6qX0a9uSj1",
+        "Ho7WkRQJ7d",
+        "toFfZc1Gwze",
+        "6CtCrWy_FcW",
+        "ES_ZgMS5pux",
+        "PCUIgsjB7VB",
+        "2z7gm1ECzHH",
+        "V3MVEpd9Rh1",
+        "FFTW2UedWdV",
+        "4QTCUUVbGlq",
+        "jXLzIDgapnN",
+        "DPSTL4rhPRX",
+        "mnl4SS3SzMg",
+        "CCz4pTzIrgU",
+        "T8wRj8MP2jb",
+        "I-cQPikFDto",
+        "DIZZaojrIfO",
+        "l-72ghVYJEC",
+        "yZlgSOJvDVj",
+        "UbCRxvEQ96f",
+        "6qhJ9LM-W7D",
+        "OeI1rJM0wE4",
+        "sxTstL2wyQn",
+        "LZ2lOeKsn7X",
+        "Pr40NhAc9bs",
+        "rI8r2mP6Sbt",
+        "0PW-Die8Cks",
+        "5CFFt8_ckno",
+        "ZrK-szpWk58",
+        "3oEMRlHMXKU",
+        "Sm1iZCrWV26",
+        "sxTstL2wyQn",
+        "LbUclHQt7rJ",
+        "YbmHL7TDH8Y",
+        "4Hj5dG_9mAQ",
+        "3KpL0D-mePS",
+        "vonEKFKB-Kr"
+      ],
+      "raceList": [
+        [
+          "目標1",
+          [
+            "ジュニア級メイクデビューに出走",
+            "時期：-"
+          ]
+        ],
+        [
+          "目標2",
+          [
+            "若駒Sで3着以内",
+            "時期：クラシック級1月後半",
+            "ファン:350人以上",
+            "OP / 京都 / 芝 / 2000m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標3",
+          [
+            "皐月賞で5着以内",
+            "時期：クラシック級4月前半",
+            "ファン:4500人以上",
+            "G1 / 中山 / 芝 / 2000m(中距離) / 右内"
+          ]
+        ],
+        [
+          "目標4",
+          [
+            "日本ダービーで5着以内",
+            "時期：クラシック級5月後半",
+            "ファン:6000人以上",
+            "G1 / 東京 / 芝 / 2400m(中距離) / 左"
+          ]
+        ],
+        [
+          "目標5",
+          [
+            "菊花賞で3着以内",
+            "時期：クラシック級10月後半",
+            "ファン:7500人以上",
+            "G1 / 京都 / 芝 / 3000m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標6",
+          [
+            "天皇賞(春)で3着以内",
+            "時期：シニア級4月後半",
+            "ファン:20000人以上",
+            "G1 / 京都 / 芝 / 3200m(長距離) / 右外"
+          ]
+        ],
+        [
+          "目標7",
+          [
+            "ジャパンCで2着以内",
+            "時期：シニア級11月後半",
+            "ファン:25000人以上",
+            "G1 / 東京 / 芝 / 2400m(中距離) / 左"
+          ]
+        ],
+        [
+          "目標8",
+          [
+            "有馬記念で1着",
+            "時期：シニア級12月後半",
+            "ファン:25000人以上",
+            "G1 / 中山 / 芝 / 2500m(長距離) / 右内"
+          ]
+        ]
+      ]
     }
   ],
   "supports": [
@@ -5678,7 +6003,6 @@
         "PXqe7XPh2Zi",
         "gGqvq_Mnmp",
         "J9ZtYuirNxI",
-        "R75SzzE1BT3",
         "XLmiCDe5aGx",
         "UXE6SzJoT2"
       ],
@@ -5853,7 +6177,6 @@
         "svT-34r60",
         "NXiO9P0Hav",
         "g2vte-S15S",
-        "25hjl_Nca",
         "tiXFXDrN4c",
         "QgJT1woGQD",
         "EfTxxN-wUe",
@@ -6627,7 +6950,6 @@
         "v5YiZc1QYa",
         "-cFPxDA8Xjr",
         "3Z3l4acJm",
-        "v5YiZc1QYa",
         "tqno0TLG_c",
         "9KMbcURPVA"
       ],
@@ -9645,7 +9967,6 @@
         "wSG89AzUCb",
         "F2XBLBFCVh",
         "oif2oTQXUs",
-        "EOM5PqtmZUs",
         "lKRcNtJj8PI",
         "iZfjbk3QWoo",
         "p71TuCN_n-G"
@@ -10019,7 +10340,6 @@
         "DTD9YJiYLG",
         "mBguZT4euk",
         "uVou821dyV5",
-        "DTD9YJiYLG",
         "7QS24fzU0j"
       ],
       "trainingEventSkill": [
@@ -12707,7 +13027,6 @@
       "rare": "R",
       "skillList": [
         "uVou821dyV5",
-        "uVou821dyV5",
         "4UzBy2XIey",
         "MvkUZQL8La",
         "kjP0LurWRte",
@@ -13344,7 +13663,6 @@
       "skillList": [
         "tiXFXDrN4c",
         "ja6Jl89t4x",
-        "tiXFXDrN4c",
         "4UzBy2XIey",
         "R75SzzE1BT3",
         "I8e5R8e_iI",
@@ -13810,7 +14128,6 @@
       "skillList": [
         "25hjl_Nca",
         "g2vte-S15S",
-        "25hjl_Nca",
         "tiXFXDrN4c",
         "QgJT1woGQD",
         "EfTxxN-wUe",
@@ -16881,7 +17198,6 @@
         "EOM5PqtmZUs",
         "F2XBLBFCVh",
         "oif2oTQXUs",
-        "EOM5PqtmZUs",
         "lKRcNtJj8PI",
         "iZfjbk3QWoo",
         "p71TuCN_n-G"
@@ -20317,7 +20633,6 @@
         "EOM5PqtmZUs",
         "svT-34r60",
         "tiXFXDrN4c",
-        "1uUvVaL7z-k",
         "x_8glfWv1Fs",
         "AEZfYT48j"
       ],
@@ -21232,7 +21547,6 @@
         "PXqe7XPh2Zi",
         "TSDcq3oKT8s",
         "-cFPxDA8Xjr",
-        "Lv5bWWlO15w",
         "7sHwpYODM1"
       ],
       "trainingEventSkill": [
@@ -21545,7 +21859,6 @@
         "PXqe7XPh2Zi",
         "bS56RDj_-m",
         "lHAMfGoOtw2",
-        "PXqe7XPh2Zi",
         "TSDcq3oKT8s",
         "-cFPxDA8Xjr",
         "Lv5bWWlO15w",
@@ -21721,13 +22034,10 @@
         "uVou821dyV5",
         "wNmEERNbDJ4",
         "Ka6n_UhCMK",
-        "uVou821dyV5",
         "YPlwrOopwv",
         "y5wUlGVnlY",
         "j0mwyy-ni9",
-        "uVou821dyV5",
         "jc-y8pTTJW",
-        "wNmEERNbDJ4",
         "v5YiZc1QYa"
       ],
       "trainingEventSkill": [
@@ -22105,7 +22415,6 @@
         "uVou821dyV5",
         "y5wUlGVnlY",
         "j0mwyy-ni9",
-        "uVou821dyV5",
         "jc-y8pTTJW",
         "wNmEERNbDJ4",
         "v5YiZc1QYa"
@@ -23299,6 +23608,322 @@
         }
       ],
       "rarity": 1
+    },
+    {
+      "gwId": "266053",
+      "name": "Just keep going.",
+      "rare": "SSR",
+      "imgUrl": "img/supports/VvMG2TUZy.png",
+      "charaName": "マチカネタンホイザ",
+      "id": "VvMG2TUZy",
+      "skillList": [
+        "OgWF-kQ5K",
+        "eFBBCUmUjK",
+        "SYn_JOvSTq5",
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "trainingEventSkill": [
+        "OgWF-kQ5K",
+        "eFBBCUmUjK",
+        "SYn_JOvSTq5"
+      ],
+      "possessionSkill": [
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "baseAbility": {
+        "name": "Just keep going.",
+        "ability": [
+          [
+            "Lv40~",
+            [
+              "友情ボーナスと初期根性(毅力)アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "Gww0sdQhO9",
+        "TS5QOGFRcs",
+        "W_-vv1GGs9",
+        "1xIN8INI5W",
+        "EfVqcIAAT8"
+      ]
+    },
+    {
+      "gwId": "266054",
+      "name": "むじゃむじゃむじゃき",
+      "rare": "SR",
+      "imgUrl": "img/supports/VhJD342WqH.png",
+      "charaName": "ナイスネイチャ",
+      "id": "VhJD342WqH",
+      "skillList": [
+        "F0uv7PX7rF0",
+        "O-c-BZW-2n",
+        "05d0vsFOou",
+        "hVb7XZv49Wo",
+        "ai9tE5d7yv9",
+        "p71TuCN_n-G",
+        "km-O9_GIc_X",
+        "EzWa29JdgX",
+        "LXINgxRd1tx",
+        "0Fh2q7Uid5"
+      ],
+      "trainingEventSkill": [
+        "F0uv7PX7rF0",
+        "O-c-BZW-2n"
+      ],
+      "possessionSkill": [
+        "05d0vsFOou",
+        "hVb7XZv49Wo",
+        "ai9tE5d7yv9",
+        "p71TuCN_n-G",
+        "km-O9_GIc_X",
+        "EzWa29JdgX",
+        "LXINgxRd1tx",
+        "0Fh2q7Uid5"
+      ],
+      "baseAbility": {
+        "name": "むじゃむじゃむじゃき",
+        "ability": [
+          [
+            "Lv35~",
+            [
+              "トレーニング効果アップ(提升)と初期賢さ(智力)アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "jjX1eMxQ0l",
+        "CqxOZTYNmy",
+        "GKEhEA35qX",
+        "I3yBrTAtgx"
+      ]
+    },
+    {
+      "gwId": "266299",
+      "name": "迫る熱に押されて",
+      "rare": "SSR",
+      "imgUrl": "img/supports/5WcbjIR7H.png",
+      "charaName": "キタサンブラック",
+      "id": "5WcbjIR7H",
+      "skillList": [
+        "EOM5PqtmZUs",
+        "1Fbl_klNqq",
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "trainingEventSkill": [
+        "EOM5PqtmZUs",
+        "1Fbl_klNqq"
+      ],
+      "possessionSkill": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "baseAbility": {
+        "name": "迫る熱に押されて",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "トレーニング効果アップ(提升)と得意率アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "Ji8b1jTYuZ",
+        "kIKwZKQUPh",
+        "YCvzWqOTGG",
+        "c6te_JTQ3g",
+        "0mLFvNKhu3"
+      ]
+    },
+    {
+      "gwId": "266300",
+      "name": "その背中を越えて",
+      "rare": "SSR",
+      "imgUrl": "img/supports/wyz7djOUrz.png",
+      "charaName": "サトノダイヤモンド",
+      "id": "wyz7djOUrz",
+      "skillList": [
+        "FxF2hL65X7A",
+        "dxo1m2BKz",
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "trainingEventSkill": [
+        "FxF2hL65X7A",
+        "dxo1m2BKz"
+      ],
+      "possessionSkill": [
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "baseAbility": {
+        "name": "その背中を越えて",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "やる気(干劲)効果アップ(提升)と初期絆ゲージアップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": []
+    },
+    {
+      "gwId": "266315",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/V3uyHLcvP.png",
+      "charaName": "キタサンブラック",
+      "id": "V3uyHLcvP",
+      "skillList": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "trainingEventSkill": [],
+      "possessionSkill": [
+        "oif2oTQXUs",
+        "uL6kGjM4qUj",
+        "lKRcNtJj8PI",
+        "Eb4G1G0HCZ",
+        "AEZfYT48j",
+        "DPWZ3NqLr",
+        "DTD9YJiYLG",
+        "OIb1Ol2eaw"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [
+        "t_b_-a9kTX",
+        "zUhvzAtcNT"
+      ]
+    },
+    {
+      "gwId": "266314",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/upkB_bjDt8.png",
+      "charaName": "サトノダイヤモンド",
+      "id": "upkB_bjDt8",
+      "skillList": [
+        "FxF2hL65X7A",
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "trainingEventSkill": [
+        "FxF2hL65X7A"
+      ],
+      "possessionSkill": [
+        "sC9UYQ01L1",
+        "25hjl_Nca",
+        "15yASdQCW1R",
+        "lSFwxam1V3y",
+        "UXE6SzJoT2",
+        "LXINgxRd1tx",
+        "qnisLy5mzVG"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": []
+    },
+    {
+      "gwId": "266313",
+      "name": "トレセン学園",
+      "rare": "R",
+      "imgUrl": "img/supports/704fcWlDE.png",
+      "charaName": "マチカネタンホイザ",
+      "id": "704fcWlDE",
+      "skillList": [
+        "OgWF-kQ5K",
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "trainingEventSkill": [
+        "OgWF-kQ5K"
+      ],
+      "possessionSkill": [
+        "ai9tE5d7yv9",
+        "Q_eeNK9Ekb",
+        "-cFPxDA8Xjr",
+        "1uUvVaL7z-k",
+        "icbSWcsud_"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [
+        "w6VBLVJEF7",
+        "OM1NLZqlPv"
+      ]
     }
   ],
   "skills": [
@@ -25914,6 +26539,33 @@
       "rare": "固有",
       "describe": "最終コーナーで前の方で追い抜くと勝利の方程式を導き、速度を上げる",
       "id": "s5lH9NTrBI"
+    },
+    {
+      "name": "最強の名をかけて",
+      "imgUrl": "img/skills/PpXL26h_Jq.png",
+      "rare": "固有",
+      "describe": "最終コーナー以降に前めで力が尽きかけ詰められると速度が上がる",
+      "id": "PpXL26h_Jq"
+    },
+    {
+      "name": "絶対は、ボクだ",
+      "imgUrl": "img/skills/2N6jhYM5qT.png",
+      "rare": "固有",
+      "describe": "最終直線で前の方で追いすがっていると不屈の闘志で速度が上がる",
+      "id": "2N6jhYM5qT"
+    },
+    {
+      "name": "神業ステップ",
+      "imgUrl": "img/skills/S_0SAtXO5M.png",
+      "rare": "レア",
+      "id": "S_0SAtXO5M"
+    },
+    {
+      "name": "危険回避",
+      "imgUrl": "img/skills/OIb1Ol2eaw.png",
+      "rare": "ノーマル",
+      "describe": "レース序盤に少し囲まれにくくなる",
+      "id": "OIb1Ol2eaw"
     }
   ],
   "events": [
@@ -64466,9 +65118,2278 @@
       ],
       "id": "V8BP2QetJI",
       "pid": "4UN9zKF73Ks"
+    },
+    {
+      "name": "孤島の女王",
+      "choiceList": [
+        [
+          "食料",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "体力",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "yrVaGmnjiI",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "覚悟と使命の証",
+      "choiceList": [
+        [
+          "軽く走ろう",
+          [
+            "スピード(速度)+10",
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "お菓子でも食べよう",
+          [
+            "パワー(力量)+20"
+          ]
+        ]
+      ],
+      "id": "GaeTuD_QdL",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース場グルメの誘惑",
+      "choiceList": [
+        [
+          "一緒に食べよう",
+          [
+            "体力+30",
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "パワー(力量)+5",
+            "『太り気味』になる"
+          ]
+        ],
+        [
+          "我慢しよう",
+          [
+            "根性(毅力)+15",
+            "スキルPt(技能点数)+5"
+          ]
+        ]
+      ],
+      "id": "yI7nrDxzGE",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ラーメン3杯分の誘惑",
+      "choiceList": [
+        [
+          "安心しろ、体重管理はバッチリだ！",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "後でラーメン3杯分、走ろう！！",
+          [
+            "スピード(速度)＋5",
+            "スタミナ(耐力)＋5"
+          ]
+        ]
+      ],
+      "id": "tY4-TOFR_1",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "銀幕の2人",
+      "choiceList": [
+        [
+          "『5時間インフェルノ』",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "『大脱獄』",
+          [
+            "賢さ(智力)+5",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "U1ZdhCunke",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "栗祭り襲来！",
+      "choiceList": [
+        [
+          "ちょっと控えよう",
+          [
+            "体力+10",
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "お腹いっぱい食べよう",
+          [
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "パワー(力量)+5",
+            "『太り気味』になる"
+          ]
+        ]
+      ],
+      "id": "dz71K2Dz7y",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夜中のファンサ特訓",
+      "choiceList": [
+        [
+          "い、今きたところ",
+          [
+            "根性(毅力)+20"
+          ]
+        ],
+        [
+          "すごくよかったぞ",
+          [
+            "スピード(速度)+20"
+          ]
+        ]
+      ],
+      "id": "OhFStKLNc1",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "その名はホヤ！",
+      "choiceList": [
+        [
+          "他の物も見てみよう",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "食すべき",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "pPv_bkWmvr",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "思い出クッキング",
+      "choiceList": [
+        [
+          "ゆっくり一緒に食べよう",
+          [
+            "体力+15"
+          ]
+        ],
+        [
+          "一気に飲み干す",
+          [
+            "『先駆け』のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "Q1k0KCfHoP",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ご令嬢の風格",
+      "choiceList": [
+        [
+          "かっこいいな、と思って",
+          [
+            "スタミナ(耐力)+10",
+            "パワー(力量)+10",
+            "ランダムで(有概率)『練習上手○』になる"
+          ]
+        ],
+        [
+          "隣に立つ努力をしないと、と思って",
+          [
+            "賢さ(智力)+20",
+            "ランダムで(有概率)『練習上手○』になる"
+          ]
+        ]
+      ],
+      "id": "ul-gaucQnv",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "掘り出し物",
+      "choiceList": [
+        [
+          "『3星レストランの秘蔵レシピ』かな",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "『ゴールドシップのサイン色紙』かな",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "yF0aXXwKQT",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "追加の自主トレ",
+      "choiceList": [
+        [
+          "なら、徹底的に追い込もう！",
+          [
+            "体力-5",
+            "直前のトレーニングに応じたステータス(能力)+5",
+            "秋川理事長の絆ゲージ+5"
+          ]
+        ],
+        [
+          "効率を考えれば許可できない",
+          [
+            "体力+5"
+          ]
+        ]
+      ],
+      "id": "g3NPm7AnaX",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ダンスレッスン",
+      "choiceList": [
+        [
+          "よかったら特訓付き合うよ",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "まず曲の理解から始めるのはどうだ？",
+          [
+            "賢さ(智力)+10"
+          ]
+        ]
+      ],
+      "id": "3hnRKUut-d",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "正月だしゆっくりしよう",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "いつも通りのトレーニングだ",
+          [
+            "全ステータス(能力)+5"
+          ]
+        ],
+        [
+          "福袋を買いに行こう！",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "RdSGq_xOnB",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "新年の抱負",
+      "choiceList": [
+        [
+          "しっかり基礎体力を付けよう",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "まずは昼食を食べに行こう",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "コースの研究をしよう",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "6iddBNfYb0O",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（2年目）にて",
+      "choiceList": [
+        [
+          "体の強さから、とか……？",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "やっぱり根性じゃないか",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "BW0hZmy8Dxh",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G1)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+10",
+            "スキルPt(技能点数)+45"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "UN_v_HkNqK4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース入着",
+      "choiceList": [
+        [
+          "マックイーンなら上がっていける！",
+          [
+            "体力-20",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30",
+            "ランダムで(有概率)『集中力』のヒントLv+1"
+          ]
+        ],
+        [
+          "もっと実力をつけよう",
+          [
+            "体力-5~30",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "rdUxT526awp",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース敗北",
+      "choiceList": [
+        [
+          "その悔しさを糧にしよう！",
+          [
+            "体力-15",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "だったら逃げ出す？",
+          [
+            "体力-33",
+            "スタミナ(耐力)+3",
+            "スキルPt(技能点数)+21"
+          ]
+        ]
+      ],
+      "id": "lRhq3yfS0-g",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "エキサイティングお嬢様",
+      "choiceList": [
+        [
+          "すごい叫び声だった！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "すごいタオル回しだった！",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "v_3nrjdW5pZ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "果てなき王国",
+      "choiceList": [
+        [
+          "フランス",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "ニューカレドニア",
+          [
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "メジロ王国",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "CH5wq0gMBi4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G2)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "83LSmmosb8z",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(G3)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+8",
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "J-0L6pfhM_W",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "レース勝利(OP)",
+      "choiceList": [
+        [
+          "やった、やったぞーっ！！",
+          [
+            "体力-15",
+            "5種ステータス(能力)からランダムに(随机)1種を+5",
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "更なる高みを目指そう！",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "iIjH30rSp0y",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "責められるべきはトレーナー？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "賢さ(智力)+5"
+          ]
+        ]
+      ],
+      "id": "bUK0WvQvalw",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "あの日からずっと",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+5"
+          ]
+        ]
+      ],
+      "id": "FCoX1Oe1D",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ライアンとの戦い、始まる",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "LPxwOH3Vqu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "『天皇賞』にかける想い",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+5"
+          ]
+        ]
+      ],
+      "id": "P2yHkYNdLq",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "目標達成の後に・邁進！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)3種を+3",
+            "スキルPt(技能点数)+20",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "Q-ctHdl0XP",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "全然平気……です？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "パワー(力量)-5"
+          ]
+        ]
+      ],
+      "id": "uQGMrqcBKJ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "早朝に駆けろ",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-10",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "i6SzhF6YwZ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "すべって、おちた……",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "YjlHEYq2z6",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "来襲！スペース野球ゾンビ",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力+15",
+            "やる気(干劲)ダウン(下降)",
+            "根性(毅力)-5",
+            "ランダムで(有概率)『なまけ癖』になる"
+          ]
+        ]
+      ],
+      "id": "IolOsttDTV",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "メジロマックイーン登場！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+120"
+          ]
+        ]
+      ],
+      "id": "G6H8xsDoG9",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "名指導",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スタミナ(耐力)+10",
+            "ランダムで(有概率)『練習上手◯』取得"
+          ]
+        ]
+      ],
+      "id": "8NBBQfPPzk",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "限界トレーニング",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+30",
+            "『切れ者』になる"
+          ]
+        ]
+      ],
+      "id": "Ys1Z8fPihu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "デビュー戦の後に",
+      "choiceList": [
+        [
+          "1位(出立、悠々と)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(栄光の楯へと)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "(3位以下)栄光の楯へと",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "4ICbTulnst",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "神戸新聞杯の後に",
+      "choiceList": [
+        [
+          "1位(勝負の予感)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+35",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "MisQgppI7s",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "菊花賞の後に",
+      "choiceList": [
+        [
+          "3位(恥じて叱って、進め)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "H2OtQ1O1XV",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "天皇賞（秋）の後に",
+      "choiceList": [
+        [
+          "1位(未踏の栄光)",
+          [
+            "全ステータス(能力)+3",
+            "スキルPt(技能点数)+51"
+          ]
+        ]
+      ],
+      "id": "mK9IEHW72-",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "宝塚記念の後に",
+      "choiceList": [
+        [
+          "2位(覚悟を刻みて)",
+          [
+            "全ステータス(能力)+2",
+            "スキルPt(技能点数)+51"
+          ]
+        ]
+      ],
+      "id": "fUyxbyY3bz",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "あんし〜ん笹針師、参☆上",
+      "choiceList": [
+        [
+          "強いウマ娘になれる秘孔を狙う",
+          [
+            "成功時:5種ステータス(能力)+20",
+            "失敗時:やる気(干劲)ダウン(下降)",
+            "全ステータス(能力)-15",
+            "『夜ふかし気味』になる"
+          ]
+        ],
+        [
+          "レースで勝てる秘孔を狙う",
+          [
+            "成功時:『コーナー回復◯』取得",
+            "『直線回復』取得",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ],
+        [
+          "元気で健康になれる秘孔を狙う",
+          [
+            "成功時:体力の最大値+12",
+            "体力+40",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "魅力アップの秘孔を狙う",
+          [
+            "成功時:体力+20",
+            "やる気(干劲)アップ(提升)",
+            "『愛嬌◯』になる",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "不安なのでやめておく",
+          [
+            "体力+10"
+          ]
+        ]
+      ],
+      "id": "HeQ1L2Q4rRB",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "福引チャンス！",
+      "choiceList": [
+        [
+          "特賞(温泉旅行券)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)+10"
+          ]
+        ],
+        [
+          "1等(特上にんじんハンバーグ)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10"
+          ]
+        ],
+        [
+          "2等(にんじん山盛り)",
+          [
+            "体力+20",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "3等(にんじん1本)",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "はずれ",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "kz2FFhCj6FD",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "Yb57P85pqyO",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ファンレター",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "5vWwa3H9Bz4",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "クリスマス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "z0dmXd4wmQo",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ファン感謝祭",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-5",
+            "スキルPt(技能点数)+25"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "1WgC1uhBcZE",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（2年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "GK1yIQk61zF",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "夏合宿（3年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "ft2AoIPkKHA",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "『月刊トゥインクル増刊号』",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+3",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "j8S6aiaVtiu",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "ネバー･ギブ･アップ･ワガハイ！",
+      "choiceList": [
+        [
+          "ちゃんとした舞台で戦うんだろ？",
+          [
+            "スタミナ(耐力)+15",
+            "根性(毅力)+5"
+          ]
+        ],
+        [
+          "競うなら準備が必要",
+          [
+            "パワー(力量)+5",
+            "賢さ(智力)+15"
+          ]
+        ]
+      ],
+      "id": "AUa5TIEbsL",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カラオケでパワーアップ！？",
+      "choiceList": [
+        [
+          "危ないテイオー！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "間に合わない…！",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "lW6Hw2SAyt",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "わがままテイオーと思い出の景色",
+      "choiceList": [
+        [
+          "よし、ゴミ拾いは任せたぞ！",
+          [
+            "根性(毅力)+20"
+          ]
+        ],
+        [
+          "よし、落書き消しは任せたぞ！",
+          [
+            "スピード(速度)+10",
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "znUo8i9gQG",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "力のヒミツ！",
+      "choiceList": [
+        [
+          "そういうことじゃない気が…",
+          [
+            "体力+10",
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "そう！ご飯を食べよう！",
+          [
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "ランダムで(有概率)スピード(速度)-5",
+            "『太り気味』になる"
+          ]
+        ]
+      ],
+      "id": "nURj9TK5sN",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "\"女帝\"vs.\"帝王\"",
+      "choiceList": [
+        [
+          "当たって砕けろだ！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "戦略練って頑張ろうな！",
+          [
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "r1sPlJcpEi",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオーの武者修行",
+      "choiceList": [
+        [
+          "トレーニングじゃ物足りないか？",
+          [
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ],
+        [
+          "いい友だちが出来たんだな",
+          [
+            "『抜け出し準備』ヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "6JjTLB9_bg",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カイチョーみたいな勝負服",
+      "choiceList": [
+        [
+          "タイは？",
+          [
+            "スピード(速度)+10",
+            "賢さ(智力)+10",
+            "確率で『注目株』になる"
+          ]
+        ],
+        [
+          "マントは？",
+          [
+            "スタミナ(耐力)+10",
+            "根性(毅力)+10",
+            "確率で『注目株』になる"
+          ]
+        ]
+      ],
+      "id": "T8_yEkPVu0",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "カイチョーとダジャレ",
+      "choiceList": [
+        [
+          "買うのか？",
+          [
+            "スタミナ(耐力)+5",
+            "パワー(力量)+5"
+          ]
+        ],
+        [
+          "帰るか？",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "H9s5gKO3M2",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "褒められちゃった！",
+      "choiceList": [
+        [
+          "楽しませてくれるから、ついね",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "期待に応えてくれるから、ついね",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "ULt569IRQH",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "叱られちゃった",
+      "choiceList": [
+        [
+          "それはルール違反だろう",
+          [
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "ちゃんと俺を見てほしい",
+          [
+            "パワー(力量)+5",
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "O8m1k2a03q",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオーのジンクス",
+      "choiceList": [
+        [
+          "今はどうだ？",
+          [
+            "スタミナ(耐力)+20"
+          ]
+        ],
+        [
+          "テイオーのジンクスかな？",
+          [
+            "賢さ(智力)+20"
+          ]
+        ]
+      ],
+      "id": "2uch362Zph",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ボクとみんなとカップケーキ",
+      "choiceList": [
+        [
+          "半分こすればいい",
+          [
+            "体力+5",
+            "やる気(干劲)アップ(提升)"
+          ]
+        ],
+        [
+          "勝負すればいい",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "6qX0a9uSj1",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "テイオー、ウマドルになる！？",
+      "choiceList": [
+        [
+          "数曲だけ見ていこうかな",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "用事があるからごめん",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "Ho7WkRQJ7d",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ボクとマヤノとオトナの時間",
+      "choiceList": [
+        [
+          "大人の味は次の機会にしたら？",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "甘いものが食べたくなってきたな〜",
+          [
+            "賢さ(智力)+10"
+          ]
+        ]
+      ],
+      "id": "toFfZc1Gwze",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "気づいちゃった！",
+      "choiceList": [
+        [
+          "テイオーの走りが好きだから",
+          [
+            "スピード(速度)+5",
+            "スタミナ(耐力)+5"
+          ]
+        ],
+        [
+          "約束を守りたいから",
+          [
+            "根性(毅力)+5",
+            "賢さ(智力)+5"
+          ]
+        ],
+        [
+          "多分テイオーと同じだよ",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "6CtCrWy_FcW",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ダンスレッスン",
+      "choiceList": [
+        [
+          "バランス感覚を鍛えよう",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ],
+        [
+          "全身の筋力をつけよう",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "ES_ZgMS5pux",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "追加の自主トレ",
+      "choiceList": [
+        [
+          "じゃあ試してみようか",
+          [
+            "体力-5",
+            "直前のトレーニングに応じたステータス(能力)+5",
+            "秋川理事長の絆ゲージ+5"
+          ]
+        ],
+        [
+          "比べるまでもない",
+          [
+            "体力+5"
+          ]
+        ]
+      ],
+      "id": "PCUIgsjB7VB",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿(2年目)にて",
+      "choiceList": [
+        [
+          "じゃあ水中バレーをしようか",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "じゃあ素潜りをしようか",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "2z7gm1ECzHH",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "新年の抱負",
+      "choiceList": [
+        [
+          "最後まで走り抜く根性作り！",
+          [
+            "根性(毅力)+10"
+          ]
+        ],
+        [
+          "しっかり走るための体調管理！",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "持ち味を活かす技術向上！",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "V3MVEpd9Rh1",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "『テイオーの健康に気を配ります』って",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "『テイオーの実力向上に努めます』って",
+          [
+            "全ステータス(能力)+5"
+          ]
+        ],
+        [
+          "『テイオーをスキルアップさせます』って",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "FFTW2UedWdV",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース勝利！",
+      "choiceList": [
+        [
+          "さすがだな！",
+          [
+            "体力-15",
+            "スピード(速度)+5",
+            "スキルPt(技能点数)+30※上昇するステータス(能力)と値はランダム"
+          ]
+        ],
+        [
+          "まだこんなものじゃないだろう？",
+          [
+            "体力-5~20",
+            "5種ステータス(能力)からランダムに(随机)1種を+5~10",
+            "スキルPt(技能点数)+30~45"
+          ]
+        ]
+      ],
+      "id": "4QTCUUVbGlq",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース入着",
+      "choiceList": [
+        [
+          "それだけ悔しがれるのも才能",
+          [
+            "体力-20",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ],
+        [
+          "なら次は1着をとるぞ！",
+          [
+            "体力-5~30",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~8",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "jXLzIDgapnN",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "無茶は厳禁！",
+      "choiceList": [
+        [
+          "無理はしないでほしい",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "その体で走れるのか？",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "DPSTL4rhPRX",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "レース敗北",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "なら証明してやろう！",
+          [
+            "体力-15~35",
+            "5種ステータス(能力)からランダムに(随机)1種を+3~5",
+            "スキルPt(技能点数)+24~30"
+          ]
+        ]
+      ],
+      "id": "mnl4SS3SzMg",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "お大事に！",
+      "choiceList": [
+        [
+          "きっちり休ませる",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-5"
+          ]
+        ],
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "CCz4pTzIrgU",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "…ボクは健康だもん",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)-5",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "T8wRj8MP2jb",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "負っけないぞー！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-10",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "I-cQPikFDto",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ノーエンカウント",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "DIZZaojrIfO",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "圧倒的な高さの目標",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "l-72ghVYJEC",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "地VS天",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ]
+      ],
+      "id": "yZlgSOJvDVj",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシックに向けた記者会見",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+5"
+          ]
+        ]
+      ],
+      "id": "UbCRxvEQ96f",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "足りないものは",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5",
+            "スキルPt(技能点数)+30",
+            "ランダムで(有概率)『切れ者』になる"
+          ]
+        ]
+      ],
+      "id": "6qhJ9LM-W7D",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "菊花賞に出るんだ！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "OeI1rJM0wE4",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ファンレター",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "sxTstL2wyQn",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "デビュー戦の後に",
+      "choiceList": [
+        [
+          "1位(帝王、発進！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムに(随机)『集中力』のヒントLv+1"
+          ]
+        ],
+        [
+          "2位",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "LZ2lOeKsn7X",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "若駒Sの後に",
+      "choiceList": [
+        [
+          "1位(三冠へ！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+3",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(三冠へ！)",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+2",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+1",
+            "スキルPt(技能点数)+30",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "Pr40NhAc9bs",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "皐月賞の後に",
+      "choiceList": [
+        [
+          "1位(一冠めっ！)",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(挑戦は終わらない！)",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "rI8r2mP6Sbt",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "日本ダービーの後に",
+      "choiceList": [
+        [
+          "1位(二冠めっ！)",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "『垂れウマ回避』のヒントLv+1",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位(下は見ない！)",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下(下は見ない！)",
+          [
+            "5種ステータス(能力)を+1",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "0PW-Die8Cks",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "菊花賞の後に",
+      "choiceList": [
+        [
+          "1位",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "2位",
+          [
+            "5種ステータス(能力)を+2",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ],
+        [
+          "3位以下(ゴールはまだ先！)",
+          [
+            "5種ステータス(能力)を+1",
+            "スキルPt(技能点数)+45",
+            "ランダムで(有概率)『垂れウマ回避』のヒントLv+1",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "5CFFt8_ckno",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "あんし〜ん笹針師、参☆上",
+      "choiceList": [
+        [
+          "強いウマ娘になれる秘孔を狙う",
+          [
+            "成功時:5種ステータス(能力)+20",
+            "失敗時:やる気(干劲)ダウン(下降)",
+            "全ステータス(能力)-15",
+            "『夜ふかし気味』になる"
+          ]
+        ],
+        [
+          "レースで勝てる秘孔を狙う",
+          [
+            "成功時:『コーナー回復◯』取得",
+            "『直線回復』取得",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ],
+        [
+          "元気で健康になれる秘孔を狙う",
+          [
+            "成功時:体力の最大値+12",
+            "体力+40",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "魅力アップの秘孔を狙う",
+          [
+            "成功時:体力+20",
+            "やる気(干劲)アップ(提升)",
+            "『愛嬌◯』になる",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "不安なのでやめておく",
+          [
+            "体力+10"
+          ]
+        ]
+      ],
+      "id": "ZrK-szpWk58",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "福引チャンス！",
+      "choiceList": [
+        [
+          "特賞(温泉旅行券)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)+10"
+          ]
+        ],
+        [
+          "1等(特上にんじんハンバーグ)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10"
+          ]
+        ],
+        [
+          "2等(にんじん山盛り)",
+          [
+            "体力+20",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "3等(にんじん1本)",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "はずれ",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "3oEMRlHMXKU",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "Sm1iZCrWV26",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クリスマス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "LbUclHQt7rJ",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "ファン感謝祭",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-5",
+            "スキルPt(技能点数)+25"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "YbmHL7TDH8Y",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿（2年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "4Hj5dG_9mAQ",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "夏合宿（3年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "3KpL0D-mePS",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "『月刊トゥインクル増刊号』",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+3",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "vonEKFKB-Kr",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "これも普通の努力です！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "Gww0sdQhO9",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "これも普通のハプニング！？",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "TS5QOGFRcs",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "求む、個性！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "W_-vv1GGs9",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "目指せ、いたずらっ子！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "1xIN8INI5W",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "個性的な走り方",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "EfVqcIAAT8",
+      "pid": "VvMG2TUZy"
+    },
+    {
+      "name": "（ニャンとも）ガラじゃない",
+      "choiceList": [
+        [
+          "癒やされることも大事だと伝える",
+          [
+            "体力+20",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ],
+        [
+          "クレバーに入店する方法を伝える",
+          [
+            "体力+10",
+            "賢さ(智力)+5",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "jjX1eMxQ0l",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "（美味しい）おせっかい",
+      "choiceList": [
+        [
+          "大根おろし",
+          [
+            "『ペースアップ(提升)』のヒントLv+1",
+            "ナイスネイチャの絆ゲージ+5"
+          ]
+        ],
+        [
+          "天ぷら祭り",
+          [
+            "やる気(干劲)アップ(提升)",
+            "体力最大値+4"
+          ]
+        ]
+      ],
+      "id": "CqxOZTYNmy",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "背、追いかけて",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "GKEhEA35qX",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "背、追い風を受けて",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "I3yBrTAtgx",
+      "pid": "VhJD342WqH"
+    },
+    {
+      "name": "あぁ、友情",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "Ji8b1jTYuZ",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "あぁ、故郷",
+      "choiceList": [
+        [
+          "質のよいシューズがいいかも",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+10",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "kIKwZKQUPh",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "輝き追いかけて",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+2",
+            "パワー(力量)+2",
+            "賢さ(智力)+2",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "YCvzWqOTGG",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "情けは人のためならず",
+      "choiceList": [
+        [
+          "早く治さないとな",
+          [
+            "体力が10回復",
+            "やる気(干劲)アップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ],
+        [
+          "この元気に負けてられないぞ！",
+          [
+            "スピード(速度)+10",
+            "直線巧者のヒントLvアップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "c6te_JTQ3g",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "2人で行くこの花道",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+10",
+            "パワー(力量)+10",
+            "孤高のプロフェッサーのヒントLvアップ(提升)",
+            "キタサンブラックの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "0mLFvNKhu3",
+      "pid": "5WcbjIR7H"
+    },
+    {
+      "name": "あぁ、友情",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "t_b_-a9kTX",
+      "pid": "V3uyHLcvP"
+    },
+    {
+      "name": "あぁ、故郷",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "zUhvzAtcNT",
+      "pid": "V3uyHLcvP"
+    },
+    {
+      "name": "これも普通の努力です！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "w6VBLVJEF7",
+      "pid": "704fcWlDE"
+    },
+    {
+      "name": "これも普通のハプニング！？",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "-"
+          ]
+        ]
+      ],
+      "id": "OM1NLZqlPv",
+      "pid": "704fcWlDE"
     }
   ],
-  "updateTime": 1616942572684,
+  "updateTime": 1617080273964,
   "races": [
     {
       "name": "中京ジュニアステークス",
