@@ -1,7 +1,7 @@
 import React from 'react';
 import db from '../db.js'
 
-import { Row,Popover,Button,Image } from 'antd';
+import { Row,Col,Popover,Button,Image } from 'antd';
 import t from './t.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -10,13 +10,18 @@ const SkillList = (props)=>{
 
   return (
     <Row gutter={0}>
-      {skillList.map((skillId)=><SkillButton key={skillId} id={skillId}></SkillButton>)}
-      </Row>
+      {skillList.map((skillId)=><Col span={12}><SkillButton key={skillId} id={skillId} usedInList={true}></SkillButton></Col>)}
+    </Row>
   )
 }
 const SkillButton = (props)=>{
   const skill = props.skill || db.get('skills').find({id:props.id}).value()
-
+  const inListStyleOverride = {
+    borderRadius:'8px',
+    color:'#303030',
+    width:'96%',
+    justifyContent:'flex-start'
+  }
     return(
       <Popover content={<>
       <p>{'技能名称： '+t(skill.name)}</p>
@@ -32,9 +37,11 @@ const SkillButton = (props)=>{
       {/* <p>冷却时间 = 基础冷却时间 * 赛道长度 / 1000</p> */}
       </>} title={skill.name}
       >
-        <Button className={'skill-btn skill-btn-'+skill.rarity} onClick={()=>props.onClick&&props.onClick(skill)}>
+        <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity} style={props.usedInList?{...inListStyleOverride}:{}} onClick={()=>props.onClick&&props.onClick(skill)}>
+          <div style={props.usedInList?{display:'flex',position:'absolute',top:4,left:8}:{}}>
           <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
-          {skill.name}
+          {`\xa0\xa0${skill.name}`}
+          </div>
         </Button>
       </Popover>
     )
