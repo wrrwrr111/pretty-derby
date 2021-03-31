@@ -33,10 +33,13 @@ const Skill = () =>{
 
   const [checkedList1, setCheckedList1] = useState([]);
   const [checkedList2, setCheckedList2] = useState([]);
+
   const [mode,setMode] = useState(mySkillList.size)
 
   const [options, setOptions] = useState([]);
-
+  // init supportMode
+  localStorage.getItem('supportMode')===null&&localStorage.setItem('supportMode',0)
+  const [mode,setMode] = useState(parseInt(localStorage.getItem('supportMode')))
 
   const checkOptions1 = [
     {label:'通用',value:'normal'},
@@ -169,7 +172,8 @@ const Skill = () =>{
       setIsModalVisible(false);
     };
     const changeMode = ()=>{
-      setMode(!mode)
+      localStorage.setItem('supportMode',1-mode)
+      setMode(1-mode)
     }
 
     const onSearch = (searchText) => {
@@ -228,10 +232,12 @@ const Skill = () =>{
             </Modal>
           </div>
         </Col>
+
       </Row>
     )}
-  </>)
-}
+    </Col>
+  </Row>
+)}
 
 export default Skill
 

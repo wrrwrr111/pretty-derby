@@ -38,13 +38,20 @@ const PlayerCard = (props)=>{
       }>
         <Card.Meta title={t(props.data.name)} ></Card.Meta>
       </Card>
-      <Modal title={props.data.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
+      <Modal title={`${props.data.name}----${t(props.data.name)}`} 
+      visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         width={800} >
-        <span>{t(props.data.name)}</span>
-        <Divider>适应</Divider>
-        <AdaptBox player={props.data}></AdaptBox>
-        <Divider>成长</Divider>
-        <GrowBox player={props.data}></GrowBox>
+        <Row justify='space-around' align='middle'>
+          <Col span={4}>
+            <Image src={cdnServer+props.data.imgUrl} preview={false} width={'100%'} />
+          </Col>
+          <Col span={19}>
+            <Divider>适应</Divider>
+            <AdaptBox player={props.data}></AdaptBox>
+            <Divider>成长</Divider>
+            <GrowBox player={props.data}></GrowBox>
+          </Col>
+        </Row>
         <Divider>技能</Divider>
         <SkillList skillList={props.data.skillList}></SkillList>
         <Divider>事件</Divider>
