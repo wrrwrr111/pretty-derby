@@ -13,7 +13,7 @@ import Player from './pages/player.js'
 import Support from './pages/support.js'
 import Nurturing from './pages/nurturing.js'
 import Nurturing2 from './pages/nurturing2.js'
-import Skill from './pages/skill.js'
+import Skill from './pages/skill_v2.js'
 import Seed from './pages/seed.js'
 
 import IntroIndex from './components/intro.js'

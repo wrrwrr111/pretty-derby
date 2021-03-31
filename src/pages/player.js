@@ -39,12 +39,12 @@ const PlayerCard = (props)=>{
         <Card.Meta title={t(props.data.name)} ></Card.Meta>
       </Card>
       <Modal title={'角色详情'} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={()=>(null)}
-        width={800} >
+             width={800} >
         <div style={{height:144,display:'flex'}}>
-          <Image src={cdnServer+props.data.imgUrl} preview={false} onClick={showModal} width={128} height={128} resizeMode={'cover'}></Image>
+          <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} height={128} resizeMode={'cover'}></Image>
           <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
-          <text style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</text>
-          <text style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</text>
+            <text style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</text>
+            <text style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</text>
           </div>
         </div>
         <Divider>适应</Divider>
@@ -197,16 +197,16 @@ const GrowBox2= (props)=>{
     cellPadding:4,
   }
   const headerCellStyle = {
-  width:'20%',
-  fontSize: 18,
-  textAlign: 'center',
-  fontWeight: 600,
-  color:'#f5f5f5',
-  textShadow: "0 2px #33333370",
-  backgroundColor:'#32cd32C0',
-  borderWidth:'thin',
-  borderStyle:'none solid solid none',
-  borderColor:'gray',
+    width:'20%',
+    fontSize: 18,
+    textAlign: 'center',
+    fontWeight: 600,
+    color:'#f5f5f5',
+    textShadow: "0 2px #33333370",
+    backgroundColor:'#32cd32C0',
+    borderWidth:'thin',
+    borderStyle:'none solid solid none',
+    borderColor:'gray',
   }
   const cellStyle = {
     width:'20%',
@@ -221,29 +221,29 @@ const GrowBox2= (props)=>{
 
   return(
     <div style={{borderRadius:'8px',borderStyle:'solid',borderWidth:'thin',borderColor:'gray'}}>
-    <table {...tableStyle} >
-     <tr>
-      <th style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0"}}>速度/スピード</th>
-      <th style={{ ...headerCellStyle }}>耐力/スタミナ</th>
-      <th style={{ ...headerCellStyle }}>力量/パワー</th>
-      <th style={{ ...headerCellStyle }}>毅力/根性</th>
-      <th style={{ ...headerCellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>智慧/賢さ</th>
-    </tr>
-      <tr>
-        <td style={{ ...cellStyle ,borderRadius:"0 0 0 8px"}}>{props.player.speedGrow}</td>
-        <td style={{ ...cellStyle }}>{props.player.staminaGrow}</td>
-        <td style={{ ...cellStyle }}>{props.player.powerGrow}</td>
-        <td style={{ ...cellStyle }}>{props.player.gutsGrow}</td>
-        <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}>{props.player.wisdomGrow}</td>
-      </tr>
-   </table>
-      </div>
+      <table {...tableStyle} >
+        <tr>
+          <th style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0"}}>速度/スピード</th>
+          <th style={{ ...headerCellStyle }}>耐力/スタミナ</th>
+          <th style={{ ...headerCellStyle }}>力量/パワー</th>
+          <th style={{ ...headerCellStyle }}>毅力/根性</th>
+          <th style={{ ...headerCellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>智慧/賢さ</th>
+        </tr>
+        <tr>
+          <td style={{ ...cellStyle ,borderRadius:"0 0 0 8px"}}>{props.player.speedGrow}</td>
+          <td style={{ ...cellStyle }}>{props.player.staminaGrow}</td>
+          <td style={{ ...cellStyle }}>{props.player.powerGrow}</td>
+          <td style={{ ...cellStyle }}>{props.player.gutsGrow}</td>
+          <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}>{props.player.wisdomGrow}</td>
+        </tr>
+      </table>
+    </div>
   )
 
 }
 
 
-  //todo filter
+//todo filter
 class Player extends React.Component{
   constructor(props){
     super(props)
@@ -258,18 +258,18 @@ class Player extends React.Component{
     return(
       <Row justify="space-around">
         <Col span={22}>
-        {
-          ['3','2','1'].map(rare=>(
-            <Row gutter={[16,16]} key={rare}>
-            <Divider>{rare}星</Divider>
-          {this.state.list.filter(item=>item.rare===rare).map(player=>
-            <Col xxl={2} lg={3} sm={6} xs={6} key={player.id}>
-              <PlayerCard data={player} onSelect={this.props.onSelect}></PlayerCard>
-            </Col>)
+          {
+            ['3','2','1'].map(rare=>(
+              <Row gutter={[16,16]} key={rare}>
+                <Divider>{rare}星</Divider>
+                {this.state.list.filter(item=>item.rare===rare).map(player=>
+                  <Col xxl={2} lg={3} sm={6} xs={6} key={player.id}>
+                    <PlayerCard data={player} onSelect={this.props.onSelect}></PlayerCard>
+                  </Col>)
+                }
+              </Row>
+            ))
           }
-          </Row>
-          ))
-        }
         </Col>
       </Row>
     )
