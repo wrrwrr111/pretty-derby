@@ -33,7 +33,9 @@ const Skill = () =>{
 
   const [checkedList1, setCheckedList1] = useState([]);
   const [checkedList2, setCheckedList2] = useState([]);
-  const [mode,setMode] = useState(mySkillList.size)
+  // init supportMode
+  localStorage.getItem('supportMode')===null&&localStorage.setItem('supportMode',0)
+  const [mode,setMode] = useState(parseInt(localStorage.getItem('supportMode')))
   const checkOptions1 = [
     {label:'通用',value:'normal'},
     {label:'短距',value:'＜短距離＞'},
@@ -146,34 +148,29 @@ const Skill = () =>{
       setIsModalVisible(false);
     };
     const changeMode = ()=>{
-      setMode(!mode)
+      localStorage.setItem('supportMode',1-mode)
+      setMode(1-mode)
     }
   const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
-  return(<>
-  <Row>
-    <Col span={2}>
+  return(
+  <Row justify="space-around">
+    <Col span={22}>
+      <Row align='middle'>
+        只显示支援卡
+        <Switch checked={mode} onChange={changeMode} />
+      </Row>
       <Button onClick={resetCheckbox}>重置</Button>
-    </Col>
-    <Col span={18}>
       <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
-    </Col>
-    <Col span={4}>
-      <Tooltip title="可以在支援卡页面配置">
-        <p>显示拥有支援卡</p>
-      </Tooltip>
-      <Switch checked={mode} onChange={changeMode} />
-    </Col>
-    <Col span={20}>
       <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
     </Col>
-  </Row>
+    <Col span={22}>
     {['ノーマル','レア','固有'].map(rare=>
       <Row gutter={[8,8]} key={rare}>
       <Divider>{rareLabel[rare]}</Divider>
       { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
           <SkillButton skill={skill} key={skill.id} onClick={showModal}></SkillButton>
-        )
-      }
+          )
+        }
       <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
         <PageHeader title={skillName}>{t(skillName)}</PageHeader>
         <Support supportList={skillSupportList} ></Support>
@@ -181,8 +178,9 @@ const Skill = () =>{
       </Modal>
       </Row>
     )}
-  </>)
-}
+    </Col>
+  </Row>
+)}
 
 export default Skill
 
