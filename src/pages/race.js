@@ -92,7 +92,7 @@ import { Table } from 'antd';
 
   const Race = (props) =>{
     const useViewport = () => {
-      const [width, setWidth] = React.useState(window.innerWidth);
+      // const [width, setWidth] = React.useState(window.innerWidth);
       const [height,setHeight] = React.useState(window.innerHeight);
       React.useEffect(() => {
         const handleWindowResize = () => setHeight(window.innerHeight);

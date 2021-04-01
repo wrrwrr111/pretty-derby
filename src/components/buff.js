@@ -1,8 +1,9 @@
-import React,{useState} from 'react';
+import React from 'react';
+// import {useState} from 'react';
 import db from '../db.js'
 
 import { List,Popover,Button } from 'antd';
-import t from './t.js'
+// import t from './t.js'
 
 const BuffButton = (props)=>{
   const buffs = db.get('buffs').value()

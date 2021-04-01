@@ -1,10 +1,9 @@
-import React,{useState} from 'react';
-import db from '../db.js'
-
+import React from 'react';
+// import {useState} from 'react';
 import { Table,Popover } from 'antd';
-import t from './t.js'
 
-const { Column, ColumnGroup } = Table;
+import db from '../db.js'
+import t from './t.js'
 
 const EffectTable = (props)=>{
   const effects = db.get('effects').value()
