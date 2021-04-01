@@ -263,16 +263,13 @@ const Skill = () =>{
                   }
                   <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
                     <PageHeader title={skillName}>{t(skillName)}</PageHeader>
-                    <Support supportList={skillSupportList} ></Support>
+                    <Support supportList={skillSupportList} filter={false}></Support>
                     <Player playerList={skillPlayerList} ></Player>
                   </Modal>
                 </Row>
               )}
             </div>
           </Col>
-
-
-
         </Row>
       </div>
     </div>

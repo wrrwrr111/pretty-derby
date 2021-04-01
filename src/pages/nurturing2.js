@@ -185,7 +185,7 @@ const Nurturing = () =>{
   const dynamicCardHeight = Math.floor(dynamicContentHeight / 2)
   const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4) 
   const dynamicCardBoxWidth = dynamicCardWidth * 3
-  
+
   return(
     <div style={{display:'flex',justifyContent:'center'}}>
       <div style={{height:dynamicContentHeight,overflowY:'auto'}}>
@@ -269,7 +269,7 @@ const Nurturing = () =>{
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
-        <Support onSelect={needSelect?handleSelectSupport:null}></Support>
+        <Support onSelect={needSelect?handleSelectSupport:null} filter={false}></Support>
       </Modal>
       <Modal visible={isRaceVisible} onOk={closeRace} onCancel={closeRace} width={'80%'}>
         <Race onSelect={needSelect?handleSelectRace:null}></Race>
