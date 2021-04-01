@@ -1,7 +1,7 @@
 {
   "players": [
     {
-      "name": "サイレンススズカ",
+      "name": "サイレントイノセンス",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "D",
@@ -164,10 +164,13 @@
         "jc-y8pTTJW",
         "sFdvYuvNPG"
       ],
-      "imgUrl": "img/players/B5ZpDRkc3gW.png"
+      "imgUrl": "img/chara_card/chr_icon_1002_100201_01.png",
+      "charaName": "サイレンススズカ",
+      "db_id": 100201,
+      "default_rarity": 3
     },
     {
-      "name": "スペシャルウィーク",
+      "name": "スペシャルドリーマー",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "F",
@@ -321,10 +324,13 @@
         "TSDcq3oKT8s",
         "z8o7DIWJkt"
       ],
-      "imgUrl": "img/players/ELEK163W3oZ.png"
+      "imgUrl": "img/chara_card/chr_icon_1001_100101_01.png",
+      "charaName": "スペシャルウィーク",
+      "db_id": 100101,
+      "default_rarity": 3
     },
     {
-      "name": "マルゼンスキー",
+      "name": "フォーミュラオブルージュ",
       "grass": "A",
       "dirt": "D",
       "shortDistance": "B",
@@ -510,10 +516,13 @@
         "Eb4G1G0HCZ",
         "TQAn5U05MN"
       ],
-      "imgUrl": "img/players/q5Z2X7TCqU_.png"
+      "imgUrl": "img/chara_card/chr_icon_1004_100401_01.png",
+      "charaName": "マルゼンスキー",
+      "db_id": 100401,
+      "default_rarity": 3
     },
     {
-      "name": "トウカイテイオー",
+      "name": "トップ・オブ・ジョイフル",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "F",
@@ -716,10 +725,13 @@
         "sWVG7_tDNvo",
         "6VaiCBLg6d"
       ],
-      "imgUrl": "img/players/eFUs24ZUBZB.png"
+      "imgUrl": "img/chara_card/chr_icon_1003_100301_01.png",
+      "charaName": "トウカイテイオー",
+      "db_id": 100301,
+      "default_rarity": 3
     },
     {
-      "name": "オグリキャップ",
+      "name": "スターライトビート",
       "grass": "A",
       "dirt": "B",
       "shortDistance": "E",
@@ -881,10 +893,13 @@
         "iZfjbk3QWoo",
         "UTa1_vkW946"
       ],
-      "imgUrl": "img/players/yGVHGFP5w4r.png"
+      "imgUrl": "img/chara_card/chr_icon_1006_100601_01.png",
+      "charaName": "オグリキャップ",
+      "db_id": 100601,
+      "default_rarity": 3
     },
     {
-      "name": "タイキシャトル",
+      "name": "ワイルド・フロンティア",
       "grass": "A",
       "dirt": "B",
       "shortDistance": "A",
@@ -1052,10 +1067,13 @@
         "I8e5R8e_iI",
         "w5fVCG04h"
       ],
-      "imgUrl": "img/players/G9XvN_-v7ns.png"
+      "imgUrl": "img/chara_card/chr_icon_1010_101001_01.png",
+      "charaName": "タイキシャトル",
+      "db_id": 101001,
+      "default_rarity": 3
     },
     {
-      "name": "シンボリルドルフ",
+      "name": "ロード・オブ・エンペラー",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "E",
@@ -1239,10 +1257,13 @@
         "84p-yg3Ueb",
         "1Fbl_klNqq"
       ],
-      "imgUrl": "img/players/UD12auVv6Ew.png"
+      "imgUrl": "img/chara_card/chr_icon_1017_101701_01.png",
+      "charaName": "シンボリルドルフ",
+      "db_id": 101701,
+      "default_rarity": 3
     },
     {
-      "name": "メジロマックイーン",
+      "name": "エレガンス・ライン",
       "grass": "A",
       "dirt": "E",
       "shortDistance": "G",
@@ -1439,10 +1460,13 @@
         "Lv5bWWlO15w",
         "esqCDJMpyY"
       ],
-      "imgUrl": "img/players/u5-gjKlwNzu.png"
+      "imgUrl": "img/chara_card/chr_icon_1013_101301_01.png",
+      "charaName": "メジロマックイーン",
+      "db_id": 101301,
+      "default_rarity": 3
     },
     {
-      "name": "ゴールドシップ",
+      "name": "レッドストライフ",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -1621,10 +1645,13 @@
         "d2COzXtV8DN",
         "jbvFhWVL5A"
       ],
-      "imgUrl": "img/players/7jVDy4t60iW.png"
+      "imgUrl": "img/chara_card/chr_icon_1007_100701_01.png",
+      "charaName": "ゴールドシップ",
+      "db_id": 100701,
+      "default_rarity": 2
     },
     {
-      "name": "ライスシャワー",
+      "name": "ローゼスドリーム",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "E",
@@ -1792,10 +1819,13 @@
         "Lv5bWWlO15w",
         "0hNrL5bQB"
       ],
-      "imgUrl": "img/players/PIdtsFoksO8.png"
+      "imgUrl": "img/chara_card/chr_icon_1030_103001_01.png",
+      "charaName": "ライスシャワー",
+      "db_id": 103001,
+      "default_rarity": 3
     },
     {
-      "name": "ダイワスカーレット",
+      "name": "トップ・オブ・ブルー",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "F",
@@ -1977,10 +2007,13 @@
         "tiXFXDrN4c",
         "ec5gPDKBP"
       ],
-      "imgUrl": "img/players/DNA9sWyP3kJ.png"
+      "imgUrl": "img/chara_card/chr_icon_1009_100901_01.png",
+      "charaName": "ダイワスカーレット",
+      "db_id": 100901,
+      "default_rarity": 2
     },
     {
-      "name": "ウオッカ",
+      "name": "ワイルドトップギア",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "F",
@@ -2168,10 +2201,13 @@
         "I8e5R8e_iI",
         "P6sYgUx1Zc"
       ],
-      "imgUrl": "img/players/q0_L9yDbufX.png"
+      "imgUrl": "img/chara_card/chr_icon_1008_100801_01.png",
+      "charaName": "ウオッカ",
+      "db_id": 100801,
+      "default_rarity": 2
     },
     {
-      "name": "グラスワンダー",
+      "name": "岩穿つ青",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -2333,10 +2369,13 @@
         "gGqvq_Mnmp",
         "KghBRzfD2Mn"
       ],
-      "imgUrl": "img/players/W2nPLkefb0W.png"
+      "imgUrl": "img/chara_card/chr_icon_1011_101101_01.png",
+      "charaName": "グラスワンダー",
+      "db_id": 101101,
+      "default_rarity": 2
     },
     {
-      "name": "エルコンドルパサー",
+      "name": "エル☆Número 1",
       "grass": "A",
       "dirt": "B",
       "shortDistance": "F",
@@ -2502,10 +2541,13 @@
         "QgJT1woGQD",
         "esqCDJMpyY"
       ],
-      "imgUrl": "img/players/z5gq4pXSTL.png"
+      "imgUrl": "img/chara_card/chr_icon_1014_101401_01.png",
+      "charaName": "エルコンドルパサー",
+      "db_id": 101401,
+      "default_rarity": 2
     },
     {
-      "name": "エアグルーヴ",
+      "name": "エンプレスロード",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "C",
@@ -2683,10 +2725,13 @@
         "BYfvUdzD_1",
         "_CVo7uOMlW"
       ],
-      "imgUrl": "img/players/B1hnMrJ98TQ.png"
+      "imgUrl": "img/chara_card/chr_icon_1018_101801_01.png",
+      "charaName": "エアグルーヴ",
+      "db_id": 101801,
+      "default_rarity": 2
     },
     {
-      "name": "マヤノトップガン",
+      "name": "すくらんぶる☆ゾーン",
       "grass": "A",
       "dirt": "E",
       "shortDistance": "D",
@@ -2857,10 +2902,13 @@
         "p71TuCN_n-G",
         "LlNleFbUc"
       ],
-      "imgUrl": "img/players/BJTPrfuBw_U.png"
+      "imgUrl": "img/chara_card/chr_icon_1024_102401_01.png",
+      "charaName": "マヤノトップガン",
+      "db_id": 102401,
+      "default_rarity": 2
     },
     {
-      "name": "スーパークリーク",
+      "name": "マーマリングストリーム",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -3026,10 +3074,13 @@
         "Cz9RY9VLaQ",
         "6EmNJO1pu5B"
       ],
-      "imgUrl": "img/players/ZdGCkg3qGCV.png"
+      "imgUrl": "img/chara_card/chr_icon_1045_104501_01.png",
+      "charaName": "スーパークリーク",
+      "db_id": 104501,
+      "default_rarity": 2
     },
     {
-      "name": "メジロライアン",
+      "name": "ストレート・ライン",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "E",
@@ -3196,10 +3247,13 @@
         "EfTxxN-wUe",
         "js7Tquw5-"
       ],
-      "imgUrl": "img/players/2cL6XMGrY_.png"
+      "imgUrl": "img/chara_card/chr_icon_1027_102701_01.png",
+      "charaName": "メジロライアン",
+      "db_id": 102701,
+      "default_rarity": 1
     },
     {
-      "name": "ウイニングチケット",
+      "name": "Go To Winning!",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -3374,10 +3428,13 @@
         "6IIADrYBkD3",
         "7fkScOPnxBk"
       ],
-      "imgUrl": "img/players/gzvX1d3NaZd.png"
+      "imgUrl": "img/chara_card/chr_icon_1035_103501_01.png",
+      "charaName": "ウイニングチケット",
+      "db_id": 103501,
+      "default_rarity": 1
     },
     {
-      "name": "アグネスタキオン",
+      "name": "tach-nology",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -3554,10 +3611,13 @@
         "lSFwxam1V3y",
         "ec5gPDKBP"
       ],
-      "imgUrl": "img/players/o4fqn49J75q.png"
+      "imgUrl": "img/chara_card/chr_icon_1032_103201_01.png",
+      "charaName": "アグネスタキオン",
+      "db_id": 103201,
+      "default_rarity": 1
     },
     {
-      "name": "サクラバクシンオー",
+      "name": "サクラ、すすめ！",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "A",
@@ -3759,10 +3819,13 @@
         "HFa5ebwAvh",
         "iCXuxTHYl2"
       ],
-      "imgUrl": "img/players/9K-tR5voO_o.png"
+      "imgUrl": "img/chara_card/chr_icon_1041_104101_01.png",
+      "charaName": "サクラバクシンオー",
+      "db_id": 104101,
+      "default_rarity": 1
     },
     {
-      "name": "マチカネフクキタル",
+      "name": "運気上昇☆幸福万来",
       "grass": "A",
       "dirt": "F",
       "shortDistance": "F",
@@ -3922,10 +3985,13 @@
         "D9s0HhBzm-",
         "WmP7ZJPgZd"
       ],
-      "imgUrl": "img/players/FFFfcX8C4Eu.png"
+      "imgUrl": "img/chara_card/chr_icon_1056_105601_01.png",
+      "charaName": "マチカネフクキタル",
+      "db_id": 105601,
+      "default_rarity": 1
     },
     {
-      "name": "ハルウララ",
+      "name": "うららん一等賞♪",
       "grass": "G",
       "dirt": "A",
       "shortDistance": "A",
@@ -4102,10 +4168,13 @@
         "O-c-BZW-2n",
         "gRnzIz9Bmq"
       ],
-      "imgUrl": "img/players/BYD2STdm8Q2.png"
+      "imgUrl": "img/chara_card/chr_icon_1052_105201_01.png",
+      "charaName": "ハルウララ",
+      "db_id": 105201,
+      "default_rarity": 1
     },
     {
-      "name": "ナイスネイチャ",
+      "name": "ポインセチア・リボン",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "G",
@@ -4276,10 +4345,13 @@
         "LXINgxRd1tx",
         "r5zwRcqgP2"
       ],
-      "imgUrl": "img/players/3vSmdMqSLSz.png"
+      "imgUrl": "img/chara_card/chr_icon_1060_106001_01.png",
+      "charaName": "ナイスネイチャ",
+      "db_id": 106001,
+      "default_rarity": 1
     },
     {
-      "name": "キングヘイロー",
+      "name": "キング・オブ・エメラルド",
       "grass": "A",
       "dirt": "G",
       "shortDistance": "A",
@@ -4455,10 +4527,13 @@
         "JfZuGZHSjLl",
         "__TnxX7YCe"
       ],
-      "imgUrl": "img/players/4UN9zKF73Ks.png"
+      "imgUrl": "img/chara_card/chr_icon_1061_106101_01.png",
+      "charaName": "キングヘイロー",
+      "db_id": 106101,
+      "default_rarity": 1
     },
     {
-      "name": "テイエムオペラオー",
+      "name": "オー・ソレ・スーオ！",
       "grass": "A",
       "dirt": "E",
       "shortDistance": "G",
@@ -4637,12 +4712,15 @@
         "svT-34r60",
         "NXiO9P0Hav"
       ],
-      "imgUrl": "img/players/0uJ0iropRbr.png"
+      "imgUrl": "img/chara_card/chr_icon_1015_101501_01.png",
+      "charaName": "テイエムオペラオー",
+      "db_id": 101501,
+      "default_rarity": 3
     },
     {
       "gwId": "260713",
-      "name": "ミホノブルボン",
-      "imgUrl": "img/players/ZK0ho0Wv9.png",
+      "name": "MB-19890425",
+      "imgUrl": "img/chara_card/chr_icon_1026_102601_01.png",
       "rare": "3",
       "grass": "A",
       "dirt": "G",
@@ -4813,12 +4891,15 @@
             "G1 / 中山 / 芝 / 2500m(長距離) / 右内"
           ]
         ]
-      ]
+      ],
+      "charaName": "ミホノブルボン",
+      "db_id": 102601,
+      "default_rarity": 3
     },
     {
       "gwId": "262557",
-      "name": "ビワハヤヒデ",
-      "imgUrl": "img/players/VMUNBsfx-.png",
+      "name": "pf.Victory formula...",
+      "imgUrl": "img/chara_card/chr_icon_1023_102301_01.png",
       "rare": "3",
       "grass": "A",
       "dirt": "F",
@@ -4992,12 +5073,15 @@
             "G1 / 中山 / 芝 / 2500m(長距離) / 右内"
           ]
         ]
-      ]
+      ],
+      "charaName": "ビワハヤヒデ",
+      "db_id": 102301,
+      "default_rarity": 3
     },
     {
       "gwId": "266048",
-      "name": "メジロマックイーン(新勝負服)",
-      "imgUrl": "img/players/zTxOqfQfU.png",
+      "name": "エンド・オブ・スカイ",
+      "imgUrl": "img/chara_card/chr_icon_1013_101302_01.png",
       "id": "zTxOqfQfU",
       "rare": "3",
       "grass": "A",
@@ -5151,12 +5235,15 @@
             "G1 / 東京 / 芝 / 2000m(中距離) / 左"
           ]
         ]
-      ]
+      ],
+      "charaName": "メジロマックイーン",
+      "db_id": 101302,
+      "default_rarity": 3
     },
     {
       "gwId": "266047",
-      "name": "トウカイテイオー(新勝負服)",
-      "imgUrl": "img/players/ZkLLZhGL5.png",
+      "name": "ビヨンド・ザ・ホライズン",
+      "imgUrl": "img/chara_card/chr_icon_1003_100302_01.png",
       "id": "ZkLLZhGL5",
       "rare": "3",
       "grass": "A",
@@ -5319,7 +5406,10 @@
             "G1 / 中山 / 芝 / 2500m(長距離) / 右内"
           ]
         ]
-      ]
+      ],
+      "charaName": "トウカイテイオー",
+      "db_id": 100302,
+      "default_rarity": 3
     }
   ],
   "supports": [
@@ -70288,7 +70378,7 @@
       "pid": "wyz7djOUrz"
     }
   ],
-  "updateTime": 1617261822874,
+  "updateTime": 1617272678450,
   "races": [
     {
       "name": "中京ジュニアステークス",
