@@ -54,43 +54,36 @@ const SupportCard = (props)=>{
     </>
   )
 }
-class Support extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      list:props.supportList,
-      chooseMode:false,
-      showMode:false,
-      chosenList:db.get('mySupports').value()||[],
-      checkedList:[]}
-    this.effects = db.get('effects').value()
-    this.checkOptions = Object.keys(this.effects)
-                          .map(key=>{return {label:t(this.effects[key].name),value:key}})
+
+const Support = (props)=>{
+  const [list,setList]=useState(props.supportList||db.get('supports').value())
+  const [chooseMode,setChooseMode]=useState(false)
+  const [showMode,setShowMode]=useState(false)
+  const [chosenList,setChosenList]=useState(db.get('mySupports').value()||[])
+  const [checkedList,setCheckedList]=useState([])
+  
+  const effects = db.get('effects').value()
+  const checkOptions = Object.keys(effects).map(key=>{return {label:t(effects[key].name),value:key}})
+  const changeChooseMode = () =>{
+    setChooseMode(!chooseMode)
+    setShowMode(!chooseMode)
   }
-  componentDidUpdate(prevProps){
-    if(this.props.supportList !== prevProps.supportList){
-      this.setState({list:this.props.supportList})
-    }
+  const changeShowMode = () =>{
+    setShowMode(!showMode)
   }
-  changeChooseMode=()=>{
-    this.setState({chooseMode:!this.state.chooseMode})
-    this.setState({showMode:!this.state.chooseMode})
-  }
-  changeShowMode=()=>{
-    this.setState({showMode:!this.state.showMode})
-  }
-  onSelect=(item)=>{
-    let index = this.state.chosenList.indexOf(item.id)
+  const onSelect = (item) =>{
+    let index = chosenList.indexOf(item.id)
+    let tempList = chosenList;
     if (index === -1){
-      this.state.chosenList.push(item.id)
+      tempList.push(item.id)
     }else{
-      this.state.chosenList.splice(index,1)
+      tempList.splice(index,1)
     }
-    db.update('mySupports',this.state.chosenList).write()
-    this.setState({})
+    db.update('mySupports',tempList).write()
+    setChosenList(tempList)
   }
-  onChange = (checkedValues)=>{
-    let tempList = this.props.supportList
+  const onChange = (checkedValues)=>{
+    let tempList = list
     if(checkedValues.length){
       tempList = tempList.filter(support=>{
         let flag = 0;
@@ -104,32 +97,30 @@ class Support extends React.Component{
         return flag == checkedValues.length
       })
     }
-    this.setState({
-      checkedList:checkedValues,
-      list:tempList
-    })
+    setCheckedList(checkedValues)
+    setList(tempList)
   }
-  render(){
+
     return (
       <Row justify="space-around">
         <Col span={22}>
-          <Button onClick={this.changeShowMode}>切换显示模式</Button>
-          <Button onClick={this.changeChooseMode}>配置卡组</Button>
-          {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
+          <Button onClick={changeShowMode}>切换显示模式</Button>
+          <Button onClick={changeChooseMode}>配置卡组</Button>
+          {chooseMode && <Button onClick={changeChooseMode} type='primary'>配置完成</Button>}
         </Col>
         <Col span={22}>
-          <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
+          <CheckboxGroup options={checkOptions} value={checkedList} onChange={onChange} />
         </Col>
         <Col span={22}>
       {
         ['SSR','SR','R'].map(rare=>
           <Row gutter={[16,16]} key={rare}>
             <Divider>{rare}</Divider>
-            {this.state.list.filter(item=>item.rare===rare).map(support=>
+            {list.filter(item=>item.rare===rare).map(support=>
               <Col xxl={2} lg={3} sm={4} xs={6} key={support.id}
-              className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
-                <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
-                chooseMode={this.props.chooseMode}></SupportCard>
+              className={showMode&&chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
+                <SupportCard data={support} onSelect={chooseMode?onSelect:props.onSelect}
+                chooseMode={props.chooseMode}></SupportCard>
                 {/* {support.effects} */}
               </Col>)
             }
@@ -139,10 +130,6 @@ class Support extends React.Component{
         </Col>
       </Row>
       )
-  }
 }
 
-Support.defaultProps={
-  supportList:db.get('supports').value()
-}
 export default Support

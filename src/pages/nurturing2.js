@@ -67,9 +67,6 @@ const Nurturing = () =>{
   const [races,setRaces] = useState(selected.races)
 
   const [decks,setDecks] = useState(db.get('myDecks').value())
-  const [visible, setVisible] = useState(false);
-
-
 
   const showPlayer = () => {
     setIsPlayerVisible(true);
@@ -123,12 +120,6 @@ const Nurturing = () =>{
     // save
     selected.races = data
     db.get('selected').assign(selected).write()
-  }
-  const showDrawer = ()=>{
-    setVisible(true)
-  }
-  const onDrawerClose = (data)=>{
-    setVisible(false)
   }
 
   // 卡组相关操作
@@ -194,14 +185,23 @@ const Nurturing = () =>{
   const dynamicCardHeight = Math.floor(dynamicContentHeight / 2)
   const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4) 
   const dynamicCardBoxWidth = dynamicCardWidth * 3
-  console.log(dynamicContentHeight,dynamicCardHeight,dynamicCardWidth,dynamicCardBoxWidth)
+  
   return(
     <div style={{display:'flex',justifyContent:'center'}}>
       <div style={{height:dynamicContentHeight,overflowY:'auto'}}>
         <Button className='add-player' type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>支援卡查询</Button>
         <Button onClick={showRace}>选择关注赛事</Button>
-        <Button onClick={showDrawer}>查看关注赛事</Button>
+        <Popover content={
+          <Table dataSource={races} pagination={false} style={{height:dynamicContentHeight,overflow:'auto'}}>
+            <Column title="名称" dataIndex="name" key="name" />
+            <Column title="时间" dataIndex="date" key="date" />
+            <Column title="级别" dataIndex="grade" key="grade" />
+            <Column title="类型" dataIndex="distanceType" key="distanceType" />
+          </Table>
+        }>
+          <Button>关注赛事</Button>
+        </Popover>
         <Popover width={'100%'} content={
           <>
             <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
@@ -236,25 +236,7 @@ const Nurturing = () =>{
           <SkillList skillList={player.skillList}></SkillList>
         </>}
 
-        <Drawer
-          title="关注赛事"
-          onClose={onDrawerClose}
-          visible={visible}
-          getContainer={false}
-          style={{ position: 'absolute' }}
-          closable={true}
-          placement="left"
-          mask={true}
-          maskClosable={true}
-          width={'95%'}
-        >
-          <Table dataSource={races} pagination={false}>
-            <Column title="名称" dataIndex="name" key="name" />
-            <Column title="时间" dataIndex="date" key="date" />
-            <Column title="级别" dataIndex="grade" key="grade" />
-            <Column title="类型" dataIndex="distanceType" key="distanceType" />
-          </Table>
-        </Drawer>
+
 
       </div>
 

@@ -49,6 +49,10 @@ const AppPc = ()=>{
     localStorage.setItem('introV',null)
   }
 
+  //隐藏主要的overflow
+  const dom = document.getElementsByTagName("body");
+  dom[0].style.overflowY = "scroll";
+
   return (
       // <UserAgentProvider ua={window.navigator.userAgent}>
 <Router>
