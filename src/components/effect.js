@@ -1,10 +1,9 @@
-import React,{useState} from 'react';
-import db from '../db.js'
-
+import React from 'react';
+// import {useState} from 'react';
 import { Table,Popover } from 'antd';
-import t from './t.js'
 
-const { Column, ColumnGroup } = Table;
+import db from '../db.js'
+import t from './t.js'
 
 const EffectTable = (props)=>{
   const effects = db.get('effects').value()
@@ -25,6 +24,9 @@ const EffectTable = (props)=>{
     {title:'lv30',dataIndex:'limit_lv30',key:'limit_lv30',render:(text,record)=>
       Math.max(record.init,record.limit_lv5,record.limit_lv10,record.limit_lv15,record.limit_lv20,
         record.limit_lv25,record.limit_lv30)},
+    {title:'lv35',dataIndex:'limit_lv35',key:'limit_lv35',render:(text,record)=>
+        Math.max(record.init,record.limit_lv5,record.limit_lv10,record.limit_lv15,record.limit_lv20,
+          record.limit_lv25,record.limit_lv30,record.limit_lv35)},
     {title:'lv40',dataIndex:'limit_lv40',key:'limit_lv40',render:(text,record)=>
       Math.max(record.init,record.limit_lv5,record.limit_lv10,record.limit_lv15,record.limit_lv20,
         record.limit_lv25,record.limit_lv30,record.limit_lv35,record.limit_lv40)},
