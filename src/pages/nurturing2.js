@@ -191,8 +191,8 @@ const Nurturing = () =>{
   };
 
   const dynamicContentHeight = useViewport().height -128
-  const dynamicCardHeight = dynamicContentHeight / 2
-  const dynamicCardWidth = dynamicCardHeight * 3 / 4 
+  const dynamicCardHeight = Math.floor(dynamicContentHeight / 2)
+  const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4) 
   const dynamicCardBoxWidth = dynamicCardWidth * 3
   console.log(dynamicContentHeight,dynamicCardHeight,dynamicCardWidth,dynamicCardBoxWidth)
   return(
