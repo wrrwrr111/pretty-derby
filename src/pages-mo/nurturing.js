@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {withRouter} from 'react-router-dom';
 import shortid from 'shortid'
 import db from '../db.js'
 
@@ -10,45 +11,15 @@ import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
 
 // import Race from './race.js'
-import Player from './player.js'
-import Support from './support.js'
+import Player from '../pages/player.js'
+import Support from '../pages/support.js'
 
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 
-// 培育界面 马娘赛程
-const RaceList = (props) =>{
-  return (
-    <Row className={'race-row'}>
-      {
-        props.raceList.map((race,index)=>{
-          // 忽略出道战
-          if(race[1][2]){
-            return(
-          <Col span={12} key={index}>
-            <Row className={'race-row-'+index%4}>
-              <Col span={4} className={'race-name'} >
-                <p>{race[0]}</p>
-              </Col>
-              <Col span = {20} className={'race-detail'}>
-              {race[1].map((item,index)=>
-                  <p key={index}>{item}</p>
-                  )}
-              </Col>
-            </Row>
-          </Col>
-            )
-          }else{
-            return null
-          }
-        }
-      )}
-    </Row>
-  )
-}
 
-const Nurturing = () =>{
+const Nurturing = (props) =>{
   const [needSelect,setNeedSelect] = useState(false)
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
@@ -160,7 +131,12 @@ const Nurturing = () =>{
     setDecks([...db.get('myDecks').value()])
   }
 
-
+  const toSupportDetail = (id)=>{
+    props.history.push(`/support-detail/${id}`)
+  }
+  const toPlayerDetail = (id)=>{
+    props.history.push(`/player-detail/${id}/1`)
+  }
   return(
     <Row className='nurturing-box' gutter={[16,16]}>
       <Col>
@@ -191,48 +167,19 @@ const Nurturing = () =>{
           </>
           }><Button>卡组</Button>
         </Popover>
-
-        <br></br>
-
+        {player.imgUrl&&
+          <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='128'
+          onClick={()=>toPlayerDetail(player.id)}></img>
+        }
       </Col>
-        <Row justify="space-around">
-          <Col span={4}>{
-            player.imgUrl&&
-            <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='100%'></img>
-          }
-          </Col>
-          <Col span={4}>
-            <Popover content={<EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>}>
-              <Button style={{width:'100%',height:'100%'}}>事件</Button>
-            </Popover>
-          </Col>
-          <Col span={4}>
-            <Popover content={<RaceList raceList={player.id?player.raceList:[]}></RaceList>}>
-              <Button style={{width:'100%',height:'100%'}}>赛程</Button>
-            </Popover>
-          </Col>
-          <Col span={4}>
-            <Popover content={<SkillList skillList={player.id?player.skillList:[]}></SkillList>}>
-              <Button style={{width:'100%',height:'100%'}}>技能</Button>
-            </Popover>
-          </Col>
-        </Row>
 
         <Row justify="space-around">
         {[0,1,2,3,4,5].map(index=>
           <Col span={7} key={index} style={{}}>
-            <Tooltip title="选择支援卡">
-              <Button icon={<EditOutlined />} onClick={()=>showSupport(index)}>支援卡</Button>
-            </Tooltip>
+            <Button icon={<EditOutlined />} onClick={()=>showSupport(index)}>支援卡</Button>
             {supports[index]&&supports[index].id&&
-
-            <Popover mask={true} content={<>
-              <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
-              <Divider style={{margin:'8px 0'}}></Divider>
-              <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
-            </>}>
-              <img src={cdnServer+supports[index].imgUrl} alt={supports[index].name} width={'100%'}></img>
-            </Popover>
+              <img src={cdnServer+supports[index].imgUrl} alt={supports[index].name} width={'100%'}
+              onClick={()=>toSupportDetail(supports[index].id)}></img>
             }
           </Col>
         )}
@@ -253,6 +200,6 @@ const Nurturing = () =>{
   )
 }
 
-export default Nurturing
+export default withRouter(Nurturing)
 
 

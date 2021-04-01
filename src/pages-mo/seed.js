@@ -11,8 +11,8 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import axios from 'axios'
 import db from '../db.js'
 
-import Player from './player.js'
-import Support from './support.js'
+import Player from '../pages/player.js'
+import Support from '../pages/support.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 let userId = db.get('userId').value()
 

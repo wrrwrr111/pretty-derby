@@ -3,10 +3,8 @@ import db from '../db.js'
 import t from '../components/t.js'
 import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip} from 'antd';
 
-import {EventList} from '../components/event.js'
-import {SkillList} from '../components/skill.js'
-import {EffectTable} from '../components/effect.js'
 
+import SupportDetail from '../components/support-detail.js'
 const CheckboxGroup = Checkbox.Group
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -35,25 +33,9 @@ const SupportCard = (props)=>{
       </Tooltip>
 
       <Modal title={`${props.data.name}----${t(props.data.charaName)}`}
-             visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
-             width={800} >
-        <div style={{display:'flex',alignItems:'center',justifyContent:'flex-start',height:192,padding:16}}>
-          <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} />
-          <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around',height:'100%',padding:16}}>
-            <div style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</div>
-            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</div>
-          </div>
-        </div>
-        <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
-        <Divider style={{margin:'4px 0'}}>培训技能</Divider>
-        <SkillList skillList={props.data.trainingEventSkill}></SkillList>
-        <Divider style={{margin:'4px 0'}}>自带技能</Divider>
-        <SkillList skillList={props.data.possessionSkill}></SkillList>
-
-
-        <Divider>育成效果</Divider>
-        <EffectTable effects={props.data.effects} rarity={props.data.rarity}></EffectTable>
-
+            visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
+            width={800} >
+        <SupportDetail supportId={props.data.id}></SupportDetail>
       </Modal>
     </>
   )
