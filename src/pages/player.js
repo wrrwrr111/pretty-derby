@@ -37,12 +37,14 @@ const PlayerCard = (props)=>{
 
       }>
         <Card.Meta title={t(props.data.name)} ></Card.Meta>
+        <Card.Meta title={t(props.data.charaName)} ></Card.Meta>
       </Card>
       <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null} width={800} >
         <div style={{height:144,display:'flex'}}>
           <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} height={128} resizemode={'cover'}></Image>
           <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
-            <div style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</div>
+            <div style={{fontSize:20,fontWeight:700}}>{t(props.data.charaName)}</div>
+            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.charaName}</div>
             <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</div>
           </div>
         </div>
