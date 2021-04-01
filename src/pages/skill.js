@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Divider,Row,Col,Tooltip,Button,Checkbox,Modal,PageHeader,Switch} from 'antd';
+import { Divider,Row,Col,Button,Checkbox,Modal,PageHeader,Switch,Input} from 'antd';
 
 import db from '../db.js'
 import Support from './support.js'
@@ -7,7 +7,7 @@ import Player from './player.js'
 import t from '../components/t.js'
 import {SkillButton} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
-
+const { Search } = Input
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const Skill = () =>{
@@ -151,6 +151,15 @@ const Skill = () =>{
       localStorage.setItem('supportMode',1-mode)
       setMode(1-mode)
     }
+
+    const onSearch = (searchText) => {
+      const fullskillList = allSkillList; 
+      const tempSkillList = fullskillList.filter(item => (item.name).indexOf(searchText) > -1);
+      setCheckedList1([])
+      setCheckedList2([])
+      setSkillList(tempSkillList)
+    };
+
   const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
   return(
   <Row justify="space-around">
@@ -162,6 +171,16 @@ const Skill = () =>{
       <Button onClick={resetCheckbox}>重置</Button>
       <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
       <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
+      <div>
+        <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>技能搜索</span>
+        <Search
+          placeholder="搜索技能名称"
+          enterButton="开始搜索"
+          size="middle"
+          style={{ width: 400 }}
+          onSearch={onSearch}
+        />
+      </div>
     </Col>
     <Col span={22}>
     {['ノーマル','レア','固有'].map(rare=>
