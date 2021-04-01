@@ -77,7 +77,7 @@ const Skill = () =>{
   const onChange1=(checkedValues)=>{
     setCheckedList1(checkedValues)
     updateSkillList(checkedValues,checkedList2,checkedList3)
-    
+
   }
   const onChange2 = (checkedValues)=>{
     setCheckedList2(checkedValues)
@@ -194,14 +194,14 @@ const Skill = () =>{
   }
 
   const onSearch = (searchText) => {
-    const fullSkillList = allSkillList; 
+    const fullSkillList = allSkillList;
     const tempSkillList = fullSkillList.filter(item => (item.name).indexOf(searchText) > -1);
     setCheckedList1([])
     setCheckedList2([])
     setCheckedList3([])
     setSkillList(tempSkillList)
   };
-  
+
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height,setHeight] = React.useState(window.innerHeight);
@@ -210,11 +210,11 @@ const Skill = () =>{
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
-    console.log('currentWidth::',height);
     return {height};
   };
 
   const dynamicListHeight = useViewport().height - 128 - 90;
+
   return(<>
     <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
       <div style={{maxWidth:800}}>
