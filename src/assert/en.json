@@ -3790,43 +3790,35 @@
     "あなたにだけは絶対に": "Just for you",
     "消灯時間まで見守る": "Watch until daylight saving time",
     "そっとこの場を立ち去る": "Leave this place softly",
-    "サイレントイノセンス": "Keywords: silent innocence",
-    "スペシャルドリーマー": "A special dreamer",
-    "フォーミュラオブルージュ": "Formula of rouge",
-    "トップ・オブ・ジョイフル": "Keywords: top of joyful",
-    "スターライトビート": "Keywords: Starlight beat",
-    "ワイルド・フロンティア": "Frontier wild",
+    "サイレントイノセンス": "Silent Innocence",
+    "スペシャルドリーマー": "Special Dreamer",
+    "フォーミュラオブルージュ": "Formula of Rouge",
+    "トップ・オブ・ジョイフル": "Top of Joyful",
+    "スターライトビート": "Starlight Beat",
+    "ワイルド・フロンティア": "Wild Frontier",
     "ロード・オブ・エンペラー": "Lord of Empire",
-    "エレガンス・ライン": "Elegance line",
-    "レッドストライフ": "Life red",
-    "ローゼスドリーム": "Dream roses",
-    "トップ・オブ・ブルー": "Keywords: top of blue",
-    "ワイルドトップギア": "Wild top gear",
-    "岩穿つ青": "Blue",
-    "エル☆Número 1": "Elle net",
+    "エレガンス・ライン": "Elegance Line",
+    "レッドストライフ": "Red Strife",
+    "ローゼスドリーム": "Roses Dream",
+    "トップ・オブ・ブルー": "Top of Blue",
+    "ワイルドトップギア": "Wild Top Gear",
+    "岩穿つ青": "Blue Through Rock",
+    "エル☆Número 1": "El☆Number 1",
     "エンプレスロード": "Empress Road",
-    "すくらんぶる☆ゾーン": "Kururuma zone",
-    "マーマリングストリーム": "Marring ring",
-    "ストレート・ライン": "Straight line",
-    "Go To Winning!": "Go to turn!",
-    "tach-nology": "Tach nology",
-    "サクラ、すすめ！": "Sakura recommend!",
+    "すくらんぶる☆ゾーン": "Scramble☆Zone",
+    "マーマリングストリーム": "Murmuring Stream",
+    "ストレート・ライン": "Straight Line",
+    "Go To Winning!": "Go to Winning!",
+    "tach-nology": "tach-nology",
+    "サクラ、すすめ！": "Sakura, Recommend!",
     "運気上昇☆幸福万来": "Happiness is coming",
     "うららん一等賞♪": "First prize",
     "ポインセチア・リボン": "Bing Web: Poinsettia ribbon",
     "キング・オブ・エメラルド": "King of emerald",
-    "オー・ソレ・スーオ！": "Oh solo Suo!",
-    "MB-19890425": "MB",
-    "pf": {
-      "Victory formula": {
-        "": {
-          "": {
-            "": ""
-          }
-        }
-      }
-    },
-    "エンド・オブ・スカイ": "End of sky",
-    "ビヨンド・ザ・ホライズン": "Beyond the horizon"
+    "オー・ソレ・スーオ！": "'O sole suo!",
+    "MB-19890425": "MB-19890425",
+    "pf.Victory formula...": "pf.Victory formula...",
+    "エンド・オブ・スカイ": "End of Sky",
+    "ビヨンド・ザ・ホライズン": "Beyond the Horizon"
   }
 }
