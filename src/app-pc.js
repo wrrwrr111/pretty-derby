@@ -13,7 +13,7 @@ import Player from './pages/player.js'
 import Support from './pages/support.js'
 import Nurturing from './pages/nurturing.js'
 import Nurturing2 from './pages/nurturing2.js'
-import Skill from './pages/skill_v2.js'
+import Skill from './pages/skill.js'
 import Seed from './pages/seed.js'
 
 import IntroIndex from './components/intro.js'
@@ -65,7 +65,7 @@ const AppPc = ()=>{
         <Menu.Item key="6" className='menu-seed'><Link to='/seed'>种🐎</Link></Menu.Item>
       </Menu>
     </Header>
-    <Content style={{ padding: '64px 0px'}} >
+    <Content style={{ paddingTop:'64px'}} >
       <Route exact path="/" component={Player}/>
       <Route path="/support" component={Support}/>
       <Route path="/skill" component={Skill}/>
@@ -74,7 +74,7 @@ const AppPc = ()=>{
       <Route path="/seed" component={Seed}/>
       <Route path="/race" component={Race}/>
     </Content>
-  <Footer>
+  <Footer style={{padding:'12px'}}>
     <Row gutter={[16,16]}>
       <Col span={2}>
         <Button onClick={changeLan}>{langText}</Button>

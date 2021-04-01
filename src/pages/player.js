@@ -3,10 +3,10 @@ import db from '../db.js'
 import t from '../components/t.js'
 import { Divider,Row,Col,Image,Modal,Checkbox,Card} from 'antd';
 
-import {EventList} from '../components/event_v2.js'
+import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 
-const CheckboxGroup = Checkbox.Group
+// const CheckboxGroup = Checkbox.Group
 
 // todo 提取出来
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -38,13 +38,12 @@ const PlayerCard = (props)=>{
       }>
         <Card.Meta title={t(props.data.name)} ></Card.Meta>
       </Card>
-      <Modal title={'角色详情'} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={()=>(null)}
-             width={800} >
+      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null} width={800} >
         <div style={{height:144,display:'flex'}}>
-          <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} height={128} resizeMode={'cover'}></Image>
+          <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} height={128} resizemode={'cover'}></Image>
           <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
-            <text style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</text>
-            <text style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</text>
+            <div style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</div>
+            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</div>
           </div>
         </div>
         <Divider>适应</Divider>
@@ -59,51 +58,6 @@ const PlayerCard = (props)=>{
     </>
   )
 }
-const AdaptBox = (props)=>
-  <Row  gutter={[8, 8]}>
-    <Col span = {6}>草地/芝</Col>
-    <Col span = {6}>泥地/ダート</Col>
-    <Col span = {6}></Col>
-    <Col span = {6}></Col>
-    <Col span = {6}>{props.player.grass}</Col>
-    <Col span = {6}>{props.player.dirt}</Col>
-    <Col span = {6}></Col>
-    <Col span = {6}></Col>
-
-    <Col span = {6}>短距离</Col>
-    <Col span = {6}>英里/マイル</Col>
-    <Col span = {6}>中距离</Col>
-    <Col span = {6}>长距离</Col>
-    <Col span = {6}>{props.player.shortDistance}</Col>
-    <Col span = {6}>{props.player.mile}</Col>
-    <Col span = {6}>{props.player.mediumDistance}</Col>
-    <Col span = {6}>{props.player.longDistance}</Col>
-
-    <Col span = {6}>逃脱/逃げ</Col>
-    <Col span = {6}>先行</Col>
-    <Col span = {6}>插入/差</Col>
-    <Col span = {6}>追击/追込</Col>
-    <Col span = {6}>{props.player.escape}</Col>
-    <Col span = {6}>{props.player.leading}</Col>
-    <Col span = {6}>{props.player.insert}</Col>
-    <Col span = {6}>{props.player.tracking}</Col>
-  </Row>
-
-const GrowBox = (props)=>
-  <Row gutter={[8, 8]}>
-    <Col span = {4}>速度/スピード</Col>
-    <Col span = {4}>耐力/スタミナ</Col>
-    <Col span = {4}>力量/パワー</Col>
-    <Col span = {4}>毅力/根性</Col>
-    <Col span = {5}>智慧/賢さ</Col>
-
-    <Col span = {4}>{props.player.speedGrow}</Col>
-    <Col span = {4}>{props.player.staminaGrow}</Col>
-    <Col span = {4}>{props.player.powerGrow}</Col>
-    <Col span = {4}>{props.player.gutsGrow}</Col>
-    <Col span = {5}>{props.player.wisdomGrow}</Col>
-  </Row>
-
 
 const AdaptBox2 = (props)=>{
 
@@ -157,33 +111,35 @@ const AdaptBox2 = (props)=>{
       default:
         color = 'gray'
     }
-    return <text style={{fontSize:22,fontWeight:700,textShadow: "0 2px #33333370",color:color}}>{text}</text>
+    return <div style={{fontSize:22,fontWeight:700,textShadow: "0 2px #33333370",color:color}}>{text}</div>
   }
   // {[`草地/芝\xa0`,coloredGradeText(props.player.grass)]}
   return(
     <div style={{borderRadius:'8px',borderStyle:'solid',borderWidth:'thin',borderColor:'gray'}}>
       <table {...tableStyle} >
-        <tr>
-          <td style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0",fontWeight:700,fontSize:18}}>场地适应</td>
-          <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`草地/芝`,coloredGradeText(props.player.grass)]}</div></td>
-          <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`泥地/ダート`,coloredGradeText(props.player.dirt)]}</div></td>
-          <td style={{ ...cellStyle }}>{`\xa0`}</td>
-          <td style={{ ...cellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>{`\xa0`}</td>
-        </tr>
-        <tr>
-          <td style={{ ...headerCellStyle ,fontWeight:700,fontSize:18}}>赛程适应</td>
-          <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`短距离`,coloredGradeText(props.player.shortDistance)]}</div></td>
-          <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`英里`,coloredGradeText(props.player.mile)]}</div></td>
-          <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`中距离`,coloredGradeText(props.player.mediumDistance)]}</div></td>
-          <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none solid none'}}><div style={adaptTextWrapperStyle}>{[`长距离`,coloredGradeText(props.player.longDistance)]}</div></td>
-        </tr>
-        <tr>
-          <td style={{ ...headerCellStyle ,borderRadius:"0 0 0 8px",borderStyle:'none solid none none',fontWeight:700,fontSize:18}}>脚质适应</td>
-          <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`逃脱/逃げ`,coloredGradeText(props.player.escape)]}</div></td>
-          <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`先行`,coloredGradeText(props.player.leading)]}</div></td>
-          <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`插入/差し`,coloredGradeText(props.player.insert)]}</div></td>
-          <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}><div style={adaptTextWrapperStyle}>{[`追击/追込`,coloredGradeText(props.player.tracking)]}</div></td>
-        </tr>
+        <tbody>
+          <tr>
+            <td style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0",fontWeight:700,fontSize:18}}>场地适应</td>
+            <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`草地/芝`,coloredGradeText(props.player.grass)]}</div></td>
+            <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`泥地/ダート`,coloredGradeText(props.player.dirt)]}</div></td>
+            <td style={{ ...cellStyle }}>{`\xa0`}</td>
+            <td style={{ ...cellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>{`\xa0`}</td>
+          </tr>
+          <tr>
+            <td style={{ ...headerCellStyle ,fontWeight:700,fontSize:18}}>赛程适应</td>
+            <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`短距离`,coloredGradeText(props.player.shortDistance)]}</div></td>
+            <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`英里`,coloredGradeText(props.player.mile)]}</div></td>
+            <td style={{ ...cellStyle }}><div style={adaptTextWrapperStyle}>{[`中距离`,coloredGradeText(props.player.mediumDistance)]}</div></td>
+            <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none solid none'}}><div style={adaptTextWrapperStyle}>{[`长距离`,coloredGradeText(props.player.longDistance)]}</div></td>
+          </tr>
+          <tr>
+            <td style={{ ...headerCellStyle ,borderRadius:"0 0 0 8px",borderStyle:'none solid none none',fontWeight:700,fontSize:18}}>脚质适应</td>
+            <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`逃脱/逃げ`,coloredGradeText(props.player.escape)]}</div></td>
+            <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`先行`,coloredGradeText(props.player.leading)]}</div></td>
+            <td style={{ ...cellStyle ,borderStyle:'none solid none none'}}><div style={adaptTextWrapperStyle}>{[`插入/差し`,coloredGradeText(props.player.insert)]}</div></td>
+            <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}><div style={adaptTextWrapperStyle}>{[`追击/追込`,coloredGradeText(props.player.tracking)]}</div></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   )
@@ -222,20 +178,22 @@ const GrowBox2= (props)=>{
   return(
     <div style={{borderRadius:'8px',borderStyle:'solid',borderWidth:'thin',borderColor:'gray'}}>
       <table {...tableStyle} >
-        <tr>
-          <th style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0"}}>速度/スピード</th>
-          <th style={{ ...headerCellStyle }}>耐力/スタミナ</th>
-          <th style={{ ...headerCellStyle }}>力量/パワー</th>
-          <th style={{ ...headerCellStyle }}>毅力/根性</th>
-          <th style={{ ...headerCellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>智慧/賢さ</th>
-        </tr>
-        <tr>
-          <td style={{ ...cellStyle ,borderRadius:"0 0 0 8px"}}>{props.player.speedGrow}</td>
-          <td style={{ ...cellStyle }}>{props.player.staminaGrow}</td>
-          <td style={{ ...cellStyle }}>{props.player.powerGrow}</td>
-          <td style={{ ...cellStyle }}>{props.player.gutsGrow}</td>
-          <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}>{props.player.wisdomGrow}</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th style={{ ...headerCellStyle ,borderRadius:"8px 0 0 0"}}>速度/スピード</th>
+            <th style={{ ...headerCellStyle }}>耐力/スタミナ</th>
+            <th style={{ ...headerCellStyle }}>力量/パワー</th>
+            <th style={{ ...headerCellStyle }}>毅力/根性</th>
+            <th style={{ ...headerCellStyle ,borderRadius:"0 8px 0 0",borderStyle:'none none solid none'}}>智慧/賢さ</th>
+          </tr>
+          <tr>
+            <td style={{ ...cellStyle ,borderRadius:"0 0 0 8px"}}>{props.player.speedGrow}</td>
+            <td style={{ ...cellStyle }}>{props.player.staminaGrow}</td>
+            <td style={{ ...cellStyle }}>{props.player.powerGrow}</td>
+            <td style={{ ...cellStyle }}>{props.player.gutsGrow}</td>
+            <td style={{ ...cellStyle ,borderRadius:"0 0 8px 0",borderStyle:'none none none none'}}>{props.player.wisdomGrow}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   )

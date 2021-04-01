@@ -10,7 +10,11 @@ const SkillList = (props)=>{
 
   return (
     <Row gutter={0}>
-      {skillList.map((skillId)=><Col span={12}><SkillButton key={skillId} id={skillId} usedInList={true}></SkillButton></Col>)}
+      {skillList.map((skillId,index)=>
+        <Col span={12} key={index}>
+          <SkillButton id={skillId} usedInList={true}>
+        </SkillButton>
+      </Col>)}
     </Row>
   )
 }

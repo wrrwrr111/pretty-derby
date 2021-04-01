@@ -141,7 +141,7 @@ const Nurturing = () =>{
       tmpDeck.playerId = player.id
       tmpDeck.imgUrls.push(player.imgUrl)
     }
-    [0,1,2,3,4,5].map(index=>{
+    [0,1,2,3,4,5].forEach(index=>{
       if(supports[index]&&supports[index].id){
         tmpDeck.imgUrls.push(supports[index].imgUrl)
         tmpDeck.supportsId.push(supports[index].id)
@@ -166,7 +166,7 @@ const Nurturing = () =>{
       selected.player = db.get('players').find({id:deck.playerId}).value()
     }
     setPlayer(selected.player)
-    deck.supportsId.map((id,index)=>{
+    deck.supportsId.forEach((id,index)=>{
       if(id){
         selected.supports[index]=db.get('supports').find({id:id}).value()
       }
@@ -178,11 +178,26 @@ const Nurturing = () =>{
     db.get('myDecks').remove({id:deck.id}).write()
     setDecks([...db.get('myDecks').value()])
   }
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const [height,setHeight] = React.useState(window.innerHeight);
+    React.useEffect(() => {
+      const handleWindowResize = () => setHeight(window.innerHeight);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+    console.log('currentWidth::',height);
+    return {height};
+  };
 
-
+  const dynamicContentHeight = useViewport().height -128
+  const dynamicCardHeight = dynamicContentHeight / 2
+  const dynamicCardWidth = dynamicCardHeight * 3 / 4 
+  const dynamicCardBoxWidth = dynamicCardWidth * 3
+  console.log(dynamicContentHeight,dynamicCardHeight,dynamicCardWidth,dynamicCardBoxWidth)
   return(
-    <Row className='' gutter={[16,16]}>
-      <Col sm={8} xs={24}>
+    <div style={{display:'flex',justifyContent:'center'}}>
+      <div style={{height:dynamicContentHeight,overflowY:'auto'}}>
         <Button className='add-player' type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>支援卡查询</Button>
         <Button onClick={showRace}>选择关注赛事</Button>
@@ -194,7 +209,7 @@ const Nurturing = () =>{
               <Row key={deck.id}>
                 {deck.imgUrls.map(imgUrl=>
                   <Col span={3} key={imgUrl}>
-                    <img src={cdnServer+imgUrl} width={'100'}></img>
+                    <img src={cdnServer+imgUrl} alt={imgUrl} width={'100'}></img>
                   </Col>
                 )}
                 <Col span={3}>
@@ -213,7 +228,7 @@ const Nurturing = () =>{
         <BuffButton></BuffButton>
         <Divider style={{margin:'4px 0'}}></Divider>
         {player.id&&<>
-          <img src={cdnServer+player.imgUrl} width='20%'
+          <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='20%'
             style={{float:'left',marginRight:'8px'}}></img>
           <EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>
           <RaceList raceList={player.raceList}></RaceList>
@@ -241,33 +256,32 @@ const Nurturing = () =>{
           </Table>
         </Drawer>
 
-      </Col>
+      </div>
 
-      <Col sm={16} xs={24}>
-        <Row gutter={[8,8]}>
+      <div style={{flex:`0 0 ${dynamicCardBoxWidth}px`,display:'flex',flexWrap:'wrap'}}>
         {[0,1,2,3,4,5].map(index=>
-          <Col sm={8} xs={24} key={index} style={{}}>
-            {supports[index]&&supports[index].id?
-            <>
-              <img src={cdnServer+supports[index].imgUrl} alt={supports[index].name} width={'100%'}
-               className='nur-sup-img'></img>
-              <div style={{position:'absolute',padding:'12px',
-                          top:'0',left:'4px',right:'4px',bottom:'0',
-                          overflow:'auto'}} className='gray-cover'>
+            supports[index]&&supports[index].id?
+              <div style={{
+                  width:dynamicCardWidth,
+                  height:dynamicCardHeight,
+                  backgroundImage:`url(${cdnServer+supports[index].imgUrl})`,
+                  backgroundRepeat:'no-repeat',
+                  backgroundSize:'cover'}}>
+                <div style={{
+                  backgroundColor:'rgba(0,0,0,0.2)',
+                  height:'100%',
+                  padding:'10px'}}>
                 <Tooltip title="选择支援卡">
                   <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
                 </Tooltip>
                 <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
                 <Divider style={{margin:'8px 0'}}></Divider>
                 <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
+                </div>
               </div>
-            </>
             :<Button onClick={()=>showSupport(index)}>选择支援卡</Button>
-            }
-          </Col>
         )}
-        </Row>
-      </Col>
+      </div>
 
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={'80%'}>
         <Player onSelect={handleSelectPlayer}></Player>
@@ -278,7 +292,7 @@ const Nurturing = () =>{
       <Modal visible={isRaceVisible} onOk={closeRace} onCancel={closeRace} width={'80%'}>
         <Race onSelect={needSelect?handleSelectRace:null}></Race>
       </Modal>
-    </Row>
+    </div>
   )
 }
 

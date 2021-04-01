@@ -33,6 +33,7 @@ const Skill = () =>{
 
   const [checkedList1, setCheckedList1] = useState([]);
   const [checkedList2, setCheckedList2] = useState([]);
+  const [checkedList3, setCheckedList3] = useState([]);
   // init supportMode
   localStorage.getItem('supportMode')===null&&localStorage.setItem('supportMode',0)
   const [mode,setMode] = useState(parseInt(localStorage.getItem('supportMode')))
@@ -67,16 +68,26 @@ const Skill = () =>{
     {label:'疲劳(debuff)',value:'30051'},
     {label:'视野(debuff)',value:'30071'}
   ]
+  const checkOptions3 = [
+    {label:'普通',value:'ノーマル'},
+    {label:'稀有',value:'レア'},
+    {label:'独特',value:'固有'}
+  ]
+
   const onChange1=(checkedValues)=>{
     setCheckedList1(checkedValues)
-    updateSkillList(checkedValues,checkedList2)
-
+    updateSkillList(checkedValues,checkedList2,checkedList3)
+    
   }
   const onChange2 = (checkedValues)=>{
     setCheckedList2(checkedValues)
-    updateSkillList(checkedList1,checkedValues)
+    updateSkillList(checkedList1,checkedValues,checkedList3)
   }
-  const updateSkillList = (check1,check2)=>{
+  const onChange3 = (checkedValues)=>{
+    setCheckedList3(checkedValues)
+    updateSkillList(checkedList1,checkedList2,checkedValues)
+  }
+  const updateSkillList = (check1,check2,check3)=>{
     let tempSkillList = allSkillList
     if(check1.length){
       tempSkillList = tempSkillList.filter(skill=>{
@@ -107,80 +118,147 @@ const Skill = () =>{
         return flag
       })
     }
+    if(check3.length){
+      tempSkillList = tempSkillList.filter(skill=>{
+        let flag = 0;
+        check3.forEach(value=>{
+          if(skill.rare === value){
+            flag = 1
+          }
+        })
+        return flag
+      })
+    }
     setSkillList(tempSkillList)
   }
   const resetCheckbox=()=>{
     setCheckedList1([])
     setCheckedList2([])
+    setCheckedList3([])
     setSkillList(allSkillList)
   }
 
-    const showModal = (skill) => {
-      let tempSupportList = allSupportList.filter(support=>{
-        let flag = 0;
-        support.skillList.forEach(id=>{
-          if (id===skill.id){
-            flag = 1
-          }
-        })
-        return flag
-      })
-      let tempPlayerList = allPlayerList.filter(player=>{
-        let flag = 0;
-        player.skillList.forEach(id=>{
-          if (id===skill.id){
-            flag = 1
-          }
-        })
-        return flag
-      })
-      setSkillName(skill.name)
-      setSkillSupportList(tempSupportList)
-      setSkillPlayerList(tempPlayerList)
-      setIsModalVisible(true);
-    };
-
-    const handleOk = () => {
-      setIsModalVisible(false);
-    };
-
-    const handleCancel = () => {
-      setIsModalVisible(false);
-    };
-    const changeMode = ()=>{
-      localStorage.setItem('supportMode',1-mode)
-      setMode(1-mode)
-    }
-  const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
-  return(
-  <Row justify="space-around">
-    <Col span={22}>
-      <Row align='middle'>
-        只显示支援卡
-        <Switch checked={mode} onChange={changeMode} />
-      </Row>
-      <Button onClick={resetCheckbox}>重置</Button>
-      <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
-      <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
-    </Col>
-    <Col span={22}>
-    {['ノーマル','レア','固有'].map(rare=>
-      <Row gutter={[8,8]} key={rare}>
-      <Divider>{rareLabel[rare]}</Divider>
-      { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
-          <SkillButton skill={skill} key={skill.id} onClick={showModal}></SkillButton>
-          )
+  const showModal = (skill) => {
+    let tempSupportList = allSupportList.filter(support=>{
+      let flag = 0;
+      support.skillList.forEach(id=>{
+        if (id===skill.id){
+          flag = 1
         }
-      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
-        <PageHeader title={skillName}>{t(skillName)}</PageHeader>
-        <Support supportList={skillSupportList} ></Support>
-        <Player playerList={skillPlayerList} ></Player>
-      </Modal>
-      </Row>
-    )}
-    </Col>
-  </Row>
-)}
+      })
+      return flag
+    })
+    let tempPlayerList = allPlayerList.filter(player=>{
+      let flag = 0;
+      player.skillList.forEach(id=>{
+        if (id===skill.id){
+          flag = 1
+        }
+      })
+      return flag
+    })
+    setSkillName(skill.name)
+    setSkillSupportList(tempSupportList)
+    setSkillPlayerList(tempPlayerList)
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+  const changeMode = ()=>{
+    localStorage.setItem('supportMode',1-mode)
+    setMode(1-mode)
+  }
+  const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
+
+  const headerStyle = {
+    backgroundColor:'#1e90ffA0',
+    height:48,
+    borderRadius:5,
+    margin:1,
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center'
+  }
+  const headerTextStyle = {
+    fontSize: 18,
+    textAlign: 'center',
+    fontWeight: 600,
+    color:'#f5f5f5',
+    textShadow: "0 2px #33333370",
+  }
+
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const [height,setHeight] = React.useState(window.innerHeight);
+    React.useEffect(() => {
+      const handleWindowResize = () => setHeight(window.innerHeight);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+    console.log('currentWidth::',height);
+    return {height};
+  };
+
+  const dynamicListHeight = useViewport().height - 128 - 90;
+  return(<>
+    <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
+      <div style={{maxWidth:800}}>
+        <Row>
+          <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>筛选</text></div></Col>
+          <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>技能列表</text></div></Col>
+          <Col span={6}>
+            <div style={{height:dynamicListHeight,overflowY:'scroll',display:'flex',flexDirection:'column'}}>
+              <div style={{height:16}}/>
+              <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>重置</Button>
+              <Divider/>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:4}}>
+                <Tooltip title="可以在支援卡页面配置">
+                  <text>显示拥有支援卡</text>
+                  <Switch checked={mode} onChange={changeMode} />
+                </Tooltip>
+              </div>
+              <Divider/>
+              <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
+              <Divider/>
+              <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
+              <Divider/>
+              <CheckboxGroup options={checkOptions3} value={checkedList3} onChange={onChange3} />
+            </div>
+          </Col>
+          <Col span={18}>
+            <div style={{height:dynamicListHeight,overflowY:'scroll',overflowX:'hidden'}}>
+              {['ノーマル','レア','固有'].map(rare=>
+                <Row gutter={[8,8]} key={rare}>
+                  <Divider>{rareLabel[rare]}</Divider>
+                  { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
+                    <Col span={12}>
+                      <SkillButton usedInList={true} skill={skill} key={skill.id} onClick={showModal}></SkillButton>
+                    </Col>
+                  )
+                  }
+                  <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
+                    <PageHeader title={skillName}>{t(skillName)}</PageHeader>
+                    <Support supportList={skillSupportList} ></Support>
+                    <Player playerList={skillPlayerList} ></Player>
+                  </Modal>
+                </Row>
+              )}
+            </div>
+          </Col>
+
+
+
+        </Row>
+      </div>
+    </div>
+  </>)
+}
 
 export default Skill
 

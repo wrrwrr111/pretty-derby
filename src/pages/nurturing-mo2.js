@@ -2,18 +2,17 @@ import React,{useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
 
-import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm,Tooltip} from 'antd';
+import { Divider,Row,Col,Modal,Button, Popover,Popconfirm,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
 
-import Race from './race.js'
+// import Race from './race.js'
 import Player from './player.js'
 import Support from './support.js'
 
-const {Column} = Table
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -56,15 +55,13 @@ const Nurturing = () =>{
   const [isSupportVisible, setIsSupportVisible] = useState(false);
   const [supportIndex, setSupportIndex] = useState(1);
 
-  const [isRaceVisible, setIsRaceVisible] = useState(false);
+  // const [isRaceVisible, setIsRaceVisible] = useState(false);
 
   const selected = db.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-  const [races,setRaces] = useState(selected.races)
 
   const [decks,setDecks] = useState(db.get('myDecks').value())
-  const [visible, setVisible] = useState(false);
 
 
 
@@ -107,26 +104,13 @@ const Nurturing = () =>{
     selected.supports[supportIndex] = data
     db.get('selected').assign(selected).write()
   }
-  const showRace = ()=>{
-    setNeedSelect(true)
-    setIsRaceVisible(true);
-  }
-  const closeRace = () => {
-    setIsRaceVisible(false);
-  };
-  const handleSelectRace = (data)=>{
-    setRaces(data);
-
-    // save
-    selected.races = data
-    db.get('selected').assign(selected).write()
-  }
-  const showDrawer = ()=>{
-    setVisible(true)
-  }
-  const onDrawerClose = (data)=>{
-    setVisible(false)
-  }
+  // const showRace = ()=>{
+  //   setNeedSelect(true)
+  //   setIsRaceVisible(true);
+  // }
+  // const closeRace = () => {
+  //   setIsRaceVisible(false);
+  // };
 
   // 卡组相关操作
   const saveDeck = (deck)=>{
@@ -138,7 +122,7 @@ const Nurturing = () =>{
       tmpDeck.playerId = player.id
       tmpDeck.imgUrls.push(player.imgUrl)
     }
-    [0,1,2,3,4,5].map(index=>{
+    [0,1,2,3,4,5].forEach(index=>{
       if(supports[index]&&supports[index].id){
         tmpDeck.imgUrls.push(supports[index].imgUrl)
         tmpDeck.supportsId.push(supports[index].id)
@@ -163,7 +147,7 @@ const Nurturing = () =>{
       selected.player = db.get('players').find({id:deck.playerId}).value()
     }
     setPlayer(selected.player)
-    deck.supportsId.map((id,index)=>{
+    deck.supportsId.forEach((id,index)=>{
       if(id){
         selected.supports[index]=db.get('supports').find({id:id}).value()
       }
@@ -182,17 +166,6 @@ const Nurturing = () =>{
       <Col sm={8} xs={24}>
         <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>支援卡查询</Button>
-        {/* <Button onClick={showRace}>选择关注赛事</Button>
-        <Popover content = {
-          <Table dataSource={races} pagination={false}>
-            <Column title="名称" dataIndex="name" key="name" />
-            <Column title="时间" dataIndex="date" key="date" />
-            <Column title="级别" dataIndex="grade" key="grade" />
-            <Column title="类型" dataIndex="distanceType" key="distanceType" />
-          </Table>
-        }>
-          <Button onClick={showDrawer}>查看关注赛事</Button>
-        </Popover> */}
         <BuffButton></BuffButton>
         <Popover width={'100%'} content={
           <>
@@ -201,7 +174,7 @@ const Nurturing = () =>{
               <Row key={deck.id}>
                 {deck.imgUrls.map(imgUrl=>
                   <Col span={3} key={imgUrl}>
-                    <img src={cdnServer+imgUrl} width={'100'}></img>
+                    <img src={cdnServer+imgUrl} alt={imgUrl}  width={'100'}></img>
                   </Col>
                 )}
                 <Col span={3}>
@@ -223,8 +196,10 @@ const Nurturing = () =>{
 
       </Col>
         <Row justify="space-around">
-          <Col span={4}>
-            <img src={player.id?cdnServer+player.imgUrl:null} width='100%'></img>
+          <Col span={4}>{
+            player.imgUrl&&
+            <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='100%'></img>
+          }
           </Col>
           <Col span={4}>
             <Popover content={<EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>}>
@@ -268,9 +243,6 @@ const Nurturing = () =>{
       </Modal>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
         <Support onSelect={needSelect?handleSelectSupport:null}></Support>
-      </Modal>
-      <Modal visible={isRaceVisible} onOk={closeRace} onCancel={closeRace} width={'80%'}>
-        <Race onSelect={needSelect?handleSelectRace:null}></Race>
       </Modal>
     </Row>
   )
