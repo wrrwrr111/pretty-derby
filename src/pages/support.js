@@ -36,7 +36,7 @@ const SupportCard = (props)=>{
         width={800} >
           <Row justify='space-around' align='middle'>
             <Col span={4}>
-              <Image src={cdnServer+props.data.imgUrl} preview={false} width={'100%'} />
+              <Image src={cdnServer+props.data.imgUrl} width={'100%'} />
             </Col>
             <Col span={19}>
             <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
