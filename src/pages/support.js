@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import db from '../db.js'
 import t from '../components/t.js'
-import { Divider,Row,Col,Image,Modal,Button,Checkbox} from 'antd';
+import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip} from 'antd';
 
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
@@ -30,26 +30,30 @@ const SupportCard = (props)=>{
 
   return (
     <>
-      <Image src={cdnServer+props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
+      <Tooltip title={`${props.data.name}----${t(props.data.charaName)}`}>
+        <Image src={cdnServer+props.data.imgUrl} preview={false}  onClick={showModal} width={'100%'}></Image>
+      </Tooltip>
+
       <Modal title={`${props.data.name}----${t(props.data.charaName)}`}
-        visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
-        width={800} >
-          <Row justify='space-around' align='middle'>
-            <Col span={4}>
-              <Image src={cdnServer+props.data.imgUrl} preview={false} width={'100%'} />
-            </Col>
-            <Col span={19}>
-            <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
-              <Divider style={{margin:'4px 0'}}>培训技能</Divider>
-              <SkillList skillList={props.data.trainingEventSkill}></SkillList>
-              <Divider style={{margin:'4px 0'}}>自带技能</Divider>
-              <SkillList skillList={props.data.possessionSkill}></SkillList>
-            </Col>
+             visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
+             width={800} >
+        <div style={{display:'flex',alignItems:'center',justifyContent:'flex-start',height:192,padding:16}}>
+          <Image src={cdnServer+props.data.imgUrl} preview={false} width={128} />
+          <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around',height:'100%',padding:16}}>
+            <div style={{fontSize:20,fontWeight:700}}>{t(props.data.name)}</div>
+            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</div>
+          </div>
+        </div>
+        <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>
+        <Divider style={{margin:'4px 0'}}>培训技能</Divider>
+        <SkillList skillList={props.data.trainingEventSkill}></SkillList>
+        <Divider style={{margin:'4px 0'}}>自带技能</Divider>
+        <SkillList skillList={props.data.possessionSkill}></SkillList>
 
-            <Divider>育成效果</Divider>
-            <EffectTable effects={props.data.effects} rarity={props.data.rarity}></EffectTable>
 
-          </Row>
+        <Divider>育成效果</Divider>
+        <EffectTable effects={props.data.effects} rarity={props.data.rarity}></EffectTable>
+
       </Modal>
     </>
   )
@@ -65,7 +69,7 @@ class Support extends React.Component{
       checkedList:[]}
     this.effects = db.get('effects').value()
     this.checkOptions = Object.keys(this.effects)
-                          .map(key=>{return {label:t(this.effects[key].name),value:key}})
+      .map(key=>{return {label:t(this.effects[key].name),value:key}})
   }
   componentDidUpdate(prevProps){
     if(this.props.supportList !== prevProps.supportList){
@@ -110,38 +114,68 @@ class Support extends React.Component{
     })
   }
 
+
+
+
   render(){
+    const headerStyle = {
+      backgroundColor:'#1e90ffA0',
+      height:48,
+      borderRadius:5,
+      margin:1,
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center'
+    }
+    const headerTextStyle = {
+      fontSize: 18,
+      textAlign: 'center',
+      fontWeight: 600,
+      color:'#f5f5f5',
+      textShadow: "0 2px #33333370",
+    }
     return (
-      <Row justify="space-around">
-        {this.props.filter&&<>
-          <Col span={22}>
-          <Button onClick={this.changeShowMode}>切换显示模式</Button>
-          <Button onClick={this.changeChooseMode}>配置卡组</Button>
-          {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
-        </Col>
-        <Col span={22}>
-          <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
-        </Col>
-        </>}
-        <Col span={22}>
-      {
-        ['SSR','SR','R'].map(rare=>
-          <Row gutter={[16,16]} key={rare}>
-            <Divider>{rare}</Divider>
-            {this.state.list.filter(item=>item.rare===rare).map(support=>
-              <Col xxl={2} lg={3} sm={4} xs={6} key={support.id}
-              className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
-                <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
-                chooseMode={this.props.chooseMode}></SupportCard>
-                {/* {support.effects} */}
-              </Col>)
-            }
+      <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
+        <div style={{maxWidth:1200,height:window.innerHeight-200}}>
+          <Row justify="space-around">
+            <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>筛选</text></div></Col>
+            <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>支援卡列表</text></div></Col>
+            <Col span={6}>
+              <div style={{overflowY:'scroll',display:'flex',flexDirection:'column',overflowX:'hidden',height:window.innerHeight-300,padding:4}}>
+                {this.props.filter&&<>
+                  <Button onClick={this.changeShowMode}>高亮我的卡组</Button>
+                  <Button onClick={this.changeChooseMode}>配置卡组</Button>
+                  {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
+                  <Divider style={{margin:4}}/>
+                  <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
+                </>}
+              </div>
+            </Col>
+
+
+            <Col span={18}>
+              <div style={{overflowY:'scroll',overflowX:'hidden',height:window.innerHeight-300,paddingRight:16}}>
+                {
+                  ['SSR','SR','R'].map(rare=>
+                    <Row gutter={[16,16]} key={rare}>
+                      <Divider>{rare}</Divider>
+                      {this.state.list.filter(item=>item.rare===rare).map(support=>
+                        <Col xxl={4} lg={6} sm={8} xs={12} key={support.id}
+                             className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
+                          <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
+                                       chooseMode={this.props.chooseMode}></SupportCard>
+                          {/* {support.effects} */}
+                        </Col>)
+                      }
+                    </Row>
+                  )
+                }
+              </div>
+            </Col>
           </Row>
-        )
-      }
-        </Col>
-      </Row>
-      )
+        </div>
+      </div>
+    )
   }
 }
 
@@ -155,7 +189,7 @@ Support.defaultProps={
 //   const [showMode,setShowMode]=useState(false)
 //   const [chosenList,setChosenList]=useState(db.get('mySupports').value()||[])
 //   const [checkedList,setCheckedList]=useState([])
-  
+
 //   const effects = db.get('effects').value()
 //   const checkOptions = Object.keys(effects).map(key=>{return {label:t(effects[key].name),value:key}})
 //   const changeChooseMode = () =>{

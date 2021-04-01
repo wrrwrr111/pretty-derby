@@ -8,7 +8,7 @@ import 'antd-mobile/dist/antd-mobile.min.css';
 import db from './db.js'
 
 import Race from './pages/race.js'
-import Player from './pages/player_mobile.js'
+import Player from './pages/player.js'
 import Support from './pages/support.js'
 import NurturingMO2 from './pages/nurturing-mo2.js'
 import Skill from './pages/skill.js'
