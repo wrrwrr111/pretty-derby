@@ -45,6 +45,7 @@ const PlayerCard = (props)=>{
           <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
             <div style={{fontSize:20,fontWeight:700}}>{t(props.data.charaName)}</div>
             <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.charaName}</div>
+            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(props.data.name)}</div>
             <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{props.data.name}</div>
           </div>
         </div>
