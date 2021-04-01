@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
 
-import { Divider,Row,Col,Modal,Button, Popover,Popconfirm,Tooltip} from 'antd';
+import { Divider,Row,Col,Modal,Button, Popconfirm,Popover,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
 import {EventList} from '../components/event.js'
@@ -163,11 +163,11 @@ const Nurturing = () =>{
 
   return(
     <Row className='nurturing-box' gutter={[16,16]}>
-      <Col sm={8} xs={24}>
-        <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-        <Button onClick={showSupport2}>支援卡查询</Button>
-        <BuffButton></BuffButton>
-        <Popover width={'100%'} content={
+      <Col>
+          <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
+          <Button onClick={showSupport2}>支援卡查询</Button>
+          <BuffButton></BuffButton>
+        <Popover width={'80%'} content={
           <>
             <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
             {decks.map(deck=>
@@ -222,7 +222,7 @@ const Nurturing = () =>{
         {[0,1,2,3,4,5].map(index=>
           <Col span={7} key={index} style={{}}>
             <Tooltip title="选择支援卡">
-              <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}></Button>
+              <Button icon={<EditOutlined />} onClick={()=>showSupport(index)}>支援卡</Button>
             </Tooltip>
             {supports[index]&&supports[index].id&&
 
@@ -237,12 +237,17 @@ const Nurturing = () =>{
           </Col>
         )}
         </Row>
-
+      <Button size='large' style={{
+        zIndex:10000,
+        position:'fixed',
+        right:10,
+        bottom:10,
+      }}>返回</Button>
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={'80%'}>
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
-        <Support onSelect={needSelect?handleSelectSupport:null}></Support>
+        <Support onSelect={needSelect?handleSelectSupport:null} filter={false}></Support>
       </Modal>
     </Row>
   )
