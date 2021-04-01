@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Divider,Row,Col,Tooltip,Button,Checkbox,Modal,PageHeader,Switch} from 'antd';
+import { Divider,Row,Col,Button,Checkbox,Modal,Tooltip,PageHeader,Switch,Input} from 'antd';
 
 import db from '../db.js'
 import Support from './support.js'
@@ -7,7 +7,7 @@ import Player from './player.js'
 import t from '../components/t.js'
 import {SkillButton} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
-
+const { Search } = Input
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const Skill = () =>{
@@ -193,6 +193,15 @@ const Skill = () =>{
     textShadow: "0 2px #33333370",
   }
 
+  const onSearch = (searchText) => {
+    const fullSkillList = allSkillList; 
+    const tempSkillList = fullSkillList.filter(item => (item.name).indexOf(searchText) > -1);
+    setCheckedList1([])
+    setCheckedList2([])
+    setCheckedList3([])
+    setSkillList(tempSkillList)
+  };
+  
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height,setHeight] = React.useState(window.innerHeight);
@@ -217,11 +226,21 @@ const Skill = () =>{
               <div style={{height:16}}/>
               <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>重置</Button>
               <Divider/>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:4}}>
+              <div>
                 <Tooltip title="可以在支援卡页面配置">
-                  <text>显示拥有支援卡</text>
+                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>显示拥有支援卡</span>
                   <Switch checked={mode} onChange={changeMode} />
                 </Tooltip>
+              </div>
+              <div>
+                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>技能搜索</span>
+                <Search
+                  placeholder="输入技能名称"
+                  enterButton="搜索"
+                  size="middle"
+                  style={{ width: '100%' }}
+                  onSearch={onSearch}
+                />
               </div>
               <Divider/>
               <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
