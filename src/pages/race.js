@@ -65,26 +65,46 @@ import { Table } from 'antd';
   const labels = ["name", "date", "class", "grade",
                   "place", "ground", "distance",
                   "distanceType", "direction", "side"]
+  const labelTextDict ={name:"名称",date:"时间",class:"年级",grade:"赛事等级",place:"地点",ground:"场地",distance:"长度",distanceType:"赛程",direction:"方向",side:"赛道"}
+  const getCorrespondingLabelText = (label)=>{
+      return labelTextDict[label]
+  }
   const mediumLabels = ["name", "date", "class","grade","ground","distanceType"]
   const getColumns = (labels)=>{
     return labels.map(label=> {
       if(filterList['class']){
         return {
-          title:label,
+          title:getCorrespondingLabelText(label),
           dataIndex:label,
           filters:filterList[label],
           onFilter: (value, record) => record[label] === value,
         }
       }else{
         return{
-          title:label,
+          title:getCorrespondingLabelText(label),
           dataIndex:label
         }
       }
     })
   }
 
+
+
   const Race = (props) =>{
+    const useViewport = () => {
+      const [width, setWidth] = React.useState(window.innerWidth);
+      const [height,setHeight] = React.useState(window.innerHeight);
+      React.useEffect(() => {
+        const handleWindowResize = () => setHeight(window.innerHeight);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+      }, []);
+      console.log('currentWidth::',height);
+      return {height};
+    };
+
+    const dynamicTableHeight = useViewport().height -300;
+
     const allRaceList = db.get('races').value().map((race,index)=>{
                       race.key=index
                       return race
@@ -108,9 +128,11 @@ import { Table } from 'antd';
       setSelectedRowKeys([])
     }
     return(
+      <div style={{paddingLeft:200,paddingRight:200,paddingTop:40}}>
       <Table rowSelection={props.onSelect?rowSelection:null} columns={columns}
-      dataSource={allRaceList} onChange={onChange} pagination={false}/>
+      dataSource={allRaceList} onChange={onChange} pagination={false} scroll={{y:dynamicTableHeight}}/>
+      </div>
       )
   }
 
-export  default Race
+export default Race
