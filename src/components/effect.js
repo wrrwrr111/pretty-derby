@@ -87,11 +87,14 @@ class TestEffectTable extends React.Component{
   calc(data,input){
     let nodes = [];
     let output = 0;
-    const maxLevel = ( data.length - 1 ) * 5;
+    const maxLevel = this.maxLevel;
     let prevNode = {level:0,value:0};
     for (let i = 0; i<data.length;i += 1){
       if(data[i] !== -1){
-        const level = i*5;
+        let level = i*5;
+        if (level === 0){
+          level = 1
+        }
         nodes.push({level:level,value:data[i]})
         prevNode = {level:level,value:data[i]};
       }
@@ -177,7 +180,9 @@ class TestEffectTable extends React.Component{
         <Row>
           {this.props.effects.map(
             (item)=>{
+              console.log(item);
               const data = [item.init,item.limit_lv5,item.limit_lv10,item.limit_lv15,item.limit_lv20,item.limit_lv25,item.limit_lv30,item.limit_lv35,item.limit_lv40,item.limit_lv45,item.limit_lv50].filter((item)=>(item));
+              console.log(data);
               return (
                 <Col span={12}>
                   <div style={{...this.effectCapsuleStyle}}>
