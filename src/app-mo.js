@@ -23,6 +23,7 @@ class App1 extends React.Component {
     open: false,
     title:'urara win'
   }
+
   onOpenChange=()=>{
     this.setState({open: !this.state.open})
   }
@@ -39,6 +40,7 @@ class App1 extends React.Component {
     // db.set('myDecks',[]).write()
   }
   render() {
+    db.set('ua','mo').write();
     const routers = [{path:'/',label:'角色'},
     {path:'/support',label:'支援卡'},
     {path:'/skill',label:'技能'},

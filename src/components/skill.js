@@ -5,6 +5,9 @@ import { Row,Col,Popover,Button,Image } from 'antd';
 import t from './t.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
+const ua = db.get('ua').value();
+
+
 const SkillList = (props)=>{
   const skillList = props.skillList
 
@@ -34,7 +37,9 @@ const SkillButton = (props)=>{
     textAlign:'justify'
   }
     return(
-      <Popover content={<>
+      <Popover
+        trigger={ua==='mo'?'click':'hover'}
+        content={<>
       <p>{'技能名称： '+t(skill.name)}</p>
       <p>{'技能描述： '+skill.describe}</p>
       <p>{'技能描述： '+t(skill.describe)}</p>

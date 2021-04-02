@@ -3,6 +3,9 @@ import db from '../db.js'
 import t from './t.js'
 import {Row,Col,Popover,Button,Tabs } from 'antd';
 
+
+const ua = db.get('ua').value();
+
 const EventList = (props)=>{
   const eventIdList = props.eventList
   const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
@@ -18,7 +21,7 @@ const EventList = (props)=>{
         <Tabs.TabPane tab="有选项" key="1">
           {/* <div style={{maxHeight:200,overflowY:'auto'}}> */}
           <div>
-      {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
+      {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event} ></EventBox>)}
           </div>
         </Tabs.TabPane>
         <Tabs.TabPane tab="无选项" key="2">
@@ -45,7 +48,9 @@ const EventBox = (props)=>{
   })
 
   return(
-    <Popover content={<>
+    <Popover
+      trigger={ua==='mo'?'click':'hover'}
+      content={<>
       <p>{t(props.event.name)}</p>
       {ChoiceItem}
     </>} title={props.event.name} placement={'bottom'}>
