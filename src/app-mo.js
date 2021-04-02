@@ -16,6 +16,7 @@ import SeedMo from './pages-mo/seed.js'
 
 import SupportDetail from './components/support-detail.js'
 import PlayerDetail from './components/player-detail.js'
+import {BuffList} from './components/buff.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 class App1 extends React.Component {
@@ -99,6 +100,7 @@ class App1 extends React.Component {
           <Route path="/race" component={Race}/>
           <Route path="/support-detail/:supportId" component={SupportDetail}/>
           <Route path="/player-detail/:id/:nur" component={PlayerDetail}/>
+          <Route path="/buff" component={BuffList}/>
       </Drawer>
     </Router>);
   }
