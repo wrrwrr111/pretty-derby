@@ -187,12 +187,6 @@ const Nurturing = (props) =>{
           </Col>
         )}
         </Row>
-      <Button size='large' style={{
-        zIndex:10000,
-        position:'fixed',
-        right:10,
-        bottom:10,
-      }}>返回</Button>
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} footer={null} width={'80%'}>
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
