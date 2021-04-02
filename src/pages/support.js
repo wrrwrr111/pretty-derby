@@ -118,12 +118,12 @@ class Support extends React.Component{
     }
     return (
       <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
-        <div style={{maxWidth:1200,height:window.innerHeight-200}}>
+        <div style={{maxWidth:1200,maxHeight:window.innerHeight-200}}>
           <Row justify="space-around">
             <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>筛选</text></div></Col>
             <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>支援卡列表</text></div></Col>
             <Col span={6}>
-              <div style={{overflowY:'scroll',display:'flex',flexDirection:'column',overflowX:'hidden',height:window.innerHeight-300,padding:4}}>
+              <div style={{overflowY:'scroll',display:'flex',flexDirection:'column',overflowX:'hidden',maxHeight:window.innerHeight-300,padding:4}}>
                 {this.props.filter&&<>
                   <Button onClick={this.changeShowMode}>高亮我的卡组</Button>
                   <Button onClick={this.changeChooseMode}>配置卡组</Button>
@@ -136,7 +136,7 @@ class Support extends React.Component{
 
 
             <Col span={18}>
-              <div style={{overflowY:'scroll',overflowX:'hidden',height:window.innerHeight-300,paddingRight:16}}>
+              <div style={{overflowY:'scroll',overflowX:'hidden',maxHeight:window.innerHeight-300,paddingRight:16}}>
                 {
                   ['SSR','SR','R'].map(rare=>
                     <Row gutter={[16,16]} key={rare}>
