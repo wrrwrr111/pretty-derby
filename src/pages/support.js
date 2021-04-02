@@ -34,7 +34,7 @@ const SupportCard = (props)=>{
 
       <Modal title={`${props.data.name}----${t(props.data.charaName)}`}
             visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
-            width={800} >
+            width={800} destroyOnClose={true}>
         <SupportDetail supportId={props.data.id}></SupportDetail>
       </Modal>
     </>

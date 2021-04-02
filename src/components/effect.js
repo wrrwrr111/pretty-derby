@@ -1,6 +1,6 @@
 import React from 'react';
 // import {useState} from 'react';
-import { Table,Popover } from 'antd';
+import { Table, Popover, Slider, Row ,Col} from "antd";
 
 import db from '../db.js'
 import t from './t.js'
@@ -70,6 +70,7 @@ const getValue = (effect,cur) =>{
   }
 }
 const EffectTable = (props)=>{
+
   const effects = db.get('effects').value()
   console.log(props.effects)
   let columns = [
@@ -101,4 +102,169 @@ const EffectTable = (props)=>{
 
   return(<Table columns={columns} dataSource={props.effects} rowKey='type' pagination={false}></Table>)
 }
-export {EffectTable}
+
+
+
+
+
+
+
+
+class TestEffectTable extends React.Component{
+  constructor(props) {
+    super(props);
+    this.effects = db.get('effects').value();
+    let maxLevel = 1;
+    switch (props.rarity) {
+      case 1:
+        maxLevel = 40;
+        break;
+      case 2:
+        maxLevel = 45;
+        break;
+      case 3:
+        maxLevel = 50;
+        break;
+      default:
+        maxLevel = 1;
+    }
+
+    this.maxLevel = maxLevel;
+    this.state={
+      selectingLevel:1,
+    }
+  }
+
+  calc(data,input){
+    let nodes = [];
+    let output = 0;
+    const maxLevel = this.maxLevel;
+    let prevNode = {level:0,value:0};
+    for (let i = 0; i<data.length;i += 1){
+      if(data[i] !== -1){
+        let level = i*5;
+        if (level === 0){
+          level = 1
+        }
+        nodes.push({level:level,value:data[i]})
+        prevNode = {level:level,value:data[i]};
+      }
+      if(i === data.length-1 && data[i] === -1){
+        nodes.push({level:maxLevel,value:prevNode.value})
+      }
+    }
+    nodes.push({level:999,value:prevNode.value}); // 以后万一出SSSR？确保一定能找到区间。
+
+    const level = Math.floor(input);
+    let upperNode = {level:0,value:0};
+    let lowerNode = {level:0,value:0};
+    if(level < 0 || level > maxLevel){
+        output = 0;
+    }else if(level<nodes[0].level){
+        output = 0;
+    }else {
+      for(let i=0;i<nodes.length;i+=1){
+        if (level>=nodes[i].level && level < nodes[i+1].level){
+          lowerNode = nodes[i];
+          upperNode = nodes[i+1] || nodes[i];
+          break;
+        }
+      }
+      output = Math.floor((upperNode.value-lowerNode.value)/(upperNode.level-lowerNode.level)*(level-lowerNode.level)+lowerNode.value);
+    }
+
+    return output
+  }
+
+
+  effectCapsuleStyle = {
+    display:'flex',
+    alignItems:'center',
+    flexDirection:'row',
+    margin:2,
+    borderRadius:'12px',
+    backgroundColor:'#32cd32C0',
+    borderStyle:'solid',
+    borderWidth:'thin',
+    borderColor:'#32cd32F0'
+}
+
+    effectRightDivStyle={
+    padding:8,
+    display:'flex',
+    height:'100%',
+    width:'60%',
+    backgroundColor:'white',
+    borderRadius:'0 12px 12px 0',
+    }
+
+    effectNameStyle={
+      fontSize:18,
+      fontWeight: 500,
+      color:'#333333',
+      textShadow: "0 2px #cccccc70",
+      overflow: 'hidden',
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+    }
+
+    effectValueStyle = {
+      fontSize:18,
+      fontWeight: 600,
+      color:'#333333',
+    }
+
+  render() {
+    return(
+      <div>
+        <div style={{display:'flex',flexDirection:'row',alignItems:'center',width:'100%',padding:8,justifyContent:'space-between'}}>
+          <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
+            设置等级
+          </text>
+          <Slider
+            style={{width:'80%',marginRight:16}}
+            min={1}
+            max={this.maxLevel}
+            onChange={(value)=>{this.setState({selectingLevel:value})}}
+          />
+        </div>
+        <Row>
+          {this.props.effects.map(
+            (item)=>{
+              const data = [item.init,item.limit_lv5,item.limit_lv10,item.limit_lv15,item.limit_lv20,item.limit_lv25,item.limit_lv30,item.limit_lv35,item.limit_lv40,item.limit_lv45,item.limit_lv50].filter((item)=>(item));
+              return (
+                <Col span={12}>
+                  <div style={{...this.effectCapsuleStyle}}>
+                <Popover trigger={ua==='mo'?'click':'hover'} content={<>
+                  <p>{this.effects[item.type].name}</p>
+                  <p>{t(this.effects[item.type].name)}</p>
+                  <p>{this.effects[item.type].description}</p>
+                  <p>{t(this.effects[item.type].description)}</p>
+                </>}>
+                  <div style={{display:'flex',padding:8,width:'40%'}}>
+                    <text style={{...this.effectNameStyle}}>{t(this.effects[item.type].name)}</text>
+                  </div>
+                </Popover>
+                    <div style={{...this.effectRightDivStyle}}>
+                      <text style={{...this.effectValueStyle}}>
+                     {this.calc(data,this.state.selectingLevel)}
+                      </text>
+                    </div>
+                  </div>
+                </Col>
+              )
+            }
+          )}
+          </Row>
+      </div>
+    )
+  }
+}
+
+
+
+
+
+
+
+export {EffectTable,TestEffectTable}
