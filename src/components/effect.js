@@ -180,9 +180,7 @@ class TestEffectTable extends React.Component{
         <Row>
           {this.props.effects.map(
             (item)=>{
-              console.log(item);
               const data = [item.init,item.limit_lv5,item.limit_lv10,item.limit_lv15,item.limit_lv20,item.limit_lv25,item.limit_lv30,item.limit_lv35,item.limit_lv40,item.limit_lv45,item.limit_lv50].filter((item)=>(item));
-              console.log(data);
               return (
                 <Col span={12}>
                   <div style={{...this.effectCapsuleStyle}}>
