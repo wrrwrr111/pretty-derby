@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Divider,Image} from 'antd';
+import { Button, Divider, Image, Popover } from "antd";
 import db from '../db.js'
 import t from './t.js'
 
@@ -9,6 +9,7 @@ import {SkillList} from './skill.js'
 import {EffectTable} from './effect.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+
 
 const SupportDetail = (props) =>{
   const id = props.supportId || props.match.params.supportId

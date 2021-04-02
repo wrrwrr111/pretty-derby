@@ -5,10 +5,14 @@ import { Table,Popover } from 'antd';
 import db from '../db.js'
 import t from './t.js'
 
+
+const ua = db.get('ua').value();
+
+
 const EffectTable = (props)=>{
   const effects = db.get('effects').value()
   let columns = [
-    {title:'效果',dataIndex:'type',key:'type',render:type=><Popover content={<>
+    {title:'效果',dataIndex:'type',key:'type',render:type=><Popover trigger={ua==='mo'?'click':'hover'} content={<>
       <p>{effects[type].name}</p>
       <p>{t(effects[type].name)}</p>
       <p>{effects[type].description}</p>

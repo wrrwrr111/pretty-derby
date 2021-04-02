@@ -48,7 +48,7 @@ const AppPc = ()=>{
   const resetIntro = ()=>{
     localStorage.setItem('introV',null)
   }
-
+  db.set('ua','pc').write();
   //隐藏主要的overflow
   const dom = document.getElementsByTagName("body");
   dom[0].style.overflowY = "scroll";
