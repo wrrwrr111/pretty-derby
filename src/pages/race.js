@@ -128,7 +128,7 @@ import { Table } from 'antd';
       setSelectedRowKeys([])
     }
     return(
-      <div style={{paddingLeft:200,paddingRight:200,paddingTop:40}}>
+      <div>
       <Table rowSelection={props.onSelect?rowSelection:null} columns={columns}
       dataSource={allRaceList} onChange={onChange} pagination={false} scroll={{y:dynamicTableHeight}}/>
       </div>

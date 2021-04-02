@@ -16,7 +16,8 @@ const EventList = (props)=>{
     <>
       <Tabs defaultActiveKey="1">
         <Tabs.TabPane tab="有选项" key="1">
-          <div style={{maxHeight:200,overflowY:'auto'}}>
+          {/* <div style={{maxHeight:200,overflowY:'auto'}}> */}
+          <div>
       {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
           </div>
         </Tabs.TabPane>

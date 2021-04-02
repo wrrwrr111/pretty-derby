@@ -10,9 +10,12 @@ import db from './db.js'
 import Race from './pages/race.js'
 import Player from './pages/player.js'
 import Support from './pages/support.js'
-import NurturingMO2 from './pages/nurturing-mo2.js'
+import NurturingMO2 from './pages-mo/nurturing.js'
 import Skill from './pages/skill.js'
-import SeedMo from './pages/seed-mo.js'
+import SeedMo from './pages-mo/seed.js'
+
+import SupportDetail from './components/support-detail.js'
+import PlayerDetail from './components/player-detail.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 class App1 extends React.Component {
@@ -37,11 +40,11 @@ class App1 extends React.Component {
   }
   render() {
     const routers = [{path:'/',label:'角色'},
-    {path:'support',label:'支援卡'},
-    {path:'skill',label:'技能'},
-    {path:'race',label:'比赛'},
-    {path:'nurturing2',label:'育成new'},
-    {path:'seed',label:'种🐎'}]
+    {path:'/support',label:'支援卡'},
+    {path:'/skill',label:'技能'},
+    {path:'/race',label:'比赛'},
+    {path:'/nurturing2',label:'育成new'},
+    {path:'/seed',label:'种🐎'}]
     const linkList=(<List>
       {routers.map(item=>
         <Link to={item.path} key={item.path}  onClick={()=>this.onSelect(item.label)}>
@@ -92,6 +95,8 @@ class App1 extends React.Component {
           <Route path="/nurturing2" component={NurturingMO2}/>
           <Route path="/seed" component={SeedMo}/>
           <Route path="/race" component={Race}/>
+          <Route path="/support-detail/:supportId" component={SupportDetail}/>
+          <Route path="/player-detail/:id/:nur" component={PlayerDetail}/>
       </Drawer>
     </Router>);
   }

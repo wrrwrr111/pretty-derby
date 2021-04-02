@@ -28395,6 +28395,7 @@
       "name": "神業ステップ",
       "imgUrl": "img/skills/S_0SAtXO5M.png",
       "rare": "レア",
+      "describe": "左右に動いても疲れにくくなる<中距離>",
       "id": "S_0SAtXO5M",
       "condition": "distance_type==3&is_move_lane==1&accumulatetime>=10@distance_type==3&is_move_lane==2&accumulatetime>=10",
       "rarity": 2,

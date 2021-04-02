@@ -49,24 +49,24 @@ const Skill = () =>{
     {label:'追',value:'＜作戦・追込＞'}
   ]
   const checkOptions2 =[
-    {label:'速度被动',value:'10011'},
-    {label:'耐力被动',value:'10021'},
-    {label:'力量被动',value:'10031'},
-    {label:'毅力被动',value:'10041'},
-    {label:'智力被动',value:'10051'},
-    {label:'速度提高',value:'20011'},
-    {label:'耐力恢复',value:'20021'},
+    {label:'速度被动(绿)',value:'10011'},
+    {label:'耐力被动(绿)',value:'10021'},
+    {label:'力量被动(绿)',value:'10031'},
+    {label:'毅力被动(绿)',value:'10041'},
+    {label:'智力被动(绿)',value:'10051'},
+    {label:'耐力恢复(蓝)',value:'20021'},
+    {label:'速度提高(黄)',value:'20011'},
     // {label:'20031',value:'20031'},
-    {label:'加速度提高',value:'20041'},
-    {label:'切换跑道',value:'20051'},
-    {label:'起步',value:'20061'},
+    {label:'加速度提高(黄)',value:'20041'},
+    {label:'切换跑道(黄)',value:'20051'},
+    {label:'起步(黄)',value:'20061'},
     // {label:'20071',value:'20071'},
     // {label:'20081',value:'20081'},
-    {label:'视野',value:'20091'},
-    {label:'降速(debuff)',value:'30011'},
-    {label:'安定(debuff)',value:'30041'},
-    {label:'疲劳(debuff)',value:'30051'},
-    {label:'视野(debuff)',value:'30071'}
+    {label:'视野(黄)',value:'20091'},
+    {label:'降速(红)',value:'30011'},
+    {label:'安定(红)',value:'30041'},
+    {label:'疲劳(红)',value:'30051'},
+    {label:'视野(红)',value:'30071'}
   ]
   const checkOptions3 = [
     {label:'普通',value:'ノーマル'},
