@@ -137,12 +137,15 @@ const Nurturing = (props) =>{
   const toPlayerDetail = (id)=>{
     props.history.push(`/player-detail/${id}/1`)
   }
+  const toBuffList = (id)=>{
+    props.history.push(`/buff`)
+  }
   return(
     <Row className='nurturing-box' gutter={[16,16]}>
       <Col>
           <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
           <Button onClick={showSupport2}>支援卡查询</Button>
-          <BuffButton></BuffButton>
+          <Button onClick={toBuffList}>BUFF查询</Button>
         <Popover width={'80%'} content={
           <>
             <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
@@ -190,10 +193,10 @@ const Nurturing = (props) =>{
         right:10,
         bottom:10,
       }}>返回</Button>
-      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={'80%'}>
+      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} footer={null} width={'80%'}>
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
-      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
+      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} footer={null} width={'80%'}>
         <Support onSelect={needSelect?handleSelectSupport:null} filter={false}></Support>
       </Modal>
     </Row>
