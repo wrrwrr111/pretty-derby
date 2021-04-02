@@ -142,10 +142,10 @@ class Support extends React.Component{
                     <Row gutter={[16,16]} key={rare}>
                       <Divider>{rare}</Divider>
                       {this.state.list.filter(item=>item.rare===rare).map(support=>
-                        <Col xxl={4} lg={6} sm={8} xs={12} key={support.id}
-                             className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
+                        <Col xxl={4} lg={6} sm={6} xs={6} key={support.id}
+                            className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
                           <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
-                                       chooseMode={this.props.chooseMode}></SupportCard>
+                                      chooseMode={this.props.chooseMode}></SupportCard>
                           {/* {support.effects} */}
                         </Col>)
                       }

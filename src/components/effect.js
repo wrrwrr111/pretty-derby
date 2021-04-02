@@ -131,7 +131,7 @@ class TestEffectTable extends React.Component{
 
     this.maxLevel = maxLevel;
     this.state={
-      selectingLevel:1,
+      selectingLevel:maxLevel,
     }
   }
 
@@ -225,7 +225,10 @@ class TestEffectTable extends React.Component{
             style={{width:'80%',marginRight:16}}
             min={1}
             max={this.maxLevel}
+            value={this.state.selectingLevel}
             onChange={(value)=>{this.setState({selectingLevel:value})}}
+            marks={{1:'lv1',5:'lv5',10:'lv10',15:'lv15',20:'lv20',
+                    25:'lv25',30:'lv30',35:'lv35',40:'lv40',45:'lv45',50:'lv50'}}
           />
         </div>
         <Row>
@@ -247,7 +250,7 @@ class TestEffectTable extends React.Component{
                 </Popover>
                     <div style={{...this.effectRightDivStyle}}>
                       <text style={{...this.effectValueStyle}}>
-                     {this.calc(data,this.state.selectingLevel)}
+                      {this.calc(data,this.state.selectingLevel)}
                       </text>
                     </div>
                   </div>
