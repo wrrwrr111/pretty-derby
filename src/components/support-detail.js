@@ -6,7 +6,7 @@ import t from './t.js'
 
 import {EventList} from './event.js'
 import {SkillList} from './skill.js'
-import {EffectTable} from './effect.js'
+import {EffectTable,TestEffectTable} from './effect.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -29,6 +29,7 @@ const SupportDetail = (props) =>{
     <SkillList skillList={data.possessionSkill}></SkillList>
     <Divider>育成效果</Divider>
     <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
+    <TestEffectTable effects={data.effects} rarity={data.rarity}></TestEffectTable>
   </>)
 }
 
