@@ -72,7 +72,6 @@ const getValue = (effect,cur) =>{
 const EffectTable = (props)=>{
 
   const effects = db.get('effects').value()
-  console.log(props.effects)
   let columns = [
     {title:'效果',dataIndex:'type',key:'type',render:type=><Popover trigger={ua==='mo'?'click':'hover'} content={<>
       <p>{effects[type].name}</p>
@@ -113,6 +112,7 @@ const EffectTable = (props)=>{
 class TestEffectTable extends React.Component{
   constructor(props) {
     super(props);
+    console.log('props',props)
     this.effects = db.get('effects').value();
     let maxLevel = 1;
     switch (props.rarity) {
@@ -213,11 +213,52 @@ class TestEffectTable extends React.Component{
       fontWeight: 600,
       color:'#333333',
     }
-
+    effectBoxStyle = {
+      display:'flex',
+      flexDirection:'row',
+      alignItems:'center',
+      width:'100%',
+      padding:8,
+      justifyContent:'space-between'
+    }
   render() {
     return(
       <div>
-        <div style={{display:'flex',flexDirection:'row',alignItems:'center',width:'100%',padding:8,justifyContent:'space-between'}}>
+        <div style={{...this.effectBoxStyle}}>
+          <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
+            固有效果
+          </text>
+          <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
+            {`激活等级:${this.props.unique_effect.lv}`}
+          </text>
+        </div>
+        <Row>
+          {['0','1'].map(index=>
+            <Col span={12}>
+              <div style={{...this.effectCapsuleStyle}}>
+            <Popover trigger={ua==='mo'?'click':'hover'} content={<>
+              <p>{this.effects[this.props.unique_effect[`type_${index}`]].name}</p>
+              <p>{t(this.effects[this.props.unique_effect[`type_${index}`]].name)}</p>
+              <p>{this.effects[this.props.unique_effect[`type_${index}`]].description}</p>
+              <p>{t(this.effects[this.props.unique_effect[`type_${index}`]].description)}</p>
+            </>}>
+              <div style={{display:'flex',padding:8,width:'40%'}}>
+                <text style={{...this.effectNameStyle}}>
+                  {t(this.effects[this.props.unique_effect[`type_${index}`]].name)}
+                </text>
+              </div>
+            </Popover>
+                <div style={{...this.effectRightDivStyle}}>
+                  <text style={{...this.effectValueStyle}}>
+                  {this.props.unique_effect[`value_${index}`]}
+                  </text>
+                </div>
+              </div>
+            </Col>
+          )}
+        </Row>
+
+        <div style={{...this.effectBoxStyle}}>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
             设置等级
           </text>

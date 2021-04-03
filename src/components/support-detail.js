@@ -30,7 +30,7 @@ const SupportDetail = (props) =>{
     <Divider style={{margin:'4px 0'}}>自带技能</Divider>
     <SkillList skillList={data.possessionSkill}></SkillList>
     <Divider>育成效果</Divider>
-    <TestEffectTable effects={data.effects} rarity={data.rarity}></TestEffectTable>
+    <TestEffectTable effects={data.effects} unique_effect={data.unique_effect} rarity={data.rarity}></TestEffectTable>
     <Alert message="中间数值为插值，存在误差" type="info" />
     <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
   </>)
