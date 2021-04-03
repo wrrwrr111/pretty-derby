@@ -133,13 +133,15 @@ import { Table } from 'antd';
     }
     // 筛选发生变化时清空已经选择的内容
     const onChange = (pagination, filters, sorter, extra) => {
-      props.onSelect([])
-      setSelectedRowKeys([])
+      if (extra.action === 'filter') {
+        props.onSelect([])
+        setSelectedRowKeys([])
+      } 
     }
     return(
       <div>
       <Table rowSelection={props.onSelect?rowSelection:null} columns={columns}
-      dataSource={allRaceList} onChange={onChange} pagination={false} scroll={{y:dynamicTableHeight}}/>
+      dataSource={allRaceList} onChange={onChange} scroll={{y:dynamicTableHeight}}/>
       </div>
       )
   }
