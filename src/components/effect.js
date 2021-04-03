@@ -224,6 +224,7 @@ class TestEffectTable extends React.Component{
   render() {
     return(
       <div>
+        {this.props.unique_effect&&<>
         <div style={{...this.effectBoxStyle}}>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
             固有效果
@@ -257,6 +258,7 @@ class TestEffectTable extends React.Component{
             </Col>
           )}
         </Row>
+        </>}
 
         <div style={{...this.effectBoxStyle}}>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
