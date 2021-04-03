@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import shortid from 'shortid'
 import db from '../db.js'
-
+import t from '../components/t.js'
 import { Divider,Row,Col,Modal,Button, Popconfirm,Popover,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
@@ -134,12 +134,12 @@ const Nurturing = (props) =>{
   return(
     <Row className='nurturing-box' gutter={[16,16]}>
       <Col>
-          <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-          <Button onClick={showSupport2}>支援卡查询</Button>
-          <Button onClick={toBuffList}>BUFF查询</Button>
+          <Button type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
+          <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+          <Button onClick={toBuffList}>{t('BUFF')}</Button>
         <Popover width={'80%'} content={
           <>
-            <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
+            <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
             {decks.map(deck=>
               <Row key={deck.id}>
                 {deck.imgUrls.map(imgUrl=>
@@ -148,18 +148,18 @@ const Nurturing = (props) =>{
                   </Col>
                 )}
                 <Col span={3}>
-                  <Button type="primary" onClick={()=>loadDeck(deck)}>读取卡组</Button>
+                  <Button type="primary" onClick={()=>loadDeck(deck)}>{t('读取卡组')}</Button>
                   <Popconfirm title="确认覆盖？" onConfirm={()=>saveDeck(deck)}>
-                    <Button danger type="dashed">覆盖卡组</Button>
+                    <Button danger type="dashed">{t('覆盖卡组')}</Button>
                   </Popconfirm>
                   <Popconfirm title="确认删除？" onConfirm={()=>deleteDeck(deck)}>
-                    <Button danger type="dashed">删除卡组</Button>
+                    <Button danger type="dashed">{t('删除卡组')}</Button>
                   </Popconfirm>
                 </Col>
               </Row>
             )}
           </>
-          }><Button>卡组</Button>
+          }><Button>{t('我的卡组')}</Button>
         </Popover>
         {player.imgUrl&&
           <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='128'
@@ -170,7 +170,7 @@ const Nurturing = (props) =>{
         <Row justify="space-around">
         {[0,1,2,3,4,5].map(index=>
           <Col span={7} key={index} style={{}}>
-            <Button icon={<EditOutlined />} onClick={()=>showSupport(index)}>支援卡</Button>
+            <Button icon={<EditOutlined />} onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
             {supports[index]&&supports[index].id&&
               <img src={cdnServer+supports[index].imgUrl} alt={supports[index].name} width={'100%'}
               onClick={()=>toSupportDetail(supports[index].id)}></img>

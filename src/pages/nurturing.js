@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
+import t from '../components/t.js'
 
 import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm} from 'antd';
 
@@ -173,12 +174,12 @@ const Nurturing = () =>{
     <Row className='nurturing-box' gutter={[32,8]}>
 
       <Col span={9} style={{height:dynamicContentHeight,overflowY:'auto'}}>
-        <Button type={'primary'} onClick={showPlayer}>选择马娘</Button>
-        <Button onClick={showSupport2}>支援卡查询</Button>
-        <Button onClick={showRace}>选择关注赛事</Button>
+        <Button type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
+        <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+        <Button onClick={showRace}>{t('选择关注赛事')}</Button>
         <Popover width={'100%'} content={
           <>
-            <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
+            <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
             {decks.map(deck=>
               <Row key={deck.id}>
                 {deck.imgUrls.map(imgUrl=>
@@ -187,18 +188,18 @@ const Nurturing = () =>{
                   </Col>
                 )}
                 <Col span={3}>
-                  <Button type="primary" onClick={()=>loadDeck(deck)}>读取卡组</Button>
+                  <Button type="primary" onClick={()=>loadDeck(deck)}>{t('读取卡组')}</Button>
                   <Popconfirm title="确认覆盖？" onConfirm={()=>saveDeck(deck)}>
-                    <Button danger type="dashed">覆盖卡组</Button>
+                    <Button danger type="dashed">{t('覆盖卡组')}</Button>
                   </Popconfirm>
                   <Popconfirm title="确认删除？" onConfirm={()=>deleteDeck(deck)}>
-                    <Button danger type="dashed">删除卡组</Button>
+                    <Button danger type="dashed">{t('删除卡组')}</Button>
                   </Popconfirm>
                 </Col>
               </Row>
             )}
           </>
-        }><Button>卡组</Button></Popover>
+        }><Button>{t('我的卡组')}</Button></Popover>
         <BuffButton></BuffButton>
         <Divider></Divider>
         <Row>
@@ -219,7 +220,7 @@ const Nurturing = () =>{
         <Row gutter={[16,16]}>
         {[0,1,2,3,4,5].map(index=>
           <Col sm={8} xs={24} key={index}>
-            <Button onClick={()=>showSupport(index)}>选择支援卡</Button>
+            <Button onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
             {supports[index]&&supports[index].id &&<NurturingSupport data={supports[index]} ></NurturingSupport>}
           </Col>
         )}

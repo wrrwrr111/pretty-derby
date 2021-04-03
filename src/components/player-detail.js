@@ -29,8 +29,8 @@ const PlayerDetail = (props) =>{
       </div>
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
-      {/* <Divider>赛程</Divider> */}
-      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <Divider>赛程</Divider>
+      <RaceSchedule raceList={data.raceList}></RaceSchedule>
       <Divider>技能</Divider>
       <SkillList skillList={data.skillList}></SkillList>
     </>:<>
@@ -51,8 +51,8 @@ const PlayerDetail = (props) =>{
       <SkillList skillList={data.skillList}></SkillList>
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
-      {/* <Divider>赛程</Divider> */}
-      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <Divider>赛程</Divider>
+      <RaceSchedule raceList={data.raceList}></RaceSchedule>
     </>
   )
 }

@@ -28,7 +28,7 @@ const RaceSchedule = (props)=>{
         {`${curRace.name}/${curRace.distanceType}/${props.raceList[i].goal}`}
         {/* -{curRace.date} */}
         </Col>)
-    }else if(props.selectedRaceList[i]){
+    }else if(props.selectedRaceList&&props.selectedRaceList[i]){
       str.push(<Col span={6} key={i}
         style={{
         backgroundColor:'#7bed9f',

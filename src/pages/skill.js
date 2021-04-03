@@ -2,9 +2,10 @@ import React,{useState} from 'react';
 import { Divider,Row,Col,Button,Checkbox,Modal,Tooltip,PageHeader,Switch,Input} from 'antd';
 
 import db from '../db.js'
+import t from '../components/t.js'
+
 import Support from './support.js'
 import Player from './player.js'
-import t from '../components/t.js'
 import {SkillButton} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
 const { Search } = Input
@@ -219,24 +220,24 @@ const Skill = () =>{
     <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
       <div style={{maxWidth:800}}>
         <Row>
-          <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>筛选</text></div></Col>
-          <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>技能列表</text></div></Col>
+          <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('筛选')}</text></div></Col>
+          <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('技能列表')}</text></div></Col>
           <Col span={6}>
             <div style={{height:dynamicListHeight,overflowY:'scroll',display:'flex',flexDirection:'column'}}>
               <div style={{height:16}}/>
-              <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>重置</Button>
+              <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>{t('重置')}</Button>
               <Divider/>
               <div>
-                <Tooltip title="可以在支援卡页面配置">
-                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>显示拥有支援卡</span>
+                <Tooltip title={t("可以在支援卡页面配置")}>
+                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('显示拥有支援卡')}</span>
                   <Switch checked={mode} onChange={changeMode} />
                 </Tooltip>
               </div>
               <div>
-                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>技能搜索</span>
+                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('技能搜索')}</span>
                 <Search
-                  placeholder="输入技能名称"
-                  enterButton="搜索"
+                  placeholder={t("输入技能名称")}
+                  enterButton={t("搜索")}
                   size="middle"
                   style={{ width: '100%' }}
                   onSearch={onSearch}

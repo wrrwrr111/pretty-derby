@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
-
+import t from '../components/t.js'
 import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
@@ -15,8 +15,6 @@ import Race from './race.js'
 import Player from './player.js'
 import Support from './support.js'
 
-
-const {Column} = Table
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -158,22 +156,12 @@ const Nurturing = () =>{
   return(
     <div style={{display:'flex',justifyContent:'center'}}>
       <div style={{height:dynamicContentHeight,overflowY:'auto'}}>
-        <Button className='add-player' type={'primary'} onClick={showPlayer}>选择马娘</Button>
-        <Button onClick={showSupport2}>支援卡查询</Button>
-        <Button onClick={showRace}>选择关注赛事</Button>
-        {/* <Popover content={
-          <Table dataSource={races} pagination={false} style={{height:dynamicContentHeight,overflow:'auto'}}>
-            <Column title="名称" dataIndex="name" key="name" />
-            <Column title="时间" dataIndex="date" key="date" />
-            <Column title="级别" dataIndex="grade" key="grade" />
-            <Column title="类型" dataIndex="distanceType" key="distanceType" />
-          </Table>
-        }>
-          <Button>关注赛事</Button>
-        </Popover> */}
+        <Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
+        <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+        <Button onClick={showRace}>{t('选择关注赛事')}</Button>
         <Popover width={'100%'} content={
           <>
-            <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
+            <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
             {decks.map(deck=>
               <Row key={deck.id}>
                 {deck.imgUrls.map(imgUrl=>
@@ -182,18 +170,18 @@ const Nurturing = () =>{
                   </Col>
                 )}
                 <Col span={3}>
-                  <Button type="primary" onClick={()=>loadDeck(deck)}>读取卡组</Button>
-                  <Popconfirm title="确认覆盖？" onConfirm={()=>saveDeck(deck)}>
-                    <Button danger type="dashed">覆盖卡组</Button>
+                  <Button type="primary" onClick={()=>loadDeck(deck)}>{t('读取卡组')}</Button>
+                  <Popconfirm title={t("确认覆盖？")} onConfirm={()=>saveDeck(deck)}>
+                    <Button danger type="dashed">{t('覆盖卡组')}</Button>
                   </Popconfirm>
-                  <Popconfirm title="确认删除？" onConfirm={()=>deleteDeck(deck)}>
-                    <Button danger type="dashed">删除卡组</Button>
+                  <Popconfirm title={t("确认删除？")} onConfirm={()=>deleteDeck(deck)}>
+                    <Button danger type="dashed">{t('删除卡组')}</Button>
                   </Popconfirm>
                 </Col>
               </Row>
             )}
           </>
-        }><Button>卡组</Button></Popover>
+        }><Button>{t('我的卡组')}</Button></Popover>
         <BuffButton></BuffButton>
         <Divider style={{margin:'4px 0'}}></Divider>
         {player.id&&<>
@@ -222,7 +210,7 @@ const Nurturing = () =>{
                   backgroundColor:'rgba(0,0,0,0.2)',
                   height:'100%',
                   padding:'10px'}}>
-                <Tooltip title="选择支援卡">
+                <Tooltip title={t('选择支援卡')}>
                   <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
                 </Tooltip>
                 <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
@@ -230,7 +218,7 @@ const Nurturing = () =>{
                 <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
                 </div>
               </div>
-            :<Button onClick={()=>showSupport(index)}>选择支援卡</Button>
+            :<Button onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
         )}
       </div>
 
