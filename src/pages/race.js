@@ -115,7 +115,16 @@ import { Table } from 'antd';
       columns = getColumns(mediumLabels)
     }
     const onSelectChange = (selectedRowKeys,selectedRows)=>{
-      props.onSelect(selectedRows)
+      let selected = {}
+      for(let race of selectedRows){
+        if(selected[race.dateNum]){
+          selected[race.dateNum].push(race.id)
+        }else{
+          selected[race.dateNum]=[race.id]
+        }
+      }
+      console.log(selected)
+      props.onSelect(selected)
       setSelectedRowKeys(selectedRowKeys)
     }
     const rowSelection = {

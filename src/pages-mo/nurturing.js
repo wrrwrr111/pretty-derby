@@ -6,9 +6,6 @@ import db from '../db.js'
 import { Divider,Row,Col,Modal,Button, Popconfirm,Popover,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
-import {EventList} from '../components/event.js'
-import {SkillList} from '../components/skill.js'
-import {BuffButton} from '../components/buff.js'
 
 // import Race from './race.js'
 import Player from '../pages/player.js'
