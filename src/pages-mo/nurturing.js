@@ -72,13 +72,7 @@ const Nurturing = (props) =>{
     selected.supports[supportIndex] = data
     db.get('selected').assign(selected).write()
   }
-  // const showRace = ()=>{
-  //   setNeedSelect(true)
-  //   setIsRaceVisible(true);
-  // }
-  // const closeRace = () => {
-  //   setIsRaceVisible(false);
-  // };
+
 
   // 卡组相关操作
   const saveDeck = (deck)=>{
