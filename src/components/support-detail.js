@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Divider, Image, Popover } from "antd";
+import { Button, Divider, Image, Alert } from "antd";
 import db from '../db.js'
 import t from './t.js'
 
@@ -20,6 +20,8 @@ const SupportDetail = (props) =>{
       <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around',height:'100%',padding:16}}>
         <div style={{fontSize:20,fontWeight:700}}>{t(data.name)}</div>
         <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{data.name}</div>
+        <div style={{fontSize:20,fontWeight:700}}>{t(data.charaName)}</div>
+        <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{data.charaName}</div>
       </div>
     </div>
     <EventList eventList={data.eventList} pid={data.id}></EventList>
@@ -28,8 +30,9 @@ const SupportDetail = (props) =>{
     <Divider style={{margin:'4px 0'}}>自带技能</Divider>
     <SkillList skillList={data.possessionSkill}></SkillList>
     <Divider>育成效果</Divider>
+    <TestEffectTable effects={data.effects} unique_effect={data.unique_effect} rarity={data.rarity}></TestEffectTable>
+    <Alert message="中间数值为插值，存在误差" type="info" />
     <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
-    <TestEffectTable effects={data.effects} rarity={data.rarity}></TestEffectTable>
   </>)
 }
 

@@ -8,7 +8,7 @@ import {EditOutlined} from '@ant-design/icons'
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
-
+import {RaceSchedule} from '../components/race.js'
 
 
 import Race from './race.js'
@@ -20,37 +20,6 @@ const {Column} = Table
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
-
-// 培育界面 马娘赛程
-const RaceList = (props) =>{
-  return (
-    <Row className={'race-row'}>
-      {
-        props.raceList.map((race,index)=>{
-          // 忽略出道战
-          if(race[1][2]){
-            return(
-          <Col span={12} key={index}>
-            <Row className={'race-row-'+index%4}>
-              <Col span={4} className={'race-name'} >
-                <p>{race[0]}</p>
-              </Col>
-              <Col span = {20} className={'race-detail'}>
-              {race[1].map((item,index)=>
-                  <p key={index}>{item}</p>
-                  )}
-              </Col>
-            </Row>
-          </Col>
-            )
-          }else{
-            return null
-          }
-        }
-      )}
-    </Row>
-  )
-}
 
 const Nurturing = () =>{
   const [needSelect,setNeedSelect] = useState(false)
@@ -64,7 +33,7 @@ const Nurturing = () =>{
   const selected = db.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-  const [races,setRaces] = useState(selected.races)
+  const [selectedRaceList,setSelectedRaceList] = useState(selected.selectedRaceList||[])
 
   const [decks,setDecks] = useState(db.get('myDecks').value())
 
@@ -115,10 +84,10 @@ const Nurturing = () =>{
     setIsRaceVisible(false);
   };
   const handleSelectRace = (data)=>{
-    setRaces(data);
+    setSelectedRaceList(data);
 
     // save
-    selected.races = data
+    selected.selectedRaceList = data
     db.get('selected').assign(selected).write()
   }
 
@@ -192,7 +161,7 @@ const Nurturing = () =>{
         <Button className='add-player' type={'primary'} onClick={showPlayer}>选择马娘</Button>
         <Button onClick={showSupport2}>支援卡查询</Button>
         <Button onClick={showRace}>选择关注赛事</Button>
-        <Popover content={
+        {/* <Popover content={
           <Table dataSource={races} pagination={false} style={{height:dynamicContentHeight,overflow:'auto'}}>
             <Column title="名称" dataIndex="name" key="name" />
             <Column title="时间" dataIndex="date" key="date" />
@@ -201,7 +170,7 @@ const Nurturing = () =>{
           </Table>
         }>
           <Button>关注赛事</Button>
-        </Popover>
+        </Popover> */}
         <Popover width={'100%'} content={
           <>
             <Button onClick={()=>saveDeck()}>保存为新卡组</Button>
@@ -231,7 +200,7 @@ const Nurturing = () =>{
           <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='20%'
             style={{float:'left',marginRight:'8px'}}></img>
           <EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>
-          <RaceList raceList={player.raceList}></RaceList>
+          <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule>
           <Divider style={{margin:'4px 0'}}></Divider>
           <SkillList skillList={player.skillList}></SkillList>
         </>}
