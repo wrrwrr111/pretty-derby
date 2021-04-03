@@ -229,7 +229,7 @@ class TestEffectTable extends React.Component{
             固有效果
           </text>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
-            {`激活等级:${this.props.unique_effect.lv}`}
+            激活等级{`:${this.props.unique_effect.lv}`}
           </text>
         </div>
         <Row>
