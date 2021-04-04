@@ -17,9 +17,10 @@ pd-tool/
 tool/node_modules
 # testing
 /coverage
-
 # production
 # /build
+/build/img
+/public/img/support_card
 
 # misc
 .DS_Store

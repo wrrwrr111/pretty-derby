@@ -21,7 +21,7 @@ import LanButton from './components/lan-button'
 import IntroIndex from './components/intro.js'
 
 const { Header, Content, Footer } = Layout;
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 const AppPc = ()=>{
 
@@ -84,9 +84,10 @@ const AppPc = ()=>{
       <Col span={11}></Col>
       <Col span={2}>
       <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
-          <Button placement="bottom">
-          <Image src={cdnServer+'reimu.gif'} preview={false} width={26}></Image>
-          {t('塞钱箱')}</Button>
+          <Button placement="bottom" style={{display:'flex'}}>
+            <Image src={cdnServer+'reimu.gif'} preview={false} width={24}></Image>
+            <div>{t('塞钱箱')}</div>
+          </Button>
         </Popover>
       </Col>
       <Col span={2}>
