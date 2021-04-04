@@ -8,7 +8,7 @@ import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm} from 'an
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
-import {RaceSchedule} from '../components/race.js'
+import {RaceSchedule,RaceTimeline} from '../components/race.js'
 
 import Race from './race.js'
 import Player from './player.js'
@@ -213,7 +213,9 @@ const Nurturing = () =>{
         <Divider></Divider>
       {player.id&&<>
           <EventList eventList={player.eventList} pid={player.id}></EventList>
-          <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule>
+          {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
+          <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
+          <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
         </>}
       </Col>
       <Col sm={15} xs={24}>

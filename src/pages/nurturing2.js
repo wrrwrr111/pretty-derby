@@ -8,7 +8,7 @@ import {EditOutlined} from '@ant-design/icons'
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
-import {RaceSchedule} from '../components/race.js'
+import {RaceSchedule,RaceTimeline} from '../components/race.js'
 
 
 import Race from './race.js'
@@ -188,8 +188,10 @@ const Nurturing = () =>{
           <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='20%'
             style={{float:'left',marginRight:'8px'}}></img>
           <EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>
-          <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule>
-          <Divider style={{margin:'4px 0'}}></Divider>
+          {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
+          <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
+          <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
+          <Divider style={{margin:'4px 0'}}>{t('技能')}</Divider>
           <SkillList skillList={player.skillList}></SkillList>
         </>}
 

@@ -2,7 +2,7 @@ import React from 'react';
 // import {useState} from 'react';
 import db from '../db.js'
 
-import { Row,Col,Button } from 'antd';
+import { Row,Col,Timeline  } from 'antd';
 import { createFormattedComponent } from 'react-intl/src/components/createFormattedComponent';
 // import t from './t.js'
 
@@ -54,4 +54,33 @@ const RaceSchedule = (props)=>{
   </Row>)
 }
 
-export {RaceSchedule}
+const RaceTimeline = (props)=>{
+  const str  = []
+  const getDate = (i)=>{
+    let year = Math.floor(i/24)+1
+    let month = Math.floor((i - (year-1)*24) /2)+1
+    month = month<10?`\xa0\xa0${month}`:month
+    let moment = i%2?'后':'前'
+    return `${year}年\xa0${month}月${moment}`
+  }
+  for (let i = 13;i<72;i++){
+    let curRace;
+    if(props.raceList[i]){
+      curRace = db.get('races').find({id:props.raceList[i].id}).value()
+      str.push(<Timeline.Item label={getDate(i)} color="red">{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</Timeline.Item>)
+    }else if(props.selectedRaceList&&props.selectedRaceList[i]){
+      str.push(<Timeline.Item label={getDate(i)} color="green">{
+        props.selectedRaceList[i].map(id=>{
+          curRace = db.get('races').find({id}).value()
+          return <p>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance}`}</p>
+        })
+      }</Timeline.Item>)
+    }else{
+      //普通
+    }
+  }
+  return(<Timeline mode='left'>
+    {str}
+  </Timeline>)
+}
+export {RaceSchedule,RaceTimeline}

@@ -137,6 +137,7 @@ const Nurturing = (props) =>{
           <Button type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
           <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
           <Button onClick={toBuffList}>{t('BUFF')}</Button>
+          {/* <Button onClick={toBuffList}>{t('赛程')}</Button> */}
         <Popover width={'80%'} content={
           <>
             <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>

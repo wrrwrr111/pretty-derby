@@ -7,7 +7,7 @@ import t from './t.js'
 import {EventList} from './event.js'
 import {SkillList} from './skill.js'
 // import RaceList from './player-race.js'
-import {RaceSchedule} from './race.js'
+import {RaceSchedule,RaceTimeline} from '../components/race.js'
 // import {EffectTable} from './effect.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -30,7 +30,8 @@ const PlayerDetail = (props) =>{
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
       <Divider>赛程</Divider>
-      <RaceSchedule raceList={data.raceList}></RaceSchedule>
+      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <RaceTimeline raceList={data.raceList}></RaceTimeline>
       <Divider>技能</Divider>
       <SkillList skillList={data.skillList}></SkillList>
     </>:<>
@@ -52,7 +53,8 @@ const PlayerDetail = (props) =>{
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
       <Divider>赛程</Divider>
-      <RaceSchedule raceList={data.raceList}></RaceSchedule>
+      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <RaceTimeline raceList={data.raceList}></RaceTimeline>
     </>
   )
 }
