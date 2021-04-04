@@ -106,13 +106,28 @@
   background-color: #99cccc;
 }
 
-.gray-cover{
-  /* background-color: rgba(33, 33, 33,0.3); */
+/*race time line  */
+.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+  position: absolute;
+  top: -7.001px;
+  width: calc(25% - 12px);
+  text-align: right;
 }
-.nur-sup-img{
-  /* filter:blur(3px);
-  -webkit-filter:blur(3px);
-  -moz-filter:blur(3px);
-  -ms-filter:blur(3px);
-  -o-filter:blur(3px); */
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-tail, .ant-timeline.ant-timeline-right .ant-timeline-item-tail, .ant-timeline.ant-timeline-label .ant-timeline-item-tail, .ant-timeline.ant-timeline-alternate .ant-timeline-item-head, .ant-timeline.ant-timeline-right .ant-timeline-item-head, .ant-timeline.ant-timeline-label .ant-timeline-item-head, .ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-right .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
+  left: 25%;
+}
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content, .ant-timeline.ant-timeline-right .ant-timeline-item-left .ant-timeline-item-content, .ant-timeline.ant-timeline-label .ant-timeline-item-left .ant-timeline-item-content {
+  left: calc(25% - 4px);
+  width: calc(75% - 14px);
+  text-align: left;
+}
+.ant-timeline-item-content p{
+  margin-bottom: 4px
+}
+.ant-timeline-item {
+  position: relative;
+  margin: 0;
+  padding-bottom: 12px;
+  font-size: 14px;
+  list-style: none;
 }

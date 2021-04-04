@@ -65,7 +65,7 @@ const getValue = (effect,cur) =>{
       //   'cur - min_limit':limits.indexOf(cur)-limits.indexOf(min_limit),
       //   cur_value:min+(max-min)*(limits.indexOf(cur)-limits.indexOf(min_limit))/(limits.indexOf(max_limit)-limits.indexOf(min_limit))
       // })
-      return Math.floor(min+(max-min)*(limits.indexOf(cur)-limits.indexOf(min_limit))/(limits.indexOf(max_limit)-limits.indexOf(min_limit)))+'(插值)'
+      return Math.floor(min+(max-min)*(limits.indexOf(cur)-limits.indexOf(min_limit))/(limits.indexOf(max_limit)-limits.indexOf(min_limit)))+`(${t('插值')})`
     }
   }
 }
@@ -73,7 +73,7 @@ const EffectTable = (props)=>{
 
   const effects = db.get('effects').value()
   let columns = [
-    {title:'效果',dataIndex:'type',key:'type',render:type=><Popover trigger={ua==='mo'?'click':'hover'} content={<>
+    {title:t('效果'),dataIndex:'type',key:'type',render:type=><Popover trigger={ua==='mo'?'click':'hover'} content={<>
       <p>{effects[type].name}</p>
       <p>{t(effects[type].name)}</p>
       <p>{effects[type].description}</p>
@@ -81,7 +81,7 @@ const EffectTable = (props)=>{
     </>}>
       <p>{t(effects[type].name)}</p>
     </Popover>},
-    {title:'初始',dataIndex:'init',key:'init',render:(text,record)=>getValue(record,'init')},
+    {title:t('初始'),dataIndex:'init',key:'init',render:(text,record)=>getValue(record,'init')},
     // {title:'lv5',dataIndex:'limit_lv5',key:'limit_lv5',render:(text,record)=>getValue(record,'limit_lv5')},
     // {title:'lv10',dataIndex:'limit_lv10',key:'limit_lv10',render:(text,record)=>getValue(record,'limit_lv10')},
     // {title:'lv15',dataIndex:'limit_lv15',key:'limit_lv15',render:(text,record)=>getValue(record,'limit_lv15')},
@@ -227,10 +227,10 @@ class TestEffectTable extends React.Component{
         {this.props.unique_effect&&<>
         <div style={{...this.effectBoxStyle}}>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
-            固有效果
+            {t('固有效果')}
           </text>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
-            激活等级{`:${this.props.unique_effect.lv}`}
+            {`${t('激活等级')}:${this.props.unique_effect.lv}`}
           </text>
         </div>
         <Row>
@@ -262,7 +262,7 @@ class TestEffectTable extends React.Component{
 
         <div style={{...this.effectBoxStyle}}>
           <text style={{...this.effectValueStyle,fontSize:18,marginRight:16}}>
-            设置等级
+            {t('设置等级')}
           </text>
           <Slider
             style={{width:'80%',marginRight:16}}

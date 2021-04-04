@@ -3824,6 +3824,23 @@
     "マチカネタンホイザ": "Machiaine tanhoza",
     "キタサンブラック": "Chitosan black",
     "サトノダイヤモンド": "Diamond Collection",
-    "左右に動いても疲れにくくなる<中距離>": "It is hard to move even if moving right and left"
+    "左右に動いても疲れにくくなる<中距離>": "It is hard to move even if moving right and left",
+    "":"","∴win Q.E.D.":"","G00 1st.F∞;":"",
+    "-------界面start---------":null,
+    "速度":"","耐力":"","力量":"","根性":"","智力":"",
+    "草地":"","泥地":"","短距离":"","英里":"","中距离":"",
+    "长距离":"","逃":"","先":"","差":"","追":"",
+    "星":"star","角色":"PLAYER","支援卡":"SUPPORT","技能":"SKILL","比赛":"RACE","育成":"NURTURING","育成new":"NURTURING*","种马分享":"SHARE",
+    "重置引导":"Reset Guide","确认初始化？":"Sure?","初始化育成页面":"Reset Nurturing","初始化育成":"Reset Nurturing","支付宝":"Alipay","捐助":"Donate",
+    "名称":"Name","时间":"Date","年级":"Grade","赛事等级":"Level","地点":"Place","场地":"Place",
+    "长度":"Length","赛程":"Distance","方向":"Direction","赛道":"Ground",
+    "筛选":"Filter","支援卡列表":"SupportCard List","高亮我的卡组":"Highlight My Cards","配置卡组":"Edit My Cards",
+    "培训技能":"Training Skill","自带技能":"Skill","育成效果":"Effect","中间数值为插值，存在误差":"There may exist errors.","有选项":"Have Options","无选项":"No Option",
+    "技能名称":"Name","技能描述":"Description","触发条件":"Trigger Codition","技能效果":"Value","持续时间":"Duration","赛道长度":"Race Length","冷却时间":"Cool Down",
+    "固有效果":"Unique Effects","激活等级":"Active Level","设置等级":"Set Level","效果":"Effects","初始":"Init","插值":"Inter",
+    "技能列表":"Skill List","重置":"Reset","可以在支援卡页面配置":"","显示拥有支援卡":"Show Own SupportCard","技能搜索":"Skill Search","输入技能名称":"Skill Name","搜索":"Search",
+    "选择马娘":"Choose Player","支援卡查询":"SupportCard","选择关注赛事":"Race","保存为新卡组":"New Deck","选择支援卡":"Choose SupportCard","我的卡组":"My Decks",
+    "加入QQ群":"","结果":"","突破等级":"","添加过滤条件":"",
+    "-------界面end---------":null
   }
 }

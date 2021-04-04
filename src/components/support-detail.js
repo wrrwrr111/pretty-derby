@@ -25,13 +25,13 @@ const SupportDetail = (props) =>{
       </div>
     </div>
     <EventList eventList={data.eventList} pid={data.id}></EventList>
-    <Divider style={{margin:'4px 0'}}>培训技能</Divider>
+    <Divider style={{margin:'4px 0'}}>{t('培训技能')}</Divider>
     <SkillList skillList={data.trainingEventSkill}></SkillList>
-    <Divider style={{margin:'4px 0'}}>自带技能</Divider>
+    <Divider style={{margin:'4px 0'}}>{t('自带技能')}</Divider>
     <SkillList skillList={data.possessionSkill}></SkillList>
-    <Divider>育成效果</Divider>
+    <Divider>{t('育成效果')}</Divider>
     <TestEffectTable effects={data.effects} unique_effect={data.unique_effect} rarity={data.rarity}></TestEffectTable>
-    <Alert message="中间数值为插值，存在误差" type="info" />
+    <Alert message={t('中间数值为插值，存在误差')} type="info" />
     <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
   </>)
 }

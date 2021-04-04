@@ -13,7 +13,20 @@ if(lan==='zh'){
 }else{
   lanData = EN.en
 }
-const t = (text)=>{
-    return lanData[text] || text
+let noTrans = {}
+const t = (text,lan)=>{
+  if(lan==='zh'){
+    lanData = ZH.zh
+  }else if(lan==='en'){
+    lanData = EN.en
+  }
+  let result = lanData[text]
+
+  // if(!result&&result!==""){
+  //   noTrans[text]=""
+  // }
+  // console.log(JSON.stringify(noTrans))
+
+  return result||text
 }
 export  default t

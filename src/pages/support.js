@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
+import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip} from 'antd';
+
 import db from '../db.js'
 import t from '../components/t.js'
-import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip} from 'antd';
 
 
 import SupportDetail from '../components/support-detail.js'
@@ -120,14 +121,14 @@ class Support extends React.Component{
       <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
         <div style={{maxWidth:1200,maxHeight:window.innerHeight-200}}>
           <Row justify="space-around">
-            <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>筛选</text></div></Col>
-            <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>支援卡列表</text></div></Col>
+            <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('筛选')}</text></div></Col>
+            <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('支援卡列表')}</text></div></Col>
             <Col span={6}>
               <div style={{overflowY:'scroll',display:'flex',flexDirection:'column',overflowX:'hidden',maxHeight:window.innerHeight-300,padding:4}}>
                 {this.props.filter&&<>
-                  <Button onClick={this.changeShowMode}>高亮我的卡组</Button>
-                  <Button onClick={this.changeChooseMode}>配置卡组</Button>
-                  {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>配置完成</Button>}
+                  <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
+                  <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
+                  {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
                   <Divider style={{margin:4}}/>
                   <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
                 </>}

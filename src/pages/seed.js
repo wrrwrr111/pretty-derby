@@ -8,6 +8,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import axios from 'axios'
 import db from '../db.js'
+import t from '../components/t.js'
 
 import Player from './player.js'
 import Support from './support.js'
@@ -452,7 +453,7 @@ const Seed = ()=>{
   const columns = [
     {title:'玩家id',dataIndex:'gameId',key:'gameId',render:(text,seed)=>(<>
       <Row>
-        <p>{text}</p> 
+        <p>{text}</p>
         <CopyToClipboard text={text} onCopy={()=>message.info('成功')}>
           <Button shape="circle" icon={<CopyOutlined />}/>
         </CopyToClipboard>

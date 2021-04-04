@@ -6,7 +6,8 @@ import t from './t.js'
 
 import {EventList} from './event.js'
 import {SkillList} from './skill.js'
-import RaceList from './player-race.js'
+// import RaceList from './player-race.js'
+import {RaceSchedule,RaceTimeline} from '../components/race.js'
 // import {EffectTable} from './effect.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -15,7 +16,7 @@ const PlayerDetail = (props) =>{
   const id = props.playerId!==undefined?props.playerId:props.match.params.id
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur!==undefined?props.isNur:props.match.params.nur
-  console.log(props.playerId,id,isNur)
+  // console.log(props.playerId,id,isNur)
   const data = db.get('players').find({id}).value()
   return(
     isNur?<>
@@ -29,7 +30,8 @@ const PlayerDetail = (props) =>{
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
       <Divider>赛程</Divider>
-      <RaceList raceList={data.raceList}></RaceList>
+      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <RaceTimeline raceList={data.raceList}></RaceTimeline>
       <Divider>技能</Divider>
       <SkillList skillList={data.skillList}></SkillList>
     </>:<>
@@ -51,7 +53,8 @@ const PlayerDetail = (props) =>{
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
       <Divider>赛程</Divider>
-      <RaceList raceList={data.raceList}></RaceList>
+      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+      <RaceTimeline raceList={data.raceList}></RaceTimeline>
     </>
   )
 }

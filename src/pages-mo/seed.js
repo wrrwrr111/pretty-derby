@@ -10,7 +10,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import axios from 'axios'
 import db from '../db.js'
-
+import t from '../components/t.js'
 import Player from '../pages/player.js'
 import Support from '../pages/support.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -37,31 +37,31 @@ const redLabels = {
 
 const lists = [
   [
-    {value:'speed',label:'速度'},
-    {value:'stamina',label:'耐力'},
-    {value:'power',label:'力量'},
-    {value:'guts',label:'根性'},
-    {value:'wisdom',label:'智力'},
-    {value:'grass',label:'草地'},
-    {value:'dirt',label:'泥地'},
-    {value:'shortDistance',label:'短距离'},
-    {value:'mile',label:'英里'},
-    {value:'mediumDistance',label:'中距离'},
-    {value:'longDistance',label:'长距离'},
-    {value:'escape',label:'逃'},
-    {value:'leading',label:'先'},
-    {value:'insert',label:'差'},
-    {value:'tracking',label:'追'}
+    {value:'speed',label:t('速度')},
+    {value:'stamina',label:t('耐力')},
+    {value:'power',label:t('力量')},
+    {value:'guts',label:t('根性')},
+    {value:'wisdom',label:t('智力')},
+    {value:'grass',label:t('草地')},
+    {value:'dirt',label:t('泥地')},
+    {value:'shortDistance',label:t('短距离')},
+    {value:'mile',label:t('英里')},
+    {value:'mediumDistance',label:t('中距离')},
+    {value:'longDistance',label:t('长距离')},
+    {value:'escape',label:t('逃')},
+    {value:'leading',label:t('先')},
+    {value:'insert',label:t('差')},
+    {value:'tracking',label:t('追')}
   ],[
-    {value:1,label:'1星'},
-    {value:2,label:'2星'},
-    {value:3,label:'3星'},
-    {value:4,label:'4星'},
-    {value:5,label:'5星'},
-    {value:6,label:'6星'},
-    {value:7,label:'7星'},
-    {value:8,label:'8星'},
-    {value:9,label:'9星'},
+    {value:1,label:`1${t('星')}`},
+    {value:2,label:`2${t('星')}`},
+    {value:3,label:`3${t('星')}`},
+    {value:4,label:`4${t('星')}`},
+    {value:5,label:`5${t('星')}`},
+    {value:6,label:`6${t('星')}`},
+    {value:7,label:`7${t('星')}`},
+    {value:8,label:`8${t('星')}`},
+    {value:9,label:`9${t('星')}`},
   ]
 ]
 
@@ -146,10 +146,9 @@ const SearchOne = (props)=>{
                   rules={[{required: true}]} validateTrigger={['onChange', 'onBlur']} noStyle>
                       <Picker
                         data={lists}
-                        title="选择季节"
                         cascade={false}
-                        extra="请选择"
-                        ><List.Item arrow="horizontal">过滤条件(总计)</List.Item>
+                        extra={t('请选择')}
+                        ><List.Item arrow="horizontal">{t('过滤条件(总计)')}</List.Item>
                       </Picker>
                 </Form.Item>
             ))}
@@ -159,7 +158,7 @@ const SearchOne = (props)=>{
                   onClick={() => add()}
                   icon={<PlusOutlined />}
                   >
-                  添加过滤条件
+                  {t('添加过滤条件')}
                 </Button>
             </List.Item>
           </List>
@@ -195,19 +194,19 @@ const SearchForm = (props)=>{
       <SearchOne name='p1'></SearchOne>
       <Flex align='start'>
         <Flex.Item>
-          <p>角色</p>
+          <p>{t('角色')}</p>
           <Form.Item name={`player0`}>
               <PlayerInput></PlayerInput>
           </Form.Item>
         </Flex.Item>
         <Flex.Item>
-          <p>支援卡</p>
+          <p>{t('支援卡')}</p>
           <Form.Item name={'support'}>
             <SupportInput></SupportInput>
           </Form.Item>
         </Flex.Item>
         <Flex.Item>
-          <p>突破等级</p>
+          <p>{t('突破等级')}</p>
           <Form.Item name={'supportLevel'} initialValue={0}>
             <Rate count={4} />
           </Form.Item>
@@ -216,12 +215,12 @@ const SearchForm = (props)=>{
       <Flex justify='end'>
         <Form.Item>
           <Button htmlType="button" onClick={()=>onReset()}>
-            重置
+            {t('重置')}
           </Button>
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            搜索
+            {t('搜索')}
           </Button>
         </Form.Item>
       </Flex>
@@ -268,16 +267,15 @@ const Seed = ()=>{
             </Flex>
           </Flex.Item>
           <Flex.Item>
-            <p>{`${blueLabels[data['blue-0']]}: ${data['blueLevel-0']}`}</p>
-            <p>{`${redLabels[data['red-0']]}: ${data['redLevel-0']}`}</p>
+            <p>{`${t(blueLabels[data['blue-0']])}: ${data['blueLevel-0']}`}</p>
+            <p>{`${t(redLabels[data['red-0']])}: ${data['redLevel-0']}`}</p>
             {Object.keys(blueLabels).map(key=>
-            data[key]?<p key={key}>{`总计 ${blueLabels[key]}: ${data[key]}`}</p>:null
+            data[key]?<p key={key}>{`{t(总计)} ${t(blueLabels[key])}: ${data[key]}`}</p>:null
             )}
             {Object.keys(redLabels).map(key=>
-            data[key]?<p key={key}>{`总计 ${redLabels[key]}: ${data[key]}`}</p>:null
+            data[key]?<p key={key}>{`{t('总计')} ${t(redLabels[key])}: ${data[key]}`}</p>:null
             )}
-            <p>{`突破等级: ${data['supportLevel']||0}`}</p>
-            <p></p>
+            <p>{`{t('突破等级')}: ${data['supportLevel']||0}`}</p>
           </Flex.Item>
         </Flex>
       </Card>
@@ -291,15 +289,15 @@ const Seed = ()=>{
       if(res.data.length){
         setSeedList([...res.data])
       }else{
-        message.info('么的数据')
+        message.info(t('暂无数据'))
       }
     }else{
-      message.info('出错了')
+      message.info(t('出错了'))
     }
   }
   const like = async (seed) =>{
     if(!userId){
-      message.info('刷新后重试')
+      message.info(t('刷新后重试'))
       return
     }else if(seed.likes&&seed.likes.indexOf(userId)!==-1 ){
       return
@@ -307,7 +305,7 @@ const Seed = ()=>{
     let id = seed.id
     const res = await axios.post('https://urarawin.com/api/like',{id,userId})
     if(res.data){
-      message.info('成功')
+      message.info(t('成功'))
       seed.likes?seed.likes.push(userId):seed.likes=[userId]
       seed.dislikes&&seed.dislikes.splice(seed.dislikes.indexOf(userId),1)
     }
@@ -315,7 +313,7 @@ const Seed = ()=>{
   }
   const dislike = async (seed)=>{
     if(!userId){
-      message.info('刷新后重试')
+      message.info(t('刷新后重试'))
       return
     }else if(seed.dislikes&&seed.dislikes.indexOf(userId)!==-1 ){
       return
@@ -323,7 +321,7 @@ const Seed = ()=>{
     let id = seed.id
     const res = await axios.post('https://urarawin.com/api/dislike',{id,userId})
     if(res.data){
-      message.info('成功')
+      message.info(t('成功'))
       seed.likes&&seed.likes.splice(seed.likes.indexOf(userId),1)
       seed.dislikes?seed.dislikes.push(userId):seed.dislikes=[userId]
     }
@@ -332,7 +330,7 @@ const Seed = ()=>{
   return(
   <>
     <SearchForm search={search}></SearchForm>
-    <Divider>结果</Divider>
+    <Divider>{t('结果')}</Divider>
     <Flex wrap='wrap'>
       {seedList.map(seed=>
       <Flex.Item  key={seed.gameId}

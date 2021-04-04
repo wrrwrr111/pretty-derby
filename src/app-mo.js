@@ -6,6 +6,7 @@ import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.min.css';
 
 import db from './db.js'
+import t from './components/t.js'
 
 import Race from './pages/race.js'
 import Player from './pages/player.js'
@@ -47,11 +48,11 @@ class App1 extends React.Component {
     {path:'/skill',label:'技能'},
     {path:'/race',label:'比赛'},
     {path:'/nurturing2',label:'育成new'},
-    {path:'/seed',label:'种🐎'}]
+    {path:'/seed',label:'种马分享'}]
     const linkList=(<List>
       {routers.map(item=>
         <Link to={item.path} key={item.path}  onClick={()=>this.onSelect(item.label)}>
-          <List.Item >{item.label}</List.Item>
+          <List.Item >{t(item.label)}</List.Item>
         </Link>
       )}
 
@@ -61,17 +62,17 @@ class App1 extends React.Component {
       <List.Item>
       <Popover content={<Image src={cdnServer+'img/q.jpg'} width={300}></Image>}>
         <a target="_blank" rel="noreferrer" href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi">
-          <Button placement="bottom">加入QQ群</Button>
+          <Button placement="bottom">{t('加入QQ群')}</Button>
         </a>
       </Popover>
       </List.Item>
       <List.Item>
-      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>支付宝</p></>}>
-        <Button placement="bottom">捐助</Button>
+      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
+        <Button placement="bottom">{t('捐助')}</Button>
       </Popover>
       </List.Item>
       <List.Item>
-        <Button placement="bottom" onClick={this.reload}>重置育成</Button>
+        <Button placement="bottom" onClick={this.reload}>{t('初始化育成')}</Button>
       </List.Item>
     </List>)
 
