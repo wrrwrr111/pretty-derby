@@ -83,14 +83,6 @@ const AppPc = ()=>{
       </Col>
       <Col span={11}></Col>
       <Col span={2}>
-      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
-          <Button placement="bottom" style={{display:'flex'}}>
-            <Image src={cdnServer+'reimu.gif'} preview={false} width={24}></Image>
-            <div>{t('塞钱箱')}</div>
-          </Button>
-        </Popover>
-      </Col>
-      <Col span={2}>
         <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
       </Col>
       <Col span={2}>
@@ -99,6 +91,14 @@ const AppPc = ()=>{
           <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="轻 松 赛 马" title="轻 松 赛 马" />
         </a>
       </Popover>
+      </Col>
+      <Col span={2}>
+      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
+          <Button placement="bottom" style={{display:'flex'}}>
+            <Image src={cdnServer+'reimu.gif'} preview={false} width={24}></Image>
+            <div>{t('塞钱箱')}</div>
+          </Button>
+        </Popover>
       </Col>
     </Row>
   </Footer>
