@@ -49,7 +49,7 @@ const RaceSchedule = (props)=>{
       </Col>)
     }
   }
-  return(<Row>
+  return(<Row style={{color:'black'}}>
     {str}
   </Row>)
 }
