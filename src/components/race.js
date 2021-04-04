@@ -63,18 +63,36 @@ const RaceTimeline = (props)=>{
     let moment = i%2?'后':'前'
     return `${year}年\xa0${month}月${moment}`
   }
+  const getColor = (grade)=>{
+    switch(grade){
+      case 'G1':
+        return 'blue';
+      case 'G2':
+        return 'pink';
+      case 'G3':
+        return 'green';
+      default:
+        return 'orange'
+    }
+    // 'OP':
+  }
   for (let i = 13;i<72;i++){
     let curRace;
     if(props.raceList[i]){
       curRace = db.get('races').find({id:props.raceList[i].id}).value()
-      str.push(<Timeline.Item label={getDate(i)} color="red">{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal||'参赛'}`}</Timeline.Item>)
+      str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}}>
+        {/* <b>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</b> */}
+        <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal}`}</b>
+      </Timeline.Item>)
     }else if(props.selectedRaceList&&props.selectedRaceList[i]){
-      str.push(<Timeline.Item label={getDate(i)} color="green">{
-        props.selectedRaceList[i].map(id=>{
-          curRace = db.get('races').find({id}).value()
-          return <p>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance}`}</p>
-        })
-      }</Timeline.Item>)
+      props.selectedRaceList[i].forEach((id,index)=>{
+        curRace = db.get('races').find({id}).value()
+        str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)}>
+            {/* <p>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance}`}</p> */}
+            <p>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name}`}</p>
+          </Timeline.Item>)
+
+      })
     }else{
       //普通
     }
