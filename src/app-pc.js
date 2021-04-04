@@ -84,7 +84,9 @@ const AppPc = ()=>{
       <Col span={11}></Col>
       <Col span={2}>
       <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
-          <Button placement="bottom">{t('捐助')}</Button>
+          <Button placement="bottom">
+          <Image src={cdnServer+'reimu.gif'} preview={false} width={26}></Image>
+          {t('塞钱箱')}</Button>
         </Popover>
       </Col>
       <Col span={2}>
