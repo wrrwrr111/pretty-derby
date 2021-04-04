@@ -5,6 +5,8 @@ import t from '../components/t.js'
 import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
 
+import ScrollBars from 'react-custom-scrollbars'
+
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
@@ -155,7 +157,7 @@ const Nurturing = () =>{
 
   return(
     <div style={{display:'flex',justifyContent:'center'}}>
-      <div style={{height:dynamicContentHeight,overflowY:'auto'}}>
+      <div style={{height:dynamicContentHeight}}>
         <Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
         <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
         <Button onClick={showRace}>{t('选择关注赛事')}</Button>
@@ -182,18 +184,43 @@ const Nurturing = () =>{
             )}
           </>
         }><Button>{t('我的卡组')}</Button></Popover>
-        <BuffButton></BuffButton>
+        <BuffButton/>
+
         <Divider style={{margin:'4px 0'}}></Divider>
-        {player.id&&<>
-          <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='20%'
-            style={{float:'left',marginRight:'8px'}}></img>
-          <EventList eventList={player.eventList} pid={player.id} type='multi'></EventList>
+        {player.id&&
+        <Row gutter={4}>
+          <Col span={6}>
+            <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width={'100%'}
+                 style={{float:'left',marginRight:'8px'}}></img>
+          </Col>
+          <Col span={18}>
+            <Divider style={{margin:'8px 0'}}>{t('事件')}</Divider>
+            <div style={{overflowX:'hidden',overflowY:'auto',height:0.24*dynamicContentHeight,padding:8,backgroundColor:'white',borderRadius:16}}>
+              <EventList eventList={player.eventList} pid={player.id} type={'multi'}></EventList>
+            </div>
+          </Col>
           {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
-          <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
-          <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
-          <Divider style={{margin:'4px 0'}}>{t('技能')}</Divider>
-          <SkillList skillList={player.skillList}></SkillList>
-        </>}
+          <Col span={12}>
+            <Divider style={{margin:'4px 0'}}>{t('技能')}</Divider>
+            <div style={{height:0.64*dynamicContentHeight,overflow:'hidden',padding:8}}>
+              <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
+                <div style={{ height: 16 }}/>
+                <SkillList skillList={player.skillList}></SkillList>
+              </ScrollBars>
+            </div>
+          </Col>
+
+          <Col span={12}>
+            <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
+            <div style={{height:0.64*dynamicContentHeight,overflow:'hidden',padding:8}}>
+              <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
+                <div style={{ height: 16 }}/>
+                <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
+              </ScrollBars>
+            </div>
+          </Col>
+        </Row>
+        }
 
 
 
@@ -201,26 +228,39 @@ const Nurturing = () =>{
 
       <div style={{flex:`0 0 ${dynamicCardBoxWidth}px`,display:'flex',flexWrap:'wrap'}}>
         {[0,1,2,3,4,5].map(index=>
-            supports[index]&&supports[index].id?
+          supports[index]&&supports[index].id?
+            <div style={{
+              width:dynamicCardWidth,
+              height:dynamicCardHeight,
+              backgroundImage:`url(${cdnServer+supports[index].imgUrl})`,
+              backgroundRepeat:'no-repeat',
+              backgroundSize:'cover'}}>
               <div style={{
-                  width:dynamicCardWidth,
-                  height:dynamicCardHeight,
-                  backgroundImage:`url(${cdnServer+supports[index].imgUrl})`,
-                  backgroundRepeat:'no-repeat',
-                  backgroundSize:'cover'}}>
-                <div style={{
-                  backgroundColor:'rgba(0,0,0,0.2)',
-                  height:'100%',
-                  padding:'10px'}}>
-                <Tooltip title={t('选择支援卡')}>
-                  <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
-                </Tooltip>
-                <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
-                <Divider style={{margin:'8px 0'}}></Divider>
-                <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
-                </div>
+                backgroundColor:'rgba(0,0,0,0.2)',
+                height:'100%',
+                padding:'2%',
+                display:'flex',
+                flexDirection:'column',
+                justifyContent:'space-between',
+                alignItems:'center'
+              }}>
+                <ScrollBars style={{height:'38%'}} autoHide>
+                  <div style={{paddingLeft:'2%',width:'98%'}}>
+                    <Tooltip title={t('选择支援卡')}>
+                      <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
+                    </Tooltip>
+                    <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
+                  </div>
+                </ScrollBars>
+
+                <ScrollBars style={{height:'62%',marginBottom:'4%'}} autoHide>
+                  <div style={{paddingLeft:'2%',width:'98%'}}>
+                    <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
+                  </div>
+                </ScrollBars>
               </div>
-            :<Button onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
+            </div>
+            :<Button style={{width:'31%', height:'50%',borderRadius:16}} onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
         )}
       </div>
 
