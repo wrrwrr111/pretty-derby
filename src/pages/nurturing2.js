@@ -142,67 +142,77 @@ const Nurturing = () =>{
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height,setHeight] = React.useState(window.innerHeight);
     React.useEffect(() => {
-      const handleWindowResize = () => setHeight(window.innerHeight);
+      const handleWindowResize = () => {
+        setHeight(window.innerHeight)
+        setWidth(window.innerWidth)
+      };
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
-    console.log('currentWidth::',height);
-    return {height};
+    // console.log('currentWidth::',height);
+    return {height,width};
   };
 
   const dynamicContentHeight = useViewport().height -128
-  const dynamicCardHeight = Math.floor(dynamicContentHeight / 2)
+  // 宽度0.3 高度0.5 取较小值
+  const dynamicCardHeight = Math.min(Math.floor(dynamicContentHeight / 2),Math.floor(useViewport().width * 0.3))
   const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4)
   const dynamicCardBoxWidth = dynamicCardWidth * 3
 
   return(
     <div style={{display:'flex',justifyContent:'center'}}>
-      <div style={{height:dynamicContentHeight}}>
-        <Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
-        <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
-        <Button onClick={showRace}>{t('选择关注赛事')}</Button>
-        <Popover width={'100%'} content={
-          <>
-            <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
-            {decks.map(deck=>
-              <Row key={deck.id}>
-                {deck.imgUrls.map(imgUrl=>
-                  <Col span={3} key={imgUrl}>
-                    <img src={cdnServer+imgUrl} alt={imgUrl} width={'100'}></img>
-                  </Col>
-                )}
-                <Col span={3}>
-                  <Button type="primary" onClick={()=>loadDeck(deck)}>{t('读取卡组')}</Button>
-                  <Popconfirm title={t("确认覆盖？")} onConfirm={()=>saveDeck(deck)}>
-                    <Button danger type="dashed">{t('覆盖卡组')}</Button>
-                  </Popconfirm>
-                  <Popconfirm title={t("确认删除？")} onConfirm={()=>deleteDeck(deck)}>
-                    <Button danger type="dashed">{t('删除卡组')}</Button>
-                  </Popconfirm>
-                </Col>
-              </Row>
-            )}
-          </>
-        }><Button>{t('我的卡组')}</Button></Popover>
-        <BuffButton/>
+      <div  style={{flex:'1 1 auto',height:dynamicContentHeight}}>
+        <div style={{display:'flex',justifyContent:'center'}}>
+            {player.id?
+              <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width={0.12*dynamicContentHeight} height={0.12*dynamicContentHeight}
+                    style={{float:'left',marginRight:'8px'}} onClick={showPlayer}></img>
+              :<Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
+            }
+            <Row>
 
-        <Divider style={{margin:'4px 0'}}></Divider>
+            <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+            <Button onClick={showRace}>{t('选择关注赛事')}</Button>
+            <Popover width={'100%'} content={
+              <>
+                <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
+                {decks.map(deck=>
+                  <Row key={deck.id}>
+                    {deck.imgUrls.map(imgUrl=>
+                      <Col span={3} key={imgUrl}>
+                        <img src={cdnServer+imgUrl} alt={imgUrl} width={'100'}></img>
+                      </Col>
+                    )}
+                    <Col span={3}>
+                      <Button type="primary" onClick={()=>loadDeck(deck)}>{t('读取卡组')}</Button>
+                      <Popconfirm title={t("确认覆盖？")} onConfirm={()=>saveDeck(deck)}>
+                        <Button danger type="dashed">{t('覆盖卡组')}</Button>
+                      </Popconfirm>
+                      <Popconfirm title={t("确认删除？")} onConfirm={()=>deleteDeck(deck)}>
+                        <Button danger type="dashed">{t('删除卡组')}</Button>
+                      </Popconfirm>
+                    </Col>
+                  </Row>
+                )}
+              </>
+            }><Button>{t('我的卡组')}</Button></Popover>
+            <BuffButton/>
+          </Row>
+        </div>
+
         {player.id&&
         <Row gutter={4}>
-          <Col span={6}>
-            <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width={'100%'}
-                 style={{float:'left',marginRight:'8px'}}></img>
-          </Col>
-          <Col span={18}>
+          <Col span={24}>
             <Divider style={{margin:'8px 0'}}>{t('事件')}</Divider>
-            <div style={{overflowX:'hidden',overflowY:'auto',height:0.24*dynamicContentHeight,padding:8,backgroundColor:'white',borderRadius:16}}>
-              <EventList eventList={player.eventList} pid={player.id} type={'multi'}></EventList>
+            <div style={{height:0.28*dynamicContentHeight,overflowX:'hidden',padding:8}}>
+              <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
+                <EventList eventList={player.eventList} pid={player.id} type={'multi'}></EventList>
+              </ScrollBars>
             </div>
           </Col>
           {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
           <Col span={12}>
             <Divider style={{margin:'4px 0'}}>{t('技能')}</Divider>
-            <div style={{height:0.64*dynamicContentHeight,overflow:'hidden',padding:8}}>
+            <div style={{height:0.54*dynamicContentHeight,overflow:'hidden',padding:8}}>
               <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
                 <div style={{ height: 16 }}/>
                 <SkillList skillList={player.skillList}></SkillList>
@@ -212,7 +222,7 @@ const Nurturing = () =>{
 
           <Col span={12}>
             <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
-            <div style={{height:0.64*dynamicContentHeight,overflow:'hidden',padding:8}}>
+            <div style={{height:0.54*dynamicContentHeight,overflow:'hidden',padding:8}}>
               <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
                 <div style={{ height: 16 }}/>
                 <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
