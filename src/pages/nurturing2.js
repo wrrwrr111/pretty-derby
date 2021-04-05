@@ -135,7 +135,7 @@ const Nurturing = () =>{
   const onChangeRace = (filterCondition)=>{
     setRaceFilterCondition(filterCondition)
     //根据条件过滤
-    let tmpRaceList = Object.values(filterCondition).some(f => f.length > 0) 
+    let tmpRaceList = Object.values(filterCondition).some(f => f.length > 0)
       ? Object.entries(filterCondition)
         .filter(([key, filters]) => filters.length > 0)
         .reduce((result, [key, filters]) => result.filter(race => filters.includes(race[key])), races)

@@ -20,7 +20,7 @@ const RaceSchedule = (props)=>{
   }
   for (let i = 13;i<72;i++){
     let curRace;
-    if(props.raceList[i]){
+    if(props.raceList&&props.raceList[i]){
       curRace = db.get('races').find({id:props.raceList[i].id}).value()
       str.push(<Col span={6} key={i}
       style={{backgroundColor:'#ff6b81',border:'1px solid #2f3542'}}>

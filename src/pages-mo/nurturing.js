@@ -130,13 +130,11 @@ const Nurturing = (props) =>{
 const onChangeRace = (filterCondition)=>{
   setRaceFilterCondition(filterCondition)
   //根据条件过滤
-  let tmpRaceList = races
-  Object.keys(filterCondition)
-  .map(key=>{
-    tmpRaceList = tmpRaceList.filter(race=>
-      filterCondition[key].indexOf(race[key])!==-1
-    )
-  })
+  let tmpRaceList = Object.values(filterCondition).some(f => f.length > 0)
+      ? Object.entries(filterCondition)
+        .filter(([key, filters]) => filters.length > 0)
+        .reduce((result, [key, filters]) => result.filter(race => filters.includes(race[key])), races)
+      : [];
   //过滤后整理成 dataNum:[raceId]
   let tmpFilterRace = {}
     for(let race of tmpRaceList){
