@@ -10,7 +10,7 @@ import {EditOutlined} from '@ant-design/icons'
 // import Race from './race.js'
 import Player from '../pages/player.js'
 import Support from '../pages/support.js'
-
+import {RaceSchedule,RaceTimeline,RaceCheckbox} from '../components/race.js'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -28,7 +28,12 @@ const Nurturing = (props) =>{
   const selected = db.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-
+  const races = db.get('races').value()
+  const [raceFilterCondition,setRaceFilterCondition] = useState(selected.raceFilterCondition||{
+    distanceType:[],
+    grade:[],
+    ground:[]})
+  const [filterRace,setFilterRace] = useState(selected.filterRace||{})
   const [decks,setDecks] = useState(db.get('myDecks').value())
 
 
@@ -121,6 +126,32 @@ const Nurturing = (props) =>{
     db.get('myDecks').remove({id:deck.id}).write()
     setDecks([...db.get('myDecks').value()])
   }
+// race checkbox发生变化
+const onChangeRace = (filterCondition)=>{
+  setRaceFilterCondition(filterCondition)
+  //根据条件过滤
+  let tmpRaceList = races
+  Object.keys(filterCondition)
+  .map(key=>{
+    tmpRaceList = tmpRaceList.filter(race=>
+      filterCondition[key].indexOf(race[key])!==-1
+    )
+  })
+  //过滤后整理成 dataNum:[raceId]
+  let tmpFilterRace = {}
+    for(let race of tmpRaceList){
+      if(tmpFilterRace[race.dateNum]){
+        tmpFilterRace[race.dateNum].push(race.id)
+      }else{
+        tmpFilterRace[race.dateNum]=[race.id]
+      }
+    }
+  //更新state
+  setFilterRace(tmpFilterRace)
+  selected.raceFilterCondition = filterCondition
+  selected.filterRace = tmpFilterRace
+  db.get('selected').assign({...selected}).write()
+}
 
   const toSupportDetail = (id)=>{
     props.history.push(`/support-detail/${id}`)
@@ -131,14 +162,23 @@ const Nurturing = (props) =>{
   const toBuffList = (id)=>{
     props.history.push(`/buff`)
   }
-  return(
-    <Row className='nurturing-box' gutter={[16,16]}>
-      <Col>
-          <Button type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
-          <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
-          <Button onClick={toBuffList}>{t('BUFF')}</Button>
-          {/* <Button onClick={toBuffList}>{t('赛程')}</Button> */}
-        <Popover width={'80%'} content={
+
+  return(<>
+    <div style={{display:'flex',justifyContent:'center'}}>
+      {player.imgUrl&&
+        <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='128'
+          onClick={()=>toPlayerDetail(player.id)}></img>
+      }
+      <div style={{flex:'1 1 auto',flexWrap:'wrap',display:'flex',justifyContent:'center'}} >
+        <Button type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
+        <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+        <Button onClick={toBuffList}>{t('BUFF')}</Button>
+        <Popover trigger='click' content={
+          <RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition}></RaceCheckbox>
+        }>
+          <Button>{t('关注赛事')}</Button>
+        </Popover>
+        <Popover trigger='click' width={'80%'} content={
           <>
             <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
             {decks.map(deck=>
@@ -162,11 +202,9 @@ const Nurturing = (props) =>{
           </>
           }><Button>{t('我的卡组')}</Button>
         </Popover>
-        {player.imgUrl&&
-          <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width='128'
-          onClick={()=>toPlayerDetail(player.id)}></img>
-        }
-      </Col>
+      </div>
+    </div>
+
 
         <Row justify="space-around">
         {[0,1,2,3,4,5].map(index=>
@@ -179,13 +217,19 @@ const Nurturing = (props) =>{
           </Col>
         )}
         </Row>
+
+      <Divider>比赛</Divider>
+      <div style={{overflow:'auto',paddingTop:'10px',width:'100%',height:'400px'}}>
+        <RaceTimeline raceList={player.raceList} filterRace={filterRace}></RaceTimeline>
+      </div>
+
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} footer={null} width={'80%'}>
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} footer={null} width={'80%'}>
-        <Support onSelect={needSelect?handleSelectSupport:null} filter={false}></Support>
+        <Support onSelect={needSelect?handleSelectSupport:null} ></Support>
       </Modal>
-    </Row>
+  </>
   )
 }
 

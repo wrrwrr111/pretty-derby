@@ -184,13 +184,15 @@ const Nurturing = () =>{
       <div  style={{flex:'1 1 auto',height:dynamicContentHeight}}>
         <div style={{display:'flex',justifyContent:'center'}}>
             {player.id?
-              <img src={cdnServer+player.imgUrl} alt={player.imgUrl} width={0.12*dynamicContentHeight} height={0.12*dynamicContentHeight}
+              <img src={cdnServer+player.imgUrl} alt={player.imgUrl}
+              width={0.12*dynamicContentHeight} height={0.12*dynamicContentHeight}
                     style={{float:'left',marginRight:'8px'}} onClick={showPlayer}></img>
               :<Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
             }
             <Row>
 
             <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
+            <BuffButton/>
 
             <Popover content={<RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition}></RaceCheckbox>}>
               <Button>{t('关注赛事')}</Button>
@@ -219,7 +221,6 @@ const Nurturing = () =>{
                 )}
               </>
             }><Button>{t('我的卡组')}</Button></Popover>
-            <BuffButton/>
           </Row>
         </div>
 

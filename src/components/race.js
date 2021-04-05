@@ -29,7 +29,7 @@ const RaceSchedule = (props)=>{
         {`${curRace.name}/${curRace.distanceType}/${props.raceList[i].goal}`}
         {/* -{curRace.date} */}
         </Col>)
-    }else if(props.selectedRaceList&&props.selectedRaceList[i]){
+    }else if(props.filterRace&&props.filterRace[i]){
       str.push(<Col span={6} key={i}
         style={{
         backgroundColor:'#7bed9f',
@@ -37,7 +37,7 @@ const RaceSchedule = (props)=>{
         whiteSpace:'pre-line'}}>
         {getDate(i)}
         <br/>
-        {props.selectedRaceList[i].map(raceId=>{
+        {props.filterRace[i].map(raceId=>{
           let curRace = db.get('races').find({id:raceId}).value()
           return `${curRace.name}/${curRace.grade}/${curRace.distanceType}\n`
 
@@ -89,7 +89,7 @@ const RaceTimeline = (props)=>{
         {/* <b>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</b> */}
         <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal||'参赛'}`}</b>
       </Timeline.Item>)
-    }else if(props.filterRace[i]){
+    }else if(props.filterRace&&props.filterRace[i]){
       props.filterRace[i].forEach((id,index)=>{
         curRace = db.get('races').find({id}).value()
         str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)} key={id}>

@@ -48,7 +48,7 @@ const Nurturing = () =>{
   const selected = db.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-  const [selectedRaceList,setSelectedRaceList] = useState(selected.selectedRaceList||[])
+  const [filterRace,setFilterRace] = useState(selected.filterRace||[])
 
   const [decks,setDecks] = useState(db.get('myDecks').value())
 
@@ -101,10 +101,10 @@ const Nurturing = () =>{
     setIsRaceVisible(false);
   };
   const handleSelectRace = (data)=>{
-    setSelectedRaceList(data);
+    setFilterRace(data);
 
     // save
-    selected.selectedRaceList = data
+    selected.filterRace = data
     db.get('selected').assign(selected).write()
   }
 
@@ -213,9 +213,8 @@ const Nurturing = () =>{
         <Divider></Divider>
       {player.id&&<>
           <EventList eventList={player.eventList} pid={player.id}></EventList>
-          {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
           <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
-          <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
+          <RaceTimeline raceList={player.raceList} filterRace={filterRace}></RaceTimeline>
         </>}
       </Col>
       <Col sm={15} xs={24}>

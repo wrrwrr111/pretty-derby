@@ -32,7 +32,7 @@ const BuffList = (props)=>{
   return(
     <table>
       <tbody>
-      {buffs.map(buff=><tr>
+      {buffs.map(buff=><tr key={buff.name}>
         <td style={{...cellStyle}}>{t(buff.name)}</td>
         <td style={{...cellStyle}}>{t(buff.describe)}</td>
       </tr>)}
