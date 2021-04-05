@@ -21,6 +21,23 @@ const SkillList = (props)=>{
     </Row>
   )
 }
+const skillType={
+  1:'速度属性',
+  2:'耐力属性',
+  3:'力量属性',
+  4:'毅力属性',
+  5:'智力属性',
+  6:'体力',
+  7:'体力消耗',
+  8:'视野',
+  9:'体力恢复',
+  10:'出栏时机',
+  14:'掛かり结束时间',
+  21:'瞬时速度',
+  27:'目标速度',
+  28:'走位速度',
+  31:'加速度',
+}
 const SkillButton = (props)=>{
   const skill = props.skill || db.get('skills').find({id:props.id}).value()
   const inListStyleOverride = {
@@ -46,7 +63,8 @@ const SkillButton = (props)=>{
       <p>{skill.condition}</p>
       <p>{t('触发条件')+ '： ' +t(skill.condition)}</p>
       {/* <p>{t('技能效果')+ '： ' +skill.ability_value/10000}</p> */}
-      <p>{t('技能效果')+ '： ' +skill.ability.map(ability=>ability.value/10000)}</p>
+      <p>{`${t('技能效果')}：\xa0
+        ${skill.ability.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
       <p>{`${t('持续时间')}： ${skill.ability_time/10000}s*${t('赛道长度')}/1000`}</p>
       <p>{`${t('冷却时间')}： ${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
       {/* <p>技能效果 = (技能数值 / 100)%</p> */}
