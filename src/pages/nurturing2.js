@@ -10,7 +10,7 @@ import ScrollBars from 'react-custom-scrollbars'
 import {EventList} from '../components/event.js'
 import {SkillList} from '../components/skill.js'
 import {BuffButton} from '../components/buff.js'
-import {RaceSchedule,RaceTimeline} from '../components/race.js'
+import {RaceSchedule,RaceTimeline,RaceCheckbox} from '../components/race.js'
 
 
 import Race from './race.js'
@@ -28,12 +28,17 @@ const Nurturing = () =>{
   const [isSupportVisible, setIsSupportVisible] = useState(false);
   const [supportIndex, setSupportIndex] = useState(1);
 
-  const [isRaceVisible, setIsRaceVisible] = useState(false);
 
   const selected = db.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-  const [selectedRaceList,setSelectedRaceList] = useState(selected.selectedRaceList||[])
+
+  const races = db.get('races').value()
+  const [raceFilterCondition,setRaceFilterCondition] = useState(selected.raceFilterCondition||{
+    distanceType:[],
+    grade:[],
+    ground:[]})
+  const [filterRace,setFilterRace] = useState(selected.filterRace||{})
 
   const [decks,setDecks] = useState(db.get('myDecks').value())
 
@@ -76,20 +81,7 @@ const Nurturing = () =>{
     selected.supports[supportIndex] = data
     db.get('selected').assign(selected).write()
   }
-  const showRace = ()=>{
-    setNeedSelect(true)
-    setIsRaceVisible(true);
-  }
-  const closeRace = () => {
-    setIsRaceVisible(false);
-  };
-  const handleSelectRace = (data)=>{
-    setSelectedRaceList(data);
 
-    // save
-    selected.selectedRaceList = data
-    db.get('selected').assign(selected).write()
-  }
 
   // 卡组相关操作
   const saveDeck = (deck)=>{
@@ -138,6 +130,34 @@ const Nurturing = () =>{
     db.get('myDecks').remove({id:deck.id}).write()
     setDecks([...db.get('myDecks').value()])
   }
+
+  // race checkbox发生变化
+  const onChangeRace = (filterCondition)=>{
+    setRaceFilterCondition(filterCondition)
+    //根据条件过滤
+    let tmpRaceList = races
+    Object.keys(filterCondition)
+    .map(key=>{
+      tmpRaceList = tmpRaceList.filter(race=>
+        filterCondition[key].indexOf(race[key])!==-1
+      )
+    })
+    //过滤后整理成 dataNum:[raceId]
+    let tmpFilterRace = {}
+      for(let race of tmpRaceList){
+        if(tmpFilterRace[race.dateNum]){
+          tmpFilterRace[race.dateNum].push(race.id)
+        }else{
+          tmpFilterRace[race.dateNum]=[race.id]
+        }
+      }
+    //更新state
+    setFilterRace(tmpFilterRace)
+    selected.raceFilterCondition = filterCondition
+    selected.filterRace = tmpFilterRace
+    db.get('selected').assign({...selected}).write()
+  }
+
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height,setHeight] = React.useState(window.innerHeight);
@@ -171,7 +191,11 @@ const Nurturing = () =>{
             <Row>
 
             <Button onClick={showSupport2}>{t('支援卡查询')}</Button>
-            <Button onClick={showRace}>{t('选择关注赛事')}</Button>
+
+            <Popover content={<RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition}></RaceCheckbox>}>
+              <Button>{t('关注赛事')}</Button>
+            </Popover>
+
             <Popover width={'100%'} content={
               <>
                 <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
@@ -209,7 +233,6 @@ const Nurturing = () =>{
               </ScrollBars>
             </div>
           </Col>
-          {/* <RaceSchedule raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceSchedule> */}
           <Col span={12}>
             <Divider style={{margin:'4px 0'}}>{t('技能')}</Divider>
             <div style={{height:0.54*dynamicContentHeight,overflow:'hidden',padding:8}}>
@@ -219,27 +242,23 @@ const Nurturing = () =>{
               </ScrollBars>
             </div>
           </Col>
-
           <Col span={12}>
             <Divider style={{margin:'4px 0'}}>{t('比赛')}</Divider>
             <div style={{height:0.54*dynamicContentHeight,overflow:'hidden',padding:8}}>
               <ScrollBars autoHide={true} style={{backgroundColor:'white',borderRadius:16}}>
                 <div style={{ height: 16 }}/>
-                <RaceTimeline raceList={player.raceList} selectedRaceList={selectedRaceList}></RaceTimeline>
+                <RaceTimeline raceList={player.raceList} filterRace={filterRace}></RaceTimeline>
               </ScrollBars>
             </div>
           </Col>
         </Row>
         }
-
-
-
       </div>
 
       <div style={{flex:`0 0 ${dynamicCardBoxWidth}px`,display:'flex',flexWrap:'wrap'}}>
         {[0,1,2,3,4,5].map(index=>
           supports[index]&&supports[index].id?
-            <div style={{
+            <div key={index} style={{
               width:dynamicCardWidth,
               height:dynamicCardHeight,
               backgroundImage:`url(${cdnServer+supports[index].imgUrl})`,
@@ -270,7 +289,7 @@ const Nurturing = () =>{
                 </ScrollBars>
               </div>
             </div>
-            :<Button style={{width:'31%', height:'50%',borderRadius:16}} onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
+            :<Button key={index} style={{width:'31%', height:'50%',borderRadius:16}} onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
         )}
       </div>
 
@@ -279,9 +298,6 @@ const Nurturing = () =>{
       </Modal>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={'80%'}>
         <Support onSelect={needSelect?handleSelectSupport:null}></Support>
-      </Modal>
-      <Modal visible={isRaceVisible} onOk={closeRace} onCancel={closeRace} width={'80%'}>
-        <Race onSelect={needSelect?handleSelectRace:null}></Race>
       </Modal>
     </div>
   )

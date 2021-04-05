@@ -1,9 +1,10 @@
 import React from 'react';
-// import {useState} from 'react';
+import {useState} from 'react';
 import db from '../db.js'
 
-import { Row,Col,Timeline  } from 'antd';
+import { Row,Col,Timeline,Checkbox } from 'antd';
 import { createFormattedComponent } from 'react-intl/src/components/createFormattedComponent';
+import { getTimeProps } from 'antd/lib/date-picker/generatePicker';
 // import t from './t.js'
 
 const ua = db.get('ua').value();
@@ -56,6 +57,7 @@ const RaceSchedule = (props)=>{
 
 const RaceTimeline = (props)=>{
   const str  = []
+
   const getDate = (i)=>{
     let year = Math.floor(i/24)+1
     let month = Math.floor((i - (year-1)*24) /2)+1
@@ -76,18 +78,21 @@ const RaceTimeline = (props)=>{
     }
     // 'OP':
   }
+
+
   for (let i = 13;i<72;i++){
-    let curRace;
+    let curRace,id;
     if(props.raceList[i]){
-      curRace = db.get('races').find({id:props.raceList[i].id}).value()
-      str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}}>
+      id = props.raceList[i].id
+      curRace = db.get('races').find({id}).value()
+      str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}} key={id}>
         {/* <b>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</b> */}
         <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal||'参赛'}`}</b>
       </Timeline.Item>)
-    }else if(props.selectedRaceList&&props.selectedRaceList[i]){
-      props.selectedRaceList[i].forEach((id,index)=>{
+    }else if(props.filterRace[i]){
+      props.filterRace[i].forEach((id,index)=>{
         curRace = db.get('races').find({id}).value()
-        str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)}>
+        str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)} key={id}>
             {/* <p>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance}`}</p> */}
             <p>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name}`}</p>
           </Timeline.Item>)
@@ -101,4 +106,43 @@ const RaceTimeline = (props)=>{
     {str}
   </Timeline>)
 }
-export {RaceSchedule,RaceTimeline}
+const RaceCheckbox = (props) =>{
+  const [raceFilterCondition,setRaceFilterCondition] = useState(props.raceFilterCondition)
+
+  const filterList= {
+    distanceType:[
+      { label: '短距離', value: '短距離' },
+      { label: 'マイル', value: 'マイル' },
+      { label: '中距離', value: '中距離' },
+      { label: '長距離', value: '長距離' }
+    ],
+    grade:[
+      { label: 'Pre-OP', value: 'Pre-OP' },
+      { label: 'OP', value: 'OP' },
+      { label: 'G1', value: 'G1' },
+      { label: 'G2', value: 'G2' },
+      { label: 'G3', value: 'G3' }
+    ],
+    ground: [
+      { label: '芝', value: '芝' },
+      { label: 'ダート', value: 'ダート' }
+    ],
+
+  }
+  const onChange=(checkedValues,type)=>{
+    let tmpObj = {}
+    tmpObj[type]=checkedValues
+    console.log({...raceFilterCondition,...tmpObj})
+    props.onChange({...raceFilterCondition,...tmpObj})
+    setRaceFilterCondition({...raceFilterCondition,...tmpObj})
+  }
+  return (<>
+  {Object.keys(filterList)
+    .map(key=>
+      <div key={key}>
+        <Checkbox.Group options={filterList[key]} defaultValue={props.raceFilterCondition[key]} onChange={(checkedValues)=>onChange(checkedValues,key)}/>
+      </div>
+      )}
+  </>)
+}
+export {RaceSchedule,RaceTimeline,RaceCheckbox}
