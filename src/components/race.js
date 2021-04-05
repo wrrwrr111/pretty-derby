@@ -82,7 +82,7 @@ const RaceTimeline = React.memo((props)=>{
 
   for (let i = 13;i<72;i++){
     let curRace,id;
-    if(props.raceList[i]){
+    if(props.raceList&&props.raceList[i]){
       id = props.raceList[i].id
       curRace = db.get('races').find({id}).value()
       str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}} key={id}>
