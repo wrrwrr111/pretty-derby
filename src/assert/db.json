@@ -24105,7 +24105,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "集中力",
@@ -24119,7 +24127,15 @@
       "icon_id": 20061,
       "ability_value": 9000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 10,
+          "value": 9000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "押し切り準備",
@@ -24133,7 +24149,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "前途洋々",
@@ -24147,7 +24171,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "シューティングスター",
@@ -24161,7 +24193,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "末脚",
@@ -24175,7 +24215,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "食い下がり",
@@ -24189,7 +24237,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "栄養補給",
@@ -24203,7 +24259,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "紅焔ギア/LP1211-M",
@@ -24217,7 +24281,15 @@
       "icon_id": 20043,
       "ability_value": 4000,
       "ability_time": 40000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "直線巧者",
@@ -24231,7 +24303,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 9000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先駆け",
@@ -24245,7 +24325,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ギアシフト",
@@ -24259,7 +24347,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "究極テイオーステップ",
@@ -24273,7 +24369,15 @@
       "icon_id": 20013,
       "ability_value": 4500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 4500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ポジションセンス",
@@ -24287,7 +24391,15 @@
       "icon_id": 20051,
       "ability_value": 250,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "イナズマステップ",
@@ -24301,7 +24413,21 @@
       "icon_id": 20051,
       "ability_value": 250,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "巧みなステップ",
@@ -24315,7 +24441,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "勝利の鼓動",
@@ -24329,7 +24463,15 @@
       "icon_id": 20013,
       "ability_value": 4500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 4500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "コーナー加速○",
@@ -24343,7 +24485,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "アクセラレーション",
@@ -24357,7 +24507,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ヴィクトリーショット！",
@@ -24371,7 +24529,15 @@
       "icon_id": 20043,
       "ability_value": 4000,
       "ability_time": 40000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行のコツ○",
@@ -24385,7 +24551,21 @@
       "icon_id": 10051,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 5,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "汝、皇帝の神威を見よ",
@@ -24399,7 +24579,15 @@
       "icon_id": 20013,
       "ability_value": 4500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 4500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "コーナー巧者○",
@@ -24413,7 +24601,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "好位追走",
@@ -24427,7 +24623,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "束縛",
@@ -24441,7 +24645,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "貴顕の使命を果たすべく",
@@ -24455,7 +24667,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "春ウマ娘○",
@@ -24469,7 +24689,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "リードキープ",
@@ -24483,7 +24711,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "波乱注意砲！",
@@ -24497,7 +24733,15 @@
       "icon_id": 20013,
       "ability_value": 1500,
       "ability_time": 60000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "追い上げ",
@@ -24511,7 +24755,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "お見通し",
@@ -24525,7 +24777,15 @@
       "icon_id": 20091,
       "ability_value": 50000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ウマ好み",
@@ -24539,7 +24799,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ブルーローズチェイサー",
@@ -24553,7 +24821,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "深呼吸",
@@ -24567,7 +24843,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行けん制",
@@ -24581,7 +24865,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 2
+        }
+      ]
     },
     {
       "name": "直滑降",
@@ -24595,7 +24887,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "レッドエース",
@@ -24609,7 +24909,21 @@
       "icon_id": 20013,
       "ability_value": 1500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "対抗意識○",
@@ -24623,7 +24937,15 @@
       "icon_id": 10031,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 3,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "テンポアップ",
@@ -24637,7 +24959,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 9000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "アクセルX",
@@ -24651,7 +24981,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "直線回復",
@@ -24665,7 +25003,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差し切り体勢",
@@ -24679,7 +25025,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "上昇気流",
@@ -24693,7 +25047,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "精神一到",
@@ -24707,7 +25069,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行焦り",
@@ -24721,7 +25091,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 2
+        }
+      ]
     },
     {
       "name": "熱血☆アミーゴ",
@@ -24735,7 +25113,21 @@
       "icon_id": 20013,
       "ability_value": 1500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ホークアイ",
@@ -24749,7 +25141,15 @@
       "icon_id": 20091,
       "ability_value": 100000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 100000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行直線○",
@@ -24763,7 +25163,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "エンプレス・プライド",
@@ -24777,7 +25185,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "臨機応変",
@@ -24791,7 +25207,15 @@
       "icon_id": 20051,
       "ability_value": 250,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "かく乱",
@@ -24805,7 +25229,15 @@
       "icon_id": 30071,
       "ability_value": -30000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": -30000,
+          "target_type": 10,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "勝利のキッス☆",
@@ -24819,7 +25251,21 @@
       "icon_id": 20013,
       "ability_value": 1500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先頭プライド",
@@ -24833,7 +25279,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "クリアハート",
@@ -24847,7 +25301,15 @@
       "icon_id": 20023,
       "ability_value": 350,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "コーナー回復○",
@@ -24861,7 +25323,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "燃えろ筋肉！",
@@ -24875,7 +25345,15 @@
       "icon_id": 20043,
       "ability_value": 3000,
       "ability_time": 40000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "雨の日○",
@@ -24889,7 +25367,15 @@
       "icon_id": 10041,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 4,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "外差し準備",
@@ -24903,7 +25389,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "全力Vサインッ！",
@@ -24917,7 +25411,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "良バ場○",
@@ -24931,7 +25433,15 @@
       "icon_id": 10031,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 3,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "がんばり屋",
@@ -24945,7 +25455,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "introduction：My body",
@@ -24959,7 +25477,15 @@
       "icon_id": 20023,
       "ability_value": 350,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "根幹距離○",
@@ -24973,7 +25499,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "学級委員長+速さ＝バクシン",
@@ -24987,7 +25521,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スプリントギア",
@@ -25001,7 +25543,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げ焦り",
@@ -25015,7 +25565,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 1
+        }
+      ]
     },
     {
       "name": "来てください来てください！",
@@ -25029,7 +25587,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "目くらまし",
@@ -25043,7 +25609,15 @@
       "icon_id": 30071,
       "ability_value": -50000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": -50000,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "小休憩",
@@ -25057,7 +25631,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ラッキーセブン",
@@ -25071,7 +25653,27 @@
       "icon_id": 10061,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 3,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ワクワクよーいドン",
@@ -25085,7 +25687,15 @@
       "icon_id": 20023,
       "ability_value": 350,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "隠れ蓑",
@@ -25099,7 +25709,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "十万バリキ",
@@ -25113,7 +25731,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "アタシもたまには、ね？",
@@ -25127,7 +25753,15 @@
       "icon_id": 20013,
       "ability_value": 2500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "小倉レース場○",
@@ -25141,7 +25775,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ささやき",
@@ -25155,7 +25797,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "鋭い眼光",
@@ -25169,7 +25819,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 4,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "Call me KING",
@@ -25183,7 +25841,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "外枠得意○",
@@ -25197,7 +25863,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "詰め寄り",
@@ -25211,7 +25885,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "読解力",
@@ -25225,7 +25907,15 @@
       "icon_id": 20091,
       "ability_value": 50000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ヴィットーリアに捧ぐ舞踏",
@@ -25239,7 +25929,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "非根幹距離○",
@@ -25253,7 +25951,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "抜け出し準備",
@@ -25267,7 +25973,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "別腹タンク",
@@ -25281,7 +25995,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "全身全霊",
@@ -25295,7 +26017,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "道悪○",
@@ -25309,7 +26039,15 @@
       "icon_id": 10031,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 3,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差しのコツ○",
@@ -25323,7 +26061,21 @@
       "icon_id": 10051,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 5,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "左回り○",
@@ -25337,7 +26089,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃亡者",
@@ -25351,7 +26111,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "急ぎ足",
@@ -25365,7 +26133,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げ直線○",
@@ -25379,7 +26155,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げコーナー○",
@@ -25393,7 +26177,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げのコツ○",
@@ -25407,7 +26199,21 @@
       "icon_id": 10051,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 5,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "一陣の風",
@@ -25421,7 +26227,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "垂れウマ回避",
@@ -25435,7 +26249,21 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 28,
+          "value": 50,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "軽やかステップ",
@@ -25449,7 +26277,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "阪神レース場○",
@@ -25463,7 +26299,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "曲線のソムリエ",
@@ -25477,7 +26321,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "後方待機",
@@ -25491,7 +26343,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "直線一気",
@@ -25505,7 +26365,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 9000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "内弁慶",
@@ -25519,7 +26387,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "下校の楽しみ",
@@ -25533,7 +26409,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "策士",
@@ -25547,7 +26431,15 @@
       "icon_id": 20091,
       "ability_value": 50000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "まなざし",
@@ -25561,7 +26453,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 4,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "追込のコツ○",
@@ -25575,7 +26475,21 @@
       "icon_id": 10051,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 5,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 8,
+          "value": 50000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "登山家",
@@ -25589,7 +26503,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "地固め",
@@ -25603,7 +26525,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "シンパシー",
@@ -25617,7 +26547,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行駆け引き",
@@ -25631,7 +26569,15 @@
       "icon_id": 30041,
       "ability_value": 50000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 13,
+          "value": 50000,
+          "target_type": 21,
+          "target_value": 2
+        }
+      ]
     },
     {
       "name": "徹底マーク○",
@@ -25645,7 +26591,15 @@
       "icon_id": 10041,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 4,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "豪脚",
@@ -25659,7 +26613,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "中山レース場○",
@@ -25673,7 +26635,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "位置取り押し上げ",
@@ -25687,7 +26657,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "好転一息",
@@ -25701,7 +26679,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "東京レース場○",
@@ -25715,7 +26701,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "直線加速",
@@ -25729,7 +26723,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "マイル直線○",
@@ -25743,7 +26745,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "中距離直線○",
@@ -25757,7 +26767,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "晴れの日○",
@@ -25771,7 +26789,15 @@
       "icon_id": 10041,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 4,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "キラーチューン",
@@ -25785,7 +26811,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 9000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "二の矢",
@@ -25799,7 +26833,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "脱出術",
@@ -25813,7 +26855,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "内枠得意○",
@@ -25827,7 +26877,15 @@
       "icon_id": 10051,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 5,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "伏兵○",
@@ -25841,7 +26899,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "トリック（前）",
@@ -25855,7 +26921,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 20,
+          "target_value": 10
+        }
+      ]
     },
     {
       "name": "差し駆け引き",
@@ -25869,7 +26943,15 @@
       "icon_id": 30041,
       "ability_value": 50000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 13,
+          "value": 50000,
+          "target_type": 21,
+          "target_value": 3
+        }
+      ]
     },
     {
       "name": "先行ためらい",
@@ -25883,7 +26965,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 18,
+          "target_value": 2
+        }
+      ]
     },
     {
       "name": "尻尾上がり",
@@ -25897,7 +26987,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ウマ込み冷静",
@@ -25911,7 +27009,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "迅速果断",
@@ -25925,7 +27031,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差し焦り",
@@ -25939,7 +27053,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 3
+        }
+      ]
     },
     {
       "name": "中距離コーナー○",
@@ -25953,7 +27075,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "右回り○",
@@ -25967,7 +27097,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "秋ウマ娘○",
@@ -25981,7 +27119,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "じゃじゃウマ娘",
@@ -25995,7 +27141,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "勢い任せ",
@@ -26009,7 +27163,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スリップストリーム",
@@ -26023,7 +27185,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "遊びはおしまいっ！",
@@ -26037,7 +27207,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ペースキープ",
@@ -26051,7 +27229,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "勝利への執念",
@@ -26065,7 +27251,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "冷静",
@@ -26079,7 +27273,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差しコーナー○",
@@ -26093,7 +27295,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "乗り換え上手",
@@ -26107,7 +27317,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "曇りの日○",
@@ -26121,7 +27339,15 @@
       "icon_id": 10041,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 4,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スプリントターボ",
@@ -26135,7 +27361,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げ駆け引き",
@@ -26149,7 +27383,15 @@
       "icon_id": 30041,
       "ability_value": 50000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 13,
+          "value": 50000,
+          "target_type": 21,
+          "target_value": 1
+        }
+      ]
     },
     {
       "name": "短距離直線○",
@@ -26163,7 +27405,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "短距離コーナー○",
@@ -26177,7 +27427,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "大きなリード",
@@ -26191,7 +27449,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "善後策",
@@ -26205,7 +27471,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "後方釘付",
@@ -26219,7 +27493,15 @@
       "icon_id": 30011,
       "ability_value": -2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -2000,
+          "target_type": 10,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "慧眼",
@@ -26233,7 +27515,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "札幌レース場○",
@@ -26247,7 +27537,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "展開窺い",
@@ -26261,7 +27559,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "注目の踊り子",
@@ -26275,7 +27581,15 @@
       "icon_id": 20052,
       "ability_value": 350,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "大井レース場○",
@@ -26289,7 +27603,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "リスタート",
@@ -26303,7 +27625,15 @@
       "icon_id": 30021,
       "ability_value": -1000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": -1000,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "円弧のマエストロ",
@@ -26317,7 +27647,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ペースアップ",
@@ -26331,7 +27669,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ハヤテ一文字",
@@ -26345,7 +27691,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 9000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先行コーナー○",
@@ -26359,7 +27713,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "プランX",
@@ -26373,7 +27735,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "様子見",
@@ -26387,7 +27757,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "積極策",
@@ -26401,7 +27779,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "仕掛け準備",
@@ -26415,7 +27801,21 @@
       "icon_id": 20051,
       "ability_value": 250,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "抜け駆け禁止",
@@ -26429,7 +27829,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "コンセントレーション",
@@ -26443,7 +27851,15 @@
       "icon_id": 20062,
       "ability_value": 4000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 10,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "追込焦り",
@@ -26457,7 +27873,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 4
+        }
+      ]
     },
     {
       "name": "夏ウマ娘○",
@@ -26471,7 +27895,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "マイルコーナー○",
@@ -26485,7 +27917,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "負けん気",
@@ -26499,7 +27939,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "まき直し",
@@ -26513,7 +27961,15 @@
       "icon_id": 20041,
       "ability_value": 2000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "追込ためらい",
@@ -26527,7 +27983,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 18,
+          "target_value": 4
+        }
+      ]
     },
     {
       "name": "仕掛け抜群",
@@ -26541,7 +28005,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "追込直線○",
@@ -26555,7 +28027,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "布石",
@@ -26569,7 +28049,15 @@
       "icon_id": 30021,
       "ability_value": -1000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": -1000,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "差し直線○",
@@ -26583,7 +28071,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "追込駆け引き",
@@ -26597,7 +28093,15 @@
       "icon_id": 30041,
       "ability_value": 50000,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 13,
+          "value": 50000,
+          "target_type": 21,
+          "target_value": 4
+        }
+      ]
     },
     {
       "name": "長距離直線○",
@@ -26611,7 +28115,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "パス上手",
@@ -26625,7 +28137,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "雪の日○",
@@ -26639,7 +28159,15 @@
       "icon_id": 10041,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 4,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "冬ウマ娘○",
@@ -26653,7 +28181,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げけん制",
@@ -26667,7 +28203,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 1
+        }
+      ]
     },
     {
       "name": "追込コーナー○",
@@ -26681,7 +28225,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "一匹狼",
@@ -26695,7 +28247,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "逃げためらい",
@@ -26709,7 +28269,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 18,
+          "target_value": 1
+        }
+      ]
     },
     {
       "name": "函館レース場○",
@@ -26723,7 +28291,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "トリック（後）",
@@ -26737,7 +28313,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 19,
+          "target_value": 10
+        }
+      ]
     },
     {
       "name": "スリーセブン",
@@ -26751,7 +28335,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ふり絞り",
@@ -26765,7 +28357,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "京都レース場○",
@@ -26779,7 +28379,15 @@
       "icon_id": 10021,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 2,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差しためらい",
@@ -26793,7 +28401,15 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 18,
+          "target_value": 3
+        }
+      ]
     },
     {
       "name": "おひとり様○",
@@ -26807,7 +28423,15 @@
       "icon_id": 10011,
       "ability_value": 400000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "長距離コーナー○",
@@ -26821,7 +28445,15 @@
       "icon_id": 20011,
       "ability_value": 1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "差しけん制",
@@ -26835,7 +28467,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 3
+        }
+      ]
     },
     {
       "name": "追込けん制",
@@ -26849,7 +28489,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 18,
+          "target_value": 4
+        }
+      ]
     },
     {
       "name": "クールダウン",
@@ -26863,7 +28511,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "どこ吹く風",
@@ -26877,7 +28533,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "火事場のバ鹿力",
@@ -26891,7 +28555,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "食いしん坊",
@@ -26905,7 +28577,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スタミナキープ",
@@ -26919,7 +28599,15 @@
       "icon_id": 20021,
       "ability_value": 150,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スピードスター",
@@ -26933,7 +28621,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スピードイーター",
@@ -26947,7 +28643,21 @@
       "icon_id": 30011,
       "ability_value": -1500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -1500,
+          "target_type": 10,
+          "target_value": 5
+        },
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "スタミナイーター",
@@ -26961,7 +28671,21 @@
       "icon_id": 30051,
       "ability_value": -50,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -50,
+          "target_type": 9,
+          "target_value": 5
+        },
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "技巧派",
@@ -26975,7 +28699,15 @@
       "icon_id": 20042,
       "ability_value": 3000,
       "ability_time": 18000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ライトニングステップ",
@@ -26989,7 +28721,21 @@
       "icon_id": 20052,
       "ability_value": 350,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ギアチェンジ",
@@ -27003,7 +28749,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "アクセル全開！",
@@ -27017,7 +28771,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "マイルの支配者",
@@ -27031,7 +28793,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先陣の心得",
@@ -27045,7 +28815,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "余裕綽々",
@@ -27059,7 +28837,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "独占力",
@@ -27073,7 +28859,15 @@
       "icon_id": 30012,
       "ability_value": -2500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 21,
+          "value": -2500,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "弧線のプロフェッサー",
@@ -27087,7 +28881,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 18000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "決意の直滑降",
@@ -27101,7 +28903,15 @@
       "icon_id": 20042,
       "ability_value": 3000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "視界良好！異常なし！",
@@ -27115,7 +28925,15 @@
       "icon_id": 20092,
       "ability_value": 100000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 100000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "下校後のスペシャリスト",
@@ -27129,7 +28947,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "レースプランナー",
@@ -27143,7 +28969,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "千里眼",
@@ -27157,7 +28991,15 @@
       "icon_id": 20092,
       "ability_value": 150000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 150000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "幻惑のかく乱",
@@ -27171,7 +29013,15 @@
       "icon_id": 30072,
       "ability_value": -50000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": -50000,
+          "target_type": 10,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "レーンの魔術師",
@@ -27185,7 +29035,15 @@
       "icon_id": 20052,
       "ability_value": 350,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "ノンストップガール",
@@ -27199,7 +29057,21 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 30000,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "昇り龍",
@@ -27213,7 +29085,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "努力家",
@@ -27227,7 +29107,15 @@
       "icon_id": 20042,
       "ability_value": 3000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "圧倒的リード",
@@ -27241,7 +29129,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "鋼の意志",
@@ -27255,7 +29151,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "不屈の心",
@@ -27269,7 +29173,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 300000
+      "cooldown": 300000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "奇術師",
@@ -27283,7 +29195,15 @@
       "icon_id": 30072,
       "ability_value": -100000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": -100000,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "トリック（後）",
@@ -27296,7 +29216,15 @@
       "icon_id": 30051,
       "ability_value": -100,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -100,
+          "target_type": 19,
+          "target_value": 10
+        }
+      ]
     },
     {
       "name": "スーパーラッキーセブン",
@@ -27310,7 +29238,27 @@
       "icon_id": 10062,
       "ability_value": 600000,
       "ability_time": -1,
-      "cooldown": 0
+      "cooldown": 0,
+      "ability": [
+        {
+          "type": 1,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 2,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 3,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "魅惑のささやき",
@@ -27324,7 +29272,15 @@
       "icon_id": 30052,
       "ability_value": -300,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -300,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "八方にらみ",
@@ -27338,7 +29294,15 @@
       "icon_id": 30052,
       "ability_value": -300,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": -300,
+          "target_type": 4,
+          "target_value": 18
+        }
+      ]
     },
     {
       "name": "電撃の煌めき",
@@ -27352,7 +29316,15 @@
       "icon_id": 20012,
       "ability_value": 3500,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "大局観",
@@ -27366,7 +29338,15 @@
       "icon_id": 20092,
       "ability_value": 150000,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 8,
+          "value": 150000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "G00 1st.F∞;",
@@ -27380,7 +29360,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "先手必勝",
@@ -27394,7 +29382,15 @@
       "icon_id": 20042,
       "ability_value": 4000,
       "ability_time": 12000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "切り開く者",
@@ -27408,7 +29404,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "∴win Q.E.D.",
@@ -27422,7 +29426,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "最強の名を懸けて",
@@ -27436,7 +29448,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "絶対は、ボクだ",
@@ -27450,7 +29470,15 @@
       "icon_id": 20013,
       "ability_value": 3500,
       "ability_time": 50000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "神業ステップ",
@@ -27464,7 +29492,15 @@
       "icon_id": 20022,
       "ability_value": 550,
       "ability_time": -1,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     },
     {
       "name": "危険回避",
@@ -27478,7 +29514,15 @@
       "icon_id": 20051,
       "ability_value": 250,
       "ability_time": 30000,
-      "cooldown": 5000000
+      "cooldown": 5000000,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ]
     }
   ],
   "events": [
