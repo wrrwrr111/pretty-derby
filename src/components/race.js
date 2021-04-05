@@ -55,7 +55,7 @@ const RaceSchedule = (props)=>{
   </Row>)
 }
 
-const RaceTimeline = (props)=>{
+const RaceTimeline = React.memo((props)=>{
   const str  = []
 
   const getDate = (i)=>{
@@ -105,7 +105,7 @@ const RaceTimeline = (props)=>{
   return(<Timeline mode='left'>
     {str}
   </Timeline>)
-}
+})
 const RaceCheckbox = (props) =>{
   const [raceFilterCondition,setRaceFilterCondition] = useState(props.raceFilterCondition)
 
