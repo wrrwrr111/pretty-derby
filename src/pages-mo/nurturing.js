@@ -176,7 +176,7 @@ const onChangeRace = (filterCondition)=>{
         <Popover trigger='click' content={
           <RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition}></RaceCheckbox>
         }>
-          <Button>{t('关注赛事')}</Button>
+          <Button>{t('比赛')}</Button>
         </Popover>
         <Popover trigger='click' width={'80%'} content={
           <>

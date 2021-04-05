@@ -195,7 +195,7 @@ const Nurturing = () =>{
             <BuffButton/>
 
             <Popover content={<RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition}></RaceCheckbox>}>
-              <Button>{t('关注赛事')}</Button>
+              <Button>{t('比赛')}</Button>
             </Popover>
 
             <Popover width={'100%'} content={
