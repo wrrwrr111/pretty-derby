@@ -1,0 +1,15 @@
+.seed-container {
+  margin: 24px 24px 0px;
+}
+
+.seed-container > * {
+  margin-bottom: 16px;
+}
+
+.seed-container > *:last-child {
+  margin-bottom: 0;
+}
+
+.seed-container .card {
+  padding: 24px 24px 0;
+}
