@@ -82,7 +82,7 @@ const RaceTimeline = (props)=>{
       curRace = db.get('races').find({id:props.raceList[i].id}).value()
       str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}}>
         {/* <b>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</b> */}
-        <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal}`}</b>
+        <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal||'参赛'}`}</b>
       </Timeline.Item>)
     }else if(props.selectedRaceList&&props.selectedRaceList[i]){
       props.selectedRaceList[i].forEach((id,index)=>{
