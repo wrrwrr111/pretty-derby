@@ -68,6 +68,8 @@ def extract_img_assets(db, dat_path, output_path, query, skip_existing):
                 # TODO better filter
                 if ('thumb' in data.name or 'tex' in data.name) and img.width == img.height:
                     img = img.resize((int(img.width * 3 / 4), img.height))
+                if ('chr_icon' in data.name):
+                    img = img.resize((int(img.width), int(img.height*23/21)))
                 img.save(out_file_path)
 
 
