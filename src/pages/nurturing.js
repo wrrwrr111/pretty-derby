@@ -16,7 +16,7 @@ import Support from './support.js'
 
 const {Column} = Table
 
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 
 const NurturingSupport = (props)=>{

@@ -8,7 +8,7 @@ import PlayerDetail from '../components/player-detail.js'
 // const CheckboxGroup = Checkbox.Group
 
 // todo 提取出来
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 const PlayerCard = (props)=>{
   const [isModalVisible, setIsModalVisible] = useState(false);

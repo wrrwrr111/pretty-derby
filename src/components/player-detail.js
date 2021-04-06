@@ -20,8 +20,8 @@ const PlayerDetail = (props) =>{
   const data = db.get('players').find({id}).value()
   return(
     isNur?<>
-      <div style={{height:64,display:'flex'}}>
-          <Image src={cdnServer+data.imgUrl} width={64} height={64} resizemode={'cover'}></Image>
+      <div style={{height:69,display:'flex'}}>
+          <Image src={cdnServer+data.imgUrl} width={63} height={69} resizemode={'cover'}></Image>
           <div style={{display:'flex',height:64,flexDirection:'column',justifyContent:'space-between'}}>
             <div style={{fontSize:20,fontWeight:700}}>{t(data.name)}</div>
             <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(data.charaName)}</div>
@@ -36,7 +36,7 @@ const PlayerDetail = (props) =>{
       <SkillList skillList={data.skillList}></SkillList>
     </>:<>
       <div style={{height:144,display:'flex'}}>
-        <Image src={cdnServer+data.imgUrl} width={128} height={128} resizemode={'cover'}></Image>
+        <Image src={cdnServer+data.imgUrl} width={128} height={140} resizemode={'cover'}></Image>
         <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
           <div style={{fontSize:20,fontWeight:700}}>{t(data.charaName)}</div>
           <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{data.charaName}</div>

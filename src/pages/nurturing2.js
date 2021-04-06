@@ -18,7 +18,7 @@ import Player from './player.js'
 import Support from './support.js'
 
 
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 
 const Nurturing = () =>{
@@ -183,7 +183,7 @@ const Nurturing = () =>{
         <div style={{display:'flex',justifyContent:'center'}}>
             {player.id?
               <img src={cdnServer+player.imgUrl} alt={player.imgUrl}
-              width={0.12*dynamicContentHeight} height={0.12*dynamicContentHeight}
+              width={0.12*dynamicContentHeight} height={0.131*dynamicContentHeight}
                     style={{float:'left',marginRight:'8px'}} onClick={showPlayer}></img>
               :<Button className='add-player' type={'primary'} onClick={showPlayer}>{t('选择马娘')}</Button>
             }
