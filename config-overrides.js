@@ -1,4 +1,5 @@
 const {override,fixBabelImports} = require('customize-cra')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = override(
   fixBabelImports('antd',{
     libraryName:'antd',
@@ -11,6 +12,7 @@ module.exports = override(
   }),
   (config) => {
     // 在开发环境不修改 publicUrl
+    config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8919 }))
     if (process.env.NODE_ENV === "development") {
       return config;
     }
