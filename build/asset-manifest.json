@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/pretty-derby/static/css/main.48a2c336.chunk.css",
-    "main.js": "/pretty-derby/static/js/main.f6d5f91b.chunk.js",
-    "main.js.map": "/pretty-derby/static/js/main.f6d5f91b.chunk.js.map",
-    "runtime-main.js": "/pretty-derby/static/js/runtime-main.68bbb717.js",
-    "runtime-main.js.map": "/pretty-derby/static/js/runtime-main.68bbb717.js.map",
+    "main.js": "/pretty-derby/static/js/main.89e3af86.chunk.js",
+    "main.js.map": "/pretty-derby/static/js/main.89e3af86.chunk.js.map",
+    "runtime-main.js": "/pretty-derby/static/js/runtime-main.22a90431.js",
+    "runtime-main.js.map": "/pretty-derby/static/js/runtime-main.22a90431.js.map",
     "static/css/2.e28b2c09.chunk.css": "/pretty-derby/static/css/2.e28b2c09.chunk.css",
     "static/js/2.2bd15969.chunk.js": "/pretty-derby/static/js/2.2bd15969.chunk.js",
     "static/js/2.2bd15969.chunk.js.map": "/pretty-derby/static/js/2.2bd15969.chunk.js.map",
@@ -15,10 +15,10 @@
     "static/media/index.less": "/pretty-derby/static/media/index.e998c2a4.less"
   },
   "entrypoints": [
-    "static/js/runtime-main.68bbb717.js",
+    "static/js/runtime-main.22a90431.js",
     "static/css/2.e28b2c09.chunk.css",
     "static/js/2.2bd15969.chunk.js",
     "static/css/main.48a2c336.chunk.css",
-    "static/js/main.f6d5f91b.chunk.js"
+    "static/js/main.89e3af86.chunk.js"
   ]
 }
