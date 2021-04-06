@@ -86,7 +86,7 @@ const AppPc = ()=>{
         <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
       </Col>
       <Col span={2}>
-      <Popover content={<Image src={cdnServer+'img/q.jpg'} width={300}></Image>}>
+      <Popover content={<><Image src={cdnServer+'img/q.jpg'} width={300}></Image><p>{t('闲聊为主')}</p></>}>
         <a target="_blank" rel="noreferrer" href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi">
           <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="轻 松 赛 马" title="轻 松 赛 马" />
         </a>

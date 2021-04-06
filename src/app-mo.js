@@ -60,7 +60,7 @@ class App1 extends React.Component {
       <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
       </List.Item>
       <List.Item>
-      <Popover content={<Image src={cdnServer+'img/q.jpg'} width={300}></Image>}>
+      <Popover content={<><Image src={cdnServer+'img/q.jpg'} width={300}></Image><p>{t('闲聊为主')}</p></>}>
         <a target="_blank" rel="noreferrer" href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi">
           <Button placement="bottom">{t('加入QQ群')}</Button>
         </a>
