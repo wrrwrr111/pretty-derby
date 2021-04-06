@@ -28,6 +28,7 @@ db.set('zh',jsonDB.zh).write()
 db.set('en',jsonDB.en).write()
 // db.set('lan','en').write()
 //重新加载
+
 db.has('lan').value()||db.set('lan','zh').write()
 db.get('selected').value()||db.set('selected',{
   supports:{0:{},1:{},2:{},3:{},4:{},5:{}},
