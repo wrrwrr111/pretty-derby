@@ -26,7 +26,11 @@ const NurturingSupport = (props)=>{
             <img src={cdnServer+props.data.imgUrl} alt={props.data.name} width={'100%'}></img>
           </Col>
           <Col span={20}>
-            <SkillList skillList={props.data.skillList} ></SkillList>
+            {/* <SkillList skillList={props.data.skillList} ></SkillList> */}
+            <Divider style={{margin:'4 0'}}>培训技能</Divider>
+            <SkillList skillList={props.data.possessionSkill}></SkillList>
+            <Divider style={{margin:'4 0'}}>事件技能</Divider>
+            <SkillList skillList={props.data.trainingEventSkill}></SkillList>
           </Col>
           <Col span={24}>
             <EventList eventList={props.data.eventList} pid={props.data.id}></EventList>

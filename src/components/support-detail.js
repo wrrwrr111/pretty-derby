@@ -25,9 +25,9 @@ const SupportDetail = (props) =>{
       </div>
     </div>
     <EventList eventList={data.eventList} pid={data.id}></EventList>
-    <Divider style={{margin:'4px 0'}}>{t('培训技能')}</Divider>
+    <Divider style={{margin:'4px 0'}}>{t('事件技能')}</Divider>
     <SkillList skillList={data.trainingEventSkill}></SkillList>
-    <Divider style={{margin:'4px 0'}}>{t('自带技能')}</Divider>
+    <Divider style={{margin:'4px 0'}}>{t('训练技能')}</Divider>
     <SkillList skillList={data.possessionSkill}></SkillList>
     <Divider>{t('育成效果')}</Divider>
     <TestEffectTable effects={data.effects} unique_effect={data.unique_effect} rarity={data.rarity}></TestEffectTable>

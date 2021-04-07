@@ -272,18 +272,24 @@ const Nurturing = () =>{
                 justifyContent:'space-between',
                 alignItems:'center'
               }}>
-                <ScrollBars style={{height:'38%'}} autoHide>
-                  <div style={{paddingLeft:'2%',width:'98%'}}>
-                    <Tooltip title={t('选择支援卡')}>
-                      <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
-                    </Tooltip>
-                    <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
-                  </div>
-                </ScrollBars>
 
-                <ScrollBars style={{height:'62%',marginBottom:'4%'}} autoHide>
+
+                <ScrollBars style={{height:'100%',marginBottom:'4%'}} autoHide>
                   <div style={{paddingLeft:'2%',width:'98%'}}>
-                    <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList>
+                    <div style={{display:'flex'}}>
+                      <Tooltip title={t('选择支援卡')}>
+                        <Button shape="circle" icon={<EditOutlined />} onClick={()=>showSupport(index)}/>
+                      </Tooltip>
+                      <div style={{flex:'1 1 auto'}}>
+                        <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>事件</Divider>
+                      </div>
+                    </div>
+                    <EventList eventList={supports[index].eventList} pid={supports[index].id} type='multi'></EventList>
+                    {/* <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList> */}
+                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>培训技能</Divider>
+                    <SkillList skillList={supports[index].possessionSkill}></SkillList>
+                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>事件技能</Divider>
+                    <SkillList skillList={supports[index].trainingEventSkill}></SkillList>
                   </div>
                 </ScrollBars>
               </div>
