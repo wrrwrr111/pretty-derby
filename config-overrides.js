@@ -12,7 +12,7 @@ module.exports = override(
   }),
   (config) => {
     // 在开发环境不修改 publicUrl
-    config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8919 }))
+    // config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8919 }))
     if (process.env.NODE_ENV === "development") {
       return config;
     }

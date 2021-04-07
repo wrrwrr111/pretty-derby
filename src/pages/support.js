@@ -118,13 +118,15 @@ class Support extends React.Component{
       textShadow: "0 2px #33333370",
     }
     return (
-      <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
-        <div style={{maxWidth:1200,maxHeight:window.innerHeight-200}}>
+      <div style={{display:'flex',justifyContent:'center',paddingTop:4}}>
+        <div style={{maxWidth:1200,maxHeight:window.innerHeight-104}}>
           <Row justify="space-around">
             <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('筛选')}</text></div></Col>
             <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('支援卡列表')}</text></div></Col>
             <Col span={6}>
-              <div style={{overflowY:'scroll',display:'flex',flexDirection:'column',overflowX:'hidden',maxHeight:window.innerHeight-300,padding:4}}>
+              <div style={{overflowY:'scroll',display:'flex',
+                flexDirection:'column',overflowX:'hidden',
+                maxHeight:window.innerHeight-104-78,padding:4}}>
                 {this.props.filter&&<>
                   <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
                   <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
@@ -137,13 +139,14 @@ class Support extends React.Component{
 
 
             <Col span={18}>
-              <div style={{overflowY:'scroll',overflowX:'hidden',maxHeight:window.innerHeight-300,paddingRight:16}}>
+              <div style={{overflowY:'scroll',overflowX:'hidden',
+                maxHeight:window.innerHeight-104-78,paddingRight:16}}>
                 {
                   ['SSR','SR','R'].map(rare=>
                     <Row gutter={[16,16]} key={rare}>
                       <Divider>{rare}</Divider>
                       {this.state.list.filter(item=>item.rare===rare).map(support=>
-                        <Col xxl={4} lg={6} sm={6} xs={6} key={support.id}
+                        <Col xxl={4} lg={6} sm={8} xs={8} key={support.id}
                             className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
                           <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
                                       chooseMode={this.props.chooseMode}></SupportCard>

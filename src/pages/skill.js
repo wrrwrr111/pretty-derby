@@ -214,16 +214,17 @@ const Skill = () =>{
     return {height};
   };
 
-  const dynamicListHeight = useViewport().height - 128 - 90;
+  const dynamicListHeight = useViewport().height - 104 - 78;
 
   return(<>
-    <div style={{display:'flex',justifyContent:'center',paddingTop:40}}>
-      <div style={{maxWidth:800}}>
+    <div style={{display:'flex',justifyContent:'center',paddingTop:4}}>
+      <div style={{maxWidth:1200}}>
         <Row>
           <Col span={6}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('筛选')}</text></div></Col>
           <Col span={18}><div style={{...headerStyle}}><text style={{...headerTextStyle}}>{t('技能列表')}</text></div></Col>
           <Col span={6}>
-            <div style={{height:dynamicListHeight,overflowY:'scroll',display:'flex',flexDirection:'column'}}>
+            <div style={{height:dynamicListHeight,overflowY:'scroll',
+            display:'flex',flexDirection:'column'}}>
               <div style={{height:16}}/>
               <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>{t('重置')}</Button>
               <Divider/>
@@ -257,7 +258,7 @@ const Skill = () =>{
                 <Row gutter={[8,8]} key={rare}>
                   <Divider>{rareLabel[rare]}</Divider>
                   { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
-                    <Col span={12}>
+                    <Col  xxl={6} lg={8} sm={12} xs={12}>
                       <SkillButton usedInList={true} skill={skill} key={skill.id} onClick={showModal}></SkillButton>
                     </Col>
                   )
