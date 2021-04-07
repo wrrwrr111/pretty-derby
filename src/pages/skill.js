@@ -6,8 +6,7 @@ import t from '../components/t.js'
 
 import Support from './support.js'
 import Player from './player.js'
-import {SkillButton} from '../components/skill.js'
-const CheckboxGroup = Checkbox.Group
+import {SkillButton,SkillCheckbox} from '../components/skill.js'
 const { Search } = Input
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -16,14 +15,6 @@ const Skill = () =>{
   const allSkillList = db.get('skills').orderBy('db_id').value()
   const allSupportList = db.get('supports').value()
   const allPlayerList = db.get('players').value()
-  const mySupports = db.get('mySupports').value()
-  let mySkillList = new Set()
-  mySupports.forEach(supportId=>{
-    let support = db.get('supports').find({id:supportId}).value()
-    support.skillList.forEach(skillId=>{
-      mySkillList.add(skillId)
-    })
-  })
 
   const [skillList,setSkillList] = useState(allSkillList)
   const [skillSupportList,setSkillSupportList] = useState(allSupportList)
@@ -32,112 +23,8 @@ const Skill = () =>{
   // 点击技能出现的弹框标题
   const [skillName, setSkillName] = useState('');
 
-  const [checkedList1, setCheckedList1] = useState([]);
-  const [checkedList2, setCheckedList2] = useState([]);
-  const [checkedList3, setCheckedList3] = useState([]);
   // init supportMode
   localStorage.getItem('supportMode')===null&&localStorage.setItem('supportMode',0)
-  const [mode,setMode] = useState(parseInt(localStorage.getItem('supportMode')))
-  const checkOptions1 = [
-    {label:'通用',value:'normal'},
-    {label:'短距',value:'＜短距離＞'},
-    {label:'英里',value:'＜マイル＞'},
-    {label:'中距',value:'＜中距離＞'},
-    {label:'长距',value:'＜長距離＞'},
-    {label:'逃',value:'＜作戦・逃げ＞'},
-    {label:'先',value:'＜作戦・先行＞'},
-    {label:'差',value:'＜作戦・差し＞'},
-    {label:'追',value:'＜作戦・追込＞'}
-  ]
-  const checkOptions2 =[
-    {label:'速度被动(绿)',value:'10011'},
-    {label:'耐力被动(绿)',value:'10021'},
-    {label:'力量被动(绿)',value:'10031'},
-    {label:'毅力被动(绿)',value:'10041'},
-    {label:'智力被动(绿)',value:'10051'},
-    {label:'耐力恢复(蓝)',value:'20021'},
-    {label:'速度提高(黄)',value:'20011'},
-    // {label:'20031',value:'20031'},
-    {label:'加速度提高(黄)',value:'20041'},
-    {label:'切换跑道(黄)',value:'20051'},
-    {label:'起步(黄)',value:'20061'},
-    // {label:'20071',value:'20071'},
-    // {label:'20081',value:'20081'},
-    {label:'视野(黄)',value:'20091'},
-    {label:'降速(红)',value:'30011'},
-    {label:'安定(红)',value:'30041'},
-    {label:'疲劳(红)',value:'30051'},
-    {label:'视野(红)',value:'30071'}
-  ]
-  const checkOptions3 = [
-    {label:'普通',value:'ノーマル'},
-    {label:'稀有',value:'レア'},
-    {label:'独特',value:'固有'}
-  ]
-
-  const onChange1=(checkedValues)=>{
-    setCheckedList1(checkedValues)
-    updateSkillList(checkedValues,checkedList2,checkedList3)
-
-  }
-  const onChange2 = (checkedValues)=>{
-    setCheckedList2(checkedValues)
-    updateSkillList(checkedList1,checkedValues,checkedList3)
-  }
-  const onChange3 = (checkedValues)=>{
-    setCheckedList3(checkedValues)
-    updateSkillList(checkedList1,checkedList2,checkedValues)
-  }
-  const updateSkillList = (check1,check2,check3)=>{
-    let tempSkillList = allSkillList
-    if(check1.length){
-      tempSkillList = tempSkillList.filter(skill=>{
-        let flag = 0;
-        check1.forEach(value=>{
-          if(skill.describe){
-            if(value==='normal' && skill.describe.indexOf('＜') === -1 && skill.describe.indexOf('＞') === -1){
-              flag = 1
-            }else if(skill.describe.indexOf(value)!==-1){
-              flag = 1
-            }
-          }
-        })
-        return flag
-      })
-    }
-    if(check2.length){
-      tempSkillList = tempSkillList.filter(skill=>{
-        let flag = 0;
-        check2.forEach(value=>{
-          let str = skill.icon_id +''
-          if(str){
-            if(str[0] === value[0] && str[3] === value[3] ){
-              flag = 1
-            }
-          }
-        })
-        return flag
-      })
-    }
-    if(check3.length){
-      tempSkillList = tempSkillList.filter(skill=>{
-        let flag = 0;
-        check3.forEach(value=>{
-          if(skill.rare === value){
-            flag = 1
-          }
-        })
-        return flag
-      })
-    }
-    setSkillList(tempSkillList)
-  }
-  const resetCheckbox=()=>{
-    setCheckedList1([])
-    setCheckedList2([])
-    setCheckedList3([])
-    setSkillList(allSkillList)
-  }
 
   const showModal = (skill) => {
     let tempSupportList = allSupportList.filter(support=>{
@@ -171,10 +58,7 @@ const Skill = () =>{
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-  const changeMode = ()=>{
-    localStorage.setItem('supportMode',1-mode)
-    setMode(1-mode)
-  }
+
   const rareLabel={'ノーマル':'普通','レア':'金色 稀有','固有':'独特'}
 
   const headerStyle = {
@@ -194,14 +78,10 @@ const Skill = () =>{
     textShadow: "0 2px #33333370",
   }
 
-  const onSearch = (searchText) => {
-    const fullSkillList = allSkillList;
-    const tempSkillList = fullSkillList.filter(item => (item.name).indexOf(searchText) > -1);
-    setCheckedList1([])
-    setCheckedList2([])
-    setCheckedList3([])
-    setSkillList(tempSkillList)
-  };
+
+  const onSkillCheckboxUpdate = (skillList)=>{
+    setSkillList(skillList)
+  }
 
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -225,31 +105,7 @@ const Skill = () =>{
           <Col span={6}>
             <div style={{height:dynamicListHeight,overflowY:'scroll',
             display:'flex',flexDirection:'column'}}>
-              <div style={{height:16}}/>
-              <Button type={'danger'} onClick={resetCheckbox} style={{width:'100%'}}>{t('重置')}</Button>
-              <Divider/>
-              <div>
-                <Tooltip title={t("可以在支援卡页面配置")}>
-                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('显示拥有支援卡')}</span>
-                  <Switch checked={mode} onChange={changeMode} />
-                </Tooltip>
-              </div>
-              <div>
-                <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('技能搜索')}</span>
-                <Search
-                  placeholder={t("输入技能名称")}
-                  enterButton={t("搜索")}
-                  size="middle"
-                  style={{ width: '100%' }}
-                  onSearch={onSearch}
-                />
-              </div>
-              <Divider/>
-              <CheckboxGroup options={checkOptions1} value={checkedList1} onChange={onChange1} />
-              <Divider/>
-              <CheckboxGroup options={checkOptions2} value={checkedList2} onChange={onChange2} />
-              <Divider/>
-              <CheckboxGroup options={checkOptions3} value={checkedList3} onChange={onChange3} />
+              <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
             </div>
           </Col>
           <Col span={18}>
@@ -257,7 +113,7 @@ const Skill = () =>{
               {['ノーマル','レア','固有'].map(rare=>
                 <Row gutter={[8,8]} key={rare}>
                   <Divider>{rareLabel[rare]}</Divider>
-                  { skillList.filter(item=>mode?mySkillList.has(item.id)&&(item.rare === rare):item.rare === rare).map(skill=>
+                  { skillList.filter(item=>item.rare === rare).map(skill=>
                     <Col  xxl={6} lg={8} sm={12} xs={12}>
                       <SkillButton usedInList={true} skill={skill} key={skill.id} onClick={showModal}></SkillButton>
                     </Col>

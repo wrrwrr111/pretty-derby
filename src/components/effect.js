@@ -112,7 +112,6 @@ const EffectTable = (props)=>{
 class TestEffectTable extends React.Component{
   constructor(props) {
     super(props);
-    console.log('props',props)
     this.effects = db.get('effects').value();
     let maxLevel = 1;
     switch (props.rarity) {
@@ -235,7 +234,7 @@ class TestEffectTable extends React.Component{
         </div>
         <Row>
           {['0','1'].map(index=>
-            <Col span={12}>
+            <Col span={12} key={index}>
               <div style={{...this.effectCapsuleStyle}}>
             <Popover trigger={ua==='mo'?'click':'hover'} content={<>
               <p>{this.effects[this.props.unique_effect[`type_${index}`]].name}</p>
@@ -276,10 +275,10 @@ class TestEffectTable extends React.Component{
         </div>
         <Row>
           {this.props.effects.map(
-            (item)=>{
+            (item,index)=>{
               const data = [item.init,item.limit_lv5,item.limit_lv10,item.limit_lv15,item.limit_lv20,item.limit_lv25,item.limit_lv30,item.limit_lv35,item.limit_lv40,item.limit_lv45,item.limit_lv50].filter((item)=>(item));
               return (
-                <Col span={12}>
+                <Col span={12} key={index}>
                   <div style={{...this.effectCapsuleStyle}}>
                 <Popover trigger={ua==='mo'?'click':'hover'} content={<>
                   <p>{this.effects[item.type].name}</p>

@@ -6,6 +6,7 @@ import t from '../components/t.js'
 
 
 import SupportDetail from '../components/support-detail.js'
+import {SkillCheckbox, SkillList} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -49,7 +50,8 @@ class Support extends React.Component{
       chooseMode:false,
       showMode:false,
       chosenList:db.get('mySupports').value()||[],
-      checkedList:[]}
+      checkedList:[],
+      skillList:[]}
     this.effects = db.get('effects').value()
     this.checkOptions = Object.keys(this.effects)
       .map(key=>{return {label:t(this.effects[key].name),value:key}})
@@ -76,7 +78,16 @@ class Support extends React.Component{
     db.update('mySupports',this.state.chosenList).write()
     this.setState({})
   }
-  onChange = (checkedValues)=>{
+  onSupportCheckboxChange = (checkedValues)=>{
+    this.updateSupport(checkedValues,this.state.skillList)
+    this.setState({checkedList:checkedValues})
+  }
+
+  onSkillCheckboxUpdate=(skillList)=>{
+    this.updateSupport(this.state.checkedList,skillList)
+    this.setState({skillList:skillList})
+  }
+  updateSupport = (checkedValues,skillList)=>{
     let tempList = this.props.supportList
     if(checkedValues.length){
       tempList = tempList.filter(support=>{
@@ -91,14 +102,20 @@ class Support extends React.Component{
         return flag == checkedValues.length
       })
     }
-    this.setState({
-      checkedList:checkedValues,
-      list:tempList
-    })
+    if(skillList.length){
+      tempList = tempList.filter(support=>{
+        let flag = 0;
+        support.skillList.forEach(skillId=>{
+          if(skillList.indexOf(skillId)!==-1){
+            return flag = 1;
+          }
+        })
+        return flag
+      })
+    }
+
+    this.setState({list:tempList})
   }
-
-
-
 
   render(){
     const headerStyle = {
@@ -131,8 +148,11 @@ class Support extends React.Component{
                   <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
                   <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
                   {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
-                  <Divider style={{margin:4}}/>
-                  <CheckboxGroup options={this.checkOptions} value={this.state.checkedList} onChange={this.onChange} />
+                  <Divider style={{margin:4}}>{t('技能')}</Divider>
+                  <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate} check1Only={true} needId={true}></SkillCheckbox>
+                  <Divider style={{margin:4}}>{t('育成效果')}</Divider>
+                  <CheckboxGroup options={this.checkOptions} value={this.state.checkedList}
+                    onChange={this.onSupportCheckboxChange} />
                 </>}
               </div>
             </Col>
