@@ -85,6 +85,7 @@ class Support extends React.Component{
 
   onSkillCheckboxUpdate=(skillList)=>{
     this.updateSupport(this.state.checkedList,skillList)
+    // console.log(skillList)
     this.setState({skillList:skillList})
   }
   updateSupport = (checkedValues,skillList)=>{
@@ -149,7 +150,8 @@ class Support extends React.Component{
                   <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
                   {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
                   <Divider style={{margin:4}}>{t('技能')}</Divider>
-                  <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate} check1Only={true} needId={true}></SkillCheckbox>
+                  <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate}
+                  checkOnly={true} needId={true}></SkillCheckbox>
                   <Divider style={{margin:4}}>{t('育成效果')}</Divider>
                   <CheckboxGroup options={this.checkOptions} value={this.state.checkedList}
                     onChange={this.onSupportCheckboxChange} />

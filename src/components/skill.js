@@ -190,8 +190,12 @@ const SkillCheckbox = (props)=>{
     }
     if(isOwn){
       tempSkillList = tempSkillList.filter(skill=>{
-        console.log(skill.id,mySkillList.has(skill.id))
         return mySkillList.has(skill.id)
+      })
+    }
+    if(check1.length||check2.length||check3.length||isOwn){
+      tempSkillList.push({
+        id:'default'
       })
     }
     if(props.needId){
@@ -212,7 +216,7 @@ const SkillCheckbox = (props)=>{
     let curValue = 1-isOwn
     localStorage.setItem('isOwn',curValue)
     setIsOwn(curValue)
-    console.log(curValue)
+    // console.log(curValue)
     updateSkillList(checkedList1,checkedList2,checkedList3,curValue)
   }
   const onSearch = (searchText) => {
@@ -223,8 +227,14 @@ const SkillCheckbox = (props)=>{
     setCheckedList3([])
     props.onUpdate(tempSkillList)
   };
-  return(<>{props.check1Only?
-    <Checkbox.Group options={checkOptions1} value={checkedList1} onChange={onChange1} />
+  return(<>{props.checkOnly?
+    <>
+     <Checkbox.Group options={checkOptions1} value={checkedList1} onChange={onChange1} />
+      <Divider/>
+      <Checkbox.Group options={checkOptions2} value={checkedList2} onChange={onChange2} />
+      <Divider/>
+      <Checkbox.Group options={checkOptions3} value={checkedList3} onChange={onChange3} />
+    </>
     :
     <div>
         <div style={{height:16}}/>
