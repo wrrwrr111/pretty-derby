@@ -91,7 +91,14 @@ const AppPc = ()=>{
       </Popover>
       </Col>
       <Col span={2}>
-      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
+      <Popover content={<div style={{display:'flex'}}>
+        <div>
+          <Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p>
+        </div>
+        <div>
+          <Image src={cdnServer+'img/w.jpg'} width={200}></Image><p>{t('微信')}</p>
+        </div>
+      </div>}>
           <Button placement="bottom" style={{display:'flex'}}>
             <Image src={cdnServer+'reimu.gif'} preview={false} width={24}></Image>
             <div>{t('塞钱箱')}</div>
