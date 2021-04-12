@@ -67,7 +67,14 @@ class App1 extends React.Component {
       </Popover>
       </List.Item>
       <List.Item>
-      <Popover content={<><Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p></>}>
+      <Popover content={<div style={{display:'flex'}}>
+        <div style={{margin:20}}>
+          <Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p>
+        </div>
+        <div style={{margin:20}}>
+          <Image src={cdnServer+'img/w.jpg'} width={200}></Image><p>{t('微信')}</p>
+        </div>
+      </div>}>
         <Button placement="bottom">{t('捐助')}</Button>
       </Popover>
       </List.Item>

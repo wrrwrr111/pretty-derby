@@ -92,10 +92,10 @@ const AppPc = ()=>{
       </Col>
       <Col span={2}>
       <Popover content={<div style={{display:'flex'}}>
-        <div>
+        <div style={{margin:20}}>
           <Image src={cdnServer+'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p>
         </div>
-        <div>
+        <div style={{margin:20}}>
           <Image src={cdnServer+'img/w.jpg'} width={200}></Image><p>{t('微信')}</p>
         </div>
       </div>}>
