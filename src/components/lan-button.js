@@ -2,31 +2,52 @@ import React,{useState} from 'react';
 import {withRouter} from 'react-router-dom';
 
 import db from '../db.js'
-import {Button } from 'antd';
+import {Button,Popover } from 'antd';
 import t from './t.js';
+import Flag from 'rc-national-flag'
 // import t from './t.js'
 
 const ua = db.get('ua').value();
 
 const LanButton = (props)=>{
   let lan = db.get('lan').value()
-  const [langText,setLangText] = useState(lan==='zh'?'English':'中文')
-  const changeLan=()=>{
-    if(lan === 'zh'){
-      lan = 'en'
-      db.set('lan','en').write()
-      setLangText('中文')
-      t('','en')
-    }else{
-      lan = 'zh'
-      db.set('lan','zh').write()
-      setLangText('English')
-      t('','zh')
-    }
-    // props.history.push('/t')
+  const [code,setCode]= useState(lan||'cn')
+  console.log(code)
+  const changeToCn=()=>{
+    lan = 'cn'
+    db.set('lan','cn').write()
+    setCode('cn')
+    t('','cn')
     window.location.reload(true)
   }
-  return(<Button onClick={changeLan}>{langText}</Button>)
+  const changeToUs=()=>{
+    lan = 'us'
+    db.set('lan','us').write()
+    setCode('us')
+    t('','us')
+    window.location.reload(true)
+  }
+  const changeToJp=()=>{
+    lan = 'jp'
+    db.set('lan','jp').write()
+    setCode('jp')
+    t('','jp')
+    window.location.reload(true)
+  }
+  const flagStyle={
+    width:40,
+    height:30,
+    margin:4
+  }
+  return(
+  <Popover content={<div style={{display:'flex'}}>
+  <Flag onClick={changeToCn} code={'cn'} style={{...flagStyle}}></Flag>
+  <Flag onClick={changeToUs} code={'us'} style={{...flagStyle}}></Flag>
+  <Flag onClick={changeToJp} code={'jp'} style={{...flagStyle}}></Flag>
+  </div>}>
+      <Flag code={code} style={{...flagStyle}}></Flag>
+  </Popover>
+  )
 }
 
 export default withRouter(LanButton)

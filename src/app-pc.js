@@ -55,6 +55,7 @@ const AppPc = ()=>{
         {/* <Menu.Item key="5" className='menu-nurturing'><Link to='/nurturing'>{t('育成')}</Link></Menu.Item> */}
         <Menu.Item key="7" className='menu-nurturing2'><Link to='/nurturing2'>{t('育成')}</Link></Menu.Item>
         <Menu.Item key="6" className='menu-seed'><Link to='/seed'>{t('种马分享')}</Link></Menu.Item>
+        <LanButton style={{float:'right'}}></LanButton> 
       </Menu>
     </Header>
     <Content style={{ paddingTop:'64px'}} >
@@ -69,9 +70,6 @@ const AppPc = ()=>{
   <Footer style={{padding:'12px'}}>
     <Row gutter={[16,16]}>
       <Col span={2}>
-        <LanButton></LanButton>
-      </Col>
-      <Col span={2}>
         <Button className='reset-intro' placement="bottom" onClick={resetIntro}>{t('重置引导')}</Button>
       </Col>
       <Col span={3}>
@@ -81,7 +79,7 @@ const AppPc = ()=>{
           </Popover>
         </Popconfirm>
       </Col>
-      <Col span={11}></Col>
+      <Col span={13}></Col>
       <Col span={2}>
         <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
       </Col>

@@ -89,7 +89,7 @@ class Support extends React.Component{
     // console.log(skillList)
     this.setState({skillList:skillList})
   }
-  updateSupport = (checkedValues,skillList,eventIdList)=>{
+  updateSupport = (checkedValues,skillList,eventIdList=[])=>{
     let tempList = this.props.supportList
     if(checkedValues.length){
       tempList = tempList.filter(support=>{

@@ -18,7 +18,7 @@ import SeedMo from './pages-mo/seed.js'
 import SupportDetail from './components/support-detail.js'
 import PlayerDetail from './components/player-detail.js'
 import {BuffList} from './components/buff.js'
-
+import LanButton from './components/lan-button'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 class App1 extends React.Component {
   state = {
@@ -73,6 +73,9 @@ class App1 extends React.Component {
       </List.Item>
       <List.Item>
         <Button placement="bottom" onClick={this.reload}>{t('初始化育成')}</Button>
+      </List.Item>
+      <List.Item>
+        <LanButton></LanButton>
       </List.Item>
     </List>)
 
