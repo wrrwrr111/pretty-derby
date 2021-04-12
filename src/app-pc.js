@@ -52,8 +52,8 @@ const AppPc = ()=>{
         <Menu.Item key="2" className='menu-support'><Link to='/support'>{t('支援卡')}</Link></Menu.Item>
         <Menu.Item key="3" className='menu-skill'><Link to='/skill'>{t('技能')}</Link></Menu.Item>
         <Menu.Item key="4" className='menu-race'><Link to='/race'>{t('比赛')}</Link></Menu.Item>
-        <Menu.Item key="5" className='menu-nurturing'><Link to='/nurturing'>{t('育成')}</Link></Menu.Item>
-        <Menu.Item key="7" className='menu-nurturing2'><Link to='/nurturing2'>{t('育成new')}</Link></Menu.Item>
+        {/* <Menu.Item key="5" className='menu-nurturing'><Link to='/nurturing'>{t('育成')}</Link></Menu.Item> */}
+        <Menu.Item key="7" className='menu-nurturing2'><Link to='/nurturing2'>{t('育成')}</Link></Menu.Item>
         <Menu.Item key="6" className='menu-seed'><Link to='/seed'>{t('种马分享')}</Link></Menu.Item>
       </Menu>
     </Header>
@@ -61,7 +61,7 @@ const AppPc = ()=>{
       <Route exact path="/" component={Player}/>
       <Route path="/support" component={Support}/>
       <Route path="/skill" component={Skill}/>
-      <Route path="/nurturing" component={Nurturing}/>
+      <Route path="/nurturing" component={Nurturing2}/>
       <Route path="/nurturing2" component={Nurturing2}/>
       <Route path="/seed" component={Seed}/>
       <Route path="/race" component={Race}/>

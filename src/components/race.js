@@ -55,6 +55,10 @@ const RaceSchedule = (props)=>{
   </Row>)
 }
 
+// 传统：皐月賞、日本ダービー東京優駿、菊花賞
+// 母马：桜花賞、オークス、秋華賞
+// 春三是 大阪杯 天皇賞春 宝塚記念
+// 秋：天皇賞秋、ジャパンカップ、有馬記念
 const RaceTimeline = React.memo((props)=>{
   const str  = []
 
@@ -102,7 +106,7 @@ const RaceTimeline = React.memo((props)=>{
       //普通
     }
   }
-  return(<Timeline mode='left'>
+  return(<Timeline mode='left' style={{paddingTop:8}}>
     {str}
   </Timeline>)
 })

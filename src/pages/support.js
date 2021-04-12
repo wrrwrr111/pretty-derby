@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip} from 'antd';
+import { Divider,Row,Col,Image,Modal,Button,Checkbox,Tooltip,Input} from 'antd';
 
 import db from '../db.js'
 import t from '../components/t.js'
@@ -8,6 +8,7 @@ import t from '../components/t.js'
 import SupportDetail from '../components/support-detail.js'
 import {SkillCheckbox, SkillList} from '../components/skill.js'
 const CheckboxGroup = Checkbox.Group
+const Search = Input.Search
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
@@ -88,7 +89,7 @@ class Support extends React.Component{
     // console.log(skillList)
     this.setState({skillList:skillList})
   }
-  updateSupport = (checkedValues,skillList)=>{
+  updateSupport = (checkedValues,skillList,eventIdList)=>{
     let tempList = this.props.supportList
     if(checkedValues.length){
       tempList = tempList.filter(support=>{
@@ -114,9 +115,37 @@ class Support extends React.Component{
         return flag
       })
     }
-
+    if(eventIdList.length){
+      tempList = tempList.filter(support=>{
+        let flag = 0;
+        support.eventList.forEach(eventId=>{
+          if(eventIdList.indexOf(eventId)!==-1){
+            return flag = 1;
+          }
+        })
+        return flag
+      })
+    }
+    console.log(eventIdList,tempList)
     this.setState({list:tempList})
   }
+
+  onSearch = (searchText) => {
+    const allEventList = db.get('events').value();
+    const eventIdList = allEventList.filter(event=>{
+      let jsonEvent = JSON.stringify(event)
+      if(jsonEvent.indexOf(searchText)!==-1){
+        return true
+      }else{
+        return false
+      }
+    }).reduce((list,event)=>{
+      list.push(event.id)
+      return list
+    },[])
+    console.log(eventIdList.length)
+    this.updateSupport(this.state.checkedList,this.state.skillList,eventIdList)
+  };
 
   render(){
     const headerStyle = {
@@ -149,6 +178,8 @@ class Support extends React.Component{
                   <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
                   <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
                   {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
+                  <Search placeholder={t("输入关键词")} enterButton={t("搜索")} size="middle"
+                    style={{ width: '100%' }} onSearch={this.onSearch}/>
                   <Divider style={{margin:4}}>{t('技能')}</Divider>
                   <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate}
                   checkOnly={true} needId={true}></SkillCheckbox>

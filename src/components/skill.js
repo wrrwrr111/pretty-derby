@@ -6,7 +6,7 @@ import t from './t.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const ua = db.get('ua').value();
-const { Search } = Input
+const Search = Input.Search
 
 const SkillList = (props)=>{
   const skillList = props.skillList
@@ -248,13 +248,8 @@ const SkillCheckbox = (props)=>{
           </Tooltip>
       </div>
       <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('技能搜索')}</span>
-      <Search
-      placeholder={t("输入技能名称")}
-      enterButton={t("搜索")}
-      size="middle"
-      style={{ width: '100%' }}
-      onSearch={onSearch}
-      />
+      <Search placeholder={t("输入技能名称")} enterButton={t("搜索")} size="middle"
+        style={{ width: '100%' }} onSearch={onSearch}/>
       <Divider/>
       <Checkbox.Group options={checkOptions1} value={checkedList1} onChange={onChange1} />
       <Divider/>
