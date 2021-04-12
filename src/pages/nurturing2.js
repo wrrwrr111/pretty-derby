@@ -230,7 +230,8 @@ const Nurturing = () =>{
     height:'calc(100% - 22px)'
   }
   return(<>
-    <GridLayout cols={32} layout={layout} draggableHandle='.panel-heading' 
+    <GridLayout cols={32} layout={layout} 
+    draggableCancel='.panel-title' draggableHandle='.panel-heading' 
       rowHeight={dynamicRowHeight} width={useViewport().width-10}
       onLayoutChange={onLayoutChange}>
 
@@ -301,7 +302,7 @@ const Nurturing = () =>{
             return(
             <div key={`s${index}`} style={{...panelStyle}}>
               <div className='panel-heading' style={{...headStyle}}>
-                <span onClick={()=>showSupport(index)} style={{cursor:'pointer'}}>{t('选择支援卡')}</span>
+                <span className='panel-title' onClick={()=>showSupport(index)} style={{cursor:'pointer'}}>{t('选择支援卡')}</span>
               </div>
               <ScrollBars  autoHide={true} style={{...pBodyStyle}}>
 
