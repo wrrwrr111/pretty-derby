@@ -24,12 +24,12 @@ db.set('updateTime',jsonDB.updateTime).write()
 db.set('races',jsonDB.races).write()
 db.set('buffs',jsonDB.buffs).write()
 db.set('effects',jsonDB.effects).write()
-db.set('zh',jsonDB.zh).write()
-db.set('en',jsonDB.en).write()
-// db.set('lan','en').write()
+
+db.get('lan').value()==='zh'&&db.set('lan','cn').write()
+db.get('lan').value()==='en'&&db.set('lan','us').write()
+db.get('lan').value()||db.set('lan','cn').write()
 //重新加载
 
-db.has('lan').value()||db.set('lan','zh').write()
 db.get('selected').value()||db.set('selected',{
   supports:{0:{},1:{},2:{},3:{},4:{},5:{}},
   player:{},
