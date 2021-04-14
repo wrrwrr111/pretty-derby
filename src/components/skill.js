@@ -1,12 +1,36 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import db from '../db.js'
 
 import { Row,Col,Popover,Button,Image,Checkbox,Divider,Input,Tooltip,Switch } from 'antd';
 import t from './t.js'
+
+const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const ua = db.get('ua').value();
-const Search = Input.Search
+const allSkillList = db.get('skills').orderBy('db_id').value()
+
+const options = {
+  distance_type: [
+    { label:'短距', value:'1' },
+    { label:'英里', value:'2' },
+    { label:'中距', value:'3' },
+    { label:'长距', value:'4' },
+  ],
+  running_style: [
+    { label:'逃', value:'1' },
+    { label:'先', value:'2' },
+    { label:'差', value:'3' },
+    { label:'追', value:'4' },
+    { label:'通用', value:'-1' },
+  ],
+  phase_random: [
+    { label:'序盘', value:'0' },
+    { label:'中盘', value:'1' },
+    { label:'终盘', value:'2' },
+    { label:'最后冲刺', value:'3' },
+  ]
+}
 
 const SkillList = (props)=>{
   const skillList = props.skillList
@@ -83,12 +107,19 @@ const SkillButton = (props)=>{
     )
 }
 
-const SkillCheckbox = (props)=>{
-  const allSkillList = db.get('skills').orderBy('db_id').value()
+const SkillCheckboxGroup = React.memo((props) => {
+  const { options, name, value } = props;
+  const onChange = (checkedValues) => {
+    props.onChange(name, checkedValues);
+  }
 
-  const [checkedList1, setCheckedList1] = useState([]);
+  return <Checkbox.Group options={options} value={value} onChange={onChange} />
+});
+
+const SkillCheckbox = React.memo((props)=>{
   const [checkedList2, setCheckedList2] = useState([]);
   const [checkedList3, setCheckedList3] = useState([]);
+  const [checkboxGroupValues, setCheckedboxGroupValues] = useState({});
   // init isOwn
   localStorage.getItem('isOwn')===null&&localStorage.setItem('isOwn',0)
   const [isOwn,setIsOwn] = useState(parseInt(localStorage.getItem('isOwn')))
@@ -97,17 +128,6 @@ const SkillCheckbox = (props)=>{
     let support = db.get('supports').find({id:supportId}).value()
     return list.concat(support.skillList)
   },[]))
-  const checkOptions1 = [
-    {label:'短距',value:'＜短距離＞'},
-    {label:'英里',value:'＜マイル＞'},
-    {label:'中距',value:'＜中距離＞'},
-    {label:'长距',value:'＜長距離＞'},
-    {label:'逃',value:'＜作戦・逃げ＞'},
-    {label:'先',value:'＜作戦・先行＞'},
-    {label:'差',value:'＜作戦・差し＞'},
-    {label:'追',value:'＜作戦・追込＞'},
-    {label:'通用',value:'normal'},
-  ]
   const checkOptions2 =[
     {label:'速度被动(绿)',value:'10011'},
     {label:'耐力被动(绿)',value:'10021'},
@@ -133,36 +153,38 @@ const SkillCheckbox = (props)=>{
     {label:'稀有',value:'レア'},
     {label:'独特',value:'固有'}
   ]
-  const onChange1=(checkedValues)=>{
-    setCheckedList1(checkedValues)
-    updateSkillList(checkedValues,checkedList2,checkedList3,isOwn)
-  }
   const onChange2 = (checkedValues)=>{
     setCheckedList2(checkedValues)
-    updateSkillList(checkedList1,checkedValues,checkedList3,isOwn)
+    updateSkillList(filteredSkills,checkedValues,checkedList3,isOwn)
   }
   const onChange3 = (checkedValues)=>{
     setCheckedList3(checkedValues)
-    updateSkillList(checkedList1,checkedList2,checkedValues,isOwn)
+    updateSkillList(filteredSkills,checkedList2,checkedValues,isOwn)
   }
+  const filteredSkills = React.useMemo(() => {
+    return Object.entries(checkboxGroupValues)
+                 .reduce((l, [key, values]) => 
+                    values.length > 0 ? (values.includes('-1') ? l.filter(skill => !skill.condition.includes(`${key}==`))
+                                                              : l.filter(skill => {
+                                                                  switch(key) {
+                                                                    default:
+                                                                      return values.map(value => `${key}==${value}`)
+                                                                                   .some(phrase => skill.condition.includes(phrase));
+                                                                  }
+                                                                }))
+                                      : l,
+                    allSkillList)
+  }, [checkboxGroupValues, allSkillList])
+  useEffect(() => {
+    updateSkillList(filteredSkills,checkedList2,checkedList3,isOwn)
+  }, [filteredSkills]);
 
-  const updateSkillList = (check1,check2,check3,isOwn)=>{
-    let tempSkillList = allSkillList
-    if(check1.length){
-      tempSkillList = tempSkillList.filter(skill=>{
-        let flag = 0;
-        check1.forEach(value=>{
-          if(skill.describe){
-            if(value==='normal' && skill.describe.indexOf('＜') === -1 && skill.describe.indexOf('＞') === -1){
-              flag = 1
-            }else if(skill.describe.indexOf(value)!==-1){
-              flag = 1
-            }
-          }
-        })
-        return flag
-      })
-    }
+  const onCheckboxGroupsChange = React.useCallback((groupName, checkedValues) => {
+    setCheckedboxGroupValues({ ...checkboxGroupValues, ...{ [groupName]: checkedValues } });
+  }, [checkboxGroupValues]);
+
+  const updateSkillList = (tempSkillList,check2,check3,isOwn)=>{
+    const check1 = Object.values(checkboxGroupValues).flat();
     if(check2.length){
       tempSkillList = tempSkillList.filter(skill=>{
         let flag = 0;
@@ -207,7 +229,7 @@ const SkillCheckbox = (props)=>{
     props.onUpdate(tempSkillList)
   }
   const resetCheckbox=()=>{
-    setCheckedList1([])
+    setCheckedboxGroupValues({})
     setCheckedList2([])
     setCheckedList3([])
     props.onUpdate(allSkillList)
@@ -217,19 +239,19 @@ const SkillCheckbox = (props)=>{
     localStorage.setItem('isOwn',curValue)
     setIsOwn(curValue)
     // console.log(curValue)
-    updateSkillList(checkedList1,checkedList2,checkedList3,curValue)
+    updateSkillList(filteredSkills,checkedList2,checkedList3,curValue)
   }
   const onSearch = (searchText) => {
     const fullSkillList = allSkillList;
     const tempSkillList = fullSkillList.filter(item => (item.name).indexOf(searchText) > -1);
-    setCheckedList1([])
+    setCheckedboxGroupValues({})
     setCheckedList2([])
     setCheckedList3([])
     props.onUpdate(tempSkillList)
   };
   return(<>{props.checkOnly?
     <>
-     <Checkbox.Group options={checkOptions1} value={checkedList1} onChange={onChange1} />
+      { Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />) }
       <Divider/>
       <Checkbox.Group options={checkOptions2} value={checkedList2} onChange={onChange2} />
       <Divider/>
@@ -251,7 +273,7 @@ const SkillCheckbox = (props)=>{
       <Search placeholder={t("输入技能名称")} enterButton={t("搜索")} size="middle"
         style={{ width: '100%' }} onSearch={onSearch}/>
       <Divider/>
-      <Checkbox.Group options={checkOptions1} value={checkedList1} onChange={onChange1} />
+      { Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />) }
       <Divider/>
       <Checkbox.Group options={checkOptions2} value={checkedList2} onChange={onChange2} />
       <Divider/>
@@ -259,5 +281,6 @@ const SkillCheckbox = (props)=>{
     </div>}
     </>
   )
-}
+})
+
 export {SkillList,SkillButton,SkillCheckbox}
