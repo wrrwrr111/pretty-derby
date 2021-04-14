@@ -101,6 +101,7 @@ const SkillButton = (props)=>{
         ${skill.ability.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
       <p>{`${t('持续时间')}： ${skill.ability_time/10000}s*${t('赛道长度')}/1000`}</p>
       <p>{`${t('冷却时间')}： ${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
+      <p>{`${t('技能价格')}： ${skill.need_skill_point} Pt`}</p>
       {/* <p>技能效果 = (技能数值 / 100)%</p> */}
       {/* <p>持续时间 = 基础持续时间 * 赛道长度 / 1000</p> */}
       {/* <p>冷却时间 = 基础冷却时间 * 赛道长度 / 1000</p> */}
