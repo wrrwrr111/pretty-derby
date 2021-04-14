@@ -28,8 +28,18 @@ const options = {
     { label:'序盘', value:'0' },
     { label:'中盘', value:'1' },
     { label:'终盘', value:'2' },
-    { label:'最后冲刺', value:'3' },
-  ]
+    { label:'冲刺', value:'3' },
+  ],
+  corner_random:[
+    { label:'通常弯道', value:'1' },
+  ],
+  straight_random:[
+    { label:'通常直线', value:'1' },
+  ],
+  is_finalcorner:[
+    { label:'最终直线/弯道', value:'1' },
+  ],
+  // is_finalcorner==1&corner==0
 }
 
 const SkillList = (props)=>{
@@ -163,17 +173,17 @@ const SkillCheckbox = React.memo((props)=>{
   }
   const filteredSkills = React.useMemo(() => {
     return Object.entries(checkboxGroupValues)
-                 .reduce((l, [key, values]) => 
-                    values.length > 0 ? (values.includes('-1') ? l.filter(skill => !skill.condition.includes(`${key}==`))
-                                                              : l.filter(skill => {
-                                                                  switch(key) {
-                                                                    default:
-                                                                      return values.map(value => `${key}==${value}`)
-                                                                                   .some(phrase => skill.condition.includes(phrase));
-                                                                  }
-                                                                }))
-                                      : l,
-                    allSkillList)
+      .reduce((l, [key, values]) =>
+        values.length > 0 ? (values.includes('-1') ? l.filter(skill => !skill.condition.includes(`${key}==`))
+          : l.filter(skill => {
+            switch(key) {
+              default:
+                return values.map(value => `${key}==${value}`)
+                              .some(phrase => skill.condition.includes(phrase));
+            }
+          }))
+        : l,
+      allSkillList)
   }, [checkboxGroupValues, allSkillList])
   useEffect(() => {
     updateSkillList(filteredSkills,checkedList2,checkedList3,isOwn)
