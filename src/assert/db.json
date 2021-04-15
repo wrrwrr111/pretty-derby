@@ -4235,6 +4235,7 @@
       "id": "wYE6hDaJw",
       "name": "フィーユ・エクレール",
       "charaName": "カレンチャン",
+      "rare": "3",
       "grass": "A",
       "dirt": "F",
       "shortDistance": "A",
@@ -24386,7 +24387,7 @@
       "gwId": "269701",
       "name": "ふるさと直送エール！",
       "charaName": "ユキノビジン",
-      "rare": "先行",
+      "rare": "SSR",
       "imgUrl": "img/support_card_with_icon/support_thumb_30031.png",
       "id": "V8e5cf5Jv",
       "skillList": [
@@ -24577,7 +24578,7 @@
       "gwId": "269700",
       "name": "あなたにささげる",
       "charaName": "ニシノフラワー",
-      "rare": "-",
+      "rare": "SR",
       "imgUrl": "img/support_card_with_icon/support_thumb_20027.png",
       "id": "nS_3tLw2N",
       "skillList": [
@@ -30827,7 +30828,7 @@
     },
     {
       "name": "#LookatCurren",
-      "imgUrl": "img/skill_icons/undefined.png",
+      "imgUrl": "img/skill_icons/20013.png",
       "rare": "固有",
       "describe": "レース中間付近で好位置にいる時に追い抜くと勢いづき進出を開始する",
       "id": "tlhgSmKVG",
@@ -30855,7 +30856,7 @@
     },
     {
       "name": "悩殺術",
-      "imgUrl": "img/skill_icons/undefined.png",
+      "imgUrl": "img/skill_icons/30012.png",
       "rare": "レア",
       "describe": "レース序盤に前の方にいると後方のウマ娘が萎縮する＜短距離＞",
       "id": "WsHTGOqbxo",
