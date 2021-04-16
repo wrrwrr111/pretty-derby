@@ -230,8 +230,8 @@ const Nurturing = () =>{
     height:'calc(100% - 22px)'
   }
   return(<>
-    <GridLayout cols={32} layout={layout} 
-    draggableCancel='.panel-title' draggableHandle='.panel-heading' 
+    <GridLayout cols={32} layout={layout}
+    draggableCancel='.panel-title' draggableHandle='.panel-heading'
       rowHeight={dynamicRowHeight} width={useViewport().width-10}
       onLayoutChange={onLayoutChange}>
 
@@ -315,9 +315,9 @@ const Nurturing = () =>{
 
               </div>
                     {/* <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList> */}
-                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>培训技能</Divider>
+                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("培训技能")}</Divider>
                     <SkillList skillList={supports[index].possessionSkill}></SkillList>
-                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>事件技能</Divider>
+                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("事件技能")}</Divider>
                     <SkillList skillList={supports[index].trainingEventSkill}></SkillList>
               </ScrollBars>
             </div>
