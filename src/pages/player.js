@@ -62,7 +62,7 @@ class Player extends React.Component{
           {
             ['3','2','1'].map(rare=>(
               <Row gutter={[16,16]} key={rare}>
-                <Divider>{rare}{t('星')}</Divider>
+                <Divider>{rare} {t('星')}</Divider>
                 {this.state.list.filter(item=>item.rare===rare).map(player=>
                   <Col xxl={2} lg={3} sm={6} xs={6} key={player.id}>
                     <PlayerCard data={player} onSelect={this.props.onSelect}></PlayerCard>

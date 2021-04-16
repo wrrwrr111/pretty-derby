@@ -12,32 +12,32 @@ const allSkillList = db.get('skills').orderBy('db_id').value()
 
 const options = {
   distance_type: [
-    { label:'短距', value:'1' },
-    { label:'英里', value:'2' },
-    { label:'中距', value:'3' },
-    { label:'长距', value:'4' },
+    { label:t('短距離'), value:'1' },
+    { label:t('マイル'), value:'2' },
+    { label:t('中距離'), value:'3' },
+    { label:t('長距離'), value:'4' },
   ],
   running_style: [
-    { label:'逃', value:'1' },
-    { label:'先', value:'2' },
-    { label:'差', value:'3' },
-    { label:'追', value:'4' },
-    { label:'通用', value:'-1' },
+    { label:t('逃げ'), value:'1' },
+    { label:t('先行'), value:'2' },
+    { label:t('差し'), value:'3' },
+    { label:t('追込'), value:'4' },
+    { label:t('通用'), value:'-1' },
   ],
   phase_random: [
-    { label:'序盘', value:'0' },
-    { label:'中盘', value:'1' },
-    { label:'终盘', value:'2' },
-    { label:'冲刺', value:'3' },
+    { label:t('序盤'), value:'0' },
+    { label:t('中盤'), value:'1' },
+    { label:t('終盤'), value:'2' },
+    { label:t('冲刺'), value:'3' },
   ],
   corner_random:[
-    { label:'通常弯道', value:'1' },
+    { label:t('コーナー'), value:'1' },
   ],
   straight_random:[
-    { label:'通常直线', value:'1' },
+    { label:t('直線'), value:'1' },
   ],
   is_finalcorner:[
-    { label:'最终直线/弯道', value:'1' },
+    { label:t('最終直線/コーナー'), value:'1' },
   ],
   // is_finalcorner==1&corner==0
 }
@@ -160,9 +160,9 @@ const SkillCheckbox = React.memo((props)=>{
     {label:'视野(红)',value:'30071'}
   ]
   const checkOptions3 = [
-    {label:'普通',value:'ノーマル'},
-    {label:'稀有',value:'レア'},
-    {label:'独特',value:'固有'}
+    {label:t('ノーマル'),value:'ノーマル'},
+    {label:t('レア'),value:'レア'},
+    {label:t('固有'),value:'固有'}
   ]
   const onChange2 = (checkedValues)=>{
     setCheckedList2(checkedValues)
@@ -281,7 +281,7 @@ const SkillCheckbox = React.memo((props)=>{
           </Tooltip>
       </div>
       <span style={{ margin: '0 10px 0 0',lineHeight: '32px'}}>{t('技能搜索')}</span>
-      <Search placeholder={t("输入技能名称")} enterButton={t("搜索")} size="middle"
+      <Search placeholder={t("输入关键词")} enterButton={t("搜索")} size="middle"
         style={{ width: '100%' }} onSearch={onSearch}/>
       <Divider/>
       { Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />) }
