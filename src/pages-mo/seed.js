@@ -270,12 +270,12 @@ const Seed = ()=>{
             <p>{`${t(blueLabels[data['blue-0']])}: ${data['blueLevel-0']}`}</p>
             <p>{`${t(redLabels[data['red-0']])}: ${data['redLevel-0']}`}</p>
             {Object.keys(blueLabels).map(key=>
-            data[key]?<p key={key}>{`{t(总计)} ${t(blueLabels[key])}: ${data[key]}`}</p>:null
+            data[key]?<p key={key}>{`${t('总计')} ${t(blueLabels[key])}: ${data[key]}`}</p>:null
             )}
             {Object.keys(redLabels).map(key=>
-            data[key]?<p key={key}>{`{t('总计')} ${t(redLabels[key])}: ${data[key]}`}</p>:null
+            data[key]?<p key={key}>{`${t('总计')} ${t(redLabels[key])}: ${data[key]}`}</p>:null
             )}
-            <p>{`{t('突破等级')}: ${data['supportLevel']||0}`}</p>
+            <p>{`${t('突破等级')}: ${data['supportLevel']||0}`}</p>
           </Flex.Item>
         </Flex>
       </Card>
