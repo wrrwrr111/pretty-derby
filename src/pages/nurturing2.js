@@ -286,7 +286,7 @@ const Nurturing = () =>{
       <div key='d' style={{...panelStyle}}>
         <div className='panel-heading' style={{...headStyle}}>{t('技能')}</div>
         <ScrollBars autoHide={true} style={{...pBodyStyle}}>
-          <SkillList skillList={player.skillList||[]}></SkillList>
+          <SkillList skillList={player.skillList||[]} isNur={true}></SkillList>
         </ScrollBars>
       </div>
       <div key='e' style={{...panelStyle}}>
@@ -299,31 +299,26 @@ const Nurturing = () =>{
         {[0,1,2,3,4,5].map(index=>{
           let support = supports[index];
           if(support.id){
-            return(
+            return (
             <div key={`s${index}`} style={{...panelStyle}}>
               <div className='panel-heading' style={{...headStyle}}>
                 <span className='panel-title' onClick={()=>showSupport(index)} style={{cursor:'pointer'}}>{t('选择支援卡')}</span>
               </div>
               <ScrollBars  autoHide={true} style={{...pBodyStyle}}>
-
-              <div style={{display:'flex'}}>
-                <img style={{width:'26%',height:'39%'}} src={cdnServer+support.imgUrl} alt={support.imgUrl}></img>
-                <div style={{flex:'1 1 auto'}}>
-                  {/* <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>事件</Divider> */}
-                <EventList eventList={supports[index].eventList} pid={supports[index].id} ></EventList>
+                <div style={{display:'flex'}}>
+                  <img style={{width:'26%',height:'39%'}} src={cdnServer+support.imgUrl} alt={support.imgUrl}></img>
+                  <div style={{flex:'1 1 auto'}}>
+                    <EventList eventList={supports[index].eventList} pid={supports[index].id} ></EventList>
+                  </div>
                 </div>
-
-              </div>
-                    {/* <SkillList skillList={[...new Set(supports[index].skillList)]} ></SkillList> */}
-                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("培训技能")}</Divider>
-                    <SkillList skillList={supports[index].possessionSkill}></SkillList>
-                    <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("事件技能")}</Divider>
-                    <SkillList skillList={supports[index].trainingEventSkill}></SkillList>
+                <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("培训技能")}</Divider>
+                <SkillList skillList={supports[index].possessionSkill} isNur={true}></SkillList>
+                <Divider style={{margin:'4px 0',background:'rgba(255,255,255,0.6)'}}>{t("事件技能")}</Divider>
+                <SkillList skillList={supports[index].trainingEventSkill} isNur={true}></SkillList>
               </ScrollBars>
-            </div>
-            )
+            </div>)
           }else{
-            return(
+            return (
               <div key={`s${index}`} style={{...panelStyle}}>
                 <Button onClick={()=>showSupport(index)}>{t('选择支援卡')}</Button>
               </div>

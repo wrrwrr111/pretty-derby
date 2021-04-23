@@ -68,7 +68,7 @@ const SkillList = (props)=>{
     <Row gutter={0}>
       {skillList.map((skillId,index)=>
         <Col span={12} key={index}>
-          <SkillButton id={skillId} usedInList={true}>
+          <SkillButton id={skillId} usedInList={true} isNur={props.isNur||false}>
         </SkillButton>
       </Col>)}
     </Row>
@@ -79,6 +79,7 @@ const allPlayerList = db.get('players').value()
 
 const SkillDetail = (props)=>{
   const skill = props.skill||db.get('skills').find({id:props.match.params.id}).value()
+  const isNur = props.isNur!==undefined?props.isNur:parseInt(props.match.params.nur)
   const supportList = allSupportList.filter(support=>{
     let flag = 0;
     support.skillList.forEach(id=>{
@@ -110,22 +111,24 @@ const SkillDetail = (props)=>{
   <p>{`${t('冷却时间')}:\xa0\xa0${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
   <p>{`${t('技能价格')}:\xa0\xa0${skill.need_skill_point}\xa0Pt`}</p>
   <p>{`${t('评分')}:\xa0${skill.grade_value}`}</p>
-  <Divider>{t('支援卡')}</Divider>
-  <Row>
-  {supportList.sort((a,b)=>b.rarity-a.rarity).map(support=>
-      <Col span={4} key={support.id}>
-        <SupportCard data={support}></SupportCard>
-      </Col>)
-    }
-  </Row>
-  <Divider>{t('角色')}</Divider>
-  <Row>
-  {playerList.sort((a,b)=>b.rarity-a.rarity).map(player=>
-      <Col span={4} key={player.id}>
-        <PlayerCard data={player}></PlayerCard>
-      </Col>)
-    }
-  </Row>
+  {!isNur&&<>
+    <Divider>{t('支援卡')}</Divider>
+    <Row>
+    {supportList.sort((a,b)=>b.rarity-a.rarity).map(support=>
+        <Col span={4} key={support.id}>
+          <SupportCard data={support}></SupportCard>
+        </Col>)
+      }
+    </Row>
+    <Divider>{t('角色')}</Divider>
+    <Row>
+    {playerList.sort((a,b)=>b.rarity-a.rarity).map(player=>
+        <Col span={4} key={player.id}>
+          <PlayerCard data={player}></PlayerCard>
+        </Col>)
+      }
+    </Row>
+  </>}
   </div>
 }
 const SkillButton = (props)=>{
@@ -153,7 +156,7 @@ const SkillButton = (props)=>{
   }
 
   return <Popover visible={ua==='mo'?false:undefined}
-    content={<SkillDetail skill={skill}></SkillDetail>}>
+    content={<SkillDetail skill={skill} isNur={props.isNur||false}></SkillDetail>}>
     <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity}
     style={props.usedInList?{...inListStyleOverride}:{}} onClick={()=>toSkillDetail(skill.id)}>
       <div style={props.usedInList?
