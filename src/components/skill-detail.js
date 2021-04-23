@@ -202,14 +202,14 @@ const SkillCheckbox = React.memo((props)=>{
     // {label:'20031',value:'20031'},
     {label:'加速度提高(黄)',value:'20041'},
     {label:'切换跑道(黄)',value:'20051'},
-    {label:'起步(黄)',value:'20061'},
+    {label:'起步时间(黄)',value:'20061'},
     // {label:'20071',value:'20071'},
     // {label:'20081',value:'20081'},
-    {label:'视野(黄)',value:'20091'},
-    {label:'降速(红)',value:'30011'},
-    {label:'安定(红)',value:'30041'},
-    {label:'疲劳(红)',value:'30051'},
-    {label:'视野(红)',value:'30071'}
+    {label:'视野提高(黄)',value:'20091'},
+    {label:'速度降低(红)',value:'30011'},
+    {label:'无法冷静(红)',value:'30041'},
+    {label:'耐力降低(红)',value:'30051'},
+    {label:'视野降低(红)',value:'30071'}
   ]
   const checkOptions2 = [
     {label:t('ノーマル'),value:'ノーマル'},
