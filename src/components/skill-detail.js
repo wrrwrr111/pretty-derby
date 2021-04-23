@@ -99,7 +99,7 @@ const SkillDetail = (props)=>{
     return flag
   })
 
-  return <div style={{maxWidth:600,textAlign:'left',overflowWrap:'break-all'}}>
+  return <div style={{maxWidth:600,textAlign:'left',overflowWrap:'break-word'}}>
   <Image src={cdnServer+skill.imgUrl} preview={false} width={52}></Image>
   <p>{t('技能名称')+ ':  ' +t(skill.name)}</p>
   <p>{t('技能描述')+ ':  ' +skill.describe}</p>
