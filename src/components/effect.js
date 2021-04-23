@@ -102,7 +102,19 @@ const EffectTable = (props)=>{
   return(<Table columns={columns} dataSource={props.effects} rowKey='type' pagination={false}></Table>)
 }
 
-
+const getEffectMark = (maxLevel) =>{
+  let ok = {
+    1:'lv1',5:'lv5',10:'lv10',15:'lv15',20:'lv20',
+    25:'lv25',30:'lv30',35:'lv35',40:'lv40'
+  }
+  if(maxLevel>=45){
+    ok[45] = 'lv45'
+  }
+  if(maxLevel===50){
+    ok[50] = 'lv50'
+  }
+  return ok
+}
 
 
 
@@ -269,8 +281,7 @@ class TestEffectTable extends React.Component{
             max={this.maxLevel}
             value={this.state.selectingLevel}
             onChange={(value)=>{this.setState({selectingLevel:value})}}
-            marks={{1:'lv1',5:'lv5',10:'lv10',15:'lv15',20:'lv20',
-                    25:'lv25',30:'lv30',35:'lv35',40:'lv40',45:'lv45',50:'lv50'}}
+            marks={getEffectMark(this.maxLevel)}
           />
         </div>
         <Row>
