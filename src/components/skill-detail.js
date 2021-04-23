@@ -1,8 +1,10 @@
 import React,{useEffect, useState} from 'react';
+import {withRouter,useHistory,useLocation } from 'react-router-dom';
 import db from '../db.js'
-
 import { Row,Col,Popover,Button,Image,Checkbox,Divider,Input,Tooltip,Switch } from 'antd';
 import t from './t.js'
+import {SupportCard} from './support-detail.js'
+import {PlayerCard} from './player-detail.js'
 
 const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -41,20 +43,6 @@ const options = {
   ],
   // is_finalcorner==1&corner==0
 }
-
-const SkillList = (props)=>{
-  const skillList = props.skillList
-
-  return (
-    <Row gutter={0}>
-      {skillList.map((skillId,index)=>
-        <Col span={12} key={index}>
-          <SkillButton id={skillId} usedInList={true}>
-        </SkillButton>
-      </Col>)}
-    </Row>
-  )
-}
 const skillType={
   1:'速度属性',
   2:'耐力属性',
@@ -72,8 +60,88 @@ const skillType={
   28:'走位速度',
   31:'加速度',
 }
+
+const SkillList = (props)=>{
+  const skillList = props.skillList
+
+  return (
+    <Row gutter={0}>
+      {skillList.map((skillId,index)=>
+        <Col span={12} key={index}>
+          <SkillButton id={skillId} usedInList={true}>
+        </SkillButton>
+      </Col>)}
+    </Row>
+  )
+}
+const allSupportList = db.get('supports').value()
+const allPlayerList = db.get('players').value()
+
+const SkillDetail = (props)=>{
+  const skill = props.skill||db.get('skills').find({id:props.match.params.id}).value()
+  const supportList = allSupportList.filter(support=>{
+    let flag = 0;
+    support.skillList.forEach(id=>{
+      if (id===skill.id){
+        flag = 1
+      }
+    })
+    return flag
+  })
+  const playerList = allPlayerList.filter(player=>{
+    let flag = 0;
+    player.skillList.forEach(id=>{
+      if (id===skill.id){
+        flag = 1
+      }
+    })
+    return flag
+  })
+
+  return <div style={{maxWidth:600,textAlign:'left'}}>
+  <Image src={cdnServer+skill.imgUrl} preview={false} width={52}></Image>
+  <p>{t('技能名称')+ ':  ' +t(skill.name)}</p>
+  <p>{t('技能描述')+ '： ' +skill.describe}</p>
+  <p>{t('技能描述')+ '： ' +t(skill.describe)}</p>
+  <p>{t('触发条件')+ '： ' +skill.condition}</p>
+  <p>{t('触发条件')+ '： ' +t(skill.condition)}</p>
+  {/* <p>{t('技能效果')+ '： ' +skill.ability_value/10000}</p> */}
+  <p>{`${t('技能效果')}：\xa0
+    ${skill.ability.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
+  <p>{`${t('持续时间')}： ${skill.ability_time/10000}s*${t('赛道长度')}/1000`}</p>
+  <p>{`${t('冷却时间')}： ${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
+  <p>{`${t('技能价格')}： ${skill.need_skill_point} Pt`}</p>
+  {/* <p>技能效果 = (技能数值 / 100)%</p> */}
+  {/* <p>持续时间 = 基础持续时间 * 赛道长度 / 1000</p> */}
+  {/* <p>冷却时间 = 基础冷却时间 * 赛道长度 / 1000</p> */}
+  <Divider>{t('支援卡')}</Divider>
+  <Row>
+  {supportList.sort((a,b)=>b.rarity-a.rarity).map(support=>
+      <Col span={4} key={support.id}>
+        <SupportCard data={support}></SupportCard>
+      </Col>)
+    }
+  </Row>
+  <Divider>{t('角色')}</Divider>
+  <Row>
+  {playerList.sort((a,b)=>b.rarity-a.rarity).map(player=>
+      <Col span={4} key={player.id}>
+        <PlayerCard data={player}></PlayerCard>
+      </Col>)
+    }
+  </Row>
+  </div>
+}
 const SkillButton = (props)=>{
+  const history = useHistory();
   const skill = props.skill || db.get('skills').find({id:props.id}).value()
+
+  const toSkillDetail = (id)=>{
+    if(ua==='mo'){
+      history.push(`/skill-detail/${id}`)
+    }
+  }
+
   const inListStyleOverride = {
     borderRadius:'8px',
     color:'#303030',
@@ -87,35 +155,18 @@ const SkillButton = (props)=>{
     textOverflow: 'ellipsis',
     textAlign:'justify'
   }
-    return(
-      <Popover
-        trigger={ua==='mo'?'click':'hover'}
-        content={<>
-      <p>{t('技能名称')+ ':  ' +t(skill.name)}</p>
-      <p>{t('技能描述')+ '： ' +skill.describe}</p>
-      <p>{t('技能描述')+ '： ' +t(skill.describe)}</p>
-      <p>{skill.condition}</p>
-      <p>{t('触发条件')+ '： ' +t(skill.condition)}</p>
-      {/* <p>{t('技能效果')+ '： ' +skill.ability_value/10000}</p> */}
-      <p>{`${t('技能效果')}：\xa0
-        ${skill.ability.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
-      <p>{`${t('持续时间')}： ${skill.ability_time/10000}s*${t('赛道长度')}/1000`}</p>
-      <p>{`${t('冷却时间')}： ${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
-      <p>{`${t('技能价格')}： ${skill.need_skill_point} Pt`}</p>
-      {/* <p>技能效果 = (技能数值 / 100)%</p> */}
-      {/* <p>持续时间 = 基础持续时间 * 赛道长度 / 1000</p> */}
-      {/* <p>冷却时间 = 基础冷却时间 * 赛道长度 / 1000</p> */}
-      </>} title={skill.name}
-      >
-        <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity} style={props.usedInList?{...inListStyleOverride}:{}} onClick={()=>props.onClick&&props.onClick(skill)}>
-          <div style={props.usedInList?
-            {display:'flex',position:'absolute',top:4,left:8,width:'100%'}:{width:'100%'}}>
-          <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
-          <div style={{...skillNameStyle}}>{`\xa0\xa0${skill.name}`}</div>
-          </div>
-        </Button>
-      </Popover>
-    )
+
+  return <Popover visible={ua==='mo'?false:undefined}
+    content={<SkillDetail skill={skill}></SkillDetail>}>
+    <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity}
+    style={props.usedInList?{...inListStyleOverride}:{}} onClick={()=>toSkillDetail(skill.id)}>
+      <div style={props.usedInList?
+        {display:'flex',position:'absolute',top:4,left:8,width:'100%'}:{width:'100%'}}>
+      <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
+      <div style={{...skillNameStyle}}>{`\xa0\xa0${skill.name}`}</div>
+      </div>
+    </Button>
+  </Popover>
 }
 
 const SkillCheckboxGroup = React.memo((props) => {
@@ -128,8 +179,8 @@ const SkillCheckboxGroup = React.memo((props) => {
 });
 
 const SkillCheckbox = React.memo((props)=>{
-  const [checkedList2, setCheckedList2] = useState([]);
-  const [checkedList3, setCheckedList3] = useState([]);
+  const [skillChecked1, setSkillChecked1] = useState([]);
+  const [skillChecked2, setSkillChecked2] = useState([]);
   const [checkboxGroupValues, setCheckedboxGroupValues] = useState({});
   // init isOwn
   localStorage.getItem('isOwn')===null&&localStorage.setItem('isOwn',0)
@@ -139,7 +190,7 @@ const SkillCheckbox = React.memo((props)=>{
     let support = db.get('supports').find({id:supportId}).value()
     return list.concat(support.skillList)
   },[]))
-  const checkOptions2 =[
+  const checkOptions1 =[
     {label:'速度被动(绿)',value:'10011'},
     {label:'耐力被动(绿)',value:'10021'},
     {label:'力量被动(绿)',value:'10031'},
@@ -159,18 +210,18 @@ const SkillCheckbox = React.memo((props)=>{
     {label:'疲劳(红)',value:'30051'},
     {label:'视野(红)',value:'30071'}
   ]
-  const checkOptions3 = [
+  const checkOptions2 = [
     {label:t('ノーマル'),value:'ノーマル'},
     {label:t('レア'),value:'レア'},
     {label:t('固有'),value:'固有'}
   ]
-  const onChange2 = (checkedValues)=>{
-    setCheckedList2(checkedValues)
-    updateSkillList(filteredSkills,checkedValues,checkedList3,isOwn)
+  const onChange1 = (checkedValues)=>{
+    setSkillChecked1(checkedValues)
+    updateSkillList(filteredSkills,checkedValues,skillChecked2,isOwn)
   }
-  const onChange3 = (checkedValues)=>{
-    setCheckedList3(checkedValues)
-    updateSkillList(filteredSkills,checkedList2,checkedValues,isOwn)
+  const onChange2 = (checkedValues)=>{
+    setSkillChecked2(checkedValues)
+    updateSkillList(filteredSkills,skillChecked1,checkedValues,isOwn)
   }
   const filteredSkills = React.useMemo(() => {
     return Object.entries(checkboxGroupValues)
@@ -187,7 +238,7 @@ const SkillCheckbox = React.memo((props)=>{
       allSkillList)
   }, [checkboxGroupValues, allSkillList])
   useEffect(() => {
-    updateSkillList(filteredSkills,checkedList2,checkedList3,isOwn)
+    updateSkillList(filteredSkills,skillChecked1,skillChecked2,isOwn)
   }, [filteredSkills]);
 
   const onCheckboxGroupsChange = React.useCallback((groupName, checkedValues) => {
@@ -241,8 +292,8 @@ const SkillCheckbox = React.memo((props)=>{
   }
   const resetCheckbox=()=>{
     setCheckedboxGroupValues({})
-    setCheckedList2([])
-    setCheckedList3([])
+    setSkillChecked1([])
+    setSkillChecked2([])
     props.onUpdate(allSkillList)
   }
   const changeMode = ()=>{
@@ -250,23 +301,23 @@ const SkillCheckbox = React.memo((props)=>{
     localStorage.setItem('isOwn',curValue)
     setIsOwn(curValue)
     // console.log(curValue)
-    updateSkillList(filteredSkills,checkedList2,checkedList3,curValue)
+    updateSkillList(filteredSkills,skillChecked1,skillChecked2,curValue)
   }
   const onSearch = (searchText) => {
     const fullSkillList = allSkillList;
     const tempSkillList = fullSkillList.filter(item => (item.name).indexOf(searchText) > -1);
     setCheckedboxGroupValues({})
-    setCheckedList2([])
-    setCheckedList3([])
+    setSkillChecked1([])
+    setSkillChecked2([])
     props.onUpdate(tempSkillList)
   };
   return(<>{props.checkOnly?
     <>
       { Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />) }
       <Divider/>
-      <Checkbox.Group options={checkOptions2} value={checkedList2} onChange={onChange2} />
+      <Checkbox.Group options={checkOptions1} value={skillChecked1} onChange={onChange1} />
       <Divider/>
-      <Checkbox.Group options={checkOptions3} value={checkedList3} onChange={onChange3} />
+      <Checkbox.Group options={checkOptions2} value={skillChecked2} onChange={onChange2} />
     </>
     :
     <div>
@@ -286,12 +337,13 @@ const SkillCheckbox = React.memo((props)=>{
       <Divider/>
       { Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />) }
       <Divider/>
-      <Checkbox.Group options={checkOptions2} value={checkedList2} onChange={onChange2} />
+      <Checkbox.Group options={checkOptions1} value={skillChecked1} onChange={onChange1} />
       <Divider/>
-      <Checkbox.Group options={checkOptions3} value={checkedList3} onChange={onChange3} />
+      <Checkbox.Group options={checkOptions2} value={skillChecked2} onChange={onChange2} />
     </div>}
     </>
   )
 })
 
-export {SkillList,SkillButton,SkillCheckbox}
+
+export {SkillList,SkillButton,SkillCheckbox,SkillDetail}

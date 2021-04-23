@@ -8,7 +8,7 @@ import {EditOutlined} from '@ant-design/icons'
 import ScrollBars from 'react-custom-scrollbars'
 
 import {EventList} from '../components/event.js'
-import {SkillList} from '../components/skill.js'
+import {SkillList} from '../components/skill-detail.js'
 import {BuffButton} from '../components/buff.js'
 import {RaceSchedule,RaceTimeline,RaceCheckbox} from '../components/race.js'
 

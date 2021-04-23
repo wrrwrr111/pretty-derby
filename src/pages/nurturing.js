@@ -6,7 +6,7 @@ import t from '../components/t.js'
 import { Divider,Row,Col,Modal,Button,Drawer,Table, Popover,Popconfirm} from 'antd';
 
 import {EventList} from '../components/event.js'
-import {SkillList} from '../components/skill.js'
+import {SkillList} from '../components/skill-detail.js'
 import {BuffButton} from '../components/buff.js'
 import {RaceSchedule,RaceTimeline} from '../components/race.js'
 

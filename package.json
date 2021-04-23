@@ -36,6 +36,7 @@
     "react-grid-layout": "^1.2.4",
     "react-i18next": "^11.8.9",
     "react-intl": "^5.13.2",
+    "react-router-cache-route": "^1.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "shortid": "^2.2.16",

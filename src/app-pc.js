@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { HashRouter as Router, Route ,Link } from 'react-router-dom';
+import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
 import {Row,Col,Image,Layout,Menu,Button,Popover,Popconfirm} from 'antd'
 import {message} from 'antd'
 import 'antd/dist/antd.css';
@@ -55,17 +56,19 @@ const AppPc = ()=>{
         {/* <Menu.Item key="5" className='menu-nurturing'><Link to='/nurturing'>{t('育成')}</Link></Menu.Item> */}
         <Menu.Item key="7" className='menu-nurturing2'><Link to='/nurturing2'>{t('育成')}</Link></Menu.Item>
         <Menu.Item key="6" className='menu-seed'><Link to='/seed'>{t('种马分享')}</Link></Menu.Item>
-        <LanButton style={{float:'right'}}></LanButton> 
+        <LanButton style={{float:'right'}}></LanButton>
       </Menu>
     </Header>
     <Content style={{ paddingTop:'64px'}} >
-      <Route exact path="/" component={Player}/>
-      <Route path="/support" component={Support}/>
-      <Route path="/skill" component={Skill}/>
-      <Route path="/nurturing" component={Nurturing2}/>
-      <Route path="/nurturing2" component={Nurturing2}/>
-      <Route path="/seed" component={Seed}/>
-      <Route path="/race" component={Race}/>
+      <CacheSwitch>
+        <CacheRoute exact path="/" component={Player}/>
+        <CacheRoute path="/support" component={Support}/>
+        <CacheRoute path="/skill" component={Skill}/>
+        <CacheRoute path="/nurturing" component={Nurturing2}/>
+        <CacheRoute path="/nurturing2" component={Nurturing2}/>
+        <CacheRoute path="/seed" component={Seed}/>
+        <CacheRoute path="/race" component={Race}/>
+      </CacheSwitch>
     </Content>
   <Footer style={{padding:'12px'}}>
     <Row gutter={[16,16]}>

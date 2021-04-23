@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route ,Link} from 'react-router-dom';
-
+import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
 import {Image,Button,Popover} from 'antd'
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.min.css';
@@ -17,6 +17,7 @@ import SeedMo from './pages-mo/seed.js'
 
 import {SupportDetail} from './components/support-detail.js'
 import {PlayerDetail} from './components/player-detail.js'
+import {SkillDetail} from './components/skill-detail.js'
 import {BuffList} from './components/buff.js'
 import LanButton from './components/lan-button'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -47,7 +48,7 @@ class App1 extends React.Component {
     {path:'/support',label:'支援卡'},
     {path:'/skill',label:'技能'},
     {path:'/race',label:'比赛'},
-    {path:'/nurturing2',label:'育成new'},
+    {path:'/nurturing2',label:'育成'},
     {path:'/seed',label:'种马分享'}]
     const linkList=(<List>
       {routers.map(item=>
@@ -103,15 +104,18 @@ class App1 extends React.Component {
         open={this.state.open}
         onOpenChange={this.onOpenChange}
       >
-          <Route exact path="/" component={Player}/>
-          <Route path="/support" component={Support}/>
-          <Route path="/skill" component={Skill}/>
-          <Route path="/nurturing2" component={NurturingMO2}/>
-          <Route path="/seed" component={SeedMo}/>
-          <Route path="/race" component={Race}/>
-          <Route path="/support-detail/:supportId" component={SupportDetail}/>
-          <Route path="/player-detail/:id/:nur" component={PlayerDetail}/>
-          <Route path="/buff" component={BuffList}/>
+        <CacheSwitch>
+          <CacheRoute exact path="/" component={Player}/>
+          <CacheRoute path="/support" component={Support}/>
+          <CacheRoute path="/skill" component={Skill}/>
+          <CacheRoute path="/nurturing2" component={NurturingMO2}/>
+          <CacheRoute path="/seed" component={SeedMo}/>
+          <CacheRoute path="/race" component={Race}/>
+          <CacheRoute path="/support-detail/:supportId" component={SupportDetail}/>
+          <CacheRoute path="/player-detail/:id/:nur" component={PlayerDetail}/>
+          <CacheRoute path="/skill-detail/:id" component={SkillDetail}/>
+          <CacheRoute path="/buff" component={BuffList}/>
+        </CacheSwitch>
       </Drawer>
     </Router>);
   }

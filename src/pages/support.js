@@ -6,7 +6,7 @@ import t from '../components/t.js'
 
 
 import {SupportCard} from '../components/support-detail.js'
-import {SkillCheckbox, SkillList} from '../components/skill.js'
+import {SkillCheckbox, SkillList} from '../components/skill-detail.js'
 const CheckboxGroup = Checkbox.Group
 const Search = Input.Search
 
@@ -174,7 +174,7 @@ class Support extends React.Component{
                     return list.length?<Row gutter={[16,16]} key={rare}>
                     <Divider>{rare}</Divider>
                     {list.map(support=>
-                      <Col xxl={4} lg={6} sm={8} xs={8} key={support.id}
+                      <Col lg={4} xs={6} key={support.id}
                           className={this.state.showMode&&this.state.chosenList.indexOf(support.id)===-1?'un-chosen-card':'chosen-card'}>
                         <SupportCard data={support} onSelect={this.state.chooseMode?this.onSelect:this.props.onSelect}
                                     chooseMode={this.props.chooseMode}></SupportCard>

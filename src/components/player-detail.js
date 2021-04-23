@@ -1,32 +1,35 @@
 import React,{useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 import { Divider,Image,Card,Modal} from 'antd';
 import db from '../db.js'
 import t from './t.js'
 
 import {EventList} from './event.js'
-import {SkillList} from './skill.js'
+import {SkillList} from './skill-detail.js'
 // import RaceList from './player-race.js'
 import {RaceSchedule,RaceTimeline} from '../components/race.js'
 // import {EffectTable} from './effect.js'
-
+const ua = db.get('ua').value();
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const PlayerDetail = (props) =>{
   const id = props.playerId!==undefined?props.playerId:props.match.params.id
   // 是否育成 育成顺序样式不同
-  const isNur = props.isNur!==undefined?props.isNur:props.match.params.nur
-  // console.log(props.playerId,id,isNur)
+  const isNur = props.isNur!==undefined?props.isNur:parseInt(props.match.params.nur)
   const data = db.get('players').find({id}).value()
-  return(
-    isNur?<>
-      <div style={{height:69,display:'flex'}}>
-          <Image src={cdnServer+data.imgUrl} width={63} height={69} resizemode={'cover'}></Image>
-          <div style={{display:'flex',height:64,flexDirection:'column',justifyContent:'space-between'}}>
-            <div style={{fontSize:20,fontWeight:700}}>{t(data.name)}</div>
-            <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(data.charaName)}</div>
-          </div>
-      </div>
+  const PlayerItem = () => <div style={{height:69,display:'flex'}}>
+    <Image src={cdnServer+data.imgUrl} width={63} height={69} resizemode={'cover'}></Image>
+    <div style={{display:'flex',height:64,flexDirection:'column',justifyContent:'space-between'}}>
+      <div style={{fontSize:20,fontWeight:700}}>{data.name}</div>
+      <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(data.name)}</div>
+      <div style={{fontSize:20,fontWeight:700}}>{data.charaName}</div>
+      <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(data.charaName)}</div>
+    </div>
+  </div>
+  if(isNur){
+    return <>
+      <PlayerItem></PlayerItem>
       <Divider>事件</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
       <Divider>赛程</Divider>
@@ -34,29 +37,23 @@ const PlayerDetail = (props) =>{
       <RaceTimeline raceList={data.raceList}></RaceTimeline>
       <Divider>技能</Divider>
       <SkillList skillList={data.skillList}></SkillList>
-    </>:<>
-      <div style={{height:144,display:'flex'}}>
-        <Image src={cdnServer+data.imgUrl} width={128} height={140} resizemode={'cover'}></Image>
-        <div style={{display:'flex',height:128,padding:24,flexDirection:'column',justifyContent:'space-between'}}>
-          <div style={{fontSize:20,fontWeight:700}}>{t(data.charaName)}</div>
-          <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{data.charaName}</div>
-          <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{t(data.name)}</div>
-          <div style={{fontSize:20,fontWeight:700,color:'gray'}}>{data.name}</div>
-        </div>
-      </div>
-      <Divider>{t("适应")}</Divider>
-      <AdaptBox player={data}></AdaptBox>
-      <Divider>{t("成长")}</Divider>
-      <GrowBox player={data}></GrowBox>
-      <Divider>{t("技能")}</Divider>
-      <SkillList skillList={data.skillList}></SkillList>
-      <Divider>{t("事件")}</Divider>
-      <EventList eventList={data.eventList} pid={data.id} ></EventList>
-      <Divider>{t("赛程")}</Divider>
-      {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
-      <RaceTimeline raceList={data.raceList}></RaceTimeline>
     </>
-  )
+  }else{
+    return <>
+    <PlayerItem></PlayerItem>
+    <Divider>{t("适应")}</Divider>
+    <AdaptBox player={data}></AdaptBox>
+    <Divider>{t("成长")}</Divider>
+    <GrowBox player={data}></GrowBox>
+    <Divider>{t("技能")}</Divider>
+    <SkillList skillList={data.skillList}></SkillList>
+    <Divider>{t("事件")}</Divider>
+    <EventList eventList={data.eventList} pid={data.id} ></EventList>
+    <Divider>{t("赛程")}</Divider>
+    {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
+    <RaceTimeline raceList={data.raceList}></RaceTimeline>
+  </>
+  }
 }
 const AdaptBox = (props)=>{
 
@@ -196,13 +193,19 @@ const GrowBox= (props)=>{
   )
 }
 const PlayerCard = (props)=>{
+  const history = useHistory();
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const player = props.data
 
-  const showModal = () => {
+  const showPlayerDetail = () => {
     if(props.onSelect){
-      props.onSelect(props.data)
+      props.onSelect(player)
     }else{
-      setIsModalVisible(true);
+      if(ua==='mo'){
+        history.push(`/player-detail/${player.id}/0`)
+      }else{
+        setIsModalVisible(true);
+      }
     }
   };
 
@@ -217,14 +220,14 @@ const PlayerCard = (props)=>{
   return (
     <>
       <Card cover={
-        <Image src={cdnServer+props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
+        <Image src={cdnServer+player.imgUrl} preview={false} onClick={showPlayerDetail} width={'100%'}></Image>
 
       }>
-        <Card.Meta title={t(props.data.name)} ></Card.Meta>
-        <Card.Meta title={t(props.data.charaName)} ></Card.Meta>
+        <Card.Meta title={t(player.name)} ></Card.Meta>
+        <Card.Meta title={t(player.charaName)} ></Card.Meta>
       </Card>
       <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null} width={800} >
-        <PlayerDetail playerId={props.data.id} isNur={false}></PlayerDetail>
+        <PlayerDetail playerId={player.id} isNur={false}></PlayerDetail>
       </Modal>
     </>
   )
