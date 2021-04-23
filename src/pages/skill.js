@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Divider,Row,Col,Button,Checkbox,Modal,Tooltip,PageHeader,Switch,Input} from 'antd';
+import { Divider,Row,Col,Image,Checkbox,Modal,Tooltip,PageHeader,Switch,Input} from 'antd';
 
 import db from '../db.js'
 import t from '../components/t.js'
@@ -7,8 +7,11 @@ import t from '../components/t.js'
 import Support from './support.js'
 import Player from './player.js'
 import {SkillButton,SkillCheckbox} from '../components/skill.js'
+import {SupportCard} from '../components/support-detail.js'
+import {PlayerCard} from '../components/player-detail.js'
 const { Search } = Input
-// const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+
 
 const Skill = () =>{
   // 所有技能列表
@@ -121,8 +124,24 @@ const Skill = () =>{
                   }
                   <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={'80%'}>
                     <PageHeader title={skillName}>{t(skillName)}</PageHeader>
-                    <Support supportList={skillSupportList} filter={false}></Support>
-                    <Player playerList={skillPlayerList} ></Player>
+                    <Divider>{t('支援卡')}</Divider>
+                    <Row>
+                    {skillSupportList.sort((a,b)=>b.rarity-a.rarity).map(support=>
+                        <Col xxl={3} lg={6} sm={8} xs={8} key={support.id}>
+                          <SupportCard data={support}></SupportCard>
+                        </Col>)
+                      }
+                    </Row>
+                    <Divider>{t('角色')}</Divider>
+                    <Row>
+                    {skillPlayerList.sort((a,b)=>b.rarity-a.rarity).map(player=>
+                        <Col xxl={3} lg={6} sm={8} xs={8} key={player.id}>
+                          <PlayerCard data={player}></PlayerCard>
+                        </Col>)
+                      }
+                    </Row>
+                    {/* <Support supportList={skillSupportList} filter={false}></Support> */}
+                    {/* <Player playerList={skillPlayerList} ></Player> */}
                   </Modal>
                 </Row>
               )}

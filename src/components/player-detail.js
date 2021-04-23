@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-import { Divider,Image} from 'antd';
+import { Divider,Image,Card,Modal} from 'antd';
 import db from '../db.js'
 import t from './t.js'
 
@@ -195,5 +195,39 @@ const GrowBox= (props)=>{
     </div>
   )
 }
-export default PlayerDetail
+const PlayerCard = (props)=>{
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    if(props.onSelect){
+      props.onSelect(props.data)
+    }else{
+      setIsModalVisible(true);
+    }
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  return (
+    <>
+      <Card cover={
+        <Image src={cdnServer+props.data.imgUrl} preview={false} onClick={showModal} width={'100%'}></Image>
+
+      }>
+        <Card.Meta title={t(props.data.name)} ></Card.Meta>
+        <Card.Meta title={t(props.data.charaName)} ></Card.Meta>
+      </Card>
+      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null} width={800} >
+        <PlayerDetail playerId={props.data.id} isNur={false}></PlayerDetail>
+      </Modal>
+    </>
+  )
+}
+export {PlayerDetail,PlayerCard}
 
