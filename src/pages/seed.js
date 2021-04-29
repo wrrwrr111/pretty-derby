@@ -520,7 +520,8 @@ const Seed = () => {
             <p>{seed.dislikes ? seed.dislikes.length : 0}</p>
           </Row>
           {seed.userId===userId&&<Row align="middle">
-            <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteSeed(seed)} />
+            <Button shape="circle" icon={<DeleteOutlined />}
+            style = {{color:'red'}} onClick={() => deleteSeed(seed)} />
           </Row>}
         </>
       ),
