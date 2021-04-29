@@ -19,7 +19,7 @@ import {
 } from "antd";
 import { message } from "antd";
 //test
-import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined } from "@ant-design/icons";
+import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined, DeleteOutlined } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import axios from "axios";
@@ -519,6 +519,9 @@ const Seed = () => {
             <Button shape="circle" icon={<FrownOutlined />} onClick={() => dislike(seed)} />
             <p>{seed.dislikes ? seed.dislikes.length : 0}</p>
           </Row>
+          {seed.userId===userId&&<Row align="middle">
+            <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteSeed(seed)} />
+          </Row>}
         </>
       ),
     },
@@ -638,13 +641,25 @@ const Seed = () => {
   const closeSeedInput = () => {
     setIsSeedInputVisible(false);
   };
+  const showMySeed = ()=>{
+    search({attrs:['userId'],levels:[userId]})
+  }
+  const deleteSeed = async (value)=>{
+    const res = await axios.post("https://urarawin.com/api/delete", value);
+    if (res.data) {
+      message.info("成功删除");
+    } else {
+      message.info("出错了");
+    }
+  }
   const search = async (value) => {
     const res = await axios.post("https://urarawin.com/api/search", value);
     if (res.data) {
       if (res.data.length) {
         setSeedList([...res.data]);
       } else {
-        message.info("么的数据");
+        setSeedList([]);
+        message.info("暂无数据");
       }
     } else {
       message.info("出错了");
@@ -689,6 +704,7 @@ const Seed = () => {
         <Card className="card" title="过滤条件">
           <SearchForm search={search}></SearchForm>
           <Button onClick={() => showSeedInput()}>配置我的种子</Button>
+          <Button onClick={() => showMySeed()}>查看我的种子</Button>
         </Card>
         <Card className="card" title="结果">
           <Table columns={columns} dataSource={seedList} pagination={false} rowKey={"id"} />
