@@ -187,6 +187,13 @@ const SeedInput = (props) => {
       } else {
         formData["white"] = formData[`whiteNum-${i}`];
       }
+      //统计ura
+      if (formData["uraLevel"] !== undefined) {
+        formData['uraLevel'] += formData[`uraLevel-${i}`]
+      } else {
+        formData['uraLevel'] = formData[`uraLevel-${i}`]
+      }
+
     });
     const res = await axios.post("https://urarawin.com/api/add", formData);
     if (res.data && res.data.success) {
@@ -243,6 +250,9 @@ const SeedInput = (props) => {
             <Rate count={3} />
           </Form.Item>
           <Form.Item label="绿色因子星数" name={`greenLevel-${i}`} initialValue={0}>
+            <Rate count={3} />
+          </Form.Item>
+          <Form.Item label="URA因子星数" name={`uraLevel-${i}`} initialValue={0}>
             <Rate count={3} />
           </Form.Item>
           <Form.Item label="白色因子个数" name={`whiteNum-${i}`} initialValue={0}>
@@ -339,6 +349,8 @@ const SearchOne = (props) => {
                         <Radio.Button value={"leading"}>{"先"}</Radio.Button>
                         <Radio.Button value={"insert"}>{"差"}</Radio.Button>
                         <Radio.Button value={"tracking"}>{"追"}</Radio.Button>
+                        <br />
+                        <Radio.Button value={"uraLevel"}>{"URA"}</Radio.Button>
                       </Radio.Group>
                     </Form.Item>
                   </Row>
@@ -401,9 +413,12 @@ const SearchForm = (props) => {
         formData["blue-0"] = item.attr;
         formData.attrs.push("blueLevel-0");
         formData.levels.push(item.level);
-      } else {
+      } else if(redLabels[item.attr]){
         formData["red-0"] = item.attr;
         formData.attrs.push("redLevel-0");
+        formData.levels.push(item.level);
+      } else if(item.attr==='uraLevel'){
+        formData.attrs.push("uraLevel-0");
         formData.levels.push(item.level);
       }
     });
@@ -517,34 +532,40 @@ const Seed = () => {
       title: "蓝色因子",
       dataIndex: "blue-0",
       key: "blue-0",
-      render: (text, record) => (
-        <Row>
-          <span className="rate-label">{blueLabels[text]}</span>
-          <Rate count={3} value={record["blueLevel-0"]} disabled></Rate>
-        </Row>
-      ),
+      render: (text, record) =>
+          <span className="rate-label">
+          {`${blueLabels[text]}\xa0\xa0${record["blueLevel-0"]}`}
+          </span>
+      ,
     },
     {
       title: "红色因子",
       dataIndex: "red-0",
       key: "red-0",
-      render: (text, record) => (
-        <Row>
-          <span className="rate-label">{redLabels[text]}</span>
-          <Rate count={3} value={record["redLevel-0"]} disabled></Rate>
-        </Row>
-      ),
+      render: (text, record) =>
+          <span className="rate-label">
+            {`${redLabels[text]}\xa0\xa0${record["redLevel-0"]}`}
+          </span>
+      ,
     },
     {
       title: "绿色因子",
       dataIndex: "greenLevel-0",
       key: "greenLevel-0",
-      render: (text, record) => (
-        <Row>
-          <span className="rate-label">等级</span>
-          <Rate count={3} value={record["greenLevel-0"]} disabled></Rate>
-        </Row>
-      ),
+      render: (text, record) =>
+          <span className="rate-label">
+          {`固有\xa0\xa0${record["greenLevel-0"]}`}
+          </span>
+      ,
+    },{
+      title: "URA",
+      dataIndex: "uraLevel-0",
+      key: "uraLevel-0",
+      render: (text, record) =>
+          <span className="rate-label">
+            {`URA\xa0\xa0${record["uraLevel-0"]}`}
+          </span>
+      ,
     },
     {
       title: "父辈1",
@@ -566,17 +587,9 @@ const Seed = () => {
           if (record[key]) {
             // console.log(key,record[key])
             return (
-              <Row justify="space-between" key={key}>
-                <Col>
                   <span className="rate-label">
-                    {blueLabels[key]}
-                    {record[key]}
+                    {`${blueLabels[key]}\xa0\xa0${record[key]}`}
                   </span>
-                </Col>
-                <Col>
-                  <Rate count={record[key]} value={record[key]} disabled></Rate>
-                </Col>
-              </Row>
             );
           } else {
             return null;
@@ -590,23 +603,16 @@ const Seed = () => {
         Object.keys(redLabels).map((key) => {
           if (record[key]) {
             return (
-              <Row justify="space-between" key={key}>
-                <Col>
                   <span className="rate-label">
-                    {redLabels[key]}
-                    {record[key]}
+                    {`${redLabels[key]}\xa0\xa0${record[key]}`}
                   </span>
-                </Col>
-                <Col>
-                  <Rate count={record[key]} value={record[key]} disabled></Rate>
-                </Col>
-              </Row>
             );
           } else {
             return null;
           }
         }),
     },
+    { title: "总计URA", dataIndex: "uraLevel", key: "uraLevel", render: (text) => text },
     { title: "总计白色", dataIndex: "white", key: "white", render: (text) => text },
     {
       title: "支援卡",
