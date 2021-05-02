@@ -9,6 +9,8 @@ const ua = db.get('ua').value();
 const EventList = (props)=>{
   const eventIdList = props.eventList
   const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
+  const qieZhe = eventList.filter(event=>JSON.stringify(event).indexOf('切れ者')!==-1)
+  console.log(qieZhe)
   if(props.type==='multi'){
     return(<>
         {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
@@ -17,6 +19,11 @@ const EventList = (props)=>{
   }
   return (
     <>
+      {qieZhe[0]&&qieZhe.map(event=><Row justify="space-around" align="middle">
+          <Col>{t('切れ者')}</Col>
+          <EventBox event={event}></EventBox>
+        </Row>
+      )}
       <Tabs defaultActiveKey="1">
         <Tabs.TabPane tab={t('有选项')} key="1">
           {/* <div style={{maxHeight:200,overflowY:'auto'}}> */}
