@@ -2,10 +2,10 @@ import React from 'react';
 import {useState} from 'react';
 import db from '../db.js'
 
-import { Row,Col,Timeline,Checkbox } from 'antd';
+import { Row,Col,Timeline,Checkbox,Button } from 'antd';
 import { createFormattedComponent } from 'react-intl/src/components/createFormattedComponent';
 import { getTimeProps } from 'antd/lib/date-picker/generatePicker';
-// import t from './t.js'
+import t from './t.js'
 
 const ua = db.get('ua').value();
 
@@ -55,11 +55,30 @@ const RaceSchedule = (props)=>{
   </Row>)
 }
 
-// 传统：皐月賞、日本ダービー東京優駿、菊花賞
-// 母马：桜花賞、オークス、秋華賞
-// 春三是 大阪杯 天皇賞春 宝塚記念
-// 秋：天皇賞秋、ジャパンカップ、有馬記念
+const raceGolds=[
+  {name:'传统三冠',raceNames:['皐月賞30', '日本ダービー東京優駿33','菊花賞43']}, 
+  {name:'春日三冠',raceNames:['大阪杯53', '天皇賞春55','宝塚記念59']}, 
+  {name:'秋日三冠',raceNames:['天皇賞秋67', 'ジャパンカップ69','有馬記念71']}, 
+  {name:'天皇春秋',raceNames:['天皇賞春55', '天皇賞秋67']},
+  {name:'纪念春秋Ⅰ',raceNames:['宝塚記念35', '有馬記念47']},
+  {name:'纪念春秋Ⅱ',raceNames:['宝塚記念59', '有馬記念71']},
+  {name:'母马三冠',raceNames:['桜花賞30', 'オークス33','秋華賞43']}, 
+  {name:'英里春秋Ⅰ',raceNames:['安田記念34', 'マイルチャンピオンシップ45']},
+  {name:'英里春秋Ⅱ',raceNames:['安田記念58', 'マイルチャンピオンシップ69']},
+  {name:'泥地春秋',raceNames:['フェブラリーステークス51', 'チャンピオンズカップ70']},
+  {name:'短距春秋',raceNames:['高松宮記念53', 'スプリンターズステークス65']}
+]
+const getGolds = (race)=>{
+  return raceGolds.reduce((golds,raceGold)=>{
+    if(raceGold.raceNames.indexOf(race.uniqueName)!==-1){
+      golds.push(`${raceGold.name} ${raceGold.raceNames.indexOf(race.uniqueName)+1}/${raceGold.raceNames.length}`)
+    }
+    return golds
+  },[]).join(' , ')
+}
+
 const RaceTimeline = React.memo((props)=>{
+  const [showSpare,setShowSpare] = useState(false)
   const str  = []
 
   const getDate = (i)=>{
@@ -77,38 +96,52 @@ const RaceTimeline = React.memo((props)=>{
         return 'pink';
       case 'G3':
         return 'green';
+      case 'OP':
+        return 'orange';
+      case 'Pre-OP':
+        return 'orange';
       default:
-        return 'orange'
+        return 'gray'
     }
-    // 'OP':
   }
-
-
   for (let i = 13;i<72;i++){
-    let curRace,id;
+    let curRace,id,golds;
     if(props.raceList&&props.raceList[i]){
       id = props.raceList[i].id
       curRace = db.get('races').find({id}).value()
+      golds = getGolds(curRace)
       str.push(<Timeline.Item label={getDate(i)} color="red" style={{fontSize:'16px'}} key={id}>
-        {/* <b>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${props.raceList[i].goal}`}</b> */}
-        <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal||'参赛'}`}</b>
+        <b>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name} / ${props.raceList[i].goal||'参赛'}
+          ${golds?' / '+golds:''}`}</b>
       </Timeline.Item>)
     }else if(props.filterRace&&props.filterRace[i]){
       props.filterRace[i].forEach((id,index)=>{
         curRace = db.get('races').find({id}).value()
-        str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)} key={id}>
-            {/* <p>{`${curRace.name} / ${curRace.grade} / ${curRace.distanceType} / ${curRace.distance}`}</p> */}
-            <p>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name}`}</p>
+        golds = getGolds(curRace)
+        str.push(<Timeline.Item label={index===0?getDate(i):null} color={getColor(curRace.grade)}
+        style={{fontSize:'14px'}} key={id}>
+            <p>{`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name}
+            ${golds?' / '+golds:''}`}</p>
           </Timeline.Item>)
 
       })
     }else{
       //普通
+      showSpare&&str.push(<Timeline.Item label={getDate(i)} color={getColor('normal')}
+        style={{fontSize:'12px'}}>
+            <p></p>
+          </Timeline.Item>)
     }
   }
-  return(<Timeline mode='left' style={{paddingTop:8}}>
+  return(
+  <>
+  <Button onClick={()=>setShowSpare(!showSpare)}>
+    {showSpare?t('隐藏空闲月份'):t('显示空闲月份')}
+  </Button>
+  <Timeline mode='left' style={{paddingTop:8}}>
     {str}
-  </Timeline>)
+  </Timeline>
+  </>)
 })
 const RaceCheckbox = (props) =>{
   const [raceFilterCondition,setRaceFilterCondition] = useState(props.raceFilterCondition)
