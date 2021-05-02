@@ -280,6 +280,7 @@ const Nurturing = () =>{
       <div key='c'  style={{...panelStyle}}>
         <div className='panel-heading' style={{...headStyle}}>{t('事件')}</div>
         <ScrollBars autoHide={true} style={{...pBodyStyle}}>
+          {/* <p>{player.id}</p> */}
           <EventList eventList={player.eventList||[]} pid={player.id}></EventList>
         </ScrollBars>
       </div>
