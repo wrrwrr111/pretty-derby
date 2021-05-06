@@ -26,7 +26,7 @@ const options = {
     { label:t('追込'), value:'4' },
     { label:t('通用'), value:'-1' },
   ],
-  phase_random: [
+  phase: [
     { label:t('序盤'), value:'0' },
     { label:t('中盤'), value:'1' },
     { label:t('終盤'), value:'2' },
@@ -40,7 +40,7 @@ const options = {
   ],
   is_finalcorner:[
     { label:t('最終直線/コーナー'), value:'1' },
-  ],
+  ]
   // is_finalcorner==1&corner==0
 }
 const skillType={
@@ -224,20 +224,26 @@ const SkillCheckbox = React.memo((props)=>{
     setSkillChecked2(checkedValues)
     updateSkillList(filteredSkills,skillChecked1,checkedValues,isOwn)
   }
-  const filteredSkills = React.useMemo(() => {
-    return Object.entries(checkboxGroupValues)
-      .reduce((l, [key, values]) =>
-        values.length > 0 ? (values.includes('-1') ? l.filter(skill => !skill.condition.includes(`${key}==`))
-          : l.filter(skill => {
+  const filteredSkills = React.useMemo(() => Object.entries(checkboxGroupValues)
+    .reduce((l, [key, values]) =>
+      values.length > 0 
+        ? l.filter(skill => {
             switch(key) {
+              case 'phase': 
+                return ['phase', 'phase_random'].map(
+                  _key => values.map(value => `${_key}==${value}`)
+                ).flat().some(phrase => skill.condition.includes(phrase));
+              case 'running_style':
+                return (values.map(value => `${key}==${value}`)
+                            .some(phrase => skill.condition.includes(phrase))) || (values.includes('-1') && !skill.condition.includes(`${key}==`));
               default:
                 return values.map(value => `${key}==${value}`)
-                              .some(phrase => skill.condition.includes(phrase));
+                            .some(phrase => skill.condition.includes(phrase));
             }
-          }))
+          })
         : l,
-      allSkillList)
-  }, [checkboxGroupValues, allSkillList])
+    allSkillList),
+  [checkboxGroupValues, allSkillList])
   useEffect(() => {
     updateSkillList(filteredSkills,skillChecked1,skillChecked2,isOwn)
   }, [filteredSkills]);
