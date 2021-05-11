@@ -16,6 +16,11 @@ const EventList = (props)=>{
         {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
       </>
     )
+  }else if(props.type==='all'){
+    return(<>
+      {eventList.map(event=><EventBox key={event.id} event={event}></EventBox>)}
+    </>
+    )
   }
   return (
     <>

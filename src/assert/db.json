@@ -129,7 +129,8 @@
       "imgUrl": "img/chara_card/chr_icon_1002_100201_01.png",
       "charaName": "サイレンススズカ",
       "db_id": 100201,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": []
     },
     {
       "name": "スペシャルドリーマー",
@@ -258,7 +259,8 @@
       "imgUrl": "img/chara_card/chr_icon_1001_100101_01.png",
       "charaName": "スペシャルウィーク",
       "db_id": 100101,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": []
     },
     {
       "name": "フォーミュラオブルージュ",
@@ -351,7 +353,6 @@
         "1TaRtoCd57",
         "JH4T3xSciv",
         "0-yC2Uk1w4",
-        "9zFwVtkiQo",
         "HCNkvUgYbC"
       ],
       "id": "q5Z2X7TCqU_",
@@ -408,7 +409,10 @@
       "imgUrl": "img/chara_card/chr_icon_1004_100401_01.png",
       "charaName": "マルゼンスキー",
       "db_id": 100401,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "PYLQFCuxh5"
+      ]
     },
     {
       "name": "トップ・オブ・ジョイフル",
@@ -490,11 +494,6 @@
         "tiUCOvCamU",
         "TrK0FjfwUb",
         "U10eoktT2V",
-        "vXSggr2mf",
-        "vXSggr2mf",
-        "vXSggr2mf",
-        "vXSggr2mf",
-        "vXSggr2mf",
         "6Dysz3oBC"
       ],
       "id": "eFUs24ZUBZB",
@@ -547,7 +546,14 @@
       "imgUrl": "img/chara_card/chr_icon_1003_100301_01.png",
       "charaName": "トウカイテイオー",
       "db_id": 100301,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "g_B2dVSP3A",
+        "pBP-QC19hp",
+        "zWc3vMb68b",
+        "9LTDYExqOy",
+        "4kMQyKWz2"
+      ]
     },
     {
       "name": "スターライトビート",
@@ -630,7 +636,6 @@
         "ThNGP35p5g",
         "MKq9aIincr",
         "6tlo1DlwPC",
-        "QuNWOlLf8",
         "TT-MNOQKIW"
       ],
       "id": "yGVHGFP5w4r",
@@ -675,7 +680,10 @@
       "imgUrl": "img/chara_card/chr_icon_1006_100601_01.png",
       "charaName": "オグリキャップ",
       "db_id": 100601,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "-pBnCXJ5S"
+      ]
     },
     {
       "name": "ワイルド・フロンティア",
@@ -760,7 +768,6 @@
         "EzQH3DBW0j",
         "hFFCLtwBT-",
         "qax6WLZbUe",
-        "KRJErnf-A",
         "JHnGgqO86e"
       ],
       "id": "G9XvN_-v7ns",
@@ -813,7 +820,10 @@
       "imgUrl": "img/chara_card/chr_icon_1010_101001_01.png",
       "charaName": "タイキシャトル",
       "db_id": 101001,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "39Z3hikoWG"
+      ]
     },
     {
       "name": "ロード・オブ・エンペラー",
@@ -905,9 +915,6 @@
         "b89GWwxqXF",
         "yZXAEPwE1K",
         "ZSDXoC_c2O",
-        "vUDyYlkEC",
-        "vUDyYlkEC",
-        "vUDyYlkEC",
         "KcOyQ41Pp"
       ],
       "id": "UD12auVv6Ew",
@@ -964,7 +971,12 @@
       "imgUrl": "img/chara_card/chr_icon_1017_101701_01.png",
       "charaName": "シンボリルドルフ",
       "db_id": 101701,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "vgrj9A8AD",
+        "RM4lY-x3IG",
+        "Ifr_YsOk-o"
+      ]
     },
     {
       "name": "エレガンス・ライン",
@@ -1048,7 +1060,6 @@
         "U8ngppE3_X",
         "0hDn37ankv",
         "wRHchoGax8",
-        "l-sGhbvfV2",
         "B62FSyRpUx"
       ],
       "id": "u5-gjKlwNzu",
@@ -1093,7 +1104,10 @@
       "imgUrl": "img/chara_card/chr_icon_1013_101301_01.png",
       "charaName": "メジロマックイーン",
       "db_id": 101301,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "tcQJ4nF_S"
+      ]
     },
     {
       "name": "レッドストライフ",
@@ -1377,7 +1391,8 @@
       "imgUrl": "img/chara_card/chr_icon_1030_103001_01.png",
       "charaName": "ライスシャワー",
       "db_id": 103001,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": []
     },
     {
       "name": "トップ・オブ・ブルー",
@@ -3590,7 +3605,6 @@
         "0hZP30CdA3",
         "SJiE1pXzMQ",
         "nyAQx7AG8PB",
-        "9FdXPBv8A",
         "y8JIYMX9cQ"
       ],
       "id": "0uJ0iropRbr",
@@ -3643,7 +3657,10 @@
       "imgUrl": "img/chara_card/chr_icon_1015_101501_01.png",
       "charaName": "テイエムオペラオー",
       "db_id": 101501,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "zND7E5cP7q"
+      ]
     },
     {
       "gwId": "260713",
@@ -3744,7 +3761,6 @@
         "n8cKIW8um6",
         "6l2Gau7dLY",
         "HMm71Z_qdW",
-        "yf5HY1EA0",
         "7czTuVAr3Y"
       ],
       "raceList": {
@@ -3783,7 +3799,10 @@
       },
       "charaName": "ミホノブルボン",
       "db_id": 102601,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "UHfDH5HG1"
+      ]
     },
     {
       "gwId": "262557",
@@ -3924,7 +3943,8 @@
       },
       "charaName": "ビワハヤヒデ",
       "db_id": 102301,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": []
     },
     {
       "gwId": "266048",
@@ -4025,7 +4045,6 @@
         "uB3vfWSiC-",
         "ZM9wHrEL8j",
         "xE85sAt1JC",
-        "Zb-EN9Nn9",
         "4EFgUH4Kb-"
       ],
       "raceList": {
@@ -4052,7 +4071,10 @@
       },
       "charaName": "メジロマックイーン",
       "db_id": 101302,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "tjaDZ2KrQ"
+      ]
     },
     {
       "gwId": "266047",
@@ -4153,11 +4175,6 @@
         "bDq0DSjjs",
         "f8_jZtaym1",
         "iMnFKMTHsS",
-        "o8b2jVAusE",
-        "o8b2jVAusE",
-        "o8b2jVAusE",
-        "o8b2jVAusE",
-        "o8b2jVAusE",
         "7T0OxCevcG"
       ],
       "raceList": {
@@ -4192,7 +4209,14 @@
       },
       "charaName": "トウカイテイオー",
       "db_id": 100302,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "vFn67dQQYr",
+        "rtw6NoUxHV",
+        "mlBd_4kTNh",
+        "-_5h7zg-U",
+        "mGmEeFBU9C"
+      ]
     },
     {
       "gwId": "269486",
@@ -4301,7 +4325,6 @@
         "9Lsftld-e0",
         "w0R8btam99",
         "itUqkDpvIM",
-        "z4TKrTTDU",
         "ixb0HJR76"
       ],
       "raceList": {
@@ -4335,7 +4358,10 @@
         }
       },
       "db_id": 103801,
-      "default_rarity": 3
+      "default_rarity": 3,
+      "hideEvent": [
+        "Vm4NyYZ0j"
+      ]
     },
     {
       "gwId": "272328",
@@ -4473,7 +4499,8 @@
       },
       "db_id": 105001,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1050_105001_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1050_105001_01.png",
+      "hideEvent": []
     },
     {
       "gwId": "274944",
@@ -4619,7 +4646,8 @@
       },
       "db_id": 104601,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1046_104601_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1046_104601_01.png",
+      "hideEvent": []
     }
   ],
   "supports": [
@@ -90375,9 +90403,463 @@
       ],
       "id": "vXSggr2mf",
       "pid": "eFUs24ZUBZB"
+    },
+    {
+      "name": "サマースプリントシリーズ制覇",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の函館スプリントS、キーンランドC、セントウルS勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "体力+25",
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+15",
+            "パワー(力量)+15",
+            "のヒントLv+2"
+          ]
+        ]
+      ],
+      "id": "Vm4NyYZ0j",
+      "pid": "wYE6hDaJw"
+    },
+    {
+      "name": "秋シニア三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の天皇賞秋、ジャパンカップ、有馬記念勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "スピード(速度)+15",
+            "スタミナ(耐力)+15",
+            "根性(毅力)+15",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "tjaDZ2KrQ",
+      "pid": "zTxOqfQfU"
+    },
+    {
+      "name": "春シニア三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の大阪杯、天皇賞春、宝塚記念勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "スピード(速度)+25",
+            "パワー(力量)+25"
+          ]
+        ]
+      ],
+      "id": "vFn67dQQYr",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシック一冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "rtw6NoUxHV",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシック二冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞、日本ダービー勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムで(有概率)",
+            "のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "mlBd_4kTNh",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシック三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞、日本ダービー、菊花賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムで(有概率)",
+            "のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "-_5h7zg-U",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "無敗で皐月賞勝利",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "無敗で2年目の皐月賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "mGmEeFBU9C",
+      "pid": "ZkLLZhGL5"
+    },
+    {
+      "name": "クラシック三冠達成",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "皐月賞、日本ダービー、菊花賞で連続で1着を取る"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "ステータス(能力)上昇なし"
+          ]
+        ]
+      ],
+      "id": "UHfDH5HG1",
+      "pid": "ZK0ho0Wv9"
+    },
+    {
+      "name": "秋シニア三冠達成",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "天皇賞秋、ジャパンカップ",
+            "有馬記念で連続で1着を取る"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "zND7E5cP7q",
+      "pid": "0uJ0iropRbr"
+    },
+    {
+      "name": "七冠達成",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "G1で7回勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ステータス(能力)1種を+10"
+          ]
+        ]
+      ],
+      "id": "vgrj9A8AD",
+      "pid": "UD12auVv6Ew"
+    },
+    {
+      "name": "飛竜乗雲(八冠達成)",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "G1で8回勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "体力+30",
+            "やる気(干劲)3段階アップ(提升)",
+            "ランダムで(有概率)ステータス(能力)1種を+15"
+          ]
+        ]
+      ],
+      "id": "RM4lY-x3IG",
+      "pid": "UD12auVv6Ew"
+    },
+    {
+      "name": "クラシック三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞、日本ダービー、菊花賞(曇り)勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "Ifr_YsOk-o",
+      "pid": "UD12auVv6Ew"
+    },
+    {
+      "name": "秋シニア三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の天皇賞秋、ジャパンカップ、有馬記念勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "スピード(速度)+15",
+            "スタミナ(耐力)+15",
+            "根性(毅力)+15",
+            "スキルPt(技能点数)+15"
+          ]
+        ]
+      ],
+      "id": "tcQJ4nF_S",
+      "pid": "u5-gjKlwNzu"
+    },
+    {
+      "name": "サイレンススズカ、覚醒①~④",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "①3年目3月前半に出走しない",
+            "②3年目6月後半に出走しない",
+            "③3年目10月前半に出走しない",
+            "④3年目10月後半に出走しない"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "ステータス(能力)上昇なし"
+          ]
+        ]
+      ],
+      "id": "39Z3hikoWG",
+      "pid": "G9XvN_-v7ns"
+    },
+    {
+      "name": "天皇賞(春)にて",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の大阪杯勝利し、",
+            "天皇賞(春)に出走する"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "体力-15~20",
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ステータス(能力)1種を+4~10",
+            "スキルPt(技能点数)+25~45"
+          ]
+        ]
+      ],
+      "id": "-pBnCXJ5S",
+      "pid": "yGVHGFP5w4r"
+    },
+    {
+      "name": "ラジオNikkei賞勝利",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目のラジオNikkei賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "体力-15",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+60",
+            "になる"
+          ]
+        ]
+      ],
+      "id": "PYLQFCuxh5",
+      "pid": "q5Z2X7TCqU_"
+    },
+    {
+      "name": "春シニア三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "3年目の大阪杯、天皇賞春、宝塚記念勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "スピード(速度)+25",
+            "パワー(力量)+25"
+          ]
+        ]
+      ],
+      "id": "g_B2dVSP3A",
+      "pid": "eFUs24ZUBZB"
+    },
+    {
+      "name": "クラシック一冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "pBP-QC19hp",
+      "pid": "eFUs24ZUBZB"
+    },
+    {
+      "name": "クラシック二冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞、日本ダービー勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムで(有概率)",
+            "のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "zWc3vMb68b",
+      "pid": "eFUs24ZUBZB"
+    },
+    {
+      "name": "クラシック三冠",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "2年目の皐月賞、日本ダービー、菊花賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4",
+            "ランダムで(有概率)",
+            "のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "9LTDYExqOy",
+      "pid": "eFUs24ZUBZB"
+    },
+    {
+      "name": "無敗で皐月賞勝利",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "無敗で2年目の皐月賞勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "5種ステータス(能力)を+3",
+            "スキルPt(技能点数)+45",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "4kMQyKWz2",
+      "pid": "eFUs24ZUBZB"
     }
   ],
-  "updateTime": 1620465937558,
+  "updateTime": 1620698196728,
   "races": [
     {
       "name": "中京ジュニアステークス",

@@ -184,8 +184,9 @@ const Nurturing = () =>{
     {i: 'a', x: 0, y: 0, w: 2, h: 2},
     {i: 'b', x: 2, y: 0, w: 7, h: 2},
     {i: 'c', x: 0, y: 2, w: 9, h: 7},
-    {i: 'd', x: 0, y: 10, w: 4, h: 7},
+    {i: 'd', x: 0, y: 10, w: 4, h: 4},
     {i: 'e', x: 4, y: 10, w: 5, h: 7},
+    {i: 'f', x: 0, y: 14, w: 4, h: 3},
     // {i: 'w', x: 5, y: 10, w: 6, h: 7},
     {i: 's0', x: 17, y: 0, w: 5, h: 8},
     {i: 's1', x: 22, y: 0, w: 5, h: 8},
@@ -198,8 +199,9 @@ const Nurturing = () =>{
     {i: 'a', x: 0, y: 0, w: 2, h: 2},
     {i: 'b', x: 2, y: 0, w: 9, h: 2},
     {i: 'c', x: 0, y: 2, w: 11, h: 7},
-    {i: 'd', x: 0, y: 10, w: 5, h: 7},
+    {i: 'd', x: 0, y: 10, w: 5, h: 4},
     {i: 'e', x: 5, y: 10, w: 6, h: 7},
+    {i: 'f', x: 0, y: 14, w: 5, h: 3},
     // {i: 'w', x: 5, y: 10, w: 6, h: 7},
     {i: 's0', x: 11 , y: 0, w: 7, h: 8},
     {i: 's1', x: 18, y: 0, w: 7, h: 8},
@@ -296,7 +298,12 @@ const Nurturing = () =>{
           <RaceTimeline raceList={player.raceList||[]} filterRace={filterRace}></RaceTimeline>
         </ScrollBars>
       </div>
-
+      <div key='f' style={{...panelStyle}}>
+        <div className='panel-heading' style={{...headStyle}}>{t('隐藏事件')}</div>
+        <ScrollBars autoHide={true} style={{...pBodyStyle}}>
+          <EventList eventList={player.hideEvent||[]} pid={player.id} type='all'></EventList>
+        </ScrollBars>
+      </div>
         {[0,1,2,3,4,5].map(index=>{
           let support = supports[index];
           if(support.id){

@@ -30,12 +30,14 @@ const PlayerDetail = (props) =>{
   if(isNur){
     return <>
       <PlayerItem></PlayerItem>
-      <Divider>事件</Divider>
+      <Divider>{t("事件")}</Divider>
       <EventList eventList={data.eventList} pid={data.id} ></EventList>
-      <Divider>赛程</Divider>
+      <Divider>{t("隐藏事件")}</Divider>
+      <EventList eventList={data.hideEvent} pid={data.id} type='all'></EventList>
+      <Divider>{t("赛程")}</Divider>
       {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
       <RaceTimeline raceList={data.raceList}></RaceTimeline>
-      <Divider>技能</Divider>
+      <Divider>{t("技能")}</Divider>
       <SkillList skillList={data.skillList}></SkillList>
     </>
   }else{
@@ -49,6 +51,8 @@ const PlayerDetail = (props) =>{
     <SkillList skillList={data.skillList}></SkillList>
     <Divider>{t("事件")}</Divider>
     <EventList eventList={data.eventList} pid={data.id} ></EventList>
+    <Divider>{t("隐藏事件")}</Divider>
+    <EventList eventList={data.hideEvent} pid={data.id} type='all'></EventList>
     <Divider>{t("赛程")}</Divider>
     {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
     <RaceTimeline raceList={data.raceList}></RaceTimeline>
