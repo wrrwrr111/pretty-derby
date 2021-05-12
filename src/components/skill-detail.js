@@ -118,7 +118,7 @@ const SkillDetail = (props)=>{
     <Row>
     {supportList.sort((a,b)=>b.rarity-a.rarity).map(support=>
         <Col span={4} key={support.id}>
-          <SupportCard data={support}></SupportCard>
+          <SupportCard data={support} onSelect={()=>null}></SupportCard>
         </Col>)
       }
     </Row>
@@ -126,7 +126,7 @@ const SkillDetail = (props)=>{
     <Row>
     {playerList.sort((a,b)=>b.rarity-a.rarity).map(player=>
         <Col span={4} key={player.id}>
-          <PlayerCard data={player}></PlayerCard>
+          <PlayerCard data={player} onSelect={()=>null}></PlayerCard>
         </Col>)
       }
     </Row>
@@ -160,7 +160,8 @@ const SkillButton = (props)=>{
   return <Popover visible={ua==='mo'?false:undefined}
     content={<SkillDetail skill={skill} isNur={props.isNur||false}></SkillDetail>}>
     <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity}
-    style={props.usedInList?{...inListStyleOverride}:{}} onClick={()=>toSkillDetail(skill.id)}>
+    style={props.usedInList?{...inListStyleOverride}:{}}
+    onClick={()=>toSkillDetail(skill.id)}>
       <div style={props.usedInList?
         {display:'flex',position:'absolute',top:4,left:8,width:'100%'}:{width:'100%'}}>
       <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
@@ -226,10 +227,10 @@ const SkillCheckbox = React.memo((props)=>{
   }
   const filteredSkills = React.useMemo(() => Object.entries(checkboxGroupValues)
     .reduce((l, [key, values]) =>
-      values.length > 0 
+      values.length > 0
         ? l.filter(skill => {
             switch(key) {
-              case 'phase': 
+              case 'phase':
                 return ['phase', 'phase_random'].map(
                   _key => values.map(value => `${_key}==${value}`)
                 ).flat().some(phrase => skill.condition.includes(phrase));

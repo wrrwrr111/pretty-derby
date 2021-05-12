@@ -72,7 +72,7 @@ const Skill = (props) =>{
                 <Row gutter={[8,8]} key={rare}>
                   <Divider>{rareLabel[rare]}</Divider>
                   { skillList.filter(item=>item.rare === rare).map(skill=>
-                    <Col  xxl={6} lg={8} sm={12} xs={12}>
+                    <Col  xxl={6} lg={6} sm={12} xs={12}>
                       <SkillButton usedInList={true} skill={skill} key={skill.id}></SkillButton>
                     </Col>
                   )}
