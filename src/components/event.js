@@ -10,7 +10,6 @@ const EventList = (props)=>{
   const eventIdList = props.eventList
   const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
   const qieZhe = eventList.filter(event=>JSON.stringify(event).indexOf('切れ者')!==-1)
-  console.log(qieZhe)
   if(props.type==='multi'){
     return(<>
         {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}
