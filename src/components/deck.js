@@ -58,7 +58,7 @@ const MyDecks = (props)=>{
   }
 
   const labels = ['短距離','マイル','中距離','長距離','ダート','逃げ','先行','差し','追込',
-                  '高速度','高耐力','高力量','高根性 ','高智力','竞技场前排']
+                  '高速度','高耐力','高力量','高根性 ','高智力','竞技场前排','萌新之友']
   const onChangeTag =  (values,deck)=>{
     db.get('myDecks').find({id:deck.id}).assign({tags:values}).write()
     setDecks([...db.get('myDecks').value()])
