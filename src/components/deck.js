@@ -64,7 +64,8 @@ const MyDecks = (props)=>{
     setDecks([...db.get('myDecks').value()])
   }
 
-  return <Popover width={'100%'} content={
+  return <Popover width={'100%'}  overlayStyle={{maxHeight:800,overflow:'auto'}}
+  content={
     <>
           <Button onClick={()=>saveDeck()}>{t('保存为新卡组')}</Button>
           {decks.map(deck=>
