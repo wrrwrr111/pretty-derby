@@ -111,7 +111,10 @@ const RecommendDecks = (props)=>{
       setPlayerId(props.player.id)
     }
   }
-
+  const deleteDeck = async (deck)=>{
+    const res = await axios.post("https://urarawin.com/api/deleteDeck",deck)
+    searchDeck()
+  }
   return <Popover width={'100%'} onVisibleChange = {searchDeck} overlayStyle={{maxHeight:800,overflow:'auto'}}
   content={
     recommendDecks.map(deck=>
@@ -127,6 +130,7 @@ const RecommendDecks = (props)=>{
           )}
           <Col span={3}>
             <Button type="primary" onClick={()=>props.loadDeck(deck)}>{t('读取卡组')}</Button>
+            {/* <Button type="primary" onClick={()=>deleteDeck(deck)}>{t('删除卡组')}</Button> */}
           </Col>
         </Row>
       </>
