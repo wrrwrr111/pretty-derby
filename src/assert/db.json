@@ -1156,7 +1156,6 @@
         "KbKpqffdd2K",
         "vjOXzPKM-mj",
         "ufRKijyeEIr",
-        "iVe0yTU7H1",
         "bAB4RTaSb",
         "hg7KsojGc",
         "Iglhubokah",
@@ -4465,6 +4464,7 @@
         "Z6Jh5vPV7",
         "ELIp56NgKe",
         "cK9Mu6AKBx",
+        "0W6QnvjgY",
         "Px5oKwPieo",
         "iV3OKKd6sO",
         "Zg2atugBd8",
@@ -4637,6 +4637,7 @@
         "B5PRV3jkZh",
         "JtHtS5DwjG",
         "fA8Y6kP_Dp",
+        "TXuXIQ5RDU",
         "d6SDXvuGmVD"
       ],
       "raceList": {
@@ -4680,7 +4681,122 @@
       "db_id": 104601,
       "default_rarity": 3,
       "imgUrl": "img/chara_card/chr_icon_1046_104601_01.png",
-      "hideEvent": []
+      "hideEvent": [
+        "O6iDHe0R_",
+        "aV7OWv1Mu0"
+      ]
+    },
+    {
+      "gwId": "277266",
+      "id": "k3ak-7y4A",
+      "name": "Maverick",
+      "rare": "3",
+      "charaName": "ナリタブライアン",
+      "grass": "A",
+      "dirt": "G",
+      "shortDistance": "F",
+      "mile": "B",
+      "mediumDistance": "A",
+      "longDistance": "A",
+      "escape": "G",
+      "leading": "A",
+      "insert": "A",
+      "tracking": "D",
+      "speedGrow": "10%",
+      "staminaGrow": "20%",
+      "powerGrow": "0",
+      "gutsGrow": "0",
+      "wisdomGrow": "0",
+      "skillList": [
+        "DyWmjV4xaj",
+        "EOM5PqtmZUs",
+        "ja6Jl89t4x",
+        "EfTxxN-wUe",
+        "PXqe7XPh2Zi",
+        "OxpmVCloF",
+        "nG8aNw6Udb",
+        "z8o7DIWJkt"
+      ],
+      "uniqueSkillList": [
+        "DyWmjV4xaj"
+      ],
+      "initialSkillList": [
+        "EOM5PqtmZUs",
+        "ja6Jl89t4x",
+        "EfTxxN-wUe"
+      ],
+      "awakeningSkillList": [
+        "PXqe7XPh2Zi",
+        "OxpmVCloF",
+        "nG8aNw6Udb",
+        "z8o7DIWJkt"
+      ],
+      "eventList": [
+        "fIaSn4jyL",
+        "uvPvxe-pvu",
+        "7WCzoQ8Dq2",
+        "fWVmxB3cS_",
+        "1Q6yQ2mxRC",
+        "hC6-Zzd3YT",
+        "1jq44Ik2kJ",
+        "-9Z4Vh35EX",
+        "e-U380SO6j",
+        "KXBmbaMb6P",
+        "Jws-JIU0OD",
+        "1jq44Ik2kJ",
+        "DiM9pBW2rq",
+        "pO04ia4mYh",
+        "GYK_9Q3wOZ",
+        "E5AVqhiCZH",
+        "wasQtOTBUh",
+        "zU1ENOhXAOx",
+        "0OD9ew1stW2",
+        "dmYumQ-_YwW",
+        "YFekMgbv4F",
+        "Wi29IJC7Xz",
+        "BPuw_mkfL4",
+        "xBLIQnsNyl",
+        "rHgyzIG8od",
+        "TdrnrYiUsz",
+        "44V7h3FVXp",
+        "hKxTHe7-Eo",
+        "VdtXk6cPXq",
+        "ItEiV_qYUA",
+        "dPRacsQlqc",
+        "WGmKvCoeWZ",
+        "7NX_xmk9UN",
+        "CTF-vWqjwo"
+      ],
+      "hideEvent": [],
+      "raceList": {
+        "22": {
+          "id": "tzanC5qKusm",
+          "goal": "5着以内"
+        },
+        "30": {
+          "id": "Q9yy8aBzZU",
+          "goal": "5着以内"
+        },
+        "33": {
+          "id": "4T-bUPQMM0p",
+          "goal": "5着以内"
+        },
+        "43": {
+          "id": "rR8DSqacWC-",
+          "goal": "3着以内"
+        },
+        "47": {
+          "id": "OcoExcPhGYv",
+          "goal": "3着以内"
+        },
+        "53": {
+          "id": "6NdcMtaRvS",
+          "goal": "1着"
+        }
+      },
+      "db_id": 101601,
+      "default_rarity": 3,
+      "imgUrl": "img/chara_card/chr_icon_1016_101601_01.png"
     }
   ],
   "supports": [
@@ -26016,6 +26132,689 @@
       "rarity": 1,
       "rare": "R",
       "imgUrl": "img/support_card_with_icon/support_thumb_10058.png"
+    },
+    {
+      "gwId": "277332",
+      "name": "今ぞ盛りのさくら花",
+      "charaName": "サクラチヨノオー",
+      "rare":"SSR",
+      "id": "toa8tOcpl",
+      "skillList": [
+        "XsEAXKi5f",
+        "tiXFXDrN4c",
+        "3gvF368iuVV",
+        "kjP0LurWRte",
+        "-cFPxDA8Xjr",
+        "lSFwxam1V3y",
+        "Eqc5btQZy-c"
+      ],
+      "trainingEventSkill": [
+        "XsEAXKi5f",
+        "tiXFXDrN4c",
+        "3gvF368iuVV"
+      ],
+      "possessionSkill": [
+        "kjP0LurWRte",
+        "-cFPxDA8Xjr",
+        "lSFwxam1V3y",
+        "Eqc5btQZy-c"
+      ],
+      "baseAbility": {
+        "name": "今ぞ盛りのさくら花",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "トレーニング効果アップ(提升)とレースボーナス"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "nvXXvFFtiF",
+        "OUaSp3-iM4",
+        "3GLZhr9dD2",
+        "3aG4FZLPDA",
+        "6f_MD2L4_2",
+        "nvXXvFFtiF",
+        "OUaSp3-iM4"
+      ],
+      "db_id": 30038,
+      "effects": [
+        {
+          "id": 30038,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 15,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 20,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30038,
+          "type": 2,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 40,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 60
+        },
+        {
+          "id": 30038,
+          "type": 4,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30038,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30038,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": 10
+        },
+        {
+          "id": 30038,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": 15
+        },
+        {
+          "id": 30038,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 2,
+          "limit_lv30": 2,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 2,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30038,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 5,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 30,
+          "limit_lv30": 30,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30038,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 35,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 3,
+      "imgUrl": "img/support_card_with_icon/support_thumb_30038.png",
+      "unique_effect": {
+        "id": 30038,
+        "lv": 30,
+        "type_0": 8,
+        "value_0": 5,
+        "type_1": 15,
+        "value_1": 5
+      }
+    },
+    {
+      "gwId": "277327",
+      "name": "世界の真珠、その名は",
+      "charaName": "シーキングザパール",
+      "id": "_4DA-2oke",
+      "skillList": [
+        "eqNsnm5rHdT",
+        "kjP0LurWRte",
+        "KprPYh4Atix",
+        "eItZM_rb3Wm",
+        "hhMyzgZYBB",
+        "JfZuGZHSjLl",
+        "Q_eeNK9Ekb",
+        "YPlwrOopwv",
+        "sC9UYQ01L1"
+      ],
+      "trainingEventSkill": [
+        "eqNsnm5rHdT",
+        "kjP0LurWRte",
+        "KprPYh4Atix"
+      ],
+      "possessionSkill": [
+        "eItZM_rb3Wm",
+        "hhMyzgZYBB",
+        "JfZuGZHSjLl",
+        "Q_eeNK9Ekb",
+        "YPlwrOopwv",
+        "sC9UYQ01L1"
+      ],
+      "baseAbility": {
+        "name": "世界の真珠、その名は",
+        "ability": [
+          [
+            "Lv25~",
+            [
+              "友情ボーナスと初期絆ゲージアップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "0bTMBZ9m-5",
+        "GjaH-7R7rJ",
+        "mKBvh0sAxu",
+        "Mn_YcOJC_l",
+        "0bTMBZ9m-5",
+        "GjaH-7R7rJ"
+      ],
+      "db_id": 20029,
+      "effects": [
+        {
+          "id": 20029,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 25,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 30,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 1,
+          "limit_lv35": -1,
+          "limit_lv40": 2,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": 30,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 19,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 35,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 50,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20029,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 2,
+      "rare":"SR",
+      "imgUrl": "img/support_card_with_icon/support_thumb_20029.png",
+      "unique_effect": {
+        "id": 20029,
+        "lv": 25,
+        "type_0": 1,
+        "value_0": 10,
+        "type_1": 14,
+        "value_1": 15
+      }
+    },
+    {
+      "gwId": "277320",
+      "name": "トレセン学園",
+      "charaName": "シーキングザパール",
+      "id": "y1QQGdLH6",
+      "skillList": [
+        "eqNsnm5rHdT",
+        "eItZM_rb3Wm",
+        "hhMyzgZYBB",
+        "JfZuGZHSjLl",
+        "Q_eeNK9Ekb",
+        "YPlwrOopwv",
+        "sC9UYQ01L1"
+      ],
+      "trainingEventSkill": [
+        "eqNsnm5rHdT"
+      ],
+      "possessionSkill": [
+        "eItZM_rb3Wm",
+        "hhMyzgZYBB",
+        "JfZuGZHSjLl",
+        "Q_eeNK9Ekb",
+        "YPlwrOopwv",
+        "sC9UYQ01L1"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [],
+      "db_id": 10061,
+      "effects": [
+        {
+          "id": 10061,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 25,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": 1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 5,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 5,
+          "limit_lv20": 5,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 10,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 19,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 35,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 50,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10061,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1,
+      "rare":"R",
+      "imgUrl": "img/support_card_with_icon/support_thumb_10061.png"
+    },
+    {
+      "gwId": "277321",
+      "name": "トレセン学園",
+      "charaName": "サクラチヨノオー",
+      "id": "Bjvtu9S6M",
+      "skillList": [
+        "3gvF368iuVV",
+        "kjP0LurWRte",
+        "-cFPxDA8Xjr",
+        "lSFwxam1V3y",
+        "Eqc5btQZy-c"
+      ],
+      "trainingEventSkill": [
+        "3gvF368iuVV"
+      ],
+      "possessionSkill": [
+        "kjP0LurWRte",
+        "-cFPxDA8Xjr",
+        "lSFwxam1V3y",
+        "Eqc5btQZy-c"
+      ],
+      "baseAbility": {
+        "name": "なし",
+        "ability": [
+          [
+            "Lvなし~",
+            []
+          ]
+        ]
+      },
+      "eventList": [],
+      "db_id": 10062,
+      "effects": [
+        {
+          "id": 10062,
+          "type": 1,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": 10,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 15,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 2,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 25,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 35,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 4,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": 1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": 1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 2,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 30,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10062,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": 5,
+          "limit_lv10": -1,
+          "limit_lv15": 20,
+          "limit_lv20": 20,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 35,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1,
+      "rare":"R",
+      "imgUrl": "img/support_card_with_icon/support_thumb_10062.png"
     }
   ],
   "skills": [
@@ -26054,7 +26853,7 @@
       "db_id": 200432,
       "icon_id": 20061,
       "ability_value": 9000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -26102,7 +26901,7 @@
       "db_id": 200712,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -26198,7 +26997,7 @@
       "db_id": 201352,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -26594,7 +27393,7 @@
       "db_id": 200572,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -26834,7 +27633,7 @@
       "db_id": 200742,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -26858,7 +27657,7 @@
       "db_id": 200861,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27008,7 +27807,7 @@
       "db_id": 200382,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -27104,7 +27903,7 @@
       "db_id": 200871,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27332,7 +28131,7 @@
       "db_id": 10451,
       "icon_id": 20023,
       "ability_value": 350,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27356,7 +28155,7 @@
       "db_id": 200352,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -27524,7 +28323,7 @@
       "db_id": 10321,
       "icon_id": 20023,
       "ability_value": 350,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27620,7 +28419,7 @@
       "db_id": 200841,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27692,7 +28491,7 @@
       "db_id": 201422,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27752,7 +28551,7 @@
       "db_id": 10521,
       "icon_id": 20023,
       "ability_value": 350,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27776,7 +28575,7 @@
       "db_id": 200442,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -27872,7 +28671,7 @@
       "db_id": 201162,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -27896,7 +28695,7 @@
       "db_id": 201442,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28088,7 +28887,7 @@
       "db_id": 200762,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28394,7 +29193,7 @@
       "db_id": 201142,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28466,7 +29265,7 @@
       "db_id": 200622,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28538,7 +29337,7 @@
       "db_id": 201482,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28712,7 +29511,7 @@
       "db_id": 200801,
       "icon_id": 30041,
       "ability_value": 50000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -28832,7 +29631,7 @@
       "db_id": 200381,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -29096,7 +29895,7 @@
       "db_id": 200771,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29120,7 +29919,7 @@
       "db_id": 200811,
       "icon_id": 30041,
       "ability_value": 50000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29192,7 +29991,7 @@
       "db_id": 200482,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -29240,7 +30039,7 @@
       "db_id": 200901,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29336,7 +30135,7 @@
       "db_id": 201281,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29360,7 +30159,7 @@
       "db_id": 201282,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29432,7 +30231,7 @@
       "db_id": 200472,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -29480,7 +30279,7 @@
       "db_id": 201492,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29600,7 +30399,7 @@
       "db_id": 200791,
       "icon_id": 30041,
       "ability_value": 50000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29744,7 +30543,7 @@
       "db_id": 200691,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29792,7 +30591,7 @@
       "db_id": 200692,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -29888,7 +30687,7 @@
       "db_id": 200351,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -30008,7 +30807,7 @@
       "db_id": 200662,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30086,7 +30885,7 @@
       "db_id": 201022,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30110,7 +30909,7 @@
       "db_id": 200431,
       "icon_id": 20062,
       "ability_value": 4000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30134,7 +30933,7 @@
       "db_id": 200931,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30374,7 +31173,7 @@
       "db_id": 200821,
       "icon_id": 30041,
       "ability_value": 50000,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30422,7 +31221,7 @@
       "db_id": 201202,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30494,7 +31293,7 @@
       "db_id": 200831,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30614,7 +31413,7 @@
       "db_id": 200781,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30638,7 +31437,7 @@
       "db_id": 201571,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30662,7 +31461,7 @@
       "db_id": 201621,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30782,7 +31581,7 @@
       "db_id": 200891,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30806,7 +31605,7 @@
       "db_id": 200921,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30830,7 +31629,7 @@
       "db_id": 200741,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30854,7 +31653,7 @@
       "db_id": 200481,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -30878,7 +31677,7 @@
       "db_id": 200761,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30902,7 +31701,7 @@
       "db_id": 201351,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -30926,7 +31725,7 @@
       "db_id": 200562,
       "icon_id": 20021,
       "ability_value": 150,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31004,7 +31803,7 @@
       "db_id": 201222,
       "icon_id": 30051,
       "ability_value": -50,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31184,7 +31983,7 @@
       "db_id": 200561,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31304,7 +32103,7 @@
       "db_id": 201481,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31328,7 +32127,7 @@
       "db_id": 200571,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31526,7 +32325,7 @@
       "db_id": 200441,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -31550,7 +32349,7 @@
       "db_id": 200471,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 300000,
       "ability": [
         {
@@ -31597,7 +32396,7 @@
       "db_id": 200781,
       "icon_id": 30051,
       "ability_value": -100,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31657,7 +32456,7 @@
       "db_id": 201161,
       "icon_id": 30052,
       "ability_value": -300,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31681,7 +32480,7 @@
       "db_id": 201441,
       "icon_id": 30052,
       "ability_value": -300,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31801,7 +32600,7 @@
       "db_id": 200711,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -31897,7 +32696,7 @@
       "db_id": 201141,
       "icon_id": 20022,
       "ability_value": 550,
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "ability": [
         {
@@ -32131,7 +32930,7 @@
           "target_value": 0
         }
       ],
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "need_skill_point": 0,
       "grade_value": 340
@@ -32177,7 +32976,7 @@
           "target_value": 0
         }
       ],
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "need_skill_point": 0,
       "grade_value": 340
@@ -32246,7 +33045,7 @@
           "target_value": 0
         }
       ],
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "need_skill_point": 0,
       "grade_value": 340
@@ -32437,7 +33236,7 @@
           "target_value": 0
         }
       ],
-      "ability_time": -1,
+      "ability_time": 0,
       "cooldown": 5000000,
       "need_skill_point": 180
     },
@@ -33666,6 +34465,36 @@
       "ability_time": -1,
       "cooldown": 0,
       "need_skill_point": 110
+    },
+    {
+      "name": "Shadow Break",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終コーナー以降で外から追い抜くと怪物的な力で、速度を上げる",
+      "id": "DyWmjV4xaj",
+      "condition": "is_finalcorner==1&order>=2&order_rate<=75&is_behind_in==1&change_order_onetime<0",
+      "rarity": 5,
+      "db_id": 100161,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "コーナー回復◎",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill86.png",
+      "rare": "ノーマル",
+      "describe": "無駄のないコーナリングで持久力がわずかに回復する",
+      "id": "K_A7NWHE6"
     }
   ],
   "events": [
@@ -41400,8 +42229,13 @@
         [
           "自分でとったなら食べなきゃな",
           [
+            "成功時：",
             "体力+30",
             "スキルPt(技能点数)+10",
+            "失敗時：",
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "スピード(速度)-5",
             "ランダムで(有概率)『太り気味』になる"
           ]
         ]
@@ -88816,7 +89650,7 @@
             "ランダムで(有概率)2種ステータス(能力)を+15",
             "失敗時：",
             "体力-15",
-            "直前のトレーニングに応じたステータス(能力)+10"
+            "ランダムで(有概率)1種ステータス(能力)をステータス(能力)+10"
           ]
         ]
       ],
@@ -90189,8 +91023,13 @@
         [
           "よし！行ってらっしゃい！",
           [
+            "成功時：",
             "体力+30",
             "スキルPt(技能点数)+10",
+            "失敗時：",
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "スピード(速度)-5",
             "ランダムで(有概率)『太り気味』になる"
           ]
         ]
@@ -90287,8 +91126,8 @@
         [
           "選択肢なし",
           [
-            "『ファンとの約束・◯◯』を獲得（◯◯→北東・小倉・北海道を確認）",
-            "※獲得レース場は検証中"
+            "『ファンとの約束・◯◯』を獲得",
+            "※北海道・北東・小倉・関西・中山のいずれか"
           ]
         ]
       ],
@@ -90961,13 +91800,34 @@
         [
           "選択肢なし",
           [
-            "札幌達成時：",
+            "北海道達成時：",
             "やる気(干劲)アップ(提升)",
             "スピード(速度)+10",
             "根性(毅力)+10",
             "スキルPt(技能点数)+10",
-            "『札幌レース場◯』のヒントLv+5",
+            "『札幌/函館レース場◯』のヒントLv+5",
             "『ファンとの約束・北海道』がなくなる",
+            "北東達成時：",
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+10",
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+10",
+            "『福島/新潟レース場◯』のヒントLv+5",
+            "『ファンとの約束・北東』がなくなる",
+            "小倉達成時：",
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10",
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+10",
+            "『小倉レース場◯』のヒントLv+5",
+            "『ファンとの約束・小倉』がなくなる",
+            "関西達成時：",
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10",
+            "賢さ(智力)+10",
+            "スキルPt(技能点数)+10",
+            "『京都/阪神レース場◯』のヒントLv+5",
+            "『ファンとの約束・関西』がなくなる",
             "中山達成時：",
             "やる気(干劲)アップ(提升)",
             "パワー(力量)+10",
@@ -92603,9 +93463,1007 @@
       "describe": "ゴールドシップで宝塚記念を連破した際に、勝利後のイベント内容が変化する。下の選択肢を選ぶと",
       "id": "LB6SueNot",
       "pid": "7jVDy4t60iW"
+    },
+    {
+      "name": "あんし〜ん笹針師、参☆上",
+      "choiceList": [
+        [
+          "強いウマ娘になれる秘孔を狙う",
+          [
+            "成功時:5種ステータス(能力)+20",
+            "失敗時:やる気(干劲)ダウン(下降)",
+            "全ステータス(能力)-15",
+            "『夜ふかし気味』になる"
+          ]
+        ],
+        [
+          "レースで勝てる秘孔を狙う",
+          [
+            "成功時:『コーナー回復◯』取得",
+            "『直線回復』取得",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ],
+        [
+          "元気で健康になれる秘孔を狙う",
+          [
+            "成功時:体力の最大値+12",
+            "体力+40",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "魅力アップの秘孔を狙う",
+          [
+            "成功時:体力+20",
+            "やる気(干劲)アップ(提升)",
+            "『愛嬌◯』になる",
+            "失敗時:体力-20",
+            "やる気(干劲)ダウン(下降)",
+            "『練習ベタ』になる"
+          ]
+        ],
+        [
+          "不安なのでやめておく",
+          [
+            "体力+10"
+          ]
+        ]
+      ],
+      "id": "YFekMgbv4F",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "福引チャンス！",
+      "choiceList": [
+        [
+          "特賞(温泉旅行券)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)+10"
+          ]
+        ],
+        [
+          "1等(特上にんじんハンバーグ)",
+          [
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+10"
+          ]
+        ],
+        [
+          "2等(にんじん山盛り)",
+          [
+            "体力+20",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "3等(にんじん1本)",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "はずれ",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "Wi29IJC7Xz",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "BPuw_mkfL4",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "ファンレター",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "xBLIQnsNyl",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "クリスマス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "rHgyzIG8od",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "ファン感謝祭",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-5",
+            "スキルPt(技能点数)+25"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)ウマ娘固有スキルLv+1"
+          ]
+        ]
+      ],
+      "id": "TdrnrYiUsz",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "夏合宿（2年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "44V7h3FVXp",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "夏合宿（3年目）終了",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)3種を+5"
+          ]
+        ]
+      ],
+      "id": "hKxTHe7-Eo",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "『月刊トゥインクル増刊号』",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+3",
+            "スキルPt(技能点数)+10"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)+5",
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "VdtXk6cPXq",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "上々の面構えッ！",
+      "choiceList": [
+        [
+          "では、新しい練習用具をいただけますか？",
+          [
+            "体力-10",
+            "パワー(力量)+20",
+            "根性(毅力)+20",
+            "『ハヤテ一文字』のヒントLv+1"
+          ]
+        ],
+        [
+          "では、にんじんを分けていただけますか？",
+          [
+            "体力+30",
+            "スタミナ(耐力)+20",
+            "『好転一息』のヒントLv+1"
+          ]
+        ],
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "ItEiV_qYUA",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "トレーナー並の知識",
+      "choiceList": [
+        [
+          "力強さが課題なんですが……",
+          [
+            "パワー(力量)+10",
+            "乙名史記者の絆ゲージ+5"
+          ]
+        ],
+        [
+          "スピードが課題なんですが……",
+          [
+            "スピード(速度)+10",
+            "乙名史記者の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "dPRacsQlqc",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "乙名史記者の徹底取材",
+      "choiceList": [
+        [
+          "現状を真摯に受け止めます",
+          [
+            "成功：",
+            "体力-15",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)からランダムに(随机)1種を+0~4",
+            "スキルPt(技能点数)+10~25",
+            "乙名史記者の絆ゲージ+15",
+            "※上昇値は出走レースで変動",
+            "失敗：",
+            "体力-25",
+            "やる気(干劲)ダウン(下降)",
+            "スキルPt(技能点数)+10~30",
+            "5種ステータス(能力)からランダムに(随机)1種を+0~4",
+            "乙名史記者の絆ゲージ-10",
+            "ランダムで(有概率)『小心者』になる",
+            "※上昇値は出走レースで変動"
+          ]
+        ],
+        [
+          "このまま突き進みます！！",
+          [
+            "体力-15or25or30",
+            "5種ステータス(能力)からランダムに(随机)1種を+0~4",
+            "スキルPt(技能点数)+10~25",
+            "乙名史記者の絆ゲージ+10",
+            "※上昇値は出走レースで変動"
+          ]
+        ]
+      ],
+      "id": "WGmKvCoeWZ",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "乙名史記者の悦楽取材",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-15",
+            "ランダム能力+5",
+            "スキルPt(技能点数)+35",
+            "やる気(干劲)アップ(提升)",
+            "ファン+500",
+            "乙名史記者の絆ゲージ+15",
+            "『晴れの日◯』のヒントLv+1(ランダム)"
+          ]
+        ]
+      ],
+      "id": "7NX_xmk9UN",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "愉快ッ！密着取材！",
+      "choiceList": [
+        [
+          "尊敬すべき理事長です",
+          [
+            "スタミナ(耐力)+10",
+            "乙名史記者の絆ゲージ+5"
+          ]
+        ],
+        [
+          "暴走することが多いような",
+          [
+            "根性(毅力)+10",
+            "乙名史記者の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "CTF-vWqjwo",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "今日の格言！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "nvXXvFFtiF",
+      "pid": "toa8tOcpl"
+    },
+    {
+      "name": "いつか咲く、その日まで……",
+      "choiceList": [
+        [
+          "自分らしさも大事かと",
+          [
+            "体力+5",
+            "スタミナ(耐力)＋5",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "きっとなれる！",
+          [
+            "『春ウマ娘◯』のヒントLv+1",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "OUaSp3-iM4",
+      "pid": "toa8tOcpl"
+    },
+    {
+      "name": "花咲く、一歩！",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スキルpt+15"
+          ]
+        ]
+      ],
+      "id": "3GLZhr9dD2",
+      "pid": "toa8tOcpl"
+    },
+    {
+      "name": "花咲く、希望！",
+      "choiceList": [
+        [
+          "どうせなら思いっきり楽しもう！",
+          [
+            "スタミナ(耐力)+15",
+            "サクラチヨノオーの絆ゲージ+5",
+            "体力減少",
+            "根性(毅力)+15",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "のんびりやるといいよ",
+          [
+            "体力+10",
+            "やる気(干劲)アップ(提升)",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "3aG4FZLPDA",
+      "pid": "toa8tOcpl"
+    },
+    {
+      "name": "花咲く、いつか！",
+      "choiceList": [
+        [
+          "結果はすぐには出ない",
+          [
+            "スタミナ(耐力)+20",
+            "スキルpt+10",
+            "『スピード(速度)スター』のヒントLv+3",
+            "サクラチヨノオーの絆ゲージ+5",
+            "体力-15",
+            "スタミナ(耐力)+10",
+            "スキルpt+5",
+            "『抜け出し準備』のヒントLv+3",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "もう克服は諦める？",
+          [
+            "スピード(速度)+5",
+            "スタミナ(耐力)+10",
+            "パワー(力量)+5",
+            "スキルPt(技能点数)+30",
+            "サクラチヨノオーの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "6f_MD2L4_2",
+      "pid": "toa8tOcpl"
+    },
+    {
+      "name": "特定のレース場で勝利",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "ファンとの約束獲得後に特定のレース場で勝利"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "やる気(干劲)アップ(提升)",
+            "レース場ごとの2種ステータス(能力)+10",
+            "該当のレース場◯のヒントLv+5"
+          ]
+        ]
+      ],
+      "describe": "『ファンとの約束：〇〇』を獲得後に対応した開催地のレースで勝利することでボーナスイベントが発生。やる気アップに加えてレース場ごとにステータス2種が上がり、スキルPt+10、該当のレース場のヒントLv+5を獲得できる。前提イベントは1年目の7〜9月に発生することを確認している。",
+      "id": "O6iDHe0R_",
+      "pid": "2y6jIQAwv"
+    },
+    {
+      "name": "詳細な上昇値",
+      "choiceList": [
+        [
+          "北海道",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+10",
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+10",
+            "『札幌/函館レース場◯』のヒントLv+5",
+            "『ファンとの約束・北海道』がなくなる"
+          ]
+        ],
+        [
+          "北東",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+10",
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+10",
+            "『福島/新潟レース場◯』のヒントLv+5",
+            "『ファンとの約束・北東』がなくなる"
+          ]
+        ],
+        [
+          "小倉",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10",
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+10",
+            "『小倉レース場◯』のヒントLv+5",
+            "『ファンとの約束・小倉』がなくなる"
+          ]
+        ],
+        [
+          "関西",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10",
+            "賢さ(智力)+10",
+            "スキルPt(技能点数)+10",
+            "『京都/阪神レース場◯』のヒントLv+5",
+            "『ファンとの約束・関西』がなくなる"
+          ]
+        ],
+        [
+          "中山",
+          [
+            "やる気(干劲)アップ(提升)",
+            "パワー(力量)+10",
+            "根性(毅力)+10",
+            "スキルPt(技能点数)+10",
+            "『中山レース場◯』のヒントLv+5",
+            "『ファンとの約束・中山』がなくなる"
+          ]
+        ]
+      ],
+      "id": "TXuXIQ5RDU",
+      "pid": "2y6jIQAwv"
+    },
+    {
+      "name": "ファン数12万人到達",
+      "choiceList": [
+        [
+          "発生条件",
+          [
+            "URAファイナルズ前にファン数12万人達成"
+          ]
+        ],
+        [
+          "効果",
+          [
+            "やる気(干劲)アップ(提升)",
+            "根性(毅力)+20",
+            "のヒントLv3アップ(提升)"
+          ]
+        ]
+      ],
+      "describe": "ファン数がURAファイナルズに突入する前に12万人到達すると、やる気アップや根性+20に加えて",
+      "id": "aV7OWv1Mu0",
+      "pid": "2y6jIQAwv"
+    },
+    {
+      "name": "モヤつく気持ちは自主トレで？",
+      "choiceList": [
+        [
+          "じゃあ代わりにゆっくり休もうか",
+          [
+            "体力+10",
+            "調査中"
+          ]
+        ],
+        [
+          "ほどほどになら大丈夫だ！",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "いや、思う存分やろう！",
+          [
+            "成功時：",
+            "体力-15",
+            "やる気(干劲)アップ(提升)",
+            "ランダムで(有概率)2種ステータス(能力)を+15",
+            "調査中",
+            "失敗時：",
+            "体力-15",
+            "直前のトレーニングに応じたステータス(能力)+10",
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "0W6QnvjgY",
+      "pid": "_1hjTWZ-9"
+    },
+    {
+      "name": "全力でパッション！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "0bTMBZ9m-5",
+      "pid": "_4DA-2oke"
+    },
+    {
+      "name": "全力でシンキング！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "GjaH-7R7rJ",
+      "pid": "_4DA-2oke"
+    },
+    {
+      "name": "言葉はノンノン♪　ボディで語るの！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "mKBvh0sAxu",
+      "pid": "_4DA-2oke"
+    },
+    {
+      "name": "諦めないで！　可能性は無限大！",
+      "choiceList": [
+        [
+          "調査中",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "Mn_YcOJC_l",
+      "pid": "_4DA-2oke"
+    },
+    {
+      "name": "飢えた戦士たち",
+      "choiceList": [
+        [
+          "勝負はやめて、別のメニューにしない？",
+          [
+            "体力+5",
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "スピード勝負！ハバネロ肉まん完食対決！",
+          [
+            "調査中"
+          ]
+        ],
+        [
+          "スタミナ勝負！ダンスDEフィーバー！",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "fIaSn4jyL",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "意匠",
+      "choiceList": [
+        [
+          "本番のレースも楽しみだ",
+          [
+            "スピード(速度)+20"
+          ]
+        ]
+      ],
+      "id": "uvPvxe-pvu",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "追加の自主トレ",
+      "choiceList": [
+        [
+          "燃え上がるぞ！",
+          [
+            "体力-5",
+            "直前のトレーニングに応じたステータス(能力)+5",
+            "秋川理事長の絆ゲージ+5"
+          ]
+        ],
+        [
+          "燃えるのは明日に",
+          [
+            "体力+5"
+          ]
+        ]
+      ],
+      "id": "7WCzoQ8Dq2",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "武骨",
+      "choiceList": [
+        [
+          "カッコよさに、感動したのかも",
+          [
+            "スタミナ(耐力)+20"
+          ]
+        ]
+      ],
+      "id": "fWVmxB3cS_",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "超越",
+      "choiceList": [
+        [
+          "力強さ、かな？",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "粘り強く、観察してください",
+          [
+            "スタミナ(耐力)+5",
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "1Q6yQ2mxRC",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "肉食",
+      "choiceList": [
+        [
+          "食べすぎだよ",
+          [
+            "体力+10",
+            "スキルPt(技能点数)+5"
+          ]
+        ],
+        [
+          "お言葉に甘えたら？",
+          [
+            "成功時：",
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "失敗時：",
+            "体力+30",
+            "スキルPt(技能点数)+10",
+            "スピード(速度)-5",
+            "ランダムで(有概率)『太り気味』になる"
+          ]
+        ]
+      ],
+      "id": "hC6-Zzd3YT",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "憧憬",
+      "choiceList": [
+        [
+          "その信念は、きっと力になる",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "併走で力比べしてみるか？",
+          [
+            "調査中"
+          ]
+        ]
+      ],
+      "id": "1jq44Ik2kJ",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "不動",
+      "choiceList": [
+        [
+          "スーツとか！",
+          [
+            "スピード(速度)+20"
+          ]
+        ]
+      ],
+      "id": "-9Z4Vh35EX",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "お大事に！",
+      "choiceList": [
+        [
+          "本当に大丈夫か？",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-5",
+            "ランダムで(有概率)『練習下手』になる"
+          ]
+        ],
+        [
+          "練習を続けるか？",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-10",
+            "ランダムで(有概率)『練習下手』になる",
+            "『練習上手◯』になる"
+          ]
+        ]
+      ],
+      "id": "e-U380SO6j",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "無茶は厳禁！",
+      "choiceList": [
+        [
+          "しばらく安静にしよう",
+          [
+            "体力+10",
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-10",
+            "5種ステータス(能力)からランダムに(随机)2種を-10",
+            "ランダムで(有概率)『練習ベタ』になる"
+          ]
+        ],
+        [
+          "頑張って手当てするよ",
+          [
+            "やる気(干劲)4段階ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-10",
+            "5種ステータス(能力)からランダムに(随机)2種を-10",
+            "『練習ベタ』になる",
+            "体力+10",
+            "『練習上手◯』になる"
+          ]
+        ]
+      ],
+      "id": "KXBmbaMb6P",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "新年の抱負",
+      "choiceList": [
+        [
+          "勝負が楽しみだな",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "みかんは栄養たっぷりだからな",
+          [
+            "体力+20"
+          ]
+        ],
+        [
+          "敵に塩を送ったのか？",
+          [
+            "スキルPt(技能点数)+20"
+          ]
+        ]
+      ],
+      "id": "Jws-JIU0OD",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "手腕",
+      "choiceList": [
+        [
+          "瞬発力を活かしただけだよ",
+          [
+            "スピード(速度)+15"
+          ]
+        ]
+      ],
+      "id": "DiM9pBW2rq",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "今日はいいリフレッシュになったよ",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "正月明けのトレーニング、楽しみにしてて！",
+          [
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "ゲーセンでも行こうか！",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "pO04ia4mYh",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "溜",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "GYK_9Q3wOZ",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "緑の贖罪",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力-10",
+            "やる気(干劲)ダウン(下降)"
+          ]
+        ]
+      ],
+      "id": "E5AVqhiCZH",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "頭痛で憂鬱",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "賢さ(智力)-5"
+          ]
+        ]
+      ],
+      "id": "wasQtOTBUh",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "夏合宿（2年目）にて",
+      "choiceList": [
+        [
+          "声をかける",
+          [
+            "パワー(力量)+10"
+          ]
+        ],
+        [
+          "そっとしておく",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "zU1ENOhXAOx",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "今",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "0OD9ew1stW2",
+      "pid": "k3ak-7y4A"
+    },
+    {
+      "name": "告",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "賢さ(智力)+5"
+          ]
+        ]
+      ],
+      "id": "dmYumQ-_YwW",
+      "pid": "k3ak-7y4A"
     }
   ],
-  "updateTime": 1620808786024,
+  "updateTime": 1621227576309,
   "races": [
     {
       "name": "中京ジュニアステークス",

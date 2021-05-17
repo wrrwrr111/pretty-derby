@@ -64,7 +64,7 @@ const SupportCard = (props)=>{
   return (
     <>
       <Tooltip title={`${support.name}----${t(support.charaName)}`}>
-        <Image src={cdnServer+support.imgUrl} preview={false}  onClick={showSupportDetail} width={'100%'}></Image>
+        <Image src={cdnServer+support.imgUrl} preview={false}  onClick={showSupportDetail} alt={support.charaName} width={'100%'}></Image>
       </Tooltip>
 
       <Modal title={`${support.name}----${t(support.charaName)}`}
