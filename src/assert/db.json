@@ -34533,27 +34533,6 @@
       "ability_time": 50000,
       "cooldown": 5000000,
       "need_skill_point": 0
-    },
-    {
-      "name": "コーナー回復◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill86.png",
-      "rare": "ノーマル",
-      "describe": "無駄のないコーナリングで持久力がわずかに回復する",
-      "id": "K_A7NWHE6"
-    },
-    {
-      "name": "コーナー加速◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill138.png",
-      "rare": "ノーマル",
-      "describe": "華麗なコーナーワークで加速力がわずかに上がる",
-      "id": "AH0R7YiJI"
-    },
-    {
-      "name": "コーナー巧者◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill133.png",
-      "rare": "ノーマル",
-      "describe": "コーナーが得意になり速度がわずかに上がる",
-      "id": "EDSLnpOsa"
     }
   ],
   "events": [
