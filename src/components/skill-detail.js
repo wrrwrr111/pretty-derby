@@ -229,6 +229,9 @@ const SkillCheckbox = React.memo((props)=>{
     .reduce((l, [key, values]) =>
       values.length > 0
         ? l.filter(skill => {
+            if(!skill.condition){
+              return false
+            }
             switch(key) {
               case 'phase':
                 return ['phase', 'phase_random'].map(
