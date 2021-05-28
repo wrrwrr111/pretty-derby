@@ -1,14 +1,12 @@
+---结构体---
 {
-  "player":{
+  "card":{
     "basic":{
       "title":"基础信息",
       "data":[
         {"key":"id","title":"id","type":"text"},
-        {"key":"rarity","title":"稀有度","type":"rarity"},
-        {"key":"name","title":""名字",
-        "data":[
-
-        ]","type":"text"},
+        {"key":"rarity","title":"稀有度","type":"card_rarity"},
+        {"key":"name","title":"名字","type":"text"},
         {"key":"name2","title":"昵称","type":"text"},
         {"key":"image","title":"图片","type":"image"}
       ]
@@ -16,26 +14,26 @@
     "ground":{
       "title":"场地适应",
       "data":[
-        {"key":"ground_turf","title":"草地","type":"id","data_source":"adapt"},
-        {"key":"ground_dirt","title":"泥地","type":"id","data_source":"adapt"}
+        {"key":"ground_turf","title":"草地","type":"id","data_source":"card_adapt"},
+        {"key":"ground_dirt","title":"泥地","type":"id","data_source":"card_adapt"}
       ]
     },
     "distance":{
       "title":"距离适应",
       "data":[
-        {"key":"distance_short","title":"短距离","type":"id","data_source":"adapt"},
-        {"key":"distance_mile","title":"英里","type":"id","data_source":"adapt"},
-        {"key":"distance_middle","title":"中距离","type":"id","data_source":"adapt"},
-        {"key":"distance_long","title":"长距离","type":"id","data_source":"adapt"}
+        {"key":"distance_short","title":"短距离","type":"id","data_source":"card_adapt"},
+        {"key":"distance_mile","title":"英里","type":"id","data_source":"card_adapt"},
+        {"key":"distance_middle","title":"中距离","type":"id","data_source":"card_adapt"},
+        {"key":"distance_long","title":"长距离","type":"id","data_source":"card_adapt"}
       ]
     },
     "running_style":{
       "title":"跑法适应",
       "data":[
-        {"key":"running_style_nige","title":"逃","type":"id","data_source":"adapt"},
-        {"key":"running_style_senko","title":"先","type":"id","data_source":"adapt"},
-        {"key":"running_style_sashi","title":"差","type":"id","data_source":"adapt"},
-        {"key":"running_style_oikomi","title":"追","type":"id","data_source":"adapt"}
+        {"key":"running_style_nige","title":"逃","type":"id","data_source":"card_adapt"},
+        {"key":"running_style_senko","title":"先","type":"id","data_source":"card_adapt"},
+        {"key":"running_style_sashi","title":"差","type":"id","data_source":"card_adapt"},
+        {"key":"running_style_oikomi","title":"追","type":"id","data_source":"card_adapt"}
       ]
     },
     "attr_grow":{
@@ -62,28 +60,30 @@
       ]
     }
   },
-  "rarity":{
-    "1":"1星",
-    "2":"2星",
-    "3":"3星"
+  "card_rarity":{
+    "basic":{
+      "title":"稀有度",
+      "data":[
+        {"key":"id","title":"id","type":"text"},
+        {"key":"title","title":"名字","type":"text"}
+      ]
+    }
   },
-  "adapt":{
-    "0":"0",
-    "1":"G",
-    "2":"F",
-    "3":"E",
-    "4":"D",
-    "5":"C",
-    "6":"B",
-    "7":"A",
-    "8":"S"
+  "card_adapt":{
+    "basic":{
+      "title":"适应性",
+      "data":[
+        {"key":"id","title":"id","type":"text"},
+        {"key":"title","title":"名字","type":"text"}
+      ]
+    }
   },
   "skill":{
     "basic":{
       "title":"技能信息",
       "data":[
         {"key":"id","title":"id","type":"text"},
-        {"key":"rarity","title":"稀有度","type":"rarity"},
+        {"key":"rarity","title":"稀有度","type":"skill_rarity"},
         {"key":"name","title":"名字","type":"text"},
         {"key":"image","title":"图片","type":"image"},
         {"key":"cool_down","title":"冷却时间","type":"number"},
@@ -105,8 +105,9 @@
   },
   "event":{
     "basic":{
-      "title":"事件",
+      "title":"事件信息",
       "data":[
+        {"key":"id","title":"id","type":"text"},
         {"key":"name","title":"名字","type":"text"},
         {"key":"choices","title":"选项","type":"id_list","data_source":"event_choice"}
       ]
@@ -116,9 +117,70 @@
     "basic":{
       "title":"选项",
       "data":[
+        {"key":"id","title":"id","type":"text"},
         {"key":"name","title":"名字","type":"text"},
         {"key":"results","title":"结果","type":"text"}
       ]
     }
   }
+}
+
+---实际数据---
+{
+  "card":[
+    {
+      "id":"card-t-1",
+      "rarity":"3",
+      "name":"card name",
+      "name2":"card name 2",
+      "image":"url",
+      "ground_turf":"3",
+      "ground_dirt":"4",
+      "distance_short":"5",
+      "distance_mile":"7",
+      "distance_middle":"6",
+      "distance_long":"5",
+      "running_style_nige":"4",
+      "running_style_senko":"7",
+      "running_style_sashi":"2",
+      "running_style_oikomi":"8",
+      "speed":0,
+      "stamina":20,
+      "pow":10,
+      "guts":0,
+      "wiz":0,
+      "skills1":["skill-t-1"],
+      "skills2":["skill-t-2"],
+      "events1":["event-t-1"],
+    }
+  ],
+  "skill":[
+    {
+      "id":"skill-t-1",
+      "rarity":"3",
+      "name":"skill name",
+      "image":"skill image url",
+      "cool_down":30,
+      "need_skill_point":170,
+      "grade_value":550,
+      "ability_time":3,
+      "ability":["skill-ability-t-1"]
+    }
+  ],
+  "card_rarity":[
+    {"id":"1","title":"1星"},
+    {"id":"2","title":"2星"},
+    {"id":"3","title":"3星"}
+  ],
+  "card_adapt":[
+    {"id":"0","title":"0"},
+    {"id":"1","title":"G"},
+    {"id":"2","title":"F"},
+    {"id":"3","title":"E"},
+    {"id":"4","title":"D"},
+    {"id":"5","title":"C"},
+    {"id":"6","title":"B"},
+    {"id":"7","title":"A"},
+    {"id":"8","title":"S"}
+  ]
 }

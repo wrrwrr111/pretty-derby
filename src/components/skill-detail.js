@@ -5,6 +5,7 @@ import { Row,Col,Popover,Button,Image,Checkbox,Divider,Input,Tooltip,Switch } fr
 import t from './t.js'
 import {SupportCard} from './support-detail.js'
 import {PlayerCard} from './player-detail.js'
+import ScrollBars from 'react-custom-scrollbars'
 
 const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -99,7 +100,7 @@ const SkillDetail = (props)=>{
     return flag
   })
 
-  return <div style={{maxWidth:600,textAlign:'left',
+  return <div style={{maxWidth:600,maxHeight:800,overflow:'auto',textAlign:'left',
     overflowWrap:'break-word',wordBreak:'break-all'}}>
   <Image src={cdnServer+skill.imgUrl} preview={false} width={52}></Image>
   <p>{`${t('技能名称')}:\xa0\xa0${skill.name}`}</p>
@@ -156,9 +157,11 @@ const SkillButton = (props)=>{
     textOverflow: 'ellipsis',
     textAlign:'justify'
   }
-
+ 
   return <Popover visible={ua==='mo'?false:undefined}
-    content={<SkillDetail skill={skill} isNur={props.isNur||false}></SkillDetail>}>
+    content={
+        <SkillDetail skill={skill} isNur={props.isNur||false}></SkillDetail>
+    }>
     <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity}
     style={props.usedInList?{...inListStyleOverride}:{}}
     onClick={()=>toSkillDetail(skill.id)}>
