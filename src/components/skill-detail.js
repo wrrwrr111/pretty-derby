@@ -110,7 +110,7 @@ const SkillDetail = (props)=>{
   <p>{`${t('技能描述')}:\xa0\xa0${t(skill.describe)}`}</p>
   <p>{`${t('触发条件')}:\xa0\xa0${skill.condition}`}</p>
   <p>{`${t('触发条件')}:\xa0\xa0${t(skill.condition)}`}</p>
-  <p>{`${t('技能效果')}:\xa0\xa0${skill.ability.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
+  <p>{`${t('技能效果')}:\xa0\xa0${skill.ability?.map(ability=>skillType[ability.type]+' '+ability.value/10000)}`}</p>
   <p>{`${t('持续时间')}:\xa0\xa0${skill.ability_time/10000}s*${t('赛道长度')}/1000`}</p>
   <p>{`${t('冷却时间')}:\xa0\xa0${skill.cooldown/10000}s*${t('赛道长度')}/1000`}</p>
   <p>{`${t('技能价格')}:\xa0\xa0${skill.need_skill_point}\xa0Pt`}</p>
