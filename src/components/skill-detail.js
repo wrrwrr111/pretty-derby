@@ -100,7 +100,8 @@ const SkillDetail = (props)=>{
     return flag
   })
 
-  return <div style={{maxWidth:600,maxHeight:800,overflow:'auto',textAlign:'left',
+  return <div style={{maxWidth:600,maxHeight:window.innerHeight-104,
+    overflow:'auto',textAlign:'left',
     overflowWrap:'break-word',wordBreak:'break-all'}}>
   <Image src={cdnServer+skill.imgUrl} preview={false} width={52}></Image>
   <p>{`${t('技能名称')}:\xa0\xa0${skill.name}`}</p>
