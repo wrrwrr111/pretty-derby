@@ -65,7 +65,7 @@ class Support extends React.Component{
       tempList = tempList.filter(support=>{
         let flag = 0;
         checkedValues.forEach(value=>{
-          support.effects.forEach(effect=>{
+          support.effects && support.effects.forEach(effect=>{
             if(effect.type == value){
               flag += 1
             }
