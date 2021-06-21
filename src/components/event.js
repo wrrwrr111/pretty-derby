@@ -8,7 +8,7 @@ const ua = db.get('ua').value();
 
 const EventList = (props)=>{
   const eventIdList = props.eventList
-  const eventList = eventIdList.map(id=>db.get('events').find({id:id,pid:props.pid}).value())
+  const eventList = eventIdList.map(id=>db.get('events').find({id:id}).value())
   const qieZhe = eventList.filter(event=>JSON.stringify(event).indexOf('切れ者')!==-1)
   if(props.type==='multi'){
     return(<>
