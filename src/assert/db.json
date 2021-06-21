@@ -5346,7 +5346,7 @@
       "gutsGrow": "+10%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "ze7trIl61h",
+        "D4PbjIppx",
         "p71TuCN_n-G",
         "gNXLQ6JGMHl",
         "-cFPxDA8Xjr",
@@ -5356,7 +5356,7 @@
         "JTwZG-DTmx"
       ],
       "uniqueSkillList": [
-        "ze7trIl61h"
+        "D4PbjIppx"
       ],
       "initialSkillList": [
         "p71TuCN_n-G",
@@ -5374,9 +5374,15 @@
         "d9-qPVLRW1",
         "4SIPIgTJBQ",
         "c1KT-AHqTu",
+        "WUt_sqrEAb",
         "TCHtDXMulH",
+        "wkYP3UL_k0",
+        "AbUG2NPcB6",
+        "WeujZy1HYb",
+        "vnVOyVT4Vh",
         "NYmNuTv5T9",
         "B_Ir54Op2Y",
+        "WnT4iMzYGP",
         "UTV2OKzBfG",
         "o0FNSEJPly",
         "mmUt2LznoH",
@@ -5392,6 +5398,7 @@
         "A9QJxDL4aoX",
         "xbLekzdsrH_",
         "iF9zx_sGYae",
+        "DzAFxoOjkx",
         "uTRikjIlrbc",
         "OSlnf1zS495",
         "XAd7wnw2igr",
@@ -37640,6 +37647,36 @@
       "ability_time": 0,
       "cooldown": 5000000,
       "need_skill_point": 100
+    },
+    {
+      "name": "タイマン！デッドヒート！",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終直線で後ろの方から外を回って追い抜く時、速度を上げる",
+      "id": "D4PbjIppx",
+      "condition": "is_finalcorner==1&corner==0&is_behind_in==1&change_order_onetime<0&order_rate>=40",
+      "rarity": 5,
+      "db_id": 100121,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "コーナー回復◎",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill86.png",
+      "rare": "ノーマル",
+      "describe": "無駄のないコーナリングで持久力がわずかに回復する",
+      "id": "Eeru99aZx"
     }
   ],
   "events": [
@@ -103945,7 +103982,7 @@
         [
           "隠し芸でもやってみる",
           [
-            "調査中"
+            "5種ステータス(能力)を+5"
           ]
         ],
         [
@@ -103983,7 +104020,7 @@
         [
           "わかった、豪快に頼む",
           [
-            "調査中"
+            "パワー(力量)+10"
           ]
         ],
         [
@@ -104009,7 +104046,7 @@
         [
           "食材選び",
           [
-            "調査中"
+            "賢さ(智力)+10"
           ]
         ]
       ],
@@ -104046,7 +104083,7 @@
         [
           "タイマン張れたらいいんだな？",
           [
-            "調査中"
+            "パワー(力量)+20"
           ]
         ],
         [
@@ -104270,7 +104307,8 @@
           [
             "やる気(干劲)アップ(提升)",
             "5種ステータス(能力)を+5",
-            "スキルPt(技能点数)+30"
+            "スキルPt(技能点数)+30",
+            "ランダムで(有概率)『切れ者』になる"
           ]
         ]
       ],
@@ -105750,9 +105788,148 @@
       "choiceList": [],
       "id": "i2CILYymoE",
       "pid": "vzwDpZwML"
+    },
+    {
+      "name": "ヒシアマ姐さんの山菜採り",
+      "choiceList": [
+        [
+          "ヒシアマの料理の腕は美浦寮最強だからな",
+          [
+            "パワー(力量)+10",
+            "スキルPt(技能点数)+15"
+          ]
+        ],
+        [
+          "日没前にラストスパートかけて探したもんな",
+          [
+            "『末脚』のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "WUt_sqrEAb",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "クールでホットな姉妹",
+      "choiceList": [
+        [
+          "クールなテクニック",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "ホットな勝負魂",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "wkYP3UL_k0",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "情熱は激流のごとく",
+      "choiceList": [
+        [
+          "食材をブッ倒す気迫！",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "思いやりファースト",
+          [
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "ごめん、わからない！",
+          [
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "AbUG2NPcB6",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "ヒシアマ姐さんの特等席",
+      "choiceList": [
+        [
+          "ありがとう、ヒシアマらしいな",
+          [
+            "スピード(速度)+5",
+            "パワー(力量)+5"
+          ]
+        ],
+        [
+          "意外とロマンチストなんだな",
+          [
+            "根性(毅力)+10"
+          ]
+        ]
+      ],
+      "id": "WeujZy1HYb",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "ヒシアマ姐さんと芸術",
+      "choiceList": [
+        [
+          "作品のモデルになれるような走りをしよう",
+          [
+            "スピード(速度)+10"
+          ]
+        ],
+        [
+          "もっと色んなことに触れていこう",
+          [
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "vnVOyVT4Vh",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "タイマン！スケバン！勝負服！",
+      "choiceList": [
+        [
+          "マリンっぽく敬礼",
+          [
+            "パワー(力量)+20"
+          ]
+        ],
+        [
+          "スケバンっぽくしゃがむ",
+          [
+            "スタミナ(耐力)+20"
+          ]
+        ]
+      ],
+      "id": "WnT4iMzYGP",
+      "pid": "hEbuzXzSu"
+    },
+    {
+      "name": "秋華賞の後に",
+      "choiceList": [
+        [
+          "トリプルティアラ達成",
+          [
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)を+5",
+            "スキルPt(技能点数)+60",
+            "『食い下がり』のヒントLv+2",
+            "秋川理事長の絆ゲージ+4"
+          ]
+        ]
+      ],
+      "id": "DzAFxoOjkx",
+      "pid": "hEbuzXzSu"
     }
   ],
-  "updateTime": 1624252937711,
+  "updateTime": 1624254873259,
   "races": [
     {
       "name": "中京ジュニアステークス",

@@ -163,13 +163,13 @@ const SkillButton = (props)=>{
     content={
         <SkillDetail skill={skill} isNur={props.isNur||false}></SkillDetail>
     }>
-    <Button type={'primary'} className={'skill-btn skill-btn-'+skill.rarity}
+    <Button type={'primary'} className={'skill-btn skill-btn-'+skill?.rarity}
     style={props.usedInList?{...inListStyleOverride}:{}}
     onClick={()=>toSkillDetail(skill.id)}>
       <div style={props.usedInList?
         {display:'flex',position:'absolute',top:4,left:8,width:'100%'}:{width:'100%'}}>
-      <Image src={cdnServer+skill.imgUrl} preview={false} width={26}></Image>
-      <div style={{...skillNameStyle}}>{`\xa0\xa0${skill.name}`}</div>
+      <Image src={cdnServer+skill?.imgUrl} preview={false} width={26}></Image>
+      <div style={{...skillNameStyle}}>{`\xa0\xa0${skill?.name}`}</div>
       </div>
     </Button>
   </Popover>
