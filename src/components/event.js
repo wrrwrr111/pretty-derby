@@ -9,7 +9,7 @@ const ua = db.get('ua').value();
 const EventList = (props)=>{
   const eventIdList = props.eventList
   const eventList = eventIdList.map(id=>db.get('events').find({id:id}).value())
-  const qieZhe = eventList.filter(event=>JSON.stringify(event).indexOf('切れ者')!==-1)
+  const qieZhe = eventList?.filter(event=>JSON.stringify(event).indexOf('切れ者')!==-1)
   if(props.type==='multi'){
     return(<>
         {eventList.filter(event=>event.choiceList.length > 1).map(event=><EventBox key={event.id} event={event}></EventBox>)}

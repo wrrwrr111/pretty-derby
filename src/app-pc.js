@@ -32,7 +32,7 @@ const AppPc = ()=>{
       player:{},
       races:[]
     }).write()
-    db.set('myDecks',[]).write()
+    // db.set('myDecks',[]).write()
   }
   const resetIntro = ()=>{
     localStorage.setItem('introV',null)
