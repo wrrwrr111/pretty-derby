@@ -285,7 +285,7 @@ class TestEffectTable extends React.Component{
           />
         </div>
         <Row>
-          {this.props.effects.map(
+          {this.props.effects?.map(
             (item,index)=>{
               const data = [item.init,item.limit_lv5,item.limit_lv10,item.limit_lv15,item.limit_lv20,item.limit_lv25,item.limit_lv30,item.limit_lv35,item.limit_lv40,item.limit_lv45,item.limit_lv50].filter((item)=>(item));
               return (
