@@ -1,10 +1,11 @@
 import React from 'react';
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from './t.js'
 import {Row,Col,Popover,Button,Tabs } from 'antd';
 
 
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 
 const EventList = (props)=>{
   const eventIdList = props.eventList

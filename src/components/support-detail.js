@@ -3,12 +3,13 @@ import {useHistory} from 'react-router-dom';
 
 import { Button, Divider, Image, Alert,Tooltip,Modal } from "antd";
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from './t.js'
 
 import {EventList} from './event.js'
 import {SkillList} from './skill-detail.js'
 import {EffectTable,TestEffectTable} from './effect.js'
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 

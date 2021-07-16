@@ -3,10 +3,11 @@ import React from 'react';
 import { Table, Popover, Slider, Row ,Col} from "antd";
 
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from './t.js'
 
 
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 // "limit_lv5": -1,
 // "limit_lv10": 5,
 // "limit_lv15": -1,

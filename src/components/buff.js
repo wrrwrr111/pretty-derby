@@ -1,11 +1,12 @@
 import React from 'react';
 // import {useState} from 'react';
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
 
 import { List,Popover,Button } from 'antd';
 
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 
 const BuffButton = (props)=>{
   return(

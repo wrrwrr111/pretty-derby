@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 
 import { Divider,Image,Card,Modal,Table} from 'antd';
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from './t.js'
 
 import {EventList} from './event.js'
@@ -10,7 +11,7 @@ import {SkillList} from './skill-detail.js'
 // import RaceList from './player-race.js'
 import {RaceSchedule,RaceTimeline} from '../components/race.js'
 // import {EffectTable} from './effect.js'
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
 const PlayerDetail = (props) =>{

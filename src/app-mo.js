@@ -6,6 +6,7 @@ import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.min.css';
 
 import db from './db.js'
+import dbL from './dbL.js'
 import t from './components/t.js'
 
 import Race from './pages/race.js'
@@ -43,7 +44,7 @@ class App1 extends React.Component {
     // db.set('myDecks',[]).write()
   }
   render() {
-    db.set('ua','mo').write();
+    dbL.set('ua','mo').write();
     const routers = [{path:'/',label:'角色'},
     {path:'/support',label:'支援卡'},
     {path:'/skill',label:'技能'},

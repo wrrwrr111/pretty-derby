@@ -8,6 +8,7 @@ import './index.css'
 
 
 import db from './db.js'
+import dbL from './dbL.js'
 import t from './components/t.js'
 
 import Race from './pages/race.js'
@@ -27,7 +28,7 @@ const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/pub
 const AppPc = ()=>{
 
   const resetNur =()=>{
-    db.set('selected',{
+    dbL.set('selected',{
       supports:{0:{},1:{},2:{},3:{},4:{},5:{}},
       player:{},
       races:[]
@@ -37,7 +38,7 @@ const AppPc = ()=>{
   const resetIntro = ()=>{
     localStorage.setItem('introV',null)
   }
-  db.set('ua','pc').write();
+  dbL.set('ua','pc').write();
   //隐藏主要的overflow
   const dom = document.getElementsByTagName("body");
   dom[0].style.overflowY = "scroll";

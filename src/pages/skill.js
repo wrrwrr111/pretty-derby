@@ -2,12 +2,13 @@ import React,{useState} from 'react';
 import { Divider,Row,Col} from 'antd';
 
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
 
 import {SkillButton,SkillCheckbox} from '../components/skill-detail.js'
 // const { Search } = Input
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 
 const Skill = (props) =>{
   // 所有技能列表
