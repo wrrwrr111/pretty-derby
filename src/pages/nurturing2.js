@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
 import axios from "axios";
 
@@ -34,7 +35,7 @@ const Nurturing = () =>{
   const [supportIndex, setSupportIndex] = useState(1);
 
 
-  const selected = db.get('selected').value()
+  const selected = dbL.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
 
@@ -56,7 +57,7 @@ const Nurturing = () =>{
     setPlayer(data)
     // save player
     selected.player = data
-    db.get('selected').assign(selected).write()
+    dbL.get('selected').assign(selected).write()
   }
 
   const showSupport = (index) => {
@@ -81,7 +82,7 @@ const Nurturing = () =>{
 
     // save
     selected.supports[supportIndex] = data
-    db.get('selected').assign(selected).write()
+    dbL.get('selected').assign(selected).write()
   }
 
   const loadDeck = (deck)=>{
@@ -97,7 +98,7 @@ const Nurturing = () =>{
       }
     })
     setSupports({...selected.supports})
-    db.get('selected').assign(selected).write()
+    dbL.get('selected').assign(selected).write()
   }
 
 
@@ -126,7 +127,7 @@ const Nurturing = () =>{
     setFilterRace(tmpFilterRace)
     selected.raceFilterCondition = filterCondition
     selected.filterRace = tmpFilterRace
-    db.get('selected').assign({...selected}).write()
+    dbL.get('selected').assign({...selected}).write()
   }
 
   const useViewport = () => {
@@ -182,11 +183,11 @@ const Nurturing = () =>{
     {i: 's4', x: 18, y: 9, w: 7, h: 8},
     {i: 's5', x: 25, y: 9, w: 7, h: 8},
   ]
-  const originalLayout = db.get('layout').value()||layoutWithoutBlank
+  const originalLayout = dbL.get('layout').value()||layoutWithoutBlank
   const [layout,setLayout]=useState(originalLayout)
   const onLayoutChange=(layout)=> {
     /*eslint no-console: 0*/
-    db.set('layout',layout).write()
+    dbL.set('layout',layout).write()
     setLayout(layout)
     // onLayoutChange(layout); // updates status display
   }

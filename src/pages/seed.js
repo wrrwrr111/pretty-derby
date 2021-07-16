@@ -24,6 +24,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import axios from "axios";
 import db from "../db.js";
+import dbL from "../dbL.js";
 import t from "../components/t.js";
 import "./seed.css";
 
@@ -31,7 +32,7 @@ import Player from "./player.js";
 import Support from "./support.js";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 // db.set('userId',null).write()
-let userId = db.get("userId").value();
+let userId = dbL.get("userId").value();
 // console.log(userId)
 
 /*
@@ -154,7 +155,7 @@ const SeedInput = (props) => {
     // db.set('form',form).write()
     // 修整成需要的数据
     const formData = { ...tmpSeed };
-    formData.userId = userId || db.get("userId").value();
+    formData.userId = userId || dbL.get("userId").value();
     let updateTime = new Date().getTime();
     formData.updateTime = updateTime;
     formData["playerId-0"] = value["player-0"].id;

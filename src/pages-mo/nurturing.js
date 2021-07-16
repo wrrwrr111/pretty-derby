@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import shortid from 'shortid'
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
 import { Divider,Row,Col,Modal,Button, Popconfirm,Popover,Tooltip} from 'antd';
 import {EditOutlined} from '@ant-design/icons'
@@ -25,7 +26,7 @@ const Nurturing = (props) =>{
 
   // const [isRaceVisible, setIsRaceVisible] = useState(false);
 
-  const selected = db.get('selected').value()
+  const selected = dbL.get('selected').value()
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
   const races = db.get('races').value()
@@ -34,7 +35,7 @@ const Nurturing = (props) =>{
     grade:[],
     ground:[]})
   const [filterRace,setFilterRace] = useState(selected.filterRace||{})
-  const [decks,setDecks] = useState(db.get('myDecks').value())
+  const [decks,setDecks] = useState(dbL.get('myDecks').value())
 
 
 
@@ -50,7 +51,7 @@ const Nurturing = (props) =>{
 
     // save
     selected.player = data
-    db.get('selected').assign(selected).write()
+    dbL.get('selected').assign(selected).write()
   }
 
   const showSupport = (index) => {
@@ -75,7 +76,7 @@ const Nurturing = (props) =>{
 
     // save
     selected.supports[supportIndex] = data
-    db.get('selected').assign(selected).write()
+    dbL.get('selected').assign(selected).write()
   }
 
 
@@ -99,13 +100,13 @@ const Nurturing = (props) =>{
     })
     if(deck){
       //update
-      db.get('myDecks').find({id:deck.id}).assign(tmpDeck).write()
+      dbL.get('myDecks').find({id:deck.id}).assign(tmpDeck).write()
     }else{
       //
       tmpDeck.id = shortid.generate()
-      db.get('myDecks').push(tmpDeck).write()
+      dbL.get('myDecks').push(tmpDeck).write()
     }
-    setDecks([...db.get('myDecks').value()])
+    setDecks([...dbL.get('myDecks').value()])
   }
   const loadDeck = (deck)=>{
     selected.supports={0:{},1:{},2:{},3:{},4:{},5:{}}
@@ -123,8 +124,8 @@ const Nurturing = (props) =>{
     db.get('selected').assign(selected).write()
   }
   const deleteDeck = (deck)=>{
-    db.get('myDecks').remove({id:deck.id}).write()
-    setDecks([...db.get('myDecks').value()])
+    dbL.get('myDecks').remove({id:deck.id}).write()
+    setDecks([...dbL.get('myDecks').value()])
   }
 // race checkbox发生变化
 const onChangeRace = (filterCondition)=>{
@@ -148,7 +149,7 @@ const onChangeRace = (filterCondition)=>{
   setFilterRace(tmpFilterRace)
   selected.raceFilterCondition = filterCondition
   selected.filterRace = tmpFilterRace
-  db.get('selected').assign({...selected}).write()
+  dbL.get('selected').assign({...selected}).write()
 }
 
   const toSupportDetail = (id)=>{

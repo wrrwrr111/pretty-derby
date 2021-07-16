@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import shortid from 'shortid'
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
 import axios from "axios";
 
@@ -8,7 +9,7 @@ import { Divider,Row,Col,Modal,Button,Tag,message, Popover,Popconfirm,Checkbox} 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 const MyDecks = (props)=>{
-  const [decks,setDecks] = useState(db.get('myDecks').value())
+  const [decks,setDecks] = useState(dbL.get('myDecks').value())
   // 卡组相关操作
   const saveDeck = (deck)=>{
     let tmpDeck = {
@@ -30,18 +31,18 @@ const MyDecks = (props)=>{
     })
     if(deck){
       //update
-      db.get('myDecks').find({id:deck.id}).assign(tmpDeck).write()
+      dbL.get('myDecks').find({id:deck.id}).assign(tmpDeck).write()
     }else{
       //
       tmpDeck.id = shortid.generate()
-      db.get('myDecks').push(tmpDeck).write()
+      dbL.get('myDecks').push(tmpDeck).write()
     }
-    setDecks([...db.get('myDecks').value()])
+    setDecks([...dbL.get('myDecks').value()])
   }
 
   const deleteDeck = (deck)=>{
-    db.get('myDecks').remove({id:deck.id}).write()
-    setDecks([...db.get('myDecks').value()])
+    dbL.get('myDecks').remove({id:deck.id}).write()
+    setDecks([...dbL.get('myDecks').value()])
   }
   const shareDeck = async (deck) =>{
     //判断表格
@@ -60,8 +61,8 @@ const MyDecks = (props)=>{
   const labels = ['短距離','マイル','中距離','長距離','ダート','逃げ','先行','差し','追込',
                   '高速度','高耐力','高力量','高根性 ','高智力','竞技场前排','萌新之友']
   const onChangeTag =  (values,deck)=>{
-    db.get('myDecks').find({id:deck.id}).assign({tags:values}).write()
-    setDecks([...db.get('myDecks').value()])
+    dbL.get('myDecks').find({id:deck.id}).assign({tags:values}).write()
+    setDecks([...dbL.get('myDecks').value()])
   }
 
   return <Popover width={'100%'}  overlayStyle={{maxHeight:800,overflow:'auto'}}

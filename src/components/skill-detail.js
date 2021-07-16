@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter, useHistory, useLocation } from 'react-router-dom';
 import db from '../db.js'
+import dbL from '../dbL.js'
 import { Row, Col, Popover, Button, Image, Checkbox, Divider, Input, Tooltip, Switch } from 'antd';
 import t from './t.js'
 import { SupportCard } from './support-detail.js'
@@ -10,7 +11,7 @@ import ScrollBars from 'react-custom-scrollbars'
 const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 
-const ua = db.get('ua').value();
+const ua = dbL.get('ua').value();
 const allSkillList = db.get('skills').orderBy('db_id').value()
 
 const options = {
@@ -193,7 +194,7 @@ const SkillCheckbox = React.memo((props) => {
   // init isOwn
   localStorage.getItem('isOwn') === null && localStorage.setItem('isOwn', 0)
   const [isOwn, setIsOwn] = useState(parseInt(localStorage.getItem('isOwn')))
-  const mySupports = db.get('mySupports').value()
+  const mySupports = dbL.get('mySupports').value()
   const mySkillList = new Set(mySupports.reduce((list, supportId) => {
     let support = db.get('supports').find({ id: supportId }).value()
     return list.concat(support.skillList)
