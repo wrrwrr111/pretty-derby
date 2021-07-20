@@ -58,6 +58,7 @@ const EventBox = (props)=>{
 
   return(
     <Popover
+    mouseEnterDelay={0.4}
       trigger={ua==='mo'?'click':'hover'}
       content={<>
       <p>{t(props.event.name)}</p>
