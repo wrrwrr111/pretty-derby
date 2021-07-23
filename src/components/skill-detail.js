@@ -162,7 +162,9 @@ const SkillButton = (props) => {
     textAlign: 'justify'
   }
 
-  return <Popover visible={ua === 'mo' ? false : undefined}
+  return <Popover 
+  mouseEnterDelay={0.4}
+  visible={ua === 'mo' ? false : undefined}
     content={
       <SkillDetail skill={skill} isNur={props.isNur || false}></SkillDetail>
     }>
