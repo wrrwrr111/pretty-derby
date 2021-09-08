@@ -162,9 +162,9 @@ const SkillButton = (props) => {
     textAlign: 'justify'
   }
 
-  return <Popover 
-  mouseEnterDelay={0.4}
-  visible={ua === 'mo' ? false : undefined}
+  return <Popover
+    mouseEnterDelay={0.4}
+    visible={ua === 'mo' ? false : undefined}
     content={
       <SkillDetail skill={skill} isNur={props.isNur || false}></SkillDetail>
     }>
@@ -335,7 +335,22 @@ const SkillCheckbox = React.memo((props) => {
     <>
       {Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />)}
       <Divider />
-      <Checkbox.Group options={checkOptions1} value={skillChecked1} onChange={onChange1} />
+      {/* <Checkbox.Group options={checkOptions1} value={skillChecked1} onChange={onChange1} /> */}
+      <Checkbox.Group value={skillChecked1} onChange={onChange1}>
+        <Row>
+          {checkOptions1.map(checkItem =>
+            <Col span={12}>
+              {/* https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/img/skill_icons/10011.png */}
+              <Checkbox value={checkItem.value} style={{ display: 'flex',alignItems: 'center' }}>
+                <div style={{ display: 'flex' }}>
+                <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
+                <div style={{flex:'auto',overflow: 'hidden',whiteSpace: 'nowrap'}}>{checkItem.label}</div>
+                </div>
+              </Checkbox>
+            </Col>
+          )}
+        </Row>
+      </Checkbox.Group>
       <Divider />
       <Checkbox.Group options={checkOptions2} value={skillChecked2} onChange={onChange2} />
     </>
@@ -357,7 +372,21 @@ const SkillCheckbox = React.memo((props) => {
       <Divider />
       {Object.entries(options).map(([gourpName, value]) => <SkillCheckboxGroup name={gourpName} value={checkboxGroupValues[gourpName]} options={value} onChange={onCheckboxGroupsChange} />)}
       <Divider />
-      <Checkbox.Group options={checkOptions1} value={skillChecked1} onChange={onChange1} />
+      <Checkbox.Group value={skillChecked1} onChange={onChange1}>
+        <Row>
+          {checkOptions1.map(checkItem =>
+            <Col span={12}>
+              {/* https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/img/skill_icons/10011.png */}
+              <Checkbox value={checkItem.value} style={{ display: 'flex',alignItems: 'center' }}>
+                <div style={{ display: 'flex' }}>
+                <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
+                <div style={{flex:'auto',overflow: 'hidden',whiteSpace: 'nowrap'}}>{checkItem.label}</div>
+                </div>
+              </Checkbox>
+            </Col>
+          )}
+        </Row>
+      </Checkbox.Group>
       <Divider />
       <Checkbox.Group options={checkOptions2} value={skillChecked2} onChange={onChange2} />
     </div>}
