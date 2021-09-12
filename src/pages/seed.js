@@ -41,7 +41,7 @@ userId 随机生成
 种马id
 蓝色因子 - speed stamina power guts wisdom
 红色因子 - grass dirt shortDistance mile mediumDistance longDistance
-        - escape leading insert tracking
+        - escapeR leadingR insertR trackingR
 绿色因子
 种马父id
 种马母id
@@ -66,10 +66,10 @@ const redLabels = {
   mile: "英里",
   mediumDistance: "中距离",
   longDistance: "长距离",
-  escape: "逃",
-  leading: "先",
-  insert: "差",
-  tracking: "追",
+  escapeR: "逃",
+  leadingR: "先",
+  insertR: "差",
+  trackingR: "追",
 };
 
 const PlayerInput = ({ value = {}, onChange }) => {
@@ -158,45 +158,45 @@ const SeedInput = (props) => {
     formData.userId = userId || dbL.get("userId").value();
     let updateTime = new Date().getTime();
     formData.updateTime = updateTime;
-    formData["playerId-0"] = value["player-0"].id;
-    formData["playerId-1"] = value["player-1"].id;
-    formData["playerId-2"] = value["player-2"].id;
+    formData["playerId0"] = value["player0"].id;
+    formData["playerId1"] = value["player1"].id;
+    formData["playerId2"] = value["player2"].id;
     formData["supportId"] = value["support"].id;
     delete formData["support"];
-    delete formData["player-0"];
-    delete formData["player-1"];
-    delete formData["player-2"];
-    // formData[formData['blue-0']]=formData['blueLevel-0']
-    // formData[formData['red-0']]=formData['redLevel-0']
+    delete formData["player0"];
+    delete formData["player1"];
+    delete formData["player2"];
+    // formData[formData['blue0']]=formData['blueLevel0']
+    // formData[formData['red0']]=formData['redLevel0']
     let list = ["0", "1", "2"];
     list.forEach((i) => {
       //统计蓝色因子
-      if (formData[formData[`blue-${i}`]] !== undefined) {
-        formData[formData[`blue-${i}`]] += formData[`blueLevel-${i}`];
+      if (formData[formData[`blue${i}`]] !== undefined) {
+        formData[formData[`blue${i}`]] += formData[`blueLevel${i}`];
       } else {
-        formData[formData[`blue-${i}`]] = formData[`blueLevel-${i}`];
+        formData[formData[`blue${i}`]] = formData[`blueLevel${i}`];
       }
       //统计红色因子
-      if (formData[formData[`red-${i}`]] !== undefined) {
-        formData[formData[`red-${i}`]] += formData[`redLevel-${i}`];
+      if (formData[formData[`red${i}`]] !== undefined) {
+        formData[formData[`red${i}`]] += formData[`redLevel${i}`];
       } else {
-        formData[formData[`red-${i}`]] = formData[`redLevel-${i}`];
+        formData[formData[`red${i}`]] = formData[`redLevel${i}`];
       }
       //统计红色因子
       if (formData["white"] !== undefined) {
-        formData["white"] += formData[`whiteNum-${i}`];
+        formData["white"] += formData[`whiteNum${i}`];
       } else {
-        formData["white"] = formData[`whiteNum-${i}`];
+        formData["white"] = formData[`whiteNum${i}`];
       }
       //统计ura
       if (formData["uraLevel"] !== undefined) {
-        formData['uraLevel'] += formData[`uraLevel-${i}`]
+        formData['uraLevel'] += formData[`uraLevel${i}`]
       } else {
-        formData['uraLevel'] = formData[`uraLevel-${i}`]
+        formData['uraLevel'] = formData[`uraLevel${i}`]
       }
 
     });
-    const res = await axios.post("https://urarawin.com/api/add", formData);
+    const res = await axios.post("https://urarawin.com/api/sqlite/add", formData);
     if (res.data && res.data.success) {
       message.info("成功添加");
       props.onFinish();
@@ -214,12 +214,12 @@ const SeedInput = (props) => {
           <PageHeader title={`${list[i]}`}></PageHeader>
           <Row>
             <Col span={6} offset={4}>
-              <Form.Item label="角色" name={`player-${i}`} rules={[{ required: true }]}>
+              <Form.Item label="角色" name={`player${i}`} rules={[{ required: true }]}>
                 <PlayerInput></PlayerInput>
               </Form.Item>
             </Col>
           </Row>
-          <Form.Item label="蓝色因子" name={`blue-${i}`} rules={[{ required: true }]}>
+          <Form.Item label="蓝色因子" name={`blue${i}`} rules={[{ required: true }]}>
             <Radio.Group>
               <Radio.Button value={"speed"}>{"速度"}</Radio.Button>
               <Radio.Button value={"stamina"}>{"耐力"}</Radio.Button>
@@ -228,10 +228,10 @@ const SeedInput = (props) => {
               <Radio.Button value={"wisdom"}>{"智力"}</Radio.Button>
             </Radio.Group>
           </Form.Item>
-          <Form.Item label="蓝色因子星数" name={`blueLevel-${i}`} rules={[{ required: true }]}>
+          <Form.Item label="蓝色因子星数" name={`blueLevel${i}`} rules={[{ required: true }]}>
             <Rate count={3} />
           </Form.Item>
-          <Form.Item label="红色因子" name={`red-${i}`} rules={[{ required: true }]}>
+          <Form.Item label="红色因子" name={`red${i}`} rules={[{ required: true }]}>
             <Radio.Group>
               <Radio.Button value={"grass"}>{"草地/芝"}</Radio.Button>
               <Radio.Button value={"dirt"}>{"泥地/ダート"}</Radio.Button>
@@ -241,22 +241,22 @@ const SeedInput = (props) => {
               <Radio.Button value={"mediumDistance"}>{"中距离"}</Radio.Button>
               <Radio.Button value={"longDistance"}>{"长距离"}</Radio.Button>
               <hr />
-              <Radio.Button value={"escape"}>{"逃"}</Radio.Button>
-              <Radio.Button value={"leading"}>{"先"}</Radio.Button>
-              <Radio.Button value={"insert"}>{"差"}</Radio.Button>
-              <Radio.Button value={"tracking"}>{"追"}</Radio.Button>
+              <Radio.Button value={"escapeR"}>{"逃"}</Radio.Button>
+              <Radio.Button value={"leadingR"}>{"先"}</Radio.Button>
+              <Radio.Button value={"insertR"}>{"差"}</Radio.Button>
+              <Radio.Button value={"trackingR"}>{"追"}</Radio.Button>
             </Radio.Group>
           </Form.Item>
-          <Form.Item label="红色因子星数" name={`redLevel-${i}`} rules={[{ required: true }]}>
+          <Form.Item label="红色因子星数" name={`redLevel${i}`} rules={[{ required: true }]}>
             <Rate count={3} />
           </Form.Item>
-          <Form.Item label="绿色因子星数" name={`greenLevel-${i}`} initialValue={0}>
+          <Form.Item label="绿色因子星数" name={`greenLevel${i}`} initialValue={0}>
             <Rate count={3} />
           </Form.Item>
-          <Form.Item label="URA因子星数" name={`uraLevel-${i}`} initialValue={0}>
+          <Form.Item label="URA因子星数" name={`uraLevel${i}`} initialValue={0}>
             <Rate count={3} />
           </Form.Item>
-          <Form.Item label="白色因子个数" name={`whiteNum-${i}`} initialValue={0}>
+          <Form.Item label="白色因子个数" name={`whiteNum${i}`} initialValue={0}>
             <Slider min={0} max={10} dots={true} tooltipPlacement={"left"}></Slider>
           </Form.Item>
         </Col>
@@ -346,10 +346,10 @@ const SearchOne = (props) => {
                         <Radio.Button value={"mediumDistance"}>{"中距离"}</Radio.Button>
                         <Radio.Button value={"longDistance"}>{"长距离"}</Radio.Button>
                         <br />
-                        <Radio.Button value={"escape"}>{"逃"}</Radio.Button>
-                        <Radio.Button value={"leading"}>{"先"}</Radio.Button>
-                        <Radio.Button value={"insert"}>{"差"}</Radio.Button>
-                        <Radio.Button value={"tracking"}>{"追"}</Radio.Button>
+                        <Radio.Button value={"escapeR"}>{"逃"}</Radio.Button>
+                        <Radio.Button value={"leadingR"}>{"先"}</Radio.Button>
+                        <Radio.Button value={"insertR"}>{"差"}</Radio.Button>
+                        <Radio.Button value={"trackingR"}>{"追"}</Radio.Button>
                         <br />
                         <Radio.Button value={"uraLevel"}>{"URA"}</Radio.Button>
                       </Radio.Group>
@@ -398,7 +398,7 @@ const SearchForm = (props) => {
   const onFinish = async (value) => {
     let formData = { attrs: [], levels: [] };
     if (value["player0"]) {
-      formData.attrs.push("playerId-0");
+      formData.attrs.push("playerId0");
       formData.levels.push(value["player0"].id);
     }
     if (value["supportLevel"]) {
@@ -411,15 +411,15 @@ const SearchForm = (props) => {
     }
     value.p0?.forEach((item) => {
       if (blueLabels[item.attr]) {
-        formData["blue-0"] = item.attr;
-        formData.attrs.push("blueLevel-0");
+        formData["blue0"] = item.attr;
+        formData.attrs.push("blueLevel0");
         formData.levels.push(item.level);
       } else if(redLabels[item.attr]){
-        formData["red-0"] = item.attr;
-        formData.attrs.push("redLevel-0");
+        formData["red0"] = item.attr;
+        formData.attrs.push("redLevel0");
         formData.levels.push(item.level);
       } else if(item.attr==='uraLevel'){
-        formData.attrs.push("uraLevel-0");
+        formData.attrs.push("uraLevel0");
         formData.levels.push(item.level);
       }
     });
@@ -529,59 +529,59 @@ const Seed = () => {
     },
     {
       title: "主要",
-      dataIndex: "playerId-0",
-      key: "playerId-0",
+      dataIndex: "playerId0",
+      key: "playerId0",
       render: (text) => <PlayerImage id={text}></PlayerImage>,
     },
     {
       title: "蓝色因子",
-      dataIndex: "blue-0",
-      key: "blue-0",
+      dataIndex: "blue0",
+      key: "blue0",
       render: (text, record) =>
           <span className="rate-label">
-          {`${blueLabels[text]}\xa0\xa0${record["blueLevel-0"]}`}
+          {`${blueLabels[text]}\xa0\xa0${record["blueLevel0"]}`}
           </span>
       ,
     },
     {
       title: "红色因子",
-      dataIndex: "red-0",
-      key: "red-0",
+      dataIndex: "red0",
+      key: "red0",
       render: (text, record) =>
           <span className="rate-label">
-            {`${redLabels[text]}\xa0\xa0${record["redLevel-0"]}`}
+            {`${redLabels[text]}\xa0\xa0${record["redLevel0"]}`}
           </span>
       ,
     },
     {
       title: "绿色因子",
-      dataIndex: "greenLevel-0",
-      key: "greenLevel-0",
+      dataIndex: "greenLevel0",
+      key: "greenLevel0",
       render: (text, record) =>
           <span className="rate-label">
-          {`固有\xa0\xa0${record["greenLevel-0"]}`}
+          {`固有\xa0\xa0${record["greenLevel0"]}`}
           </span>
       ,
     },{
       title: "URA",
-      dataIndex: "uraLevel-0",
-      key: "uraLevel-0",
+      dataIndex: "uraLevel0",
+      key: "uraLevel0",
       render: (text, record) =>
           <span className="rate-label">
-            {`URA\xa0\xa0${record["uraLevel-0"]}`}
+            {`URA\xa0\xa0${record["uraLevel0"]}`}
           </span>
       ,
     },
     {
       title: "父辈1",
-      dataIndex: "playerId-1",
-      key: "playerId-1",
+      dataIndex: "playerId1",
+      key: "playerId1",
       render: (text) => <PlayerImage id={text}></PlayerImage>,
     },
     {
       title: "父辈2",
-      dataIndex: "playerId-2",
-      key: "playerId-2",
+      dataIndex: "playerId2",
+      key: "playerId2",
       render: (text) => <PlayerImage id={text}></PlayerImage>,
     },
     {
@@ -647,7 +647,7 @@ const Seed = () => {
     search({attrs:['userId'],levels:[userId]})
   }
   const deleteSeed = async (value)=>{
-    const res = await axios.post("https://urarawin.com/api/delete", value);
+    const res = await axios.post("https://urarawin.com/api/sqlite/delete", value);
     if (res.data) {
       message.info("成功删除");
     } else {
@@ -655,7 +655,7 @@ const Seed = () => {
     }
   }
   const search = async (value) => {
-    const res = await axios.post("https://urarawin.com/api/search", value);
+    const res = await axios.post("https://urarawin.com/api/sqlite/search", value);
     if (res.data) {
       if (res.data.length) {
         setSeedList([...res.data]);
@@ -675,7 +675,7 @@ const Seed = () => {
       return;
     }
     let id = seed.id;
-    const res = await axios.post("https://urarawin.com/api/like", { id, userId });
+    const res = await axios.post("https://urarawin.com/api/sqlite/like", { id, userId });
     if (res.data) {
       message.info("成功");
       seed.likes ? seed.likes.push(userId) : (seed.likes = [userId]);
@@ -691,7 +691,7 @@ const Seed = () => {
       return;
     }
     let id = seed.id;
-    const res = await axios.post("https://urarawin.com/api/dislike", { id, userId });
+    const res = await axios.post("https://urarawin.com/api/sqlite/dislike", { id, userId });
     if (res.data) {
       message.info("成功");
       seed.likes && seed.likes.splice(seed.likes.indexOf(userId), 1);

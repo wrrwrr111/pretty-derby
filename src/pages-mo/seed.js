@@ -30,10 +30,10 @@ const redLabels = {
   'mile':'英里',
   'mediumDistance':'中距离',
   'longDistance':'长距离',
-  'escape':'逃',
-  'leading':'先',
-  'insert':'差',
-  'tracking':'追'}
+  'escapeR':'逃',
+  'leadingR':'先',
+  'insertR':'差',
+  'trackingR':'追'}
 
 const lists = [
   [
@@ -48,10 +48,10 @@ const lists = [
     {value:'mile',label:t('英里')},
     {value:'mediumDistance',label:t('中距离')},
     {value:'longDistance',label:t('长距离')},
-    {value:'escape',label:t('逃')},
-    {value:'leading',label:t('先')},
-    {value:'insert',label:t('差')},
-    {value:'tracking',label:t('追')}
+    {value:'escapeR',label:t('逃')},
+    {value:'leadingR',label:t('先')},
+    {value:'insertR',label:t('差')},
+    {value:'trackingR',label:t('追')}
   ],[
     {value:1,label:`1${t('星')}`},
     {value:2,label:`2${t('星')}`},
@@ -172,7 +172,7 @@ const SearchForm = (props)=>{
   const onFinish = async (value)=>{
     let formData = {attrs:[],levels:[]}
     if(value['player0']){
-      formData.attrs.push('playerId-0')
+      formData.attrs.push('playerId0')
       formData.levels.push(value['player0'].id)
     }
     if(value['support']){
@@ -255,7 +255,7 @@ const Seed = ()=>{
         </Flex>
         <Flex>
           <Flex.Item>
-            <PlayerImage id={data['playerId-0']}></PlayerImage>
+            <PlayerImage id={data['playerId0']}></PlayerImage>
             <SupportImage id={data['supportId']}></SupportImage>
             <Flex align='middle'>
               <Button shape="circle" icon={<SmileOutlined />} onClick={()=>like(data)}/>
@@ -267,8 +267,8 @@ const Seed = ()=>{
             </Flex>
           </Flex.Item>
           <Flex.Item>
-            <p>{`${t(blueLabels[data['blue-0']])}: ${data['blueLevel-0']}`}</p>
-            <p>{`${t(redLabels[data['red-0']])}: ${data['redLevel-0']}`}</p>
+            <p>{`${t(blueLabels[data['blue0']])}: ${data['blueLevel0']}`}</p>
+            <p>{`${t(redLabels[data['red0']])}: ${data['redLevel0']}`}</p>
             {Object.keys(blueLabels).map(key=>
             data[key]?<p key={key}>{`${t('总计')} ${t(blueLabels[key])}: ${data[key]}`}</p>:null
             )}
@@ -284,7 +284,7 @@ const Seed = ()=>{
 
   const [seedList,setSeedList] = useState([])
   const search = async (value)=>{
-    const res = await axios.post('https://urarawin.com/api/search',value)
+    const res = await axios.post('https://urarawin.com/api/sqlite/search',value)
     if(res.data){
       if(res.data.length){
         setSeedList([...res.data])
@@ -303,7 +303,7 @@ const Seed = ()=>{
       return
     }
     let id = seed.id
-    const res = await axios.post('https://urarawin.com/api/like',{id,userId})
+    const res = await axios.post('https://urarawin.com/api/sqlite/like',{id,userId})
     if(res.data){
       message.info(t('成功'))
       seed.likes?seed.likes.push(userId):seed.likes=[userId]
@@ -319,7 +319,7 @@ const Seed = ()=>{
       return
     }
     let id = seed.id
-    const res = await axios.post('https://urarawin.com/api/dislike',{id,userId})
+    const res = await axios.post('https://urarawin.com/api/sqlite/dislike',{id,userId})
     if(res.data){
       message.info(t('成功'))
       seed.likes&&seed.likes.splice(seed.likes.indexOf(userId),1)
