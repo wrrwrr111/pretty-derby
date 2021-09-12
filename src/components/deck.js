@@ -52,7 +52,7 @@ const MyDecks = (props)=>{
       id:deck.playerId+deck.supportsId.sort((a,b)=>a.localeCompare(b)).join("")
     }
     console.log(formData)
-    const res = await axios.post("https://urarawin.com/api/sqlite/addDeck", formData);
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/addDeck", formData);
     const data = res.data
     data&&message.info(data.msg);
 
@@ -107,13 +107,13 @@ const RecommendDecks = (props)=>{
   const searchDeck = async () =>{
     if(playerId!==props.player.id){
       const formData = props.player? {playerId:props.player.id}:{}
-      const res = await axios.post("https://urarawin.com/api/sqlite/searchDeck",formData)
+      const res = await axios.post("http://192.168.1.16:4000/api/sqlite/searchDeck",formData)
       setRecommendDecks(res.data||[])
       setPlayerId(props.player.id)
     }
   }
   const deleteDeck = async (deck)=>{
-    const res = await axios.post("https://urarawin.com/api/sqlite/deleteDeck",deck)
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/deleteDeck",deck)
     searchDeck()
   }
   return <Popover width={'100%'} onVisibleChange = {searchDeck} overlayStyle={{maxHeight:800,overflow:'auto'}}

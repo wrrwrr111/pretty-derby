@@ -259,11 +259,11 @@ const Seed = ()=>{
             <SupportImage id={data['supportId']}></SupportImage>
             <Flex align='middle'>
               <Button shape="circle" icon={<SmileOutlined />} onClick={()=>like(data)}/>
-              <p>{data.likes?data.likes.length:0}</p>
+              <p>{data.likes}</p>
             </Flex>
             <Flex align='middle'>
               <Button shape="circle" icon={<FrownOutlined />} onClick={()=>dislike(data)}/>
-              <p>{data.dislikes?data.dislikes.length:0}</p>
+              <p>{data.dislikes}</p>
             </Flex>
           </Flex.Item>
           <Flex.Item>
@@ -284,10 +284,10 @@ const Seed = ()=>{
 
   const [seedList,setSeedList] = useState([])
   const search = async (value)=>{
-    const res = await axios.post('https://urarawin.com/api/sqlite/search',value)
+    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/search',value)
     if(res.data){
-      if(res.data.length){
-        setSeedList([...res.data])
+      if(res.data.count){
+        setSeedList([...res.data.list])
       }else{
         message.info(t('暂无数据'))
       }
@@ -299,15 +299,12 @@ const Seed = ()=>{
     if(!userId){
       message.info(t('刷新后重试'))
       return
-    }else if(seed.likes&&seed.likes.indexOf(userId)!==-1 ){
-      return
     }
     let id = seed.id
-    const res = await axios.post('https://urarawin.com/api/sqlite/like',{id,userId})
+    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/like',{id,userId})
     if(res.data){
       message.info(t('成功'))
-      seed.likes?seed.likes.push(userId):seed.likes=[userId]
-      seed.dislikes&&seed.dislikes.splice(seed.dislikes.indexOf(userId),1)
+      seed.likes+=1
     }
     setSeedList([...seedList])
   }
@@ -319,11 +316,10 @@ const Seed = ()=>{
       return
     }
     let id = seed.id
-    const res = await axios.post('https://urarawin.com/api/sqlite/dislike',{id,userId})
+    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/dislike',{id,userId})
     if(res.data){
       message.info(t('成功'))
-      seed.likes&&seed.likes.splice(seed.likes.indexOf(userId),1)
-      seed.dislikes?seed.dislikes.push(userId):seed.dislikes=[userId]
+      seed.dislikes+=1
     }
     setSeedList([...seedList])
   }

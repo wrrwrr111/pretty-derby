@@ -196,7 +196,7 @@ const SeedInput = (props) => {
       }
 
     });
-    const res = await axios.post("https://urarawin.com/api/sqlite/add", formData);
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/add", formData);
     if (res.data && res.data.success) {
       message.info("成功添加");
       props.onFinish();
@@ -322,54 +322,54 @@ const SearchOne = (props) => {
           <Row>
             {fields.map((field, index) => (
               <Col key={field.key} lg={8} md={12} xs={24}>
-                  <Row>
-                    <Form.Item
-                      {...field}
-                      name={[field.name, "attr"]}
-                      fieldKey={[field.fieldKey, "attr"]}
-                      rules={[{ required: true }]}
-                      validateTrigger={["onChange", "onBlur"]}
-                      noStyle
-                    >
-                      <Radio.Group>
-                        <Radio.Button value={"speed"}>{"速度"}</Radio.Button>
-                        <Radio.Button value={"stamina"}>{"耐力"}</Radio.Button>
-                        <Radio.Button value={"power"}>{"力量"}</Radio.Button>
-                        <Radio.Button value={"guts"}>{"根性"}</Radio.Button>
-                        <Radio.Button value={"wisdom"}>{"智力"}</Radio.Button>
-                        <br />
-                        <Radio.Button value={"grass"}>{"草地/芝"}</Radio.Button>
-                        <Radio.Button value={"dirt"}>{"泥地/ダート"}</Radio.Button>
-                        <br />
-                        <Radio.Button value={"shortDistance"}>{"短距离"}</Radio.Button>
-                        <Radio.Button value={"mile"}>{"英里"}</Radio.Button>
-                        <Radio.Button value={"mediumDistance"}>{"中距离"}</Radio.Button>
-                        <Radio.Button value={"longDistance"}>{"长距离"}</Radio.Button>
-                        <br />
-                        <Radio.Button value={"escapeR"}>{"逃"}</Radio.Button>
-                        <Radio.Button value={"leadingR"}>{"先"}</Radio.Button>
-                        <Radio.Button value={"insertR"}>{"差"}</Radio.Button>
-                        <Radio.Button value={"trackingR"}>{"追"}</Radio.Button>
-                        <br />
-                        <Radio.Button value={"uraLevel"}>{"URA"}</Radio.Button>
-                      </Radio.Group>
-                    </Form.Item>
-                  </Row>
-                  <Row>
-                    <Form.Item
-                      {...field}
-                      name={[field.name, "level"]}
-                      fieldKey={[field.fieldKey, "level"]}
-                      rules={[{ required: true }]}
-                    >
-                      <Rate count={props.max} />
-                    </Form.Item>
-                  </Row>
-                  <Col span={5}>
-                    <Button type="dashed" onClick={() => remove(field.name)}>
-                      移除
-                    </Button>
-                  </Col>
+                <Row>
+                  <Form.Item
+                    {...field}
+                    name={[field.name, "attr"]}
+                    fieldKey={[field.fieldKey, "attr"]}
+                    rules={[{ required: true }]}
+                    validateTrigger={["onChange", "onBlur"]}
+                    noStyle
+                  >
+                    <Radio.Group>
+                      <Radio.Button value={"speed"}>{"速度"}</Radio.Button>
+                      <Radio.Button value={"stamina"}>{"耐力"}</Radio.Button>
+                      <Radio.Button value={"power"}>{"力量"}</Radio.Button>
+                      <Radio.Button value={"guts"}>{"根性"}</Radio.Button>
+                      <Radio.Button value={"wisdom"}>{"智力"}</Radio.Button>
+                      <br />
+                      <Radio.Button value={"grass"}>{"草地/芝"}</Radio.Button>
+                      <Radio.Button value={"dirt"}>{"泥地/ダート"}</Radio.Button>
+                      <br />
+                      <Radio.Button value={"shortDistance"}>{"短距离"}</Radio.Button>
+                      <Radio.Button value={"mile"}>{"英里"}</Radio.Button>
+                      <Radio.Button value={"mediumDistance"}>{"中距离"}</Radio.Button>
+                      <Radio.Button value={"longDistance"}>{"长距离"}</Radio.Button>
+                      <br />
+                      <Radio.Button value={"escapeR"}>{"逃"}</Radio.Button>
+                      <Radio.Button value={"leadingR"}>{"先"}</Radio.Button>
+                      <Radio.Button value={"insertR"}>{"差"}</Radio.Button>
+                      <Radio.Button value={"trackingR"}>{"追"}</Radio.Button>
+                      <br />
+                      <Radio.Button value={"uraLevel"}>{"URA"}</Radio.Button>
+                    </Radio.Group>
+                  </Form.Item>
+                </Row>
+                <Row>
+                  <Form.Item
+                    {...field}
+                    name={[field.name, "level"]}
+                    fieldKey={[field.fieldKey, "level"]}
+                    rules={[{ required: true }]}
+                  >
+                    <Rate count={props.max} />
+                  </Form.Item>
+                </Row>
+                <Col span={5}>
+                  <Button type="dashed" onClick={() => remove(field.name)}>
+                    移除
+                  </Button>
+                </Col>
               </Col>
             ))}
           </Row>
@@ -414,11 +414,11 @@ const SearchForm = (props) => {
         formData["blue0"] = item.attr;
         formData.attrs.push("blueLevel0");
         formData.levels.push(item.level);
-      } else if(redLabels[item.attr]){
+      } else if (redLabels[item.attr]) {
         formData["red0"] = item.attr;
         formData.attrs.push("redLevel0");
         formData.levels.push(item.level);
-      } else if(item.attr==='uraLevel'){
+      } else if (item.attr === 'uraLevel') {
         formData.attrs.push("uraLevel0");
         formData.levels.push(item.level);
       }
@@ -498,6 +498,9 @@ const SupportImage = (props) => {
 const Seed = () => {
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);
   const [seedList, setSeedList] = useState([]);
+  const [total, setTotal] = useState(0)
+  const [current, setCurrent] = useState(0)
+  const [value, setValue] = useState()
 
   const columns = [
     {
@@ -514,15 +517,15 @@ const Seed = () => {
           </Row>
           <Row align="middle">
             <Button shape="circle" icon={<SmileOutlined />} onClick={() => like(seed)} />
-            <p>{seed.likes ? seed.likes.length : 0}</p>
+            <p>{seed.likes}</p>
           </Row>
           <Row align="middle">
             <Button shape="circle" icon={<FrownOutlined />} onClick={() => dislike(seed)} />
-            <p>{seed.dislikes ? seed.dislikes.length : 0}</p>
+            <p>{seed.dislikes}</p>
           </Row>
-          {seed.userId===userId&&<Row align="middle">
+          {seed.userId === userId && <Row align="middle">
             <Button shape="circle" icon={<DeleteOutlined />}
-            style = {{color:'red'}} onClick={() => deleteSeed(seed)} />
+              style={{ color: 'red' }} onClick={() => deleteSeed(seed)} />
           </Row>}
         </>
       ),
@@ -538,9 +541,9 @@ const Seed = () => {
       dataIndex: "blue0",
       key: "blue0",
       render: (text, record) =>
-          <span className="rate-label">
+        <span className="rate-label">
           {`${blueLabels[text]}\xa0\xa0${record["blueLevel0"]}`}
-          </span>
+        </span>
       ,
     },
     {
@@ -548,9 +551,9 @@ const Seed = () => {
       dataIndex: "red0",
       key: "red0",
       render: (text, record) =>
-          <span className="rate-label">
-            {`${redLabels[text]}\xa0\xa0${record["redLevel0"]}`}
-          </span>
+        <span className="rate-label">
+          {`${redLabels[text]}\xa0\xa0${record["redLevel0"]}`}
+        </span>
       ,
     },
     {
@@ -558,18 +561,18 @@ const Seed = () => {
       dataIndex: "greenLevel0",
       key: "greenLevel0",
       render: (text, record) =>
-          <span className="rate-label">
+        <span className="rate-label">
           {`固有\xa0\xa0${record["greenLevel0"]}`}
-          </span>
+        </span>
       ,
-    },{
+    }, {
       title: "URA",
       dataIndex: "uraLevel0",
       key: "uraLevel0",
       render: (text, record) =>
-          <span className="rate-label">
-            {`URA\xa0\xa0${record["uraLevel0"]}`}
-          </span>
+        <span className="rate-label">
+          {`${record["uraLevel0"]? `URA  ${record["uraLevel0"]}`:''}`}
+        </span>
       ,
     },
     {
@@ -592,9 +595,9 @@ const Seed = () => {
           if (record[key]) {
             // console.log(key,record[key])
             return (
-                  <span className="rate-label">
-                    {`${blueLabels[key]}\xa0\xa0${record[key]}`}
-                  </span>
+              <span className="rate-label">
+                {`${blueLabels[key]}\xa0\xa0${record[key]}`}
+              </span>
             );
           } else {
             return null;
@@ -608,9 +611,9 @@ const Seed = () => {
         Object.keys(redLabels).map((key) => {
           if (record[key]) {
             return (
-                  <span className="rate-label">
-                    {`${redLabels[key]}\xa0\xa0${record[key]}`}
-                  </span>
+              <span className="rate-label">
+                {`${redLabels[key]}\xa0\xa0${record[key]}`}
+              </span>
             );
           } else {
             return null;
@@ -643,11 +646,11 @@ const Seed = () => {
   const closeSeedInput = () => {
     setIsSeedInputVisible(false);
   };
-  const showMySeed = ()=>{
-    search({attrs:['userId'],levels:[userId]})
+  const showMySeed = () => {
+    search({ attrs: ['userId'], levels: [userId] })
   }
-  const deleteSeed = async (value)=>{
-    const res = await axios.post("https://urarawin.com/api/sqlite/delete", value);
+  const deleteSeed = async (value) => {
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/delete", value);
     if (res.data) {
       message.info("成功删除");
     } else {
@@ -655,12 +658,16 @@ const Seed = () => {
     }
   }
   const search = async (value) => {
-    const res = await axios.post("https://urarawin.com/api/sqlite/search", value);
+    setValue(value)
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/search", value);
+    setCurrent(0)
     if (res.data) {
-      if (res.data.length) {
-        setSeedList([...res.data]);
+      if (res.data.count) {
+        setSeedList([...res.data.list]);
+        setTotal(res.data.count)
       } else {
         setSeedList([]);
+        setTotal(0)
         message.info("暂无数据");
       }
     } else {
@@ -671,15 +678,12 @@ const Seed = () => {
     if (!userId) {
       message.info("刷新后重试");
       return;
-    } else if (seed.likes && seed.likes.indexOf(userId) !== -1) {
-      return;
     }
     let id = seed.id;
-    const res = await axios.post("https://urarawin.com/api/sqlite/like", { id, userId });
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/like", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.likes ? seed.likes.push(userId) : (seed.likes = [userId]);
-      seed.dislikes && seed.dislikes.splice(seed.dislikes.indexOf(userId), 1);
+      seed.likes +=1
     }
     setSeedList([...seedList]);
   };
@@ -687,19 +691,22 @@ const Seed = () => {
     if (!userId) {
       message.info("刷新后重试");
       return;
-    } else if (seed.dislikes && seed.dislikes.indexOf(userId) !== -1) {
-      return;
     }
     let id = seed.id;
-    const res = await axios.post("https://urarawin.com/api/sqlite/dislike", { id, userId });
+    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/dislike", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.likes && seed.likes.splice(seed.likes.indexOf(userId), 1);
-      seed.dislikes ? seed.dislikes.push(userId) : (seed.dislikes = [userId]);
+      seed.dislikes +=1
     }
     setSeedList([...seedList]);
   };
-
+  const onChange = (e) => {
+    search({
+      ...value,
+      count: e.total,
+      offset: e.current * 10 - 10
+    })
+  }
   return (
     <>
       <div className="seed-container">
@@ -709,7 +716,9 @@ const Seed = () => {
           <Button onClick={() => showMySeed()}>查看我的种子</Button>
         </Card>
         <Card className="card" title="结果">
-          <Table columns={columns} dataSource={seedList} pagination={false} rowKey={"id"} />
+          <Table columns={columns} dataSource={seedList} onChange={onChange}
+            pagination={{ pageSize: 10, total: total,simple:true,showQuickJumper:false,
+              position: ['topRight', 'bottomRight'] }} rowKey={"id"} />
         </Card>
       </div>
       <Modal
