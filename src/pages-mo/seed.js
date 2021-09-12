@@ -284,7 +284,7 @@ const Seed = ()=>{
 
   const [seedList,setSeedList] = useState([])
   const search = async (value)=>{
-    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/search',value)
+    const res = await axios.post('https://urarawin.com/api/sqlite/search',value)
     if(res.data){
       if(res.data.count){
         setSeedList([...res.data.list])
@@ -301,7 +301,7 @@ const Seed = ()=>{
       return
     }
     let id = seed.id
-    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/like',{id,userId})
+    const res = await axios.post('https://urarawin.com/api/sqlite/like',{id,userId})
     if(res.data){
       message.info(t('成功'))
       seed.likes+=1
@@ -316,7 +316,7 @@ const Seed = ()=>{
       return
     }
     let id = seed.id
-    const res = await axios.post('http://192.168.1.16:4000/api/sqlite/dislike',{id,userId})
+    const res = await axios.post('https://urarawin.com/api/sqlite/dislike',{id,userId})
     if(res.data){
       message.info(t('成功'))
       seed.dislikes+=1

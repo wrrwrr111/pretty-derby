@@ -83,7 +83,7 @@ const AppPc = () => {
                 </Popover>
               </Popconfirm>
             </Col>
-            <Col span={11}></Col>
+            <Col span={12}></Col>
             <Col span={2}>
               <iframe title="GitHub" src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
             </Col>
@@ -99,21 +99,6 @@ const AppPc = () => {
                 <Button placement="bottom" style={{ display: 'flex' }}>
                   <Image src={cdnServer + 'reimu.gif'} preview={false} width={24}></Image>
                   <div>{t('微信小程序')}</div>
-                </Button>
-              </Popover>
-            </Col>
-            <Col span={2}>
-              <Popover content={<div style={{ display: 'flex' }}>
-                <div style={{ margin: 20 }}>
-                  <Image src={cdnServer + 'img/z.jpg'} width={200}></Image><p>{t('支付宝')}</p>
-                </div>
-                <div style={{ margin: 20 }}>
-                  <Image src={cdnServer + 'img/w.jpg'} width={200}></Image><p>{t('微信')}</p>
-                </div>
-              </div>}>
-                <Button placement="bottom" style={{ display: 'flex' }}>
-                  <Image src={cdnServer + 'reimu.gif'} preview={false} width={24}></Image>
-                  <div>{t('塞钱箱')}</div>
                 </Button>
               </Popover>
             </Col>

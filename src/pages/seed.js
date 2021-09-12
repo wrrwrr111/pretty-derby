@@ -196,7 +196,7 @@ const SeedInput = (props) => {
       }
 
     });
-    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/add", formData);
+    const res = await axios.post("https://urarawin.com/api/sqlite/add", formData);
     if (res.data && res.data.success) {
       message.info("成功添加");
       props.onFinish();
@@ -650,7 +650,7 @@ const Seed = () => {
     search({ attrs: ['userId'], levels: [userId] })
   }
   const deleteSeed = async (value) => {
-    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/delete", value);
+    const res = await axios.post("https://urarawin.com/api/sqlite/delete", value);
     if (res.data) {
       message.info("成功删除");
     } else {
@@ -659,7 +659,7 @@ const Seed = () => {
   }
   const search = async (value) => {
     setValue(value)
-    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/search", value);
+    const res = await axios.post("https://urarawin.com/api/sqlite/search", value);
     setCurrent(0)
     if (res.data) {
       if (res.data.count) {
@@ -680,7 +680,7 @@ const Seed = () => {
       return;
     }
     let id = seed.id;
-    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/like", { id, userId });
+    const res = await axios.post("https://urarawin.com/api/sqlite/like", { id, userId });
     if (res.data) {
       message.info("成功");
       seed.likes +=1
@@ -693,7 +693,7 @@ const Seed = () => {
       return;
     }
     let id = seed.id;
-    const res = await axios.post("http://192.168.1.16:4000/api/sqlite/dislike", { id, userId });
+    const res = await axios.post("https://urarawin.com/api/sqlite/dislike", { id, userId });
     if (res.data) {
       message.info("成功");
       seed.dislikes +=1
