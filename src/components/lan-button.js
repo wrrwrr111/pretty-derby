@@ -41,12 +41,13 @@ const LanButton = (props)=>{
     margin:4
   }
   return(
-  <Popover content={<div style={{display:'flex'}}>
-  <Flag onClick={changeToCn} code={'cn'} style={{...flagStyle}}></Flag>
-  <Flag onClick={changeToUs} code={'us'} style={{...flagStyle}}></Flag>
-  <Flag onClick={changeToJp} code={'jp'} style={{...flagStyle}}></Flag>
+  <Popover content={
+  <div style={{display:'flex'}}>
+  <span onClick={changeToCn} code={'cn'} style={{...flagStyle}}>cn</span>
+  <span onClick={changeToUs} code={'us'} style={{...flagStyle}}>us</span>
+  <span onClick={changeToJp} code={'jp'} style={{...flagStyle}}>jp</span>
   </div>}>
-      <Flag code={code} style={{...flagStyle}}></Flag>
+      <span code={code} style={{...flagStyle}}>{code}</span>
   </Popover>
   )
 }
