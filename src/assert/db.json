@@ -13104,6 +13104,428 @@
       "db_id": 105901,
       "default_rarity": 3,
       "imgUrl": "img/chara_card/chr_icon_1059_105901_01.png"
+    },
+    {
+      "gwId": "309693",
+      "id": "7skjn1iOY",
+      "name": "ノエルージュ･キャロル",
+      "rare": "3",
+      "charaName": "ビワハヤヒデ",
+      "grass": "A",
+      "dirt": "F",
+      "shortDistance": "F",
+      "mile": "C",
+      "mediumDistance": "A",
+      "longDistance": "A",
+      "escape": "E",
+      "leading": "A",
+      "insert": "B",
+      "tracking": "E",
+      "speedGrow": "+0%",
+      "staminaGrow": "+12%",
+      "powerGrow": "+12%",
+      "gutsGrow": "+0%",
+      "wisdomGrow": "+6%",
+      "skillList": [
+        "Wy4aGf_-38",
+        "PXqe7XPh2Zi",
+        "ja6Jl89t4x",
+        "47kEAZPiqw",
+        "Eqc5btQZy-c",
+        "YZMoS9QqGX",
+        "XUMkn4ziiYT",
+        "z8o7DIWJkt"
+      ],
+      "uniqueSkillList": [
+        "Wy4aGf_-38"
+      ],
+      "initialSkillList": [
+        "PXqe7XPh2Zi",
+        "ja6Jl89t4x",
+        "47kEAZPiqw"
+      ],
+      "awakeningSkillList": [
+        "Eqc5btQZy-c",
+        "YZMoS9QqGX",
+        "XUMkn4ziiYT",
+        "z8o7DIWJkt"
+      ],
+      "eventList": [
+        "wxQNzMwHq",
+        "Yg7xUPSHDi",
+        "Ns7GhY0hcr",
+        "zVz9Rmcob4",
+        "clrBDn5JBv",
+        "ZGiq4nPX-",
+        "hKVz_1vla",
+        "SsMEFZnNfA",
+        "ab-sz9x2kx",
+        "acOrF7clov",
+        "SdpNGz9m7H",
+        "ngxvbxh_eN",
+        "fbS-0CJfsi",
+        "p-slvpYZvm",
+        "0V7uMuLfLo",
+        "6p9DYLj2m",
+        "W3cXOnfqeT",
+        "Tq2rsA1ILS",
+        "pHlkz2e00t",
+        "aP75ZsImXv",
+        "dMroZfN8to",
+        "ly_vnJQVow",
+        "n8WdFTlHwB",
+        "5jaiEZsOv",
+        "rDkREe3v9J",
+        "zDcwz6euiZ",
+        "q8mIYrtjoE",
+        "m1-YGEP6l6",
+        "6rC7jmL49D",
+        "tcbOBnO4fN",
+        "AnLIf9hL-t",
+        "3gXI6J7IZw",
+        "romwx9-Rc",
+        "yLwQR_YeTf",
+        "xUdiWjtI5b",
+        "w22C2i8mH6",
+        "ZOzw6q9c5J",
+        "YunNi1VfT_",
+        "sa5RwC3dxo",
+        "31aSwsBYuX",
+        "Q0UDgOUSW",
+        "9LXyUbAlFL",
+        "wXQ-u0NU5r",
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "hideEvent": [],
+      "eventList0": [
+        "wxQNzMwHq",
+        "Yg7xUPSHDi",
+        "Ns7GhY0hcr",
+        "zVz9Rmcob4",
+        "clrBDn5JBv",
+        "ZGiq4nPX-",
+        "hKVz_1vla",
+        "SsMEFZnNfA",
+        "ab-sz9x2kx",
+        "acOrF7clov",
+        "SdpNGz9m7H",
+        "ngxvbxh_eN",
+        "fbS-0CJfsi",
+        "p-slvpYZvm",
+        "0V7uMuLfLo",
+        "6p9DYLj2m",
+        "W3cXOnfqeT",
+        "Tq2rsA1ILS",
+        "pHlkz2e00t"
+      ],
+      "eventList1": [
+        "aP75ZsImXv",
+        "dMroZfN8to",
+        "ly_vnJQVow",
+        "n8WdFTlHwB",
+        "5jaiEZsOv",
+        "rDkREe3v9J",
+        "zDcwz6euiZ",
+        "q8mIYrtjoE",
+        "m1-YGEP6l6",
+        "6rC7jmL49D",
+        "tcbOBnO4fN",
+        "AnLIf9hL-t"
+      ],
+      "eventList2": [
+        "3gXI6J7IZw",
+        "romwx9-Rc",
+        "yLwQR_YeTf",
+        "xUdiWjtI5b",
+        "w22C2i8mH6",
+        "ZOzw6q9c5J",
+        "YunNi1VfT_",
+        "sa5RwC3dxo",
+        "31aSwsBYuX",
+        "Q0UDgOUSW",
+        "9LXyUbAlFL",
+        "wXQ-u0NU5r"
+      ],
+      "eventList3": [
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "eventList4": [],
+      "raceList": {
+        "22": {
+          "id": "tzanC5qKusm",
+          "goal": "5着以内"
+        },
+        "30": {
+          "id": "Q9yy8aBzZU",
+          "goal": "5着以内"
+        },
+        "33": {
+          "id": "4T-bUPQMM0p",
+          "goal": "5着以内"
+        },
+        "43": {
+          "id": "rR8DSqacWC-",
+          "goal": "3着以内"
+        },
+        "55": {
+          "id": "I4VkVUYo1Lx",
+          "goal": "3着以内"
+        },
+        "59": {
+          "id": "7M5mtTsqhUn",
+          "goal": "1着以内"
+        },
+        "67": {
+          "id": "LwfsArraIdq",
+          "goal": "3着"
+        },
+        "71": {
+          "id": "AhK3mYxkkq6",
+          "goal": "1着"
+        }
+      }
+    },
+    {
+      "gwId": "309694",
+      "id": "psbCVWMkx",
+      "name": "キセキの白星",
+      "rare": "3",
+      "charaName": "オグリキャップ",
+      "grass": "A",
+      "dirt": "B",
+      "shortDistance": "E",
+      "mile": "A",
+      "mediumDistance": "A",
+      "longDistance": "B",
+      "escape": "F",
+      "leading": "A",
+      "insert": "A",
+      "tracking": "D",
+      "speedGrow": "+15%",
+      "staminaGrow": "+15%",
+      "powerGrow": "+0%",
+      "gutsGrow": "+0%",
+      "wisdomGrow": "+0%",
+      "skillList": [
+        "_IaqhtwWtl",
+        "x_8glfWv1Fs",
+        "Lv5bWWlO15w",
+        "5PPzFiHFNv",
+        "LXINgxRd1tx",
+        "KdtxzRWEj",
+        "OftmxU3NST",
+        "LDIfF8CP-4"
+      ],
+      "uniqueSkillList": [
+        "_IaqhtwWtl"
+      ],
+      "initialSkillList": [
+        "x_8glfWv1Fs",
+        "Lv5bWWlO15w",
+        "5PPzFiHFNv"
+      ],
+      "awakeningSkillList": [
+        "LXINgxRd1tx",
+        "KdtxzRWEj",
+        "OftmxU3NST",
+        "LDIfF8CP-4"
+      ],
+      "eventList": [
+        "J6C5V__pf",
+        "SQsvzVClHa",
+        "Uu14Ml0TA",
+        "l6u0tRv-ee",
+        "uWNXug9yKX",
+        "9bX3I9BpGc",
+        "m5E6BG5avW",
+        "xPmJF86MEy",
+        "6dEMrK5ZIh",
+        "1VvgxHu41",
+        "xPMnKccrjw",
+        "YwfLyIAgtg",
+        "cqPEHo-RTc",
+        "6RZtgtrD87",
+        "Lf7a9aXFaT",
+        "tU-hVbaTge",
+        "ZKCX8hSl7",
+        "W3uO_7pGk_",
+        "y5HvrkRoab",
+        "n6bLbjcPHV",
+        "yM1Hl7qgYa",
+        "OJ54-scO-H",
+        "FJ87vmac9",
+        "QMNMTFK9Uo",
+        "9-dUp5yU4s",
+        "9vroIDDEjg",
+        "UHpliv32YW",
+        "GFRGbWNuRb",
+        "OLLY_xd8XE",
+        "P5Ra20t3b",
+        "7v-MrlsMsQ",
+        "lRVoyie7u2",
+        "Zj4qSbxoK_",
+        "NUUrlwWBH7",
+        "3zNXU5tXbY",
+        "uwg2hOfx1I",
+        "bDI7VSkpx",
+        "ixrSVJj5Vp",
+        "ds1t8wrSER",
+        "mVGvE5-9KE",
+        "OsWVnMOiJ",
+        "ZU6UOSxnGj",
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "hideEvent": [],
+      "eventList0": [
+        "J6C5V__pf",
+        "SQsvzVClHa",
+        "Uu14Ml0TA",
+        "l6u0tRv-ee",
+        "uWNXug9yKX",
+        "9bX3I9BpGc",
+        "m5E6BG5avW",
+        "xPmJF86MEy",
+        "6dEMrK5ZIh",
+        "1VvgxHu41",
+        "xPMnKccrjw",
+        "YwfLyIAgtg",
+        "cqPEHo-RTc",
+        "6RZtgtrD87",
+        "Lf7a9aXFaT",
+        "tU-hVbaTge",
+        "ZKCX8hSl7",
+        "W3uO_7pGk_",
+        "y5HvrkRoab",
+        "n6bLbjcPHV"
+      ],
+      "eventList1": [
+        "yM1Hl7qgYa",
+        "OJ54-scO-H",
+        "FJ87vmac9",
+        "QMNMTFK9Uo",
+        "9-dUp5yU4s",
+        "9vroIDDEjg",
+        "UHpliv32YW",
+        "GFRGbWNuRb",
+        "OLLY_xd8XE",
+        "P5Ra20t3b",
+        "7v-MrlsMsQ",
+        "lRVoyie7u2",
+        "Zj4qSbxoK_"
+      ],
+      "eventList2": [
+        "NUUrlwWBH7",
+        "3zNXU5tXbY",
+        "uwg2hOfx1I",
+        "bDI7VSkpx",
+        "ixrSVJj5Vp",
+        "ds1t8wrSER",
+        "mVGvE5-9KE",
+        "OsWVnMOiJ",
+        "ZU6UOSxnGj"
+      ],
+      "eventList3": [
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "eventList4": [],
+      "raceList": {
+        "32": {
+          "id": "nuorC_7vw1E",
+          "goal": "5着以内"
+        },
+        "45": {
+          "id": "5I4np5oibA",
+          "goal": "3着以内"
+        },
+        "47": {
+          "id": "OcoExcPhGYv",
+          "goal": "3着以内"
+        },
+        "67": {
+          "id": "LwfsArraIdq",
+          "goal": "1着"
+        },
+        "71": {
+          "id": "AhK3mYxkkq6",
+          "goal": "1着"
+        }
+      }
     }
   ],
   "supports": [
@@ -43582,6 +44004,158 @@
         "type_1": 18,
         "value_1": 20
       }
+    },
+    {
+      "gwId": "309695",
+      "id": "eFmUd2Ghb",
+      "charaName": "マヤノトップガン",
+      "rare": "SSR",
+      "type": "スピード",
+      "name": "フォーメーション：PARTY",
+      "skillList": [
+        "0ynXCgPRn",
+        "EOM5PqtmZUs",
+        "E4t5qqwP5I",
+        "y5wUlGVnlY",
+        "EOM5PqtmZUs",
+        "oif2oTQXUs",
+        "iZfjbk3QWoo",
+        "p71TuCN_n-G",
+        "lKRcNtJj8PI",
+        "F2XBLBFCVh"
+      ],
+      "trainingEventSkill": [
+        "0ynXCgPRn",
+        "EOM5PqtmZUs",
+        "E4t5qqwP5I",
+        "y5wUlGVnlY"
+      ],
+      "possessionSkill": [
+        "EOM5PqtmZUs",
+        "oif2oTQXUs",
+        "iZfjbk3QWoo",
+        "p71TuCN_n-G",
+        "lKRcNtJj8PI",
+        "F2XBLBFCVh"
+      ],
+      "baseAbility": {
+        "name": "フォーメーション：PARTY",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "パワー(力量)ボーナスと初期絆ゲージアップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "K532Tn1hn4",
+        "AqOUK1ccp8",
+        "BRCEYMPqUo",
+        "knZSEY38RX",
+        "GRrSQSzAg3"
+      ]
+    },
+    {
+      "gwId": "309697",
+      "id": "0Jj0QSzPE",
+      "charaName": "ナリタタイシン",
+      "rare": "SSR",
+      "type": "賢さ",
+      "name": "いじっぱりのマルクト",
+      "skillList": [
+        "2PeOpG8cmb",
+        "kAHwB6HlnJ9",
+        "sWVG7_tDNvo",
+        "47kEAZPiqw",
+        "d2COzXtV8DN",
+        "gNXLQ6JGMHl",
+        "8on9aldN12",
+        "ai9tE5d7yv9",
+        "SYn_JOvSTq5",
+        "d2COzXtV8DN",
+        "Djf2lAc6xg9",
+        "nG8aNw6Udb"
+      ],
+      "trainingEventSkill": [
+        "2PeOpG8cmb",
+        "kAHwB6HlnJ9",
+        "sWVG7_tDNvo",
+        "47kEAZPiqw",
+        "d2COzXtV8DN"
+      ],
+      "possessionSkill": [
+        "gNXLQ6JGMHl",
+        "8on9aldN12",
+        "ai9tE5d7yv9",
+        "SYn_JOvSTq5",
+        "d2COzXtV8DN",
+        "Djf2lAc6xg9",
+        "nG8aNw6Udb"
+      ],
+      "baseAbility": {
+        "name": "いじっぱりのマルクト",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "スピード(速度)ボーナスと得意率アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": []
+    },
+    {
+      "gwId": "309780",
+      "id": "VyU6_kzwnZ",
+      "charaName": "マーベラスサンデー",
+      "rare": "SSR",
+      "type": "パワー",
+      "name": "スノウクリスタル・デイ",
+      "skillList": [
+        "7fkScOPnxBk",
+        "gGqvq_Mnmp",
+        "tw7oPO88tQj",
+        "Pog9-5rAwcp",
+        "EOM5PqtmZUs",
+        "jggyQ_cKuX",
+        "F0uv7PX7rF0",
+        "FxF2hL65X7A",
+        "Cz9RY9VLaQ"
+      ],
+      "trainingEventSkill": [
+        "7fkScOPnxBk",
+        "gGqvq_Mnmp",
+        "tw7oPO88tQj",
+        "Pog9-5rAwcp"
+      ],
+      "possessionSkill": [
+        "EOM5PqtmZUs",
+        "jggyQ_cKuX",
+        "F0uv7PX7rF0",
+        "FxF2hL65X7A",
+        "Cz9RY9VLaQ"
+      ],
+      "baseAbility": {
+        "name": "スノークリスタル・デイ",
+        "ability": [
+          [
+            "Lv40~",
+            [
+              "友情ボーナスとレースボーナス"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "_BFU06TlF7",
+        "bMMflPIazq",
+        "zD6UaIoPf4",
+        "3fwPcVg5Jp",
+        "h9MHwBMkiV"
+      ]
     }
   ],
   "skills": [
@@ -53089,9 +53663,37 @@
       "rare": "ノーマル",
       "describe": "華麗なコーナーワークで加速力がわずかに上がる",
       "id": "EREF2bINm"
+    },
+    {
+      "name": "Presents from X",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill379.png",
+      "rare": "固有",
+      "describe": "スタート後からレース後半まで好位置を維持し続けるとレース中盤に勝利への道筋を見出し速度を上げる",
+      "id": "Wy4aGf_-38"
+    },
+    {
+      "name": "VIP顔パス",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill380.png",
+      "rare": "レア",
+      "describe": "追い抜く気持ちが湧き疲れにくくなる＜長距離＞",
+      "id": "YZMoS9QqGX"
+    },
+    {
+      "name": "聖夜のミラクルラン！",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill378.png",
+      "rare": "固有",
+      "describe": "スキルで持久力を3回以上回復するとレース後半で勝利に向かい呼吸を整えて力強く踏み込んでいく",
+      "id": "_IaqhtwWtl"
+    },
+    {
+      "name": "真っ向勝負",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill381.png",
+      "rare": "ノーマル",
+      "describe": "レース終盤に前方にいると加速力がわずかに上がる＜作戦・先行＞",
+      "id": "E4t5qqwP5I"
     }
   ],
-  "updateTime": 1637829172570,
+  "updateTime": 1638161907962,
   "races": [
     {
       "name": "中京ジュニアステークス",
@@ -163904,6 +164506,122 @@
         ]
       ],
       "id": "nR-zFUNG02"
+    },
+    {
+      "name": "なんでもない日の……♪",
+      "choiceList": [
+        [
+          "素敵なお父さんだな",
+          [
+            "成功：",
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+20",
+            "根性(毅力)+10",
+            "『真っ向勝負』のヒントLv+1",
+            "マヤノトップガンの絆ゲージ+5",
+            "失敗：",
+            "体力-10",
+            "やる気(干劲)アップ(提升)",
+            "根性(毅力)+10",
+            "マヤノトップガンの絆ゲージ+5"
+          ]
+        ],
+        [
+          "誰かを気遣えるって“大人だな”",
+          [
+            "賢さ(智力)+15",
+            "マヤノトップガンの絆ゲージ+5"
+          ]
+        ],
+        [
+          "じゃあ俺からも何かあげようか？",
+          [
+            "体力+20",
+            "スタミナ(耐力)+10",
+            "『対抗意識』のヒントLv+1",
+            "連続イベントが終了する可能性有り(調査中)"
+          ]
+        ]
+      ],
+      "id": "K532Tn1hn4"
+    },
+    {
+      "name": "素敵な休日の……♪",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+10",
+            "根性(毅力)+5"
+          ]
+        ]
+      ],
+      "id": "AqOUK1ccp8"
+    },
+    {
+      "name": "特別な日の特別な……♪",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力+10",
+            "スピード(速度)+10",
+            "根性(毅力)+5",
+            "『じゃじゃウマ娘』のヒントLv+1",
+            "マヤノトップガンの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "BRCEYMPqUo"
+    },
+    {
+      "name": "マーベラスへご案内☆",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+10"
+          ]
+        ]
+      ],
+      "id": "_BFU06TlF7"
+    },
+    {
+      "name": "キラッと輝くマーベラス☆",
+      "choiceList": [
+        [
+          "疲れてるのかも……",
+          [
+            "体力+10",
+            "マーベラスサンデーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "もう一度この目で確かめてみたい……！",
+          [
+            "検証中"
+          ]
+        ]
+      ],
+      "id": "bMMflPIazq"
+    },
+    {
+      "name": "白銀のマーベラス☆",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功：",
+            "スピード(速度)+5",
+            "スキルpt+5",
+            "『迅速果断』のヒントLv+3",
+            "マーベラスサンデーの絆ゲージ+5",
+            "失敗：",
+            "検証中"
+          ]
+        ]
+      ],
+      "id": "zD6UaIoPf4"
     }
   ]
 }
