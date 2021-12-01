@@ -27,7 +27,7 @@ class Player extends React.Component {
       list: props.playerList,
       isTable: false,
     }
-    props.cacheLifecycles.didRecover(this.componentDidRecover)
+    props.cacheLifecycles?.didRecover(this.componentDidRecover)
   }
   componentDidRecover() {
     document.title = TITLE
