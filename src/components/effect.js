@@ -18,7 +18,7 @@ const ua = dbL.get('ua').value();
 // "limit_lv40": -1,
 // "limit_lv45": 50,
 // "limit_lv50": -1
-const effects = db.get('effects').value()
+// const effects = db.get('effects').value()
 const limits = [
   "init",
   "limit_lv5",

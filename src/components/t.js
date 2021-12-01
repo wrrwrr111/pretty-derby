@@ -16,7 +16,6 @@ if(lan==='cn'){
 }else if(lan==='jp'){
   lanData = JP
 }
-let noTrans = {}
 const t = (text,lan)=>{
   if(lan==='cn'){
     lanData = ZH

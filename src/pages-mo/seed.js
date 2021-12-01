@@ -7,15 +7,15 @@ import {message} from 'antd'
 //test
 import {PlusOutlined,SmileOutlined,FrownOutlined,CopyOutlined } from '@ant-design/icons';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-
+import { useDidRecover } from 'react-router-cache-route'
 import axios from 'axios'
 import db from '../db.js'
 import t from '../components/t.js'
 import Player from '../pages/player.js'
 import Support from '../pages/support.js'
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
+const TITLE = '分享 - 乌拉拉大胜利 - 赛马娘资料站'
 let userId = db.get('userId').value()
-
 const blueLabels={
   'speed':'速度',
   'stamina':'耐力',
@@ -243,6 +243,10 @@ const SupportImage = (props)=>{
 }
 
 const Seed = ()=>{
+  document.title = TITLE
+  useDidRecover(() => {
+    document.title = TITLE
+  })
   const SeedCard = (props) =>{
     const data = props.data
     return (

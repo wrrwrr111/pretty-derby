@@ -4,7 +4,7 @@ import {
   Alert,
   Image,
   Button,
-  Divider,
+  // Divider,
   Table,
   Modal,
   Col,
@@ -14,18 +14,18 @@ import {
   Slider,
   PageHeader,
   Input,
-  Space,
+  // Space,
   Card,
 } from "antd";
 import { message } from "antd";
 //test
 import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined, DeleteOutlined } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-
+import { useDidRecover } from 'react-router-cache-route'
 import axios from "axios";
 import db from "../db.js";
 import dbL from "../dbL.js";
-import t from "../components/t.js";
+// import t from "../components/t.js";
 import "./seed.css";
 
 import Player from "./player.js";
@@ -33,6 +33,7 @@ import Support from "./support.js";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 // db.set('userId',null).write()
 let userId = dbL.get("userId").value();
+const TITLE = '分享 - 乌拉拉大胜利 - 赛马娘资料站'
 // console.log(userId)
 
 /*
@@ -496,10 +497,14 @@ const SupportImage = (props) => {
 };
 
 const Seed = () => {
+  document.title = TITLE
+  useDidRecover(() => {
+    document.title = TITLE
+  })
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);
   const [seedList, setSeedList] = useState([]);
   const [total, setTotal] = useState(0)
-  const [current, setCurrent] = useState(0)
+  // const [current, setCurrent] = useState(0)
   const [value, setValue] = useState()
 
   const columns = [
@@ -660,7 +665,7 @@ const Seed = () => {
   const search = async (value) => {
     setValue(value)
     const res = await axios.post("https://urarawin.com/api/sqlite/search", value);
-    setCurrent(0)
+    // setCurrent(0)
     if (res.data) {
       if (res.data.count) {
         setSeedList([...res.data.list]);

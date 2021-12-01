@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Link } from 'react-router-dom';
 import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
 import { Image, Button, Popover } from 'antd'
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';

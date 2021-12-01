@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
-import { Row, Col, Image, Layout, Menu, Button, Popover, Popconfirm } from 'antd'
-import { message } from 'antd'
+import {
+  Row,
+  Col,
+  Image,
+  Layout,
+  Menu,
+  Button,
+  Popover,
+  Popconfirm
+} from 'antd'
+// import { message } from 'antd'
 import 'antd/dist/antd.css';
 import './index.css'
 
 
-import db from './db.js'
+// import db from './db.js'
 import dbL from './dbL.js'
 import t from './components/t.js'
 
@@ -22,7 +35,11 @@ import Seed from './pages/seed.js'
 import LanButton from './components/lan-button'
 import IntroIndex from './components/intro.js'
 
-const { Header, Content, Footer } = Layout;
+const {
+  Header,
+  Content,
+  Footer
+} = Layout;
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
 
 const AppPc = () => {
@@ -62,7 +79,7 @@ const AppPc = () => {
         </Header>
         <Content style={{ paddingTop: '64px' }} >
           <CacheSwitch>
-            <CacheRoute exact path="/" component={Player} />
+            <CacheRoute exact path="/" component={Player}/>
             <CacheRoute path="/support" component={Support} />
             <CacheRoute path="/skill" component={Skill} />
             <CacheRoute path="/nurturing" component={Nurturing2} />

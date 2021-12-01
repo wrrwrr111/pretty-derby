@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { withRouter, useHistory, useLocation } from 'react-router-dom';
+import {
+  // withRouter,
+  useHistory,
+  // useLocation
+} from 'react-router-dom';
 import db from '../db.js'
 import dbL from '../dbL.js'
 import { Row, Col, Popover, Button, Image, Checkbox, Divider, Input, Tooltip, Switch } from 'antd';
 import t from './t.js'
 import { SupportCard } from './support-detail.js'
 import { PlayerCard } from './player-detail.js'
-import ScrollBars from 'react-custom-scrollbars'
+// import ScrollBars from 'react-custom-scrollbars'
 
 const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -256,7 +260,8 @@ const SkillCheckbox = React.memo((props) => {
         })
         : l,
       allSkillList),
-    [checkboxGroupValues, allSkillList])
+    [checkboxGroupValues])
+
   useEffect(() => {
     updateSkillList(filteredSkills, skillChecked1, skillChecked2, isOwn)
   }, [filteredSkills]);
@@ -341,10 +346,10 @@ const SkillCheckbox = React.memo((props) => {
           {checkOptions1.map(checkItem =>
             <Col span={12}>
               {/* https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/img/skill_icons/10011.png */}
-              <Checkbox value={checkItem.value} style={{ display: 'flex',alignItems: 'center' }}>
+              <Checkbox value={checkItem.value} style={{ display: 'flex', alignItems: 'center' }}>
                 <div style={{ display: 'flex' }}>
-                <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
-                <div style={{flex:'auto',overflow: 'hidden',whiteSpace: 'nowrap'}}>{checkItem.label}</div>
+                  <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
+                  <div style={{ flex: 'auto', overflow: 'hidden', whiteSpace: 'nowrap' }}>{checkItem.label}</div>
                 </div>
               </Checkbox>
             </Col>
@@ -377,10 +382,10 @@ const SkillCheckbox = React.memo((props) => {
           {checkOptions1.map(checkItem =>
             <Col span={12}>
               {/* https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/img/skill_icons/10011.png */}
-              <Checkbox value={checkItem.value} style={{ display: 'flex',alignItems: 'center' }}>
+              <Checkbox value={checkItem.value} style={{ display: 'flex', alignItems: 'center' }}>
                 <div style={{ display: 'flex' }}>
-                <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
-                <div style={{flex:'auto',overflow: 'hidden',whiteSpace: 'nowrap'}}>{checkItem.label}</div>
+                  <Image src={cdnServer + 'img/skill_icons/' + checkItem.value + '.png'} preview={false} width={26}></Image>
+                  <div style={{ flex: 'auto', overflow: 'hidden', whiteSpace: 'nowrap' }}>{checkItem.label}</div>
                 </div>
               </Checkbox>
             </Col>

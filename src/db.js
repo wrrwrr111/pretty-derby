@@ -1,7 +1,7 @@
 import low from 'lowdb';
-import LocalStorage from 'lowdb/adapters/LocalStorage'
+// import LocalStorage from 'lowdb/adapters/LocalStorage'
 import Memory from 'lowdb/adapters/Memory'
-import axios from 'axios'
+// import axios from 'axios'
 import jsonDB from './assert/db.json'
 
 // const adapter = new LocalStorage('db')

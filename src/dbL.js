@@ -1,8 +1,8 @@
 import low from 'lowdb';
 import LocalStorage from 'lowdb/adapters/LocalStorage'
-import Memory from 'lowdb/adapters/Memory'
+// import Memory from 'lowdb/adapters/Memory'
 import axios from 'axios'
-import jsonDB from './assert/db.json'
+// import jsonDB from './assert/db.json'
 
 const adapterL = new LocalStorage('db')
 // const adapterM = new Memory()
@@ -12,7 +12,7 @@ const db = low(adapterL)
 const d = async ()=>{
   // let res = await axios.get('https://urarawin.com/d')
   let res = await axios.get('https://urarawin.com/api/sqlite/d')
-  console.log(res.data)
+  // console.log(res.data)
   db.set('userId',res.data).write()
 }
 db.get('userId').value()||d()

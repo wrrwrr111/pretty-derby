@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { Divider, Row, Col, Image, Modal, Button, Checkbox, Tooltip, Input } from 'antd';
+import React from 'react';
+import { Divider, Row, Col, Button, Checkbox, Input } from 'antd';
+// import { useDidRecover } from 'react-router-cache-route'
 
 import db from '../db.js'
 import t from '../components/t.js'
-
-
 import { SupportCard } from '../components/support-detail.js'
-import { SkillCheckbox, SkillList } from '../components/skill-detail.js'
+import { SkillCheckbox } from '../components/skill-detail.js'
+
 const CheckboxGroup = Checkbox.Group
 const Search = Input.Search
-
-const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
-
+const TITLE = '支援 - 乌拉拉大胜利 - 赛马娘资料站'
 
 class Support extends React.Component {
   constructor(props) {
@@ -29,6 +27,10 @@ class Support extends React.Component {
     this.effectOptions = Object.keys(this.effects)
       .map(key => { return { label: t(this.effects[key].name), value: key } })
     this.typeOptions = ['スピード', 'スタミナ', 'パワー', '根性', '賢さ', '友人'].map(item => ({ label: t(item), value: item }))
+    props.cacheLifecycles.didRecover(this.componentDidRecover)
+  }
+  componentDidRecover() {
+    document.title = TITLE
   }
   componentDidUpdate(prevProps) {
     if (this.props.supportList !== prevProps.supportList) {
@@ -72,12 +74,12 @@ class Support extends React.Component {
         let flag = 0;
         effectList.forEach(value => {
           support.effects && support.effects.forEach(effect => {
-            if (effect.type == value) {
+            if (effect.type === value) {
               flag += 1
             }
           })
         })
-        return flag == effectList.length
+        return flag === effectList.length
       })
     }
     if (skillList?.length) {
@@ -131,6 +133,7 @@ class Support extends React.Component {
   };
 
   render() {
+    document.title = TITLE
     const headerStyle = {
       backgroundColor: '#1e90ffA0',
       height: 48,
@@ -182,9 +185,8 @@ class Support extends React.Component {
                   <CheckboxGroup options={this.effectOptions} value={this.state.effectList}
                     onChange={this.onSupportCheckboxChange} />
                 </div>
-              </Col>}
-
-
+              </Col>
+            }
             <Col span={18}>
               <div style={{
                 overflowY: 'scroll', overflowX: 'hidden',
