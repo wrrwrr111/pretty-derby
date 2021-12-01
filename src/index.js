@@ -25,11 +25,11 @@ ua.chrome = !!chrome
 ua.chrome_version = chrome && +chrome[1]
 // Is true for both iOS and iPadOS for convenience
 ua.safari = !ie && /Apple Computer/.test(navigator.vendor)
-ua.ios = ua.safari && (/Mobile\/\w+/.test(navigator.userAgent) || navigator.maxTouchPoints > 2)
+ua.ios = (/iPhone/.test(navigator.userAgent) || navigator.maxTouchPoints > 2)
 ua.android = /Android \d/.test(navigator.userAgent)
 ua.webkit = "webkitFontSmoothing" in document.documentElement.style
 ua.webkit_version = ua.webkit && +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1]
-console.log(ua)
+console.log(ua.android || ua.ios)
 
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 // https://purge.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/dbd.json
@@ -37,12 +37,13 @@ console.log(ua)
 
 // https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/raw/master/public/img/players/0uJ0iropRbr.png
 
-const App = ()=>{
-  return(
+const App = () => {
+  return (
     <>
-    {ua.android||ua.ios?<AppMo></AppMo>:<AppPc></AppPc>}
+      {(ua.android || ua.ios) ?
+        <AppMo></AppMo> : <AppPc></AppPc>}
     </>
   )
 }
 
-ReactDOM.render((<App></App>),document.getElementById('root'),);
+ReactDOM.render((<App></App>), document.getElementById('root'),);

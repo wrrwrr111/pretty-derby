@@ -8,7 +8,6 @@ import t from './t.js';
 const LanButton = (props) => {
   let lan = dbL.get('lan').value()
   const [code, setCode] = useState(lan || 'cn')
-  console.log(code)
   const changeToCn = () => {
     lan = 'cn'
     dbL.set('lan', 'cn').write()

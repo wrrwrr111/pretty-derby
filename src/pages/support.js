@@ -27,7 +27,7 @@ class Support extends React.Component {
     this.effectOptions = Object.keys(this.effects)
       .map(key => { return { label: t(this.effects[key].name), value: key } })
     this.typeOptions = ['スピード', 'スタミナ', 'パワー', '根性', '賢さ', '友人'].map(item => ({ label: t(item), value: item }))
-    props.cacheLifecycles.didRecover(this.componentDidRecover)
+    props.cacheLifecycles?.didRecover(this.componentDidRecover)
   }
   componentDidRecover() {
     document.title = TITLE

@@ -89,7 +89,6 @@ const Race = (props) => {
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
-    console.log('currentWidth::', height);
     return { height };
   };
 
@@ -113,7 +112,6 @@ const Race = (props) => {
         selected[race.dateNum] = [race.id]
       }
     }
-    console.log(selected)
     props.onSelect(selected)
     setSelectedRowKeys(selectedRowKeys)
   }

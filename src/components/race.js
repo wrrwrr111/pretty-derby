@@ -170,7 +170,6 @@ const RaceCheckbox = (props) =>{
   const onChange=(checkedValues,type)=>{
     let tmpObj = {}
     tmpObj[type]=checkedValues
-    console.log({...raceFilterCondition,...tmpObj})
     props.onChange({...raceFilterCondition,...tmpObj})
     setRaceFilterCondition({...raceFilterCondition,...tmpObj})
   }

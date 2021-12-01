@@ -62,7 +62,6 @@ const MyDecks = (props) => {
       ...deck,
       id: deck.playerId + deck.supportsId.sort((a, b) => a.localeCompare(b)).join("")
     }
-    console.log(formData)
     const res = await axios.post("https://urarawin.com/api/sqlite/addDeck", formData);
     const data = res.data
     data && message.info(data.msg);
