@@ -27,6 +27,8 @@
     "json2csv": "^5.0.6",
     "lowdb": "^1.0.0",
     "morgan": "^1.10.0",
+    "postcss-cli": "^9.0.2",
+    "postcss-import": "^14.0.2",
     "rc-national-flag": "^1.0.2",
     "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",
@@ -41,14 +43,18 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "shortid": "^2.2.16",
+    "tailwindcss": "^2.2.19",
     "web-vitals": "^1.0.1",
     "webpack-bundle-analyzer": "^4.4.0"
   },
   "proxy": "http://urarawin.com",
   "scripts": {
-    "start": "react-app-rewired start",
-    "start-dev": "react-scripts start",
-    "build": "react-app-rewired --max_old_space_size=5048 build",
+    "build:css": "NODE_ENV=production postcss src/styles/index.css -o src/styles/tailwind.css",
+    "build:css-dev": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "start:js": "react-scripts start",
+    "start": "npm-run-all build:css-dev start:js",
+    "build:js": "react-app-rewired --max_old_space_size=5048 build",
+    "build": "npm-run-all build:css build:js",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "predeploy": "npm run build",
@@ -73,7 +79,10 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gh-pages": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.4",
     "prettier": "2.2.1",
     "sqlite3": "^5.0.2"
   }

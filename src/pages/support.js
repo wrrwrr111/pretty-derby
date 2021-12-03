@@ -151,64 +151,63 @@ class Support extends React.Component {
       textShadow: "0 2px #33333370",
     }
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 4 }}>
-        <div style={{ maxWidth: 1200, maxHeight: window.innerHeight - 104 }}>
-          <Row justify="space-around">
-            {this.props.filter &&
-              <Col span={6}><div style={{ ...headerStyle }}>
-                <text style={{ ...headerTextStyle }}>{t('筛选')}</text></div>
-              </Col>}
-            <Col span={18}>
-              <div style={{ ...headerStyle }}>
-                <text style={{ ...headerTextStyle }}>{t('支援卡列表')}</text>
-              </div>
-            </Col>
-            {this.props.filter &&
-              <Col span={6}>
-                <div style={{
-                  overflowY: 'scroll', display: 'flex',
-                  flexDirection: 'column', overflowX: 'hidden',
-                  maxHeight: window.innerHeight - 104 - 78, padding: 4
-                }}>
-                  <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
-                  <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
-                  {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
-                  <Search placeholder={t("输入关键词")} enterButton={t("搜索")} size="middle"
-                    style={{ width: '100%' }} onSearch={this.onSearch} />
-                  <Divider style={{ margin: 4 }}>{t('类型')}</Divider>
-                  <CheckboxGroup options={this.typeOptions} value={this.state.typeList}
-                    onChange={this.onTypeListChange} />
-                  <Divider style={{ margin: 4 }}>{t('技能')}</Divider>
-                  <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate}
-                    checkOnly={true} needId={true}></SkillCheckbox>
-                  <Divider style={{ margin: 4 }}>{t('育成效果')}</Divider>
-                  <CheckboxGroup options={this.effectOptions} value={this.state.effectList}
-                    onChange={this.onSupportCheckboxChange} />
-                </div>
-              </Col>
-            }
-            <Col span={18}>
+      <div className='flex justify-center w-full pt-1'>
+        <div className=' w-full grid grid-cols-4 justify-around max-w-6xl justify-evenly'>
+          {this.props.filter &&
+            <div className='col-span-1' style={{ ...headerStyle }}>
+              <text style={{ ...headerTextStyle }}>{t('筛选')}</text>
+            </div>}
+          <div className='col-span-3'>
+            <div style={{ ...headerStyle }}>
+              <text style={{ ...headerTextStyle }}>{t('支援卡列表')}</text>
+            </div>
+          </div>
+          {this.props.filter &&
+            <div className='col-span-1'>
               <div style={{
-                overflowY: 'scroll', overflowX: 'hidden',
-                maxHeight: window.innerHeight - 104 - 78, paddingRight: 16
+                overflowY: 'scroll', display: 'flex',
+                flexDirection: 'column', overflowX: 'hidden',
+                maxHeight: window.innerHeight - 104 - 78, padding: 4
               }}>
-                {
-                  ['SSR', 'SR', 'R'].map(rare => {
-                    let list = this.state.list.filter(item => item.rare === rare)
-                    return list.length ? <Row gutter={[16, 16]} key={rare}>
-                      <Divider>{rare}</Divider>
-                      {list.map(support =>
-                        <Col lg={4} xs={6} key={support.id}
-                          className={this.state.showMode && this.state.chosenList.indexOf(support.id) === -1 ? 'un-chosen-card' : 'chosen-card'}>
-                          <SupportCard data={support} onSelect={this.state.chooseMode ? this.onSelect : this.props.onSelect}
-                            chooseMode={this.props.chooseMode}></SupportCard>
-                        </Col>)}
-                    </Row> : null
-                  })
-                }
+                <Button onClick={this.changeShowMode}>{t('高亮我的卡组')}</Button>
+                <Button onClick={this.changeChooseMode}>{t('配置卡组')}</Button>
+                {this.state.chooseMode && <Button onClick={this.changeChooseMode} type='primary'>{t('配置完成')}</Button>}
+                <Search placeholder={t("输入关键词")} enterButton={t("搜索")} size="middle"
+                  style={{ width: '100%' }} onSearch={this.onSearch} />
+                <Divider style={{ margin: 4 }}>{t('类型')}</Divider>
+                <CheckboxGroup options={this.typeOptions} value={this.state.typeList}
+                  onChange={this.onTypeListChange} />
+                <Divider style={{ margin: 4 }}>{t('技能')}</Divider>
+                <SkillCheckbox onUpdate={this.onSkillCheckboxUpdate}
+                  checkOnly={true} needId={true}></SkillCheckbox>
+                <Divider style={{ margin: 4 }}>{t('育成效果')}</Divider>
+                <CheckboxGroup options={this.effectOptions} value={this.state.effectList}
+                  onChange={this.onSupportCheckboxChange} />
               </div>
-            </Col>
-          </Row>
+            </div>
+          }
+          <div className='col-span-3'>
+            <div className=' overflow-y-scroll overflow-x-hidden pl-4 w-full h-full flex flex-wrap justify-evenly' style={{
+              maxHeight: window.innerHeight - 104 - 78
+            }}>
+              {['SSR', 'SR', 'R'].map(rare => {
+                let list = this.state.list.filter(item => item.rare === rare)
+                return list.length && <>
+                  <div className='w-full text-xl font-bold text-center'>{rare}</div>
+                  {list.map(support =>
+                    <div
+                      className={`w-20 mr-2 mb-2 ${this.state.showMode && this.state.chosenList.indexOf(support.id) === -1 ? 'un-chosen-card' : 'chosen-card'}`}
+                      key={support.id}
+                    >
+                      <SupportCard data={support} onSelect={this.state.chooseMode ? this.onSelect : this.props.onSelect}
+                        chooseMode={this.props.chooseMode}></SupportCard>
+                    </div>
+                  )}
+                </>
+              })
+              }
+            </div>
+          </div>
         </div>
       </div>
     )

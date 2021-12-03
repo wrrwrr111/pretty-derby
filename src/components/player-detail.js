@@ -228,14 +228,7 @@ const PlayerCard = (props) => {
 
   return (
     <>
-
-      {showName ?
-        <Card cover={<Image src={cdnServer + player.imgUrl} preview={false} onClick={showPlayerDetail} width={'100%'}></Image>}>
-          <Card.Meta title={t(player.name)} ></Card.Meta>
-          <Card.Meta title={t(player.charaName)} ></Card.Meta>
-        </Card> :
-        <Image src={cdnServer + player.imgUrl} preview={false} onClick={showPlayerDetail} width={'100%'}></Image>
-      }
+      <Image alt={player.name} src={cdnServer + player.imgUrl} preview={false} onClick={showPlayerDetail} width={'100%'}></Image>
       <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null} width={800} >
         <PlayerDetail playerId={player.id} isNur={false}></PlayerDetail>
       </Modal>

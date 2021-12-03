@@ -17,7 +17,6 @@ import {
 } from 'antd'
 // import { message } from 'antd'
 import 'antd/dist/antd.css';
-import './index.css'
 
 
 // import db from './db.js'
@@ -63,8 +62,8 @@ const AppPc = () => {
   return (
     // <UserAgentProvider ua={window.navigator.userAgent}>
     <Router>
-      <IntroIndex></IntroIndex>
-      <Layout className="layout">
+      {/* <IntroIndex></IntroIndex> */}
+      <div className='w-screen h-screen flex flex-col'>
         <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
           <Menu theme="dark" mode="horizontal">
             <Menu.Item key="1" className='menu-player'><Link to='/'>{t('角色')}</Link></Menu.Item>
@@ -121,7 +120,7 @@ const AppPc = () => {
             </Col>
           </Row>
         </Footer>
-      </Layout>
+      </div>
     </Router>
     // </UserAgentProvider>
   )

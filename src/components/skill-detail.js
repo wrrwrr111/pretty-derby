@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import db from '../db.js'
 import dbL from '../dbL.js'
-import { Row, Col, Popover, Button, Image, Checkbox, Divider, Input, Tooltip, Switch } from 'antd';
+import { Row, Col, Popover, button, Image, Checkbox, Divider, Input, Tooltip, Switch } from 'antd';
 import t from './t.js'
 import { SupportCard } from './support-detail.js'
 import { PlayerCard } from './player-detail.js'
@@ -152,36 +152,28 @@ const SkillButton = (props) => {
     }
   }
 
-  const inListStyleOverride = {
-    borderRadius: '8px',
-    color: '#303030',
-    width: '96%',
-    justifyContent: 'flex-start'
-  }
-  const skillNameStyle = {
-    width: `calc(96% - 34px)`,
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    textAlign: 'justify'
-  }
-
   return <Popover
     mouseEnterDelay={0.4}
     visible={ua === 'mo' ? false : undefined}
     content={
       <SkillDetail skill={skill} isNur={props.isNur || false}></SkillDetail>
     }>
-    <Button type={'primary'} className={'skill-btn skill-btn-' + skill?.rarity}
-      style={props.usedInList ? { ...inListStyleOverride } : {}}
+    <button
+      // className={'skill-btn skill-btn-' + skill?.rarity}
+      className={` rounded-2xl h-9 px-2 py-1 border-solid border-2 w-full flex items-center
+      ${skill.rarity == 1 && 'bg-white'}
+      ${skill.rarity == 2 && 'bg-yellow-300'}
+      ${skill.rarity == 3 && ' bg-purple-400'}
+      ${skill.rarity == 4 && ' bg-purple-400'}
+      ${skill.rarity == 5 && ' bg-purple-400'}
+      `}
       onClick={() => toSkillDetail(skill?.id)}>
-      <div style={props.usedInList ?
-        { display: 'flex', position: 'absolute', top: 4, left: 8, width: '100%' } : { width: '100%' }}>
-        <Image src={cdnServer + skill?.imgUrl} preview={false} width={26}></Image>
-        <div style={{ ...skillNameStyle }}>{`\xa0\xa0${skill?.name}`}</div>
+      <img src={cdnServer + skill?.imgUrl} preview={false} width={20}></img>
+      <div className='flex-auto truncate'>
+        {skill?.name}
       </div>
-    </Button>
-  </Popover>
+    </button>
+  </Popover >
 }
 
 const SkillCheckboxGroup = React.memo((props) => {
@@ -362,8 +354,8 @@ const SkillCheckbox = React.memo((props) => {
     :
     <div>
       <div style={{ height: 16 }} />
-      <Button type={'danger'} onClick={resetCheckbox} style={{ width: '100%' }}>{t('重置')}
-      </Button>
+      <button type={'danger'} onClick={resetCheckbox} style={{ width: '100%' }}>{t('重置')}
+      </button>
       <Divider />
       <div>
         <Tooltip title={t("可以在支援卡页面配置")}>
