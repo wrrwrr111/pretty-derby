@@ -15,12 +15,16 @@ const SupportDetail = (props) => {
   return (
     <div className="w-full h-full flex flex-col overflow-auto px-3">
       <div className="h-16 w-full flex flex-shrink-0">
-        <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={48}/>
+        <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={48} />
         <div className="flex-auto flex flex-wrap h-full items-center">
-          <div className="w-1/2 text-xl font-semibold truncate">{data.name}</div>
-          <div className="w-1/2 text-gray-700 truncate">{t(data.name)}</div>
-          <div className="w-1/2 text-xl font-semibold truncate">{data.charaName}</div>
-          <div className="w-1/2  text-gray-700 truncate">{t(data.charaName)}</div>
+          <div className="w-full flex items-center justify-between">
+            <div className="flex-auto text-xl font-semibold truncate">{data.name}</div>
+            <div className="flex-shrink-0 text-gray-700 truncate">{t(data.name)}</div>
+          </div>
+          <div className="w-full flex items-center justify-between">
+            <div className="flex-auto text-xl font-semibold truncate">{data.charaName}</div>
+            <div className="flex-shrink-0 text-gray-700 truncate">{t(data.charaName)}</div>
+          </div>
         </div>
       </div>
       <div>{t("事件")}</div>

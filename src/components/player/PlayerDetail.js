@@ -16,16 +16,19 @@ const PlayerDetail = (props) => {
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
-  console.log(props.match, isNur, "test");
   const data = props.data || db.get("players").find({ id }).value();
   const PlayerItem = () => (
     <div className="h-16 w-full flex flex-shrink-0">
       <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={64} />
       <div className="flex-auto flex flex-wrap h-full items-center">
-        <div className="w-1/2 text-xl font-semibold truncate">{data.name}</div>
-        <div className="w-1/2 text-gray-700 truncate">{t(data.name)}</div>
-        <div className="w-1/2 text-xl font-semibold truncate">{data.charaName}</div>
-        <div className="w-1/2  text-gray-700 truncate">{t(data.charaName)}</div>
+        <div className="w-full flex items-center justify-between">
+          <div className=" text-xl font-semibold truncate">{data.name}</div>
+          <div className="flex-shrink-0 text-gray-700 truncate">{t(data.name)}</div>
+        </div>
+        <div className="w-full flex items-center justify-between">
+          <div className=" text-xl font-semibold truncate">{data.charaName}</div>
+          <div className="flex-shrink-0 text-gray-700 truncate">{t(data.charaName)}</div>
+        </div>
       </div>
     </div>
   );
@@ -103,210 +106,75 @@ const coloredGradeText = (text) => {
   );
 };
 const AdaptBox = (props) => {
-  const tableStyle = {
-    width: "100%",
-    cellPadding: 4,
-  };
-  const cellStyle = {
-    width: "20%",
-    height: "32px",
-    fontSize: 16,
-    textAlign: "flex-start",
-    paddingLeft: 16,
-    fontWeight: 500,
-    borderWidth: "thin",
-    borderStyle: "none solid solid none",
-    borderColor: "gray",
-  };
-  const headerCellStyle = {
-    width: "20%",
-    fontSize: 18,
-    textAlign: "center",
-    fontWeight: 600,
-    color: "#f5f5f5",
-    textShadow: "0 2px #33333370",
-    backgroundColor: "#32cd32C0",
-    borderWidth: "thin",
-    borderStyle: "none solid solid none",
-    borderColor: "gray",
-  };
-  const adaptTextWrapperStyle = {
-    paddingRight: 16,
-    display: "flex",
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "space-between",
-  };
-
-  // {[`草地/芝\xa0`,coloredGradeText(props.player.grass)]}
   return (
-    <div className="rounded-lg border border-solid border-gray-500">
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <td
-              style={{
-                ...headerCellStyle,
-                borderRadius: "8px 0 0 0",
-                fontWeight: 700,
-                fontSize: 18,
-              }}
-            >
-              {t("场地适应")}
-            </td>
-            <td style={{ ...cellStyle }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("芝")}`, coloredGradeText(props.player.grass)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("ダート")}`, coloredGradeText(props.player.dirt)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle }}>{`\xa0`}</td>
-            <td
-              style={{
-                ...cellStyle,
-                borderRadius: "0 8px 0 0",
-                borderStyle: "none none solid none",
-              }}
-            >{`\xa0`}</td>
-          </tr>
-          <tr>
-            <td style={{ ...headerCellStyle, fontWeight: 700, fontSize: 18 }}>{t("赛程适应")}</td>
-            <td style={{ ...cellStyle }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("短距離")}`, coloredGradeText(props.player.shortDistance)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("マイル")}`, coloredGradeText(props.player.mile)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("中距離")}`, coloredGradeText(props.player.mediumDistance)]}
-              </div>
-            </td>
-            <td
-              style={{
-                ...cellStyle,
-                borderRadius: "0 0 8px 0",
-                borderStyle: "none none solid none",
-              }}
-            >
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("長距離")}`, coloredGradeText(props.player.longDistance)]}
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td
-              style={{
-                ...headerCellStyle,
-                borderRadius: "0 0 0 8px",
-                borderStyle: "none solid none none",
-                fontWeight: 700,
-                fontSize: 18,
-              }}
-            >
-              {t("脚质适应")}
-            </td>
-            <td style={{ ...cellStyle, borderStyle: "none solid none none" }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("逃げ")}`, coloredGradeText(props.player.escape)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle, borderStyle: "none solid none none" }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("先行")}`, coloredGradeText(props.player.leading)]}
-              </div>
-            </td>
-            <td style={{ ...cellStyle, borderStyle: "none solid none none" }}>
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("差し")}`, coloredGradeText(props.player.insert)]}
-              </div>
-            </td>
-            <td
-              style={{
-                ...cellStyle,
-                borderRadius: "0 0 8px 0",
-                borderStyle: "none none none none",
-              }}
-            >
-              <div style={adaptTextWrapperStyle}>
-                {[`${t("追込")}`, coloredGradeText(props.player.tracking)]}
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("场地适应")}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("芝")}`, coloredGradeText(props.player.grass)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("ダート")}`, coloredGradeText(props.player.dirt)]}
+      </div>
+      <div className="col-span-2"></div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("赛程适应")}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("短距離")}`, coloredGradeText(props.player.shortDistance)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("マイル")}`, coloredGradeText(props.player.mile)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("中距離")}`, coloredGradeText(props.player.mediumDistance)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("長距離")}`, coloredGradeText(props.player.longDistance)]}
+      </div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("脚质适应")}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("逃げ")}`, coloredGradeText(props.player.escape)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("先行")}`, coloredGradeText(props.player.leading)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("差し")}`, coloredGradeText(props.player.insert)]}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">
+        {[`${t("追込")}`, coloredGradeText(props.player.tracking)]}
+      </div>
     </div>
   );
 };
 
 const GrowBox = (props) => {
-  const headerCellStyle = {
-    width: "20%",
-    fontSize: 18,
-    textAlign: "center",
-    fontWeight: 600,
-    color: "#f5f5f5",
-    textShadow: "0 2px #33333370",
-    backgroundColor: "#32cd32C0",
-    borderWidth: "thin",
-    borderStyle: "none solid solid none",
-    borderColor: "gray",
-  };
-  const cellStyle = {
-    width: "20%",
-    height: "40px",
-    fontSize: 16,
-    textAlign: "center",
-    fontWeight: 500,
-    borderWidth: "thin",
-    borderStyle: "none solid none none",
-    borderColor: "gray",
-  };
-
   return (
-    <div className=" rounded-lg border borders border-gray-500">
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <th style={{ ...headerCellStyle, borderRadius: "8px 0 0 0" }}>{t("スピード")}</th>
-            <th style={{ ...headerCellStyle }}>{t("スタミナ")}</th>
-            <th style={{ ...headerCellStyle }}>{t("パワー")}</th>
-            <th style={{ ...headerCellStyle }}>{t("根性")}</th>
-            <th
-              style={{
-                ...headerCellStyle,
-                borderRadius: "0 8px 0 0",
-                borderStyle: "none none solid none",
-              }}
-            >
-              {t("賢さ")}
-            </th>
-          </tr>
-          <tr>
-            <td style={{ ...cellStyle, borderRadius: "0 0 0 8px" }}>{props.player.speedGrow}</td>
-            <td style={{ ...cellStyle }}>{props.player.staminaGrow}</td>
-            <td style={{ ...cellStyle }}>{props.player.powerGrow}</td>
-            <td style={{ ...cellStyle }}>{props.player.gutsGrow}</td>
-            <td
-              style={{
-                ...cellStyle,
-                borderRadius: "0 0 8px 0",
-                borderStyle: "none none none none",
-              }}
-            >
-              {props.player.wisdomGrow}
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("スピード")}
+      </div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("スタミナ")}
+      </div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("パワー")}
+      </div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("根性")}
+      </div>
+      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+        {t("賢さ")}
+      </div>
+      <div className="col-span-1 flex items-center justify-around">{props.player.speedGrow}</div>
+      <div className="col-span-1 flex items-center justify-around">{props.player.staminaGrow}</div>
+      <div className="col-span-1 flex items-center justify-around">{props.player.powerGrow}</div>
+      <div className="col-span-1 flex items-center justify-around">{props.player.gutsGrow}</div>
+      <div className="col-span-1 flex items-center justify-around">{props.player.wisdomGrow}</div>
     </div>
   );
 };
