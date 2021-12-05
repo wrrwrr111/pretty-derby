@@ -3,6 +3,7 @@ import { Button, Checkbox, Input } from "antd";
 // import { useDidRecover } from 'react-router-cache-route'
 import { useDidRecover } from "react-router-cache-route";
 import Layout from "../../components/common/Layout.js";
+import dbL from "../../dbL.js";
 import db from "../../db.js";
 import t from "../../components/t.js";
 import SupportList from "../../components/support/SupportList";
@@ -22,7 +23,7 @@ const Support = (props) => {
   const [list, setList] = useState(props.supportList || allSupports || []);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
-  const [chosenList, setChosenList] = useState(db.get("mySupports").value() || []);
+  const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
   const [effectList, setEffectList] = useState();
   const [typeList, setTypeList] = useState([]);
   const [eventIdList, setEventIdList] = useState([]);
@@ -54,8 +55,7 @@ const Support = (props) => {
     } else {
       tmpList.splice(index, 1);
     }
-    console.log(tmpList);
-    db.update("mySupports", tmpList).write();
+    dbL.update("mySupports", tmpList).write();
     setChosenList([...tmpList]);
   };
 
@@ -84,7 +84,6 @@ const Support = (props) => {
   };
 
   useEffect(() => {
-    console.log(effectList);
     updateSupport({ effectList, skillList, eventIdList, typeList });
   }, [effectList, skillList, eventIdList, typeList]);
 
