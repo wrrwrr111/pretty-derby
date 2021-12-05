@@ -637,10 +637,6 @@ video {
   }
 }
 
-@import "./global.css";
-
-/* purgecss end ignore */
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -6873,6 +6869,10 @@ video {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-unset {
+  width: unset;
 }
 
 .min-w-0 {
@@ -38583,6 +38583,10 @@ video {
     width: max-content;
   }
 
+  .sm\:w-unset {
+    width: unset;
+  }
+
   .sm\:min-w-0 {
     min-width: 0px;
   }
@@ -69863,6 +69867,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-unset {
+    width: unset;
   }
 
   .md\:min-w-0 {
@@ -101147,6 +101155,10 @@ video {
     width: max-content;
   }
 
+  .lg\:w-unset {
+    width: unset;
+  }
+
   .lg\:min-w-0 {
     min-width: 0px;
   }
@@ -132427,6 +132439,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .xl\:w-unset {
+    width: unset;
   }
 
   .xl\:min-w-0 {
@@ -163711,6 +163727,10 @@ video {
     width: max-content;
   }
 
+  .\32xl\:w-unset {
+    width: unset;
+  }
+
   .\32xl\:min-w-0 {
     min-width: 0px;
   }
@@ -188723,3 +188743,7 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+@import "./global.css";
+
+/* purgecss end ignore */

@@ -1,5 +1,6 @@
 const {override,fixBabelImports} = require('customize-cra')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const resolve = path.resolve;
 module.exports = override(
   fixBabelImports('antd',{
     libraryName:'antd',

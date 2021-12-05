@@ -25,7 +25,7 @@ import {
   // RaceSchedule,
   RaceTimeline,
   RaceCheckbox
-} from '../components/race.js'
+} from '../components/race'
 
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
 const TITLE = '育成 - 乌拉拉大胜利 - 赛马娘资料站'

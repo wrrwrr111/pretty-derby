@@ -10,12 +10,12 @@ ROOT = Path(__file__).parent
 MINIMUM_QUERIES = {
     'chara_card': '''SELECT n, l, h FROM a WHERE n LIKE "chara/chr%/chr+_icon+_%+_1%+_01" ESCAPE "+"''',
     'support_card': 'SELECT n, l, h FROM a WHERE n LIKE "supportcard/support%/%thumb%"',
-    'obtain_icon': 'SELECT n, l, h FROM a WHERE n LIKE "%utx_ico_obtain%"'
+    # 'obtain_icon': 'SELECT n, l, h FROM a WHERE n LIKE "%utx_ico_obtain%"'
 }
 FULL_OUTPUT_QUERIES = {
     'chara_card': 'SELECT n, l, h FROM a WHERE n LIKE "chara/chr%" AND n NOT LIKE "%petit%"',
     'support_card': 'SELECT n, l, h FROM a WHERE n LIKE "supportcard/%"',
-    'obtain_icon': 'SELECT n, l, h FROM a WHERE n LIKE "%utx_ico_obtain%"'
+    # 'obtain_icon': 'SELECT n, l, h FROM a WHERE n LIKE "%utx_ico_obtain%"'
 }
 
 

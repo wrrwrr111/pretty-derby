@@ -1,9 +1,8 @@
 /* src/styles/index.css */
 /* purgecss start ignore */
-@tailwind  base;
-@tailwind  components;
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
 @import "./global.css";
 /* purgecss end ignore */
-
-@tailwind utilities;

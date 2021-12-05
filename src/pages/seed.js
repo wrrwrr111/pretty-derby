@@ -104,7 +104,7 @@ const PlayerInput = ({ value = {}, onChange }) => {
         onClick={showPlayer}
       ></Image>
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"}>
-        <Player onSelect={handleSelectPlayer}></Player>
+        <Player onClick={handleSelectPlayer}></Player>
       </Modal>
     </>
   );
@@ -140,7 +140,7 @@ const SupportInput = ({ value = {}, onChange }) => {
         onClick={showSupport}
       ></Image>
       <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={"80%"}>
-        <Support onSelect={handleSelectSupport}></Support>
+        <Support onClick={handleSelectSupport}></Support>
       </Modal>
     </>
   );

@@ -4,13 +4,10 @@ import {
   useHistory,
   // useLocation
 } from 'react-router-dom';
-import db from '../db.js'
-import dbL from '../dbL.js'
+import db from '../../db.js'
+import dbL from '../../dbL.js'
 import { Row, Col, Popover, button, Image, Checkbox, Divider, Input, Tooltip, Switch } from 'antd';
-import t from './t.js'
-import { SupportCard } from './support-detail.js'
-import { PlayerCard } from './player-detail.js'
-// import ScrollBars from 'react-custom-scrollbars'
+import t from '../t.js'
 
 const Search = Input.Search
 const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/'
@@ -49,132 +46,9 @@ const options = {
   ]
   // is_finalcorner==1&corner==0
 }
-const skillType = {
-  1: '速度属性',
-  2: '耐力属性',
-  3: '力量属性',
-  4: '毅力属性',
-  5: '智力属性',
-  6: '体力',
-  7: '体力消耗',
-  8: '视野',
-  9: '体力恢复',
-  10: '出栏时机',
-  14: '掛かり结束时间',
-  21: '瞬时速度',
-  27: '目标速度',
-  28: '走位速度',
-  31: '加速度',
-}
 
-const SkillList = (props) => {
-  const skillList = props.skillList
 
-  return (
-    <Row gutter={0}>
-      {skillList.map((skillId, index) =>
-        <Col span={12} key={index}>
-          <SkillButton id={skillId} usedInList={true} isNur={props.isNur || false}>
-          </SkillButton>
-        </Col>)}
-    </Row>
-  )
-}
-const allSupportList = db.get('supports').value()
-const allPlayerList = db.get('players').value()
 
-const SkillDetail = (props) => {
-  const skill = props.skill || db.get('skills').find({ id: props.match?.params?.id }).value()
-  const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur)
-  const supportList = allSupportList.filter(support => {
-    let flag = 0;
-    support.skillList.forEach(id => {
-      if (id === skill?.id) {
-        flag = 1
-      }
-    })
-    return flag
-  })
-  const playerList = allPlayerList.filter(player => {
-    let flag = 0;
-    player.skillList.forEach(id => {
-      if (id === skill?.id) {
-        flag = 1
-      }
-    })
-    return flag
-  })
-
-  return <div style={{
-    maxWidth: 600, maxHeight: window.innerHeight - 104,
-    overflow: 'auto', textAlign: 'left',
-    overflowWrap: 'break-word', wordBreak: 'break-all'
-  }}>
-    <Image src={cdnServer + skill?.imgUrl} preview={false} width={52}></Image>
-    <p>{`${t('技能名称')}:\xa0\xa0${skill?.name}`}</p>
-    <p>{`${t('技能名称')}:\xa0\xa0${t(skill?.name)}`}</p>
-    <p>{`${t('技能描述')}:\xa0\xa0${skill?.describe}`}</p>
-    <p>{`${t('技能描述')}:\xa0\xa0${t(skill?.describe)}`}</p>
-    <p>{`${t('触发条件')}:\xa0\xa0${skill?.condition}`}</p>
-    <p>{`${t('触发条件')}:\xa0\xa0${t(skill?.condition)}`}</p>
-    <p>{`${t('技能效果')}:\xa0\xa0${skill?.ability?.map(ability => skillType[ability.type] + ' ' + ability.value / 10000)}`}</p>
-    <p>{`${t('持续时间')}:\xa0\xa0${skill?.ability_time / 10000}s*${t('赛道长度')}/1000`}</p>
-    <p>{`${t('冷却时间')}:\xa0\xa0${skill?.cooldown / 10000}s*${t('赛道长度')}/1000`}</p>
-    <p>{`${t('技能价格')}:\xa0\xa0${skill?.need_skill_point}\xa0Pt`}</p>
-    <p>{`${t('技能评分')}:\xa0\xa0${skill?.grade_value}`}</p>
-    {!isNur && <>
-      <Divider>{t('支援卡')}</Divider>
-      <Row>
-        {supportList.sort((a, b) => b.rarity - a.rarity).map(support =>
-          <Col span={4} key={support.id}>
-            <SupportCard data={support} onSelect={() => null}></SupportCard>
-          </Col>)
-        }
-      </Row>
-      <Divider>{t('角色')}</Divider>
-      <Row>
-        {playerList.sort((a, b) => b.rarity - a.rarity).map(player =>
-          <Col span={4} key={player.id}>
-            <PlayerCard data={player} onSelect={() => null}></PlayerCard>
-          </Col>)
-        }
-      </Row>
-    </>}
-  </div>
-}
-const SkillButton = (props) => {
-  const history = useHistory();
-  const skill = props.skill || db.get('skills').find({ id: props.id }).value()
-
-  const toSkillDetail = (id) => {
-    if (ua === 'mo') {
-      history.push(`/skill-detail/${id}`)
-    }
-  }
-
-  return <Popover
-    mouseEnterDelay={0.4}
-    visible={ua === 'mo' ? false : undefined}
-    content={
-      <SkillDetail skill={skill} isNur={props.isNur || false}></SkillDetail>
-    }>
-    <button
-      // className={'skill-btn skill-btn-' + skill?.rarity}
-      className={` rounded-2xl h-9 px-2 py-1 border-solid border-2 w-full flex items-center
-      ${skill.rarity == 1 && 'bg-white'}
-      ${skill.rarity == 2 && 'bg-yellow-300'}
-      ${skill.rarity == 3 && ' bg-purple-400'}
-      ${skill.rarity == 4 && ' bg-purple-400'}
-      ${skill.rarity == 5 && ' bg-purple-400'}
-      `}
-      onClick={() => toSkillDetail(skill?.id)}>
-      <img src={cdnServer + skill?.imgUrl} preview={false} width={20}></img>
-      <div className='flex-auto truncate'>
-        {skill?.name}
-      </div>
-    </button>
-  </Popover >
-}
 
 const SkillCheckboxGroup = React.memo((props) => {
   const { options, name, value } = props;
@@ -294,11 +168,11 @@ const SkillCheckbox = React.memo((props) => {
         return mySkillList.has(skill?.id)
       })
     }
-    if (check1.length || check2.length || check3.length || isOwn) {
-      tempSkillList.push({
-        id: 'default'
-      })
-    }
+    // if (check1.length || check2.length || check3.length || isOwn) {
+    //   tempSkillList.push({
+    //     id: 'default'
+    //   })
+    // }
     if (props.needId) {
       tempSkillList = tempSkillList.reduce((list, skill) => {
         list.push(skill?.id)
@@ -391,5 +265,4 @@ const SkillCheckbox = React.memo((props) => {
   )
 })
 
-
-export { SkillList, SkillButton, SkillCheckbox, SkillDetail }
+export default SkillCheckbox

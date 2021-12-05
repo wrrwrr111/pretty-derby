@@ -1,6 +1,9 @@
-.ant-btn {
-  margin-right: 8px;
-  margin-bottom: 8px;
+.z-max {
+  z-index: 999999 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .list-row p {
@@ -25,29 +28,29 @@
 }
 
 .race-row-0 {
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 
 .race-row-1 {
-  background-color: #99CCCC;
+  background-color: #99cccc;
 }
 
 .race-row-2 {
-  background-color: #99CCCC;
+  background-color: #99cccc;
 }
 
 .race-row-3 {
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 
 .race-name p {
-  font-size: 20px
+  font-size: 20px;
 }
 
 .race-detail p {
   margin: 0;
   font-size: 1em;
-  color: black
+  color: black;
 }
 
 .rate-label {
@@ -56,15 +59,15 @@
 }
 
 .ant-card-body {
-  padding: 8px
+  padding: 8px;
 }
 
-.chosen-card {}
+.chosen-card {
+}
 
 .un-chosen-card img {
-  opacity: 0.3
+  opacity: 0.3;
 }
-
 
 .my-drawer {
   position: relative;
@@ -83,15 +86,12 @@
   padding: 0;
 }
 
-.am-list-item-middle {
-  background-color: #99cccc;
-}
 
 /*race time line  */
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
   position: absolute;
   top: -7.001px;
-  width: calc(25% - 12px);
+  width: 100px;
   text-align: right;
 }
 
@@ -104,19 +104,19 @@
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom,
 .ant-timeline.ant-timeline-right .ant-timeline-item-head-custom,
 .ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
-  left: 25%;
+  left: 110px;
 }
 
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content,
 .ant-timeline.ant-timeline-right .ant-timeline-item-left .ant-timeline-item-content,
 .ant-timeline.ant-timeline-label .ant-timeline-item-left .ant-timeline-item-content {
-  left: calc(25% - 4px);
-  width: calc(75% - 14px);
+  left: 110px;
+  width: calc(100% - 110px);
   text-align: left;
 }
 
 .ant-timeline-item-content p {
-  margin-bottom: 4px
+  margin-bottom: 4px;
 }
 
 .ant-timeline-item {

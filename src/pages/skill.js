@@ -1,93 +1,53 @@
-import React, { useState } from 'react';
-import { Divider, Row, Col } from 'antd';
-import { useDidRecover } from 'react-router-cache-route'
-import db from '../db.js'
-import t from '../components/t.js'
+import React, { useState } from "react";
+import { Divider, div, Col } from "antd";
+import { useDidRecover } from "react-router-cache-route";
+import db from "../db.js";
+import t from "../components/t.js";
 
-import { SkillButton, SkillCheckbox } from '../components/skill-detail.js'
-const TITLE = '技能 - 乌拉拉大胜利 - 赛马娘资料站'
+// import { SkillButton, SkillCheckbox } from '../components/skill-detail.js'
+import SkillList from "../components/skill/SkillList";
+import SkillCheckbox from "../components/skill/SkillCheckbox";
+const TITLE = "技能 - 乌拉拉大胜利 - 赛马娘资料站";
+
 const Skill = (props) => {
-  document.title = TITLE
+  document.title = TITLE;
   useDidRecover(() => {
-    document.title = TITLE
-  })
+    document.title = TITLE;
+  });
   // 所有技能列表
-  const allSkillList = db.get('skills').orderBy('db_id').value()
+  const allSkillList = db.get("skills").orderBy("db_id").value();
 
-  const [skillList, setSkillList] = useState(allSkillList)
+  const [skillList, setSkillList] = useState(allSkillList);
 
   // init supportMode
-  localStorage.getItem('supportMode') === null && localStorage.setItem('supportMode', 0)
-
-  const rareLabel = { 'ノーマル': '普通', 'レア': '金色 稀有', '固有': '独特' }
-
-  const headerStyle = {
-    backgroundColor: '#1e90ffA0',
-    height: 48,
-    borderRadius: 5,
-    margin: 1,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-  const headerTextStyle = {
-    fontSize: 18,
-    textAlign: 'center',
-    fontWeight: 600,
-    color: '#f5f5f5',
-    textShadow: "0 2px #33333370",
-  }
+  localStorage.getItem("supportMode") === null && localStorage.setItem("supportMode", 0);
 
   const onSkillCheckboxUpdate = (skillList) => {
-    setSkillList(skillList)
-  }
-
-  const useViewport = () => {
-    // const [width, setWidth] = React.useState(window.innerWidth);
-    const [height, setHeight] = React.useState(window.innerHeight);
-    React.useEffect(() => {
-      const handleWindowResize = () => setHeight(window.innerHeight);
-      window.addEventListener("resize", handleWindowResize);
-      return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);
-    return { height };
+    console.log(skillList);
+    setSkillList(skillList);
   };
 
-  const dynamicListHeight = useViewport().height - 104 - 78;
-
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 4 }}>
-      <div style={{ maxWidth: 1200 }}>
-        <Row>
-          <Col span={6}><div style={{ ...headerStyle }}><text style={{ ...headerTextStyle }}>{t('筛选')}</text></div></Col>
-          <Col span={18}><div style={{ ...headerStyle }}><text style={{ ...headerTextStyle }}>{t('技能列表')}</text></div></Col>
-          <Col span={6}>
-            <div style={{
-              height: dynamicListHeight, overflowY: 'scroll',
-              display: 'flex', flexDirection: 'column'
-            }}>
-              <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
-            </div>
-          </Col>
-          <Col span={18}>
-            <div style={{ height: dynamicListHeight, overflowY: 'scroll', overflowX: 'hidden' }}>
-              {['ノーマル', 'レア', '固有'].map(rare =>
-                <Row gutter={[8, 8]} key={rare}>
-                  <Divider>{rareLabel[rare]}</Divider>
-                  {skillList.filter(item => item.rare === rare).map(skill =>
-                    <Col xxl={6} lg={6} sm={12} xs={12}>
-                      <SkillButton usedInList={true} skill={skill} key={skill.id}></SkillButton>
-                    </Col>
-                  )}
-                </Row>
-              )}
-            </div>
-          </Col>
-        </Row>
+    <>
+      <div className="w-1/4 h-full flex flex-col p-1">
+        <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
+          {t("筛选")}
+        </div>
+        <div className="overflow-y-auto flex-auto flex flex-col">
+          <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
+        </div>
       </div>
-    </div>
-  )
-}
+      <div className="w-3/4 flex flex-col p-1">
+        <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
+          {t("技能列表")}
+        </div>
+        <div className=" overflow-y-scroll overflow-x-hidden pl-4 w-full h-full flex flex-wrap">
+          <SkillList dataList={skillList} sortFlag={true} />
+        </div>
+      </div>
+      <div className="col-span-1 rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold "></div>
+    </>
+  );
+};
 
-export default Skill
-
+export default Skill;

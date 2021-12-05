@@ -7955,7 +7955,7 @@
       },
       "db_id": 101802,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1018_101802_01.png",
+      "imgUrl": "img/chara_card/chr_icon_1018_101826_01.png",
       "eventList0": [
         "yRGeo_KSt",
         "5bMHWBq7WX",
@@ -8179,7 +8179,7 @@
       },
       "db_id": 102402,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1024_102402_01.png",
+      "imgUrl": "img/chara_card/chr_icon_1024_102426_01.png",
       "eventList0": [
         "_AXNhPs0Y4",
         "mafE90fBNK",
@@ -8945,7 +8945,7 @@
       },
       "db_id": 101102,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1011_101102_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1011_101116_01.png"
     },
     {
       "gwId": "285705",
@@ -9160,7 +9160,7 @@
       },
       "db_id": 101402,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1014_101402_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1014_101416_01.png"
     },
     {
       "gwId": "287062",
@@ -9883,7 +9883,7 @@
       },
       "db_id": 100402,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1004_100402_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1004_100430_01.png"
     },
     {
       "gwId": "288788",
@@ -10096,7 +10096,7 @@
       },
       "db_id": 100102,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1001_100102_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1001_100130_01.png"
     },
     {
       "gwId": "290367",
@@ -10803,7 +10803,7 @@
       },
       "db_id": 105602,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1056_105602_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1056_105623_01.png"
     },
     {
       "gwId": "293577",
@@ -53428,59 +53428,6 @@
       "need_skill_point": 140
     },
     {
-      "name": "コーナー回復◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill86.png",
-      "rare": "ノーマル",
-      "describe": "無駄のないコーナリングで持久力がわずかに回復する",
-      "id": "2bf0UDOXiD"
-    },
-    {
-      "name": "尊み☆ﾗｽﾄｽﾊﾟ—(ﾟ∀ﾟ)—ﾄ!",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "レース終盤に2回追い抜くと間近で拝むウマ娘ちゃんのあまりの尊さに思わず速度を上げる",
-      "id": "S_mMFEiepU",
-      "condition": "change_order_up_end_after>=2",
-      "rarity": 5,
-      "db_id": 100191,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "ウママニア",
-      "imgUrl": "img/skill_icons/20012.png",
-      "rare": "レア",
-      "describe": "近くにウマ娘がたくさんいると速度が上がる",
-      "id": "AZQ66_huvt",
-      "condition": "near_count==4@near_count==5@near_count==6@near_count==7",
-      "rarity": 2,
-      "db_id": 201592,
-      "icon_id": 20012,
-      "grade_value": 508,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 30000,
-      "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
       "name": "Schwarzes Schwert",
       "imgUrl": "img/skill_icons/20013.png",
       "rare": "固有",
@@ -53501,7 +53448,9 @@
       ],
       "ability_time": 50000,
       "cooldown": 5000000,
-      "need_skill_point": 0
+      "need_skill_point": 0,
+      "condition2": "",
+      "ability2": []
     },
     {
       "name": "百万バリキ",
@@ -53524,146 +53473,9 @@
       ],
       "ability_time": 18000,
       "cooldown": 5000000,
-      "need_skill_point": 120
-    },
-    {
-      "name": "ぐるぐるマミートリック♡",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "最終直線を好位置で走行中前のウマ娘との距離が近いと抜け出しやすくなる",
-      "id": "EwfzdXm7N",
-      "condition": "is_finalcorner==1&corner==0&order<=4&bashin_diff_infront<=1",
-      "rarity": 5,
-      "db_id": 110451,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 2500,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 31,
-          "value": 3000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "Drain for rose",
-      "imgUrl": "img/skill_icons/20023.png",
-      "rare": "固有",
-      "describe": "レース中間付近を好位置で走行中に詰め寄られると前方のウマ娘から持久力を吸い取る",
-      "id": "7Y9-5XxiR",
-      "condition": "phase==1&distance_rate>=50&order>=2&order_rate<=50&overtake_target_time>=1",
-      "rarity": 5,
-      "db_id": 110301,
-      "icon_id": 20023,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 9,
-          "value": 550,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 9,
-          "value": -50,
-          "target_type": 9,
-          "target_value": 18
-        }
-      ],
-      "ability_time": 0,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "見惚れるトリック",
-      "imgUrl": "img/skill_icons/30052.png",
-      "rare": "レア",
-      "describe": "レース中盤に前の方にいると後ろの掛かったウマ娘が疲れる",
-      "id": "HHMg8QmGEb",
-      "condition": "phase==1&order_rate<=50&temptation_count_behind>=1",
-      "rarity": 2,
-      "db_id": 200772,
-      "icon_id": 30052,
-      "grade_value": 508,
-      "ability": [
-        {
-          "type": 9,
-          "value": -300,
-          "target_type": 20,
-          "target_value": 10
-        }
-      ],
-      "ability_time": 0,
-      "cooldown": 5000000,
-      "need_skill_point": 140
-    },
-    {
-      "name": "前列狙い",
-      "imgUrl": "img/skill_icons/20051.png",
-      "rare": "ノーマル",
-      "describe": "レース終盤に少し前を目指す体制をとる",
-      "id": "bmpe1GE1h",
-      "condition": "ground_type==2&phase_random==2",
-      "rarity": 1,
-      "db_id": 201682,
-      "icon_id": 20051,
-      "grade_value": 174,
-      "ability": [
-        {
-          "type": 28,
-          "value": 250,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 31,
-          "value": 2000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 30000,
-      "cooldown": 5000000,
-      "need_skill_point": 140
-    },
-    {
-      "name": "狙うは最前列！",
-      "imgUrl": "img/skill_icons/20052.png",
-      "rare": "レア",
-      "describe": "レース終盤に前を目指す体勢をとる",
-      "id": "6fLltoeNyl",
-      "condition": "ground_type==2&phase_random==2",
-      "rarity": 2,
-      "db_id": 201681,
-      "icon_id": 20052,
-      "grade_value": 394,
-      "ability": [
-        {
-          "type": 28,
-          "value": 350,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 31,
-          "value": 3000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 30000,
-      "cooldown": 5000000,
-      "need_skill_point": 140
+      "need_skill_point": 120,
+      "condition2": "",
+      "ability2": []
     },
     {
       "name": "I'M☆FULL☆SPEED!!",
@@ -53692,82 +53504,9 @@
       ],
       "ability_time": 50000,
       "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "潜伏態勢",
-      "imgUrl": "img/skill_icons/20022.png",
-      "rare": "レア",
-      "describe": "レース中盤が迫ったとき後方にいると持久力を回復する＜作戦・差し＞",
-      "id": "9xidYXTYy",
-      "condition": "running_style==3&phase_laterhalf_random==0&order_rate>=50",
-      "rarity": 2,
-      "db_id": 201691,
-      "icon_id": 20022,
-      "grade_value": 508,
-      "ability": [
-        {
-          "type": 9,
-          "value": 550,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 0,
-      "cooldown": 5000000,
-      "need_skill_point": 180
-    },
-    {
-      "name": "姫たるもの、勝利をこの手に",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "最終直線を走行中に中団で競り合うと可憐にぶっ飛ばして速度を上げる",
-      "id": "Iwmu57ac2d",
-      "condition": "is_finalcorner==1&corner==0&order>=3&order_rate<=70&blocked_side_continuetime>=2",
-      "rarity": 5,
-      "db_id": 100391,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "アナタヲ・オイカケテ",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "レース後半に中団から『お友達』を追って速度を少しずつ上げ前方のウマ娘をちょっと萎縮させる",
-      "id": "-Y2IhycRH6",
-      "condition": "distance_rate>=50&order_rate>=40&order_rate<=70",
-      "rarity": 5,
-      "db_id": 100251,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 2500,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 21,
-          "value": -500,
-          "target_type": 9,
-          "target_value": 5
-        }
-      ],
-      "ability_time": 60000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
+      "need_skill_point": 0,
+      "condition2": "",
+      "ability2": []
     },
     {
       "name": "スタミナグリード",
@@ -53783,118 +53522,22 @@
       "ability": [
         {
           "type": 9,
-          "value": -100,
+          "value": -200,
           "target_type": 9,
           "target_value": 5
         },
         {
           "type": 9,
-          "value": 350,
+          "value": 550,
           "target_type": 1,
           "target_value": 0
         }
       ],
       "ability_time": 0,
       "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
-      "name": "決死の覚悟",
-      "imgUrl": "img/skill_icons/20012.png",
-      "rare": "レア",
-      "describe": "ラストスパートの直線で好位置にいると速度が上がる＜中距離＞",
-      "id": "NaPLGlfJeN",
-      "condition": "distance_type==3&is_lastspurt==1&corner==0&order_rate>=20&order_rate<=60",
-      "rarity": 2,
-      "db_id": 201701,
-      "icon_id": 20012,
-      "grade_value": 508,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 24000,
-      "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
-      "name": "ありったけ",
-      "imgUrl": "img/skill_icons/20011.png",
-      "rare": "ノーマル",
-      "describe": "ラストスパートの直線で好位置にいると速度がわずかに上がる＜中距離＞",
-      "id": "Q-Llr14wOU",
-      "condition": "distance_type==3&is_lastspurt==1&corner==0&order_rate>=20&order_rate<=60",
-      "rarity": 1,
-      "db_id": 201702,
-      "icon_id": 20011,
-      "grade_value": 217,
-      "ability": [
-        {
-          "type": 27,
-          "value": 1500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 24000,
-      "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
-      "name": "GET DOWN",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "最終コーナー走行中に中団で競り合うと抜け出しやすくなる",
-      "id": "UkaPrI3LuT",
-      "condition": "is_finalcorner==1&corner!=0&order_rate>=30&order_rate<=70&blocked_side_continuetime>=2",
-      "rarity": 5,
-      "db_id": 110401,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 2500,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 31,
-          "value": 3000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "静かな呼吸",
-      "imgUrl": "img/skill_icons/20021.png",
-      "rare": "ノーマル",
-      "describe": "レース中盤が迫ったとき後方にいると持久力をわずかに回復する＜作戦・差し＞",
-      "id": "LAU_W28wQo",
-      "condition": "running_style==3&phase_laterhalf_random==0&order_rate>=50",
-      "rarity": 1,
-      "db_id": 201692,
-      "icon_id": 20021,
-      "grade_value": 217,
-      "ability": [
-        {
-          "type": 9,
-          "value": 150,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 0,
-      "cooldown": 5000000,
-      "need_skill_point": 180
+      "need_skill_point": 160,
+      "condition2": "",
+      "ability2": []
     },
     {
       "name": "布陣",
@@ -53917,252 +53560,9 @@
       ],
       "ability_time": 30000,
       "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
-      "name": "翳り退く、さざめきの矢",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "最終コーナー以降に先団で詰め寄られると闘志を燃やして速度を上げる",
-      "id": "yR8SdV6gVe",
-      "condition": "is_finalcorner==1&order_rate<=40&overtake_target_time>=2",
-      "rarity": 5,
-      "db_id": 110171,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "初嵐",
-      "imgUrl": "img/skill_icons/10012.png",
-      "rare": "レア",
-      "describe": "秋のレースが得意になりスピードとパワーが上昇する",
-      "id": "rdqUTIAMMh",
-      "condition": "season==3",
-      "rarity": 2,
-      "db_id": 200194,
-      "icon_id": 10012,
-      "grade_value": 461,
-      "ability": [
-        {
-          "type": 1,
-          "value": 600000,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 3,
-          "value": 600000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": -1,
-      "cooldown": 0,
-      "need_skill_point": 130
-    },
-    {
-      "name": "YEAH☆VIVID TIME!",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "最終直線を走行中に好位置で追い抜くまたは詰め寄られるとテンションを上げて速度を上げる",
-      "id": "TIybfosP23",
-      "condition": "is_finalcorner==1&corner==0&order>=2&order_rate<=30&overtake_target_time>=2@is_finalcorner==1&corner==0&order_rate<=20&change_order_onetime<0",
-      "rarity": 5,
-      "db_id": 100481,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "彼方、その先へ…",
-      "imgUrl": "img/skill_icons/20043.png",
-      "rare": "固有",
-      "describe": "落ち着いたまま、中盤の仕掛けどころのまたは終盤の勝負どころのコーナーを中団で進むと奮い立ち加速力が上がる",
-      "id": "AzIfAAHHYy",
-      "condition": "phase>=2&corner!=0&is_finalcorner==0&temptation_count==0&order_rate>=50&order_rate<=70@phase==1&corner!=0&is_finalcorner==1&temptation_count==0&order_rate>=50&order_rate<=70",
-      "rarity": 5,
-      "db_id": 100591,
-      "icon_id": 20043,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 31,
-          "value": 4000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 40000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "淀の申し子",
-      "imgUrl": "img/skill_icons/10022.png",
-      "rare": "レア",
-      "describe": "京都レース場が得意になりスタミナと賢さが上昇する",
-      "id": "Loh9B2jyZV",
-      "condition": "track_id==10008",
-      "rarity": 2,
-      "db_id": 200064,
-      "icon_id": 10022,
-      "grade_value": 461,
-      "ability": [
-        {
-          "type": 2,
-          "value": 600000,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 5,
-          "value": 600000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": -1,
-      "cooldown": 0,
-      "need_skill_point": 130
-    },
-    {
-      "name": "コーナー加速◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill138.png",
-      "rare": "ノーマル",
-      "describe": "華麗なコーナーワークで加速力がわずかに上がる",
-      "id": "EREF2bINm"
-    },
-    {
-      "name": "Presents from X",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "スタート後からレース後半まで好位置を維持し続けるとレース中盤に勝利への道筋を見出し速度を上げる",
-      "id": "Wy4aGf_-38",
-      "condition": "order_rate_in40_continue==1&phase==1&distance_rate>=50&order>=2&order_rate<=40",
-      "rarity": 5,
-      "db_id": 110231,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 3500,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "VIP顔パス",
-      "imgUrl": "img/skill_icons/20022.png",
-      "rare": "レア",
-      "describe": "追い抜く気持ちが湧き疲れにくくなる＜長距離＞",
-      "id": "YZMoS9QqGX",
-      "condition": "distance_type==4&is_overtake==1&accumulatetime>=5",
-      "rarity": 2,
-      "db_id": 201201,
-      "icon_id": 20022,
-      "grade_value": 508,
-      "ability": [
-        {
-          "type": 9,
-          "value": 550,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 0,
-      "cooldown": 5000000,
-      "need_skill_point": 160
-    },
-    {
-      "name": "聖夜のミラクルラン！",
-      "imgUrl": "img/skill_icons/20013.png",
-      "rare": "固有",
-      "describe": "スキルで持久力を3回以上回復するとレース後半で勝利に向かい呼吸を整えて力強く踏み込んでいく",
-      "id": "_IaqhtwWtl",
-      "condition": "activate_count_heal>=3&distance_rate>=50",
-      "rarity": 5,
-      "db_id": 110061,
-      "icon_id": 20013,
-      "grade_value": 340,
-      "ability": [
-        {
-          "type": 27,
-          "value": 2500,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 31,
-          "value": 3000,
-          "target_type": 1,
-          "target_value": 0
-        },
-        {
-          "type": 9,
-          "value": 350,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 50000,
-      "cooldown": 5000000,
-      "need_skill_point": 0
-    },
-    {
-      "name": "真っ向勝負",
-      "imgUrl": "img/skill_icons/20041.png",
-      "rare": "ノーマル",
-      "describe": "レース終盤に前方にいると加速力がわずかに上がる＜作戦・先行＞",
-      "id": "E4t5qqwP5I",
-      "condition": "running_style==2&phase_random==2&order_rate<=50",
-      "rarity": 1,
-      "db_id": 201902,
-      "icon_id": 20041,
-      "grade_value": 217,
-      "ability": [
-        {
-          "type": 31,
-          "value": 2000,
-          "target_type": 1,
-          "target_value": 0
-        }
-      ],
-      "ability_time": 18000,
-      "cooldown": 5000000,
-      "need_skill_point": 180
-    },
-    {
-      "name": "コーナー巧者◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill133.png",
-      "rare": "ノーマル",
-      "describe": "コーナーが得意になり速度がわずかに上がる",
-      "id": "JAnCKtQNV"
+      "need_skill_point": 160,
+      "condition2": "",
+      "ability2": []
     }
   ],
   "updateTime": 1638335365012,
