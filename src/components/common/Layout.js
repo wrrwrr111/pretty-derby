@@ -52,11 +52,11 @@ const Layout = ({ children, contentClass }) => {
       </div>
       <div className={`${contentClass}`}>{children}</div>
       <div className="h-10 w-full flex items-center">
+        <div className="flex-auto"></div>
+        <LanButton></LanButton>
         <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
           {t("初始化育成")}
         </div>
-        <LanButton></LanButton>
-        <div className="flex-auto"></div>
         <iframe
           title="GitHub"
           src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2"
