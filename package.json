@@ -50,12 +50,10 @@
   },
   "proxy": "http://urarawin.com",
   "scripts": {
-    "build:css": "cross-env NODE_ENV=production postcss src/styles/index.css -o src/styles/tailwind.css",
     "build:css-dev": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "start:js": "react-scripts start",
     "start": "npm-run-all build:css-dev start:js",
-    "build:js": "react-app-rewired --max_old_space_size=5048 build",
-    "build": "npm-run-all build:css build:js",
+    "build": "react-app-rewired --max_old_space_size=5048 build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "predeploy": "npm run build",
