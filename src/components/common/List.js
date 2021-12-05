@@ -58,6 +58,7 @@ const List = ({
           onCancel={() => setCur(null)}
           footer={null}
           width={768}
+          bodyStyle={{ display: "flex", flexDirection: "column" }}
         >
           {detailRender(cur)}
         </Modal>
@@ -75,6 +76,7 @@ const List = ({
           onCancel={() => setCur(null)}
           footer={null}
           width={768}
+          bodyStyle={{ display: "flex", flexDirection: "column" }}
         >
           {detailRender(cur)}
         </Modal>
