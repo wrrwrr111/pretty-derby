@@ -11253,7 +11253,7 @@
       },
       "db_id": 104502,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1045_104502_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1045_104540_01.png"
     },
     {
       "gwId": "295783",
@@ -11470,7 +11470,7 @@
       },
       "db_id": 103002,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1030_103002_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1030_103040_01.png"
     },
     {
       "gwId": "294668",
@@ -12398,7 +12398,7 @@
       },
       "db_id": 104002,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1040_104002_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1040_104043_01.png"
     },
     {
       "gwId": "302453",
@@ -12639,7 +12639,7 @@
       },
       "db_id": 101702,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1017_101702_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1017_101743_01.png"
     },
     {
       "gwId": "304040",
@@ -13324,7 +13324,7 @@
       },
       "db_id": 102302,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1023_102302_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1023_102346_01.png"
     },
     {
       "gwId": "309694",
@@ -13531,7 +13531,7 @@
       },
       "db_id": 100602,
       "default_rarity": 3,
-      "imgUrl": "img/chara_card/chr_icon_1006_100602_01.png"
+      "imgUrl": "img/chara_card/chr_icon_1006_100646_01.png"
     }
   ],
   "supports": [
@@ -53522,13 +53522,13 @@
       "ability": [
         {
           "type": 9,
-          "value": -200,
+          "value": -100,
           "target_type": 9,
           "target_value": 5
         },
         {
           "type": 9,
-          "value": 550,
+          "value": 350,
           "target_type": 1,
           "target_value": 0
         }

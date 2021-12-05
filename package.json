@@ -51,7 +51,7 @@
   "proxy": "http://urarawin.com",
   "scripts": {
     "build:css-dev": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-    "start:js": "react-scripts start",
+    "start:js": "react-app-rewired  start",
     "start": "npm-run-all build:css-dev start:js",
     "build": "react-app-rewired --max_old_space_size=5048 build",
     "test": "react-app-rewired test",
