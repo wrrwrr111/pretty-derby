@@ -630,14 +630,6 @@ video {
   top: 0px;
 }
 
-.top-16 {
-  top: 4rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -715,6 +707,10 @@ video {
   height: 3rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -735,10 +731,6 @@ video {
   height: 1.5rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .w-full {
   width: 100%;
 }
@@ -749,6 +741,10 @@ video {
 
 .w-3\/4 {
   width: 75%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .w-10 {
@@ -773,10 +769,6 @@ video {
 
 .w-28 {
   width: 7rem;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .max-w-6xl {
