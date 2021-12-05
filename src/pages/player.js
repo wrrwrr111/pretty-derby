@@ -15,7 +15,7 @@ const Player = (props) => {
   });
   return (
     <div className="flex w-full flex-wrap max-w-6xl mx-auto">
-      <PlayerList sortFlag={true} onClick={props.onClick}/>
+      <PlayerList listClass="justify-between" sortFlag={true} onClick={props.onClick} />
     </div>
   );
 };

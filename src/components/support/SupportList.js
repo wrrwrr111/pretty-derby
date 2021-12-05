@@ -4,7 +4,7 @@ import SupportCard from "./SupportCard";
 import SupportDetail from "./SupportDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
-const PlayerList = ({ dataList, onClick, sortFlag = false, ownList }) => {
+const PlayerList = ({listClass, dataList, onClick, sortFlag = false, ownList }) => {
   const ua = useUa();
   const history = useHistory();
   const sort = sortFlag
@@ -19,7 +19,7 @@ const PlayerList = ({ dataList, onClick, sortFlag = false, ownList }) => {
     : null;
   return (
     <List
-    className="justify-between"
+    className={listClass}
       listKey="supports"
       dataList={dataList}
       sort={sort}

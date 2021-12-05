@@ -19,8 +19,8 @@ const PlayerDetail = (props) => {
   console.log(props.match,isNur,'test');
   const data = props.data || db.get("players").find({ id }).value();
   const PlayerItem = () => (
-    <div className="h-16 w-full flex">
-      <img alt={data.name} src={cdnServer + data.imgUrl} height={64} />
+    <div className="h-16 w-full flex flex-shrink-0">
+      <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={64} />
       <div className="flex-auto flex flex-wrap h-full items-center">
         <div className="w-1/2 text-xl font-semibold truncate">{data.name}</div>
         <div className="w-1/2 text-gray-700 truncate">{t(data.name)}</div>

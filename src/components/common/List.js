@@ -30,7 +30,7 @@ const List = ({
   }
   if (sort) {
     return (
-      <div className={`flex flex-wrap ${className}`}>
+      <div className={` flex flex-wrap ${className}`}>
         {sort.data.map((sortItem) => {
           let sortList = list.filter((item) => {
             let flag = false;
@@ -66,7 +66,7 @@ const List = ({
     );
   } else {
     return (
-      <div className={`flex flex-wrap ${className}`}>
+      <div className={` flex flex-wrap ${className}`}>
         {list
           .filter((data) => (filterFunc ? filterFunc(data) : true))
           .map((data) => itemRender(data, setCur))}

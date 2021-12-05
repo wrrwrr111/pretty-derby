@@ -183,6 +183,7 @@ const Support = (props) => {
         </div>
         <div className=" overflow-y-scroll overflow-x-hidden pl-4 w-full h-full flex flex-wrap">
           <SupportList
+            listClass="justify-between"
             sortFlag={true}
             dataList={list}
             ownList={showMode ? chosenList : null}
