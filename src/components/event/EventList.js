@@ -32,6 +32,7 @@ const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }
       sort={sort}
       filterFunc={filterFunc}
       onClick={onClick}
+      className=''
       itemRender={(item, setCur) => (
         <EventCard
           className="mr-1 mb-1"

@@ -17,6 +17,7 @@ const PlayerList = ({ dataList, onClick, sortFlag = false }) => {
   };
   return (
     <List
+      className="justify-between"
       listKey="players"
       dataList={dataList}
       sort={sortFlag && sort}

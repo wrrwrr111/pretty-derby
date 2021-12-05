@@ -37,6 +37,7 @@ import "react-grid-layout/css/styles.css";
 // import Race from './race.js'
 import Player from "./player.js";
 import Support from "./support.js";
+import { list } from "postcss";
 // import Checkbox from 'antd/lib/checkbox/Checkbox';
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
@@ -239,8 +240,8 @@ const Nurturing = () => {
         onLayoutChange={onLayoutChange}
       >
         <div key="a" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}>
-            {t("角色")}
+          <div className="panel-heading" style={{ ...headStyle }}  onClick={showPlayer}>
+            {t("选择马娘")}
           </div>
           {player.id && (
             <img
@@ -255,7 +256,7 @@ const Nurturing = () => {
           <div className="panel-heading" style={{ ...headStyle }}>
             {t("操作")}
           </div>
-          <Button className="add-player" type={"primary"} onClick={showPlayer}>
+          <Button className="add-player" type={"primary"}  onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
           <Button onClick={showSupport2}>{t("支援卡查询")}</Button>
@@ -282,7 +283,7 @@ const Nurturing = () => {
           </div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
             {/* <p>{player.id}</p> */}
-            <EventList idList={player.eventList}></EventList>
+            <EventList idList={player.eventList} sortFlag={true}></EventList>
           </ScrollBars>
         </div>
         <div key="d" style={{ ...panelStyle }}>
@@ -361,10 +362,22 @@ const Nurturing = () => {
           }
         })}
       </GridLayout>
-      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"}>
+      <Modal
+        visible={isPlayerVisible}
+        onOk={closePlayer}
+        onCancel={closePlayer}
+        width={"80%"}
+        bodyStyle={{ maxHeight: "80vh", display: "flex" }}
+      >
         <Player onSelect={handleSelectPlayer}></Player>
       </Modal>
-      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={"80%"}>
+      <Modal
+        visible={isSupportVisible}
+        onOk={closeSupport}
+        onCancel={closeSupport}
+        width={"80%"}
+        bodyStyle={{ maxHeight: "80vh", display: "flex" }}
+      >
         <Support onSelect={needSelect ? handleSelectSupport : null}></Support>
       </Modal>
     </>

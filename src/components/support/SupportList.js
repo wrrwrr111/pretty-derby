@@ -19,6 +19,7 @@ const PlayerList = ({ dataList, onClick, sortFlag = false, ownList }) => {
     : null;
   return (
     <List
+    className="justify-between"
       listKey="supports"
       dataList={dataList}
       sort={sort}

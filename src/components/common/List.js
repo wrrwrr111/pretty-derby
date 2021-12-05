@@ -4,7 +4,16 @@ import { Modal } from "antd";
 import db from "../../db.js";
 import t from "../t.js";
 
-const List = ({ listKey, sort, filterFunc, idList, dataList, itemRender, detailRender }) => {
+const List = ({
+  className,
+  listKey,
+  sort,
+  filterFunc,
+  idList,
+  dataList,
+  itemRender,
+  detailRender,
+}) => {
   const list = dataList
     ? dataList
     : idList
@@ -21,7 +30,7 @@ const List = ({ listKey, sort, filterFunc, idList, dataList, itemRender, detailR
   }
   if (sort) {
     return (
-      <div className="flex flex-wrap justify-between">
+      <div className={`flex flex-wrap ${className}`}>
         {sort.data.map((sortItem) => {
           let sortList = list.filter((item) => {
             let flag = false;
@@ -56,7 +65,7 @@ const List = ({ listKey, sort, filterFunc, idList, dataList, itemRender, detailR
     );
   } else {
     return (
-      <div className="w-full flex flex-wrap">
+      <div className={`flex flex-wrap ${className}`}>
         {list
           .filter((data) => (filterFunc ? filterFunc(data) : true))
           .map((data) => itemRender(data, setCur))}

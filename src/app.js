@@ -41,7 +41,7 @@ const AppPc = () => {
     { path: "/support", title: "支援" },
     { path: "/skill", title: "技能" },
     { path: "/race", title: "比赛" },
-    { path: "/nurturing2", title: "育成" },
+    { path: "/nur", title: "育成" },
     { path: "/seed", title: "种马" },
   ];
   const phoneList = [
@@ -49,7 +49,7 @@ const AppPc = () => {
     { path: "/support", title: "支援" },
     { path: "/skill", title: "技能" },
     { path: "/race", title: "比赛" },
-    { path: "/nurturingMO2", title: "育成" },
+    { path: "/mo/nur", title: "育成" },
     { path: "/seed", title: "种马" },
   ];
   const list = ua.isPhone ? phoneList : pcList;
@@ -87,8 +87,8 @@ const AppPc = () => {
           path="/skill"
           component={Skill}
         />
-        <CacheRoute path="/nurturing2" component={Nurturing2} />
-        <CacheRoute path="/nurturingMO2" component={NurturingMO} />
+        <CacheRoute path={["/nur","/Nurturing2"]} component={Nurturing2} />
+        <CacheRoute path={["/mo/nur","/NurturingMO"]} component={NurturingMO} />
         <CacheRoute className="flex-auto w-full" path="/seed" component={Seed} />
         <CacheRoute className="flex-auto w-full" path="/SeedMo" component={SeedMo} />
         <CacheRoute className="flex-auto w-full" path="/race" component={Race} />
