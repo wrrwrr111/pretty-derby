@@ -93,17 +93,17 @@ const AppPc = () => {
         <CacheRoute className="flex-auto w-full" path="/SeedMo" component={SeedMo} />
         <CacheRoute className="flex-auto w-full" path="/race" component={Race} />
         <CacheRoute
-          className="flex-auto w-full max-w-lg mx-auto flex flex-col px-3 overflow-y-auto"
+          className="w-full max-w-lg mx-auto flex flex-col px-3"
           path={["/support-detail/:id", "/support-detail/:id/:nur"]}
           component={SupportDetail}
         />
         <CacheRoute
-          className="flex-auto w-full max-w-lg mx-auto flex flex-col px-3 overflow-y-auto"
+          className="w-full max-w-lg mx-auto flex flex-col px-3"
           path={["/player-detail/:id", "/player-detail/:id/:nur"]}
           component={PlayerDetail}
         />
         <CacheRoute
-          className="flex-auto w-full max-w-lg mx-auto flex flex-col px-3 overflow-y-auto"
+          className="w-full max-w-lg mx-auto flex flex-col px-3"
           path="/skill-detail/:id"
           component={SkillDetail}
         />
