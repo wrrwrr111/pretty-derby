@@ -10,7 +10,7 @@ import { EffectTable, TestEffectTable } from "../effect";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const SupportDetail = (props) => {
-  const id = props.id || props?.match?.params?.id;
+  const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
   return (
     <div className="w-full h-full flex flex-col overflow-auto px-3">

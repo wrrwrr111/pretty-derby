@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
 
 import CacheRoute, { CacheSwitch } from "react-router-cache-route";
-
+import { Route } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 
-import Race from "./pages/race.js";
-import Player from "./pages/player.js";
-import Support from "./pages/support.js";
-import Nurturing2 from "./pages/nurturing2.js";
-import Skill from "./pages/skill.js";
-import Seed from "./pages/seed.js";
+import Race from "@/pages/race";
+import Player from "@/pages/player";
+import Support from "@/pages/support";
+import Nurturing from "@/pages/nurturing/index";
+import Skill from "@/pages/skill";
+import Seed from "@/pages/seed";
+import NotFound from "@/pages/404";
 
-import NurturingMO from "./pages-mo/nurturing.js";
-import SeedMo from "./pages-mo/seed.js";
+import NurturingMO from "@/pages/nurturingMo";
+import SeedMo from "@/pages/seedMo";
 
-import SupportDetail from "./components/support/SupportDetail";
-import PlayerDetail from "./components/player/PlayerDetail";
-import SkillDetail from "./components/skill/SkillDetail";
+import SupportDetailPage from "@/pages/support/detail";
+import PlayerDetailPage from "@/pages/player/detail";
+import SkillDetailPage from "@/pages/skill/detail";
 import { BuffList } from "./components/buff.js";
-
-
 const AppPc = () => {
   return (
     <>
@@ -27,21 +26,22 @@ const AppPc = () => {
         <CacheRoute exact path="/" component={Player} />
         <CacheRoute path="/support" component={Support} />
         <CacheRoute path="/skill" component={Skill} />
-        <CacheRoute path={["/nur", "/Nurturing2"]} component={Nurturing2} />
-        <CacheRoute path={["/mo/nur", "/NurturingMO"]} component={NurturingMO} />
+        <CacheRoute path={["/nurturing"]} component={Nurturing} />
+        <CacheRoute path={["/nurturingMo"]} component={NurturingMO} />
         <CacheRoute className="flex-auto w-full" path="/seed" component={Seed} />
         <CacheRoute className="flex-auto w-full" path="/SeedMo" component={SeedMo} />
         <CacheRoute className="flex-auto w-full" path="/race" component={Race} />
         <CacheRoute
           path={["/support-detail/:id", "/support-detail/:id/:nur"]}
-          component={SupportDetail}
+          component={SupportDetailPage}
         />
         <CacheRoute
           path={["/player-detail/:id", "/player-detail/:id/:nur"]}
-          component={PlayerDetail}
+          component={PlayerDetailPage}
         />
-        <CacheRoute path="/skill-detail/:id" component={SkillDetail} />
+        <CacheRoute path="/skill-detail/:id" component={SkillDetailPage} />
         <CacheRoute path="/buff" component={BuffList} />
+        <Route component={NotFound}></Route>
       </CacheSwitch>
       <ReactTooltip className="z-max" html={true} />
     </>

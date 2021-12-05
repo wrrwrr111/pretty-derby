@@ -4,7 +4,7 @@ import SupportCard from "./SupportCard";
 import SupportDetail from "./SupportDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
-const PlayerList = ({listClass, dataList, onClick, sortFlag = false, ownList }) => {
+const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }) => {
   const ua = useUa();
   const history = useHistory();
   const sort = sortFlag
@@ -19,7 +19,7 @@ const PlayerList = ({listClass, dataList, onClick, sortFlag = false, ownList }) 
     : null;
   return (
     <List
-    className={listClass}
+      className={listClass}
       listKey="supports"
       dataList={dataList}
       sort={sort}
@@ -44,4 +44,4 @@ const PlayerList = ({listClass, dataList, onClick, sortFlag = false, ownList }) 
   );
 };
 
-export default PlayerList;
+export default SupportList;

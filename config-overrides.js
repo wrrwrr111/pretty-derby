@@ -1,14 +1,21 @@
-const {override,fixBabelImports} = require('customize-cra')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { override, fixBabelImports, addWebpackAlias } = require("customize-cra");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const path = require("path");
+function resolve(dir) {
+  return path.join(__dirname, '.', dir)
+}
 module.exports = override(
-  fixBabelImports('antd',{
-    libraryName:'antd',
-    libraryDirectory:'es',
-    style:'css'
+  addWebpackAlias({
+    ["@"]: path.resolve(__dirname, "src"),
   }),
-  fixBabelImports('import',{
-    libraryName:'antd-mobile',
-    style:true
+  fixBabelImports("antd", {
+    libraryName: "antd",
+    libraryDirectory: "es",
+    style: "css",
+  }),
+  fixBabelImports("import", {
+    libraryName: "antd-mobile",
+    style: true,
   }),
   (config) => {
     // 在开发环境不修改 publicUrl
@@ -22,4 +29,4 @@ module.exports = override(
     config.output.publicPath = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/";
     return config;
   }
-)
+);

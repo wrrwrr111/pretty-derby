@@ -27,7 +27,7 @@ const skillType = {
   31: "加速度",
 };
 const SkillDetail = (props) => {
-  const id = props.id || props.match?.params?.id;
+  const id = props.id ;
   const skill = props.data || db.get("skills").find({ id }).value();
   const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
   const supportList = allSupportList

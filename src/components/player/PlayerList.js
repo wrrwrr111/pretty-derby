@@ -4,7 +4,7 @@ import PlayerCard from "./PlayerCard";
 import PlayerDetail from "./PlayerDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
-const PlayerList = ({listClass, dataList, onClick, sortFlag = false }) => {
+const PlayerList = ({ listClass, dataList, onClick, sortFlag = false }) => {
   const ua = useUa();
   const history = useHistory();
   const sort = {
@@ -21,7 +21,6 @@ const PlayerList = ({listClass, dataList, onClick, sortFlag = false }) => {
       listKey="players"
       dataList={dataList}
       sort={sortFlag && sort}
-      onClick={onClick}
       itemRender={(data, setCur) => (
         <PlayerCard
           className="w-20 mr-1 mb-1"

@@ -21,7 +21,7 @@ const Layout = ({ children, contentClass }) => {
     { path: "/support", title: "支援" },
     { path: "/skill", title: "技能" },
     { path: "/race", title: "比赛" },
-    { path: "/nur", title: "育成" },
+    { path: "/nurturing", title: "育成" },
     { path: "/seed", title: "种马" },
   ];
   const phoneList = [
@@ -29,8 +29,8 @@ const Layout = ({ children, contentClass }) => {
     { path: "/support", title: "支援" },
     { path: "/skill", title: "技能" },
     { path: "/race", title: "比赛" },
-    { path: "/mo/nur", title: "育成" },
-    { path: "/seed", title: "种马" },
+    { path: "/nurturingMo", title: "育成" },
+    { path: "/seedMo", title: "种马" },
   ];
   const list = ua.isPhone ? phoneList : pcList;
 
