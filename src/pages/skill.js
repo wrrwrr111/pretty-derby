@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
 import db from "../db.js";
 import t from "../components/t.js";
-
+import Layout from "../components/common/Layout.js";
 // import { SkillButton, SkillCheckbox } from '../components/skill-detail.js'
 import SkillList from "../components/skill/SkillList";
 import SkillCheckbox from "../components/skill/SkillCheckbox";
@@ -26,8 +26,10 @@ const Skill = (props) => {
   };
 
   return (
-    <>
-      <div className="w-1/4 h-full flex flex-col p-1">
+    <Layout
+      contentClass={"flex flex-auto w-full flex-wrap max-w-6xl mx-auto overflow-hidden relative"}
+    >
+      <div className="w-1/4 h-full flex flex-col p-1 overflow-hidden">
         <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("筛选")}
         </div>
@@ -35,7 +37,7 @@ const Skill = (props) => {
           <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
         </div>
       </div>
-      <div className="w-3/4 flex flex-col p-1">
+      <div className="w-3/4 h-full flex flex-col p-1 overflow-hidden">
         <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("技能列表")}
         </div>
@@ -44,7 +46,7 @@ const Skill = (props) => {
         </div>
       </div>
       <div className="col-span-1 rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold "></div>
-    </>
+    </Layout>
   );
 };
 

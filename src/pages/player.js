@@ -1,6 +1,6 @@
 import React from "react";
 import { useDidRecover } from "react-router-cache-route";
-
+import Layout from "../components/common/Layout.js";
 import PlayerList from "../components/player/PlayerList.js";
 // todo 提取出来
 // const cdnServer = 'https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/'
@@ -14,9 +14,9 @@ const Player = (props) => {
     document.title = TITLE;
   });
   return (
-    <div className="flex w-full flex-wrap max-w-6xl mx-auto">
+    <Layout contentClass="flex flex-auto w-full flex-wrap max-w-6xl mx-auto">
       <PlayerList listClass="justify-between" sortFlag={true} onClick={props.onClick} />
-    </div>
+    </Layout>
   );
 };
 

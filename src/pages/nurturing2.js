@@ -5,7 +5,7 @@ import db from "../db.js";
 import dbL from "../dbL.js";
 import t from "../components/t.js";
 // import axios from "axios";
-
+import Layout from "../components/common/Layout.js";
 import {
   div,
   // Row,
@@ -35,9 +35,8 @@ import { MyDecks, RecommendDecks } from "../components/deck.js";
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 // import Race from './race.js'
-import Player from "./player.js";
-import Support from "./support.js";
-import { list } from "postcss";
+import SupportList from "../components/support/SupportList";
+import PlayerList from "../components/player/PlayerList";
 // import Checkbox from 'antd/lib/checkbox/Checkbox';
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
@@ -229,7 +228,7 @@ const Nurturing = () => {
     height: "calc(100% - 22px)",
   };
   return (
-    <>
+    <Layout>
       <GridLayout
         cols={32}
         layout={layout}
@@ -240,7 +239,7 @@ const Nurturing = () => {
         onLayoutChange={onLayoutChange}
       >
         <div key="a" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}  onClick={showPlayer}>
+          <div className="panel-heading" style={{ ...headStyle }} onClick={showPlayer}>
             {t("选择马娘")}
           </div>
           {player.id && (
@@ -256,7 +255,7 @@ const Nurturing = () => {
           <div className="panel-heading" style={{ ...headStyle }}>
             {t("操作")}
           </div>
-          <Button className="add-player" type={"primary"}  onClick={showPlayer}>
+          <Button className="add-player" type={"primary"} onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
           <Button onClick={showSupport2}>{t("支援卡查询")}</Button>
@@ -369,7 +368,7 @@ const Nurturing = () => {
         width={"80%"}
         bodyStyle={{ maxHeight: "80vh", display: "flex" }}
       >
-        <Player onSelect={handleSelectPlayer}></Player>
+        <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
       </Modal>
       <Modal
         visible={isSupportVisible}
@@ -378,9 +377,12 @@ const Nurturing = () => {
         width={"80%"}
         bodyStyle={{ maxHeight: "80vh", display: "flex" }}
       >
-        <Support onSelect={needSelect ? handleSelectSupport : null}></Support>
+        <SupportList
+          onClick={needSelect ? handleSelectSupport : () => null}
+          sortFlag={true}
+        ></SupportList>
       </Modal>
-    </>
+    </Layout>
   );
 };
 

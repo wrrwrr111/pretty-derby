@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import "antd/dist/antd.css";
 import "./styles/tailwind.css";
+// import "tailwindcss/tailwind.css";
 import App from "./app";
 
 const Index = () => {

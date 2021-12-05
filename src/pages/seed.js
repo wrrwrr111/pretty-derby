@@ -28,6 +28,7 @@ import dbL from "../dbL.js";
 // import t from "../components/t.js";
 import "./seed.css";
 
+import Layout from "../components/common/Layout.js";
 import Player from "./player.js";
 import Support from "./support.js";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
@@ -712,7 +713,7 @@ const Seed = () => {
     })
   }
   return (
-    <>
+    <Layout>
       <div className="seed-container">
         <Card className="card" title="过滤条件">
           <SearchForm search={search}></SearchForm>
@@ -734,7 +735,7 @@ const Seed = () => {
       >
         <SeedInput onFinish={closeSeedInput}></SeedInput>
       </Modal>
-    </>
+    </Layout>
   );
 };
 export default Seed;

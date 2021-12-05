@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Table } from "antd";
 import { useDidRecover } from "react-router-cache-route";
+import Layout from "../components/common/Layout.js";
 import db from "../db.js";
 import t from "../components/t.js";
 const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
@@ -152,15 +153,17 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <Table
-      className='px-3'
-      rowSelection={props.onSelect ? rowSelection : null}
-      columns={columns}
-      dataSource={allRaceList}
-      onChange={onChange}
-      pagination={false}
-      scroll={{ y: dynamicTableHeight }}
-    />
+    <Layout>
+      <Table
+        className="px-3"
+        rowSelection={props.onSelect ? rowSelection : null}
+        columns={columns}
+        dataSource={allRaceList}
+        onChange={onChange}
+        pagination={false}
+        scroll={{ y: dynamicTableHeight }}
+      />
+    </Layout>
   );
 };
 

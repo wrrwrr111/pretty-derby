@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Checkbox, Input } from "antd";
 // import { useDidRecover } from 'react-router-cache-route'
 import { useDidRecover } from "react-router-cache-route";
-
+import Layout from "../components/common/Layout.js";
 import db from "../db.js";
 import t from "../components/t.js";
 import SupportList from "../components/support/SupportList";
@@ -139,9 +139,9 @@ const Support = (props) => {
   };
 
   return (
-    <>
+    <Layout contentClass="flex flex-auto w-full flex-wrap max-w-6xl mx-auto overflow-hidden relative">
       {filter && (
-        <div className="w-1/4 h-full flex flex-col p-1">
+        <div className="w-1/4 h-full flex flex-col p-1 overflow-hidden">
           <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
             {t("筛选")}
           </div>
@@ -177,7 +177,7 @@ const Support = (props) => {
           </div>
         </div>
       )}
-      <div className="w-3/4 flex flex-col p-1">
+      <div className="w-3/4 h-full flex flex-col p-1 overflow-hidden">
         <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("支援卡列表")}
         </div>
@@ -191,7 +191,7 @@ const Support = (props) => {
           />
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 export default Support;
