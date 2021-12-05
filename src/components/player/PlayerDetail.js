@@ -16,7 +16,7 @@ const PlayerDetail = (props) => {
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
-  console.log(props.match,isNur,'test');
+  console.log(props.match, isNur, "test");
   const data = props.data || db.get("players").find({ id }).value();
   const PlayerItem = () => (
     <div className="h-16 w-full flex flex-shrink-0">
@@ -31,7 +31,7 @@ const PlayerDetail = (props) => {
   );
   if (isNur) {
     return (
-      <>
+      <div className="w-full h-full flex flex-col overflow-auto px-3">
         <PlayerItem></PlayerItem>
         <div>{t("多选项事件")}</div>
         <EventList idList={data.eventList0}></EventList>
@@ -46,11 +46,11 @@ const PlayerDetail = (props) => {
         <RaceTimeline raceList={data.raceList} showButton={false}></RaceTimeline>
         <div>{t("技能")}</div>
         <SkillList idList={data.skillList}></SkillList>
-      </>
+      </div>
     );
   } else {
     return (
-      <>
+      <div className="w-full h-full flex flex-col overflow-auto px-3">
         <PlayerItem></PlayerItem>
         <AdaptBox player={data}></AdaptBox>
         <div className="h-2"></div>
@@ -70,12 +70,10 @@ const PlayerDetail = (props) => {
         <div>{t("赛程")}</div>
         {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
         <RaceTimeline raceList={data.raceList}></RaceTimeline>
-      </>
+      </div>
     );
   }
 };
-
-
 
 const coloredGradeText = (text) => {
   let color = "gray";

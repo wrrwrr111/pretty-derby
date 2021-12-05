@@ -54,7 +54,7 @@ const AppPc = () => {
   ];
   const list = ua.isPhone ? phoneList : pcList;
   return (
-    <div className="w-screen h-screen flex flex-col">
+    <div className="w-screen h-screen flex flex-col overflow-hidden">
       <div className="h-10 md:h-16 w-full  bg-gray-900 flex items-center flex-shrink-0 ">
         <div className="w-full max-w-sm flex justify-around">
           {list.map((item) => (
@@ -87,23 +87,23 @@ const AppPc = () => {
           path="/skill"
           component={Skill}
         />
-        <CacheRoute path={["/nur","/Nurturing2"]} component={Nurturing2} />
-        <CacheRoute path={["/mo/nur","/NurturingMO"]} component={NurturingMO} />
+        <CacheRoute path={["/nur", "/Nurturing2"]} component={Nurturing2} />
+        <CacheRoute path={["/mo/nur", "/NurturingMO"]} component={NurturingMO} />
         <CacheRoute className="flex-auto w-full" path="/seed" component={Seed} />
         <CacheRoute className="flex-auto w-full" path="/SeedMo" component={SeedMo} />
         <CacheRoute className="flex-auto w-full" path="/race" component={Race} />
         <CacheRoute
-          className="w-full max-w-lg mx-auto flex flex-col px-3"
+          className="flex-auto w-full overflow-hidden"
           path={["/support-detail/:id", "/support-detail/:id/:nur"]}
           component={SupportDetail}
         />
         <CacheRoute
-          className="w-full max-w-lg mx-auto flex flex-col px-3"
+          className="flex-auto w-full overflow-hidden"
           path={["/player-detail/:id", "/player-detail/:id/:nur"]}
           component={PlayerDetail}
         />
         <CacheRoute
-          className="w-full max-w-lg mx-auto flex flex-col px-3"
+          className="flex-auto w-full overflow-hidden"
           path="/skill-detail/:id"
           component={SkillDetail}
         />

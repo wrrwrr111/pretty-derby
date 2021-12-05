@@ -757,10 +757,6 @@ video {
   max-width: 72rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
 .flex-auto {
   -webkit-flex: 1 1 auto;
           flex: 1 1 auto;

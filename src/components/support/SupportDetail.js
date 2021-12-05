@@ -10,11 +10,10 @@ import { EffectTable, TestEffectTable } from "../effect";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const SupportDetail = (props) => {
-  console.log(props.match);
   const id = props.id || props?.match?.params?.id;
   const data = props.data || db.get("supports").find({ id }).value();
   return (
-    <>
+    <div className="w-full h-full flex flex-col overflow-auto px-3">
       <div className="h-16 w-full flex flex-shrink-0">
         <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={48}/>
         <div className="flex-auto flex flex-wrap h-full items-center">
@@ -36,7 +35,7 @@ const SupportDetail = (props) => {
         rarity={data.rarity}
       ></TestEffectTable>
       <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
-    </>
+    </div>
   );
 };
 export default SupportDetail;
