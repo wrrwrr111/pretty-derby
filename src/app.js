@@ -68,7 +68,6 @@ const AppPc = () => {
             </Link>
           ))}
         </div>
-        {/* <LanButton style={{ float: "right" }}></LanButton> */}
       </div>
       <CacheSwitch>
         <CacheRoute
@@ -110,9 +109,10 @@ const AppPc = () => {
         <CacheRoute className=" flex overflow-hidden" path="/buff" component={BuffList} />
       </CacheSwitch>
       <div className="h-10 w-full flex items-center">
-        <div className="reset-nur" data-for="无法打开育成页面时点一哈" onClick={resetNur}>
+        <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
           {t("初始化育成")}
         </div>
+        <LanButton></LanButton>
         <div className="flex-auto"></div>
         <iframe
           title="GitHub"
@@ -127,9 +127,9 @@ const AppPc = () => {
           rel="noreferrer"
           href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi"
           data-tip={`
-              <img src=${cdnServer + "img/q.jpg"} width={300}></img>
-              <p>${t("闲聊为主")}</p>
-            `}
+          <img src=${cdnServer + "img/q.jpg"} width={300}></img>
+          <p>${t("闲聊为主")}</p>
+          `}
         >
           <img
             border="0"
