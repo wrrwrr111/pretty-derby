@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { div, Row, Col, Button, Checkbox, Input } from "antd";
+import { Button, Checkbox, Input } from "antd";
 // import { useDidRecover } from 'react-router-cache-route'
+import { useDidRecover } from "react-router-cache-route";
 
 import db from "../db.js";
 import t from "../components/t.js";
@@ -13,6 +14,10 @@ const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const allSupports = db.get("supports").value();
 const Support = (props) => {
+  document.title = TITLE;
+  useDidRecover(() => {
+    document.title = TITLE;
+  });
   const { filter = true, onClick } = props;
   const [list, setList] = useState(props.supportList || allSupports || []);
   const [chooseMode, setChooseMode] = useState(false);

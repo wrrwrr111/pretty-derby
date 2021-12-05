@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Divider, div, Col } from "antd";
 import { useDidRecover } from "react-router-cache-route";
 import db from "../db.js";
 import t from "../components/t.js";
@@ -23,7 +22,6 @@ const Skill = (props) => {
   localStorage.getItem("supportMode") === null && localStorage.setItem("supportMode", 0);
 
   const onSkillCheckboxUpdate = (skillList) => {
-    console.log(skillList);
     setSkillList(skillList);
   };
 
