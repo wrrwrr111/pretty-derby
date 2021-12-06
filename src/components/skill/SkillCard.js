@@ -12,7 +12,7 @@ const SkillCard = (props) => {
       onClick={onClick}
       data-tip={`<div>${t(data.describe)}</div><div>${t(data.condition)}</div>`}
     >
-      <img className='w-5' alt={data.name} src={cdnServer + data.imgUrl} preview={false}></img>
+      <img className='w-5 h-5 overflow-hidden' alt={data.name} src={cdnServer + data.imgUrl} preview={false}></img>
       <div className="flex-auto truncate">{data.name}</div>
     </div>
   );

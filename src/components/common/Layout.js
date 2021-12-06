@@ -4,7 +4,7 @@ import LanButton from "../lan-button";
 import { cdnServer } from "../../config";
 import dbL from "../../dbL.js";
 import t from "../t.js";
-const Layout = ({ children, contentClass }) => {
+const Layout = ({ children, contentClass, rootClass }) => {
   const ua = useUa();
   const location = useLocation();
   const resetNur = () => {
@@ -33,17 +33,15 @@ const Layout = ({ children, contentClass }) => {
     { path: "/seedMo", title: "种马" },
   ];
   const list = ua.isPhone ? phoneList : pcList;
-
   return (
-    <div className="w-screen min-h-screen md:h-screen flex flex-col relative">
+    <div className={rootClass || "w-screen min-h-screen md:h-screen flex flex-col relative"}>
       <div className="h-10 md:h-16 w-full  bg-gray-900 flex items-center fixed bottom-0 left-0 right-0 md:flex-shrink-0 md:sticky md:top-0 z-10">
-        <div className="w-full max-w-sm flex justify-around">
+        <div className="w-full md:max-w-sm flex justify-around">
           {list.map((item) => (
             <Link
               to={item.path}
-              className={`text-gray-300 ${
-                location.pathname === item.path ? "text-blue-500" : "text-gray-300"
-              }`}
+              className={`text-gray-300 ${location.pathname === item.path ? "text-blue-500" : "text-gray-300"
+                }`}
             >
               {t(item.title)}
             </Link>

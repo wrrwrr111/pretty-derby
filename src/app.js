@@ -43,7 +43,7 @@ const AppPc = () => {
         <CacheRoute path="/buff" component={BuffList} />
         <Route component={NotFound}></Route>
       </CacheSwitch>
-      <ReactTooltip className="z-max hidden md:block" html={true} />
+      <ReactTooltip className="z-max !hidden md:!inline-block" html={true} />
     </>
   );
 };

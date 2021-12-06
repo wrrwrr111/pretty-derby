@@ -104,7 +104,7 @@ const PlayerInput = ({ value = {}, onChange }) => {
         onClick={showPlayer}
       ></Image>
       <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"} bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}>
-        <PlayerList onClick={handleSelectPlayer}></PlayerList>
+        <PlayerList sortFlag={true} onClick={handleSelectPlayer}></PlayerList>
       </Modal>
     </>
   );
