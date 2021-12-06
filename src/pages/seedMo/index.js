@@ -11,7 +11,7 @@ import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 import db from "@/db.js";
 import t from "@/components/t.js";
-import SupportList from "@/components/support/SupportList.js";
+import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
 import Layout from "@/components/common/Layout.js";
 
@@ -106,10 +106,10 @@ const PlayerInput = ({ value = {}, onChange }) => {
         visible={isPlayerVisible}
         onOk={closePlayer}
         onCancel={closePlayer}
-        width={"80%"}
+        width={"100%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <PlayerList onClick={handleSelectPlayer}></PlayerList>
+        <PlayerList sortFlag={true} onClick={handleSelectPlayer}></PlayerList>
       </Modal>
     </>
   );
@@ -150,10 +150,13 @@ const SupportInput = ({ value = {}, onChange }) => {
         visible={isSupportVisible}
         onOk={closeSupport}
         onCancel={closeSupport}
-        width={"80%"}
-        bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
+        width={"100%"}
+        bodyStyle={{ height: "80vh" }}
       >
-        <SupportList onClick={handleSelectSupport}></SupportList>
+        <div className='w-full h-full overflow-hidden flex relative'>
+          <SupportListWithFilter onClick={handleSelectSupport}
+            sortFlag={true}></SupportListWithFilter>
+        </div>
       </Modal>
     </>
   );

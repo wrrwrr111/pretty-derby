@@ -180,7 +180,7 @@ const SupportListWithFilter = (props) => {
         <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("支援卡列表")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden pl-4 w-full h-full flex flex-wrap">
+        <div className=" overflow-y-scroll overflow-x-hidden md:pl-4 w-full h-full flex flex-wrap">
           <SupportList
             listClass="justify-between"
             sortFlag={true}

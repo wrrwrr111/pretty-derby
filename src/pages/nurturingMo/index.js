@@ -17,6 +17,7 @@ import {
 } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import SupportList from "@/components/support/SupportList.js";
+import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
 import Layout from "@/components/common/Layout.js";
 import {
@@ -97,7 +98,7 @@ const Nurturing = (props) => {
     dbL.get("selected").assign(selected).write();
     closeSupport();
   };
-  const handleSelectSupportShow = (data)=>{
+  const handleSelectSupportShow = (data) => {
     history.push(`/support-detail/${data.id}`)
     closeSupport()
   }
@@ -154,11 +155,11 @@ const Nurturing = (props) => {
     //根据条件过滤
     let tmpRaceList = Object.values(filterCondition).some((f) => f.length > 0)
       ? Object.entries(filterCondition)
-          .filter(([key, filters]) => filters.length > 0)
-          .reduce(
-            (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
-            races
-          )
+        .filter(([key, filters]) => filters.length > 0)
+        .reduce(
+          (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
+          races
+        )
       : [];
     //过滤后整理成 dataNum:[raceId]
     let tmpFilterRace = {};
@@ -285,20 +286,23 @@ const Nurturing = (props) => {
         onOk={closePlayer}
         onCancel={closePlayer}
         footer={null}
-        width={"80%"}
+        width={"100%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <PlayerList onClick={handleSelectPlayer}></PlayerList>
+        <PlayerList sortFlag={true} onClick={handleSelectPlayer}></PlayerList>
       </Modal>
       <Modal
         visible={isSupportVisible}
         onOk={closeSupport}
         onCancel={closeSupport}
         footer={null}
-        width={"80%"}
-        bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
+        width={"100%"}
+        bodyStyle={{ height: "80vh" }}
       >
-        <SupportList onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}></SupportList>
+        <div className='w-full h-full overflow-hidden flex relative'>
+          <SupportListWithFilter onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}
+            sortFlag={true}></SupportListWithFilter>
+        </div>
       </Modal>
     </Layout>
   );
