@@ -34,7 +34,7 @@ const PlayerDetail = (props) => {
   );
   if (isNur) {
     return (
-      <div className="w-full h-full flex flex-col overflow-auto px-3">
+      <div className="w-full flex flex-col  p-3">
         <PlayerItem></PlayerItem>
         <div>{t("多选项事件")}</div>
         <EventList idList={data.eventList0}></EventList>
@@ -53,7 +53,7 @@ const PlayerDetail = (props) => {
     );
   } else {
     return (
-      <div className="w-full h-full flex flex-col overflow-auto px-3">
+      <div className="w-full flex flex-col  p-3">
         <PlayerItem></PlayerItem>
         <AdaptBox player={data}></AdaptBox>
         <div className="h-2"></div>

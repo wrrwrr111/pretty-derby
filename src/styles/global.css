@@ -62,8 +62,7 @@
   padding: 8px;
 }
 
-.chosen-card {
-}
+.chosen-card {}
 
 .un-chosen-card img {
   opacity: 0.3;
@@ -131,14 +130,18 @@
   margin: 24px 24px 0px;
 }
 
-.seed-container > * {
+.seed-container>* {
   margin-bottom: 16px;
 }
 
-.seed-container > *:last-child {
+.seed-container>*:last-child {
   margin-bottom: 0;
 }
 
 .seed-container .card {
   padding: 24px 24px 0;
+}
+
+.ant-table-wrapper {
+  max-width: unset !important;
 }
