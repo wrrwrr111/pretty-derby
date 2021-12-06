@@ -36,7 +36,7 @@ const Layout = ({ children, contentClass }) => {
 
   return (
     <div className="w-screen h-screen flex flex-col relative">
-      <div className="h-10 md:h-16 w-full  bg-gray-900 flex items-center flex-shrink-0 sticky top-0 z-10">
+      <div className="h-10 md:h-16 w-full  bg-gray-900 flex items-center fixed bottom-0 left-0 right-0 md:flex-shrink-0 md:sticky md:top-0 z-10">
         <div className="w-full max-w-sm flex justify-around">
           {list.map((item) => (
             <Link

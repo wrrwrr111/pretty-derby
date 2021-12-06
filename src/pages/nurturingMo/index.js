@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router";
 import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
 import db from "../../db.js";
@@ -29,6 +29,7 @@ const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
+  const history = useHistory()
   document.title = TITLE;
   useDidRecover(() => {
     document.title = TITLE;
@@ -96,7 +97,10 @@ const Nurturing = (props) => {
     dbL.get("selected").assign(selected).write();
     closeSupport();
   };
-
+  const handleSelectSupportShow = (data)=>{
+    history.push(`/support-detail/${data.id}`)
+    closeSupport()
+  }
   // 卡组相关操作
   const saveDeck = (deck) => {
     let tmpDeck = {
@@ -284,7 +288,7 @@ const Nurturing = (props) => {
         width={"80%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <PlayerList onSelect={handleSelectPlayer}></PlayerList>
+        <PlayerList onClick={handleSelectPlayer}></PlayerList>
       </Modal>
       <Modal
         visible={isSupportVisible}
@@ -294,10 +298,10 @@ const Nurturing = (props) => {
         width={"80%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <SupportList onSelect={needSelect ? handleSelectSupport : () => null}></SupportList>
+        <SupportList onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}></SupportList>
       </Modal>
     </Layout>
   );
 };
 
-export default withRouter(Nurturing);
+export default Nurturing;

@@ -617,6 +617,10 @@ video {
   visibility: visible;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .relative {
   position: relative;
 }
@@ -628,6 +632,18 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .z-10 {
@@ -1051,8 +1067,21 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  .md\:top-0 {
+    top: 0px;
+  }
+
   .md\:m-1 {
     margin: 0.25rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:h-16 {
@@ -1065,6 +1094,11 @@ video {
 
   .md\:w-unset {
     width: unset;
+  }
+
+  .md\:flex-shrink-0 {
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
   }
 
   .md\:p-2 {

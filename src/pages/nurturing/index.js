@@ -378,7 +378,7 @@ const Nurturing = () => {
         bodyStyle={{ maxHeight: "80vh", overflow:'auto' }}
       >
         <SupportList
-          onClick={needSelect ? handleSelectSupport : () => null}
+          onClick={needSelect ? handleSelectSupport : null}
           sortFlag={true}
         ></SupportList>
       </Modal>

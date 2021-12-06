@@ -10,7 +10,7 @@ const SkillCard = (props) => {
     <div
       className={` rounded border-solid border-2  flex items-center cursor-pointer ${data.rarity === 1 && "bg-white"} ${data.rarity === 2 && "bg-yellow-300"} ${data.rarity === 3 && " bg-purple-400"} ${data.rarity === 4 && " bg-purple-400"} ${data.rarity === 5 && " bg-purple-400"} ${className}`}
       onClick={onClick}
-      data-tip={`<p>${t(data.describe)}</p><p>${t(data.condition)}</p>`}
+      data-tip={`<div>${t(data.describe)}</div><div>${t(data.condition)}</div>`}
     >
       <img className='w-5' alt={data.name} src={cdnServer + data.imgUrl} preview={false}></img>
       <div className="flex-auto truncate">{data.name}</div>
