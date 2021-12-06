@@ -1132,6 +1132,14 @@ video {
   .md\:p-2 {
     padding: 0.5rem;
   }
+
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
 }
 
 @import "./global.css";

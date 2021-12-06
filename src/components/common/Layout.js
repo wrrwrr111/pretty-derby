@@ -51,7 +51,7 @@ const Layout = ({ children, contentClass }) => {
         </div>
       </div>
       <div className={`${contentClass}`}>{children}</div>
-      <div className="w-full flex items-center flex-wrap pb-10">
+      <div className="w-full flex items-center flex-wrap pb-10 md:pb-0">
         <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
           {t("初始化育成")}
         </div>
