@@ -86,12 +86,12 @@
 }
 
 
-/*race time line  */
+/*race time line start */
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
-  position: absolute;
-  top: -7.001px;
-  width: 100px;
-  text-align: right;
+  position: absolute !important; 
+  top: 0px !important;
+  width: 100px !important;
+  text-align: right !important;
 }
 
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-tail,
@@ -103,28 +103,32 @@
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom,
 .ant-timeline.ant-timeline-right .ant-timeline-item-head-custom,
 .ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
-  left: 110px;
+  top: 6px !important;
+  left: 110px !important;
 }
 
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content,
 .ant-timeline.ant-timeline-right .ant-timeline-item-left .ant-timeline-item-content,
 .ant-timeline.ant-timeline-label .ant-timeline-item-left .ant-timeline-item-content {
-  left: 110px;
-  width: calc(100% - 110px);
-  text-align: left;
+  top: 0px !important;
+  left: 110px !important;
+  width: calc(100% - 120px) !important;
+  text-align: left !important;
+  margin: 0 0 0 8px !important;
 }
 
 .ant-timeline-item-content p {
-  margin-bottom: 4px;
+  margin-bottom: 4px !important;
 }
 
 .ant-timeline-item {
-  position: relative;
-  margin: 0;
-  padding-bottom: 12px;
-  font-size: 14px;
-  list-style: none;
+  position: relative !important;
+  margin: 0 !important;
+  padding-bottom: 6px !important;
+  font-size: 14px !important;
+  list-style: none !important;
 }
+/*race time line end */
 
 .seed-container {
   margin: 24px 24px 0px;
@@ -144,4 +148,8 @@
 
 .ant-table-wrapper {
   max-width: unset !important;
+}
+
+.ant-modal-body {
+  padding:12px !important
 }

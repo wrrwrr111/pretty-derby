@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
 // import shortid from 'shortid'
-import db from "../../db.js";
-import dbL from "../../dbL.js";
-import t from "../../components/t.js";
+import db from "@/db.js";
+import dbL from "@/dbL.js";
+import t from "@/components/t.js";
 // import axios from "axios";
-import Layout from "../../components/common/Layout.js";
+import Layout from "@/components/common/Layout.js";
 import {
   div,
   // Row,
@@ -22,21 +22,22 @@ import {
 
 import ScrollBars from "react-custom-scrollbars";
 
-import EventList from "../../components/event/EventList";
-import SkillList from "../../components/skill/SkillList";
-import { BuffButton } from "../../components/buff.js";
+import EventList from "@/components/event/EventList";
+import SkillList from "@/components/skill/SkillList";
+import { BuffButton } from "@/components/buff.js";
 import {
   // RaceSchedule,
   RaceTimeline,
   RaceCheckbox,
-} from "../../components/race";
-import { MyDecks, RecommendDecks } from "../../components/deck.js";
+} from "@/components/race";
+import { MyDecks, RecommendDecks } from "@/components/deck.js";
 
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 // import Race from './race.js'
-import SupportList from "../../components/support/SupportList";
-import PlayerList from "../../components/player/PlayerList";
+import SupportList from "@/components/support/SupportList";
+import SupportListWithFilter from "@/components/support/SupportListWithFilter";
+import PlayerList from "@/components/player/PlayerList";
 // import Checkbox from 'antd/lib/checkbox/Checkbox';
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
@@ -128,11 +129,11 @@ const Nurturing = () => {
     //根据条件过滤
     let tmpRaceList = Object.values(filterCondition).some((f) => f.length > 0)
       ? Object.entries(filterCondition)
-          .filter(([key, filters]) => filters.length > 0)
-          .reduce(
-            (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
-            races
-          )
+        .filter(([key, filters]) => filters.length > 0)
+        .reduce(
+          (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
+          races
+        )
       : [];
     //过滤后整理成 dataNum:[raceId]
     let tmpFilterRace = {};
@@ -366,7 +367,7 @@ const Nurturing = () => {
         onOk={closePlayer}
         onCancel={closePlayer}
         width={"80%"}
-        bodyStyle={{ maxHeight: "80vh", overflow:'auto' }}
+        bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}
       >
         <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
       </Modal>
@@ -375,12 +376,12 @@ const Nurturing = () => {
         onOk={closeSupport}
         onCancel={closeSupport}
         width={"80%"}
-        bodyStyle={{ maxHeight: "80vh", overflow:'auto' }}
+        bodyStyle={{ height: "90vh" }}
       >
-        <SupportList
-          onClick={needSelect ? handleSelectSupport : null}
-          sortFlag={true}
-        ></SupportList>
+        <div className='w-full h-full overflow-hidden flex relative'>
+          <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
+            sortFlag={true}></SupportListWithFilter>
+        </div>
       </Modal>
     </Layout>
   );

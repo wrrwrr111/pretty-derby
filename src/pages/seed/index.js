@@ -28,8 +28,8 @@ import dbL from "@/dbL.js";
 // import t from "../components/t.js";
 
 import Layout from "@/components/common/Layout.js";
-import Player from "../player/index.js";
-import Support from "../support/index.js";
+import PlayerList from "@/components/player/PlayerList";
+import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 // db.set('userId',null).write()
 let userId = dbL.get("userId").value();
@@ -103,8 +103,8 @@ const PlayerInput = ({ value = {}, onChange }) => {
         width={80}
         onClick={showPlayer}
       ></Image>
-      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"}>
-        <Player onClick={handleSelectPlayer}></Player>
+      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"} bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}>
+        <PlayerList onClick={handleSelectPlayer}></PlayerList>
       </Modal>
     </>
   );
@@ -139,8 +139,12 @@ const SupportInput = ({ value = {}, onChange }) => {
         width={80}
         onClick={showSupport}
       ></Image>
-      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={"80%"}>
-        <Support onClick={handleSelectSupport}></Support>
+      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={"80%"}
+        bodyStyle={{ height: "90vh" }}>
+        <div className='w-full h-full overflow-hidden flex relative'>
+          <SupportListWithFilter onClick={handleSelectSupport}
+            sortFlag={true}></SupportListWithFilter>
+        </div>
       </Modal>
     </>
   );
@@ -575,7 +579,7 @@ const Seed = () => {
       key: "uraLevel0",
       render: (text, record) =>
         <span className="rate-label">
-          {`${record["uraLevel0"]? `URA  ${record["uraLevel0"]}`:''}`}
+          {`${record["uraLevel0"] ? `URA  ${record["uraLevel0"]}` : ''}`}
         </span>
       ,
     },
@@ -687,7 +691,7 @@ const Seed = () => {
     const res = await axios.post("https://urarawin.com/api/sqlite/like", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.likes +=1
+      seed.likes += 1
     }
     setSeedList([...seedList]);
   };
@@ -700,7 +704,7 @@ const Seed = () => {
     const res = await axios.post("https://urarawin.com/api/sqlite/dislike", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.dislikes +=1
+      seed.dislikes += 1
     }
     setSeedList([...seedList]);
   };
@@ -721,8 +725,10 @@ const Seed = () => {
         </Card>
         <Card className="card" title="结果">
           <Table columns={columns} dataSource={seedList} onChange={onChange}
-            pagination={{ pageSize: 10, total: total,simple:true,showQuickJumper:false,
-              position: ['topRight', 'bottomRight'] }} rowKey={"id"} />
+            pagination={{
+              pageSize: 10, total: total, simple: true, showQuickJumper: false,
+              position: ['topRight', 'bottomRight']
+            }} rowKey={"id"} />
         </Card>
       </div>
       <Modal
