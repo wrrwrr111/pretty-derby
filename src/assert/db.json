@@ -9635,7 +9635,7 @@
         },
         "53": {
           "id": "-9T1oDkamb",
-          "goal": "3着"
+          "goal": "3着以内"
         },
         "55": {
           "id": "I4VkVUYo1Lx",
@@ -10316,7 +10316,7 @@
         },
         "67": {
           "id": "LwfsArraIdq",
-          "goal": "2着"
+          "goal": "2着以内"
         },
         "69": {
           "id": "Oi08Bjwith",
@@ -11052,7 +11052,7 @@
       "gutsGrow": "+8%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "EwfzdXm7N",
+        "S2WaN9uLP",
         "oif2oTQXUs",
         "EzWa29JdgX",
         "Lv5bWWlO15w",
@@ -11062,7 +11062,7 @@
         "Lj1rYv-zWc"
       ],
       "uniqueSkillList": [
-        "EwfzdXm7N"
+        "S2WaN9uLP"
       ],
       "initialSkillList": [
         "oif2oTQXUs",
@@ -11144,7 +11144,11 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "hideEvent": [],
+      "hideEvent": [
+        "OdT_IuRqx8",
+        "UnsSxZPa4s",
+        "X4TKbpfQ6"
+      ],
       "eventList0": [
         "NC3SYZz5X",
         "lIyojMvGF-",
@@ -11220,7 +11224,11 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "eventList4": [],
+      "eventList4": [
+        "OdT_IuRqx8",
+        "UnsSxZPa4s",
+        "X4TKbpfQ6"
+      ],
       "raceList": {
         "27": {
           "id": "j43O_Gb9ZAw",
@@ -11277,17 +11285,17 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "7Y9-5XxiR",
+        "3AYHCIHoF",
         "svT-34r60",
         "kryBJgZKl3",
         "HeU_5aMTZ",
         "uL6kGjM4qUj",
         "esqCDJMpyY",
         "FxF2hL65X7A",
-        "HHMg8QmGEb"
+        "QThccxYQyj"
       ],
       "uniqueSkillList": [
-        "7Y9-5XxiR"
+        "3AYHCIHoF"
       ],
       "initialSkillList": [
         "svT-34r60",
@@ -11298,7 +11306,7 @@
         "uL6kGjM4qUj",
         "esqCDJMpyY",
         "FxF2hL65X7A",
-        "HHMg8QmGEb"
+        "QThccxYQyj"
       ],
       "eventList": [
         "b3RCJOmfO",
@@ -11494,28 +11502,28 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+7%",
       "skillList": [
-        "S_mMFEiepU",
+        "li35a-B4T",
         "eqLjmnsF9A",
         "eqNsnm5rHdT",
-        "bmpe1GE1h",
+        "aQWjOGsPHA",
         "bS56RDj_-m",
-        "AZQ66_huvt",
+        "yMejxOmzjp",
         "EfTxxN-wUe",
-        "6fLltoeNyl"
+        "JtneEIUvPk"
       ],
       "uniqueSkillList": [
-        "S_mMFEiepU"
+        "li35a-B4T"
       ],
       "initialSkillList": [
         "eqLjmnsF9A",
         "eqNsnm5rHdT",
-        "bmpe1GE1h"
+        "aQWjOGsPHA"
       ],
       "awakeningSkillList": [
         "bS56RDj_-m",
-        "AZQ66_huvt",
+        "yMejxOmzjp",
         "EfTxxN-wUe",
-        "6fLltoeNyl"
+        "JtneEIUvPk"
       ],
       "eventList": [
         "LWA7UIApn",
@@ -11717,7 +11725,7 @@
       "gutsGrow": "+20%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "Iwmu57ac2d",
+        "Fj-m1YARf",
         "iZfjbk3QWoo",
         "TSDcq3oKT8s",
         "JfZuGZHSjLl",
@@ -11727,7 +11735,7 @@
         "js7Tquw5-"
       ],
       "uniqueSkillList": [
-        "Iwmu57ac2d"
+        "Fj-m1YARf"
       ],
       "initialSkillList": [
         "iZfjbk3QWoo",
@@ -11913,7 +11921,7 @@
         },
         "68": {
           "id": "WsNLnMFjN8P",
-          "goal": "1着以内"
+          "goal": "1着"
         }
       },
       "db_id": 103901,
@@ -11942,7 +11950,7 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "-Y2IhycRH6",
+        "U_s9R1SQO",
         "lHAMfGoOtw2",
         "lMGZIre6t",
         "LXINgxRd1tx",
@@ -11952,7 +11960,7 @@
         "IyqQfIVPm8"
       ],
       "uniqueSkillList": [
-        "-Y2IhycRH6"
+        "U_s9R1SQO"
       ],
       "initialSkillList": [
         "lHAMfGoOtw2",
@@ -12175,28 +12183,28 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+14%",
       "skillList": [
-        "UkaPrI3LuT",
+        "0HeMqpu30",
         "lHAMfGoOtw2",
         "IEk0vPRrL",
-        "LAU_W28wQo",
+        "otRc2lsnll",
         "7sHwpYODM1",
         "yRcAznG3V2",
         "6IIADrYBkD3",
-        "9xidYXTYy"
+        "ePxMsnsV37"
       ],
       "uniqueSkillList": [
-        "UkaPrI3LuT"
+        "0HeMqpu30"
       ],
       "initialSkillList": [
         "lHAMfGoOtw2",
         "IEk0vPRrL",
-        "LAU_W28wQo"
+        "otRc2lsnll"
       ],
       "awakeningSkillList": [
         "7sHwpYODM1",
         "yRcAznG3V2",
         "6IIADrYBkD3",
-        "9xidYXTYy"
+        "ePxMsnsV37"
       ],
       "eventList": [
         "nUHgl7VhRg",
@@ -12274,7 +12282,9 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "hideEvent": [],
+      "hideEvent": [
+        "B4K8gheuvW"
+      ],
       "eventList0": [
         "nUHgl7VhRg",
         "6_bmngeoB9",
@@ -12357,7 +12367,9 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "eventList4": [],
+      "eventList4": [
+        "B4K8gheuvW"
+      ],
       "raceList": {
         "22": {
           "id": "TfOpFDcfBlz",
@@ -12381,7 +12393,7 @@
         },
         "53": {
           "id": "-9T1oDkamb",
-          "goal": "3着"
+          "goal": "3着以内"
         },
         "55": {
           "id": "I4VkVUYo1Lx",
@@ -12422,17 +12434,17 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+8%",
       "skillList": [
-        "yR8SdV6gVe",
+        "N3ndYR00R",
         "SSm3I2jNB9R",
         "svT-34r60",
         "x_8glfWv1Fs",
         "lyYPrWT4R2E",
         "esqCDJMpyY",
         "XUMkn4ziiYT",
-        "rdqUTIAMMh"
+        "24GpdMbibj"
       ],
       "uniqueSkillList": [
-        "yR8SdV6gVe"
+        "N3ndYR00R"
       ],
       "initialSkillList": [
         "SSm3I2jNB9R",
@@ -12443,7 +12455,7 @@
         "lyYPrWT4R2E",
         "esqCDJMpyY",
         "XUMkn4ziiYT",
-        "rdqUTIAMMh"
+        "24GpdMbibj"
       ],
       "eventList": [
         "qmg04Luv4",
@@ -12520,7 +12532,11 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "hideEvent": [],
+      "hideEvent": [
+        "p6QK-mwMt_",
+        "VmmjhheQl",
+        "6UjjsJddal"
+      ],
       "eventList0": [
         "qmg04Luv4",
         "ig0edUh6cG",
@@ -12602,7 +12618,11 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "eventList4": [],
+      "eventList4": [
+        "p6QK-mwMt_",
+        "VmmjhheQl",
+        "6UjjsJddal"
+      ],
       "raceList": {
         "18": {
           "id": "AbhqdP7Nkof",
@@ -12663,17 +12683,17 @@
       "gutsGrow": "+10%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "TIybfosP23",
+        "4zPASisWR",
         "O-c-BZW-2n",
         "J9ZtYuirNxI",
         "EfTxxN-wUe",
         "ja6Jl89t4x",
         "KghBRzfD2Mn",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "ec5gPDKBP"
       ],
       "uniqueSkillList": [
-        "TIybfosP23"
+        "4zPASisWR"
       ],
       "initialSkillList": [
         "O-c-BZW-2n",
@@ -12683,7 +12703,7 @@
       "awakeningSkillList": [
         "ja6Jl89t4x",
         "KghBRzfD2Mn",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "ec5gPDKBP"
       ],
       "eventList": [
@@ -12888,17 +12908,17 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+20%",
       "skillList": [
-        "AzIfAAHHYy",
+        "dMyA9fBnK",
         "Qd7mNuxlUv",
         "sWVG7_tDNvo",
         "0Fh2q7Uid5",
         "eqLjmnsF9A",
         "r5zwRcqgP2",
         "QgJT1woGQD",
-        "Loh9B2jyZV"
+        "poJ06eMSC9"
       ],
       "uniqueSkillList": [
-        "AzIfAAHHYy"
+        "dMyA9fBnK"
       ],
       "initialSkillList": [
         "Qd7mNuxlUv",
@@ -12909,7 +12929,7 @@
         "eqLjmnsF9A",
         "r5zwRcqgP2",
         "QgJT1woGQD",
-        "Loh9B2jyZV"
+        "poJ06eMSC9"
       ],
       "eventList": [
         "8QBrZgsDkS",
@@ -13127,17 +13147,17 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+6%",
       "skillList": [
-        "Wy4aGf_-38",
+        "3jbjbH5JH",
         "PXqe7XPh2Zi",
         "ja6Jl89t4x",
         "47kEAZPiqw",
         "Eqc5btQZy-c",
-        "YZMoS9QqGX",
+        "ltjs_hE292",
         "XUMkn4ziiYT",
         "z8o7DIWJkt"
       ],
       "uniqueSkillList": [
-        "Wy4aGf_-38"
+        "3jbjbH5JH"
       ],
       "initialSkillList": [
         "PXqe7XPh2Zi",
@@ -13146,7 +13166,7 @@
       ],
       "awakeningSkillList": [
         "Eqc5btQZy-c",
-        "YZMoS9QqGX",
+        "ltjs_hE292",
         "XUMkn4ziiYT",
         "z8o7DIWJkt"
       ],
@@ -13163,7 +13183,7 @@
         "acOrF7clov",
         "SdpNGz9m7H",
         "vNxHwCzrH",
-        "INspw3YrtF",
+        "ntOigabwqM",
         "aRI6dOjDdM",
         "0V7uMuLfLo",
         "6p9DYLj2m",
@@ -13229,7 +13249,7 @@
         "acOrF7clov",
         "SdpNGz9m7H",
         "vNxHwCzrH",
-        "INspw3YrtF",
+        "ntOigabwqM",
         "aRI6dOjDdM",
         "0V7uMuLfLo",
         "6p9DYLj2m",
@@ -13348,7 +13368,7 @@
       "gutsGrow": "+0%",
       "wisdomGrow": "+0%",
       "skillList": [
-        "_IaqhtwWtl",
+        "4nqYIm8Lo",
         "x_8glfWv1Fs",
         "Lv5bWWlO15w",
         "5PPzFiHFNv",
@@ -13358,7 +13378,7 @@
         "LDIfF8CP-4"
       ],
       "uniqueSkillList": [
-        "_IaqhtwWtl"
+        "4nqYIm8Lo"
       ],
       "initialSkillList": [
         "x_8glfWv1Fs",
@@ -13385,7 +13405,7 @@
         "xPMnKccrjw",
         "YwfLyIAgtg",
         "tdOPVQd2r",
-        "GY9C3mUDHW",
+        "TzyhZi_7wQ",
         "gVybwHnvL6",
         "tU-hVbaTge",
         "ZKCX8hSl7",
@@ -13435,7 +13455,9 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "hideEvent": [],
+      "hideEvent": [
+        "CvyVSKZJ-B"
+      ],
       "eventList0": [
         "J6C5V__pf",
         "SQsvzVClHa",
@@ -13450,7 +13472,7 @@
         "xPMnKccrjw",
         "YwfLyIAgtg",
         "tdOPVQd2r",
-        "GY9C3mUDHW",
+        "TzyhZi_7wQ",
         "gVybwHnvL6",
         "tU-hVbaTge",
         "ZKCX8hSl7",
@@ -13506,7 +13528,9 @@
         "rlPnAjfZ-n",
         "iqlPJOtirj"
       ],
-      "eventList4": [],
+      "eventList4": [
+        "CvyVSKZJ-B"
+      ],
       "raceList": {
         "32": {
           "id": "nuorC_7vw1E",
@@ -41582,7 +41606,7 @@
       "type": "スピード",
       "name": "魔力授かりし英雄",
       "skillList": [
-        "9xidYXTYy",
+        "ePxMsnsV37",
         "EfTxxN-wUe",
         "390SN0eX6K-",
         "v4yZ3Ty12L",
@@ -41596,7 +41620,7 @@
         "Eqc5btQZy-c"
       ],
       "trainingEventSkill": [
-        "9xidYXTYy",
+        "ePxMsnsV37",
         "EfTxxN-wUe",
         "390SN0eX6K-",
         "v4yZ3Ty12L"
@@ -42143,13 +42167,13 @@
       "type": "スタミナ",
       "name": "43、8、1",
       "skillList": [
-        "NaPLGlfJeN",
+        "cfXB_BExO",
         "eqNsnm5rHdT",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "xHXHWreyfm",
         "tw7oPO88tQj",
         "-cFPxDA8Xjr",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "TSDcq3oKT8s",
         "eqLjmnsF9A",
         "J9ZtYuirNxI",
@@ -42159,15 +42183,15 @@
         "KprPYh4Atix"
       ],
       "trainingEventSkill": [
-        "NaPLGlfJeN",
+        "cfXB_BExO",
         "eqNsnm5rHdT",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "xHXHWreyfm",
         "tw7oPO88tQj"
       ],
       "possessionSkill": [
         "-cFPxDA8Xjr",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "TSDcq3oKT8s",
         "eqLjmnsF9A",
         "J9ZtYuirNxI",
@@ -42530,7 +42554,7 @@
         "xHXHWreyfm",
         "tw7oPO88tQj",
         "-cFPxDA8Xjr",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "TSDcq3oKT8s",
         "eqLjmnsF9A",
         "J9ZtYuirNxI",
@@ -42545,7 +42569,7 @@
       ],
       "possessionSkill": [
         "-cFPxDA8Xjr",
-        "Q-Llr14wOU",
+        "fnhhOTaXqy",
         "TSDcq3oKT8s",
         "eqLjmnsF9A",
         "J9ZtYuirNxI",
@@ -44021,7 +44045,7 @@
       "skillList": [
         "0ynXCgPRn",
         "EOM5PqtmZUs",
-        "E4t5qqwP5I",
+        "42fus4PAY",
         "y5wUlGVnlY",
         "EOM5PqtmZUs",
         "oif2oTQXUs",
@@ -44033,7 +44057,7 @@
       "trainingEventSkill": [
         "0ynXCgPRn",
         "EOM5PqtmZUs",
-        "E4t5qqwP5I",
+        "42fus4PAY",
         "y5wUlGVnlY"
       ],
       "possessionSkill": [
@@ -53563,9 +53587,605 @@
       "need_skill_point": 160,
       "condition2": "",
       "ability2": []
+    },
+    {
+      "name": "Presents from X",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "スタート後からレース後半まで好位置を維持し続けるとレース中盤に勝利への道筋を見出し速度を上げる",
+      "id": "3jbjbH5JH",
+      "condition": "order_rate_in40_continue==1&phase==1&distance_rate>=50&order>=2&order_rate<=40",
+      "rarity": 5,
+      "db_id": 110231,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "VIP顔パス",
+      "imgUrl": "img/skill_icons/20022.png",
+      "rare": "レア",
+      "describe": "追い抜く気持ちが湧き疲れにくくなる＜長距離＞",
+      "id": "ltjs_hE292",
+      "condition": "distance_type==4&is_overtake==1&accumulatetime>=5",
+      "rarity": 2,
+      "db_id": 201201,
+      "icon_id": 20022,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 160
+    },
+    {
+      "name": "聖夜のミラクルラン！",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "スキルで持久力を3回以上回復するとレース後半で勝利に向かい呼吸を整えて力強く踏み込んでいく",
+      "id": "4nqYIm8Lo",
+      "condition": "activate_count_heal>=3&distance_rate>=50",
+      "rarity": 5,
+      "db_id": 110061,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 9,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "彼方、その先へ…",
+      "imgUrl": "img/skill_icons/20043.png",
+      "rare": "固有",
+      "describe": "落ち着いたまま、中盤の仕掛けどころのまたは終盤の勝負どころのコーナーを中団で進むと奮い立ち加速力が上がる",
+      "id": "dMyA9fBnK",
+      "condition": "phase>=2&corner!=0&is_finalcorner==0&temptation_count==0&order_rate>=50&order_rate<=70@phase==1&corner!=0&is_finalcorner==1&temptation_count==0&order_rate>=50&order_rate<=70",
+      "rarity": 5,
+      "db_id": 100591,
+      "icon_id": 20043,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 31,
+          "value": 4000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 40000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "淀の申し子",
+      "imgUrl": "img/skill_icons/10022.png",
+      "rare": "レア",
+      "describe": "京都レース場が得意になりスタミナと賢さが上昇する",
+      "id": "poJ06eMSC9",
+      "condition": "track_id==10008",
+      "rarity": 2,
+      "db_id": 200064,
+      "icon_id": 10022,
+      "grade_value": 461,
+      "ability": [
+        {
+          "type": 2,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 5,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": -1,
+      "cooldown": 0,
+      "need_skill_point": 130
+    },
+    {
+      "name": "YEAH☆VIVID TIME!",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終直線を走行中に好位置で追い抜くまたは詰め寄られるとテンションを上げて速度を上げる",
+      "id": "4zPASisWR",
+      "condition": "is_finalcorner==1&corner==0&order>=2&order_rate<=30&overtake_target_time>=2@is_finalcorner==1&corner==0&order_rate<=20&change_order_onetime<0",
+      "rarity": 5,
+      "db_id": 100481,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "ありったけ",
+      "imgUrl": "img/skill_icons/20011.png",
+      "rare": "ノーマル",
+      "describe": "ラストスパートの直線で好位置にいると速度がわずかに上がる＜中距離＞",
+      "id": "fnhhOTaXqy",
+      "condition": "distance_type==3&is_lastspurt==1&corner==0&order_rate>=20&order_rate<=60",
+      "rarity": 1,
+      "db_id": 201702,
+      "icon_id": 20011,
+      "grade_value": 217,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 24000,
+      "cooldown": 5000000,
+      "need_skill_point": 160
+    },
+    {
+      "name": "GET DOWN",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終コーナー走行中に中団で競り合うと抜け出しやすくなる",
+      "id": "0HeMqpu30",
+      "condition": "is_finalcorner==1&corner!=0&order_rate>=30&order_rate<=70&blocked_side_continuetime>=2",
+      "rarity": 5,
+      "db_id": 110401,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "静かな呼吸",
+      "imgUrl": "img/skill_icons/20021.png",
+      "rare": "ノーマル",
+      "describe": "レース中盤が迫ったとき後方にいると持久力をわずかに回復する＜作戦・差し＞",
+      "id": "otRc2lsnll",
+      "condition": "running_style==3&phase_laterhalf_random==0&order_rate>=50",
+      "rarity": 1,
+      "db_id": 201692,
+      "icon_id": 20021,
+      "grade_value": 217,
+      "ability": [
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 180
+    },
+    {
+      "name": "潜伏態勢",
+      "imgUrl": "img/skill_icons/20022.png",
+      "rare": "レア",
+      "describe": "レース中盤が迫ったとき後方にいると持久力を回復する＜作戦・差し＞",
+      "id": "ePxMsnsV37",
+      "condition": "running_style==3&phase_laterhalf_random==0&order_rate>=50",
+      "rarity": 2,
+      "db_id": 201691,
+      "icon_id": 20022,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 180
+    },
+    {
+      "name": "翳り退く、さざめきの矢",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終コーナー以降に先団で詰め寄られると闘志を燃やして速度を上げる",
+      "id": "N3ndYR00R",
+      "condition": "is_finalcorner==1&order_rate<=40&overtake_target_time>=2",
+      "rarity": 5,
+      "db_id": 110171,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "初嵐",
+      "imgUrl": "img/skill_icons/10012.png",
+      "rare": "レア",
+      "describe": "秋のレースが得意になりスピードとパワーが上昇する",
+      "id": "24GpdMbibj",
+      "condition": "season==3",
+      "rarity": 2,
+      "db_id": 200194,
+      "icon_id": 10012,
+      "grade_value": 461,
+      "ability": [
+        {
+          "type": 1,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 3,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": -1,
+      "cooldown": 0,
+      "need_skill_point": 130
+    },
+    {
+      "name": "アナタヲ・オイカケテ",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "レース後半に中団から『お友達』を追って速度を少しずつ上げ前方のウマ娘をちょっと萎縮させる",
+      "id": "U_s9R1SQO",
+      "condition": "distance_rate>=50&order_rate>=40&order_rate<=70",
+      "rarity": 5,
+      "db_id": 100251,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 21,
+          "value": -500,
+          "target_type": 9,
+          "target_value": 5
+        }
+      ],
+      "ability_time": 60000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "姫たるもの、勝利をこの手に",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終直線を走行中に中団で競り合うと可憐にぶっ飛ばして速度を上げる",
+      "id": "Fj-m1YARf",
+      "condition": "is_finalcorner==1&corner==0&order>=3&order_rate<=70&blocked_side_continuetime>=2",
+      "rarity": 5,
+      "db_id": 100391,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "ぐるぐるマミートリック♡",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終直線を好位置で走行中前のウマ娘との距離が近いと抜け出しやすくなる",
+      "id": "S2WaN9uLP",
+      "condition": "is_finalcorner==1&corner==0&order<=4&bashin_diff_infront<=1",
+      "rarity": 5,
+      "db_id": 110451,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "Drain for rose",
+      "imgUrl": "img/skill_icons/20023.png",
+      "rare": "固有",
+      "describe": "レース中間付近を好位置で走行中に詰め寄られると前方のウマ娘から持久力を吸い取る",
+      "id": "3AYHCIHoF",
+      "condition": "phase==1&distance_rate>=50&order>=2&order_rate<=50&overtake_target_time>=1",
+      "rarity": 5,
+      "db_id": 110301,
+      "icon_id": 20023,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 9,
+          "value": 550,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 9,
+          "value": -50,
+          "target_type": 9,
+          "target_value": 18
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "コーナー回復◎",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill86.png",
+      "rare": "ノーマル",
+      "describe": "無駄のないコーナリングで持久力がわずかに回復する",
+      "id": "WJZViCW6V6"
+    },
+    {
+      "name": "見惚れるトリック",
+      "imgUrl": "img/skill_icons/30052.png",
+      "rare": "レア",
+      "describe": "レース中盤に前の方にいると後ろの掛かったウマ娘が疲れる",
+      "id": "QThccxYQyj",
+      "condition": "phase==1&order_rate<=50&temptation_count_behind>=1",
+      "rarity": 2,
+      "db_id": 200772,
+      "icon_id": 30052,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 9,
+          "value": -300,
+          "target_type": 20,
+          "target_value": 10
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 140
+    },
+    {
+      "name": "尊み☆ﾗｽﾄｽﾊﾟ—(ﾟ∀ﾟ)—ﾄ!",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "レース終盤に2回追い抜くと間近で拝むウマ娘ちゃんのあまりの尊さに思わず速度を上げる",
+      "id": "li35a-B4T",
+      "condition": "change_order_up_end_after>=2",
+      "rarity": 5,
+      "db_id": 100191,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "前列狙い",
+      "imgUrl": "img/skill_icons/20051.png",
+      "rare": "ノーマル",
+      "describe": "レース終盤に少し前を目指す体制をとる",
+      "id": "aQWjOGsPHA",
+      "condition": "ground_type==2&phase_random==2",
+      "rarity": 1,
+      "db_id": 201682,
+      "icon_id": 20051,
+      "grade_value": 174,
+      "ability": [
+        {
+          "type": 28,
+          "value": 250,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 30000,
+      "cooldown": 5000000,
+      "need_skill_point": 140
+    },
+    {
+      "name": "ウママニア",
+      "imgUrl": "img/skill_icons/20012.png",
+      "rare": "レア",
+      "describe": "近くにウマ娘がたくさんいると速度が上がる",
+      "id": "yMejxOmzjp",
+      "condition": "near_count==4@near_count==5@near_count==6@near_count==7",
+      "rarity": 2,
+      "db_id": 201592,
+      "icon_id": 20012,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 30000,
+      "cooldown": 5000000,
+      "need_skill_point": 160
+    },
+    {
+      "name": "狙うは最前列！",
+      "imgUrl": "img/skill_icons/20052.png",
+      "rare": "レア",
+      "describe": "レース終盤に前を目指す体勢をとる",
+      "id": "JtneEIUvPk",
+      "condition": "ground_type==2&phase_random==2",
+      "rarity": 2,
+      "db_id": 201681,
+      "icon_id": 20052,
+      "grade_value": 394,
+      "ability": [
+        {
+          "type": 28,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 31,
+          "value": 3000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 30000,
+      "cooldown": 5000000,
+      "need_skill_point": 140
+    },
+    {
+      "name": "決死の覚悟",
+      "imgUrl": "img/skill_icons/20012.png",
+      "rare": "レア",
+      "describe": "ラストスパートの直線で好位置にいると速度が上がる＜中距離＞",
+      "id": "cfXB_BExO",
+      "condition": "distance_type==3&is_lastspurt==1&corner==0&order_rate>=20&order_rate<=60",
+      "rarity": 2,
+      "db_id": 201701,
+      "icon_id": 20012,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 24000,
+      "cooldown": 5000000,
+      "need_skill_point": 160
+    },
+    {
+      "name": "真っ向勝負",
+      "imgUrl": "img/skill_icons/20041.png",
+      "rare": "ノーマル",
+      "describe": "レース終盤に前方にいると加速力がわずかに上がる＜作戦・先行＞",
+      "id": "42fus4PAY",
+      "condition": "running_style==2&phase_random==2&order_rate<=50",
+      "rarity": 1,
+      "db_id": 201902,
+      "icon_id": 20041,
+      "grade_value": 217,
+      "ability": [
+        {
+          "type": 31,
+          "value": 2000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 18000,
+      "cooldown": 5000000,
+      "need_skill_point": 180
     }
   ],
-  "updateTime": 1638335365012,
+  "updateTime": 1638768994026,
   "races": [
     {
       "name": "中京ジュニアステークス",
@@ -164751,6 +165371,48 @@
         ]
       ],
       "id": "hv3tP7hR56"
+    },
+    {
+      "name": "助っ人参上！",
+      "choiceList": [
+        [
+          "1日だけ体験してみたら？",
+          [
+            "スタミナ(耐力)+5",
+            "スキルPt(技能点数)+15",
+            "ランダムで(有概率)『切れ者』になる"
+          ]
+        ],
+        [
+          "妹を見てもらうっていう条件で入ったら？",
+          [
+            "『追い上げ』のヒントLv+2",
+            "ランダムで(有概率)『切れ者』になる"
+          ]
+        ]
+      ],
+      "id": "ntOigabwqM"
+    },
+    {
+      "name": "みんなのオグリキャップ",
+      "choiceList": [
+        [
+          "彼女の夢を叶えてみせます！",
+          [
+            "『栄養補給』のヒントLv+2",
+            "ランダムで(有概率)『愛嬌◯』になる"
+          ]
+        ],
+        [
+          "不束者ですがよろしくお願いします",
+          [
+            "パワー(力量)+10",
+            "根性(毅力)+5",
+            "ランダムで(有概率)『愛嬌◯』になる"
+          ]
+        ]
+      ],
+      "id": "TzyhZi_7wQ"
     }
   ]
 }

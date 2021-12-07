@@ -22,22 +22,22 @@ const SkillList = ({ idList, dataList, onClick, sortFlag = false, size = "medium
       dataList={dataList}
       sort={sortFlag && sort}
       itemRender={(data, setCur) => (
-        <SkillCard
-          className={`${size === "medium" && "w-28 md:w-unset h-8  md:m-1 p-1 md:p-2"} ${
-            size === "small" && "h-6 mr-1 mb-1 p-1"
-          }`}
-          data={data}
-          onClick={() =>
-            onClick
-              ? onClick(data)
-              : ua.isPhone
-              ? history.push(`/skill-detail/${data.id}`)
-              : setCur(data)
-          }
-        />
+        <div className={`${size === "medium" && "w-28 max-w-1/3 md:max-w-none md:w-unset h-8 p-1 md:p-2"} ${size === "small" && "h-6 p-1"}`}>
+          < SkillCard
+            className={'md:px-1 '}
+            data={data}
+            onClick={() =>
+              onClick
+                ? onClick(data)
+                : ua.isPhone
+                  ? history.push(`/skill-detail/${data.id}`)
+                  : setCur(data)
+            }
+          />
+        </div >
       )}
       detailRender={(data) => <SkillDetail data={data} isNur={false} />}
-    ></List>
+    ></List >
   );
 };
 

@@ -27,6 +27,7 @@ const Skill = (props) => {
 
   return (
     <Layout
+      rootClass={"w-screen h-screen flex flex-col relative"}
       contentClass={"flex flex-auto w-full flex-wrap max-w-6xl mx-auto overflow-hidden relative"}
     >
       <div className="w-1/4 h-full flex flex-col p-1 overflow-hidden">

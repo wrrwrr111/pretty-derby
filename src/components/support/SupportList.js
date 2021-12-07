@@ -9,13 +9,13 @@ const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }
   const history = useHistory();
   const sort = sortFlag
     ? {
-        key: "rarity",
-        data: [
-          { value: 3, title: "SSR" },
-          { value: 2, title: "SR" },
-          { value: 1, title: "R" },
-        ],
-      }
+      key: "rarity",
+      data: [
+        { value: 3, title: "SSR" },
+        { value: 2, title: "SR" },
+        { value: 1, title: "R" },
+      ],
+    }
     : null;
   return (
     <List
@@ -25,19 +25,19 @@ const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }
       sort={sort}
       onClick={onClick}
       itemRender={(data, setCur) => (
-        <SupportCard
-          className={`w-20 mr-1 mb-1 ${
-            ownList?.length && !ownList?.includes(data.id) && "un-chosen-card"
-          }`}
-          data={data}
-          onClick={() =>
-            onClick
-              ? onClick(data)
-              : ua.isPhone
-              ? history.push(`/support-detail/${data.id}`)
-              : setCur(data)
-          }
-        />
+        <div className='w-24 max-w-1/4 p-1'>
+          <SupportCard
+            className={`${ownList?.length && !ownList?.includes(data.id) && "un-chosen-card"}`}
+            data={data}
+            onClick={() =>
+              onClick
+                ? onClick(data)
+                : ua.isPhone
+                  ? history.push(`/support-detail/${data.id}`)
+                  : setCur(data)
+            }
+          />
+        </div>
       )}
       detailRender={(data) => <SupportDetail data={data} isNur={false} />}
     ></List>

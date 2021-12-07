@@ -90,10 +90,13 @@ const getColumns = (labels) => {
         title: getCorrespondingLabelText(label),
         dataIndex: label,
         filters: filterList[label],
+        width: 100,
+        fixed: label === 'name' ? 'left' : null,
         onFilter: (value, record) => record[label] === value,
       };
     } else {
       return {
+        fixed: label === 'name' ? 'left' : null,
         title: getCorrespondingLabelText(label),
         dataIndex: label,
       };
@@ -153,9 +156,8 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <Layout>
+    <Layout contentClass={'w-full overflow-x-auto'}>
       <Table
-        className="px-3"
         rowSelection={props.onSelect ? rowSelection : null}
         columns={columns}
         dataSource={allRaceList}

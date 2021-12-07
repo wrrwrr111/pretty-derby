@@ -57,7 +57,7 @@ const SkillDetail = (props) => {
     return <></>;
   }
   return (
-    <div className="w-full h-full flex flex-col overflow-auto px-3">
+    <div className="w-full flex flex-col p-3">
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
           <img alt={skill.name} src={cdnServer + skill.imgUrl} className="w-14"></img>

@@ -7,6 +7,10 @@ module.exports = {
       width: {
         unset: "unset",
       },
+      maxWidth: {
+        '1/3': '33.333%',
+        '1/4': '25%'
+      }
     },
   },
   variants: {

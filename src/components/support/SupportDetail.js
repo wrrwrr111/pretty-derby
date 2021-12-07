@@ -13,7 +13,7 @@ const SupportDetail = (props) => {
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
   return (
-    <div className="w-full h-full flex flex-col overflow-auto px-3">
+    <div className="w-full flex flex-col p-3 overflow-x-hidden">
       <div className="h-16 w-full flex flex-shrink-0">
         <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={48} />
         <div className="flex-auto flex flex-wrap h-full items-center">
