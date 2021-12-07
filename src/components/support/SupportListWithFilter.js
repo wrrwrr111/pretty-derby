@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Checkbox, Input } from "antd";
-// import { useDidRecover } from 'react-router-cache-route'
 import { useDidRecover } from "react-router-cache-route";
-import Layout from "../../components/common/Layout.js";
-import dbL from "../../dbL.js";
-import db from "../../db.js";
-import t from "../../components/t.js";
-import SupportList from "../../components/support/SupportList";
-import SkillCheckbox from "../../components/skill/SkillCheckbox";
+import dbL from "@/dbL.js";
+import db from "@/db.js";
+import t from "@/components/t.js";
+import SupportList from "@/components/support/SupportList";
+import SkillCheckbox from "@/components/skill/SkillCheckbox";
 
 const CheckboxGroup = Checkbox.Group;
 const Search = Input.Search;

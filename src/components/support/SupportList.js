@@ -39,6 +39,7 @@ const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }
           />
         </div>
       )}
+      itemClass={'w-24 max-w-1/4'}
       detailRender={(data) => <SupportDetail data={data} isNur={false} />}
     ></List>
   );

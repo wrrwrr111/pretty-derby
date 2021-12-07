@@ -1026,10 +1026,6 @@ video {
   padding-left: 0.5rem;
 }
 
-.pl-4{
-  padding-left: 1rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1137,10 +1133,6 @@ video {
 
   .md\:pb-0{
     padding-bottom: 0px;
-  }
-
-  .md\:pl-4{
-    padding-left: 1rem;
   }
 }
 

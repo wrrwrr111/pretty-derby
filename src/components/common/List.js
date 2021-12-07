@@ -12,15 +12,16 @@ const List = ({
   idList,
   dataList,
   itemRender,
+  itemClass,
   detailRender,
 }) => {
   const list = dataList
     ? dataList
     : idList
-      ? idList.reduce((list, cur) => {
+    ? idList.reduce((list, cur) => {
         return [...list, db.get(listKey).find({ id: cur }).value()];
       }, [])
-      : db.get(listKey).value();
+    : db.get(listKey).value();
   const [cur, setCur] = useState(null);
   useEffect(() => {
     ReactTooltip.rebuild();
@@ -49,20 +50,22 @@ const List = ({
             <>
               <div className="w-full text-lg font-semibold text-center">{t(sortItem.title)}</div>
               {sortList.map((data) => itemRender(data, setCur))}
-              {className?.indexOf('justify-between') !== -1 && <>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-                <div className='w-24'></div>
-              </>}
+              {itemClass && (
+                <>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                  <div className={itemClass}></div>
+                </>
+              )}
             </>
           );
         })}

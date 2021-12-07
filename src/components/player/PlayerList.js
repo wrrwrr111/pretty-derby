@@ -22,7 +22,7 @@ const PlayerList = ({ listClass, dataList, onClick, sortFlag = false }) => {
       dataList={dataList}
       sort={sortFlag && sort}
       itemRender={(data, setCur) => (
-        <div className='w-24 max-w-1/4 p-1'>
+        <div className="w-24 max-w-1/4 p-1">
           <PlayerCard
             className=""
             data={data}
@@ -30,12 +30,13 @@ const PlayerList = ({ listClass, dataList, onClick, sortFlag = false }) => {
               onClick
                 ? onClick(data)
                 : ua.isPhone
-                  ? history.push(`/player-detail/${data.id}`)
-                  : setCur(data)
+                ? history.push(`/player-detail/${data.id}`)
+                : setCur(data)
             }
           />
         </div>
       )}
+      itemClass="w-24 max-w-1/4 "
       detailRender={(data) => <PlayerDetail data={data} isNur={false} />}
     ></List>
   );
