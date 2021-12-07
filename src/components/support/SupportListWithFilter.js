@@ -141,7 +141,7 @@ const SupportListWithFilter = (props) => {
     <>
       {filter && (
         <div className="w-1/4 h-full flex flex-col p-1 overflow-hidden">
-          <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
+          <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
             {t("筛选")}
           </div>
           <Button onClick={changeShowMode}>{t("高亮我的卡组")}</Button>
@@ -177,10 +177,10 @@ const SupportListWithFilter = (props) => {
         </div>
       )}
       <div className="w-3/4 h-full flex flex-col p-1 overflow-hidden">
-        <div className="w-full rounded m-1 h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
+        <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("支援卡列表")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden md:pl-4 w-full h-full flex flex-wrap">
+        <div className=" overflow-y-scroll overflow-x-hidden  w-full flex-auto flex flex-wrap">
           <SupportList
             listClass="justify-between"
             sortFlag={true}

@@ -62,7 +62,8 @@
   padding: 8px;
 }
 
-.chosen-card {}
+.chosen-card {
+}
 
 .un-chosen-card img {
   opacity: 0.3;
@@ -85,10 +86,9 @@
   padding: 0;
 }
 
-
 /*race time line start */
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
-  position: absolute !important; 
+  position: absolute !important;
   top: 0px !important;
   width: 100px !important;
   text-align: right !important;
@@ -134,11 +134,11 @@
   margin: 24px 24px 0px;
 }
 
-.seed-container>* {
+.seed-container > * {
   margin-bottom: 16px;
 }
 
-.seed-container>*:last-child {
+.seed-container > *:last-child {
   margin-bottom: 0;
 }
 
@@ -151,5 +151,9 @@
 }
 
 .ant-modal-body {
-  padding:12px !important
+  padding: 12px !important;
+}
+
+.ant-divider-horizontal {
+  margin: 6px 0 !important;
 }
