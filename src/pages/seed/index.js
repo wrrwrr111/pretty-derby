@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Button from '@material-tailwind/react/Button'
 import {
   Row,
   Alert,
   Image,
-  Button,
   // Divider,
   Table,
   Modal,

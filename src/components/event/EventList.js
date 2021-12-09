@@ -1,8 +1,8 @@
 import React from "react";
+
 import db from "../../db.js";
 import dbL from "../../dbL.js";
 import t from "../t.js";
-import { Row, Col, Popover, Button, Tabs } from "antd";
 
 import EventCard from "./EventCard";
 import EventDetail from "./EventDetail";
@@ -11,18 +11,18 @@ import List from "../common/List";
 const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }) => {
   const sort = sortFlag
     ? {
-        data: [
-          { title: "切れ者", func: (data) => JSON.stringify(data)?.indexOf("切れ者") !== -1 },
-          { title: "有选项", func: (data) => data?.choiceList.length > 1 },
-          { title: "无选项", func: (data) => data?.choiceList.length <= 1 },
-        ],
-      }
+      data: [
+        { title: "切れ者", func: (data) => JSON.stringify(data)?.indexOf("切れ者") !== -1 },
+        { title: "有选项", func: (data) => data?.choiceList.length > 1 },
+        { title: "无选项", func: (data) => data?.choiceList.length <= 1 },
+      ],
+    }
     : null;
   const filterFunc =
     type === "multi"
       ? (data) => {
-          return data?.choiceList.length > 1;
-        }
+        return data?.choiceList.length > 1;
+      }
       : null;
   return (
     <List

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Button, Checkbox, Input } from "antd";
+import Button from '@material-tailwind/react/Button'
+import { Checkbox, Input } from "antd";
 import { useDidRecover } from "react-router-cache-route";
+
 import dbL from "@/dbL.js";
 import db from "@/db.js";
 import t from "@/components/t.js";
@@ -17,7 +19,7 @@ const SupportListWithFilter = (props) => {
   useDidRecover(() => {
     document.title = TITLE;
   });
-  const { filter = true, onClick } = props;
+  const { filter = true, onClick, listHeight = 'unset' } = props;
   const [list, setList] = useState(props.supportList || allSupports || []);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
@@ -126,7 +128,7 @@ const SupportListWithFilter = (props) => {
     if (typeList?.length) {
       tempList = tempList.filter((support) => {
         let flag = 0;
-        if (typeList.indexOf(support.type) !== -1) {
+        if (typeList.indexOf(support?.type) !== -1) {
           return (flag = 1);
         }
         return flag;
@@ -142,35 +144,38 @@ const SupportListWithFilter = (props) => {
           <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
             {t("筛选")}
           </div>
-          <Button onClick={changeShowMode}>{t("高亮我的卡组")}</Button>
-          <Button onClick={changeChooseMode}>{t("配置卡组")}</Button>
-          {chooseMode && (
-            <Button onClick={changeChooseMode} type="primary">
-              {t("配置完成")}
-            </Button>
-          )}
-          <Search
-            placeholder={t("输入关键词")}
-            enterButton={t("搜索")}
-            size="middle"
-            style={{ width: "100%" }}
-            onSearch={onSearch}
-          />
-          <div className="overflow-y-auto flex-auto flex flex-col">
-            <div className="font-semibold my-1">{t("类型")}</div>
-            <CheckboxGroup options={typeOptions} value={typeList} onChange={onTypeListChange} />
-            <div className="font-semibold my-1">{t("技能")}</div>
-            <SkillCheckbox
-              onUpdate={onSkillCheckboxUpdate}
-              checkOnly={true}
-              needId={true}
-            ></SkillCheckbox>
-            <div className="font-semibold my-1">{t("育成效果")}</div>
-            <CheckboxGroup
-              options={effectOptions}
-              value={effectList}
-              onChange={onSupportCheckboxChange}
+          <div className=" overflow-y-scroll overflow-x-hidden  w-full flex-auto flex flex-wrap flex-shrink-0"
+            style={listHeight && { height: listHeight }}>
+            <Button className='my-1' onClick={changeShowMode} ripple="light" >{t("高亮我的卡组")}</Button>
+            <Button className='my-1' onClick={changeChooseMode} ripple="light">{t("配置卡组")}</Button>
+            {chooseMode && (
+              <Button className='my-1' onClick={changeChooseMode} ripple="light">
+                {t("配置完成")}
+              </Button>
+            )}
+            <Search
+              placeholder={t("输入关键词")}
+              enterButton={t("搜索")}
+              size="middle"
+              style={{ width: "100%" }}
+              onSearch={onSearch}
             />
+            <div className="overflow-y-auto flex-auto flex flex-col">
+              <div className="font-semibold my-1">{t("类型")}</div>
+              <CheckboxGroup options={typeOptions} value={typeList} onChange={onTypeListChange} />
+              <div className="font-semibold my-1">{t("技能")}</div>
+              <SkillCheckbox
+                onUpdate={onSkillCheckboxUpdate}
+                checkOnly={true}
+                needId={true}
+              ></SkillCheckbox>
+              <div className="font-semibold my-1">{t("育成效果")}</div>
+              <CheckboxGroup
+                options={effectOptions}
+                value={effectList}
+                onChange={onSupportCheckboxChange}
+              />
+            </div>
           </div>
         </div>
       )}
@@ -178,7 +183,8 @@ const SupportListWithFilter = (props) => {
         <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("支援卡列表")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden  w-full flex-auto flex flex-wrap">
+        <div className=" overflow-y-scroll overflow-x-hidden  w-full flex-auto flex flex-wrap flex-shrink-0"
+          style={listHeight && { height: listHeight }}>
           <SupportList
             listClass="justify-between"
             sortFlag={true}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
+
 import db from "@/db.js";
 import t from "@/components/t.js";
 import Layout from "@/components/common/Layout";
-// import { SkillButton, SkillCheckbox } from '@/components/skill-detail.js'
 import SkillList from "@/components/skill/SkillList";
 import SkillCheckbox from "@/components/skill/SkillCheckbox";
+
 const TITLE = "技能 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Skill = (props) => {
@@ -14,6 +15,7 @@ const Skill = (props) => {
     document.title = TITLE;
   });
   // 所有技能列表
+  const { listHeight } = props
   const allSkillList = db.get("skills").orderBy("db_id").value();
 
   const [skillList, setSkillList] = useState(allSkillList);
@@ -34,7 +36,8 @@ const Skill = (props) => {
         <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("筛选")}
         </div>
-        <div className="overflow-y-auto flex-auto flex flex-col">
+        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap"
+          style={listHeight && { height: listHeight }}>
           <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
         </div>
       </div>
@@ -42,7 +45,8 @@ const Skill = (props) => {
         <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("技能列表")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap">
+        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap"
+          style={listHeight && { height: listHeight }}>
           <SkillList dataList={skillList} sortFlag={true} />
         </div>
       </div>

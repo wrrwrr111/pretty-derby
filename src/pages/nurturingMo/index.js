@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
-import db from "../../db.js";
-import dbL from "../../dbL.js";
-import t from "../../components/t.js";
+import Button from '@material-tailwind/react/Button'
+
+import db from "@/db.js";
+import dbL from "@/dbL.js";
+import t from "@/components/t.js";
 import {
   Divider,
   Row,
   Col,
   Modal,
-  Button,
+
   Popconfirm,
   Popover,
   // Tooltip

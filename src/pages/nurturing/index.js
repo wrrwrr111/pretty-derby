@@ -1,30 +1,24 @@
 import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
+import Button from '@material-tailwind/react/Button'
 // import shortid from 'shortid'
+// import axios from "axios";
+import ScrollBars from "react-custom-scrollbars";
+import {
+  Popover,
+} from "antd";
+
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+
 import db from "@/db.js";
 import dbL from "@/dbL.js";
 import t from "@/components/t.js";
-// import axios from "axios";
 import Layout from "@/components/common/Layout.js";
-import {
-  div,
-  // Row,
-  // Col,
-  Modal,
-  Button,
-  // Drawer,
-  // message,
-  Popover,
-  // Popconfirm,
-  // Tooltip
-} from "antd";
-// import { EditOutlined } from '@ant-design/icons'
-
-import ScrollBars from "react-custom-scrollbars";
-
 import EventList from "@/components/event/EventList";
 import SkillList from "@/components/skill/SkillList";
 import { BuffButton } from "@/components/buff.js";
+
 import {
   // RaceSchedule,
   RaceTimeline,
@@ -363,25 +357,24 @@ const Nurturing = () => {
         })}
       </GridLayout>
       <Modal
-        visible={isPlayerVisible}
-        onOk={closePlayer}
-        onCancel={closePlayer}
-        width={"80%"}
-        bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}
+        size="lg" active={isPlayerVisible} toggler={closePlayer}
       >
-        <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
+        <ModalBody style={{ maxHeight: "80vh", overflow: 'auto' }} >
+          <div className='max-h-screen overflow-auto'>
+            <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
+          </div>
+        </ModalBody>
       </Modal>
       <Modal
-        visible={isSupportVisible}
-        onOk={closeSupport}
-        onCancel={closeSupport}
-        width={"80%"}
-        bodyStyle={{ height: "90vh" }}
+        size="lg" active={isSupportVisible} toggler={closeSupport}
       >
-        <div className='w-full h-full overflow-hidden flex relative'>
-          <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
-            sortFlag={true}></SupportListWithFilter>
-        </div>
+        <ModalBody >
+          <div className='w-full h-full overflow-hidden flex relative'>
+            <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
+              listHeight='80vh'
+              sortFlag={true}></SupportListWithFilter>
+          </div>
+        </ModalBody>
       </Modal>
     </Layout>
   );
