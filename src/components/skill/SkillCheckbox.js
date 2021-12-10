@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Button from '@material-tailwind/react/Button'
+import Checkbox from '@material-tailwind/react/Checkbox'
+
 import db from "../../db.js";
 import dbL from "../../dbL.js";
-import {  Image, Checkbox, Divider, Input, Switch } from "antd";
+import { Image, Divider, Input, Switch } from "antd";
+import { useForm } from "react-hook-form";
 import t from "../t.js";
 
 const Search = Input.Search;
@@ -43,10 +46,28 @@ const SkillCheckboxGroup = React.memo((props) => {
     props.onChange(name, checkedValues);
   };
 
-  return <Checkbox.Group options={options} value={value} onChange={onChange} />;
+  // return <Checkbox.Group options={options} value={value} onChange={onChange} />;
+  return <></>
 });
 
+
+
+
+
+
+
+
 const SkillCheckbox = React.memo((props) => {
+  const {
+    register,
+    getValues,
+    handleSubmit,
+    formState: { }
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data)
+  };
+
   const [skillChecked1, setSkillChecked1] = useState([]);
   const [skillChecked2, setSkillChecked2] = useState([]);
   const [checkboxGroupValues, setCheckedboxGroupValues] = useState({});
@@ -80,6 +101,7 @@ const SkillCheckbox = React.memo((props) => {
     { label: "耐力降低(红)", value: "30051" },
     { label: "视野降低(红)", value: "30071" },
   ];
+
   const checkOptions2 = [
     { label: t("ノーマル"), value: "ノーマル" },
     { label: t("レア"), value: "レア" },
@@ -99,28 +121,28 @@ const SkillCheckbox = React.memo((props) => {
         (l, [key, values]) =>
           values.length > 0
             ? l.filter((skill) => {
-                if (!skill?.condition) {
-                  return false;
-                }
-                switch (key) {
-                  case "phase":
-                    return ["phase", "phase_random"]
-                      .map((_key) => values.map((value) => `${_key}==${value}`))
-                      .flat()
-                      .some((phrase) => skill?.condition.includes(phrase));
-                  case "running_style":
-                    return (
-                      values
-                        .map((value) => `${key}==${value}`)
-                        .some((phrase) => skill?.condition.includes(phrase)) ||
-                      (values.includes("-1") && !skill?.condition.includes(`${key}==`))
-                    );
-                  default:
-                    return values
+              if (!skill?.condition) {
+                return false;
+              }
+              switch (key) {
+                case "phase":
+                  return ["phase", "phase_random"]
+                    .map((_key) => values.map((value) => `${_key}==${value}`))
+                    .flat()
+                    .some((phrase) => skill?.condition.includes(phrase));
+                case "running_style":
+                  return (
+                    values
                       .map((value) => `${key}==${value}`)
-                      .some((phrase) => skill?.condition.includes(phrase));
-                }
-              })
+                      .some((phrase) => skill?.condition.includes(phrase)) ||
+                    (values.includes("-1") && !skill?.condition.includes(`${key}==`))
+                  );
+                default:
+                  return values
+                    .map((value) => `${key}==${value}`)
+                    .some((phrase) => skill?.condition.includes(phrase));
+              }
+            })
             : l,
         allSkillList
       ),
@@ -204,6 +226,29 @@ const SkillCheckbox = React.memo((props) => {
     setSkillChecked2([]);
     props.onUpdate(tempSkillList);
   };
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {checkOptions1.map(({ label, value }) => (
+        <div key={value} className="flex items-center">
+          <input
+            id={value}
+            type="checkbox"
+            className={`mt-checkbox mt-checkbox-light-blue-500 hidden overflow-hidden`}
+            value={value}
+            {...register("check1")}
+          />
+          <label
+            htmlFor={value}
+            className="flex items-center cursor-pointer text-gray-400 select-none transition-all duration-300"
+          >
+            <span className="relative w-5 h-5 inline-block mr-2 rounded border border-gray-500 transition-all duration-300"></span>
+            {label}
+          </label>
+        </div>
+      ))}
+      <input type="submit" />
+    </form>
+  )
   return (
     <>
       {props.checkOnly ? (
