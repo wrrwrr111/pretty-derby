@@ -15,7 +15,6 @@ const Skill = (props) => {
     document.title = TITLE;
   });
   // 所有技能列表
-  const { listHeight } = props
   const allSkillList = db.get("skills").orderBy("db_id").value();
 
   const [skillList, setSkillList] = useState(allSkillList);
@@ -23,9 +22,6 @@ const Skill = (props) => {
   // init supportMode
   localStorage.getItem("supportMode") === null && localStorage.setItem("supportMode", 0);
 
-  const onSkillCheckboxUpdate = (skillList) => {
-    setSkillList(skillList);
-  };
 
   return (
     <Layout
@@ -36,17 +32,15 @@ const Skill = (props) => {
         <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("筛选")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap"
-          style={listHeight && { height: listHeight }}>
-          <SkillCheckbox onUpdate={onSkillCheckboxUpdate}></SkillCheckbox>
+        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap">
+          <SkillCheckbox onUpdate={setSkillList}></SkillCheckbox>
         </div>
       </div>
       <div className="w-3/4 h-full flex flex-col p-1 overflow-hidden">
         <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
           {t("技能列表")}
         </div>
-        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap"
-          style={listHeight && { height: listHeight }}>
+        <div className=" overflow-y-scroll overflow-x-hidden w-full flex-auto flex flex-wrap">
           <SkillList dataList={skillList} sortFlag={true} />
         </div>
       </div>
