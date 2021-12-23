@@ -17,7 +17,7 @@ tool/node_modules
 /coverage
 # production
 # /build
-/build
+/build/img
 /public/img/support_card
 
 # misc
