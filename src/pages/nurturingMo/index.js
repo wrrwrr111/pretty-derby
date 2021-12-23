@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
-import db from "../../db.js";
-import dbL from "../../dbL.js";
-import t from "../../components/t.js";
+import Button from '@material-tailwind/react/Button'
+
+import db from "@/db.js";
+import dbL from "@/dbL.js";
+import t from "@/components/t.js";
 import {
   Divider,
   Row,
   Col,
   Modal,
-  Button,
+
   Popconfirm,
   Popover,
   // Tooltip
@@ -191,7 +193,7 @@ const Nurturing = (props) => {
   };
 
   return (
-    <Layout>
+    <>
       <div style={{ display: "flex", justifyContent: "center" }}>
         {player.imgUrl && (
           <img
@@ -202,13 +204,13 @@ const Nurturing = (props) => {
           ></img>
         )}
         <div
-          style={{ flex: "1 1 auto", flexWrap: "wrap", display: "flex", justifyContent: "center" }}
+          className='flex-auto flex flex-wrap items-center'
         >
-          <Button type={"primary"} onClick={showPlayer}>
+          <Button size='sm' buttonType='outline' onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
-          <Button onClick={showSupport2}>{t("支援卡查询")}</Button>
-          <Button onClick={toBuffList}>{t("BUFF")}</Button>
+          <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
+          <Button size='sm' buttonType='outline' onClick={toBuffList}>{t("BUFF")}</Button>
           <Popover
             trigger="click"
             content={
@@ -225,7 +227,7 @@ const Nurturing = (props) => {
             width={"80%"}
             content={
               <>
-                <Button onClick={() => saveDeck()}>{t("保存为新卡组")}</Button>
+                <Button size='sm' buttonType='outline' onClick={() => saveDeck()}>{t("保存为新卡组")}</Button>
                 {decks.map((deck) => (
                   <Row key={deck.id}>
                     {deck.imgUrls.map((imgUrl) => (
@@ -234,16 +236,16 @@ const Nurturing = (props) => {
                       </Col>
                     ))}
                     <Col span={3}>
-                      <Button type="primary" onClick={() => loadDeck(deck)}>
+                      <Button size='sm' buttonType='outline' type="primary" onClick={() => loadDeck(deck)}>
                         {t("读取卡组")}
                       </Button>
                       <Popconfirm title="确认覆盖？" onConfirm={() => saveDeck(deck)}>
-                        <Button danger type="dashed">
+                        <Button size='sm' buttonType='outline' danger type="dashed">
                           {t("覆盖卡组")}
                         </Button>
                       </Popconfirm>
                       <Popconfirm title="确认删除？" onConfirm={() => deleteDeck(deck)}>
-                        <Button danger type="dashed">
+                        <Button size='sm' buttonType='outline' danger type="dashed">
                           {t("删除卡组")}
                         </Button>
                       </Popconfirm>
@@ -261,7 +263,7 @@ const Nurturing = (props) => {
       <Row justify="space-around">
         {[0, 1, 2, 3, 4, 5].map((index) => (
           <Col span={7} key={index} style={{}}>
-            <Button icon={<EditOutlined />} onClick={() => showSupport(index)}>
+            <Button size='sm' buttonType='outline' icon={<EditOutlined />} onClick={() => showSupport(index)}>
               {t("选择支援卡")}
             </Button>
             {supports[index] && supports[index].id && (
@@ -304,7 +306,7 @@ const Nurturing = (props) => {
             sortFlag={true}></SupportListWithFilter>
         </div>
       </Modal>
-    </Layout>
+    </>
   );
 };
 

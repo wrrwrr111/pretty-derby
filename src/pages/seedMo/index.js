@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import Button from '@material-tailwind/react/Button'
 
 import { Picker, List } from "antd-mobile";
 
-import { Image, Button, Modal, Rate, Form } from "antd";
+import { Image,  Modal, Rate, Form } from "antd";
 import { message } from "antd";
 //test
 import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
+
 import db from "@/db.js";
 import t from "@/components/t.js";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
@@ -344,13 +346,13 @@ const Seed = () => {
     }
   };
   return (
-    <Layout contentClass="w-full flex flex-wrap px-3">
+    <div className="w-full flex flex-wrap px-3">
       <SearchForm search={search}></SearchForm>
       <div className="w-full text-lg font-semibold">{t("结果")}</div>
       {seedList.map((seed) => {
         return <SeedCard key={seed.id} data={seed}></SeedCard>;
       })}
-    </Layout>
+    </div>
   );
 };
 export default Seed;

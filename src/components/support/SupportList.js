@@ -4,7 +4,7 @@ import SupportCard from "./SupportCard";
 import SupportDetail from "./SupportDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
-const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }) => {
+const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }) => {
   const ua = useUa();
   const history = useHistory();
   const sort = sortFlag
@@ -19,7 +19,7 @@ const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }
     : null;
   return (
     <List
-      className={listClass}
+      className={className}
       listKey="supports"
       dataList={dataList}
       sort={sort}
@@ -41,6 +41,7 @@ const SupportList = ({ listClass, dataList, onClick, sortFlag = false, ownList }
       )}
       itemClass={'w-24 max-w-1/4'}
       detailRender={(data) => <SupportDetail data={data} isNur={false} />}
+      // detailModalSize='regular'
     ></List>
   );
 };

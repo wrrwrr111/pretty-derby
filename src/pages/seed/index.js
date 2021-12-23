@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Button from '@material-tailwind/react/Button'
 import {
   Row,
   Alert,
   Image,
-  Button,
   // Divider,
   Table,
   Modal,
@@ -34,7 +34,6 @@ const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 // db.set('userId',null).write()
 let userId = dbL.get("userId").value();
 const TITLE = '分享 - 乌拉拉大胜利 - 赛马娘资料站'
-// console.log(userId)
 
 /*
 userId 随机生成
@@ -601,7 +600,6 @@ const Seed = () => {
       render: (text, record) =>
         Object.keys(blueLabels).map((key) => {
           if (record[key]) {
-            // console.log(key,record[key])
             return (
               <span className="rate-label">
                 {`${blueLabels[key]}\xa0\xa0${record[key]}`}
@@ -716,7 +714,7 @@ const Seed = () => {
     })
   }
   return (
-    <Layout>
+    <>
       <div className="seed-container">
         <Card className="card" title="过滤条件">
           <SearchForm search={search}></SearchForm>
@@ -740,7 +738,7 @@ const Seed = () => {
       >
         <SeedInput onFinish={closeSeedInput}></SeedInput>
       </Modal>
-    </Layout>
+    </>
   );
 };
 export default Seed;

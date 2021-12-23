@@ -8,11 +8,6 @@ module.exports = override(
   addWebpackAlias({
     ["@"]: path.resolve(__dirname, "src"),
   }),
-  fixBabelImports("antd", {
-    libraryName: "antd",
-    libraryDirectory: "es",
-    style: "css",
-  }),
   fixBabelImports("import", {
     libraryName: "antd-mobile",
     style: true,
