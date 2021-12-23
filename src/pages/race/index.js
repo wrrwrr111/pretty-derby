@@ -156,7 +156,7 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <Layout contentClass={'w-full overflow-x-auto'}>
+    <div className={'w-full overflow-x-auto'}>
       <Table
         rowSelection={props.onSelect ? rowSelection : null}
         columns={columns}
@@ -165,7 +165,7 @@ const Race = (props) => {
         pagination={false}
         scroll={{ y: dynamicTableHeight }}
       />
-    </Layout>
+    </div>
   );
 };
 

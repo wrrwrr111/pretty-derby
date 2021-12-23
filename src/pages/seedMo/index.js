@@ -346,13 +346,13 @@ const Seed = () => {
     }
   };
   return (
-    <Layout contentClass="w-full flex flex-wrap px-3">
+    <div className="w-full flex flex-wrap px-3">
       <SearchForm search={search}></SearchForm>
       <div className="w-full text-lg font-semibold">{t("结果")}</div>
       {seedList.map((seed) => {
         return <SeedCard key={seed.id} data={seed}></SeedCard>;
       })}
-    </Layout>
+    </div>
   );
 };
 export default Seed;

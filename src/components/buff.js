@@ -6,11 +6,11 @@ import t from '../components/t.js'
 
 const BuffButton = (props) => {
   return (
-    <Button data-tip='buff list'>Buff</Button>
+    <Button size='sm' buttonType='outline' data-tip='buff list'>Buff</Button>
   )
 }
+const buffs = db.get('buffs').value()
 const BuffList = (props) => {
-  const buffs = db.get('buffs').value()
   const cellStyle = {
     // width:'20%',
     height: '32px',

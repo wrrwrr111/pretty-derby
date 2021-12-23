@@ -46,8 +46,8 @@ const Layout = ({ children, contentClass, rootClass }) => {
   ];
   const list = ua.isPhone ? phoneList : pcList;
   return (
-    <div className={rootClass || "w-screen min-h-screen md:h-screen flex flex-col relative"}>
-      <Navbar color="lightBlue" navbar>
+    <div className={"flex flex-col w-screen min-h-screen relative"}>
+      <Navbar className='sticky top-0 z-50' color="lightBlue" navbar>
         <NavbarContainer>
           <NavbarWrapper>
             <NavbarBrand>赛马娘</NavbarBrand>
@@ -73,7 +73,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
           </NavbarCollapse>
         </NavbarContainer>
       </Navbar>
-      <div className={`${contentClass}`}>{children}</div>
+      {children}
       <div className="w-full flex items-center flex-wrap pb-10 md:pb-0">
         <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
           {t("初始化育成")}

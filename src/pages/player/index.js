@@ -14,9 +14,7 @@ const Player = (props) => {
     document.title = TITLE;
   });
   return (
-    <Layout contentClass="flex flex-auto w-full flex-wrap max-w-6xl mx-auto">
-      <PlayerList listClass="justify-between" sortFlag={true} onClick={props.onClick} />
-    </Layout>
+    <PlayerList className="justify-between" sortFlag={true} onClick={props.onClick} />
   );
 };
 

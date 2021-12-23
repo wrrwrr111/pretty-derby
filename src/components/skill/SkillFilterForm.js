@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Button from "@material-tailwind/react/Button";
-import Checkbox from "@material-tailwind/react/Checkbox";
-import Input from "@material-tailwind/react/Input";
 
 import db from "../../db.js";
 import dbL from "../../dbL.js";
-import { Image, Divider, Switch } from "antd";
+
 import { useForm } from "react-hook-form";
+import CheckBox from "../common/CheckBox"
+import Input from "../common/Input"
 import t from "../t.js";
 
-const Search = Input.Search;
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
-const ua = dbL.get("ua").value();
 const allSkillList = db.get("skills").orderBy("db_id").value();
 
 const conditionOptions = [
@@ -59,23 +57,20 @@ const rarityOptions = [
   { label: t("レア"), value: "レア" },
   { label: t("固有"), value: "固有" },
 ];
-const SkillCheckbox = (props) => {
-  const { onUpdate, needId } = props;
+const SkillFilterForm = (props) => {
+  const { onUpdate, needId, checkOnly } = props;
 
   const {
     register,
     watch,
-    handleSubmit,
-    formState: {},
+    formState: { },
   } = useForm();
-  // const watchAllFields = watch();
 
   React.useEffect(() => {
     const subscription = watch((value, { name, type }) => getFilterList(value));
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const [checkboxGroupValues, setCheckedboxGroupValues] = useState({});
   const mySupports = dbL.get("mySupports").value();
   const mySkillList = new Set(
     mySupports.reduce((list, supportId) => {
@@ -86,6 +81,10 @@ const SkillCheckbox = (props) => {
 
   const getFilterList = (value) => {
     const { condition, q, rare, type } = value;
+    if (checkOnly && !q && !type?.length && !rare?.length && !condition?.length) {
+      onUpdate([])
+      return
+    }
     let tempList = [...allSkillList];
     if (q) {
       tempList = tempList.filter((item) => item.name.indexOf(q) > -1);
@@ -127,7 +126,6 @@ const SkillCheckbox = (props) => {
       }, []);
     }
     onUpdate(tempList);
-    return;
 
     // if (isOwn) {
     //   tempSkillList = tempSkillList.filter((skill) => {
@@ -138,13 +136,12 @@ const SkillCheckbox = (props) => {
   };
   // }, [filteredSkills, skillChecked1, skillChecked2, isOwn]);
 
+  {/* <Button type={"danger"} onClick={resetCheckbox} style={{ width: "100%" }}>
+      {t("重置")}
+    </Button> */}
   return (
-    <div>
-      {/* <Button type={"danger"} onClick={resetCheckbox} style={{ width: "100%" }}>
-        {t("重置")}
-      </Button> */}
-      <div className="flex flex-wrap">
-        {/* <div>
+    < div div div className="flex flex-wrap" >
+      {/* <div>
           <span
             style={{ margin: "0 10px 0 0", lineHeight: "32px" }}
             data-tip={t("可以在支援卡页面配置")}
@@ -153,79 +150,46 @@ const SkillCheckbox = (props) => {
           </span>
           <Switch checked={isOwn} onChange={changeMode} />
         </div> */}
-        <div className="w-full relative h-11 mt-3">
-          <input
-            className={`w-full h-full text-gray-800 leading-normal shadow-none outline-none focus:outline-none focus:ring-0 focus:text-gray-800 px-3 pt-2.5 pb-1.5 mt-input-outline-light-blue-500 border-gray-300 mt-input-outline bg-transparent border border-1 border-gray-300 rounded-lg focus:border-2 focus:border-light-blue-500 undefined undefined`}
-            placeholder=" "
-            {...register("q")}
+      < Input
+        register={register}
+        name='q'
+        placeholder={t("输入关键词")} />
+      <p className="w-full  my-1 text-gray-700">触发条件</p>
+      {
+        conditionOptions.map(({ label, value }) =>
+          <CheckBox
+            register={register}
+            name={'condition'}
+            label={label}
+            value={value} />
+        )
+      }
+      <p className="w-full my-1 text-gray-700">类型</p>
+      {
+        typeOptions.map(({ label, value }) =>
+          <CheckBox
+            register={register}
+            name={'type'}
+            label={label}
+            value={value}
+            icon={cdnServer + "img/skill_icons/" + value + ".png"}
           />
-          <label
-            className={`text-gray-400 absolute left-0 -top-1.5 w-full h-full false border-gray-300 pointer-events-none flex false leading-10 transition-all duration-300`}
-          >
-            {t("输入关键词")}
-          </label>
-        </div>
-        <p className="w-full  my-1 text-gray-700">触发条件</p>
-        {conditionOptions.map(({ label, value }) => (
-          <div key={value} className="flex items-center mr-1 mb-1">
-            <input
-              id={value}
-              type="checkbox"
-              className={`mt-checkbox mt-checkbox-light-blue-500 hidden overflow-hidden`}
-              value={value}
-              {...register("condition")}
-            />
-            <label
-              htmlFor={value}
-              className="flex items-center cursor-pointer text-gray-400 select-none transition-all duration-300"
-            >
-              <span className="relative w-5 h-5 inline-block mr-2 rounded border border-gray-500 transition-all duration-300"></span>
-              {label}
-            </label>
-          </div>
-        ))}
-        <p className="w-full my-1 text-gray-700">类型</p>
-        {typeOptions.map(({ label, value }) => (
-          <div key={value} className="flex items-center mr-1 mb-1">
-            <input
-              id={value}
-              type="checkbox"
-              className={`mt-checkbox mt-checkbox-light-blue-500 hidden overflow-hidden`}
-              value={value}
-              {...register("type")}
-            />
-            <label
-              htmlFor={value}
-              className="flex items-center cursor-pointer text-gray-400 select-none transition-all duration-300"
-            >
-              <span className="relative w-5 h-5 inline-block mr-2 rounded border border-gray-500 transition-all duration-300"></span>
-              <img alt="" src={cdnServer + "img/skill_icons/" + value + ".png"} width={20}></img>
-              {label}
-            </label>
-          </div>
-        ))}
-        <p className="w-full  my-1 text-gray-700">稀有度</p>
-        {rarityOptions.map(({ label, value }) => (
-          <div key={value} className="flex items-center mr-1 mb-1">
-            <input
-              id={value}
-              type="checkbox"
-              className={`mt-checkbox mt-checkbox-light-blue-500 hidden overflow-hidden`}
-              value={value}
-              {...register("rare")}
-            />
-            <label
-              htmlFor={value}
-              className="flex items-center cursor-pointer text-gray-400 select-none transition-all duration-300"
-            >
-              <span className="relative w-5 h-5 inline-block mr-2 rounded border border-gray-500 transition-all duration-300"></span>
-              {label}
-            </label>
-          </div>
-        ))}
-      </div>
-    </div>
+        )
+      }
+      <p className="w-full  my-1 text-gray-700">稀有度</p>
+      {
+        rarityOptions.map(({ label, value }) =>
+          <CheckBox
+            register={register}
+            name={'rare'}
+            label={label}
+            value={value}
+            icon={cdnServer + "img/skill_icons/" + value + ".png"}
+          />
+        )
+      }
+    </ div>
   );
 };
 
-export default SkillCheckbox;
+export default SkillFilterForm;

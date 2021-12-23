@@ -159,15 +159,9 @@ const Nurturing = () => {
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
-    // console.log('currentWidth::',height);
     return { height, width };
   };
 
-  // const dynamicContentHeight = useViewport().height - 128
-  // 宽度0.3 高度0.5 取较小值
-  // const dynamicCardHeight = Math.min(Math.floor(dynamicContentHeight / 2), Math.floor(useViewport().width * 0.3))
-  // const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4)
-  // const dynamicCardBoxWidth = dynamicCardWidth * 3
 
   const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
 
@@ -223,7 +217,7 @@ const Nurturing = () => {
     height: "calc(100% - 22px)",
   };
   return (
-    <Layout>
+    <>
       <GridLayout
         cols={32}
         layout={layout}
@@ -246,14 +240,14 @@ const Nurturing = () => {
             ></img>
           )}
         </div>
-        <div key="b" style={{ ...panelStyle }}>
+        <div key="b" className='flex flex-wrap'>
           <div className="panel-heading" style={{ ...headStyle }}>
             {t("操作")}
           </div>
-          <Button className="add-player" type={"primary"} onClick={showPlayer}>
+          <Button size='sm' buttonType='outline' className="add-player" onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
-          <Button onClick={showSupport2}>{t("支援卡查询")}</Button>
+          <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
           <BuffButton />
           <Popover
             content={
@@ -263,13 +257,13 @@ const Nurturing = () => {
               ></RaceCheckbox>
             }
           >
-            <Button>{t("比赛")}</Button>
+            <Button size='sm' buttonType='outline'>{t("比赛")}</Button>
           </Popover>
           <MyDecks player={player} supports={supports} loadDeck={loadDeck}></MyDecks>
           <RecommendDecks player={player} loadDeck={loadDeck}></RecommendDecks>
 
-          <Button onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
-          <Button onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
+          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
+          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
         </div>
         <div key="c" style={{ ...panelStyle }}>
           <div className="panel-heading" style={{ ...headStyle }}>
@@ -350,7 +344,7 @@ const Nurturing = () => {
           } else {
             return (
               <div key={`s${index}`} style={{ ...panelStyle }}>
-                <Button onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
+                <Button size='sm' buttonType='outline' onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
               </div>
             );
           }
@@ -371,12 +365,12 @@ const Nurturing = () => {
         <ModalBody >
           <div className='w-full h-full overflow-hidden flex relative'>
             <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
-              listHeight='80vh'
+              limitHeight={true}
               sortFlag={true}></SupportListWithFilter>
           </div>
         </ModalBody>
       </Modal>
-    </Layout>
+    </>
   );
 };
 

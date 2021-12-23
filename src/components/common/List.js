@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
+
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
 import db from "../../db.js";
 import t from "../t.js";
 
@@ -15,6 +17,7 @@ const List = ({
   itemRender,
   itemClass,
   detailRender,
+  detailModalSize
 }) => {
   const [show, setShow] = React.useState(false);
   const list = dataList
@@ -32,9 +35,12 @@ const List = ({
   }
 
   const modal = <Modal
-    size="lg" active={show} toggler={() => setShow(false)}
+    size={"lg"} active={show} toggler={() => setShow(false)}
   >
-    <ModalBody className='flex flex-col'>
+    <ModalHeader toggler={() => setShow(false)}>
+      {cur?.name}
+    </ModalHeader>
+    <ModalBody>
       {detailRender(cur)}
     </ModalBody>
   </Modal>
