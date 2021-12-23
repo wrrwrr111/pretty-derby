@@ -27,7 +27,7 @@ const skillType = {
   31: "加速度",
 };
 const SkillDetail = (props) => {
-  const id = props.id;
+  const id = props.id ;
   const skill = props.data || db.get("skills").find({ id }).value();
   const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
   const supportList = allSupportList
@@ -57,9 +57,7 @@ const SkillDetail = (props) => {
     return <></>;
   }
   return (
-    <div className="w-full flex flex-col p-3" style={{
-      maxWidth: 'calc(100vw - 40px)'
-    }}>
+    <div className="w-full flex flex-col p-3">
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
           <img alt={skill.name} src={cdnServer + skill.imgUrl} className="w-14"></img>
@@ -112,13 +110,13 @@ const SkillDetail = (props) => {
       {!isNur && supportList.length ? (
         <>
           <div>{t("支援卡")}</div>
-          <SupportList className='w-full' dataList={supportList} sortFlag={false} />
+          <SupportList dataList={supportList} sortFlag={false} />
         </>
       ) : null}
       {!isNur && playerList.length ? (
         <>
           <div>{t("角色")}</div>
-          <PlayerList className='w-full' dataList={playerList} />
+          <PlayerList dataList={playerList} />
         </>
       ) : null}
     </div>

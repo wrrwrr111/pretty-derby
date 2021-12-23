@@ -11,9 +11,9 @@ const PlayerDetailPage = (props) => {
     document.title = TITLE;
   });
   return (
-    <div className="flex flex-auto w-full flex-wrap max-w-6xl mx-auto">
+    <Layout contentClass="flex flex-auto w-full flex-wrap max-w-6xl mx-auto">
       <PlayerDetail id={id} />
-    </div>
+    </Layout>
   );
 };
 

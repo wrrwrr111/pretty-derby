@@ -4,7 +4,7 @@ import PlayerCard from "./PlayerCard";
 import PlayerDetail from "./PlayerDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
-const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
+const PlayerList = ({ listClass, dataList, onClick, sortFlag = false }) => {
   const ua = useUa();
   const history = useHistory();
   const sort = {
@@ -17,7 +17,7 @@ const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
   };
   return (
     <List
-      className={className}
+      className={listClass}
       listKey="players"
       dataList={dataList}
       sort={sortFlag && sort}
@@ -38,7 +38,6 @@ const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
       )}
       itemClass="w-24 max-w-1/4 "
       detailRender={(data) => <PlayerDetail data={data} isNur={false} />}
-      // detailModalSize='regular'
     ></List>
   );
 };

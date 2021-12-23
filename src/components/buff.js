@@ -1,16 +1,28 @@
 import React from 'react';
-import Button from '@material-tailwind/react/Button'
 // import {useState} from 'react';
 import db from '../db.js'
+import dbL from '../dbL.js'
 import t from '../components/t.js'
+
+import {
+  // List,
+  Popover,
+  Button
+} from 'antd';
+
+const ua = dbL.get('ua').value();
 
 const BuffButton = (props) => {
   return (
-    <Button size='sm' buttonType='outline' data-tip='buff list'>Buff</Button>
+    <Popover
+      trigger={ua === 'mo' ? 'click' : 'hover'}
+      content={<BuffList></BuffList>}>
+      <Button>Buff</Button>
+    </Popover>
   )
 }
-const buffs = db.get('buffs').value()
 const BuffList = (props) => {
+  const buffs = db.get('buffs').value()
   const cellStyle = {
     // width:'20%',
     height: '32px',

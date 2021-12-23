@@ -19,14 +19,13 @@ import SupportDetailPage from "@/pages/support/detail";
 import PlayerDetailPage from "@/pages/player/detail";
 import SkillDetailPage from "@/pages/skill/detail";
 import { BuffList } from "./components/buff.js";
-import Layout from "./components/common/Layout.js";
 const AppPc = () => {
   return (
-    <CacheSwitch>
-      <Layout>
-        <CacheRoute className='container mx-auto' exact path="/" component={Player} />
-        <CacheRoute className='container mx-auto flex' path="/support" component={Support} />
-        <CacheRoute className='container mx-auto flex' path="/skill" component={Skill} />
+    <>
+      <CacheSwitch>
+        <CacheRoute exact path="/" component={Player} />
+        <CacheRoute path="/support" component={Support} />
+        <CacheRoute path="/skill" component={Skill} />
         <CacheRoute path={["/nurturing"]} component={Nurturing} />
         <CacheRoute path={["/nurturingMo"]} component={NurturingMO} />
         <CacheRoute className="" path="/seed" component={Seed} />
@@ -42,10 +41,10 @@ const AppPc = () => {
         />
         <CacheRoute path="/skill-detail/:id" component={SkillDetailPage} />
         <CacheRoute path="/buff" component={BuffList} />
-        {/* <CacheRoute component={NotFound}></CacheRoute> */}
-        <ReactTooltip className="z-max !hidden md:!inline-block" html={true} />
-      </Layout>
-    </CacheSwitch>
+        <Route component={NotFound}></Route>
+      </CacheSwitch>
+      <ReactTooltip className="z-max !hidden md:!inline-block" html={true} />
+    </>
   );
 };
 

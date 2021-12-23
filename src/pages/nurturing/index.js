@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
-import Button from '@material-tailwind/react/Button'
 // import shortid from 'shortid'
-// import axios from "axios";
-import ScrollBars from "react-custom-scrollbars";
-import {
-  Popover,
-} from "antd";
-
-import Modal from "@material-tailwind/react/Modal";
-import ModalBody from "@material-tailwind/react/ModalBody";
-
 import db from "@/db.js";
 import dbL from "@/dbL.js";
 import t from "@/components/t.js";
+// import axios from "axios";
 import Layout from "@/components/common/Layout.js";
+import {
+  div,
+  // Row,
+  // Col,
+  Modal,
+  Button,
+  // Drawer,
+  // message,
+  Popover,
+  // Popconfirm,
+  // Tooltip
+} from "antd";
+// import { EditOutlined } from '@ant-design/icons'
+
+import ScrollBars from "react-custom-scrollbars";
+
 import EventList from "@/components/event/EventList";
 import SkillList from "@/components/skill/SkillList";
 import { BuffButton } from "@/components/buff.js";
-
 import {
   // RaceSchedule,
   RaceTimeline,
@@ -159,9 +165,15 @@ const Nurturing = () => {
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
+    // console.log('currentWidth::',height);
     return { height, width };
   };
 
+  // const dynamicContentHeight = useViewport().height - 128
+  // 宽度0.3 高度0.5 取较小值
+  // const dynamicCardHeight = Math.min(Math.floor(dynamicContentHeight / 2), Math.floor(useViewport().width * 0.3))
+  // const dynamicCardWidth = Math.floor(dynamicCardHeight * 3 / 4)
+  // const dynamicCardBoxWidth = dynamicCardWidth * 3
 
   const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
 
@@ -217,7 +229,7 @@ const Nurturing = () => {
     height: "calc(100% - 22px)",
   };
   return (
-    <>
+    <Layout>
       <GridLayout
         cols={32}
         layout={layout}
@@ -240,14 +252,14 @@ const Nurturing = () => {
             ></img>
           )}
         </div>
-        <div key="b" className='flex flex-wrap'>
+        <div key="b" style={{ ...panelStyle }}>
           <div className="panel-heading" style={{ ...headStyle }}>
             {t("操作")}
           </div>
-          <Button size='sm' buttonType='outline' className="add-player" onClick={showPlayer}>
+          <Button className="add-player" type={"primary"} onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
-          <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
+          <Button onClick={showSupport2}>{t("支援卡查询")}</Button>
           <BuffButton />
           <Popover
             content={
@@ -257,13 +269,13 @@ const Nurturing = () => {
               ></RaceCheckbox>
             }
           >
-            <Button size='sm' buttonType='outline'>{t("比赛")}</Button>
+            <Button>{t("比赛")}</Button>
           </Popover>
           <MyDecks player={player} supports={supports} loadDeck={loadDeck}></MyDecks>
           <RecommendDecks player={player} loadDeck={loadDeck}></RecommendDecks>
 
-          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
-          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
+          <Button onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
+          <Button onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
         </div>
         <div key="c" style={{ ...panelStyle }}>
           <div className="panel-heading" style={{ ...headStyle }}>
@@ -344,33 +356,34 @@ const Nurturing = () => {
           } else {
             return (
               <div key={`s${index}`} style={{ ...panelStyle }}>
-                <Button size='sm' buttonType='outline' onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
+                <Button onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
               </div>
             );
           }
         })}
       </GridLayout>
       <Modal
-        size="lg" active={isPlayerVisible} toggler={closePlayer}
+        visible={isPlayerVisible}
+        onOk={closePlayer}
+        onCancel={closePlayer}
+        width={"80%"}
+        bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}
       >
-        <ModalBody style={{ maxHeight: "80vh", overflow: 'auto' }} >
-          <div className='max-h-screen overflow-auto'>
-            <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
-          </div>
-        </ModalBody>
+        <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
       </Modal>
       <Modal
-        size="lg" active={isSupportVisible} toggler={closeSupport}
+        visible={isSupportVisible}
+        onOk={closeSupport}
+        onCancel={closeSupport}
+        width={"80%"}
+        bodyStyle={{ height: "90vh" }}
       >
-        <ModalBody >
-          <div className='w-full h-full overflow-hidden flex relative'>
-            <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
-              limitHeight={true}
-              sortFlag={true}></SupportListWithFilter>
-          </div>
-        </ModalBody>
+        <div className='w-full h-full overflow-hidden flex relative'>
+          <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
+            sortFlag={true}></SupportListWithFilter>
+        </div>
       </Modal>
-    </>
+    </Layout>
   );
 };
 

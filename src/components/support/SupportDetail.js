@@ -12,9 +12,6 @@ const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 const SupportDetail = (props) => {
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
-  if (!data) {
-    return <></>
-  }
   return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">
       <div className="h-16 w-full flex flex-shrink-0">

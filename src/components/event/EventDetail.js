@@ -14,9 +14,6 @@ const EventDetail = ({ data }) => {
   //     </Row>
   //   )
   // })
-  if (!data) {
-    return <></>
-  }
   return (
     <div className="">
       <div className="text-lg font-semibold">{data.name}</div>
