@@ -10,6 +10,7 @@ import {
 
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
 
 import db from "@/db.js";
 import dbL from "@/dbL.js";
@@ -203,16 +204,8 @@ const Nurturing = () => {
     setLayout(layout);
     // onLayoutChange(layout); // updates status display
   };
-  const panelStyle = {
-    borderRadius: 16,
-    backgroundColor: "white",
-  };
-  const headStyle = {
-    width: "100%",
-    textAlign: "center",
-    backgroundColor: "#ccc",
-    cursor: "move",
-  };
+  const panelClass = 'bg-white border border-solid border-gray-500'
+  const headClass = 'panel-heading w-full text-center bg-gray-300 cursor-move'
   const pBodyStyle = {
     height: "calc(100% - 22px)",
   };
@@ -226,9 +219,10 @@ const Nurturing = () => {
         rowHeight={dynamicRowHeight}
         width={useViewport().width - 10}
         onLayoutChange={onLayoutChange}
+        useCSSTransforms={false}
       >
-        <div key="a" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }} onClick={showPlayer}>
+        <div key="a" className={panelClass}>
+          <div className={headClass} onClick={showPlayer}>
             {t("选择马娘")}
           </div>
           {player.id && (
@@ -240,33 +234,35 @@ const Nurturing = () => {
             ></img>
           )}
         </div>
-        <div key="b" className='flex flex-wrap'>
-          <div className="panel-heading" style={{ ...headStyle }}>
+        <div key="b" className={panelClass}>
+          <div className={headClass}>
             {t("操作")}
           </div>
-          <Button size='sm' buttonType='outline' className="add-player" onClick={showPlayer}>
-            {t("选择马娘")}
-          </Button>
-          <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
-          <BuffButton />
-          <Popover
-            content={
-              <RaceCheckbox
-                onChange={onChangeRace}
-                raceFilterCondition={raceFilterCondition}
-              ></RaceCheckbox>
-            }
-          >
-            <Button size='sm' buttonType='outline'>{t("比赛")}</Button>
-          </Popover>
-          <MyDecks player={player} supports={supports} loadDeck={loadDeck}></MyDecks>
-          <RecommendDecks player={player} loadDeck={loadDeck}></RecommendDecks>
+          <div className='flex flex-wrap'>
+            <Button size='sm' buttonType='outline' className="add-player" onClick={showPlayer}>
+              {t("选择马娘")}
+            </Button>
+            <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
+            <BuffButton />
+            <Popover
+              content={
+                <RaceCheckbox
+                  onChange={onChangeRace}
+                  raceFilterCondition={raceFilterCondition}
+                ></RaceCheckbox>
+              }
+            >
+              <Button size='sm' buttonType='outline'>{t("比赛")}</Button>
+            </Popover>
+            <MyDecks player={player} supports={supports} loadDeck={loadDeck}></MyDecks>
+            <RecommendDecks player={player} loadDeck={loadDeck}></RecommendDecks>
 
-          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
-          <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
+            <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
+            <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
+          </div>
         </div>
-        <div key="c" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}>
+        <div key="c" className={panelClass}>
+          <div className={headClass}>
             {t("事件")}
           </div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
@@ -274,24 +270,24 @@ const Nurturing = () => {
             <EventList idList={player.eventList} sortFlag={true}></EventList>
           </ScrollBars>
         </div>
-        <div key="d" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}>
+        <div key="d" className={panelClass}>
+          <div className={headClass}>
             {t("技能")}
           </div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
             <SkillList idList={player.skillList} isNur={true} size="small" />
           </ScrollBars>
         </div>
-        <div key="e" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}>
+        <div key="e" className={panelClass}>
+          <div className={headClass}>
             {t("比赛")}
           </div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
             <RaceTimeline raceList={player.raceList || []} filterRace={filterRace}></RaceTimeline>
           </ScrollBars>
         </div>
-        <div key="f" style={{ ...panelStyle }}>
-          <div className="panel-heading" style={{ ...headStyle }}>
+        <div key="f" className={panelClass}>
+          <div className={headClass}>
             {t("隐藏事件")}
           </div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
@@ -302,8 +298,8 @@ const Nurturing = () => {
           let support = supports[index];
           if (support.id) {
             return (
-              <div key={`s${index}`} style={{ ...panelStyle }}>
-                <div className="panel-heading" style={{ ...headStyle }}>
+              <div key={`s${index}`} className={panelClass}>
+                <div className={headClass}>
                   <span
                     className="panel-title"
                     onClick={() => showSupport(index)}
@@ -343,7 +339,7 @@ const Nurturing = () => {
             );
           } else {
             return (
-              <div key={`s${index}`} style={{ ...panelStyle }}>
+              <div key={`s${index}`} className={panelClass}>
                 <Button size='sm' buttonType='outline' onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
               </div>
             );
@@ -353,8 +349,11 @@ const Nurturing = () => {
       <Modal
         size="lg" active={isPlayerVisible} toggler={closePlayer}
       >
-        <ModalBody style={{ maxHeight: "80vh", overflow: 'auto' }} >
-          <div className='max-h-screen overflow-auto'>
+        <ModalHeader toggler={closePlayer}>
+          选择支援卡
+        </ModalHeader>
+        <ModalBody >
+          <div className='w-full h-full' style={{ maxHeight: "80vh", overflow: 'auto' }}>
             <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
           </div>
         </ModalBody>
@@ -362,8 +361,11 @@ const Nurturing = () => {
       <Modal
         size="lg" active={isSupportVisible} toggler={closeSupport}
       >
-        <ModalBody >
-          <div className='w-full h-full overflow-hidden flex relative'>
+        <ModalHeader toggler={closeSupport}>
+          选择支援卡
+        </ModalHeader>
+        <ModalBody>
+          <div className='w-full h-full flex relative' style={{ maxHeight: "80vh", overflow: 'auto' }}>
             <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
               limitHeight={true}
               sortFlag={true}></SupportListWithFilter>
