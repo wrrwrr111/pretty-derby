@@ -299,12 +299,10 @@ const Nurturing = (props) => {
         onCancel={closeSupport}
         footer={null}
         width={"100%"}
-        bodyStyle={{ height: "80vh" }}
+        bodyStyle={{ height: "80vh", overflow: 'auto' }}
       >
-        <div className='w-full h-full overflow-hidden flex relative'>
-          <SupportListWithFilter onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}
-            sortFlag={true}></SupportListWithFilter>
-        </div>
+        <SupportListWithFilter onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}
+          sortFlag={true}></SupportListWithFilter>
       </Modal>
     </>
   );
