@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from '@material-tailwind/react/Button'
+import Button from "@material-tailwind/react/Button";
 import {
   Row,
   Alert,
@@ -19,9 +19,15 @@ import {
 } from "antd";
 import { message } from "antd";
 //test
-import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined, DeleteOutlined } from "@ant-design/icons";
+import {
+  PlusOutlined,
+  SmileOutlined,
+  FrownOutlined,
+  CopyOutlined,
+  DeleteOutlined,
+} from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { useDidRecover } from 'react-router-cache-route'
+import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 import db from "@/db.js";
 import dbL from "@/dbL.js";
@@ -33,7 +39,7 @@ import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 // db.set('userId',null).write()
 let userId = dbL.get("userId").value();
-const TITLE = '分享 - 乌拉拉大胜利 - 赛马娘资料站'
+const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 
 /*
 userId 随机生成
@@ -102,7 +108,13 @@ const PlayerInput = ({ value = {}, onChange }) => {
         width={80}
         onClick={showPlayer}
       ></Image>
-      <Modal visible={isPlayerVisible} onOk={closePlayer} onCancel={closePlayer} width={"80%"} bodyStyle={{ maxHeight: "80vh", overflow: 'auto' }}>
+      <Modal
+        visible={isPlayerVisible}
+        onOk={closePlayer}
+        onCancel={closePlayer}
+        width={"80%"}
+        bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
+      >
         <PlayerList sortFlag={true} onClick={handleSelectPlayer}></PlayerList>
       </Modal>
     </>
@@ -138,11 +150,18 @@ const SupportInput = ({ value = {}, onChange }) => {
         width={80}
         onClick={showSupport}
       ></Image>
-      <Modal visible={isSupportVisible} onOk={closeSupport} onCancel={closeSupport} width={"80%"}
-        bodyStyle={{ height: "90vh" }}>
-        <div className='w-full h-full overflow-hidden flex relative'>
-          <SupportListWithFilter onClick={handleSelectSupport}
-            sortFlag={true}></SupportListWithFilter>
+      <Modal
+        visible={isSupportVisible}
+        onOk={closeSupport}
+        onCancel={closeSupport}
+        width={"80%"}
+        bodyStyle={{ height: "90vh" }}
+      >
+        <div className="w-full h-full overflow-hidden flex relative">
+          <SupportListWithFilter
+            onClick={handleSelectSupport}
+            sortFlag={true}
+          ></SupportListWithFilter>
         </div>
       </Modal>
     </>
@@ -194,11 +213,10 @@ const SeedInput = (props) => {
       }
       //统计ura
       if (formData["uraLevel"] !== undefined) {
-        formData['uraLevel'] += formData[`uraLevel${i}`]
+        formData["uraLevel"] += formData[`uraLevel${i}`];
       } else {
-        formData['uraLevel'] = formData[`uraLevel${i}`]
+        formData["uraLevel"] = formData[`uraLevel${i}`];
       }
-
     });
     const res = await axios.post("https://urarawin.com/api/sqlite/add", formData);
     if (res.data && res.data.success) {
@@ -421,7 +439,7 @@ const SearchForm = (props) => {
         formData["red0"] = item.attr;
         formData.attrs.push("redLevel0");
         formData.levels.push(item.level);
-      } else if (item.attr === 'uraLevel') {
+      } else if (item.attr === "uraLevel") {
         formData.attrs.push("uraLevel0");
         formData.levels.push(item.level);
       }
@@ -499,15 +517,15 @@ const SupportImage = (props) => {
 };
 
 const Seed = () => {
-  document.title = TITLE
+  document.title = TITLE;
   useDidRecover(() => {
-    document.title = TITLE
-  })
+    document.title = TITLE;
+  });
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);
   const [seedList, setSeedList] = useState([]);
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
   // const [current, setCurrent] = useState(0)
-  const [value, setValue] = useState()
+  const [value, setValue] = useState();
 
   const columns = [
     {
@@ -519,21 +537,22 @@ const Seed = () => {
           <Row>
             <p>{text}</p>
             <CopyToClipboard text={text} onCopy={() => message.info("成功")}>
-              <Button shape="circle" icon={<CopyOutlined />} />
+              <CopyOutlined />
             </CopyToClipboard>
           </Row>
           <Row align="middle">
-            <Button shape="circle" icon={<SmileOutlined />} onClick={() => like(seed)} />
+            <SmileOutlined onClick={() => like(seed)} />
             <p>{seed.likes}</p>
           </Row>
           <Row align="middle">
-            <Button shape="circle" icon={<FrownOutlined />} onClick={() => dislike(seed)} />
+            <FrownOutlined onClick={() => dislike(seed)} />
             <p>{seed.dislikes}</p>
           </Row>
-          {seed.userId === userId && <Row align="middle">
-            <Button shape="circle" icon={<DeleteOutlined />}
-              style={{ color: 'red' }} onClick={() => deleteSeed(seed)} />
-          </Row>}
+          {seed.userId === userId && (
+            <Row align="middle">
+              <DeleteOutlined onClick={() => deleteSeed(seed)} />
+            </Row>
+          )}
         </>
       ),
     },
@@ -547,40 +566,35 @@ const Seed = () => {
       title: "蓝色因子",
       dataIndex: "blue0",
       key: "blue0",
-      render: (text, record) =>
-        <span className="rate-label">
-          {`${blueLabels[text]}\xa0\xa0${record["blueLevel0"]}`}
-        </span>
-      ,
+      render: (text, record) => (
+        <span className="rate-label">{`${blueLabels[text]}\xa0\xa0${record["blueLevel0"]}`}</span>
+      ),
     },
     {
       title: "红色因子",
       dataIndex: "red0",
       key: "red0",
-      render: (text, record) =>
-        <span className="rate-label">
-          {`${redLabels[text]}\xa0\xa0${record["redLevel0"]}`}
-        </span>
-      ,
+      render: (text, record) => (
+        <span className="rate-label">{`${redLabels[text]}\xa0\xa0${record["redLevel0"]}`}</span>
+      ),
     },
     {
       title: "绿色因子",
       dataIndex: "greenLevel0",
       key: "greenLevel0",
-      render: (text, record) =>
-        <span className="rate-label">
-          {`固有\xa0\xa0${record["greenLevel0"]}`}
-        </span>
-      ,
-    }, {
+      render: (text, record) => (
+        <span className="rate-label">{`固有\xa0\xa0${record["greenLevel0"]}`}</span>
+      ),
+    },
+    {
       title: "URA",
       dataIndex: "uraLevel0",
       key: "uraLevel0",
-      render: (text, record) =>
+      render: (text, record) => (
         <span className="rate-label">
-          {`${record["uraLevel0"] ? `URA  ${record["uraLevel0"]}` : ''}`}
+          {`${record["uraLevel0"] ? `URA  ${record["uraLevel0"]}` : ""}`}
         </span>
-      ,
+      ),
     },
     {
       title: "父辈1",
@@ -600,11 +614,7 @@ const Seed = () => {
       render: (text, record) =>
         Object.keys(blueLabels).map((key) => {
           if (record[key]) {
-            return (
-              <span className="rate-label">
-                {`${blueLabels[key]}\xa0\xa0${record[key]}`}
-              </span>
-            );
+            return <span className="rate-label">{`${blueLabels[key]}\xa0\xa0${record[key]}`}</span>;
           } else {
             return null;
           }
@@ -616,11 +626,7 @@ const Seed = () => {
       render: (text, record) =>
         Object.keys(redLabels).map((key) => {
           if (record[key]) {
-            return (
-              <span className="rate-label">
-                {`${redLabels[key]}\xa0\xa0${record[key]}`}
-              </span>
-            );
+            return <span className="rate-label">{`${redLabels[key]}\xa0\xa0${record[key]}`}</span>;
           } else {
             return null;
           }
@@ -653,8 +659,8 @@ const Seed = () => {
     setIsSeedInputVisible(false);
   };
   const showMySeed = () => {
-    search({ attrs: ['userId'], levels: [userId] })
-  }
+    search({ attrs: ["userId"], levels: [userId] });
+  };
   const deleteSeed = async (value) => {
     const res = await axios.post("https://urarawin.com/api/sqlite/delete", value);
     if (res.data) {
@@ -662,18 +668,18 @@ const Seed = () => {
     } else {
       message.info("出错了");
     }
-  }
+  };
   const search = async (value) => {
-    setValue(value)
+    setValue(value);
     const res = await axios.post("https://urarawin.com/api/sqlite/search", value);
     // setCurrent(0)
     if (res.data) {
       if (res.data.count) {
         setSeedList([...res.data.list]);
-        setTotal(res.data.count)
+        setTotal(res.data.count);
       } else {
         setSeedList([]);
-        setTotal(0)
+        setTotal(0);
         message.info("暂无数据");
       }
     } else {
@@ -689,7 +695,7 @@ const Seed = () => {
     const res = await axios.post("https://urarawin.com/api/sqlite/like", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.likes += 1
+      seed.likes += 1;
     }
     setSeedList([...seedList]);
   };
@@ -702,7 +708,7 @@ const Seed = () => {
     const res = await axios.post("https://urarawin.com/api/sqlite/dislike", { id, userId });
     if (res.data) {
       message.info("成功");
-      seed.dislikes += 1
+      seed.dislikes += 1;
     }
     setSeedList([...seedList]);
   };
@@ -710,9 +716,9 @@ const Seed = () => {
     search({
       ...value,
       count: e.total,
-      offset: e.current * 10 - 10
-    })
-  }
+      offset: e.current * 10 - 10,
+    });
+  };
   return (
     <>
       <div className="seed-container">
@@ -722,11 +728,19 @@ const Seed = () => {
           <Button onClick={() => showMySeed()}>查看我的种子</Button>
         </Card>
         <Card className="card" title="结果">
-          <Table columns={columns} dataSource={seedList} onChange={onChange}
+          <Table
+            columns={columns}
+            dataSource={seedList}
+            onChange={onChange}
             pagination={{
-              pageSize: 10, total: total, simple: true, showQuickJumper: false,
-              position: ['topRight', 'bottomRight']
-            }} rowKey={"id"} />
+              pageSize: 10,
+              total: total,
+              simple: true,
+              showQuickJumper: false,
+              position: ["topRight", "bottomRight"],
+            }}
+            rowKey={"id"}
+          />
         </Card>
       </div>
       <Modal

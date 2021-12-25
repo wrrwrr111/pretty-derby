@@ -10,7 +10,7 @@ import Nav from "@material-tailwind/react/Nav";
 import NavLink from "@material-tailwind/react/NavLink";
 
 import useUa from "@/utils/ua.js";
-import LanButton from "@/components/lan-button";
+import LanButton from "@/components/lan-button.js";
 import { cdnServer } from "@/config";
 import dbL from "@/dbL.js";
 import t from "@/components/t.js";

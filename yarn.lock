@@ -1634,7 +1634,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@material-tailwind/react@0.3.4":
+"@material-tailwind/react@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@material-tailwind/react/-/react-0.3.4.tgz#aaccb84d6b1dbe7a3cb790b6c8d4209081e031c0"
   integrity sha512-ri5nMD6Wv4WT5x+3B3jt1A8ZwHijprY8R3EmI5eXnmCNe+Wzyn0AeKcB6IIHhP7fcZVMjSpMBrn5XO700LhO5Q==
