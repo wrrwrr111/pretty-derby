@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
-import Button from '@material-tailwind/react/Button'
+import Button from "@material-tailwind/react/Button";
 
 import db from "@/db.js";
 import dbL from "@/dbL.js";
@@ -12,7 +12,6 @@ import {
   Row,
   Col,
   Modal,
-
   Popconfirm,
   Popover,
   // Tooltip
@@ -32,7 +31,7 @@ const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
-  const history = useHistory()
+  const history = useHistory();
   document.title = TITLE;
   useDidRecover(() => {
     document.title = TITLE;
@@ -101,9 +100,9 @@ const Nurturing = (props) => {
     closeSupport();
   };
   const handleSelectSupportShow = (data) => {
-    history.push(`/support-detail/${data.id}`)
-    closeSupport()
-  }
+    history.push(`/support-detail/${data.id}`);
+    closeSupport();
+  };
   // 卡组相关操作
   const saveDeck = (deck) => {
     let tmpDeck = {
@@ -157,11 +156,11 @@ const Nurturing = (props) => {
     //根据条件过滤
     let tmpRaceList = Object.values(filterCondition).some((f) => f.length > 0)
       ? Object.entries(filterCondition)
-        .filter(([key, filters]) => filters.length > 0)
-        .reduce(
-          (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
-          races
-        )
+          .filter(([key, filters]) => filters.length > 0)
+          .reduce(
+            (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
+            races
+          )
       : [];
     //过滤后整理成 dataNum:[raceId]
     let tmpFilterRace = {};
@@ -201,23 +200,22 @@ const Nurturing = (props) => {
             alt={player.imgUrl}
             width="128"
             onClick={() => toPlayerDetail(player.id)}
-          ></img>
+          />
         )}
-        <div
-          className='flex-auto flex flex-wrap items-center'
-        >
-          <Button size='sm' buttonType='outline' onClick={showPlayer}>
+        <div className="flex-auto flex flex-wrap items-center">
+          <Button size="sm" buttonType="outline" onClick={showPlayer}>
             {t("选择马娘")}
           </Button>
-          <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
-          <Button size='sm' buttonType='outline' onClick={toBuffList}>{t("BUFF")}</Button>
+          <Button size="sm" buttonType="outline" onClick={showSupport2}>
+            {t("支援卡查询")}
+          </Button>
+          <Button size="sm" buttonType="outline" onClick={toBuffList}>
+            {t("BUFF")}
+          </Button>
           <Popover
             trigger="click"
             content={
-              <RaceCheckbox
-                onChange={onChangeRace}
-                raceFilterCondition={raceFilterCondition}
-              ></RaceCheckbox>
+              <RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition} />
             }
           >
             <Button>{t("比赛")}</Button>
@@ -227,25 +225,32 @@ const Nurturing = (props) => {
             width={"80%"}
             content={
               <>
-                <Button size='sm' buttonType='outline' onClick={() => saveDeck()}>{t("保存为新卡组")}</Button>
+                <Button size="sm" buttonType="outline" onClick={() => saveDeck()}>
+                  {t("保存为新卡组")}
+                </Button>
                 {decks.map((deck) => (
                   <Row key={deck.id}>
                     {deck.imgUrls.map((imgUrl) => (
                       <Col span={3} key={imgUrl}>
-                        <img src={cdnServer + imgUrl} alt={imgUrl} width={"100"}></img>
+                        <img src={cdnServer + imgUrl} alt={imgUrl} width={"100"} />
                       </Col>
                     ))}
                     <Col span={3}>
-                      <Button size='sm' buttonType='outline' type="primary" onClick={() => loadDeck(deck)}>
+                      <Button
+                        size="sm"
+                        buttonType="outline"
+                        type="primary"
+                        onClick={() => loadDeck(deck)}
+                      >
                         {t("读取卡组")}
                       </Button>
                       <Popconfirm title="确认覆盖？" onConfirm={() => saveDeck(deck)}>
-                        <Button size='sm' buttonType='outline' danger type="dashed">
+                        <Button size="sm" buttonType="outline" danger type="dashed">
                           {t("覆盖卡组")}
                         </Button>
                       </Popconfirm>
                       <Popconfirm title="确认删除？" onConfirm={() => deleteDeck(deck)}>
-                        <Button size='sm' buttonType='outline' danger type="dashed">
+                        <Button size="sm" buttonType="outline" danger type="dashed">
                           {t("删除卡组")}
                         </Button>
                       </Popconfirm>
@@ -263,7 +268,12 @@ const Nurturing = (props) => {
       <Row justify="space-around">
         {[0, 1, 2, 3, 4, 5].map((index) => (
           <Col span={7} key={index} style={{}}>
-            <Button size='sm' buttonType='outline' icon={<EditOutlined />} onClick={() => showSupport(index)}>
+            <Button
+              size="sm"
+              buttonType="outline"
+              icon={<EditOutlined />}
+              onClick={() => showSupport(index)}
+            >
               {t("选择支援卡")}
             </Button>
             {supports[index] && supports[index].id && (
@@ -272,7 +282,7 @@ const Nurturing = (props) => {
                 alt={supports[index].name}
                 width={"100%"}
                 onClick={() => toSupportDetail(supports[index].id)}
-              ></img>
+              />
             )}
           </Col>
         ))}
@@ -280,7 +290,7 @@ const Nurturing = (props) => {
 
       <Divider>比赛</Divider>
       <div style={{ overflow: "auto", paddingTop: "10px", width: "100%", height: "400px" }}>
-        <RaceTimeline raceList={player.raceList} filterRace={filterRace}></RaceTimeline>
+        <RaceTimeline raceList={player.raceList} filterRace={filterRace} />
       </div>
 
       <Modal
@@ -291,7 +301,7 @@ const Nurturing = (props) => {
         width={"100%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <PlayerList sortFlag={true} onClick={handleSelectPlayer}></PlayerList>
+        <PlayerList sortFlag={true} onClick={handleSelectPlayer} />
       </Modal>
       <Modal
         visible={isSupportVisible}
@@ -299,10 +309,12 @@ const Nurturing = (props) => {
         onCancel={closeSupport}
         footer={null}
         width={"100%"}
-        bodyStyle={{ height: "80vh", overflow: 'auto' }}
+        bodyStyle={{ height: "80vh", overflow: "auto" }}
       >
-        <SupportListWithFilter onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}
-          sortFlag={true}></SupportListWithFilter>
+        <SupportListWithFilter
+          onClick={needSelect ? handleSelectSupport : handleSelectSupportShow}
+          sortFlag={true}
+        />
       </Modal>
     </>
   );

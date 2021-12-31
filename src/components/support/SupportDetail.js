@@ -13,7 +13,7 @@ const SupportDetail = (props) => {
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
   if (!data) {
-    return <></>
+    return <></>;
   }
   return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">
@@ -40,8 +40,8 @@ const SupportDetail = (props) => {
         effects={data.effects}
         unique_effect={data.unique_effect}
         rarity={data.rarity}
-      ></TestEffectTable>
-      <EffectTable effects={data.effects} rarity={data.rarity}></EffectTable>
+      />
+      <EffectTable effects={data.effects} rarity={data.rarity} />
     </div>
   );
 };

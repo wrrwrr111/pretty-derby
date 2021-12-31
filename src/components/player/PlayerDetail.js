@@ -12,70 +12,74 @@ import {
 } from "../race";
 // import {EffectTable} from './effect.js'
 
+const PlayerItem = ({ data }) => {
+  const { name, imgUrl, charaName } = data;
+  return (
+    <div className="h-16 w-full flex flex-shrink-0">
+      <img alt={name} src={cdnServer + imgUrl} height={64} width={64} />
+      <div className="flex-auto flex flex-wrap h-full items-center">
+        <div className="w-full flex items-center justify-between">
+          <div className=" text-xl font-semibold truncate">{name}</div>
+          <div className="flex-shrink-0 text-gray-700 truncate">{t(name)}</div>
+        </div>
+        <div className="w-full flex items-center justify-between">
+          <div className=" text-xl font-semibold truncate">{charaName}</div>
+          <div className="flex-shrink-0 text-gray-700 truncate">{t(charaName)}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
 const PlayerDetail = (props) => {
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
   const data = props.data || db.get("players").find({ id }).value();
   if (!data) {
-    return <></>
+    return <></>;
   }
-  const PlayerItem = () => (
-    <div className="h-16 w-full flex flex-shrink-0">
-      <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={64} />
-      <div className="flex-auto flex flex-wrap h-full items-center">
-        <div className="w-full flex items-center justify-between">
-          <div className=" text-xl font-semibold truncate">{data.name}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(data.name)}</div>
-        </div>
-        <div className="w-full flex items-center justify-between">
-          <div className=" text-xl font-semibold truncate">{data.charaName}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(data.charaName)}</div>
-        </div>
-      </div>
-    </div>
-  );
+
   if (isNur) {
     return (
       <div className="w-full flex flex-col  p-3">
-        <PlayerItem></PlayerItem>
+        <PlayerItem data={data} />
         <div>{t("多选项事件")}</div>
-        <EventList idList={data.eventList0}></EventList>
+        <EventList idList={data.eventList0} />
         <div>{t("赛后事件")}</div>
-        <EventList idList={data.eventList2}></EventList>
+        <EventList idList={data.eventList2} />
         <div>{t("通用事件")}</div>
-        <EventList idList={data.eventList3}></EventList>
+        <EventList idList={data.eventList3} />
         <div>{t("隐藏事件")}</div>
-        <EventList idList={data.hideEvent} type="all"></EventList>
+        <EventList idList={data.hideEvent} type="all" />
         <div>{t("赛程")}</div>
-        {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
-        <RaceTimeline raceList={data.raceList} showButton={false}></RaceTimeline>
+        {/* <RaceSchedule raceList={data.raceList}/> */}
+        <RaceTimeline raceList={data.raceList} showButton={false} />
         <div>{t("技能")}</div>
-        <SkillList idList={data.skillList}></SkillList>
+        <SkillList idList={data.skillList} />
       </div>
     );
   } else {
     return (
       <div className="w-full flex flex-col  p-3">
-        <PlayerItem></PlayerItem>
-        <AdaptBox player={data}></AdaptBox>
+        <PlayerItem data={data} />
+        <AdaptBox player={data} />
         <div className="h-2"></div>
-        <GrowBox player={data}></GrowBox>
+        <GrowBox player={data} />
         <div className="h-2"></div>
-        <SkillList idList={data.skillList}></SkillList>
+        <SkillList idList={data.skillList} />
         <div>{t("多选项事件")}</div>
-        <EventList idList={data.eventList0}></EventList>
+        <EventList idList={data.eventList0} />
         <div>{t("无选项事件")}</div>
-        <EventList idList={data.eventList1}></EventList>
+        <EventList idList={data.eventList1} />
         <div>{t("赛后事件")}</div>
-        <EventList idList={data.eventList2}></EventList>
+        <EventList idList={data.eventList2} />
         <div>{t("通用事件")}</div>
-        <EventList idList={data.eventList3}></EventList>
+        <EventList idList={data.eventList3} />
         <div>{t("隐藏事件")}</div>
-        <EventList idList={data.eventList4}></EventList>
+        <EventList idList={data.eventList4} />
         <div>{t("赛程")}</div>
-        {/* <RaceSchedule raceList={data.raceList}></RaceSchedule> */}
-        <RaceTimeline raceList={data.raceList}></RaceTimeline>
+        {/* <RaceSchedule raceList={data.raceList}/> */}
+        <RaceTimeline raceList={data.raceList} />
       </div>
     );
   }

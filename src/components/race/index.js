@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from '@material-tailwind/react/Button'
+import Button from "@material-tailwind/react/Button";
 import db from "../../db.js";
 // import dbL from '../dbL.js'
 
@@ -155,7 +155,7 @@ const RaceTimeline = React.memo((props) => {
             label={getDate(i)}
             color={getColor("normal")}
             style={{ fontSize: "12px" }}
-          ></Timeline.Item>
+          />
         );
     }
   }

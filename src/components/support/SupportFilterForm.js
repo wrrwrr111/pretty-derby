@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-import CheckBox from "../common/CheckBox"
-import Input from "../common/Input"
+import CheckBox from "../common/CheckBox";
+import Input from "../common/Input";
 import dbL from "@/dbL.js";
 import db from "@/db.js";
 import t from "../t.js";
 
-import SkillFilterForm from '../skill/SkillFilterForm'
+import SkillFilterForm from "../skill/SkillFilterForm";
 const allSupports = db.get("supports").value();
 const effects = db.get("effects").value();
 const effectOptions = Object.keys(effects).map((key) => {
@@ -18,13 +18,13 @@ const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢
   value: item,
 }));
 const SupportFilterForm = (props) => {
-  const { onUpdate, needId } = props
+  const { onUpdate, needId } = props;
   const {
     register,
     watch,
     handleSubmit,
     setValue,
-    formState: { },
+    formState: {},
   } = useForm();
 
   React.useEffect(() => {
@@ -33,8 +33,8 @@ const SupportFilterForm = (props) => {
   }, [watch]);
 
   const getFilterList = (value) => {
-    const { type, effect, q, skill, } = value
-    let tempList = [...allSupports]
+    const { type, effect, q, skill } = value;
+    let tempList = [...allSupports];
 
     if (type?.length) {
       tempList = tempList.filter((support) => {
@@ -103,46 +103,25 @@ const SupportFilterForm = (props) => {
       }, []);
     }
     onUpdate && onUpdate(tempList);
-  }
+  };
   const handleSkillFilterFormChange = (list) => {
-    setValue('skill', list)
-  }
+    setValue("skill", list);
+  };
   return (
-    <div className='flex flex-wrap'>
-      <Input
-        register={register}
-        name='q'
-        placeholder={t("事件关键词搜索")} />
-      <p className="w-full my-1 text-gray-700">
-        {t("类型")}
-      </p>
-      {typeOptions.map(({ label, value }) =>
-        <CheckBox
-          register={register}
-          name={'type'}
-          label={label}
-          value={value} />
-      )}
-      <p className="w-full my-1 text-gray-700">
-        {t("技能筛选")}
-      </p>
-      <SkillFilterForm
-        onUpdate={handleSkillFilterFormChange}
-        checkOnly={true}
-        needId={true}
-      ></SkillFilterForm>
-      <p className="w-full my-1 text-gray-700">
-        {t("育成效果")}
-      </p>
-      {effectOptions.map(({ label, value }) =>
-        <CheckBox
-          register={register}
-          name={'effect'}
-          label={label}
-          value={value} />
-      )}
+    <div className="flex flex-wrap">
+      <Input register={register} name="q" placeholder={t("事件关键词搜索")} />
+      <p className="w-full my-1 text-gray-700">{t("类型")}</p>
+      {typeOptions.map(({ label, value }) => (
+        <CheckBox register={register} name={"type"} label={label} value={value} />
+      ))}
+      <p className="w-full my-1 text-gray-700">{t("技能筛选")}</p>
+      <SkillFilterForm onUpdate={handleSkillFilterFormChange} checkOnly={true} needId={true} />
+      <p className="w-full my-1 text-gray-700">{t("育成效果")}</p>
+      {effectOptions.map(({ label, value }) => (
+        <CheckBox register={register} name={"effect"} label={label} value={value} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default SupportFilterForm
+export default SupportFilterForm;
