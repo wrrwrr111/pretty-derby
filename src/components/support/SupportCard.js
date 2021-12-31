@@ -4,10 +4,7 @@ import t from "../t.js";
 const SupportCard = (props) => {
   const { data, onClick, className } = props;
   const [show, setShow] = useState(true);
-  if (!data) {
-    return <></>;
-  }
-  return (
+  return data ? (
     <div
       className={`relative cursor-pointer ${className}`}
       onClick={onClick}
@@ -29,7 +26,7 @@ const SupportCard = (props) => {
         />
       )}
     </div>
-  );
+  ) : null;
 };
 
 export default SupportCard;
