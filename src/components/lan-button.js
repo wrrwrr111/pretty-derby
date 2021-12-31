@@ -1,13 +1,18 @@
-import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import React, { useState, useRef } from "react";
+
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+import Icon from "@material-tailwind/react/Icon";
+import Button from "@material-tailwind/react/Button";
 
 import dbL from "../dbL.js";
-import { Popover } from "antd";
 import t from "./t.js";
 
+let lan = dbL.get("lan").value();
 const LanButton = (props) => {
-  let lan = dbL.get("lan").value();
   const [code, setCode] = useState(lan || "cn");
+  const [show, setShow] = useState(false)
+  const buttonRef = useRef();
   const changeToCn = () => {
     lan = "cn";
     dbL.set("lan", "cn").write();
@@ -29,45 +34,38 @@ const LanButton = (props) => {
     t("", "jp");
     window.location.reload(true);
   };
-  const flagStyle = {
-    width: 40,
-    height: 30,
-    margin: 4,
-  };
   return (
-    <Popover
-      content={
-        <div style={{ display: "flex" }}>
-          <span
-            className="cursor-pointer"
-            onClick={changeToCn}
-            code={"cn"}
-            style={{ ...flagStyle }}
-          >
-            cn
-          </span>
-          <span
-            className="cursor-pointer"
-            onClick={changeToUs}
-            code={"us"}
-            style={{ ...flagStyle }}
-          >
-            us
-          </span>
-          <span
-            className="cursor-pointer"
-            onClick={changeToJp}
-            code={"jp"}
-            style={{ ...flagStyle }}
-          >
-            jp
-          </span>
-        </div>
-      }
-    >
-      <div className="flex items-center mx-10 cursor-pointer">{code}</div>
-    </Popover>
+    <>
+      <Button size='sm' color="lightBlue" onClick={() => setShow(true)} ripple="light">
+        {code}
+      </Button>
+      <Modal active={show} toggler={() => setShow(false)}>
+        <ModalBody>
+          <div className='grid grid-cols-3 gap-3'>
+            <Button
+              onClick={changeToCn}
+              code={"cn"}
+            >
+              cn
+            </Button>
+            <Button
+              className="cursor-pointer"
+              onClick={changeToUs}
+              code={"us"}
+            >
+              us
+            </Button>
+            <Button
+              onClick={changeToJp}
+              code={"jp"}
+            >
+              jp
+            </Button>
+          </div>
+        </ModalBody>
+      </Modal>
+    </>
   );
 };
 
-export default withRouter(LanButton);
+export default LanButton;

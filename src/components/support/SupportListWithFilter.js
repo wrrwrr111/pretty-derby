@@ -1,40 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Button, Checkbox, Input } from "antd";
 import { useDidRecover } from "react-router-cache-route";
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
+import Button from "@material-tailwind/react/Button";
+
 import dbL from "@/dbL.js";
 import db from "@/db.js";
 import t from "@/components/t.js";
-import SupportList from "@/components/support/SupportList";
-import SkillCheckbox from "@/components/skill/SkillCheckbox";
 
-const CheckboxGroup = Checkbox.Group;
-const Search = Input.Search;
+import SupportList from "@/components/support/SupportList";
+import SupportFilterForm from "@/components/support/SupportFilterForm";
+import useViewport from '@/utils/useViewport'
+
 const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const allSupports = db.get("supports").value();
+
+document.title = TITLE;
 const SupportListWithFilter = (props) => {
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
-  const { filter = true, onClick } = props;
+  const { onClick, limitHeight } = props;
+  const viewport = useViewport()
+  const [show, setShow] = React.useState(false);
   const [list, setList] = useState(props.supportList || allSupports || []);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
   const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
-  const [effectList, setEffectList] = useState();
-  const [typeList, setTypeList] = useState([]);
-  const [eventIdList, setEventIdList] = useState([]);
-  const [skillList, setSkillList] = useState([]);
 
-  const effects = db.get("effects").value();
-  const effectOptions = Object.keys(effects).map((key) => {
-    return { label: t(effects[key].name), value: key };
+  useDidRecover(() => {
+    document.title = TITLE;
   });
-  const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢さ", "友人"].map((item) => ({
-    label: t(item),
-    value: item,
-  }));
 
   const changeChooseMode = () => {
     setShowMode(!showMode);
@@ -57,138 +52,48 @@ const SupportListWithFilter = (props) => {
     setChosenList([...tmpList]);
   };
 
-  const onSupportCheckboxChange = (effectList) => setEffectList(effectList);
-
-  const onSkillCheckboxUpdate = (skillList) => setSkillList(skillList);
-
-  const onTypeListChange = (typeList) => setTypeList(typeList);
-
-  const onSearch = (searchText) => {
-    const allEventList = db.get("events").value();
-    const eventIdList = allEventList
-      .filter((event) => {
-        let jsonEvent = JSON.stringify(event);
-        if (jsonEvent.indexOf(searchText) !== -1) {
-          return true;
-        } else {
-          return false;
-        }
-      })
-      .reduce((list, event) => {
-        list.push(event.id);
-        return list;
-      }, []);
-    setEventIdList(eventIdList);
-  };
-
-  useEffect(() => {
-    updateSupport({ effectList, skillList, eventIdList, typeList });
-  }, [effectList, skillList, eventIdList, typeList]);
-
-  const updateSupport = ({ effectList, skillList, eventIdList, typeList }) => {
-    let tempList = allSupports;
-    if (effectList?.length) {
-      tempList = tempList.filter((support) => {
-        let flag = 0;
-        effectList.forEach((value) => {
-          support.effects &&
-            support.effects.forEach((effect) => {
-              if (effect.type == value) {
-                flag += 1;
-              }
-            });
-        });
-        return flag === effectList.length;
-      });
-    }
-    if (skillList?.length) {
-      tempList = tempList.filter((support) => {
-        let flag = 0;
-        support.skillList.forEach((skillId) => {
-          if (skillList.indexOf(skillId) !== -1) {
-            return (flag = 1);
-          }
-        });
-        return flag;
-      });
-    }
-    if (eventIdList?.length) {
-      tempList = tempList.filter((support) => {
-        let flag = 0;
-        support.eventList.forEach((eventId) => {
-          if (eventIdList.indexOf(eventId) !== -1) {
-            return (flag = 1);
-          }
-        });
-        return flag;
-      });
-    }
-    if (typeList?.length) {
-      tempList = tempList.filter((support) => {
-        let flag = 0;
-        if (typeList.indexOf(support.type) !== -1) {
-          return (flag = 1);
-        }
-        return flag;
-      });
-    }
-    setList([...tempList]);
-  };
-
   return (
     <>
-      {filter && (
-        <div className="w-1/4 h-full flex flex-col p-1 overflow-hidden">
-          <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
-            {t("筛选")}
-          </div>
-          <Button onClick={changeShowMode}>{t("高亮我的卡组")}</Button>
-          <Button onClick={changeChooseMode}>{t("配置卡组")}</Button>
+      {viewport?.width >= 768
+        ? <div className="sticky top-20 hidden md:flex w-1/4 flex-col p-1 overflow-auto"
+          style={{
+            height: "calc(100vh - 120px)"
+          }}
+        >
+          <Button className='my-1' onClick={changeShowMode} ripple="light" >{t("高亮我的卡组")}</Button>
+          <Button className='my-1' onClick={changeChooseMode} ripple="light">{t("配置卡组")}</Button>
           {chooseMode && (
-            <Button onClick={changeChooseMode} type="primary">
+            <Button className='my-1' onClick={changeChooseMode} ripple="light">
               {t("配置完成")}
             </Button>
           )}
-          <Search
-            placeholder={t("输入关键词")}
-            enterButton={t("搜索")}
-            size="middle"
-            style={{ width: "100%" }}
-            onSearch={onSearch}
-          />
-          <div className="overflow-y-auto flex-auto flex flex-col">
-            <div className="font-semibold my-1">{t("类型")}</div>
-            <CheckboxGroup options={typeOptions} value={typeList} onChange={onTypeListChange} />
-            <div className="font-semibold my-1">{t("技能")}</div>
-            <SkillCheckbox
-              onUpdate={onSkillCheckboxUpdate}
-              checkOnly={true}
-              needId={true}
-            ></SkillCheckbox>
-            <div className="font-semibold my-1">{t("育成效果")}</div>
-            <CheckboxGroup
-              options={effectOptions}
-              value={effectList}
-              onChange={onSupportCheckboxChange}
-            />
-          </div>
+          <SupportFilterForm onUpdate={setList} />
         </div>
-      )}
-      <div className="w-3/4 h-full flex flex-col p-1 overflow-hidden">
-        <div className="w-full rounded h-12 flex items-center justify-center bg-blue-400 text-gray-100 text-xl font-semibold flex-shrink-0">
-          {t("支援卡列表")}
-        </div>
-        <div className=" overflow-y-scroll overflow-x-hidden  w-full flex-auto flex flex-wrap">
-          <SupportList
-            listClass="justify-between"
-            sortFlag={true}
-            dataList={list}
-            ownList={showMode ? chosenList : null}
-            onClick={chooseMode ? onSelect : onClick}
-          />
-        </div>
-      </div>
-    </>
+        : <>
+          <Button className='md:hidden fixed top-20 z-40 bg-opacity-80' onClick={() => setShow(true)}>
+            筛选
+          </Button>
+          <Modal
+            size={"lg"} active={show} toggler={() => setShow(false)}
+          >
+            <ModalHeader toggler={() => setShow(false)}>
+              {'筛选支援卡'}
+            </ModalHeader>
+            <ModalBody className='flex flex-col'>
+              <SupportFilterForm onUpdate={setList} />
+            </ModalBody>
+          </Modal>
+        </>
+      }
+
+      <SupportList
+        className={`md:w-3/4 justify-between ${limitHeight && 'h-80vh overflow-auto'}`}
+        sortFlag={true}
+        dataList={list}
+        ownList={showMode ? chosenList : null}
+        onClick={chooseMode ? onSelect : onClick}
+      />
+    </ >
   );
 };
 export default SupportListWithFilter;

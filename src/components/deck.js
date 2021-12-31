@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@material-tailwind/react/Button'
 import shortid from 'shortid'
 // import db from '../db.js'
 import dbL from '../dbL.js'
@@ -10,7 +11,6 @@ import {
   Row,
   Col,
   // Modal,
-  Button,
   Tag,
   message,
   Popover,
@@ -78,7 +78,7 @@ const MyDecks = (props) => {
   return <Popover width={'100%'} overlayStyle={{ maxHeight: 800, overflow: 'auto' }}
     content={
       <>
-        <Button onClick={() => saveDeck()}>{t('保存为新卡组')}</Button>
+        <Button size='sm' buttonType='outline' onClick={() => saveDeck()}>{t('保存为新卡组')}</Button>
         {decks.map(deck =>
           <>
             <Row>
@@ -106,7 +106,8 @@ const MyDecks = (props) => {
             </Row>
           </>)}
       </>
-    }><Button>{t('我的卡组')}</Button>
+    }>
+    <Button size='sm' buttonType='outline'>{t('我的卡组')}</Button>
   </Popover>
 }
 
@@ -147,7 +148,7 @@ const RecommendDecks = (props) => {
         </>
       )
     }>
-    <Button>{t('推荐卡组')}</Button>
+    <Button size='sm' buttonType='outline'>{t('推荐卡组')}</Button>
   </Popover>
 }
 

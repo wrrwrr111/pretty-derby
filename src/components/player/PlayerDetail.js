@@ -17,6 +17,9 @@ const PlayerDetail = (props) => {
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
   const data = props.data || db.get("players").find({ id }).value();
+  if (!data) {
+    return <></>
+  }
   const PlayerItem = () => (
     <div className="h-16 w-full flex flex-shrink-0">
       <img alt={data.name} src={cdnServer + data.imgUrl} height={64} width={64} />

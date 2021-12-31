@@ -62,8 +62,7 @@
   padding: 8px;
 }
 
-.chosen-card {
-}
+.chosen-card {}
 
 .un-chosen-card img {
   opacity: 0.3;
@@ -128,17 +127,18 @@
   font-size: 14px !important;
   list-style: none !important;
 }
+
 /*race time line end */
 
 .seed-container {
   margin: 24px 24px 0px;
 }
 
-.seed-container > * {
+.seed-container>* {
   margin-bottom: 16px;
 }
 
-.seed-container > *:last-child {
+.seed-container>*:last-child {
   margin-bottom: 0;
 }
 
@@ -157,3 +157,5 @@
 .ant-divider-horizontal {
   margin: 6px 0 !important;
 }
+
+

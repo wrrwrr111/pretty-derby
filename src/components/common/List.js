@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
-import { Modal } from "antd";
+
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
 import db from "../../db.js";
 import t from "../t.js";
 
@@ -14,21 +17,41 @@ const List = ({
   itemRender,
   itemClass,
   detailRender,
+  detailModalSize
 }) => {
+  const [show, setShow] = React.useState(false);
   const list = dataList
     ? dataList
     : idList
-    ? idList.reduce((list, cur) => {
+      ? idList.reduce((list, cur) => {
         return [...list, db.get(listKey).find({ id: cur }).value()];
       }, [])
-    : db.get(listKey).value();
+      : db.get(listKey).value();
   const [cur, setCur] = useState(null);
+
+  const showModal = (cur) => {
+    setCur(cur)
+    setShow(true)
+  }
+
+  const modal = <Modal
+    size={"lg"} active={show} toggler={() => setShow(false)}
+  >
+    <ModalHeader toggler={() => setShow(false)}>
+      {cur?.name}
+    </ModalHeader>
+    <ModalBody>
+      {detailRender(cur)}
+    </ModalBody>
+  </Modal>
+
   useEffect(() => {
     ReactTooltip.rebuild();
   });
   if (!list) {
     return <></>;
   }
+
   if (sort) {
     return (
       <div className={` flex flex-wrap ${className}`}>
@@ -49,7 +72,7 @@ const List = ({
           return (
             <>
               <div className="w-full text-lg font-semibold text-center">{t(sortItem.title)}</div>
-              {sortList.map((data) => itemRender(data, setCur))}
+              {sortList.map((data) => itemRender(data, showModal))}
               {itemClass && (
                 <>
                   <div className={itemClass}></div>
@@ -69,16 +92,7 @@ const List = ({
             </>
           );
         })}
-        <Modal
-          visible={cur}
-          onOk={() => setCur(null)}
-          onCancel={() => setCur(null)}
-          footer={null}
-          width={768}
-          bodyStyle={{ display: "flex", flexDirection: "column" }}
-        >
-          {detailRender(cur)}
-        </Modal>
+        {modal}
       </div>
     );
   } else {
@@ -86,17 +100,8 @@ const List = ({
       <div className={` flex flex-wrap ${className}`}>
         {list
           .filter((data) => (filterFunc ? filterFunc(data) : true))
-          .map((data) => itemRender(data, setCur))}
-        <Modal
-          visible={cur}
-          onOk={() => setCur(null)}
-          onCancel={() => setCur(null)}
-          footer={null}
-          width={768}
-          bodyStyle={{ display: "flex", flexDirection: "column" }}
-        >
-          {detailRender(cur)}
-        </Modal>
+          .map((data) => itemRender(data, showModal))}
+        {modal}
       </div>
     );
   }

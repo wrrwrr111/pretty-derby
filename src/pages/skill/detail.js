@@ -11,9 +11,7 @@ const SkillDetailPage = (props) => {
     document.title = TITLE;
   });
   return (
-    <Layout contentClass="flex flex-auto w-full flex-wrap max-w-6xl mx-auto">
-      <SkillDetail id={id} />
-    </Layout>
+    <SkillDetail id={id} />
   );
 };
 
