@@ -124,12 +124,12 @@ const SkillDetail = (props) => {
               <PlayerList className="w-full" dataList={playerList} />
             </>
           )}
-          {data.events?.length > 0 && (
+          {/* {data.events?.length > 0 && (
             <>
               <div>{t("事件")}</div>
               <EventList className="w-full" idList={data.events} />
             </>
-          )}
+          )} */}
         </>
       )}
     </div>
