@@ -47,7 +47,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
   const list = ua.isPhone ? phoneList : pcList;
   return (
     <div className={"flex flex-col w-screen min-h-screen relative"}>
-      <Navbar className='sticky top-0 z-50' color="lightBlue" navbar>
+      <Navbar className="sticky top-0 z-50" color="lightBlue" navbar>
         <NavbarContainer>
           <NavbarWrapper>
             <NavbarBrand>赛马娘</NavbarBrand>
@@ -62,7 +62,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
             <Nav leftSide>
               {list.map((item) => (
                 <NavLink
-                  active={location.pathname === item.path && 'light'}
+                  active={location.pathname === item.path && "light"}
                   href={item.path}
                   ripple="light"
                 >
@@ -93,7 +93,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
           rel="noreferrer"
           href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi"
           data-tip={`
-          <img src=${cdnServer + "img/q.jpg"} width={300}></img>
+          <img src=${cdnServer + "img/q.jpg"} width={300} />
           <p>${t("闲聊为主")}</p>
           `}
         >
@@ -106,13 +106,13 @@ const Layout = ({ children, contentClass, rootClass }) => {
         </a>
         <div
           className="flex mx-2 items-center"
-          data-tip={`<img src=${cdnServer + "img/weapp.jpg"} width={200}></img>`}
+          data-tip={`<img src=${cdnServer + "img/weapp.jpg"} width={200} />`}
         >
-          <img src={cdnServer + "reimu.gif"} preview={false} width={24}></img>
+          <img alt="reimu" src={cdnServer + "reimu.gif"} preview={false} width={24} />
           <div>{t("微信小程序")}</div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 export default Layout;

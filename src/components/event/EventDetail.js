@@ -14,10 +14,7 @@ const EventDetail = ({ data }) => {
   //     </Row>
   //   )
   // })
-  if (!data) {
-    return <></>
-  }
-  return (
+  return data ? (
     <div className="">
       <div className="text-lg font-semibold">{data.name}</div>
       {data.choiceList.map((choice, index) => (
@@ -34,6 +31,6 @@ const EventDetail = ({ data }) => {
         </div>
       ))}
     </div>
-  );
+  ) : null;
 };
 export default EventDetail;

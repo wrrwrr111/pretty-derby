@@ -28,13 +28,13 @@ const skillType = {
 };
 const SkillDetail = (props) => {
   const id = props.id;
-  const skill = props.data || db.get("skills").find({ id }).value();
+  const data = props.data || db.get("skills").find({ id }).value();
   const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
   const supportList = allSupportList
     .filter((support) => {
       let flag = 0;
       support.skillList.forEach((id) => {
-        if (id === skill?.id) {
+        if (id === data?.id) {
           flag = 1;
         }
       });
@@ -45,7 +45,7 @@ const SkillDetail = (props) => {
     .filter((player) => {
       let flag = 0;
       player.skillList.forEach((id) => {
-        if (id === skill?.id) {
+        if (id === data?.id) {
           flag = 1;
         }
       });
@@ -53,40 +53,40 @@ const SkillDetail = (props) => {
     })
     .sort((a, b) => b.rarity - a.rarity);
 
-  if (!skill) {
-    return <></>;
-  }
-  return (
-    <div className="w-full flex flex-col p-3" style={{
-      maxWidth: 'calc(100vw - 40px)'
-    }}>
+  return data ? (
+    <div
+      className="w-full flex flex-col p-3"
+      style={{
+        maxWidth: "calc(100vw - 40px)",
+      }}
+    >
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
-          <img alt={skill.name} src={cdnServer + skill.imgUrl} className="w-14"></img>
+          <img alt={data.name} src={cdnServer + data.imgUrl} className="w-14" />
         </div>
         <div className="flex-auto">
-          <p>{t(skill.name)}</p>
-          <p className="text-gray-500">{skill.name}</p>
+          <p>{t(data.name)}</p>
+          <p className="text-gray-500">{data.name}</p>
         </div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center flex-shrink-0">{t("技能描述")}</div>
         <div className="flex-auto">
-          <p>{t(skill.describe)}</p>
-          <p className="text-gray-500">{skill.describe}</p>
+          <p>{t(data.describe)}</p>
+          <p className="text-gray-500">{data.describe}</p>
         </div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center flex-shrink-0">{t("触发条件")}</div>
         <div className="flex-auto">
-          <p>{t(skill.condition)}</p>
-          <p className="text-gray-500">{skill.condition}</p>
+          <p>{t(data.condition)}</p>
+          <p className="text-gray-500">{data.condition}</p>
         </div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center flex-shrink-0">{t("技能效果")}</div>
         <div className="flex-auto">
-          {skill.ability?.map((ability) => {
+          {data.ability?.map((ability) => {
             return <span>{`${skillType[ability.type]} ${ability.value / 10000}`}</span>;
           })}
         </div>
@@ -94,35 +94,35 @@ const SkillDetail = (props) => {
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center flex-shrink-0">{t("持续时间")}</div>
         <div className="flex-auto">
-          {`${skill.ability_time / 10000}s * ${t("赛道长度")} / 1000}`}
+          {`${data.ability_time / 10000}s * ${t("赛道长度")} / 1000}`}
         </div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center flex-shrink-0">{t("冷却时间")}</div>
-        <div className="flex-auto">{`${skill.cooldown / 10000}s * ${t("赛道长度")} / 1000`}</div>
+        <div className="flex-auto">{`${data.cooldown / 10000}s * ${t("赛道长度")} / 1000`}</div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center flex-shrink-0">{t("技能价格")}</div>
-        <div className="flex-auto">{skill.need_skill_point}</div>
+        <div className="flex-auto">{data.need_skill_point}</div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center flex-shrink-0">{t("技能评分")}</div>
-        <div className="flex-auto">{skill.grade_value}</div>
+        <div className="flex-auto">{data.grade_value}</div>
       </div>
       {!isNur && supportList.length ? (
         <>
           <div>{t("支援卡")}</div>
-          <SupportList className='w-full' dataList={supportList} sortFlag={false} />
+          <SupportList className="w-full" dataList={supportList} sortFlag={false} />
         </>
       ) : null}
       {!isNur && playerList.length ? (
         <>
           <div>{t("角色")}</div>
-          <PlayerList className='w-full' dataList={playerList} />
+          <PlayerList className="w-full" dataList={playerList} />
         </>
       ) : null}
     </div>
-  );
+  ) : null;
 };
 
 export default SkillDetail;

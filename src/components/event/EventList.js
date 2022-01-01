@@ -11,18 +11,18 @@ import List from "../common/List";
 const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }) => {
   const sort = sortFlag
     ? {
-      data: [
-        { title: "切れ者", func: (data) => JSON.stringify(data)?.indexOf("切れ者") !== -1 },
-        { title: "有选项", func: (data) => data?.choiceList.length > 1 },
-        { title: "无选项", func: (data) => data?.choiceList.length <= 1 },
-      ],
-    }
+        data: [
+          { title: "切れ者", func: (data) => JSON.stringify(data)?.indexOf("切れ者") !== -1 },
+          { title: "有选项", func: (data) => data?.choiceList.length > 1 },
+          { title: "无选项", func: (data) => data?.choiceList.length <= 1 },
+        ],
+      }
     : null;
   const filterFunc =
     type === "multi"
       ? (data) => {
-        return data?.choiceList.length > 1;
-      }
+          return data?.choiceList.length > 1;
+        }
       : null;
   return (
     <List
@@ -32,7 +32,7 @@ const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }
       sort={sort}
       filterFunc={filterFunc}
       onClick={onClick}
-      className=''
+      className=""
       itemRender={(item, setCur) => (
         <EventCard
           className="mr-1 mb-1"
@@ -41,7 +41,7 @@ const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }
         />
       )}
       detailRender={(item) => <EventDetail data={item} isNur={false} />}
-    ></List>
+    />
   );
 };
 

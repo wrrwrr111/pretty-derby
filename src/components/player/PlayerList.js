@@ -39,7 +39,7 @@ const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
       itemClass="w-24 max-w-1/4 "
       detailRender={(data) => <PlayerDetail data={data} isNur={false} />}
       // detailModalSize='regular'
-    ></List>
+    />
   );
 };
 

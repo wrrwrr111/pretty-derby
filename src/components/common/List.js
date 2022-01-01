@@ -17,33 +17,29 @@ const List = ({
   itemRender,
   itemClass,
   detailRender,
-  detailModalSize
+  detailModalSize,
 }) => {
   const [show, setShow] = React.useState(false);
   const list = dataList
     ? dataList
     : idList
-      ? idList.reduce((list, cur) => {
+    ? idList.reduce((list, cur) => {
         return [...list, db.get(listKey).find({ id: cur }).value()];
       }, [])
-      : db.get(listKey).value();
+    : db.get(listKey).value();
   const [cur, setCur] = useState(null);
 
   const showModal = (cur) => {
-    setCur(cur)
-    setShow(true)
-  }
+    setCur(cur);
+    setShow(true);
+  };
 
-  const modal = <Modal
-    size={"lg"} active={show} toggler={() => setShow(false)}
-  >
-    <ModalHeader toggler={() => setShow(false)}>
-      {cur?.name}
-    </ModalHeader>
-    <ModalBody>
-      {detailRender(cur)}
-    </ModalBody>
-  </Modal>
+  const modal = (
+    <Modal size={"lg"} active={show} toggler={() => setShow(false)}>
+      <ModalHeader toggler={() => setShow(false)}>{cur?.name}</ModalHeader>
+      <ModalBody>{detailRender(cur)}</ModalBody>
+    </Modal>
+  );
 
   useEffect(() => {
     ReactTooltip.rebuild();
@@ -75,18 +71,9 @@ const List = ({
               {sortList.map((data) => itemRender(data, showModal))}
               {itemClass && (
                 <>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
-                  <div className={itemClass}></div>
+                  {[...new Array(20)].map((i) => (
+                    <div className={itemClass} />
+                  ))}
                 </>
               )}
             </>

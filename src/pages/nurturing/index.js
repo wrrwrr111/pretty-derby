@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { useDidRecover } from "react-router-cache-route";
-import Button from '@material-tailwind/react/Button'
+import Button from "@material-tailwind/react/Button";
 // import shortid from 'shortid'
 // import axios from "axios";
 import ScrollBars from "react-custom-scrollbars";
-import {
-  Popover,
-} from "antd";
+import { Popover } from "antd";
 
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
@@ -124,11 +122,11 @@ const Nurturing = () => {
     //根据条件过滤
     let tmpRaceList = Object.values(filterCondition).some((f) => f.length > 0)
       ? Object.entries(filterCondition)
-        .filter(([key, filters]) => filters.length > 0)
-        .reduce(
-          (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
-          races
-        )
+          .filter(([key, filters]) => filters.length > 0)
+          .reduce(
+            (result, [key, filters]) => result.filter((race) => filters.includes(race[key])),
+            races
+          )
       : [];
     //过滤后整理成 dataNum:[raceId]
     let tmpFilterRace = {};
@@ -162,7 +160,6 @@ const Nurturing = () => {
     }, []);
     return { height, width };
   };
-
 
   const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
 
@@ -204,8 +201,8 @@ const Nurturing = () => {
     setLayout(layout);
     // onLayoutChange(layout); // updates status display
   };
-  const panelClass = 'bg-white border border-solid border-gray-500'
-  const headClass = 'panel-heading w-full text-center bg-gray-300 cursor-move'
+  const panelClass = "bg-white border border-solid border-gray-500";
+  const headClass = "panel-heading w-full text-center bg-gray-300 cursor-move";
   const pBodyStyle = {
     height: "calc(100% - 22px)",
   };
@@ -231,67 +228,62 @@ const Nurturing = () => {
               alt={player.imgUrl}
               style={{ ...pBodyStyle }}
               onClick={showPlayer}
-            ></img>
+            />
           )}
         </div>
         <div key="b" className={panelClass}>
-          <div className={headClass}>
-            {t("操作")}
-          </div>
-          <div className='flex flex-wrap'>
-            <Button size='sm' buttonType='outline' className="add-player" onClick={showPlayer}>
+          <div className={headClass}>{t("操作")}</div>
+          <div className="flex flex-wrap">
+            <Button size="sm" buttonType="outline" className="add-player" onClick={showPlayer}>
               {t("选择马娘")}
             </Button>
-            <Button size='sm' buttonType='outline' onClick={showSupport2}>{t("支援卡查询")}</Button>
+            <Button size="sm" buttonType="outline" onClick={showSupport2}>
+              {t("支援卡查询")}
+            </Button>
             <BuffButton />
             <Popover
               content={
-                <RaceCheckbox
-                  onChange={onChangeRace}
-                  raceFilterCondition={raceFilterCondition}
-                ></RaceCheckbox>
+                <RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition} />
               }
             >
-              <Button size='sm' buttonType='outline'>{t("比赛")}</Button>
+              <Button size="sm" buttonType="outline">
+                {t("比赛")}
+              </Button>
             </Popover>
-            <MyDecks player={player} supports={supports} loadDeck={loadDeck}></MyDecks>
-            <RecommendDecks player={player} loadDeck={loadDeck}></RecommendDecks>
+            <MyDecks player={player} supports={supports} loadDeck={loadDeck} />
+            <RecommendDecks player={player} loadDeck={loadDeck} />
 
-            <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithBlank)}>{t("初始化布局(有留白)")}</Button>
-            <Button size='sm' buttonType='outline' onClick={() => setLayout(layoutWithoutBlank)}>{t("初始化布局(无留白)")}</Button>
+            <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithBlank)}>
+              {t("初始化布局(有留白)")}
+            </Button>
+            <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithoutBlank)}>
+              {t("初始化布局(无留白)")}
+            </Button>
           </div>
         </div>
         <div key="c" className={panelClass}>
-          <div className={headClass}>
-            {t("事件")}
-          </div>
+          <div className={headClass}>{t("事件")}</div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
             {/* <p>{player.id}</p> */}
-            <EventList idList={player.eventList} sortFlag={true}></EventList>
+            <EventList idList={player.eventList} sortFlag={true} />
           </ScrollBars>
         </div>
         <div key="d" className={panelClass}>
-          <div className={headClass}>
-            {t("技能")}
-          </div>
+          <div className={headClass}>{t("技能")}</div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
             <SkillList idList={player.skillList} isNur={true} size="small" />
           </ScrollBars>
         </div>
         <div key="e" className={panelClass}>
-          <div className={headClass}>
-            {t("比赛")}
-          </div>
+          <div className={headClass}>{t("比赛")}</div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
-            <RaceTimeline raceList={player.raceList || []} filterRace={filterRace}></RaceTimeline>
+            <RaceTimeline raceList={player.raceList || []} filterRace={filterRace} />
           </ScrollBars>
         </div>
         <div key="f" className={panelClass}>
-          <div className={headClass}>
-            {t("隐藏事件")}
-          </div>
+          <div className={headClass}>{t("隐藏事件")}</div>
           <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
-            <EventList idList={player.hideEvent}></EventList>
+            <EventList idList={player.hideEvent} />
           </ScrollBars>
         </div>
         {[0, 1, 2, 3, 4, 5].map((index) => {
@@ -314,12 +306,9 @@ const Nurturing = () => {
                       style={{ width: "26%", height: "39%" }}
                       src={cdnServer + support.imgUrl}
                       alt={support.imgUrl}
-                    ></img>
+                    />
                     <div style={{ flex: "1 1 auto" }}>
-                      <EventList
-                        idList={supports[index].eventList}
-                        pid={supports[index].id}
-                      ></EventList>
+                      <EventList idList={supports[index].eventList} pid={supports[index].id} />
                     </div>
                   </div>
                   <div style={{ margin: "4px 0", background: "rgba(255,255,255,0.6)" }}>
@@ -340,35 +329,34 @@ const Nurturing = () => {
           } else {
             return (
               <div key={`s${index}`} className={panelClass}>
-                <Button size='sm' buttonType='outline' onClick={() => showSupport(index)}>{t("选择支援卡")}</Button>
+                <Button size="sm" buttonType="outline" onClick={() => showSupport(index)}>
+                  {t("选择支援卡")}
+                </Button>
               </div>
             );
           }
         })}
       </GridLayout>
-      <Modal
-        size="lg" active={isPlayerVisible} toggler={closePlayer}
-      >
-        <ModalHeader toggler={closePlayer}>
-          选择支援卡
-        </ModalHeader>
-        <ModalBody >
-          <div className='w-full h-full' style={{ maxHeight: "80vh", overflow: 'auto' }}>
-            <PlayerList onClick={handleSelectPlayer} sortFlag={true}></PlayerList>
+      <Modal size="lg" active={isPlayerVisible} toggler={closePlayer}>
+        <ModalHeader toggler={closePlayer}>选择支援卡</ModalHeader>
+        <ModalBody>
+          <div className="w-full h-full" style={{ maxHeight: "80vh", overflow: "auto" }}>
+            <PlayerList onClick={handleSelectPlayer} sortFlag={true} />
           </div>
         </ModalBody>
       </Modal>
-      <Modal
-        size="lg" active={isSupportVisible} toggler={closeSupport}
-      >
-        <ModalHeader toggler={closeSupport}>
-          选择支援卡
-        </ModalHeader>
+      <Modal size="lg" active={isSupportVisible} toggler={closeSupport}>
+        <ModalHeader toggler={closeSupport}>选择支援卡</ModalHeader>
         <ModalBody>
-          <div className='w-full h-full flex relative' style={{ maxHeight: "80vh", overflow: 'auto' }}>
-            <SupportListWithFilter onClick={needSelect ? handleSelectSupport : null}
+          <div
+            className="w-full h-full flex relative"
+            style={{ maxHeight: "80vh", overflow: "auto" }}
+          >
+            <SupportListWithFilter
+              onClick={needSelect ? handleSelectSupport : null}
               limitHeight={true}
-              sortFlag={true}></SupportListWithFilter>
+              sortFlag={true}
+            />
           </div>
         </ModalBody>
       </Modal>
