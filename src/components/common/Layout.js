@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+
 import Navbar from "@material-tailwind/react/Navbar";
 import NavbarContainer from "@material-tailwind/react/NavbarContainer";
 import NavbarWrapper from "@material-tailwind/react/NavbarWrapper";
@@ -61,13 +62,11 @@ const Layout = ({ children, contentClass, rootClass }) => {
           <NavbarCollapse open={openNavbar}>
             <Nav leftSide>
               {list.map((item) => (
-                <NavLink
-                  active={location.pathname === item.path && "light"}
-                  href={item.path}
-                  ripple="light"
-                >
-                  {t(item.title)}
-                </NavLink>
+                <Link to={item.path}>
+                  <NavLink active={location.pathname === item.path && "light"} ripple="light">
+                    {t(item.title)}
+                  </NavLink>
+                </Link>
               ))}
             </Nav>
           </NavbarCollapse>

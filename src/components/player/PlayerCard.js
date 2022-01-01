@@ -19,6 +19,7 @@ const PlayerCard = (props) => {
       {show && (
         <img
           className="absolute top-0"
+          style={{ "aspect-ratio": "32 / 35" }}
           onError={() => setShow(false)}
           alt={data.name}
           src={cdnServer + data.imgUrl}
