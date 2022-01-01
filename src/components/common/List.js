@@ -47,7 +47,6 @@ const List = ({
   if (!list) {
     return <></>;
   }
-
   if (sort) {
     return (
       <div className={` flex flex-wrap ${className}`}>

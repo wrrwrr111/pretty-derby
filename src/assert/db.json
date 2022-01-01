@@ -47042,7 +47042,13 @@
       "need_skill_point": 140,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "nc8ch87Sik",
+        "qY7U2j6zV",
+        "G-2YozbLO",
+        "McFMq4tI9"
+      ]
     },
     {
       "name": "押し切り準備",
@@ -47068,7 +47074,12 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "FQHAib8QX1",
+        "m9TqBC1asi",
+        "5qD9zubZSL"
+      ]
     },
     {
       "name": "前途洋々",
@@ -47146,7 +47157,17 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "3CyKCpeOSo",
+        "6z_VcQnNtv",
+        "kcrqQWTNs",
+        "yq2rWARqfC",
+        "HWnTDFNvjd",
+        "6VbwVCJNnl",
+        "_6J9XlO5rD",
+        "0hN1gXby4w"
+      ]
     },
     {
       "name": "食い下がり",
@@ -47172,7 +47193,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "VkcmUpJIA",
+        "NqhpeUVOec"
+      ]
     },
     {
       "name": "栄養補給",
@@ -47198,7 +47223,11 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "7WX25PiJ0n",
+        "KHQpuE1wVc"
+      ]
     },
     {
       "name": "紅焔ギア/LP1211-M",
@@ -47250,7 +47279,15 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "_AXNhPs0Y4",
+        "WB2uYDc9uh",
+        "6Eyq5iIZ1L",
+        "4D8c5gdIl_",
+        "LgMabedio",
+        "GRrSQSzAg3"
+      ]
     },
     {
       "name": "先駆け",
@@ -47276,7 +47313,14 @@
       "need_skill_point": 120,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "_VMy9WDq3w",
+        "93jM1DVVTx",
+        "Ajb3IWjzIP",
+        "Fj9NEcb0JQ",
+        "eoigylyw68"
+      ]
     },
     {
       "name": "ギアシフト",
@@ -47302,7 +47346,12 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "NKCWd0m_eX",
+        "KIvxstcbHx",
+        "NLedHFC9md"
+      ]
     },
     {
       "name": "究極テイオーステップ",
@@ -47354,7 +47403,11 @@
       "need_skill_point": 120,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "0FrpqaigbC",
+        "Rfeiob0qoP"
+      ]
     },
     {
       "name": "イナズマステップ",
@@ -47386,7 +47439,10 @@
       "need_skill_point": 140,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "mVGvE5-9KE"
+      ]
     },
     {
       "name": "巧みなステップ",
@@ -47464,7 +47520,11 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "jCsj5xQSGn",
+        "pDkbLieec"
+      ]
     },
     {
       "name": "アクセラレーション",
@@ -47600,7 +47660,12 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "3CyKCpeOSo",
+        "N5dSFbt4FW",
+        "mBd8rxwzyk"
+      ]
     },
     {
       "name": "好位追走",
@@ -47626,7 +47691,12 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2glBXJ8mSx",
+        "-N5dGdHMi7",
+        "nwBT2U5u1t"
+      ]
     },
     {
       "name": "束縛",
@@ -47652,7 +47722,10 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "CJAI6gItG"
+      ]
     },
     {
       "name": "貴顕の使命を果たすべく",
@@ -47704,7 +47777,10 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "IRZNaS4nDO"
+      ]
     },
     {
       "name": "リードキープ",
@@ -47730,7 +47806,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ToToLDP6qy",
+        "nJz9W1Hj_B"
+      ]
     },
     {
       "name": "波乱注意砲！",
@@ -47782,7 +47862,12 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "y2BuwaIyx5",
+        "X8hDbEUBOp",
+        "0xDUZ1PXdB"
+      ]
     },
     {
       "name": "お見通し",
@@ -47808,7 +47893,10 @@
       "need_skill_point": 110,
       "grade_value": 85,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "qa_WDNOYSD"
+      ]
     },
     {
       "name": "ウマ好み",
@@ -47834,7 +47922,10 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "GyyHRYlaJX"
+      ]
     },
     {
       "name": "ブルーローズチェイサー",
@@ -47886,7 +47977,12 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "I61NYFuDRF",
+        "xKBIynCnGL",
+        "hcvqDpwBY4"
+      ]
     },
     {
       "name": "先行けん制",
@@ -47938,7 +48034,10 @@
       "need_skill_point": 120,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "4n2DTKv4Tx"
+      ]
     },
     {
       "name": "レッドエース",
@@ -47996,7 +48095,11 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "cujD9Sr-8G",
+        "sm3rK0ct_"
+      ]
     },
     {
       "name": "テンポアップ",
@@ -48022,7 +48125,12 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "vqEr94fjsm",
+        "eqMo5evI28",
+        "55DuySqOR-"
+      ]
     },
     {
       "name": "アクセルX",
@@ -48100,7 +48208,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "MFzUayIgd"
+      ]
     },
     {
       "name": "上昇気流",
@@ -48126,7 +48237,10 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "CZf2_-OWwN"
+      ]
     },
     {
       "name": "精神一到",
@@ -48262,7 +48376,10 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "gnK6JfV_x"
+      ]
     },
     {
       "name": "エンプレス・プライド",
@@ -48314,7 +48431,12 @@
       "need_skill_point": 120,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "wQOgM_ieAm",
+        "Je4tmIkjg",
+        "RfcLtub5wt"
+      ]
     },
     {
       "name": "かく乱",
@@ -48340,7 +48462,10 @@
       "need_skill_point": 110,
       "grade_value": 85,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "LyQmRDePl"
+      ]
     },
     {
       "name": "勝利のキッス☆",
@@ -48398,7 +48523,11 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "XlZnc3NNf0",
+        "KJSV0MfZJ4"
+      ]
     },
     {
       "name": "クリアハート",
@@ -48450,7 +48579,12 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "NC3SYZz5X",
+        "q6xHdL3qjG",
+        "Dci6v7NUA"
+      ]
     },
     {
       "name": "燃えろ筋肉！",
@@ -48502,7 +48636,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "qmg04Luv4",
+        "TEQhcD51rr",
+        "8phZrUdCyA",
+        "Yfb10orjla"
+      ]
     },
     {
       "name": "外差し準備",
@@ -48528,7 +48668,13 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "w_zMK_og1D",
+        "b-9lwXm_w6",
+        "rpPmHDHukd",
+        "0ZK5LxDcX"
+      ]
     },
     {
       "name": "全力Vサインッ！",
@@ -48580,7 +48726,11 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "1vQ1jPr5mO",
+        "YCzErEgtzS"
+      ]
     },
     {
       "name": "がんばり屋",
@@ -48606,7 +48756,10 @@
       "need_skill_point": 120,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "umXVK_hzaa"
+      ]
     },
     {
       "name": "introduction：My body",
@@ -48658,7 +48811,12 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "LdkuZ5w_J2",
+        "flhCn7v3Ra",
+        "Bybpb5menn"
+      ]
     },
     {
       "name": "学級委員長+速さ＝バクシン",
@@ -48710,7 +48868,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "s-ZKRO4V2b",
+        "K35s8G4D3-"
+      ]
     },
     {
       "name": "逃げ焦り",
@@ -48814,7 +48976,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ypP6f-ft5"
+      ]
     },
     {
       "name": "ラッキーセブン",
@@ -48852,7 +49017,11 @@
       "need_skill_point": 110,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "_PfKQgsVF",
+        "dMdzz_Cjbq"
+      ]
     },
     {
       "name": "ワクワクよーいドン",
@@ -48982,7 +49151,10 @@
       "need_skill_point": 70,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2ijMhEaBVU"
+      ]
     },
     {
       "name": "ささやき",
@@ -49034,7 +49206,11 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "29f7wLNYNs",
+        "3jbZwlhVn1"
+      ]
     },
     {
       "name": "Call me KING",
@@ -49112,7 +49288,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "KjUfBUUnK1",
+        "CbxjeT8qVk"
+      ]
     },
     {
       "name": "読解力",
@@ -49138,7 +49318,11 @@
       "need_skill_point": 120,
       "grade_value": 85,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Fy2UJ9onIQ",
+        "Rt_6FTKhGR"
+      ]
     },
     {
       "name": "ヴィットーリアに捧ぐ舞踏",
@@ -49190,7 +49374,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "8OIwKQfVfp",
+        "L0q3AOSCUt",
+        "9ML18Yb48E",
+        "XW5XdFpFB"
+      ]
     },
     {
       "name": "抜け出し準備",
@@ -49216,7 +49406,20 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "vqEr94fjsm",
+        "rpOfqyujC",
+        "hNbHI9aFR_",
+        "dQQK5UyDrE",
+        "zg8fhaADHr",
+        "8irrO5-SRG",
+        "S0_eOVf3wb",
+        "u_ZdsMPvAm",
+        "yI5jLBU2lD",
+        "2N0ih7dm4N",
+        "MRV5oxMBN2"
+      ]
     },
     {
       "name": "別腹タンク",
@@ -49242,7 +49445,12 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "WYsO2f0rIY",
+        "loStqc7FJz",
+        "U7eOTp9Cta"
+      ]
     },
     {
       "name": "全身全霊",
@@ -49268,7 +49476,10 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ydsEJB05d"
+      ]
     },
     {
       "name": "道悪○",
@@ -49294,7 +49505,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "BHmzWYQ5U",
+        "QtfKp0kDGT",
+        "y210svWnb7",
+        "8phZrUdCyA"
+      ]
     },
     {
       "name": "差しのコツ○",
@@ -49326,7 +49543,10 @@
       "need_skill_point": 110,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "G9YGrGxoRR"
+      ]
     },
     {
       "name": "左回り○",
@@ -49352,7 +49572,11 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "FANA6DCZRo",
+        "Ti3DIDlE-R"
+      ]
     },
     {
       "name": "逃亡者",
@@ -49378,7 +49602,11 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "m9TqBC1asi",
+        "JKikQh569c"
+      ]
     },
     {
       "name": "急ぎ足",
@@ -49404,7 +49632,13 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "YHzCeuULcV",
+        "xD5VrY_nQI",
+        "fjtuEAIe22",
+        "TSsf8XMxnE"
+      ]
     },
     {
       "name": "逃げ直線○",
@@ -49430,7 +49664,11 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "VkcmUpJIA",
+        "Dq5wV0aY-K"
+      ]
     },
     {
       "name": "逃げコーナー○",
@@ -49488,7 +49726,10 @@
       "need_skill_point": 110,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "UB5C5Pga9F"
+      ]
     },
     {
       "name": "一陣の風",
@@ -49514,7 +49755,11 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "kG_5-Il5LC",
+        "YdBLs6spoX"
+      ]
     },
     {
       "name": "垂れウマ回避",
@@ -49546,7 +49791,16 @@
       "need_skill_point": 150,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "zwtKZjH_24",
+        "5KrJvO2mf0",
+        "vwFKtGrZay",
+        "ixHszo3Z4M",
+        "LDAevIhXrB",
+        "3RwtYtDM9-",
+        "dBwb47Ywi1"
+      ]
     },
     {
       "name": "軽やかステップ",
@@ -49572,7 +49826,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "f7Z4jBfDsS",
+        "KHQpuE1wVc"
+      ]
     },
     {
       "name": "阪神レース場○",
@@ -49598,7 +49856,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2ijMhEaBVU",
+        "XaCD0BgEqk",
+        "2J1DcHQKCG",
+        "h9MHwBMkiV"
+      ]
     },
     {
       "name": "曲線のソムリエ",
@@ -49624,7 +49888,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "lLyvhs6MAA"
+      ]
     },
     {
       "name": "後方待機",
@@ -49650,7 +49917,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "put5dq2Q8v"
+      ]
     },
     {
       "name": "直線一気",
@@ -49676,7 +49946,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "fgK_uh4UP"
+      ]
     },
     {
       "name": "内弁慶",
@@ -49702,7 +49975,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "WG4kM_lHcN",
+        "m8qeiEb04T"
+      ]
     },
     {
       "name": "下校の楽しみ",
@@ -49754,7 +50031,10 @@
       "need_skill_point": 110,
       "grade_value": 85,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "LFGUMNZAsc"
+      ]
     },
     {
       "name": "まなざし",
@@ -49838,7 +50118,10 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "VkcmUpJIA"
+      ]
     },
     {
       "name": "地固め",
@@ -49890,7 +50173,11 @@
       "need_skill_point": 70,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "LyrBOCVXJI",
+        "4OGBVoAOoT"
+      ]
     },
     {
       "name": "先行駆け引き",
@@ -49916,7 +50203,12 @@
       "need_skill_point": 130,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "GzkVVIgPXG",
+        "2XKeJlFULM",
+        "IrAW434mG0"
+      ]
     },
     {
       "name": "徹底マーク○",
@@ -49942,7 +50234,11 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "IrAW434mG0",
+        "8VGn__2eF"
+      ]
     },
     {
       "name": "豪脚",
@@ -49968,7 +50264,11 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "I5M1bms00m",
+        "CZf2_-OWwN"
+      ]
     },
     {
       "name": "中山レース場○",
@@ -49994,7 +50294,14 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "icfpnHZsUk",
+        "2ijMhEaBVU",
+        "S9gSguEzQ",
+        "Uu14Ml0TA",
+        "ynvvYsUIbX"
+      ]
     },
     {
       "name": "位置取り押し上げ",
@@ -50046,7 +50353,11 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "DoUgxoFMaM",
+        "aDHDbbqlLh"
+      ]
     },
     {
       "name": "東京レース場○",
@@ -50072,7 +50383,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "wmG2LBBGms",
+        "Nzm-hlfV-A",
+        "flhCn7v3Ra",
+        "icfpnHZsUk"
+      ]
     },
     {
       "name": "直線加速",
@@ -50098,7 +50415,12 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "DaKbMpFYAi",
+        "LgMabedio",
+        "5Io7JnbBT"
+      ]
     },
     {
       "name": "マイル直線○",
@@ -50150,7 +50472,10 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "hQMU2tC7T"
+      ]
     },
     {
       "name": "晴れの日○",
@@ -50176,7 +50501,10 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "72ThNHpG3k"
+      ]
     },
     {
       "name": "キラーチューン",
@@ -50202,7 +50530,11 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "55DuySqOR-",
+        "t-EbQpQJbP"
+      ]
     },
     {
       "name": "二の矢",
@@ -50228,7 +50560,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Lue8Ijj1R"
+      ]
     },
     {
       "name": "脱出術",
@@ -50254,7 +50589,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "TSsf8XMxnE"
+      ]
     },
     {
       "name": "内枠得意○",
@@ -50306,7 +50644,11 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "EiP-6Y-n9s",
+        "wJbBGnBdAw"
+      ]
     },
     {
       "name": "トリック（前）",
@@ -50358,7 +50700,10 @@
       "need_skill_point": 130,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "OZHl_WW6je"
+      ]
     },
     {
       "name": "先行ためらい",
@@ -50384,7 +50729,10 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "kIrFC8SCpT"
+      ]
     },
     {
       "name": "尻尾上がり",
@@ -50410,7 +50758,11 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "TUQ9bvb3B_",
+        "wNODHsvcqS"
+      ]
     },
     {
       "name": "ウマ込み冷静",
@@ -50436,7 +50788,13 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "LLs92g8xnV",
+        "7i0Eunyuyw",
+        "P16poiUPFP",
+        "YXy9xT1q27"
+      ]
     },
     {
       "name": "迅速果断",
@@ -50462,7 +50820,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Xc3F1cuGvI"
+      ]
     },
     {
       "name": "差し焦り",
@@ -50514,7 +50875,10 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "V6_CNxL1xs"
+      ]
     },
     {
       "name": "右回り○",
@@ -50540,7 +50904,10 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Bqm-cL0xsA"
+      ]
     },
     {
       "name": "秋ウマ娘○",
@@ -50618,7 +50985,11 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ka_VfR5Kzz",
+        "bCbJHMYlL"
+      ]
     },
     {
       "name": "スリップストリーム",
@@ -50670,7 +51041,10 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "KoiAuJYduR"
+      ]
     },
     {
       "name": "ペースキープ",
@@ -50696,7 +51070,13 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "CN2SlEd8K8",
+        "DaKbMpFYAi",
+        "qDVtrJDEOS",
+        "7GqXU07V4c"
+      ]
     },
     {
       "name": "勝利への執念",
@@ -50722,7 +51102,11 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "hizbqaigiO",
+        "LgfN9nS4xs"
+      ]
     },
     {
       "name": "冷静",
@@ -50748,7 +51132,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "zonctQkkj"
+      ]
     },
     {
       "name": "差しコーナー○",
@@ -50774,7 +51161,10 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "xxUXRmbKmS"
+      ]
     },
     {
       "name": "乗り換え上手",
@@ -50800,7 +51190,11 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "WHKeZQB7lV",
+        "uKw8FlY77"
+      ]
     },
     {
       "name": "曇りの日○",
@@ -50852,7 +51246,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "WBxSqE8WP"
+      ]
     },
     {
       "name": "逃げ駆け引き",
@@ -50878,7 +51275,10 @@
       "need_skill_point": 130,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "6GTKtB36eC"
+      ]
     },
     {
       "name": "短距離直線○",
@@ -50904,7 +51304,10 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "4ZI1VJSQQ"
+      ]
     },
     {
       "name": "短距離コーナー○",
@@ -50956,7 +51359,10 @@
       "need_skill_point": 170,
       "grade_value": 262,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "HmY8OghoHj"
+      ]
     },
     {
       "name": "善後策",
@@ -51034,7 +51440,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "FA3Vy9C4Ht"
+      ]
     },
     {
       "name": "札幌レース場○",
@@ -51060,7 +51469,10 @@
       "need_skill_point": 70,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2ijMhEaBVU"
+      ]
     },
     {
       "name": "展開窺い",
@@ -51086,7 +51498,14 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "KJSV0MfZJ4",
+        "Ajb3IWjzIP",
+        "j-4OAnDnJT",
+        "4n2DTKv4Tx",
+        "rTJXi8pwhW"
+      ]
     },
     {
       "name": "注目の踊り子",
@@ -51112,7 +51531,11 @@
       "need_skill_point": 120,
       "grade_value": 334,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "_an25zOuo",
+        "Rfeiob0qoP"
+      ]
     },
     {
       "name": "大井レース場○",
@@ -51190,7 +51613,11 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "lMYWlfmMTb",
+        "jl-_oKh63r"
+      ]
     },
     {
       "name": "ペースアップ",
@@ -51216,7 +51643,10 @@
       "need_skill_point": 170,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "joCQeRMXCj"
+      ]
     },
     {
       "name": "ハヤテ一文字",
@@ -51242,7 +51672,10 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "DoUgxoFMaM"
+      ]
     },
     {
       "name": "先行コーナー○",
@@ -51268,7 +51701,11 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "aeU-wGqeh7",
+        "Lc8cuLpdbh"
+      ]
     },
     {
       "name": "プランX",
@@ -51294,7 +51731,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "cYUE-WI0nq"
+      ]
     },
     {
       "name": "様子見",
@@ -51346,7 +51786,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "OMWduY8eX",
+        "Gnlo_OLfq"
+      ]
     },
     {
       "name": "仕掛け準備",
@@ -51378,7 +51822,10 @@
       "need_skill_point": 140,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Cow7Dag6bq"
+      ]
     },
     {
       "name": "抜け駆け禁止",
@@ -51430,7 +51877,11 @@
       "need_skill_point": 140,
       "grade_value": 394,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "qY7U2j6zV",
+        "f2ApkpNvW"
+      ]
     },
     {
       "name": "追込焦り",
@@ -51456,7 +51907,10 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "_5ZuD20Bkn"
+      ]
     },
     {
       "name": "夏ウマ娘○",
@@ -51534,7 +51988,14 @@
       "need_skill_point": 120,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "f3z6GiWk0x",
+        "HNd0JVzKG-",
+        "SMweixeWws",
+        "1r1gY45WR",
+        "MBJzgIfQri"
+      ]
     },
     {
       "name": "まき直し",
@@ -51560,7 +52021,11 @@
       "need_skill_point": 120,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Q9cLRtNnVf",
+        "rrEXXNg-Si"
+      ]
     },
     {
       "name": "追込ためらい",
@@ -51586,7 +52051,11 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ZktkbfA2d2",
+        "GPJbOymvb8"
+      ]
     },
     {
       "name": "仕掛け抜群",
@@ -51612,7 +52081,10 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2mB8hya_p"
+      ]
     },
     {
       "name": "追込直線○",
@@ -51716,7 +52188,11 @@
       "need_skill_point": 130,
       "grade_value": 174,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "6GTKtB36eC",
+        "LC5_x_tyqX"
+      ]
     },
     {
       "name": "長距離直線○",
@@ -51742,7 +52218,10 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "yuqYHbr1-q"
+      ]
     },
     {
       "name": "パス上手",
@@ -51768,7 +52247,11 @@
       "need_skill_point": 160,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "kMGbNYSt5T",
+        "OzfhYkB2N"
+      ]
     },
     {
       "name": "雪の日○",
@@ -51846,7 +52329,12 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "reGdXPCEV",
+        "TpRU0yVYKW",
+        "nkarWX3j0t"
+      ]
     },
     {
       "name": "追込コーナー○",
@@ -51898,7 +52386,12 @@
       "need_skill_point": 70,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "nJKqKTgHfx",
+        "nJz9W1Hj_B",
+        "zonctQkkj"
+      ]
     },
     {
       "name": "逃げためらい",
@@ -51924,7 +52417,11 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "nfdH3mzDpl",
+        "BUIyW5z_IU"
+      ]
     },
     {
       "name": "函館レース場○",
@@ -51950,7 +52447,10 @@
       "need_skill_point": 70,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2ijMhEaBVU"
+      ]
     },
     {
       "name": "トリック（後）",
@@ -51976,7 +52476,10 @@
       "need_skill_point": 140,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2hA2L7cw5k"
+      ]
     },
     {
       "name": "スリーセブン",
@@ -52028,7 +52531,12 @@
       "need_skill_point": 100,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "VkcmUpJIA",
+        "Ki7Ompm3C4",
+        "yYI0kTRoct"
+      ]
     },
     {
       "name": "京都レース場○",
@@ -52054,7 +52562,10 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "2ijMhEaBVU"
+      ]
     },
     {
       "name": "差しためらい",
@@ -52080,7 +52591,11 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "VkcmUpJIA",
+        "6VbwVCJNnl"
+      ]
     },
     {
       "name": "おひとり様○",
@@ -52106,7 +52621,13 @@
       "need_skill_point": 90,
       "grade_value": 129,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "m8qeiEb04T",
+        "dMdzz_Cjbq",
+        "cDfdbEdxiI",
+        "4Hj_QUPVh"
+      ]
     },
     {
       "name": "長距離コーナー○",
@@ -52158,7 +52679,10 @@
       "need_skill_point": 130,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "lAMUOqRJ6F"
+      ]
     },
     {
       "name": "追込けん制",
@@ -52210,7 +52734,12 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "alY-Seou6",
+        "xKBIynCnGL",
+        "f4nOY7o0Zm"
+      ]
     },
     {
       "name": "どこ吹く風",
@@ -52236,7 +52765,11 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "P16poiUPFP",
+        "r87WvA8Bg2"
+      ]
     },
     {
       "name": "火事場のバ鹿力",
@@ -52262,7 +52795,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ucK-2Q0jfa"
+      ]
     },
     {
       "name": "食いしん坊",
@@ -52288,7 +52824,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "7WX25PiJ0n"
+      ]
     },
     {
       "name": "スタミナキープ",
@@ -52314,7 +52853,14 @@
       "need_skill_point": 180,
       "grade_value": 217,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "F1Xko9vQL7",
+        "kQlaUBiOVo",
+        "0ZK5LxDcX",
+        "_SzO_GY7tl",
+        "HL_oERAYIW"
+      ]
     },
     {
       "name": "スピードスター",
@@ -52340,7 +52886,11 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "8irrO5-SRG",
+        "S0_eOVf3wb"
+      ]
     },
     {
       "name": "スピードイーター",
@@ -52540,7 +53090,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "f4nOY7o0Zm"
+      ]
     },
     {
       "name": "先陣の心得",
@@ -52566,7 +53119,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Waxi_9zUGD"
+      ]
     },
     {
       "name": "余裕綽々",
@@ -52748,7 +53304,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "nwBT2U5u1t"
+      ]
     },
     {
       "name": "千里眼",
@@ -52774,7 +53333,10 @@
       "need_skill_point": 110,
       "grade_value": 334,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "f4nOY7o0Zm"
+      ]
     },
     {
       "name": "幻惑のかく乱",
@@ -52858,7 +53420,11 @@
       "need_skill_point": 150,
       "grade_value": 394,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "7cPOMm-szo",
+        "f4nOY7o0Zm"
+      ]
     },
     {
       "name": "昇り龍",
@@ -52884,7 +53450,10 @@
       "need_skill_point": 180,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "rpPmHDHukd"
+      ]
     },
     {
       "name": "努力家",
@@ -52910,7 +53479,10 @@
       "need_skill_point": 120,
       "grade_value": 334,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "61QY6efJBB"
+      ]
     },
     {
       "name": "圧倒的リード",
@@ -52962,7 +53534,11 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "XdSXsij6Z",
+        "5k9fTIodoM"
+      ]
     },
     {
       "name": "不屈の心",
@@ -52988,7 +53564,10 @@
       "need_skill_point": 170,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "f4nOY7o0Zm"
+      ]
     },
     {
       "name": "奇術師",
@@ -53155,7 +53734,10 @@
       "need_skill_point": 160,
       "grade_value": 508,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "KjUfBUUnK1"
+      ]
     },
     {
       "name": "大局観",
@@ -53181,7 +53763,10 @@
       "need_skill_point": 120,
       "grade_value": 334,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Fy6JGnQ_4L"
+      ]
     },
     {
       "name": "G00 1st.F∞;",
@@ -53233,7 +53818,10 @@
       "need_skill_point": 120,
       "grade_value": 334,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "Ajb3IWjzIP"
+      ]
     },
     {
       "name": "切り開く者",
@@ -53888,7 +54476,11 @@
       "cooldown": 300000,
       "need_skill_point": 170,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "otrPB-bFIA",
+        "rlPnAjfZ-n"
+      ]
     },
     {
       "name": "Nemesis",
@@ -54019,7 +54611,10 @@
       "cooldown": 5000000,
       "need_skill_point": 180,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "fHFds9863g"
+      ]
     },
     {
       "name": "チャート急上昇！",
@@ -55375,7 +55970,10 @@
       "ability2": [],
       "ability_time": 30000,
       "cooldown": 5000000,
-      "need_skill_point": 110
+      "need_skill_point": 110,
+      "events": [
+        "uau1xH0qIU"
+      ]
     },
     {
       "name": "Shadow Break",
@@ -55500,7 +56098,10 @@
       "cooldown": 5000000,
       "need_skill_point": 160,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "m8qeiEb04T"
+      ]
     },
     {
       "name": "リラックス",
@@ -55550,7 +56151,10 @@
       "cooldown": 5000000,
       "need_skill_point": 120,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "G9etOzE8Cm"
+      ]
     },
     {
       "name": "煌星のヴォードヴィル",
@@ -55750,7 +56354,10 @@
       "cooldown": 5000000,
       "need_skill_point": 110,
       "condition2": "",
-      "ability2": []
+      "ability2": [],
+      "events": [
+        "ZUzCezQ7y"
+      ]
     },
     {
       "name": "I Never Goof Up!",

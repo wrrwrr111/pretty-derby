@@ -3,6 +3,7 @@ import db from "../../db.js";
 import t from "../t.js";
 import SupportList from "../support/SupportList";
 import PlayerList from "../player/PlayerList";
+import EventList from "../event/EventList";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const allSupportList = db.get("supports").value();
@@ -109,18 +110,28 @@ const SkillDetail = (props) => {
         <div className="w-20 text-center flex-shrink-0">{t("技能评分")}</div>
         <div className="flex-auto">{data.grade_value}</div>
       </div>
-      {!isNur && supportList.length ? (
+      {!isNur && (
         <>
-          <div>{t("支援卡")}</div>
-          <SupportList className="w-full" dataList={supportList} sortFlag={false} />
+          {supportList.length > 0 && (
+            <>
+              <div>{t("支援卡")}</div>
+              <SupportList className="w-full" dataList={supportList} sortFlag={false} />
+            </>
+          )}
+          {playerList.length > 0 && (
+            <>
+              <div>{t("角色")}</div>
+              <PlayerList className="w-full" dataList={playerList} />
+            </>
+          )}
+          {data.events?.length > 0 && (
+            <>
+              <div>{t("事件")}</div>
+              <EventList className="w-full" idList={data.events} />
+            </>
+          )}
         </>
-      ) : null}
-      {!isNur && playerList.length ? (
-        <>
-          <div>{t("角色")}</div>
-          <PlayerList className="w-full" dataList={playerList} />
-        </>
-      ) : null}
+      )}
     </div>
   ) : null;
 };
