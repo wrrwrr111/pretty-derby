@@ -36,7 +36,7 @@ const Skill = (props) => {
         <div
           className="sticky top-20 hidden md:flex w-1/4 flex-col p-1 overflow-auto"
           style={{
-            height: "calc(100vh - 120)",
+            height: "calc(100vh - 120px)",
           }}
         >
           <SkillFilterForm onUpdate={setSkillList} />

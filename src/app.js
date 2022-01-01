@@ -24,9 +24,9 @@ const AppPc = () => {
   return (
     <CacheSwitch>
       <Layout>
-        <CacheRoute className='container mx-auto' exact path="/" component={Player} />
-        <CacheRoute className='container mx-auto flex' path="/support" component={Support} />
-        <CacheRoute className='container mx-auto flex' path="/skill" component={Skill} />
+        <CacheRoute className="container mx-auto flex-auto" exact path="/" component={Player} />
+        <CacheRoute className="container mx-auto flex" path="/support" component={Support} />
+        <CacheRoute className="container mx-auto flex" path="/skill" component={Skill} />
         <CacheRoute path={["/nurturing"]} component={Nurturing} />
         <CacheRoute path={["/nurturingMo"]} component={NurturingMO} />
         <CacheRoute className="" path="/seed" component={Seed} />
