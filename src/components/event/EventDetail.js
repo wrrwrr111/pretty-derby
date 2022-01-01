@@ -1,4 +1,5 @@
 import t from "../t.js";
+import SkillList from "../skill/SkillList";
 const EventDetail = ({ data }) => {
   // const ChoiceItem = props.event?.choiceList.map((choice,index)=>{
   //   const ResultItem = choice[1].map((result,index)=>
@@ -15,10 +16,11 @@ const EventDetail = ({ data }) => {
   //   )
   // })
   return data ? (
-    <div className="">
-      <div className="text-lg font-semibold">{data.name}</div>
+    <>
+      <div className="font-semibold mb-1">{data.name}</div>
+      <div className="font-semibold mb-1">{t(data.name)}</div>
       {data.choiceList.map((choice, index) => (
-        <div className={`w-full flex ${index % 2 === 0 ? "bg-white" : "bg-gray-100"}`}>
+        <div className={`w-full flex py-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-100"}`}>
           <div className="w-1/3 mr-4">
             <p>{choice[0]}</p>
             <p>{t(choice[0])}</p>
@@ -30,7 +32,13 @@ const EventDetail = ({ data }) => {
           </div>
         </div>
       ))}
-    </div>
+      {data.skills && (
+        <>
+          <div className="font-semibold mb-1">{t("技能")}</div>
+          <SkillList idList={data.skills || []} />
+        </>
+      )}
+    </>
   ) : null;
 };
 export default EventDetail;
