@@ -132,7 +132,7 @@ const SupportFilterForm = (props) => {
         <CheckBox
           key={formName + "effect" + value}
           register={register}
-          name={"effect"}
+          name={formName+"effect"}
           label={label}
           value={formName + value}
         />
