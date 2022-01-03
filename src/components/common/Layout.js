@@ -62,15 +62,15 @@ const Layout = ({ children, contentClass, rootClass }) => {
           <NavbarCollapse open={openNavbar}>
             <Nav leftSide>
               {list.map((item) => (
-                // <Link to={item.path}>
-                <NavLink
-                  href={item.path}
-                  active={location.pathname === item.path && "light"}
-                  ripple="light"
-                >
-                  {t(item.title)}
-                </NavLink>
-                // </Link>
+                <Link to={item.path}>
+                  <NavLink
+                    // href={item.path}
+                    active={location.pathname === item.path && "light"}
+                    ripple="light"
+                  >
+                    {t(item.title)}
+                  </NavLink>
+                </Link>
               ))}
             </Nav>
           </NavbarCollapse>

@@ -5,8 +5,8 @@ import db from "../../db.js";
 import dbL from "../../dbL.js";
 
 import { useForm } from "react-hook-form";
-import CheckBox from "../common/CheckBox"
-import Input from "../common/Input"
+import CheckBox from "../common/CheckBox";
+import Input from "../common/Input";
 import t from "../t.js";
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
@@ -58,32 +58,27 @@ const rarityOptions = [
   { label: t("固有"), value: "固有" },
 ];
 const SkillFilterForm = (props) => {
-  const { onUpdate, needId, checkOnly } = props;
+  const { onUpdate, needId, checkOnly, formName = "" } = props;
 
-  const {
-    register,
-    watch,
-    formState: { },
-  } = useForm();
+  const { register, watch } = useForm();
 
   React.useEffect(() => {
     const subscription = watch((value, { name, type }) => getFilterList(value));
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const mySupports = dbL.get("mySupports").value();
-  const mySkillList = new Set(
-    mySupports.reduce((list, supportId) => {
-      let support = db.get("supports").find({ id: supportId }).value();
-      return list.concat(support.skillList);
-    }, [])
-  );
-
   const getFilterList = (value) => {
-    const { condition, q, rare, type } = value;
+    const q = value[`${formName}q`];
+    const condition =
+      value[`${formName}condition`] &&
+      value[`${formName}condition`]?.map((e) => e.replace(formName, ""));
+    const rare =
+      value[`${formName}rare`] && value[`${formName}rare`]?.map((e) => e.replace(formName, ""));
+    const type =
+      value[`${formName}type`] && value[`${formName}type`]?.map((e) => e.replace(formName, ""));
     if (checkOnly && !q && !type?.length && !rare?.length && !condition?.length) {
-      onUpdate([])
-      return
+      onUpdate([]);
+      return;
     }
     let tempList = [...allSkillList];
     if (q) {
@@ -126,69 +121,42 @@ const SkillFilterForm = (props) => {
       }, []);
     }
     onUpdate(tempList);
-
-    // if (isOwn) {
-    //   tempSkillList = tempSkillList.filter((skill) => {
-    //     return mySkillList.has(skill?.id);
-    //   });
-    // }
-    // onUpdate(tempSkillList);
   };
-  // }, [filteredSkills, skillChecked1, skillChecked2, isOwn]);
-
-  {/* <Button type={"danger"} onClick={resetCheckbox} style={{ width: "100%" }}>
-      {t("重置")}
-    </Button> */}
   return (
-    < div div div className="flex flex-wrap" >
-      {/* <div>
-          <span
-            style={{ margin: "0 10px 0 0", lineHeight: "32px" }}
-            data-tip={t("可以在支援卡页面配置")}
-          >
-            {t("显示拥有支援卡")}
-          </span>
-          <Switch checked={isOwn} onChange={changeMode} />
-        </div> */}
-      < Input
-        register={register}
-        name='q'
-        placeholder={t("输入关键词")} />
+    <div className="flex flex-wrap">
+      <Input register={register} name="q" placeholder={t("输入关键词")} />
       <p className="w-full  my-1 text-gray-700">触发条件</p>
-      {
-        conditionOptions.map(({ label, value }) =>
-          <CheckBox
-            register={register}
-            name={'condition'}
-            label={label}
-            value={value} />
-        )
-      }
+      {conditionOptions.map(({ label, value }) => (
+        <CheckBox
+          key={formName + "condition" + value}
+          register={register}
+          name={formName + "condition"}
+          label={label}
+          value={formName + value}
+        />
+      ))}
       <p className="w-full my-1 text-gray-700">类型</p>
-      {
-        typeOptions.map(({ label, value }) =>
-          <CheckBox
-            register={register}
-            name={'type'}
-            label={label}
-            value={value}
-            icon={cdnServer + "img/skill_icons/" + value + ".png"}
-          />
-        )
-      }
+      {typeOptions.map(({ label, value }) => (
+        <CheckBox
+          key={formName + "type" + value}
+          register={register}
+          name={formName + "type"}
+          label={label}
+          value={formName + value}
+          icon={cdnServer + "img/skill_icons/" + value + ".png"}
+        />
+      ))}
       <p className="w-full  my-1 text-gray-700">稀有度</p>
-      {
-        rarityOptions.map(({ label, value }) =>
-          <CheckBox
-            register={register}
-            name={'rare'}
-            label={label}
-            value={value}
-            icon={cdnServer + "img/skill_icons/" + value + ".png"}
-          />
-        )
-      }
-    </ div>
+      {rarityOptions.map(({ label, value }) => (
+        <CheckBox
+          key={formName + "rare" + value}
+          register={register}
+          name={formName + "rare"}
+          label={label}
+          value={formName + value}
+        />
+      ))}
+    </div>
   );
 };
 

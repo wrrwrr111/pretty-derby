@@ -19,13 +19,7 @@ const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢
 }));
 const SupportFilterForm = (props) => {
   const { onUpdate, needId } = props;
-  const {
-    register,
-    watch,
-    handleSubmit,
-    setValue,
-    formState: {},
-  } = useForm();
+  const { register, watch, setValue } = useForm();
 
   React.useEffect(() => {
     const subscription = watch((value, { name, type }) => getFilterList(value));
@@ -112,13 +106,30 @@ const SupportFilterForm = (props) => {
       <Input register={register} name="q" placeholder={t("事件关键词搜索")} />
       <p className="w-full my-1 text-gray-700">{t("类型")}</p>
       {typeOptions.map(({ label, value }) => (
-        <CheckBox register={register} name={"type"} label={label} value={value} />
+        <CheckBox
+          key={"type" + value}
+          register={register}
+          name={"type"}
+          label={label}
+          value={value}
+        />
       ))}
       <p className="w-full my-1 text-gray-700">{t("技能筛选")}</p>
-      <SkillFilterForm onUpdate={handleSkillFilterFormChange} checkOnly={true} needId={true} />
+      <SkillFilterForm
+        formName="support"
+        onUpdate={handleSkillFilterFormChange}
+        checkOnly={true}
+        needId={true}
+      />
       <p className="w-full my-1 text-gray-700">{t("育成效果")}</p>
       {effectOptions.map(({ label, value }) => (
-        <CheckBox register={register} name={"effect"} label={label} value={value} />
+        <CheckBox
+          key={"effect" + value}
+          register={register}
+          name={"effect"}
+          label={label}
+          value={value}
+        />
       ))}
     </div>
   );
