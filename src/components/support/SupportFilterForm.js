@@ -133,7 +133,7 @@ const SupportFilterForm = (props) => {
           key={formName + "effect" + value}
           register={register}
           name={"effect"}
-          label={formName + label}
+          label={label}
           value={formName + value}
         />
       ))}
