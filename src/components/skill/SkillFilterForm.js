@@ -58,7 +58,7 @@ const rarityOptions = [
   { label: t("固有"), value: "固有" },
 ];
 const SkillFilterForm = (props) => {
-  const { onUpdate, needId, checkOnly, formName = "" } = props;
+  const { onUpdate, needId, checkOnly, formName = "skill" } = props;
 
   const { register, watch } = useForm();
 

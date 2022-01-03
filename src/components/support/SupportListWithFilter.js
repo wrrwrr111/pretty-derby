@@ -20,7 +20,7 @@ const allSupports = db.get("supports").value();
 
 document.title = TITLE;
 const SupportListWithFilter = (props) => {
-  const { onClick, limitHeight } = props;
+  const { onClick, limitHeight, formName } = props;
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
   const [list, setList] = useState(props.supportList || allSupports || []);
@@ -73,7 +73,7 @@ const SupportListWithFilter = (props) => {
               {t("配置完成")}
             </Button>
           )}
-          <SupportFilterForm onUpdate={setList} />
+          <SupportFilterForm formName={formName} onUpdate={setList} />
         </div>
       ) : (
         <>
@@ -86,7 +86,7 @@ const SupportListWithFilter = (props) => {
           <Modal size={"lg"} active={show} toggler={() => setShow(false)}>
             <ModalHeader toggler={() => setShow(false)}>{"筛选支援卡"}</ModalHeader>
             <ModalBody className="flex flex-col">
-              <SupportFilterForm onUpdate={setList} />
+              <SupportFilterForm formName={formName} onUpdate={setList} />
             </ModalBody>
           </Modal>
         </>

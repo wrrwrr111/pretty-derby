@@ -18,7 +18,7 @@ const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢
   value: item,
 }));
 const SupportFilterForm = (props) => {
-  const { onUpdate, needId } = props;
+  const { onUpdate, needId, formName = "sup" } = props;
   const { register, watch, setValue } = useForm();
 
   React.useEffect(() => {
@@ -27,7 +27,13 @@ const SupportFilterForm = (props) => {
   }, [watch]);
 
   const getFilterList = (value) => {
-    const { type, effect, q, skill } = value;
+    // const { type, effect, q, skill } = value;
+    const q = value[`${formName}q`];
+    const skill = value["skill"];
+    const effect =
+      value[`${formName}effect`] && value[`${formName}effect`]?.map((e) => e.replace(formName, ""));
+    const type =
+      value[`${formName}type`] && value[`${formName}type`]?.map((e) => e.replace(formName, ""));
     let tempList = [...allSupports];
 
     if (type?.length) {
@@ -107,16 +113,16 @@ const SupportFilterForm = (props) => {
       <p className="w-full my-1 text-gray-700">{t("类型")}</p>
       {typeOptions.map(({ label, value }) => (
         <CheckBox
-          key={"type" + value}
+          key={formName + "type" + value}
           register={register}
-          name={"type"}
+          name={formName + "type"}
           label={label}
-          value={value}
+          value={formName + value}
         />
       ))}
       <p className="w-full my-1 text-gray-700">{t("技能筛选")}</p>
       <SkillFilterForm
-        formName="support"
+        formName={formName}
         onUpdate={handleSkillFilterFormChange}
         checkOnly={true}
         needId={true}
@@ -124,11 +130,11 @@ const SupportFilterForm = (props) => {
       <p className="w-full my-1 text-gray-700">{t("育成效果")}</p>
       {effectOptions.map(({ label, value }) => (
         <CheckBox
-          key={"effect" + value}
+          key={formName + "effect" + value}
           register={register}
           name={"effect"}
-          label={label}
-          value={value}
+          label={formName + label}
+          value={formName + value}
         />
       ))}
     </div>

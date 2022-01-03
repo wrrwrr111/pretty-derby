@@ -156,7 +156,7 @@ const SupportInput = ({ value = {}, onChange }) => {
         bodyStyle={{ height: "80vh" }}
       >
         <div className="w-full h-full overflow-hidden flex relative">
-          <SupportListWithFilter onClick={handleSelectSupport} sortFlag={true} />
+          <SupportListWithFilter formName="seedSupMo" onClick={handleSelectSupport} sortFlag={true} />
         </div>
       </Modal>
     </>
