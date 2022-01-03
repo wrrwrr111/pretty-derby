@@ -62,7 +62,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
           <NavbarCollapse open={openNavbar}>
             <Nav leftSide>
               {list.map((item) => (
-                <Link to={item.path}>
+                <Link to={item.path} onClick={() => setOpenNavbar(!openNavbar)}>
                   <NavLink
                     // href={item.path}
                     active={location.pathname === item.path && "light"}
