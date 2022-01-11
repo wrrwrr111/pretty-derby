@@ -4600,7 +4600,7 @@
         "Ms9_QDgDl0",
         "o7iKcNLenx",
         "tAWvS92fji",
-        "ncgZ5JFjc",
+        "5wdpwqlH8",
         "EpDrmIBg3",
         "eK4WTtxQu2",
         "WG1sIUbKFO",
@@ -4737,7 +4737,7 @@
         "Ms9_QDgDl0",
         "o7iKcNLenx",
         "tAWvS92fji",
-        "ncgZ5JFjc",
+        "5wdpwqlH8",
         "EpDrmIBg3",
         "eK4WTtxQu2",
         "WG1sIUbKFO",
@@ -46989,6 +46989,440 @@
       ],
       "rarity": 1,
       "imgUrl": "img/support_card_with_icon/support_thumb_10075.png"
+    },
+    {
+      "gwId": "314958",
+      "id": "pWVUQVycZ",
+      "charaName": "安心沢刺々美",
+      "rare": "SSR",
+      "type": "友人",
+      "name": "ブスッといっとく？",
+      "skillList": [
+        "sNuSF3JUOa",
+        "eqNsnm5rHdT",
+        "2VdsqQOyvi",
+        "ePeFQtPzo3m",
+        "g4eaYmkxkT",
+        "W84ZQCZrVh"
+      ],
+      "trainingEventSkill": [
+        "sNuSF3JUOa",
+        "eqNsnm5rHdT",
+        "2VdsqQOyvi",
+        "ePeFQtPzo3m",
+        "g4eaYmkxkT",
+        "W84ZQCZrVh"
+      ],
+      "possessionSkill": [],
+      "baseAbility": {
+        "name": "ブスッといっとく？",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "あんし～んなイベントが発生しやすくなる"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "MIZK0ImYJE",
+        "eEsvdVtFyR",
+        "wcAV9KhBjg",
+        "bc69xruQj7",
+        "zVhjxKAqSA",
+        "GZs0Unq9E",
+        "pVpwyHuyU1",
+        "0Aimkn1EJ5",
+        "6m5el7wVfe",
+        "sM5G7NcqdM",
+        "BPEhGGW6hG"
+      ],
+      "db_id": 30080,
+      "effects": [
+        {
+          "id": 30080,
+          "type": 2,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 40,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 60
+        },
+        {
+          "id": 30080,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30080,
+          "type": 25,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": 60
+        },
+        {
+          "id": 30080,
+          "type": 26,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 10,
+          "limit_lv35": 20,
+          "limit_lv40": 30,
+          "limit_lv45": 40,
+          "limit_lv50": 50
+        },
+        {
+          "id": 30080,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 3,
+      "imgUrl": "img/support_card_with_icon/support_thumb_30080.png",
+      "unique_effect": {
+        "id": 30080,
+        "lv": 30,
+        "type_0": 0,
+        "value_0": 0,
+        "type_1": 0,
+        "value_1": 0
+      }
+    },
+    {
+      "gwId": "314964",
+      "id": "J5nwv9nYT",
+      "charaName": "タマモクロス",
+      "rare": "SR",
+      "type": "根性",
+      "name": "これがウチらのいか焼きや！",
+      "skillList": [
+        "84p-yg3Ueb",
+        "6IIADrYBkD3",
+        "SYn_JOvSTq5",
+        "lSFwxam1V3y",
+        "bMYtMDrz4Xv",
+        "2J6U9FBm-v",
+        "0pi3rtNhlS",
+        "sWVG7_tDNvo",
+        "NaS8ZJQuuW9",
+        "L15Z0Cp_2t"
+      ],
+      "trainingEventSkill": [
+        "84p-yg3Ueb",
+        "6IIADrYBkD3",
+        "SYn_JOvSTq5"
+      ],
+      "possessionSkill": [
+        "lSFwxam1V3y",
+        "bMYtMDrz4Xv",
+        "2J6U9FBm-v",
+        "0pi3rtNhlS",
+        "sWVG7_tDNvo",
+        "NaS8ZJQuuW9",
+        "L15Z0Cp_2t"
+      ],
+      "baseAbility": {
+        "name": "これがウチらのいか焼きや！",
+        "ability": [
+          [
+            "Lv25~",
+            [
+              "スキルPt(技能点数)ボーナスと初期根性(毅力)アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "peY-n_z40p",
+        "bROD_6i42w",
+        "e_YA-Pd4Ud",
+        "YXy9xT1q27"
+      ],
+      "db_id": 20022,
+      "effects": [
+        {
+          "id": 20022,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": 15,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 8,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 10,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 11,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": 15,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": 15,
+          "limit_lv25": 15,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 20,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 17,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 2,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 2,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 18,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 30,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 40,
+          "limit_lv50": -1
+        },
+        {
+          "id": 20022,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 30,
+          "limit_lv35": -1,
+          "limit_lv40": 60,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 2,
+      "imgUrl": "img/support_card_with_icon/support_thumb_20022.png",
+      "unique_effect": {
+        "id": 20022,
+        "lv": 25,
+        "type_0": 30,
+        "value_0": 1,
+        "type_1": 12,
+        "value_1": 20
+      }
+    },
+    {
+      "gwId": "315000",
+      "id": "94Ybp3F9G",
+      "charaName": "安心沢刺々美",
+      "rare": "R",
+      "type": "友人",
+      "name": "笹針師",
+      "skillList": [
+        "sNuSF3JUOa",
+        "eqNsnm5rHdT",
+        "2VdsqQOyvi",
+        "ePeFQtPzo3m",
+        "g4eaYmkxkT",
+        "W84ZQCZrVh"
+      ],
+      "trainingEventSkill": [
+        "sNuSF3JUOa",
+        "eqNsnm5rHdT",
+        "2VdsqQOyvi",
+        "ePeFQtPzo3m",
+        "g4eaYmkxkT",
+        "W84ZQCZrVh"
+      ],
+      "possessionSkill": [],
+      "baseAbility": {
+        "name": "笹針師",
+        "ability": [
+          [
+            "Lvなし~",
+            [
+              "なし"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "Hi-DBnkuKW",
+        "-ujEpUkcZ0",
+        "tPvCszggvN",
+        "cGOGDYQ2wR",
+        "PLQ-_pN5Tm",
+        "ZeiGN-E9eO",
+        "3PQReOCIPG",
+        "Wzpt2907H2",
+        "MNbTUKF4XE",
+        "9tLWVhrRSX"
+      ],
+      "db_id": 10074,
+      "effects": [
+        {
+          "id": 10074,
+          "type": 2,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 25,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 35,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10074,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": 10,
+          "limit_lv10": -1,
+          "limit_lv15": 15,
+          "limit_lv20": 15,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 20,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10074,
+          "type": 26,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": 5,
+          "limit_lv25": 10,
+          "limit_lv30": 15,
+          "limit_lv35": 20,
+          "limit_lv40": 25,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 10074,
+          "type": 30,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": 1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 1,
+      "imgUrl": "img/support_card_with_icon/support_thumb_10074.png"
     }
   ],
   "skills": [
@@ -57418,21 +57852,118 @@
       "need_skill_point": 180
     },
     {
-      "name": "コーナー巧者◎",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill133.png",
-      "rare": "ノーマル",
-      "describe": "コーナーが得意になり速度がわずかに上がる",
-      "id": "_Y8j_Q9aEK"
-    },
-    {
       "name": "コーナー加速◎",
       "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill138.png",
       "rare": "ノーマル",
       "describe": "華麗なコーナーワークで加速力がわずかに上がる",
       "id": "8_iOVHiUH"
+    },
+    {
+      "name": "博打うち",
+      "imgUrl": "img/skill_icons/20012.png",
+      "rare": "レア",
+      "describe": "レース後半に速度がすごく上がるがすごく疲れてしまうことがある",
+      "id": "sNuSF3JUOa",
+      "condition": "distance_rate_after_random==50",
+      "rarity": 2,
+      "db_id": 202031,
+      "icon_id": 20012,
+      "grade_value": 334,
+      "ability": [
+        {
+          "type": 27,
+          "value": 4500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 9,
+          "value": -10000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 18000,
+      "cooldown": 5000000,
+      "need_skill_point": 120
+    },
+    {
+      "name": "あやしげな作戦",
+      "imgUrl": "img/skill_icons/20011.png",
+      "rare": "ノーマル",
+      "describe": "レース後半に速度が少し上がるがすごく疲れてしまうことがある",
+      "id": "2VdsqQOyvi",
+      "condition": "distance_rate_after_random==50",
+      "rarity": 1,
+      "db_id": 202032,
+      "icon_id": 20011,
+      "grade_value": 129,
+      "ability": [
+        {
+          "type": 27,
+          "value": 2500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 9,
+          "value": -10000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 18000,
+      "cooldown": 5000000,
+      "need_skill_point": 120
+    },
+    {
+      "name": "コーナー回復×",
+      "imgUrl": "img/skill_icons/20024.png",
+      "rare": "ノーマル",
+      "describe": "無駄の多いコーナリングで持久力が少し減少する",
+      "id": "g4eaYmkxkT",
+      "condition": "corner_random==1@corner_random==2@corner_random==3@corner_random==4",
+      "rarity": 1,
+      "db_id": 200353,
+      "icon_id": 20024,
+      "grade_value": -262,
+      "ability": [
+        {
+          "type": 9,
+          "value": -200,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 0,
+      "cooldown": 5000000,
+      "need_skill_point": 100
+    },
+    {
+      "name": "引っ込み思案",
+      "imgUrl": "img/skill_icons/10034.png",
+      "rare": "ノーマル",
+      "describe": "自分と同じ作戦のウマ娘が6人以上だと能力を少し発揮しにくい",
+      "id": "W84ZQCZrVh",
+      "condition": "running_style_count_same>=6",
+      "rarity": 1,
+      "db_id": 200283,
+      "icon_id": 10034,
+      "grade_value": -129,
+      "ability": [
+        {
+          "type": 3,
+          "value": -400000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": -1,
+      "cooldown": 0,
+      "need_skill_point": 50
     }
   ],
-  "updateTime": 1641561639584,
+  "updateTime": 1641898502035,
   "races": [
     {
       "name": "中京ジュニアステークス",
@@ -121270,6 +121801,527 @@
         ]
       ],
       "id": "3p-4zu2PP"
+    },
+    {
+      "name": "初詣",
+      "choiceList": [
+        [
+          "超健康優良児になる",
+          [
+            "体力+30"
+          ]
+        ],
+        [
+          "超模範的ウマ娘になる",
+          [
+            "5種ステータス(能力)を+5"
+          ]
+        ],
+        [
+          "超スピード以外の武器を持つ",
+          [
+            "スキルPt(技能点数)+35"
+          ]
+        ]
+      ],
+      "id": "5wdpwqlH8"
+    },
+    {
+      "name": "あんし～んな二人三脚！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+30~48",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)からランダムに(随机)1種を+10~15",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力+10~16",
+            "やる気(干劲)ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "MIZK0ImYJE"
+    },
+    {
+      "name": "あんし～ん☆サングラス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+30~48",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~15",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力+10~16",
+            "やる気(干劲)ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "eEsvdVtFyR"
+    },
+    {
+      "name": "決戦☆あんし～んよ永遠に！",
+      "choiceList": [
+        [
+          "思いっきりやっちゃってください！",
+          [
+            "成功時：",
+            "体力+30~48",
+            "5種ステータス(能力)を+10~15",
+            "スキルpt+20~30",
+            "『博打うち』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力-10",
+            "やる気(干劲)2段階ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "あんし～ん第一でお願いします……！",
+          [
+            "成功時：",
+            "体力全回復",
+            "やる気(干劲)アップ(提升)",
+            "『博打うち』のヒントLv+1",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力+20~32",
+            "『あやしげな作戦』のヒントLv+1",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "wcAV9KhBjg"
+    },
+    {
+      "name": "全ての道は笹針に通じる",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "5種ステータス(能力)からランダムに(随机)1種を+10~15",
+            "安心沢刺々美の絆ゲージ+5",
+            "ランダムで(有概率)『切れ者』になる",
+            "失敗時：",
+            "スキルPt(技能点数)+50~75",
+            "『引っ込み思案』を取得",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "bc69xruQj7"
+    },
+    {
+      "name": "不審者だけど、あんし～ん！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)1種を+20~30",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "zVhjxKAqSA"
+    },
+    {
+      "name": "必中☆笹針師",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+2~3",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~6",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力-5",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "GZs0Unq9E"
+    },
+    {
+      "name": "あんし～んの練習台？",
+      "choiceList": [
+        [
+          "わかりました、お付き合いします！",
+          [
+            "成功時：",
+            "体力最大値+3~4",
+            "体力+10~16",
+            "やる気(干劲)アップ(提升)",
+            "安心沢刺々美の絆ゲージ+10",
+            "安心沢刺々美とお出かけできるようになる",
+            "失敗時：",
+            "スキルPt(技能点数)+50~75",
+            "『コーナー回復×』を取得",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "じゃ、じゃあ様子を見ながらで……",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10~15",
+            "安心沢刺々美の絆ゲージ+5",
+            "安心沢刺々美とお出かけできるようになる"
+          ]
+        ],
+        [
+          "遠慮しておきます！！",
+          [
+            "体力-10",
+            "スキルPt(技能点数)+100~150",
+            "『あやしげな作戦』のヒントLv+1",
+            "『空回り✕』を取得する",
+            "安心沢刺々美の絆ゲージ-10",
+            "※以降、お出かけに誘えなくなる"
+          ]
+        ]
+      ],
+      "id": "pVpwyHuyU1"
+    },
+    {
+      "name": "湯けむり☆あんし～ん旅情",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)2種を+15~22",
+            "スキルPt(技能点数)+45"
+          ]
+        ]
+      ],
+      "id": "0Aimkn1EJ5"
+    },
+    {
+      "name": "あんし～んな継承！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)2種を+10~15",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "6m5el7wVfe"
+    },
+    {
+      "name": "刺々美との絆・酔えばあんし～ん？",
+      "choiceList": [
+        [
+          "け、健康になれる秘孔で……",
+          [
+            "体力+10~16",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~15",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "頭がよくなる秘孔を！",
+          [
+            "体力+10~16",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~15",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "魅力的になれる秘孔とか？",
+          [
+            "体力+10~16",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~15",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "sM5G7NcqdM"
+    },
+    {
+      "name": "ブスッとおまかせ☆",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "5種ステータス(能力)を+3~4",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力-10",
+            "やる気(干劲)2段階ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "BPEhGGW6hG"
+    },
+    {
+      "name": "人情ラプソディ",
+      "choiceList": [
+        [
+          "どうしてそこまで親身に？",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スピード(速度)+5",
+            "タマモクロスの絆ゲージ+5"
+          ]
+        ],
+        [
+          "優しいんだな",
+          [
+            "体力+10",
+            "スタミナ(耐力)+5",
+            "タマモクロスの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "peY-n_z40p"
+    },
+    {
+      "name": "商いの道は人の道",
+      "choiceList": [
+        [
+          "俺も食べたくなってきた",
+          [
+            "スピード(速度)+10",
+            "スキルPt(技能点数)+10",
+            "『先行コーナー◯』のヒントLv+1",
+            "タマモクロスの絆ゲージ+5"
+          ]
+        ],
+        [
+          "どんどん売り込もう",
+          [
+            "スタミナ(耐力)+10",
+            "スキルPt(技能点数)+10",
+            "『差しコーナー◯』のヒントLv+1",
+            "タマモクロスの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "bROD_6i42w"
+    },
+    {
+      "name": "あんし～んな二人三脚！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)からランダムに(随机)1種を+10~12",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力+10",
+            "やる気(干劲)ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "Hi-DBnkuKW"
+    },
+    {
+      "name": "あんし～ん☆サングラス",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+30",
+            "やる気(干劲)アップ(提升)",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~12",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力+10",
+            "やる気(干劲)ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "-ujEpUkcZ0"
+    },
+    {
+      "name": "全ての道は笹針に通じる",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "5種ステータス(能力)からランダムに(随机)1種を+10~12",
+            "安心沢刺々美の絆ゲージ+5",
+            "ランダムで(有概率)『切れ者』になる",
+            "失敗時：",
+            "スキルPt(技能点数)+50~62",
+            "『引っ込み思案』を取得",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "tPvCszggvN"
+    },
+    {
+      "name": "不審者だけど、あんし～ん！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)1種を+20~25",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "cGOGDYQ2wR"
+    },
+    {
+      "name": "必中☆笹針師",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "体力+2",
+            "5種ステータス(能力)からランダムに(随机)1種を+4~5",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力-5",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "PLQ-_pN5Tm"
+    },
+    {
+      "name": "あんし～んの練習台？",
+      "choiceList": [
+        [
+          "わかりました、お付き合いします！",
+          [
+            "成功時：",
+            "体力最大値+3",
+            "体力+10~13",
+            "やる気(干劲)アップ(提升)",
+            "安心沢刺々美の絆ゲージ+10",
+            "安心沢刺々美とお出かけできるようになる",
+            "失敗時：",
+            "スキルPt(技能点数)+50~62",
+            "『コーナー回復×』を取得",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "じゃ、じゃあ様子を見ながらで……",
+          [
+            "やる気(干劲)アップ(提升)",
+            "スタミナ(耐力)+10~12",
+            "安心沢刺々美の絆ゲージ+5",
+            "安心沢刺々美とお出かけできるようになる"
+          ]
+        ],
+        [
+          "遠慮しておきます！！",
+          [
+            "体力-10",
+            "スキルPt(技能点数)+100~125",
+            "『あやしげな作戦』のヒントLv+1",
+            "『空回り✕』を取得する",
+            "安心沢刺々美の絆ゲージ-10",
+            "※以降、お出かけに誘えなくなる"
+          ]
+        ]
+      ],
+      "id": "ZeiGN-E9eO"
+    },
+    {
+      "name": "湯けむり☆あんし～ん旅情",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)2種を+15~18",
+            "スキルPt(技能点数)+45"
+          ]
+        ]
+      ],
+      "id": "3PQReOCIPG"
+    },
+    {
+      "name": "あんし～んな継承！？",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "5種ステータス(能力)からランダムに(随机)2種を+10~12",
+            "スキルPt(技能点数)+30"
+          ]
+        ]
+      ],
+      "id": "Wzpt2907H2"
+    },
+    {
+      "name": "刺々美との絆・酔えばあんし～ん？",
+      "choiceList": [
+        [
+          "け、健康になれる秘孔で……",
+          [
+            "体力+10",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~12",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "頭がよくなる秘孔を！",
+          [
+            "体力+10",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~12",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ],
+        [
+          "魅力的になれる秘孔とか？",
+          [
+            "体力+10",
+            "5種ステータス(能力)からランダムに(随机)2種を+10~12",
+            "『ウマ好み』のヒントLv+3",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "MNbTUKF4XE"
+    },
+    {
+      "name": "ブスッとおまかせ☆",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "5種ステータス(能力)を+3",
+            "安心沢刺々美の絆ゲージ+5",
+            "失敗時：",
+            "体力-10",
+            "やる気(干劲)2段階ダウン(下降)",
+            "安心沢刺々美の絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "9tLWVhrRSX"
     }
   ]
 }

@@ -50,8 +50,8 @@ const getValue = (effect, cur) => {
         <div data-tip="插值">
           {Math.floor(
             min +
-            ((max - min) * (limits.indexOf(cur) - limits.indexOf(min_limit))) /
-            (limits.indexOf(max_limit) - limits.indexOf(min_limit))
+              ((max - min) * (limits.indexOf(cur) - limits.indexOf(min_limit))) /
+                (limits.indexOf(max_limit) - limits.indexOf(min_limit))
           )}
         </div>
       );
@@ -68,8 +68,9 @@ const EffectTable = (props) => {
       width: 200,
       render: (type) => (
         <p
-          data-tip={`<div><p>${effects[type].name}</p><p>${t(effects[type].name)}</p><p>${effects[type].description
-            }</p><p>${t(effects[type].description)}</p></div>`}
+          data-tip={`<div><p>${effects[type].name}</p><p>${t(effects[type].name)}</p><p>${
+            effects[type].description
+          }</p><p>${t(effects[type].description)}</p></div>`}
         >
           {t(effects[type].name)}
         </p>
@@ -125,7 +126,7 @@ const EffectTable = (props) => {
   }
 
   return (
-    <div className='w-full overflow-x-auto'>
+    <div className="w-full overflow-x-auto">
       <Table columns={columns} dataSource={props.effects} divKey="type" pagination={false}></Table>
     </div>
   );
@@ -214,8 +215,8 @@ class TestEffectTable extends React.Component {
       }
       output = Math.floor(
         ((upperNode.value - lowerNode.value) / (upperNode.level - lowerNode.level)) *
-        (level - lowerNode.level) +
-        lowerNode.value
+          (level - lowerNode.level) +
+          lowerNode.value
       );
     }
 
@@ -232,28 +233,32 @@ class TestEffectTable extends React.Component {
               <div>{`${t("激活等级")}:${this.props.unique_effect.lv}`}</div>
             </div>
             <div className="w-full grid grid-cols-2 gap-2">
-              {["0", "1"].map((index) => (
-                <div
-                  key={index}
-                  className="col-span-1 flex items-center rounded-xl border border-solid bg-green-300 border-green-500"
-                >
+              {["0", "1"].map((index) =>
+                this.props.unique_effect[`type_${index}`] ? (
                   <div
-                    className="flex-auto truncate pl-2"
-                    data-tip={`<div><p>${this.effects[this.props.unique_effect[`type_${index}`]].name
-                      }</p><p>${t(
-                        this.effects[this.props.unique_effect[`type_${index}`]].name
-                      )}</p><p>${this.effects[this.props.unique_effect[`type_${index}`]].description
-                      }</p><p>${t(
-                        this.effects[this.props.unique_effect[`type_${index}`]].description
-                      )}</p></div>`}
+                    key={index}
+                    className="col-span-1 flex items-center rounded-xl border border-solid bg-green-300 border-green-500"
                   >
-                    {t(this.effects[this.props.unique_effect[`type_${index}`]].name)}
+                    <div
+                      className="flex-auto truncate pl-2"
+                      data-tip={`<div><p>${
+                        this.effects[this.props.unique_effect[`type_${index}`]]?.name
+                      }</p><p>${t(
+                        this.effects[this.props.unique_effect[`type_${index}`]]?.name
+                      )}</p><p>${
+                        this.effects[this.props.unique_effect[`type_${index}`]]?.description
+                      }</p><p>${t(
+                        this.effects[this.props.unique_effect[`type_${index}`]]?.description
+                      )}</p></div>`}
+                    >
+                      {t(this.effects[this.props.unique_effect[`type_${index}`]]?.name)}
+                    </div>
+                    <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center flex-shrink-0">
+                      {this.props.unique_effect[`value_${index}`]}
+                    </div>
                   </div>
-                  <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center flex-shrink-0">
-                    {this.props.unique_effect[`value_${index}`]}
-                  </div>
-                </div>
-              ))}
+                ) : null
+              )}
             </div>
           </>
         )}
