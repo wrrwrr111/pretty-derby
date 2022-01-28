@@ -14695,6 +14695,476 @@
       "db_id": 106901,
       "default_rarity": 3,
       "imgUrl": "img/chara_card/chr_icon_1069_106901_01.png"
+    },
+    {
+      "gwId": "316742",
+      "id": "syfxZ25jq",
+      "name": "コレクト・ショコラティエ",
+      "rare": "3",
+      "charaName": "エイシンフラッシュ",
+      "grass": "A",
+      "dirt": "G",
+      "shortDistance": "G",
+      "mile": "F",
+      "mediumDistance": "A",
+      "longDistance": "A",
+      "escape": "G",
+      "leading": "B",
+      "insert": "A",
+      "tracking": "C",
+      "speedGrow": "+0%",
+      "staminaGrow": "+8%",
+      "powerGrow": "+8%",
+      "gutsGrow": "+0%",
+      "wisdomGrow": "+14%",
+      "skillList": [
+        "EPnwn0rwFW",
+        "O-c-BZW-2n",
+        "gGqvq_Mnmp",
+        "UXE6SzJoT2",
+        "EfTxxN-wUe",
+        "auwbUbKcy",
+        "6IIADrYBkD3",
+        "vgQ9RSS40s"
+      ],
+      "uniqueSkillList": [
+        "EPnwn0rwFW"
+      ],
+      "initialSkillList": [
+        "O-c-BZW-2n",
+        "gGqvq_Mnmp",
+        "UXE6SzJoT2"
+      ],
+      "awakeningSkillList": [
+        "EfTxxN-wUe",
+        "auwbUbKcy",
+        "6IIADrYBkD3",
+        "vgQ9RSS40s"
+      ],
+      "eventList": [
+        "fxVWMW4Lhn",
+        "Bjb0Ls284J",
+        "OtNgYRE0X",
+        "XkFcqsWUx0",
+        "k5jZDOxku5",
+        "53rTcfNYXx",
+        "wbHudTDUfy",
+        "LdkuZ5w_J2",
+        "ITkelWXIH1",
+        "YgGx7Kvy5",
+        "VAho9wv584",
+        "9i97ndJMVg",
+        "TNDJgN8V0b",
+        "4S3BC0rPJV",
+        "kgYxhNDt58",
+        "qtAfLWUhPI",
+        "WOvODnYrnc",
+        "_BcsAmXG5",
+        "X3k3MX6wOZ",
+        "gZBIfyJ5Uo",
+        "jglJ80a7ch",
+        "9lIKxDt8f5",
+        "05wh82sCd6",
+        "psi47twauu",
+        "ovKusV3jRr",
+        "CWUjcAyN7v",
+        "MY40vEgOH",
+        "xeD5TtwAds",
+        "wmG2LBBGms",
+        "Nzm-hlfV-A",
+        "flhCn7v3Ra",
+        "5H8h73mM0j",
+        "D8HC10Urp3",
+        "JdKGqwcufY",
+        "2yfog1AsTD",
+        "WUrqh_uiQ",
+        "ad3yD5Fq_l",
+        "HfhsJSa_4B",
+        "lvN8ENDb0",
+        "2G_bI3nYDV",
+        "oj-twLrHCa",
+        "JgeZhpT1As",
+        "ZU6UOSxnGj",
+        "SrH0rG3BH",
+        "rP5Bb2i7uq",
+        "29Tl7y2a-C",
+        "qt-lAQ8s35",
+        "XTEY4BL8fL",
+        "NXr0EUaezM",
+        "_RlcOWDZP8",
+        "wJtG67U1GX",
+        "1-fkLSRyWt",
+        "87gCjla3I",
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "hideEvent": [],
+      "eventList0": [
+        "fxVWMW4Lhn",
+        "Bjb0Ls284J",
+        "OtNgYRE0X",
+        "XkFcqsWUx0",
+        "k5jZDOxku5",
+        "53rTcfNYXx",
+        "wbHudTDUfy",
+        "LdkuZ5w_J2",
+        "ITkelWXIH1",
+        "YgGx7Kvy5",
+        "VAho9wv584",
+        "9i97ndJMVg",
+        "TNDJgN8V0b",
+        "4S3BC0rPJV",
+        "kgYxhNDt58",
+        "qtAfLWUhPI",
+        "WOvODnYrnc",
+        "_BcsAmXG5",
+        "X3k3MX6wOZ"
+      ],
+      "eventList1": [
+        "gZBIfyJ5Uo",
+        "jglJ80a7ch",
+        "9lIKxDt8f5",
+        "05wh82sCd6",
+        "psi47twauu",
+        "ovKusV3jRr",
+        "CWUjcAyN7v",
+        "MY40vEgOH",
+        "xeD5TtwAds",
+        "wmG2LBBGms",
+        "Nzm-hlfV-A",
+        "flhCn7v3Ra",
+        "5H8h73mM0j",
+        "D8HC10Urp3",
+        "JdKGqwcufY",
+        "2yfog1AsTD",
+        "WUrqh_uiQ",
+        "ad3yD5Fq_l",
+        "HfhsJSa_4B",
+        "lvN8ENDb0"
+      ],
+      "eventList2": [
+        "2G_bI3nYDV",
+        "oj-twLrHCa",
+        "JgeZhpT1As",
+        "ZU6UOSxnGj",
+        "SrH0rG3BH",
+        "rP5Bb2i7uq",
+        "29Tl7y2a-C",
+        "qt-lAQ8s35",
+        "XTEY4BL8fL",
+        "NXr0EUaezM",
+        "_RlcOWDZP8",
+        "wJtG67U1GX",
+        "1-fkLSRyWt",
+        "87gCjla3I"
+      ],
+      "eventList3": [
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "eventList4": [],
+      "raceList": {
+        "24": {
+          "id": "G2zfnb0yijW",
+          "goal": "5着以内"
+        },
+        "30": {
+          "id": "Q9yy8aBzZU",
+          "goal": "5着以内"
+        },
+        "33": {
+          "id": "4T-bUPQMM0p",
+          "goal": "5着以内"
+        },
+        "45": {
+          "id": "C5obZIGZoK",
+          "goal": "出走"
+        },
+        "47": {
+          "id": "OcoExcPhGYv",
+          "goal": "出走"
+        },
+        "53": {
+          "id": "-9T1oDkamb",
+          "goal": "3着以内"
+        },
+        "55": {
+          "id": "I4VkVUYo1Lx",
+          "goal": "3着以内"
+        },
+        "67": {
+          "id": "LwfsArraIdq",
+          "goal": "1着"
+        },
+        "71": {
+          "id": "AhK3mYxkkq6",
+          "goal": "1着"
+        }
+      },
+      "db_id": 103702,
+      "default_rarity": 3,
+      "imgUrl": "img/chara_card/chr_icon_1037_103713_01.png"
+    },
+    {
+      "gwId": "316743",
+      "id": "L-ej1V4ob",
+      "name": "CODE：グラサージュ",
+      "rare": "3",
+      "charaName": "ミホノブルボン",
+      "grass": "A",
+      "dirt": "G",
+      "shortDistance": "C",
+      "mile": "B",
+      "mediumDistance": "A",
+      "longDistance": "B",
+      "escape": "A",
+      "leading": "E",
+      "insert": "G",
+      "tracking": "G",
+      "speedGrow": "+10%",
+      "staminaGrow": "+10%",
+      "powerGrow": "+10%",
+      "gutsGrow": "+0%",
+      "wisdomGrow": "+0%",
+      "skillList": [
+        "nU0SlZZL3e",
+        "Eb4G1G0HCZ",
+        "jc-y8pTTJW",
+        "AEZfYT48j",
+        "5ntiBjDYDn",
+        "aXsN6g4uUw",
+        "Glsbej10heR",
+        "aPzi71LUG"
+      ],
+      "uniqueSkillList": [
+        "nU0SlZZL3e"
+      ],
+      "initialSkillList": [
+        "Eb4G1G0HCZ",
+        "jc-y8pTTJW",
+        "AEZfYT48j"
+      ],
+      "awakeningSkillList": [
+        "5ntiBjDYDn",
+        "aXsN6g4uUw",
+        "Glsbej10heR",
+        "aPzi71LUG"
+      ],
+      "eventList": [
+        "BHmzWYQ5U",
+        "xOR34I4Wbn",
+        "hgxYE05zva",
+        "BEye2SCMM",
+        "-ID-r32esd",
+        "bJ6qT18Yxo",
+        "z49QqHhcb",
+        "EefeZtBXeT",
+        "s1E_IH7t1m",
+        "F3WigdPDUP",
+        "WLLcoZj1UN",
+        "dwQjTx1rNX",
+        "dN9X-yVns6",
+        "LYCk4v_8Jw",
+        "Z17NmKysFd",
+        "sl1TMG3AF",
+        "nQ7__hNYfW",
+        "MO0-NXo1eq",
+        "hjz3HfbWlw",
+        "kLv-UuRU2u",
+        "NXEYVaUJdN",
+        "oif3QEi7sn",
+        "HBxLO-7fpR",
+        "afODUIn0u3",
+        "8JPgV0lm1",
+        "75MHxEEFtV",
+        "okSahRR06X",
+        "FR-LqTZ0LS",
+        "JGv6DoNkKx",
+        "sAlDlykl2Z",
+        "FDYLfKknlO",
+        "wJ8kM_JHl3",
+        "XKjAowQjTS",
+        "sj4zb6tNz",
+        "5rpKDKRbKh",
+        "oQF_vGbX2G",
+        "dIDdR7LhFn",
+        "mmCIrZV8hj",
+        "0vzlfR4qcX",
+        "FQHAib8QX1",
+        "QgEnRh-gIi",
+        "leBWE8jTs6",
+        "DAVukGU6B",
+        "liFu_Z5np",
+        "e95sWN7nTW",
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "hideEvent": [],
+      "eventList0": [
+        "BHmzWYQ5U",
+        "xOR34I4Wbn",
+        "hgxYE05zva",
+        "BEye2SCMM",
+        "-ID-r32esd",
+        "bJ6qT18Yxo",
+        "z49QqHhcb",
+        "EefeZtBXeT",
+        "s1E_IH7t1m",
+        "F3WigdPDUP",
+        "WLLcoZj1UN",
+        "dwQjTx1rNX",
+        "dN9X-yVns6",
+        "LYCk4v_8Jw",
+        "Z17NmKysFd",
+        "sl1TMG3AF",
+        "nQ7__hNYfW",
+        "MO0-NXo1eq",
+        "hjz3HfbWlw",
+        "kLv-UuRU2u"
+      ],
+      "eventList1": [
+        "NXEYVaUJdN",
+        "oif3QEi7sn",
+        "HBxLO-7fpR",
+        "afODUIn0u3",
+        "8JPgV0lm1",
+        "75MHxEEFtV",
+        "okSahRR06X",
+        "FR-LqTZ0LS",
+        "JGv6DoNkKx",
+        "sAlDlykl2Z",
+        "FDYLfKknlO",
+        "wJ8kM_JHl3",
+        "XKjAowQjTS"
+      ],
+      "eventList2": [
+        "sj4zb6tNz",
+        "5rpKDKRbKh",
+        "oQF_vGbX2G",
+        "dIDdR7LhFn",
+        "mmCIrZV8hj",
+        "0vzlfR4qcX",
+        "FQHAib8QX1",
+        "QgEnRh-gIi",
+        "leBWE8jTs6",
+        "DAVukGU6B",
+        "liFu_Z5np",
+        "e95sWN7nTW"
+      ],
+      "eventList3": [
+        "INzwRM5huC",
+        "YqzmX3pTsc",
+        "mE82EX0YLi",
+        "hrSh6GCxPn",
+        "GTE9bG8RG_",
+        "4qxZ_d8IfL",
+        "m928rmdKa",
+        "tpRKrTcu3j",
+        "WjHPmBJwul",
+        "EiP-6Y-n9s",
+        "wmsgc0ohZn",
+        "DoUgxoFMaM",
+        "UZGb4Hb9P5",
+        "pGcAXiTWuT",
+        "qjEr_-nIGr",
+        "XdSXsij6Z",
+        "AKAC73skfR",
+        "f4nOY7o0Zm",
+        "rlPnAjfZ-n",
+        "iqlPJOtirj"
+      ],
+      "eventList4": [],
+      "raceList": {
+        "22": {
+          "id": "tzanC5qKusm",
+          "goal": "5着以内"
+        },
+        "29": {
+          "id": "32YMAYcab3",
+          "goal": "5着以内"
+        },
+        "30": {
+          "id": "Q9yy8aBzZU",
+          "goal": "5着以内"
+        },
+        "33": {
+          "id": "4T-bUPQMM0p",
+          "goal": "5着以内"
+        },
+        "43": {
+          "id": "rR8DSqacWC-",
+          "goal": "3着以内"
+        },
+        "55": {
+          "id": "I4VkVUYo1Lx",
+          "goal": "3着以内"
+        },
+        "69": {
+          "id": "Oi08Bjwith",
+          "goal": "2着以内"
+        },
+        "71": {
+          "id": "AhK3mYxkkq6",
+          "goal": "1着"
+        }
+      },
+      "db_id": 102602,
+      "default_rarity": 3,
+      "imgUrl": "img/chara_card/chr_icon_1026_102613_01.png"
     }
   ],
   "supports": [
@@ -14880,8 +15350,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -15076,8 +15554,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -15273,8 +15759,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -15475,8 +15969,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -15664,8 +16166,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -15864,8 +16374,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -16064,8 +16582,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -16277,8 +16803,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 10,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -16473,8 +17007,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -16684,8 +17226,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -16893,8 +17443,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -17083,8 +17641,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -17273,8 +17839,16 @@
         "lv": 30,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -17473,8 +18047,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -17652,8 +18234,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -17856,8 +18446,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -18065,8 +18663,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -18248,8 +18854,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -18412,8 +19026,16 @@
         "lv": 30,
         "type_0": 27,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 28,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "友人"
     },
@@ -18620,8 +19242,16 @@
         "lv": 25,
         "type_0": 30,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 13,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -18830,8 +19460,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -19008,8 +19646,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -19218,8 +19864,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -19430,8 +20084,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -19638,8 +20300,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -19818,8 +20488,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -20028,8 +20706,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -20206,8 +20892,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -20397,8 +21091,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -20571,8 +21273,16 @@
         "lv": 25,
         "type_0": 6,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -20777,8 +21487,16 @@
         "lv": 25,
         "type_0": 30,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -20955,8 +21673,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -21167,8 +21893,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -21388,8 +22122,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 13,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -21583,8 +22325,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -21765,8 +22515,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -21988,8 +22746,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 13,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -22187,8 +22953,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -22365,8 +23139,16 @@
         "lv": 25,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -22529,8 +23311,16 @@
         "lv": 25,
         "type_0": 27,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 28,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "友人"
     },
@@ -30502,8 +31292,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -30708,8 +31506,16 @@
         "lv": 40,
         "type_0": 4,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 10,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -30912,8 +31718,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -31105,8 +31919,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -31291,8 +32113,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -31630,8 +32460,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -31969,8 +32807,16 @@
         "lv": 30,
         "type_0": 6,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "rare": "SSR",
       "type": "根性"
@@ -32155,8 +33001,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -32369,8 +33223,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -32954,8 +33816,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -33192,8 +34062,16 @@
         "lv": 25,
         "type_0": 7,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -33781,8 +34659,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -33965,8 +34851,16 @@
         "lv": 35,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 13,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -34180,8 +35074,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -34378,8 +35280,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -35075,8 +35985,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -35283,8 +36201,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -35479,8 +36405,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -35658,8 +36592,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -35842,8 +36784,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 10,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -36344,8 +37294,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スタミナ"
     },
@@ -36541,8 +37499,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -37022,8 +37988,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "賢さ"
     },
@@ -37205,8 +38179,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "根性"
     },
@@ -37384,8 +38366,16 @@
         "lv": 30,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -37550,8 +38540,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -38058,8 +39056,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "パワー"
     },
@@ -38234,8 +39240,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "type": "スピード"
     },
@@ -38725,8 +39739,16 @@
         "lv": 40,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -38908,8 +39930,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -39091,8 +40121,16 @@
         "lv": 30,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 13,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -39270,8 +40308,16 @@
         "lv": 30,
         "type_0": 4,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -39464,8 +40510,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 30,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -39649,8 +40703,16 @@
         "lv": 40,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -39840,8 +40902,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -40346,8 +41416,16 @@
         "lv": 30,
         "type_0": 6,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -40514,8 +41592,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 3,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -40697,8 +41783,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 4,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -40880,8 +41974,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 11,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -41093,8 +42195,16 @@
         "lv": 30,
         "type_0": 7,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "rare": "SSR",
       "type": "賢さ"
@@ -41274,8 +42384,16 @@
         "lv": 30,
         "type_0": 7,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "rare": "SSR",
       "type": "賢さ"
@@ -41454,8 +42572,16 @@
         "lv": 25,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       },
       "rare": "SR",
       "type": "スタミナ"
@@ -41785,8 +42911,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 10,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -41989,8 +43123,16 @@
         "lv": 30,
         "type_0": 4,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 8,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -42185,8 +43327,16 @@
         "lv": 30,
         "type_0": 27,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 28,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -42552,8 +43702,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -42737,8 +43895,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -42926,8 +44092,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 8,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -43120,8 +44294,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -43298,8 +44480,16 @@
         "lv": 25,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -43506,8 +44696,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 6,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -43682,8 +44880,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 9,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -44207,8 +45413,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -44424,8 +45638,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -44605,8 +45827,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -44973,8 +46203,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -45174,8 +46412,16 @@
         "lv": 25,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -45374,8 +46620,16 @@
         "lv": 30,
         "type_0": 5,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 14,
-        "value_1": 15
+        "value_1": 15,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -45548,8 +46802,16 @@
         "lv": 30,
         "type_0": 3,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 19,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -45716,8 +46978,16 @@
         "lv": 40,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -45900,8 +47170,16 @@
         "lv": 25,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 4,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -46098,8 +47376,16 @@
         "lv": 30,
         "type_0": 1,
         "value_0": 10,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 4,
-        "value_1": 1
+        "value_1": 1,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -46427,8 +47713,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 15,
-        "value_1": 5
+        "value_1": 5,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -46623,8 +47917,16 @@
         "lv": 30,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -46866,8 +48168,16 @@
         "lv": 30,
         "type_0": 2,
         "value_0": 15,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 27,
-        "value_1": 10
+        "value_1": 10,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -47066,8 +48376,16 @@
         "lv": 40,
         "type_0": 8,
         "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 18,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -47354,8 +48672,16 @@
         "lv": 30,
         "type_0": 0,
         "value_0": 0,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 0,
-        "value_1": 0
+        "value_1": 0,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -47538,8 +48864,16 @@
         "lv": 25,
         "type_0": 30,
         "value_0": 1,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
         "type_1": 12,
-        "value_1": 20
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
       }
     },
     {
@@ -47655,6 +48989,623 @@
       ],
       "rarity": 1,
       "imgUrl": "img/support_card_with_icon/support_thumb_10074.png"
+    },
+    {
+      "gwId": "316746",
+      "id": "9LNgcj3Ru",
+      "charaName": "トーセンジョーダン",
+      "rare": "SSR",
+      "type": "スピード",
+      "name": "In my way",
+      "skillList": [
+        "JjcNnong1J",
+        "lKRcNtJj8PI",
+        "KprPYh4Atix",
+        "EfTxxN-wUe",
+        "lSFwxam1V3y",
+        "XUMkn4ziiYT",
+        "gGqvq_Mnmp",
+        "svT-34r60",
+        "O-c-BZW-2n"
+      ],
+      "trainingEventSkill": [
+        "JjcNnong1J",
+        "lKRcNtJj8PI",
+        "KprPYh4Atix"
+      ],
+      "possessionSkill": [
+        "EfTxxN-wUe",
+        "lSFwxam1V3y",
+        "XUMkn4ziiYT",
+        "gGqvq_Mnmp",
+        "svT-34r60",
+        "O-c-BZW-2n"
+      ],
+      "baseAbility": {
+        "name": "In my way",
+        "ability": [
+          [
+            "Lv40~",
+            [
+              "トレーニング効果アップ(提升)とヒント発生率アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "d5Z4Lujg-3",
+        "_PfKQgsVF"
+      ],
+      "db_id": 30084,
+      "effects": [
+        {
+          "id": 30084,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 15,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 20,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 3,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 9,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 35
+        },
+        {
+          "id": 30084,
+          "type": 11,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30084,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 15,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 1,
+          "limit_lv30": 1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 16,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 10,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30084,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 5,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 35,
+          "limit_lv30": 35,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 50,
+          "limit_lv50": -1
+        }
+      ],
+      "rarity": 3,
+      "imgUrl": "img/support_card_with_icon/support_thumb_30084.png",
+      "unique_effect": {
+        "id": 30084,
+        "lv": 40,
+        "type_0": 8,
+        "value_0": 5,
+        "value_0_1": 0,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
+        "type_1": 18,
+        "value_1": 20,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
+      }
+    },
+    {
+      "gwId": "316745",
+      "id": "vBlOHfypF",
+      "charaName": "ニシノフラワー",
+      "rare": "SSR",
+      "type": "賢さ",
+      "name": "小さなカップに想いをこめて",
+      "skillList": [
+        "SYuVON6-y",
+        "kjP0LurWRte",
+        "84p-yg3Ueb",
+        "R75SzzE1BT3",
+        "g2vte-S15S",
+        "tw7oPO88tQj",
+        "sC9UYQ01L1"
+      ],
+      "trainingEventSkill": [
+        "SYuVON6-y",
+        "kjP0LurWRte"
+      ],
+      "possessionSkill": [
+        "84p-yg3Ueb",
+        "R75SzzE1BT3",
+        "g2vte-S15S",
+        "tw7oPO88tQj",
+        "sC9UYQ01L1"
+      ],
+      "baseAbility": {
+        "name": "小さなカップに想いをこめて",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "絆ゲージが100以上の時、賢さ(智力)ボーナス"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "_TfAr5RkGV",
+        "00Ks8Qm1H3",
+        "N-DDNPis0f",
+        "Sxmj9KKELI",
+        "MjA4354ZeE"
+      ],
+      "db_id": 30082,
+      "effects": [
+        {
+          "id": 30082,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30082,
+          "type": 3,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30082,
+          "type": 8,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 1,
+          "limit_lv20": -1,
+          "limit_lv25": 5,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 5,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30082,
+          "type": 13,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30082,
+          "type": 14,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30082,
+          "type": 17,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30082,
+          "type": 18,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30082,
+          "type": 19,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 5,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 35,
+          "limit_lv30": 35,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 50,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30082,
+          "type": 31,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 3,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 5
+        }
+      ],
+      "rarity": 3,
+      "imgUrl": "img/support_card_with_icon/support_thumb_30082.png",
+      "unique_effect": {
+        "id": 30082,
+        "lv": 30,
+        "type_0": 101,
+        "value_0": 100,
+        "value_0_1": 7,
+        "value_0_2": 3,
+        "value_0_3": 0,
+        "value_0_4": 0,
+        "type_1": 0,
+        "value_1": 0,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
+      }
+    },
+    {
+      "gwId": "316744",
+      "id": "oHprONK-3",
+      "charaName": "サクラバクシンオー",
+      "rare": "SSR",
+      "type": "根性",
+      "name": "爆速！最速！花あらし！",
+      "skillList": [
+        "vI4aqYIi4A",
+        "-Q7uZbEhnpv",
+        "3v9IXopXa_",
+        "Glsbej10heR",
+        "mkWKmQpx34",
+        "hhMyzgZYBB",
+        "-z8y7Nbp14",
+        "eItZM_rb3Wm",
+        "HFa5ebwAvh",
+        "p5b0VM9RQN",
+        "15yASdQCW1R",
+        "SaHLQ505_i"
+      ],
+      "trainingEventSkill": [
+        "vI4aqYIi4A",
+        "-Q7uZbEhnpv",
+        "3v9IXopXa_",
+        "Glsbej10heR"
+      ],
+      "possessionSkill": [
+        "mkWKmQpx34",
+        "hhMyzgZYBB",
+        "-z8y7Nbp14",
+        "eItZM_rb3Wm",
+        "HFa5ebwAvh",
+        "p5b0VM9RQN",
+        "15yASdQCW1R",
+        "SaHLQ505_i"
+      ],
+      "baseAbility": {
+        "name": "爆速！最速！花あらし！",
+        "ability": [
+          [
+            "Lv30~",
+            [
+              "絆ゲージが80以上かつ得意トレーニングでない時、トレーニング効果アップ(提升)"
+            ]
+          ]
+        ]
+      },
+      "eventList": [
+        "PawPCsFx8x",
+        "NnOy6tseEp",
+        "KDQnCB5WlM",
+        "9cDuABncQD",
+        "CbxjeT8qVk"
+      ],
+      "db_id": 30083,
+      "effects": [
+        {
+          "id": 30083,
+          "type": 1,
+          "init": 10,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 25,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 35
+        },
+        {
+          "id": 30083,
+          "type": 2,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": 10,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 30,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30083,
+          "type": 6,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": 1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30083,
+          "type": 12,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": -1,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 15,
+          "limit_lv50": 30
+        },
+        {
+          "id": 30083,
+          "type": 14,
+          "init": -1,
+          "limit_lv5": -1,
+          "limit_lv10": 10,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": 20,
+          "limit_lv30": 20,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": 25,
+          "limit_lv50": -1
+        },
+        {
+          "id": 30083,
+          "type": 15,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 5,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 10
+        },
+        {
+          "id": 30083,
+          "type": 16,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 15,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 20
+        },
+        {
+          "id": 30083,
+          "type": 17,
+          "init": 1,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 2,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 3
+        },
+        {
+          "id": 30083,
+          "type": 18,
+          "init": 5,
+          "limit_lv5": -1,
+          "limit_lv10": -1,
+          "limit_lv15": -1,
+          "limit_lv20": -1,
+          "limit_lv25": -1,
+          "limit_lv30": 40,
+          "limit_lv35": -1,
+          "limit_lv40": -1,
+          "limit_lv45": -1,
+          "limit_lv50": 50
+        }
+      ],
+      "rarity": 3,
+      "imgUrl": "img/support_card_with_icon/support_thumb_30083.png",
+      "unique_effect": {
+        "id": 30083,
+        "lv": 30,
+        "type_0": 102,
+        "value_0": 80,
+        "value_0_1": 20,
+        "value_0_2": 0,
+        "value_0_3": 0,
+        "value_0_4": 0,
+        "type_1": 0,
+        "value_1": 0,
+        "value_1_1": 0,
+        "value_1_2": 0,
+        "value_1_3": 0,
+        "value_1_4": 0
+      }
     }
   ],
   "skills": [
@@ -58238,9 +60189,137 @@
       "ability_time": -1,
       "cooldown": 0,
       "need_skill_point": 130
+    },
+    {
+      "name": "Guten Appetit♪",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "最終コーナー以降に3回追い抜くと抱いた誇りを力に変えて最終直線で速度を上げ続ける",
+      "id": "EPnwn0rwFW",
+      "condition": "change_order_up_finalcorner_after>=3&is_finalcorner==1&corner==0",
+      "rarity": 5,
+      "db_id": 110371,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 60000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "光芒一閃",
+      "imgUrl": "img/skill_icons/20012.png",
+      "rare": "レア",
+      "describe": "直線で速度が上がる＜中距離＞",
+      "id": "vgQ9RSS40s",
+      "condition": "distance_type==3&straight_random==1",
+      "rarity": 2,
+      "db_id": 201103,
+      "icon_id": 20012,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 30000,
+      "cooldown": 5000000,
+      "need_skill_point": 150
+    },
+    {
+      "name": "オペレーション・Cacao",
+      "imgUrl": "img/skill_icons/20013.png",
+      "rare": "固有",
+      "describe": "中盤のコーナーで先団を走行中後ろに他ウマ娘を検知するとわずかに息を入れ、さらに速度を上げる",
+      "id": "nU0SlZZL3e",
+      "condition": "order<=4&phase==1&corner!=0&bashin_diff_behind<=3",
+      "rarity": 5,
+      "db_id": 110261,
+      "icon_id": 20013,
+      "grade_value": 340,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 9,
+          "value": 150,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
+    },
+    {
+      "name": "コーナー巧者◎",
+      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill_y_n_1.png",
+      "rare": "ノーマル",
+      "describe": "コーナーが得意になり速度がわずかに上がる",
+      "id": "li2Nc1xYD"
+    },
+    {
+      "name": "意気衝天",
+      "imgUrl": "img/skill_icons/20012.png",
+      "rare": "レア",
+      "describe": "レース終盤が迫ったとき前方にいると速度が上がる＜短距離＞",
+      "id": "vI4aqYIi4A",
+      "condition": "distance_type==1&phase_laterhalf_random==1&order_rate<=50",
+      "rarity": 2,
+      "db_id": 202041,
+      "icon_id": 20012,
+      "grade_value": 508,
+      "ability": [
+        {
+          "type": 27,
+          "value": 3500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 24000,
+      "cooldown": 5000000,
+      "need_skill_point": 160
+    },
+    {
+      "name": "軽い足取り",
+      "imgUrl": "img/skill_icons/20011.png",
+      "rare": "ノーマル",
+      "describe": "レース終盤が迫ったとき前方にいると速度がわずかに上がる＜短距離＞",
+      "id": "3v9IXopXa_",
+      "condition": "distance_type==1&phase_laterhalf_random==1&order_rate<=50",
+      "rarity": 1,
+      "db_id": 202042,
+      "icon_id": 20011,
+      "grade_value": 217,
+      "ability": [
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 24000,
+      "cooldown": 5000000,
+      "need_skill_point": 160
     }
   ],
-  "updateTime": 1642916597875,
+  "updateTime": 1643344301876,
   "races": [
     {
       "name": "中京ジュニアステークス",
@@ -124541,6 +126620,242 @@
         ]
       ],
       "id": "-VVMNozxbt"
+    },
+    {
+      "name": "バレンタインの準備イベント",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "大成功時：",
+            "『末脚』のヒントLv+1",
+            "パワー(力量)+10",
+            "成功時：",
+            "パワー(力量)+10"
+          ]
+        ]
+      ],
+      "id": "TNDJgN8V0b"
+    },
+    {
+      "name": "ホワイトデーイベント",
+      "choiceList": [
+        [
+          "上選択肢",
+          [
+            "体力+10",
+            "スピード(速度)+15",
+            "賢さ(智力)+10"
+          ]
+        ],
+        [
+          "下選択肢",
+          [
+            "体力+10",
+            "『ささやき』のヒントLv+3"
+          ]
+        ]
+      ],
+      "id": "4S3BC0rPJV"
+    },
+    {
+      "name": "お大事に！",
+      "choiceList": [
+        [
+          "心配だから休もう(夏合宿中：きっちり休ませる)",
+          [
+            "やる気(干劲)ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-5",
+            "ランダムで(有概率)『練習下手』になる"
+          ]
+        ]
+      ],
+      "id": "WLLcoZj1UN"
+    },
+    {
+      "name": "無茶は厳禁！",
+      "choiceList": [
+        [
+          "ああ、しっかり休もう(夏合宿中：とにかく労わる)",
+          [
+            "体力+10",
+            "やる気(干劲)3段階ダウン(下降)",
+            "直前のトレーニングに応じたステータス(能力)-10",
+            "5種ステータス(能力)からランダムに(随机)2種を-10",
+            "ランダムで(有概率)『練習ベタ』になる"
+          ]
+        ]
+      ],
+      "id": "dwQjTx1rNX"
+    },
+    {
+      "name": "Mission for バレンタイン",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時(ファン数60000人以上)：",
+            "『先駆け』のヒントLv+1",
+            "スタミナ(耐力)+10",
+            "失敗時(ファン数60000人未満)：",
+            "スタミナ(耐力)+10"
+          ]
+        ]
+      ],
+      "id": "dN9X-yVns6"
+    },
+    {
+      "name": "Not Found",
+      "choiceList": [
+        [
+          "思いのままに言葉を並べて",
+          [
+            "体力+10",
+            "スピード(速度)+10",
+            "スタミナ(耐力)+16"
+          ]
+        ],
+        [
+          "身振りで表現しよう！",
+          [
+            "体力+10",
+            "『スピード(速度)イーター』のヒントLv+3"
+          ]
+        ]
+      ],
+      "id": "LYCk4v_8Jw"
+    },
+    {
+      "name": "Apply",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "スピード(速度)+10",
+            "ランダムで(有概率)『愛嬌◯』になる"
+          ]
+        ]
+      ],
+      "id": "Z17NmKysFd"
+    },
+    {
+      "name": "連続イベント1",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "賢さ(智力)+10",
+            "スキルPt(技能点数)+10",
+            "ニシノフラワーの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "_TfAr5RkGV"
+    },
+    {
+      "name": "連続イベント2",
+      "choiceList": [
+        [
+          "上選択肢",
+          [
+            "スキルPt(技能点数)+15",
+            "『ギアシフト』のヒントLv+1",
+            "ニシノフラワーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "中選択肢",
+          [
+            "やる気(干劲)アップ(提升)",
+            "バッドコンディションを全て解消",
+            "ニシノフラワーの絆ゲージ+10"
+          ]
+        ],
+        [
+          "下選択肢",
+          [
+            "パワー(力量)+25",
+            "ニシノフラワーの絆ゲージ-5",
+            "連続イベントが終了"
+          ]
+        ]
+      ],
+      "id": "00Ks8Qm1H3"
+    },
+    {
+      "name": "連続イベント3",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "体力+20",
+            "『決意の直滑降』のヒントLv+1"
+          ]
+        ]
+      ],
+      "id": "N-DDNPis0f"
+    },
+    {
+      "name": "『ちびっ子ウマ娘徒競走大会』",
+      "choiceList": [
+        [
+          "今はそっとしておこう",
+          [
+            "根性(毅力)+5",
+            "『地固め』のヒントLv+1",
+            "サクラバクシンオーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "特訓をしてあげるとか！",
+          [
+            "体力最大値+4",
+            "スピード(速度)+5",
+            "サクラバクシンオーの絆ゲージ+5"
+          ]
+        ]
+      ],
+      "id": "PawPCsFx8x"
+    },
+    {
+      "name": "姉の背中",
+      "choiceList": [
+        [
+          "わかった、応援してるよ",
+          [
+            "根性(毅力)+10",
+            "スピード(速度)+5",
+            "サクラバクシンオーの絆ゲージ+5"
+          ]
+        ],
+        [
+          "準備、手伝わせてほしい",
+          [
+            "スキルPt(技能点数)+30",
+            "連続イベントが終了"
+          ]
+        ]
+      ],
+      "id": "NnOy6tseEp"
+    },
+    {
+      "name": "貴方らしく",
+      "choiceList": [
+        [
+          "選択肢なし",
+          [
+            "成功時：",
+            "スピード(速度)+15",
+            "根性(毅力)+15",
+            "『意気衝天』のヒントLv+3",
+            "失敗時：",
+            "スピード(速度)+5",
+            "根性(毅力)+5",
+            "『軽い足取り』のヒントLv+3"
+          ]
+        ]
+      ],
+      "id": "KDQnCB5WlM"
     }
   ]
 }
