@@ -63266,10 +63266,32 @@
     },
     {
       "name": "レディー、どんっ！",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill_b_u_1.png",
+      "imgUrl": "img/skill_icons/20023.png",
       "rare": "固有",
       "describe": "レース中間付近で中団にいるとき気合を入れ直して持久力を少し回復しさらに速度をわずかに上げる",
-      "id": "gDy153Z2CD"
+      "id": "gDy153Z2CD",
+      "condition": "distance_rate>=50&phase==1&order>=3&order_rate<=70",
+      "rarity": 3,
+      "db_id": 10621,
+      "icon_id": 20023,
+      "grade_value": 240,
+      "ability": [
+        {
+          "type": 9,
+          "value": 350,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 27,
+          "value": 1500,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": 50000,
+      "cooldown": 5000000,
+      "need_skill_point": 0
     },
     {
       "name": "どんっ、パッ、むんっ",
@@ -63377,10 +63399,32 @@
     },
     {
       "name": "良バ場の鬼",
-      "imgUrl": "https://img.gamewith.jp/article_tools/uma-musume/gacha/i_skill_g_r_3.png",
+      "imgUrl": "img/skill_icons/10032.png",
       "rare": "レア",
       "describe": "「良」のバ場状態が得意になりパワーとスピードが上昇する",
-      "id": "MYONJYYD5d"
+      "id": "MYONJYYD5d",
+      "condition": "ground_condition==1",
+      "rarity": 2,
+      "db_id": 200154,
+      "icon_id": 10032,
+      "grade_value": 461,
+      "ability": [
+        {
+          "type": 3,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        },
+        {
+          "type": 1,
+          "value": 600000,
+          "target_type": 1,
+          "target_value": 0
+        }
+      ],
+      "ability_time": -1,
+      "cooldown": 0,
+      "need_skill_point": 130
     }
   ],
   "updateTime": 1645797420759,
