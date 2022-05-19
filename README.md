@@ -2,7 +2,7 @@
 [https://urarawin.com](https://urarawin.com)
 
 ## 更新版本时
-提交更新 /public/master.mdb
+提交更新 /src/assert/master.mdb
 
 ## `yarn start` ` npm run start-dev`
 
