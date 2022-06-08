@@ -10,7 +10,8 @@
 ## 更新版本时
 提交更新 /src/assert/master.mdb
 
-## `yarn start` ` npm run start-dev`
+## 开发
+yarn start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
