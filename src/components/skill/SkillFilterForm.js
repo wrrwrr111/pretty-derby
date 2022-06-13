@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Button from "@material-tailwind/react/Button";
-
-import db from "../../db.js";
-import dbL from "../../dbL.js";
+import React from "react";
 
 import { useForm } from "react-hook-form";
 import CheckBox from "../common/CheckBox";
 import Input from "../common/Input";
 import t from "../t.js";
 
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
+import { useDB } from "../../hooks/index.js";
 
-const allSkillList = db.get("skills").orderBy("db_id").value();
+const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const conditionOptions = [
   { label: t("短距離"), value: "distance_type==1" },
@@ -67,6 +63,8 @@ const SkillFilterForm = (props) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
+  const  db = useDB();
+  if (!db) return null;
   const getFilterList = (value) => {
     const q = value[`${formName}q`];
     const condition =
@@ -80,7 +78,7 @@ const SkillFilterForm = (props) => {
       onUpdate([]);
       return;
     }
-    let tempList = [...allSkillList];
+    let tempList = db.get("skills").orderBy("db_id").value();
     if (q) {
       tempList = tempList.filter((item) => item.name.indexOf(q) > -1);
     }

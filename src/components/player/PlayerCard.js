@@ -21,7 +21,7 @@ const PlayerCard = (props) => {
           className="absolute top-0"
           style={{ aspectRatio: "32 / 35" }}
           onError={() => setShow(false)}
-          alt={data.name}
+          alt={t(data.name)}
           src={cdnServer + data.imgUrl}
           width={"100%"}
         />

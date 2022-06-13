@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import db from "../../db.js";
-import dbL from "../../dbL.js";
 import t from "../t.js";
+
+import { useDB } from "../../hooks/index.js";
 
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
@@ -10,6 +10,8 @@ import { EffectTable, TestEffectTable } from "../effect";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const SupportDetail = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
   return data ? (

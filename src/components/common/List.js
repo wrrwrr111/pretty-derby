@@ -4,9 +4,9 @@ import ReactTooltip from "react-tooltip";
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
-import db from "../../db.js";
 import t from "../t.js";
 
+import { useDB } from "../../hooks/index.js";
 const List = ({
   className,
   listKey,
@@ -20,6 +20,13 @@ const List = ({
   detailModalSize,
 }) => {
   const [show, setShow] = React.useState(false);
+  const [cur, setCur] = useState(null);
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
+  const  db = useDB();
+  if (!db) return null;
+
   const list = dataList
     ? dataList
     : idList
@@ -27,7 +34,6 @@ const List = ({
         return [...list, db.get(listKey).find({ id: cur }).value()];
       }, [])
     : db.get(listKey).value();
-  const [cur, setCur] = useState(null);
 
   const showModal = (cur) => {
     setCur(cur);
@@ -41,9 +47,6 @@ const List = ({
     </Modal>
   );
 
-  useEffect(() => {
-    ReactTooltip.rebuild();
-  });
   if (!list) {
     return <></>;
   }

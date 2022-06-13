@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import Button from "@material-tailwind/react/Button";
-import db from "../../db.js";
-// import dbL from '../dbL.js'
 
 import { Row, Col, Timeline, Checkbox } from "antd";
-// import { createFormattedComponent } from 'react-intl/src/components/createFormattedComponent';
-// import { getTimeProps } from 'antd/lib/date-picker/generatePicker';
 import t from "../t.js";
 
+import { useDB } from "../../hooks/index.js";
 // const ua = dbL.get('ua').value();
 
 const RaceSchedule = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   // const races = db.get('races').value()
   const str = [];
   const getDate = (i) => {
@@ -90,8 +89,10 @@ const getGolds = (race) => {
 };
 
 const RaceTimeline = React.memo((props) => {
-  const { showButton } = props;
   const [showSpare, setShowSpare] = useState(false);
+  const  db = useDB();
+  if (!db) return null;
+  const { showButton } = props;
   const str = [];
 
   const getDate = (i) => {

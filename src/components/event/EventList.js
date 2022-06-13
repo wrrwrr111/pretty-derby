@@ -1,9 +1,5 @@
 import React from "react";
 
-import db from "../../db.js";
-import dbL from "../../dbL.js";
-import t from "../t.js";
-
 import EventCard from "./EventCard";
 import EventDetail from "./EventDetail";
 import List from "../common/List";

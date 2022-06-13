@@ -1,4 +1,3 @@
-import db from "../../db.js";
 import t from "../t.js";
 import { Table } from "antd";
 import Card from "../common/Card.js";

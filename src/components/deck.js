@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "@material-tailwind/react/Button";
 import shortid from "shortid";
-// import db from '../db.js'
 import dbL from "../dbL.js";
 import t from "../components/t.js";
 import axios from "axios";

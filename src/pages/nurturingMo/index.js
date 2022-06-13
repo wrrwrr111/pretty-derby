@@ -4,7 +4,7 @@ import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
 import Button from "@material-tailwind/react/Button";
 
-import db from "@/db.js";
+import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
 import t from "@/components/t.js";
 import {
@@ -47,7 +47,6 @@ const Nurturing = (props) => {
   const selected = dbL.get("selected").value();
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
-  const races = db.get("races").value();
   const [raceFilterCondition, setRaceFilterCondition] = useState(
     selected.raceFilterCondition || {
       distanceType: [],
@@ -57,7 +56,9 @@ const Nurturing = (props) => {
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
-
+  const  db = useDB();
+  if (!db) return null;
+  const races = db.get("races").value();
   const showPlayer = () => {
     setIsPlayerVisible(true);
   };

@@ -4,15 +4,11 @@ import { useForm } from "react-hook-form";
 import CheckBox from "../common/CheckBox";
 import Input from "../common/Input";
 import dbL from "@/dbL.js";
-import db from "@/db.js";
 import t from "../t.js";
 
+import { useDB } from "../../hooks";
 import SkillFilterForm from "../skill/SkillFilterForm";
-const allSupports = db.get("supports").value();
-const effects = db.get("effects").value();
-const effectOptions = Object.keys(effects).map((key) => {
-  return { label: t(effects[key].name), value: key };
-});
+
 const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢さ", "友人"].map((item) => ({
   label: t(item),
   value: item,
@@ -26,6 +22,13 @@ const SupportFilterForm = (props) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
+  const  db = useDB();
+  if (!db) return null;
+  const allSupports = db.get("supports").value();
+  const effects = db.get("effects").value();
+  const effectOptions = Object.keys(effects).map((key) => {
+    return { label: t(effects[key].name), value: key };
+  });
   const getFilterList = (value) => {
     // const { type, effect, q, skill } = value;
     const q = value[`${formName}q`];
@@ -132,7 +135,7 @@ const SupportFilterForm = (props) => {
         <CheckBox
           key={formName + "effect" + value}
           register={register}
-          name={formName+"effect"}
+          name={formName + "effect"}
           label={label}
           value={formName + value}
         />

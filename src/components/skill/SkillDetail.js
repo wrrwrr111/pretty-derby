@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import db from "../../db.js";
 import t from "../t.js";
 import SupportList from "../support/SupportList";
 import PlayerList from "../player/PlayerList";
 import EventList from "../event/EventList";
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
-const allSupportList = db.get("supports").value();
-const allPlayerList = db.get("players").value();
+import { useDB } from "../../hooks/index.js";
+const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const skillType = {
   1: "速度属性",
@@ -28,10 +26,13 @@ const skillType = {
   31: "加速度",
 };
 const SkillDetail = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("skills").find({ id }).value();
   const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
-  const supportList = allSupportList
+  const supportList = db
+    .get("supports")
     .filter((support) => {
       let flag = 0;
       support.skillList.forEach((id) => {
@@ -41,8 +42,11 @@ const SkillDetail = (props) => {
       });
       return flag;
     })
-    .sort((a, b) => b.rarity - a.rarity);
-  const playerList = allPlayerList
+
+    .sort((a, b) => b.rarity - a.rarity)
+    .value();
+  const playerList = db
+    .get("players")
     .filter((player) => {
       let flag = 0;
       player.skillList.forEach((id) => {
@@ -52,9 +56,11 @@ const SkillDetail = (props) => {
       });
       return flag;
     })
-    .sort((a, b) => b.rarity - a.rarity);
+    .sort((a, b) => b.rarity - a.rarity)
+    .value();
 
-  return data ? (
+  if (!data) return null;
+  return (
     <div
       className="w-full flex flex-col p-3"
       style={{
@@ -94,9 +100,9 @@ const SkillDetail = (props) => {
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center flex-shrink-0">{t("持续时间")}</div>
-        <div className="flex-auto">
-          {`${data.ability_time / 10000}s * ${t("赛道长度")} / 1000}`}
-        </div>
+        <div className="flex-auto">{`${data.ability_time / 10000}s * ${t(
+          "赛道长度"
+        )} / 1000}`}</div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center flex-shrink-0">{t("冷却时间")}</div>
@@ -133,7 +139,7 @@ const SkillDetail = (props) => {
         </>
       )}
     </div>
-  ) : null;
+  );
 };
 
 export default SkillDetail;

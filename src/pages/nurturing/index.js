@@ -10,7 +10,7 @@ import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 
-import db from "@/db.js";
+import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
 import t from "@/components/t.js";
 import Layout from "@/components/common/Layout.js";
@@ -35,7 +35,36 @@ import PlayerList from "@/components/player/PlayerList";
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
-
+const layoutWithBlank = [
+  { i: "a", x: 0, y: 0, w: 2, h: 2 },
+  { i: "b", x: 2, y: 0, w: 7, h: 2 },
+  { i: "c", x: 0, y: 2, w: 9, h: 7 },
+  { i: "d", x: 0, y: 10, w: 4, h: 4 },
+  { i: "e", x: 4, y: 10, w: 5, h: 7 },
+  { i: "f", x: 0, y: 14, w: 4, h: 3 },
+  // {i: 'w', x: 5, y: 10, w: 6, h: 7},
+  { i: "s0", x: 17, y: 0, w: 5, h: 8 },
+  { i: "s1", x: 22, y: 0, w: 5, h: 8 },
+  { i: "s2", x: 27, y: 0, w: 5, h: 8 },
+  { i: "s3", x: 17, y: 9, w: 5, h: 8 },
+  { i: "s4", x: 22, y: 9, w: 5, h: 8 },
+  { i: "s5", x: 27, y: 9, w: 5, h: 8 },
+];
+const layoutWithoutBlank = [
+  { i: "a", x: 0, y: 0, w: 2, h: 2 },
+  { i: "b", x: 2, y: 0, w: 9, h: 2 },
+  { i: "c", x: 0, y: 2, w: 11, h: 7 },
+  { i: "d", x: 0, y: 10, w: 5, h: 4 },
+  { i: "e", x: 5, y: 10, w: 6, h: 7 },
+  { i: "f", x: 0, y: 14, w: 5, h: 3 },
+  // {i: 'w', x: 5, y: 10, w: 6, h: 7},
+  { i: "s0", x: 11, y: 0, w: 7, h: 8 },
+  { i: "s1", x: 18, y: 0, w: 7, h: 8 },
+  { i: "s2", x: 25, y: 0, w: 7, h: 8 },
+  { i: "s3", x: 11, y: 9, w: 7, h: 8 },
+  { i: "s4", x: 18, y: 9, w: 7, h: 8 },
+  { i: "s5", x: 25, y: 9, w: 7, h: 8 },
+];
 const Nurturing = () => {
   document.title = TITLE;
   useDidRecover(() => {
@@ -51,7 +80,6 @@ const Nurturing = () => {
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
 
-  const races = db.get("races").value();
   const [raceFilterCondition, setRaceFilterCondition] = useState(
     selected.raceFilterCondition || {
       distanceType: [],
@@ -60,7 +88,28 @@ const Nurturing = () => {
     }
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
+  const  db = useDB();
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const [height, setHeight] = React.useState(window.innerHeight);
+    React.useEffect(() => {
+      const handleWindowResize = () => {
+        setHeight(window.innerHeight);
+        setWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+    return { height, width };
+  };
 
+  const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
+  const dynamicGridWidth = Math.floor(useViewport().width - 10);
+  const originalLayout = dbL.get("layout").value() || layoutWithoutBlank;
+  const [layout, setLayout] = useState(originalLayout);
+
+  if (!db) return null;
+  const races = db.get("races").value();
   const showPlayer = () => {
     setIsPlayerVisible(true);
   };
@@ -147,54 +196,6 @@ const Nurturing = () => {
       .write();
   };
 
-  const useViewport = () => {
-    const [width, setWidth] = React.useState(window.innerWidth);
-    const [height, setHeight] = React.useState(window.innerHeight);
-    React.useEffect(() => {
-      const handleWindowResize = () => {
-        setHeight(window.innerHeight);
-        setWidth(window.innerWidth);
-      };
-      window.addEventListener("resize", handleWindowResize);
-      return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);
-    return { height, width };
-  };
-
-  const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
-
-  const layoutWithBlank = [
-    { i: "a", x: 0, y: 0, w: 2, h: 2 },
-    { i: "b", x: 2, y: 0, w: 7, h: 2 },
-    { i: "c", x: 0, y: 2, w: 9, h: 7 },
-    { i: "d", x: 0, y: 10, w: 4, h: 4 },
-    { i: "e", x: 4, y: 10, w: 5, h: 7 },
-    { i: "f", x: 0, y: 14, w: 4, h: 3 },
-    // {i: 'w', x: 5, y: 10, w: 6, h: 7},
-    { i: "s0", x: 17, y: 0, w: 5, h: 8 },
-    { i: "s1", x: 22, y: 0, w: 5, h: 8 },
-    { i: "s2", x: 27, y: 0, w: 5, h: 8 },
-    { i: "s3", x: 17, y: 9, w: 5, h: 8 },
-    { i: "s4", x: 22, y: 9, w: 5, h: 8 },
-    { i: "s5", x: 27, y: 9, w: 5, h: 8 },
-  ];
-  const layoutWithoutBlank = [
-    { i: "a", x: 0, y: 0, w: 2, h: 2 },
-    { i: "b", x: 2, y: 0, w: 9, h: 2 },
-    { i: "c", x: 0, y: 2, w: 11, h: 7 },
-    { i: "d", x: 0, y: 10, w: 5, h: 4 },
-    { i: "e", x: 5, y: 10, w: 6, h: 7 },
-    { i: "f", x: 0, y: 14, w: 5, h: 3 },
-    // {i: 'w', x: 5, y: 10, w: 6, h: 7},
-    { i: "s0", x: 11, y: 0, w: 7, h: 8 },
-    { i: "s1", x: 18, y: 0, w: 7, h: 8 },
-    { i: "s2", x: 25, y: 0, w: 7, h: 8 },
-    { i: "s3", x: 11, y: 9, w: 7, h: 8 },
-    { i: "s4", x: 18, y: 9, w: 7, h: 8 },
-    { i: "s5", x: 25, y: 9, w: 7, h: 8 },
-  ];
-  const originalLayout = dbL.get("layout").value() || layoutWithoutBlank;
-  const [layout, setLayout] = useState(originalLayout);
   const onLayoutChange = (layout) => {
     /*eslint no-console: 0*/
     dbL.set("layout", layout).write();
@@ -214,7 +215,7 @@ const Nurturing = () => {
         draggableCancel=".panel-title"
         draggableHandle=".panel-heading"
         rowHeight={dynamicRowHeight}
-        width={useViewport().width - 10}
+        width={dynamicGridWidth}
         onLayoutChange={onLayoutChange}
         useCSSTransforms={false}
       >

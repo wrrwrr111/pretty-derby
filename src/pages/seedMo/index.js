@@ -11,16 +11,17 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 
-import db from "@/db.js";
+import dbL from "../../dbL";
 import t from "@/components/t.js";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
-import Layout from "@/components/common/Layout.js";
+
+import { useDB } from "../../hooks";
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
-let userId = db.get("userId").value();
+let userId = dbL.get("userId").value();
 const blueLabels = {
   speed: "速度",
   stamina: "耐力",
@@ -156,7 +157,11 @@ const SupportInput = ({ value = {}, onChange }) => {
         bodyStyle={{ height: "80vh" }}
       >
         <div className="w-full h-full overflow-hidden flex relative">
-          <SupportListWithFilter formName="seedSupMo" onClick={handleSelectSupport} sortFlag={true} />
+          <SupportListWithFilter
+            formName="seedSupMo"
+            onClick={handleSelectSupport}
+            sortFlag={true}
+          />
         </div>
       </Modal>
     </>
@@ -256,6 +261,8 @@ const SearchForm = (props) => {
 };
 
 const SeedCard = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   const data = props.data;
   const player = db.get("players").find({ id: data.playerId0 }).value();
   const support = db.get("supports").find({ id: data.supportId }).value();

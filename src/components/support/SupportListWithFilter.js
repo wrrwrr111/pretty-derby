@@ -6,8 +6,8 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import Button from "@material-tailwind/react/Button";
 
+import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
-import db from "@/db.js";
 import t from "@/components/t.js";
 
 import SupportList from "@/components/support/SupportList";
@@ -16,14 +16,12 @@ import useViewport from "@/utils/useViewport";
 
 const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 
-const allSupports = db.get("supports").value();
-
 document.title = TITLE;
 const SupportListWithFilter = (props) => {
   const { onClick, limitHeight, formName } = props;
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
-  const [list, setList] = useState(props.supportList || allSupports || []);
+  const [list, setList] = useState(props.supportList || []);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
   const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
@@ -31,7 +29,11 @@ const SupportListWithFilter = (props) => {
   useDidRecover(() => {
     document.title = TITLE;
   });
-
+  const  db = useDB();
+  useEffect(() => {
+    if (db) setList(props.supportList || db.get("supports").value() || []);
+  }, []);
+  if (!db) return null;
   const changeChooseMode = () => {
     setShowMode(!showMode);
     setChooseMode(!chooseMode);

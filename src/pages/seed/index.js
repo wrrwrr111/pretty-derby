@@ -29,15 +29,13 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
-import db from "@/db.js";
+import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
 // import t from "../components/t.js";
 
-import Layout from "@/components/common/Layout.js";
 import PlayerList from "@/components/player/PlayerList";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
-// db.set('userId',null).write()
 let userId = dbL.get("userId").value();
 const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 
@@ -172,7 +170,6 @@ const SeedInput = (props) => {
     let tmpSeed = seed;
     tmpSeed = Object.assign({}, seed, value);
     setSeed(tmpSeed);
-    // db.set('form',form).write()
     // 修整成需要的数据
     const formData = { ...tmpSeed };
     formData.userId = userId || dbL.get("userId").value();
@@ -486,6 +483,8 @@ const SearchForm = (props) => {
 };
 
 const PlayerImage = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   let imgUrl = db.get("players").find({ id: props.id }).value().imgUrl;
   return (
     <Image
@@ -498,6 +497,8 @@ const PlayerImage = (props) => {
 };
 
 const SupportImage = (props) => {
+  const  db = useDB();
+  if (!db) return null;
   let support = db.get("supports").find({ id: props.id }).value();
   let imgUrl = "";
   if (support) {

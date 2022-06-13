@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Table } from "antd";
 import { useDidRecover } from "react-router-cache-route";
 import Layout from "../../components/common/Layout.js";
-import db from "../../db.js";
 import t from "../../components/t.js";
+import { useDB } from "../../hooks/index";
 const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const filterList = {
@@ -91,12 +91,12 @@ const getColumns = (labels) => {
         dataIndex: label,
         filters: filterList[label],
         width: 100,
-        fixed: label === 'name' ? 'left' : null,
+        fixed: label === "name" ? "left" : null,
         onFilter: (value, record) => record[label] === value,
       };
     } else {
       return {
-        fixed: label === 'name' ? 'left' : null,
+        fixed: label === "name" ? "left" : null,
         title: getCorrespondingLabelText(label),
         dataIndex: label,
       };
@@ -105,6 +105,9 @@ const getColumns = (labels) => {
 };
 
 const Race = (props) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const  db = useDB();
+
   document.title = TITLE;
   useDidRecover(() => {
     document.title = TITLE;
@@ -122,6 +125,8 @@ const Race = (props) => {
 
   const dynamicTableHeight = useViewport().height - 168;
 
+  if (!db) return null;
+
   const allRaceList = db
     .get("races")
     .value()
@@ -129,7 +134,6 @@ const Race = (props) => {
       race.key = index;
       return race;
     });
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   let columns = getColumns(labels);
   if (props.type === "medium") {
     columns = getColumns(mediumLabels);
@@ -156,7 +160,7 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <div className={'w-full overflow-x-auto'}>
+    <div className={"w-full overflow-x-auto"}>
       <Table
         rowSelection={props.onSelect ? rowSelection : null}
         columns={columns}

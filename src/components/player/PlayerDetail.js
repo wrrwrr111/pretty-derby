@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import db from "../../db.js";
 import t from "../t.js";
 import { cdnServer } from "../../config";
 import EventList from "../event/EventList";
@@ -11,7 +10,7 @@ import {
   RaceTimeline,
 } from "../race";
 // import {EffectTable} from './effect.js'
-
+import { useDB } from "../../hooks/index.js";
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
   return (
@@ -31,13 +30,13 @@ const PlayerItem = ({ data }) => {
   );
 };
 const PlayerDetail = (props) => {
+  const db = useDB();
+  if (!db) return null;
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
   const data = props.data || db.get("players").find({ id }).value();
-  if (!data) {
-    return <></>;
-  }
+  if (!data) return null;
 
   if (isNur) {
     return (
