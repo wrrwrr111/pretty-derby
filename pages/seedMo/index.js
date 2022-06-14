@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
 
 import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "/src/config";
 
-const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 let userId = dbL.get("userId").value();
 
 const PlayerInput = ({ value = {}, onChange }) => {

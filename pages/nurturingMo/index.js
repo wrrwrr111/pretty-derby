@@ -22,7 +22,7 @@ import { RaceTimeline, RaceCheckbox } from "/components/race";
 
 import { CDN_SERVER } from "/src/config";
 
-const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
   const { t } = useTranslation();
@@ -48,6 +48,7 @@ const Nurturing = (props) => {
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
   const db = useDB();
+  if (typeof window === "undefined") return;
   if (!db) return null;
   const races = db.get("races").value();
   const showPlayer = () => {

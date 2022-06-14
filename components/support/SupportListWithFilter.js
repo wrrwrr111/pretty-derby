@@ -13,7 +13,7 @@ import SupportList from "/components/support/SupportList";
 import SupportFilterForm from "/components/support/SupportFilterForm";
 import useViewport from "/hooks/useViewport";
 
-const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const SupportListWithFilter = (props) => {
   const { onClick, limitHeight, formName } = props;

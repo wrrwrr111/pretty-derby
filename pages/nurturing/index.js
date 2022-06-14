@@ -28,7 +28,8 @@ import PlayerList from "/components/player/PlayerList";
 
 import { CDN_SERVER } from "/src/config";
 
-const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
+import useViewport from "/hooks/useViewport";
+// const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
   { i: "b", x: 2, y: 0, w: 7, h: 2 },
@@ -80,25 +81,13 @@ const Nurturing = () => {
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const db = useDB();
-  const useViewport = () => {
-    const [width, setWidth] = React.useState(window.innerWidth);
-    const [height, setHeight] = React.useState(window.innerHeight);
-    React.useEffect(() => {
-      const handleWindowResize = () => {
-        setHeight(window.innerHeight);
-        setWidth(window.innerWidth);
-      };
-      window.addEventListener("resize", handleWindowResize);
-      return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);
-    return { height, width };
-  };
 
   const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
   const dynamicGridWidth = Math.floor(useViewport().width - 10);
   const originalLayout = dbL.get("layout").value() || layoutWithoutBlank;
   const [layout, setLayout] = useState(originalLayout);
 
+  if (typeof window === "undefined") return;
   if (!db) return null;
   const races = db.get("races").value();
   const showPlayer = () => {

@@ -5,7 +5,7 @@ import axios from "axios";
 import Button from "@material-tailwind/react/Button";
 import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
 
-import dbL from "../dbL.js";
+import dbL from "/src/dbL.js";
 
 import { useTranslation } from "react-i18next";
 import { CDN_SERVER, DECK_LABELS } from "/src/config";

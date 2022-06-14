@@ -11,7 +11,7 @@ import SkillFilterForm from "/components/skill/SkillFilterForm";
 import useViewport from "/hooks/useViewport";
 
 import { useDB } from "/hooks";
-const TITLE = "技能 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "技能 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Skill = (props) => {
   const viewport = useViewport();

@@ -5,7 +5,7 @@ import { useDB } from "/hooks";
 import { RACE_FILTER_LIST } from "/src/config";
 
 import useViewport from "/hooks/useViewport";
-const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const RACE_TABLE_LABELS = [
   "name",

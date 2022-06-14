@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router.js";
 import SupportDetail from "/components/support/SupportDetail.js";
 
-const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 const SupportDetailPage = () => {
   const router = useRouter();
   const id = router.query?.id;

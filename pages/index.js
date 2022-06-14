@@ -1,7 +1,7 @@
 import React from "react";
 import PlayerList from "/components/player/PlayerList.js";
 
-const TITLE = "角色 - 乌拉拉大胜利 - 赛马娘资料站";
+// const TITLE = "角色 - 乌拉拉大胜利 - 赛马娘资料站";
 
 //todo filter
 const Player = (props) => {

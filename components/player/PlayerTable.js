@@ -7,6 +7,34 @@ import {
   PLAYER_RARITIES,
   PLAYER_ADAPT_TITLES,
 } from "/src/config";
+
+const coloredGradeText = (text) => {
+  let color = "gray";
+  switch (text) {
+    case "S":
+      color = "#FFD700";
+      break;
+    case "A":
+      color = "#FFA500";
+      break;
+    case "B":
+      color = "#BA55D3";
+      break;
+    case "C":
+      color = "#90EE90";
+      break;
+    case "D":
+      color = "#87CEEB";
+      break;
+    default:
+      color = "gray";
+  }
+  return (
+    <div style={{ fontSize: 22, fontWeight: 700, textShadow: "0 2px #33333370", color: color }}>
+      {text}
+    </div>
+  );
+};
 const PlayerTable = (props) => {
   const { t } = useTranslation();
 
