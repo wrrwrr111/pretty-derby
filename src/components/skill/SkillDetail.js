@@ -77,7 +77,11 @@ const SkillDetail = (props) => {
         <div className="w-20 text-center flex-shrink-0">{t("技能效果")}</div>
         <div className="flex-auto">
           {data.ability?.map((ability) => {
-            return <span>{`${SKILL_TYPES[ability.type]} ${ability.value / 10000}`}</span>;
+            return (
+              <span key={ability.type}>{`${SKILL_TYPES[ability.type]} ${
+                ability.value / 10000
+              }`}</span>
+            );
           })}
         </div>
       </div>

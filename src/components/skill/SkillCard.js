@@ -21,7 +21,7 @@ const SkillCard = (props) => {
           onError={() => setShow(false)}
           alt={data.name}
           src={CDN_SERVER + data.imgUrl}
-          preview={false}
+          preview="false"
         />
       )}
       <div className="flex-auto truncate">{data.name}</div>

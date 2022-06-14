@@ -73,7 +73,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
         <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
           {t("初始化育成")}
         </div>
-        <LanButton></LanButton>
+        <LanButton />
         <div className="flex-auto"></div>
         <iframe
           title="GitHub"
@@ -103,7 +103,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
           className="flex mx-2 items-center"
           data-tip={`<img src=${CDN_SERVER + "img/weapp.jpg"} width={200} />`}
         >
-          <img alt="reimu" src={CDN_SERVER + "reimu.gif"} preview={false} width={24} />
+          <img alt="reimu" src={CDN_SERVER + "reimu.gif"} preview="false" width={24} />
           <div>{t("微信小程序")}</div>
         </div>
       </div>

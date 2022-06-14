@@ -43,14 +43,12 @@ const List = ({
 
   const modal = (
     <Modal size={"lg"} active={show} toggler={() => setShow(false)}>
-      <ModalHeader toggler={() => setShow(false)}>{cur?.name}</ModalHeader>
+      {cur?.name && <ModalHeader toggler={() => setShow(false)}>{cur.name}</ModalHeader>}
       <ModalBody>{detailRender(cur)}</ModalBody>
     </Modal>
   );
 
-  if (!list) {
-    return <></>;
-  }
+  if (!list) return null;
   if (sort) {
     return (
       <div className={` flex flex-wrap ${className}`}>
@@ -65,17 +63,18 @@ const List = ({
             }
             return flag;
           });
-          if (!sortList.length) {
-            return <></>;
-          }
+          if (!sortList.length) return null;
+
           return (
             <>
-              <div className="w-full text-lg font-semibold text-center">{t(sortItem.title)}</div>
+              <div key={sortItem.title} className="w-full text-lg font-semibold text-center">
+                {t(sortItem.title)}
+              </div>
               {sortList.map((data) => itemRender(data, showModal))}
               {itemClass && (
                 <>
-                  {[...new Array(20)].map((i) => (
-                    <div className={itemClass} />
+                  {[...new Array(20)].map((e, i) => (
+                    <div key={`blank_${i}`} className={itemClass} />
                   ))}
                 </>
               )}

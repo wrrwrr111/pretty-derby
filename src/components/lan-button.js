@@ -5,7 +5,7 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import Button from "@material-tailwind/react/Button";
 
 import i18n from "../i18n";
-const LanButton = (props) => {
+const LanButton = () => {
   const [show, setShow] = useState(false);
   const changeLanguage = (lan) => {
     i18n.changeLanguage(lan);

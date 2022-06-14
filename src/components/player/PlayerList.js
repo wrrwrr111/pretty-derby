@@ -22,7 +22,7 @@ const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
       dataList={dataList}
       sort={sortFlag && sort}
       itemRender={(data, setCur) => (
-        <div className="w-24 max-w-1/4 p-1">
+        <div key={`player_${data.id}`} className="w-24 max-w-1/4 p-1">
           <PlayerCard
             className=""
             data={data}

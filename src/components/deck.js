@@ -1,22 +1,14 @@
 import React, { useState } from "react";
-import Button from "@material-tailwind/react/Button";
 import shortid from "shortid";
-import dbL from "../dbL.js";
 import axios from "axios";
+
+import Button from "@material-tailwind/react/Button";
+import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
+
+import dbL from "../dbL.js";
 
 import { useTranslation } from "react-i18next";
 import { CDN_SERVER, DECK_LABELS } from "@/config";
-import {
-  // Divider,
-  Row,
-  Col,
-  // Modal,
-  Tag,
-  message,
-  Popover,
-  Popconfirm,
-  Checkbox,
-} from "antd";
 
 const MyDecks = (props) => {
   const { t } = useTranslation();
@@ -82,40 +74,38 @@ const MyDecks = (props) => {
             {t("保存为新卡组")}
           </Button>
           {decks.map((deck) => (
-            <>
-              <Row>
+            <div key={deck.id} className="w-full grid grid-cols-8">
+              <div className="col-span-full">
                 <Checkbox.Group
                   options={DECK_LABELS}
                   defaultValue={deck.tags || []}
                   onChange={(values) => onChangeTag(values, deck)}
                 />
-              </Row>
-              <Row key={deck.id}>
-                {deck.imgUrls.map((imgUrl) => (
-                  <Col span={3} key={imgUrl}>
-                    <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
-                  </Col>
-                ))}
-                <Col span={3}>
-                  <Button type="primary" onClick={() => props.loadDeck(deck)}>
-                    {t("读取卡组")}
+              </div>
+              {deck.imgUrls.map((imgUrl) => (
+                <div className="col-span-1" key={imgUrl}>
+                  <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
+                </div>
+              ))}
+              <div className="col-span-1">
+                <Button type="primary" onClick={() => props.loadDeck(deck)}>
+                  {t("读取卡组")}
+                </Button>
+                <Popconfirm title={t("确认覆盖？")} onConfirm={() => saveDeck(deck)}>
+                  <Button danger type="dashed">
+                    {t("覆盖卡组")}
                   </Button>
-                  <Popconfirm title={t("确认覆盖？")} onConfirm={() => saveDeck(deck)}>
-                    <Button danger type="dashed">
-                      {t("覆盖卡组")}
-                    </Button>
-                  </Popconfirm>
-                  <Popconfirm title={t("确认删除？")} onConfirm={() => deleteDeck(deck)}>
-                    <Button danger type="dashed">
-                      {t("删除卡组")}
-                    </Button>
-                  </Popconfirm>
-                  <Popconfirm title={t("确认分享？")} onConfirm={() => shareDeck(deck)}>
-                    <Button>分享卡组</Button>
-                  </Popconfirm>
-                </Col>
-              </Row>
-            </>
+                </Popconfirm>
+                <Popconfirm title={t("确认删除？")} onConfirm={() => deleteDeck(deck)}>
+                  <Button danger type="dashed">
+                    {t("删除卡组")}
+                  </Button>
+                </Popconfirm>
+                <Popconfirm title={t("确认分享？")} onConfirm={() => shareDeck(deck)}>
+                  <Button>分享卡组</Button>
+                </Popconfirm>
+              </div>
+            </div>
           ))}
         </>
       }
@@ -150,22 +140,21 @@ const RecommendDecks = (props) => {
       onVisibleChange={searchDeck}
       overlayStyle={{ maxHeight: 800, overflow: "auto" }}
       content={recommendDecks.map((deck) => (
-        <>
-          <Row>{deck.tags && deck.tags.map((tag) => <Tag>{tag}</Tag>)}</Row>
-          <Row key={deck.id}>
-            {deck.imgUrls.map((imgUrl) => (
-              <Col span={3} key={imgUrl}>
-                <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
-              </Col>
-            ))}
-            <Col span={3}>
-              <Button type="primary" onClick={() => props.loadDeck(deck)}>
-                {t("读取卡组")}
-              </Button>
-              {/* <Button type="primary" onClick={()=>deleteDeck(deck)}>{t('删除卡组')}</Button> */}
-            </Col>
-          </Row>
-        </>
+        <div key={deck.id} className="w-full grid grid-cols-8">
+          <div className="col-span-full">
+            {deck.tags && deck.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+          </div>
+          {deck.imgUrls.map((imgUrl) => (
+            <div className="col-span-1" key={imgUrl}>
+              <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
+            </div>
+          ))}
+          <div className="col-span-1">
+            <Button type="primary" onClick={() => props.loadDeck(deck)}>
+              {t("读取卡组")}
+            </Button>
+          </div>
+        </div>
       ))}
     >
       <Button size="sm" buttonType="outline">

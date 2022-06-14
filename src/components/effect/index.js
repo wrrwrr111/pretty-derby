@@ -269,7 +269,10 @@ const TestEffectTable = (props) => {
             item.limit_lv50,
           ].filter((item) => item);
           return (
-            <div className="col-span-1 flex items-center rounded-xl border border-solid bg-green-300 border-green-500">
+            <div
+              key={item.type}
+              className="col-span-1 flex items-center rounded-xl border border-solid bg-green-300 border-green-500"
+            >
               <div
                 className="flex-auto truncate pl-2"
                 data-tip={`<div><p>${effects[item.type].name}</p><p>${t(

@@ -25,7 +25,7 @@ const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }
       sort={sort}
       onClick={onClick}
       itemRender={(data, setCur) => (
-        <div className="w-24 max-w-1/4 p-1">
+        <div key={data.id} className="w-24 max-w-1/4 p-1">
           <SupportCard
             className={`${ownList?.length && !ownList?.includes(data.id) && "un-chosen-card"}`}
             data={data}
