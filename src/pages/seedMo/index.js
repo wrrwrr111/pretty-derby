@@ -12,11 +12,11 @@ import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 
 import dbL from "../../dbL";
-import t from "@/components/t.js";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
 
 import { useDB } from "../../hooks";
+import { useTranslation } from "react-i18next";
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
@@ -41,37 +41,6 @@ const redLabels = {
   insertR: "差",
   trackingR: "追",
 };
-
-const lists = [
-  [
-    { value: "speed", label: t("速度") },
-    { value: "stamina", label: t("耐力") },
-    { value: "power", label: t("力量") },
-    { value: "guts", label: t("根性") },
-    { value: "wisdom", label: t("智力") },
-    { value: "grass", label: t("草地") },
-    { value: "dirt", label: t("泥地") },
-    { value: "shortDistance", label: t("短距离") },
-    { value: "mile", label: t("英里") },
-    { value: "mediumDistance", label: t("中距离") },
-    { value: "longDistance", label: t("长距离") },
-    { value: "escapeR", label: t("逃") },
-    { value: "leadingR", label: t("先") },
-    { value: "insertR", label: t("差") },
-    { value: "trackingR", label: t("追") },
-  ],
-  [
-    { value: 1, label: `1${t("星")}` },
-    { value: 2, label: `2${t("星")}` },
-    { value: 3, label: `3${t("星")}` },
-    { value: 4, label: `4${t("星")}` },
-    { value: 5, label: `5${t("星")}` },
-    { value: 6, label: `6${t("星")}` },
-    { value: 7, label: `7${t("星")}` },
-    { value: 8, label: `8${t("星")}` },
-    { value: 9, label: `9${t("星")}` },
-  ],
-];
 
 const PlayerInput = ({ value = {}, onChange }) => {
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
@@ -169,6 +138,37 @@ const SupportInput = ({ value = {}, onChange }) => {
 };
 
 const SearchOne = (props) => {
+  const { t } = useTranslation();
+  const PICKER_LISTS = [
+    [
+      { value: "speed", label: t("速度") },
+      { value: "stamina", label: t("耐力") },
+      { value: "power", label: t("力量") },
+      { value: "guts", label: t("根性") },
+      { value: "wisdom", label: t("智力") },
+      { value: "grass", label: t("草地") },
+      { value: "dirt", label: t("泥地") },
+      { value: "shortDistance", label: t("短距离") },
+      { value: "mile", label: t("英里") },
+      { value: "mediumDistance", label: t("中距离") },
+      { value: "longDistance", label: t("长距离") },
+      { value: "escapeR", label: t("逃") },
+      { value: "leadingR", label: t("先") },
+      { value: "insertR", label: t("差") },
+      { value: "trackingR", label: t("追") },
+    ],
+    [
+      { value: 1, label: `1${t("星")}` },
+      { value: 2, label: `2${t("星")}` },
+      { value: 3, label: `3${t("星")}` },
+      { value: 4, label: `4${t("星")}` },
+      { value: 5, label: `5${t("星")}` },
+      { value: 6, label: `6${t("星")}` },
+      { value: 7, label: `7${t("星")}` },
+      { value: 8, label: `8${t("星")}` },
+      { value: 9, label: `9${t("星")}` },
+    ],
+  ];
   return (
     <Form.List name={props.name}>
       {(fields, { add, remove }, { errors }) => (
@@ -183,7 +183,7 @@ const SearchOne = (props) => {
               validateTrigger={["onChange", "onBlur"]}
               noStyle
             >
-              <Picker data={lists} cascade={false} extra={t("请选择")}>
+              <Picker data={PICKER_LISTS} cascade={false} extra={t("请选择")}>
                 <List.Item arrow="horizontal">{t("过滤条件(总计)")}</List.Item>
               </Picker>
             </Form.Item>
@@ -199,6 +199,7 @@ const SearchOne = (props) => {
   );
 };
 const SearchForm = (props) => {
+  const { t } = useTranslation();
   const [form] = Form.useForm();
 
   const onFinish = async (value) => {
@@ -261,7 +262,8 @@ const SearchForm = (props) => {
 };
 
 const SeedCard = (props) => {
-  const  db = useDB();
+  const { t } = useTranslation();
+  const db = useDB();
   if (!db) return null;
   const data = props.data;
   const player = db.get("players").find({ id: data.playerId0 }).value();
@@ -333,6 +335,7 @@ const SeedCard = (props) => {
   );
 };
 const Seed = () => {
+  const { t } = useTranslation();
   document.title = TITLE;
   useDidRecover(() => {
     document.title = TITLE;

@@ -1,12 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router";
 import SkillCard from "./SkillCard";
 import SkillDetail from "./SkillDetail";
 import List from "../common/List";
-import useUa from "../../utils/ua";
 const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, size = "medium" }) => {
-  const ua = useUa();
-  const history = useHistory();
   const sort = {
     key: "rare",
     data: [

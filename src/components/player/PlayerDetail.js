@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
-import t from "../t.js";
 import { cdnServer } from "../../config";
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
@@ -11,8 +10,10 @@ import {
 } from "../race";
 // import {EffectTable} from './effect.js'
 import { useDB } from "../../hooks/index.js";
+import { useTranslation } from "react-i18next";
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
+  const { t } = useTranslation();
   return (
     <div className="h-16 w-full flex flex-shrink-0">
       <img alt={name} src={cdnServer + imgUrl} height={64} width={64} />
@@ -30,6 +31,7 @@ const PlayerItem = ({ data }) => {
   );
 };
 const PlayerDetail = (props) => {
+  const { t } = useTranslation();
   const db = useDB();
   if (!db) return null;
   const id = props.id || props.match?.params?.id;
@@ -112,6 +114,8 @@ const coloredGradeText = (text) => {
   );
 };
 const AdaptBox = (props) => {
+  const { t } = useTranslation();
+
   return (
     <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
       <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
@@ -159,6 +163,7 @@ const AdaptBox = (props) => {
 };
 
 const GrowBox = (props) => {
+  const { t } = useTranslation();
   return (
     <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
       <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">

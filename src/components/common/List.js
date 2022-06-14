@@ -4,9 +4,9 @@ import ReactTooltip from "react-tooltip";
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
-import t from "../t.js";
 
 import { useDB } from "../../hooks/index.js";
+import { useTranslation } from "react-i18next";
 const List = ({
   className,
   listKey,
@@ -19,12 +19,13 @@ const List = ({
   detailRender,
   detailModalSize,
 }) => {
+  const { t } = useTranslation();
   const [show, setShow] = React.useState(false);
   const [cur, setCur] = useState(null);
   useEffect(() => {
     ReactTooltip.rebuild();
   });
-  const  db = useDB();
+  const db = useDB();
   if (!db) return null;
 
   const list = dataList
@@ -57,7 +58,7 @@ const List = ({
           let sortList = list.filter((item) => {
             let flag = false;
             if (sort.key && sortItem.value) {
-              flag = item[sort.key] == sortItem.value;
+              flag = item[sort.key] === sortItem.value;
             }
             if (sortItem.func) {
               flag = sortItem.func(item);

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Button from "@material-tailwind/react/Button";
 
 import { Row, Col, Timeline, Checkbox } from "antd";
-import t from "../t.js";
+import { useTranslation } from "react-i18next";
 
 import { useDB } from "../../hooks/index.js";
-// const ua = dbL.get('ua').value();
 
 const RaceSchedule = (props) => {
+  // const { t } = useTranslation();
   const  db = useDB();
   if (!db) return null;
   // const races = db.get('races').value()
@@ -89,6 +89,7 @@ const getGolds = (race) => {
 };
 
 const RaceTimeline = React.memo((props) => {
+  const { t } = useTranslation();
   const [showSpare, setShowSpare] = useState(false);
   const  db = useDB();
   if (!db) return null;

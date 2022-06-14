@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, Link, useHistory } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 import Navbar from "@material-tailwind/react/Navbar";
 import NavbarContainer from "@material-tailwind/react/NavbarContainer";
@@ -14,9 +14,10 @@ import useUa from "@/utils/ua.js";
 import LanButton from "@/components/lan-button.js";
 import { cdnServer } from "@/config";
 import dbL from "@/dbL.js";
-import t from "@/components/t.js";
+import { useTranslation } from "react-i18next";
 
 const Layout = ({ children, contentClass, rootClass }) => {
+  const { t } = useTranslation();
   const [openNavbar, setOpenNavbar] = useState(false);
   const ua = useUa();
   const location = useLocation();

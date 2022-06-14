@@ -1,7 +1,8 @@
-import t from "../t.js";
 import { Table } from "antd";
 import Card from "../common/Card.js";
+import { useTranslation } from "react-i18next";
 const PlayerTable = (props) => {
+  const { t } = useTranslation();
   const adaptFilters = [
     { text: "A", value: "A" },
     { text: "B", value: "B" },
@@ -67,9 +68,7 @@ const PlayerTable = (props) => {
       dataIndex: "imgUrl",
       key: "imgUrl",
       width: 100,
-      render: (text, record) => (
-        <Card data={record} onSelect={props.onSelect} name={false}></Card>
-      ),
+      render: (text, record) => <Card data={record} onSelect={props.onSelect} name={false}></Card>,
     },
     { title: "称号", dataIndex: "name", key: "name", render: (value) => t(value) },
     { title: "角色名", dataIndex: "charaName", key: "charaName", render: (value) => t(value) },

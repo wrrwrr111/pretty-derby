@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 import CheckBox from "../common/CheckBox";
 import Input from "../common/Input";
-import dbL from "@/dbL.js";
-import t from "../t.js";
-
+import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks";
 import SkillFilterForm from "../skill/SkillFilterForm";
 
 const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢さ", "友人"].map((item) => ({
-  label: t(item),
+  label: item,
   value: item,
 }));
 const SupportFilterForm = (props) => {
+  const { t } = useTranslation();
   const { onUpdate, needId, formName = "sup" } = props;
   const { register, watch, setValue } = useForm();
 
@@ -22,12 +21,12 @@ const SupportFilterForm = (props) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const  db = useDB();
+  const db = useDB();
   if (!db) return null;
   const allSupports = db.get("supports").value();
   const effects = db.get("effects").value();
   const effectOptions = Object.keys(effects).map((key) => {
-    return { label: t(effects[key].name), value: key };
+    return { label: effects[key].name, value: key };
   });
   const getFilterList = (value) => {
     // const { type, effect, q, skill } = value;
@@ -55,7 +54,7 @@ const SupportFilterForm = (props) => {
         effect.forEach((value) => {
           support.effects &&
             support.effects.forEach((effect) => {
-              if (effect.type == value) {
+              if (effect.type === value) {
                 flag += 1;
               }
             });
@@ -119,7 +118,7 @@ const SupportFilterForm = (props) => {
           key={formName + "type" + value}
           register={register}
           name={formName + "type"}
-          label={label}
+          label={t(label)}
           value={formName + value}
         />
       ))}
@@ -136,7 +135,7 @@ const SupportFilterForm = (props) => {
           key={formName + "effect" + value}
           register={register}
           name={formName + "effect"}
-          label={label}
+          label={t(label)}
           value={formName + value}
         />
       ))}

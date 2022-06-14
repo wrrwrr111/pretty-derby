@@ -1,7 +1,6 @@
 import useSWRImmutable from "swr/immutable";
 import low from "lowdb";
 import Memory from "lowdb/adapters/Memory";
-import LocalStorage from "lowdb/adapters/LocalStorage";
 
 const useDB = () => {
   const fetcher = (...args) =>

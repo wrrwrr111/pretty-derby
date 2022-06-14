@@ -6,7 +6,7 @@ import Button from "@material-tailwind/react/Button";
 
 import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
-import t from "@/components/t.js";
+import { useTranslation } from "react-i18next";
 import {
   Divider,
   Row,
@@ -17,20 +17,15 @@ import {
   // Tooltip
 } from "antd";
 import { EditOutlined } from "@ant-design/icons";
-import SupportList from "@/components/support/SupportList.js";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
-import Layout from "@/components/common/Layout.js";
-import {
-  // RaceSchedule,
-  RaceTimeline,
-  RaceCheckbox,
-} from "../../components/race";
+import { RaceTimeline, RaceCheckbox } from "../../components/race";
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
+  const { t } = useTranslation();
   const history = useHistory();
   document.title = TITLE;
   useDidRecover(() => {
@@ -56,7 +51,7 @@ const Nurturing = (props) => {
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
-  const  db = useDB();
+  const db = useDB();
   if (!db) return null;
   const races = db.get("races").value();
   const showPlayer = () => {

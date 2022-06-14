@@ -1,4 +1,3 @@
-import t from "../t.js";
 const EventCard = (props) => {
   const { data, onClick, className } = props;
   return data ? (

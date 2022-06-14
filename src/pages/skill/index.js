@@ -6,7 +6,6 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import Button from "@material-tailwind/react/Button";
 
-import t from "@/components/t.js";
 import SkillList from "@/components/skill/SkillList";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
 

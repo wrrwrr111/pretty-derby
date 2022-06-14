@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { cdnServer } from "../../config";
-import t from "../t.js";
+import { useTranslation } from "react-i18next";
 const PlayerCard = (props) => {
   const { data, onClick, className } = props;
+  const { t } = useTranslation();
   const [show, setShow] = useState(true);
   return data ? (
     <div

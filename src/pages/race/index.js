@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Table } from "antd";
 import { useDidRecover } from "react-router-cache-route";
-import Layout from "../../components/common/Layout.js";
-import t from "../../components/t.js";
+import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks/index";
 const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
 
@@ -68,45 +67,23 @@ const labels = [
   "side",
 ];
 const labelTextDict = {
-  name: t("名称"),
-  date: t("时间"),
-  class: t("年级"),
-  grade: t("赛事等级"),
-  place: t("地点"),
-  ground: t("场地"),
-  distance: t("长度"),
-  distanceType: t("赛程"),
-  direction: t("方向"),
-  side: t("赛道"),
-};
-const getCorrespondingLabelText = (label) => {
-  return labelTextDict[label];
+  name: "名称",
+  date: "时间",
+  class: "年级",
+  grade: "赛事等级",
+  place: "地点",
+  ground: "场地",
+  distance: "长度",
+  distanceType: "赛程",
+  direction: "方向",
+  side: "赛道",
 };
 const mediumLabels = ["name", "date", "class", "grade", "ground", "distanceType"];
-const getColumns = (labels) => {
-  return labels.map((label) => {
-    if (filterList["class"]) {
-      return {
-        title: getCorrespondingLabelText(label),
-        dataIndex: label,
-        filters: filterList[label],
-        width: 100,
-        fixed: label === "name" ? "left" : null,
-        onFilter: (value, record) => record[label] === value,
-      };
-    } else {
-      return {
-        fixed: label === "name" ? "left" : null,
-        title: getCorrespondingLabelText(label),
-        dataIndex: label,
-      };
-    }
-  });
-};
 
 const Race = (props) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-  const  db = useDB();
+  const { t } = useTranslation();
+  const db = useDB();
 
   document.title = TITLE;
   useDidRecover(() => {
@@ -124,7 +101,26 @@ const Race = (props) => {
   };
 
   const dynamicTableHeight = useViewport().height - 168;
-
+  const getColumns = (labels) => {
+    return labels.map((label) => {
+      if (filterList["class"]) {
+        return {
+          title: t(labelTextDict[label]),
+          dataIndex: label,
+          filters: filterList[label],
+          width: 100,
+          fixed: label === "name" ? "left" : null,
+          onFilter: (value, record) => record[label] === value,
+        };
+      } else {
+        return {
+          fixed: label === "name" ? "left" : null,
+          title: t(labelTextDict[label]),
+          dataIndex: label,
+        };
+      }
+    });
+  };
   if (!db) return null;
 
   const allRaceList = db

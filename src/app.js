@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import CacheRoute, { CacheSwitch } from "react-router-cache-route";
-import { Route } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 
 import Race from "@/pages/race";
@@ -10,7 +9,7 @@ import Support from "@/pages/support";
 import Nurturing from "@/pages/nurturing/index";
 import Skill from "@/pages/skill";
 import Seed from "@/pages/seed";
-import NotFound from "@/pages/404";
+// import NotFound from "@/pages/404";
 
 import NurturingMO from "@/pages/nurturingMo";
 import SeedMo from "@/pages/seedMo";

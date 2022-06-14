@@ -31,7 +31,6 @@ import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
-// import t from "../components/t.js";
 
 import PlayerList from "@/components/player/PlayerList";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";

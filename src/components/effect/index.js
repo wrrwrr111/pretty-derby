@@ -1,13 +1,9 @@
 import React from "react";
-// import {useState} from 'react';
-import { Table, Popover, Slider, div, Col } from "antd";
+import { Table, Slider } from "antd";
 
-import dbL from "../../dbL.js";
-import t from "../t.js";
-
+import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks/index.js";
 
-const ua = dbL.get("ua").value();
 const limits = [
   "init",
   "limit_lv5",
@@ -60,7 +56,8 @@ const getValue = (effect, cur) => {
   }
 };
 const EffectTable = (props) => {
-  const  db = useDB();
+  const { t } = useTranslation();
+  const db = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
   let columns = [
@@ -157,6 +154,7 @@ const getEffectMark = (maxLevel) => {
 };
 
 const TestEffectTable = (props) => {
+  const { t } = useTranslation();
   const getMaxLevel = (rarity) => {
     switch (rarity) {
       case 1:
@@ -214,7 +212,7 @@ const TestEffectTable = (props) => {
 
     return output;
   };
-  const  db = useDB();
+  const db = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
   return (

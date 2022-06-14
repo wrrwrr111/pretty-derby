@@ -1,4 +1,4 @@
-import classnames from "classnames";
+// import classnames from "classnames";
 import React, { useState, useEffect } from "react";
 import { useDidRecover } from "react-router-cache-route";
 import Modal from "@material-tailwind/react/Modal";
@@ -7,8 +7,8 @@ import ModalHeader from "@material-tailwind/react/ModalHeader";
 import Button from "@material-tailwind/react/Button";
 
 import { useDB } from "../../hooks";
+import { useTranslation } from "react-i18next";
 import dbL from "@/dbL.js";
-import t from "@/components/t.js";
 
 import SupportList from "@/components/support/SupportList";
 import SupportFilterForm from "@/components/support/SupportFilterForm";
@@ -19,6 +19,7 @@ const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
 document.title = TITLE;
 const SupportListWithFilter = (props) => {
   const { onClick, limitHeight, formName } = props;
+  const { t } = useTranslation();
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
   const [list, setList] = useState(props.supportList || []);

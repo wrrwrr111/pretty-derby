@@ -1,6 +1,5 @@
 import React from "react";
 import { useDidRecover } from "react-router-cache-route";
-import Layout from "../../components/common/Layout.js";
 import SupportDetail from "../../components/support/SupportDetail.js";
 
 const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";

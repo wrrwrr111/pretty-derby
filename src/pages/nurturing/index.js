@@ -11,27 +11,21 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 
 import { useDB } from "../../hooks";
+import { useTranslation } from "react-i18next";
+
 import dbL from "@/dbL.js";
-import t from "@/components/t.js";
-import Layout from "@/components/common/Layout.js";
 import EventList from "@/components/event/EventList";
 import SkillList from "@/components/skill/SkillList";
 import { BuffButton } from "@/components/buff.js";
 
-import {
-  // RaceSchedule,
-  RaceTimeline,
-  RaceCheckbox,
-} from "@/components/race";
+import { RaceTimeline, RaceCheckbox } from "@/components/race";
 import { MyDecks, RecommendDecks } from "@/components/deck.js";
 
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 // import Race from './race.js'
-import SupportList from "@/components/support/SupportList";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList";
-// import Checkbox from 'antd/lib/checkbox/Checkbox';
 
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
@@ -66,6 +60,7 @@ const layoutWithoutBlank = [
   { i: "s5", x: 25, y: 9, w: 7, h: 8 },
 ];
 const Nurturing = () => {
+  const { t } = useTranslation();
   document.title = TITLE;
   useDidRecover(() => {
     document.title = TITLE;
@@ -88,7 +83,7 @@ const Nurturing = () => {
     }
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
-  const  db = useDB();
+  const db = useDB();
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height, setHeight] = React.useState(window.innerHeight);

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Button from "@material-tailwind/react/Button";
 import shortid from "shortid";
 import dbL from "../dbL.js";
-import t from "../components/t.js";
 import axios from "axios";
 
+import { useTranslation } from "react-i18next";
 import {
   // Divider,
   Row,
@@ -19,6 +19,7 @@ import {
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
 
 const MyDecks = (props) => {
+  const { t } = useTranslation();
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
   // 卡组相关操作
   const saveDeck = (deck) => {
@@ -146,6 +147,7 @@ const MyDecks = (props) => {
 
 const RecommendDecks = (props) => {
   // const [recommendDecks,setRecommendDecks] = useState(res.data||[])
+  const { t } = useTranslation();
   const [recommendDecks, setRecommendDecks] = useState([]);
   const [playerId, setPlayerId] = useState("");
   const searchDeck = async () => {

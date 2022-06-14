@@ -1,20 +1,7 @@
-import t from "../t.js";
 import SkillList from "../skill/SkillList";
+import { useTranslation } from "react-i18next";
 const EventDetail = ({ data }) => {
-  // const ChoiceItem = props.event?.choiceList.map((choice,index)=>{
-  //   const ResultItem = choice[1].map((result,index)=>
-  //     <p key={index}>{result}</p>
-  //   )
-  //   return(
-  //     <Row key={index} gutter={[8,8]} className="list-row">
-  //       <Col span={12}>
-  //         <p>{choice[0]}</p>
-  //         <p>{t(choice[0])}</p>
-  //       </Col>
-  //       <Col span={12}>{ResultItem}</Col>
-  //     </Row>
-  //   )
-  // })
+  const { t } = useTranslation();
   return data ? (
     <>
       <div className="font-semibold mb-1">{data.name}</div>

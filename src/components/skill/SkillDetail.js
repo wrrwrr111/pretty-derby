@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import t from "../t.js";
+import React from "react";
 import SupportList from "../support/SupportList";
 import PlayerList from "../player/PlayerList";
-import EventList from "../event/EventList";
+// import EventList from "../event/EventList";
 
 import { useDB } from "../../hooks/index.js";
+import { useTranslation } from "react-i18next";
 const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
 
 const skillType = {
@@ -26,6 +26,7 @@ const skillType = {
   31: "加速度",
 };
 const SkillDetail = (props) => {
+  const { t } = useTranslation();
   const  db = useDB();
   if (!db) return null;
   const id = props.id;

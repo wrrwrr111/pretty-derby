@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "@material-tailwind/react/Button";
 // import {useState} from 'react';
-import t from "../components/t.js";
 import { useDB } from "../hooks/index.js";
+import { useTranslation } from "react-i18next";
 const BuffButton = (props) => {
   return (
     <Button size="sm" buttonType="outline" data-tip="buff list">
@@ -11,7 +11,8 @@ const BuffButton = (props) => {
   );
 };
 const BuffList = (props) => {
-  const  db = useDB();
+  const { t } = useTranslation();
+  const db = useDB();
   if (!db) return null;
   const buffs = db.get("buffs").value();
   const cellStyle = {
