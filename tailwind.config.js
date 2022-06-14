@@ -1,7 +1,7 @@
 module.exports = {
   // mode: "jit",
   // important: true,
-  purge: ["./src/**/*.js"],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -9,13 +9,13 @@ module.exports = {
         unset: "unset",
       },
       height: {
-        '80vh': '80vh'
+        "80vh": "80vh",
       },
       maxWidth: {
-        '1/3': '33.333%',
-        '1/4': '25%',
-        'screen': '100vw'
-      }
+        "1/3": "33.333%",
+        "1/4": "25%",
+        screen: "100vw",
+      },
     },
   },
   variants: {
