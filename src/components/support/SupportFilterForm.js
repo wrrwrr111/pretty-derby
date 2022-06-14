@@ -7,10 +7,8 @@ import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks";
 import SkillFilterForm from "../skill/SkillFilterForm";
 
-const typeOptions = ["スピード", "スタミナ", "パワー", "根性", "賢さ", "友人"].map((item) => ({
-  label: item,
-  value: item,
-}));
+import { SUPPORT_TYPE_OPTIONS } from "@/config";
+
 const SupportFilterForm = (props) => {
   const { t } = useTranslation();
   const { onUpdate, needId, formName = "sup" } = props;
@@ -113,7 +111,7 @@ const SupportFilterForm = (props) => {
     <div className="flex flex-wrap">
       <Input register={register} name="q" placeholder={t("事件关键词搜索")} />
       <p className="w-full my-1 text-gray-700">{t("类型")}</p>
-      {typeOptions.map(({ label, value }) => (
+      {SUPPORT_TYPE_OPTIONS.map(({ label, value }) => (
         <CheckBox
           key={formName + "type" + value}
           register={register}

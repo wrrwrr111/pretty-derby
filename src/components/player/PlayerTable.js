@@ -1,64 +1,35 @@
 import { Table } from "antd";
 import Card from "../common/Card.js";
 import { useTranslation } from "react-i18next";
+import {
+  PLAYER_ADAPT_FILTERS,
+  PLAYER_GROW_FILTERS,
+  PLAYER_RARITIES,
+  PLAYER_ADAPT_TITLES,
+} from "@/config";
 const PlayerTable = (props) => {
   const { t } = useTranslation();
-  const adaptFilters = [
-    { text: "A", value: "A" },
-    { text: "B", value: "B" },
-    { text: "C", value: "C" },
-    { text: "D", value: "D" },
-    { text: "E", value: "E" },
-    { text: "F", value: "F" },
-    { text: "G", value: "G" },
-  ];
-  const growFilters = [
-    { text: "20%", value: "+20%" },
-    { text: "10%", value: "+10%" },
-    { text: "0%", value: "+0%" },
-  ];
-  const rares = {
-    1: "R",
-    2: "SR",
-    3: "SSR",
-  };
-  const titles = {
-    芝: "grass",
-    ダート: "dirt",
-    短距離: "shortDistance",
-    マイル: "mile",
-    中距離: "mediumDistance",
-    長距離: "longDistance",
-    逃げ: "escape",
-    先行: "leading",
-    差し: "insert",
-    追込: "tracking",
-    スピード: "speedGrow",
-    スタミナ: "staminaGrow",
-    パワー: "powerGrow",
-    根性: "gutsGrow",
-    賢さ: "wisdomGrow",
-  };
+
   const getColumn = (text, type) => {
     if (type === "adapt") {
       return {
         title: t(text),
-        dataIndex: titles[text],
-        key: titles[text],
+        dataIndex: PLAYER_ADAPT_TITLES[text],
+        key: PLAYER_ADAPT_TITLES[text],
         width: 80,
         render: (value) => coloredGradeText(value),
-        filters: adaptFilters,
-        onFilter: (value, record) => record[titles[text]] === value,
+        filters: PLAYER_ADAPT_FILTERS,
+        onFilter: (value, record) => record[PLAYER_ADAPT_TITLES[text]] === value,
       };
     } else if (type === "grow") {
       return {
         title: t(text),
-        dataIndex: titles[text],
-        key: titles[text],
+        dataIndex: PLAYER_ADAPT_TITLES[text],
+        key: PLAYER_ADAPT_TITLES[text],
         width: 100,
         render: (value) => coloredGradeText(value),
-        filters: growFilters,
-        onFilter: (value, record) => record[titles[text]] === value,
+        filters: PLAYER_GROW_FILTERS,
+        onFilter: (value, record) => record[PLAYER_ADAPT_TITLES[text]] === value,
       };
     }
   };
@@ -72,7 +43,7 @@ const PlayerTable = (props) => {
     },
     { title: "称号", dataIndex: "name", key: "name", render: (value) => t(value) },
     { title: "角色名", dataIndex: "charaName", key: "charaName", render: (value) => t(value) },
-    { title: "稀有度", dataIndex: "rare", key: "rare", render: (value) => rares[value] },
+    { title: "稀有度", dataIndex: "rare", key: "rare", render: (value) => PLAYER_RARITIES[value] },
     getColumn("芝", "adapt"),
     getColumn("ダート", "adapt"),
     getColumn("短距離", "adapt"),

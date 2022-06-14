@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cdnServer } from "../../config";
+import { CDN_SERVER } from "@/config";
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 // import RaceList from './player-race.js'
@@ -16,7 +16,7 @@ const PlayerItem = ({ data }) => {
   const { t } = useTranslation();
   return (
     <div className="h-16 w-full flex flex-shrink-0">
-      <img alt={name} src={cdnServer + imgUrl} height={64} width={64} />
+      <img alt={name} src={CDN_SERVER + imgUrl} height={64} width={64} />
       <div className="flex-auto flex flex-wrap h-full items-center">
         <div className="w-full flex items-center justify-between">
           <div className=" text-xl font-semibold truncate">{name}</div>

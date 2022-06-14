@@ -12,10 +12,10 @@ import NavLink from "@material-tailwind/react/NavLink";
 
 import useUa from "@/utils/ua.js";
 import LanButton from "@/components/lan-button.js";
-import { cdnServer } from "@/config";
+import { CDN_SERVER } from "@/config";
 import dbL from "@/dbL.js";
 import { useTranslation } from "react-i18next";
-
+import { PC_MENU_LIST, MOBILE_MENU_LIST } from "@/config";
 const Layout = ({ children, contentClass, rootClass }) => {
   const { t } = useTranslation();
   const [openNavbar, setOpenNavbar] = useState(false);
@@ -31,23 +31,8 @@ const Layout = ({ children, contentClass, rootClass }) => {
       })
       .write();
   };
-  const pcList = [
-    { path: "/", title: "角色" },
-    { path: "/support", title: "支援" },
-    { path: "/skill", title: "技能" },
-    { path: "/race", title: "比赛" },
-    { path: "/nurturing", title: "育成" },
-    { path: "/seed", title: "种马" },
-  ];
-  const phoneList = [
-    { path: "/", title: "角色" },
-    { path: "/support", title: "支援" },
-    { path: "/skill", title: "技能" },
-    { path: "/race", title: "比赛" },
-    { path: "/nurturingMo", title: "育成" },
-    { path: "/seedMo", title: "种马" },
-  ];
-  const list = ua.isPhone ? phoneList : pcList;
+
+  const list = ua.isPhone ? MOBILE_MENU_LIST : PC_MENU_LIST;
   return (
     <div className={"flex flex-col w-screen min-h-screen relative"}>
       <Navbar className="sticky top-0 z-50" color="lightBlue" navbar>
@@ -103,7 +88,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
           rel="noreferrer"
           href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi"
           data-tip={`
-          <img src=${cdnServer + "img/q.jpg"} width={300} />
+          <img src=${CDN_SERVER + "img/q.jpg"} width={300} />
           <p>${t("闲聊为主")}</p>
           `}
         >
@@ -116,9 +101,9 @@ const Layout = ({ children, contentClass, rootClass }) => {
         </a>
         <div
           className="flex mx-2 items-center"
-          data-tip={`<img src=${cdnServer + "img/weapp.jpg"} width={200} />`}
+          data-tip={`<img src=${CDN_SERVER + "img/weapp.jpg"} width={200} />`}
         >
-          <img alt="reimu" src={cdnServer + "reimu.gif"} preview={false} width={24} />
+          <img alt="reimu" src={CDN_SERVER + "reimu.gif"} preview={false} width={24} />
           <div>{t("微信小程序")}</div>
         </div>
       </div>

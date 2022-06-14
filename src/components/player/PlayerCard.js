@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cdnServer } from "../../config";
+import { CDN_SERVER } from "@/config";
 import { useTranslation } from "react-i18next";
 const PlayerCard = (props) => {
   const { data, onClick, className } = props;
@@ -23,7 +23,7 @@ const PlayerCard = (props) => {
           style={{ aspectRatio: "32 / 35" }}
           onError={() => setShow(false)}
           alt={t(data.name)}
-          src={cdnServer + data.imgUrl}
+          src={CDN_SERVER + data.imgUrl}
           width={"100%"}
         />
       )}

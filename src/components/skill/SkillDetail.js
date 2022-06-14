@@ -1,33 +1,15 @@
 import React from "react";
 import SupportList from "../support/SupportList";
 import PlayerList from "../player/PlayerList";
-// import EventList from "../event/EventList";
 
 import { useDB } from "../../hooks/index.js";
-import { useTranslation } from "react-i18next";
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
+import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
-const skillType = {
-  1: "速度属性",
-  2: "耐力属性",
-  3: "力量属性",
-  4: "毅力属性",
-  5: "智力属性",
-  6: "体力",
-  7: "体力消耗",
-  8: "视野",
-  9: "体力恢复",
-  10: "出栏时机",
-  13: "掛かり时间",
-  14: "掛かり结束时间",
-  21: "瞬时速度",
-  27: "目标速度",
-  28: "走位速度",
-  31: "加速度",
-};
+import { useTranslation } from "react-i18next";
+
 const SkillDetail = (props) => {
   const { t } = useTranslation();
-  const  db = useDB();
+  const db = useDB();
   if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("skills").find({ id }).value();
@@ -70,7 +52,7 @@ const SkillDetail = (props) => {
     >
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
-          <img alt={data.name} src={cdnServer + data.imgUrl} className="w-14" />
+          <img alt={data.name} src={CDN_SERVER + data.imgUrl} className="w-14" />
         </div>
         <div className="flex-auto">
           <p>{t(data.name)}</p>
@@ -95,7 +77,7 @@ const SkillDetail = (props) => {
         <div className="w-20 text-center flex-shrink-0">{t("技能效果")}</div>
         <div className="flex-auto">
           {data.ability?.map((ability) => {
-            return <span>{`${skillType[ability.type]} ${ability.value / 10000}`}</span>;
+            return <span>{`${SKILL_TYPES[ability.type]} ${ability.value / 10000}`}</span>;
           })}
         </div>
       </div>

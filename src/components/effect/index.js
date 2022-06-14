@@ -4,35 +4,24 @@ import { Table, Slider } from "antd";
 import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks/index.js";
 
-const limits = [
-  "init",
-  "limit_lv5",
-  "limit_lv10",
-  "limit_lv15",
-  "limit_lv20",
-  "limit_lv25",
-  "limit_lv30",
-  "limit_lv35",
-  "limit_lv40",
-  "limit_lv45",
-  "limit_lv50",
-];
+import { EFFECT_LIMITS } from "@/config";
+
 const getValue = (effect, cur) => {
   if (effect[cur] !== -1) {
     return effect[cur];
   } else {
-    let index = limits.indexOf(cur);
+    let index = EFFECT_LIMITS.indexOf(cur);
     let min = 0;
     let min_limit = "init";
     let max = 0;
     let max_limit = "limit_lv50";
-    for (let limit of limits.slice(0, index)) {
+    for (let limit of EFFECT_LIMITS.slice(0, index)) {
       if (effect[limit] > min) {
         min = effect[limit];
         min_limit = limit;
       }
     }
-    for (let limit of limits.slice(index, limits.length)) {
+    for (let limit of EFFECT_LIMITS.slice(index, EFFECT_LIMITS.length)) {
       if (effect[limit] !== -1) {
         max = effect[limit];
         max_limit = limit;
@@ -47,8 +36,8 @@ const getValue = (effect, cur) => {
         <div data-tip="插值">
           {Math.floor(
             min +
-              ((max - min) * (limits.indexOf(cur) - limits.indexOf(min_limit))) /
-                (limits.indexOf(max_limit) - limits.indexOf(min_limit))
+              ((max - min) * (EFFECT_LIMITS.indexOf(cur) - EFFECT_LIMITS.indexOf(min_limit))) /
+                (EFFECT_LIMITS.indexOf(max_limit) - EFFECT_LIMITS.indexOf(min_limit))
           )}
         </div>
       );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cdnServer } from "../../config";
+import { CDN_SERVER } from "@/config";
 import { useTranslation } from "react-i18next";
 const SupportCard = (props) => {
   const { data, onClick, className } = props;
@@ -22,7 +22,7 @@ const SupportCard = (props) => {
           className="absolute top-0"
           onError={() => setShow(false)}
           alt={data.name}
-          src={cdnServer + data.imgUrl}
+          src={CDN_SERVER + data.imgUrl}
           width={"100%"}
         />
       )}

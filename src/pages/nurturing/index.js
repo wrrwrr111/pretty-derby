@@ -27,7 +27,8 @@ import "react-grid-layout/css/styles.css";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList";
 
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
+import { CDN_SERVER } from "@/config";
+
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
@@ -220,7 +221,7 @@ const Nurturing = () => {
           </div>
           {player.id && (
             <img
-              src={cdnServer + player.imgUrl}
+              src={CDN_SERVER + player.imgUrl}
               alt={player.imgUrl}
               style={{ ...pBodyStyle }}
               onClick={showPlayer}
@@ -300,7 +301,7 @@ const Nurturing = () => {
                   <div style={{ display: "flex" }}>
                     <img
                       style={{ width: "26%", height: "39%" }}
-                      src={cdnServer + support.imgUrl}
+                      src={CDN_SERVER + support.imgUrl}
                       alt={support.imgUrl}
                     />
                     <div style={{ flex: "1 1 auto" }}>

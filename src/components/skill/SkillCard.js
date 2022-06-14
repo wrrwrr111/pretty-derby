@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cdnServer } from "../../config";
+import { CDN_SERVER } from "@/config";
 import { useTranslation } from "react-i18next";
 const SkillCard = (props) => {
   const { data, onClick, className } = props;
@@ -20,7 +20,7 @@ const SkillCard = (props) => {
           className="w-5 h-5 overflow-hidden"
           onError={() => setShow(false)}
           alt={data.name}
-          src={cdnServer + data.imgUrl}
+          src={CDN_SERVER + data.imgUrl}
           preview={false}
         />
       )}

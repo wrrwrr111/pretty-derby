@@ -5,6 +5,7 @@ import dbL from "../dbL.js";
 import axios from "axios";
 
 import { useTranslation } from "react-i18next";
+import { CDN_SERVER, DECK_LABELS } from "@/config";
 import {
   // Divider,
   Row,
@@ -16,7 +17,6 @@ import {
   Popconfirm,
   Checkbox,
 } from "antd";
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/public/";
 
 const MyDecks = (props) => {
   const { t } = useTranslation();
@@ -67,24 +67,6 @@ const MyDecks = (props) => {
     data && message.info(data.msg);
   };
 
-  const labels = [
-    "短距離",
-    "マイル",
-    "中距離",
-    "長距離",
-    "ダート",
-    "逃げ",
-    "先行",
-    "差し",
-    "追込",
-    "高速度",
-    "高耐力",
-    "高力量",
-    "高根性 ",
-    "高智力",
-    "竞技场前排",
-    "萌新之友",
-  ];
   const onChangeTag = (values, deck) => {
     dbL.get("myDecks").find({ id: deck.id }).assign({ tags: values }).write();
     setDecks([...dbL.get("myDecks").value()]);
@@ -103,7 +85,7 @@ const MyDecks = (props) => {
             <>
               <Row>
                 <Checkbox.Group
-                  options={labels}
+                  options={DECK_LABELS}
                   defaultValue={deck.tags || []}
                   onChange={(values) => onChangeTag(values, deck)}
                 />
@@ -111,7 +93,7 @@ const MyDecks = (props) => {
               <Row key={deck.id}>
                 {deck.imgUrls.map((imgUrl) => (
                   <Col span={3} key={imgUrl}>
-                    <img src={cdnServer + imgUrl} alt={imgUrl} width={"100"} />
+                    <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
                   </Col>
                 ))}
                 <Col span={3}>
@@ -173,7 +155,7 @@ const RecommendDecks = (props) => {
           <Row key={deck.id}>
             {deck.imgUrls.map((imgUrl) => (
               <Col span={3} key={imgUrl}>
-                <img src={cdnServer + imgUrl} alt={imgUrl} width={"100"} />
+                <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
               </Col>
             ))}
             <Col span={3}>

@@ -21,7 +21,8 @@ import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
 import { RaceTimeline, RaceCheckbox } from "../../components/race";
 
-const cdnServer = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
+import { CDN_SERVER } from "@/config";
+
 const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
@@ -192,7 +193,7 @@ const Nurturing = (props) => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         {player.imgUrl && (
           <img
-            src={cdnServer + player.imgUrl}
+            src={CDN_SERVER + player.imgUrl}
             alt={player.imgUrl}
             width="128"
             onClick={() => toPlayerDetail(player.id)}
@@ -228,7 +229,7 @@ const Nurturing = (props) => {
                   <Row key={deck.id}>
                     {deck.imgUrls.map((imgUrl) => (
                       <Col span={3} key={imgUrl}>
-                        <img src={cdnServer + imgUrl} alt={imgUrl} width={"100"} />
+                        <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
                       </Col>
                     ))}
                     <Col span={3}>
@@ -274,7 +275,7 @@ const Nurturing = (props) => {
             </Button>
             {supports[index] && supports[index].id && (
               <img
-                src={cdnServer + supports[index].imgUrl}
+                src={CDN_SERVER + supports[index].imgUrl}
                 alt={supports[index].name}
                 width={"100%"}
                 onClick={() => toSupportDetail(supports[index].id)}
