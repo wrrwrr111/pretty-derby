@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useHistory } from "react-router-dom";
 
 import Navbar from "@material-tailwind/react/Navbar";
 import NavbarContainer from "@material-tailwind/react/NavbarContainer";
@@ -20,6 +20,7 @@ const Layout = ({ children, contentClass, rootClass }) => {
   const [openNavbar, setOpenNavbar] = useState(false);
   const ua = useUa();
   const location = useLocation();
+  const history = useHistory();
   const resetNur = () => {
     dbL
       .set("selected", {
@@ -62,15 +63,20 @@ const Layout = ({ children, contentClass, rootClass }) => {
           <NavbarCollapse open={openNavbar}>
             <Nav leftSide>
               {list.map((item) => (
-                <Link to={item.path} onClick={() => setOpenNavbar(!openNavbar)}>
-                  <NavLink
-                    // href={item.path}
-                    active={location.pathname === item.path && "light"}
-                    ripple="light"
-                  >
-                    {t(item.title)}
-                  </NavLink>
-                </Link>
+                // <Link to={item.path} onClick={() => setOpenNavbar(!openNavbar)}>
+                <NavLink
+                  key={item.path}
+                  // href={item.path}
+                  onClick={() => {
+                    setOpenNavbar(!openNavbar);
+                    history.push(item.path);
+                  }}
+                  active={location.pathname === item.path ? "light" : "normal"}
+                  ripple="light"
+                >
+                  {t(item.title)}
+                </NavLink>
+                // </Link>
               ))}
             </Nav>
           </NavbarCollapse>
