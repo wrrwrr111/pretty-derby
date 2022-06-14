@@ -29,10 +29,10 @@ const SupportListWithFilter = (props) => {
   useDidRecover(() => {
     document.title = TITLE;
   });
-  const  db = useDB();
+  const db = useDB();
   useEffect(() => {
     if (db) setList(props.supportList || db.get("supports").value() || []);
-  }, []);
+  }, [db, props.supportList]);
   if (!db) return null;
   const changeChooseMode = () => {
     setShowMode(!showMode);

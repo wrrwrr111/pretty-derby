@@ -23,11 +23,13 @@ const Skill = (props) => {
     document.title = TITLE;
   });
   const [skillList, setSkillList] = useState();
-  const  db = useDB();
+  const db = useDB();
   useEffect(() => {
-    const allSkillList = db.get("skills").orderBy("db_id").value();
-    setSkillList(allSkillList);
-  }, []);
+    if (db) {
+      const allSkillList = db.get("skills").orderBy("db_id").value();
+      setSkillList(allSkillList);
+    }
+  }, [db]);
   // 所有技能列表
 
   if (!db) return null;
