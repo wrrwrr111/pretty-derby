@@ -11,10 +11,10 @@ module.exports = {
       if (process.env.NODE_ENV === "development") {
         return webpackConfig;
       }
-      webpackConfig.output = {
-        ...webpackConfig.output,
-        publicPath: "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/",
-      };
+      // webpackConfig.output = {
+      //   ...webpackConfig.output,
+      //   publicPath: "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/",
+      // };
       return webpackConfig;
     },
   },
