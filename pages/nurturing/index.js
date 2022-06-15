@@ -111,8 +111,12 @@ const Nurturing = () => {
     setIsPlayerVisible(false);
     setPlayer(data);
     // save player
+    const selected = dbL.get("selected").value();
     selected.player = data;
-    dbL.get("selected").assign(selected).write();
+    dbL
+      .get("selected")
+      .assign({ ...selected })
+      .write();
   };
 
   const showSupport = (index) => {
