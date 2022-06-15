@@ -193,3 +193,12 @@
   height: 28px;
   line-height: 30px;
 }
+
+/* table */
+.ant-spin-nested-loading,
+.ant-spin-container,
+.ant-table,
+.ant-table-container {
+  height: 100%;
+  overflow: hidden;
+}

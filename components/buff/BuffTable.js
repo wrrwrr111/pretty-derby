@@ -1,12 +1,9 @@
 import React from "react";
-// import {useState} from 'react';
-import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "context/state";
 const BuffTable = (props) => {
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const buffs = db.get("buffs").value();
+  const { buffs } = useAppContext();
   const cellStyle = {
     // width:'20%',
     height: "32px",

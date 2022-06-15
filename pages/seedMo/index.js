@@ -9,15 +9,14 @@ import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined } from "@ant-d
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 
-import dbL from "/src/dbL";
-import SupportListWithFilter from "/components/support/SupportListWithFilter";
-import PlayerList from "/components/player/PlayerList.js";
+import dbL from "src/dbL";
+import SupportListWithFilter from "components/support/SupportListWithFilter";
+import PlayerList from "components/player/PlayerList.js";
 
-import { useDB } from "/hooks";
 import { useTranslation } from "react-i18next";
 
-import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "/src/config";
-
+import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "src/config";
+import { useAppContext } from "context/state";
 // const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 let userId = dbL.get("userId").value();
 
@@ -240,13 +239,11 @@ const SearchForm = (props) => {
   );
 };
 
-const SeedCard = (props) => {
+const SeedCard = ({ data }) => {
+  const { players, supports } = useAppContext();
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const data = props.data;
-  const player = db.get("players").find({ id: data.playerId0 }).value();
-  const support = db.get("supports").find({ id: data.supportId }).value();
+  const player = players.find((item) => item.id === data.playerId0);
+  const support = supports.find((item) => item.id === data.supportId);
   const like = async (seed) => {
     if (!userId) {
       message.info(t("刷新后重试"));

@@ -5,14 +5,13 @@ import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 
-import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
+// import { useAppContext } from "context/state";
 const List = ({
   className,
   listKey,
   sort,
   filterFunc,
-  idList,
   dataList,
   itemRender,
   itemClass,
@@ -25,16 +24,6 @@ const List = ({
   useEffect(() => {
     ReactTooltip.rebuild();
   });
-  const db = useDB();
-  if (!db) return null;
-
-  const list = dataList
-    ? dataList
-    : idList
-    ? idList.reduce((list, cur) => {
-        return [...list, db.get(listKey).find({ id: cur }).value()];
-      }, [])
-    : db.get(listKey).value();
 
   const showModal = (cur) => {
     setCur(cur);
@@ -48,12 +37,12 @@ const List = ({
     </Modal>
   );
 
-  if (!list) return null;
+  if (!dataList) return null;
   if (sort) {
     return (
       <div className={` flex flex-wrap ${className}`}>
         {sort.data.map((sortItem) => {
-          let sortList = list.filter((item) => {
+          let sortList = dataList.filter((item) => {
             let flag = false;
             if (sort.key && sortItem.value) {
               flag = item[sort.key] === sortItem.value;
@@ -87,7 +76,7 @@ const List = ({
   } else {
     return (
       <div className={` flex flex-wrap ${className}`}>
-        {list
+        {dataList
           .filter((data) => (filterFunc ? filterFunc(data) : true))
           .map((data) => itemRender(data, showModal))}
         {modal}

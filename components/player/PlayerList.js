@@ -30,7 +30,7 @@ const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
               onClick
                 ? onClick(data)
                 : ua.isPhone
-                ? router.push(`/player-detail/${data.id}`)
+                ? router.push(`/player/${data.id}`)
                 : setCur(data)
             }
           />

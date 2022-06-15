@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Table } from "antd";
 import { useTranslation } from "react-i18next";
-import { useDB } from "/hooks";
-import { RACE_FILTER_LIST } from "/src/config";
+import { RACE_FILTER_LIST } from "src/config";
 
-import useViewport from "/hooks/useViewport";
+import { useAppContext } from "context/state";
 // const TITLE = "比赛 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const RACE_TABLE_LABELS = [
@@ -34,11 +33,10 @@ const labelTextDict = {
 const mediumLabels = ["name", "date", "class", "grade", "ground", "distanceType"];
 
 const Race = (props) => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const { races } = useAppContext();
   const { t } = useTranslation();
-  const db = useDB();
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
-  const dynamicTableHeight = useViewport().height - 168;
   const getColumns = () => {
     return RACE_TABLE_LABELS.map((label) => {
       if (RACE_FILTER_LIST["class"]) {
@@ -59,15 +57,11 @@ const Race = (props) => {
       }
     });
   };
-  if (!db) return null;
 
-  const allRaceList = db
-    .get("races")
-    .value()
-    .map((race, index) => {
-      race.key = index;
-      return race;
-    });
+  const allRaceList = races.map((race, index) => {
+    race.key = index;
+    return race;
+  });
   let columns = getColumns();
   if (props.type === "medium") {
     columns = getColumns(mediumLabels);
@@ -94,14 +88,15 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <div className={"w-full overflow-x-auto"}>
+    <div className={"w-full overflow-x-auto"} style={{ height: `calc(100vh - 120px)` }}>
       <Table
+        className="h-full"
         rowSelection={props.onSelect ? rowSelection : null}
         columns={columns}
         dataSource={allRaceList}
         onChange={onChange}
         pagination={false}
-        scroll={{ y: dynamicTableHeight }}
+        scroll={{ y: "100%" }}
       />
     </div>
   );

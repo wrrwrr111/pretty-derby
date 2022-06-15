@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Button from "@material-tailwind/react/Button";
 import { useTranslation } from "react-i18next";
 import { Timeline } from "antd";
-import { useDB } from "/hooks/index.js";
-
-import { RACE_GOLD_LIST } from "/src/config";
+import { useAppContext } from "context/state";
+import { RACE_GOLD_LIST } from "src/config";
 
 const getGolds = (race) => {
   return RACE_GOLD_LIST.reduce((golds, raceGold) => {
@@ -19,10 +18,10 @@ const getGolds = (race) => {
   }, []).join(" , ");
 };
 const RaceTimeline = React.memo((props) => {
+  const { races } = useAppContext();
   const { t } = useTranslation();
   const [showSpare, setShowSpare] = useState(false);
-  const db = useDB();
-  if (!db) return null;
+
   const { showButton } = props;
   const str = [];
 
@@ -53,7 +52,7 @@ const RaceTimeline = React.memo((props) => {
     let curRace, id, golds;
     if (props.raceList && props.raceList[i]) {
       id = props.raceList[i].id;
-      curRace = db.get("races").find({ id }).value();
+      curRace = races.find((item) => item.id === id);
       golds = getGolds(curRace);
       str.push(
         <Timeline.Item label={getDate(i)} color="red" className="text-base" key={id}>
@@ -65,7 +64,7 @@ const RaceTimeline = React.memo((props) => {
       );
     } else if (props.filterRace && props.filterRace[i]) {
       props.filterRace[i].forEach((id, index) => {
-        curRace = db.get("races").find({ id }).value();
+        curRace = races.find((item) => item.id === id);
         golds = getGolds(curRace);
         str.push(
           <Timeline.Item

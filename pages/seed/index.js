@@ -28,13 +28,12 @@ import {
 } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
-import { useDB } from "/hooks";
-import dbL from "/src/dbL.js";
+import dbL from "src/dbL.js";
 
-import PlayerList from "/components/player/PlayerList";
-import SupportListWithFilter from "/components/support/SupportListWithFilter";
-import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "/src/config";
-
+import PlayerList from "components/player/PlayerList";
+import SupportListWithFilter from "components/support/SupportListWithFilter";
+import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "src/config";
+import { useAppContext } from "context/state";
 let userId = dbL.get("userId").value();
 // const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 
@@ -462,20 +461,14 @@ const SearchForm = (props) => {
 };
 
 const PlayerImage = (props) => {
-  const db = useDB();
-  if (!db) return null;
-  let imgUrl = db.get("players").find({ id: props.id }).value().imgUrl;
+  const { players } = useAppContext();
+  const imgUrl = players.find((item) => item.id === props.id)?.imgUrl || "";
   return <Image src={CDN_SERVER + imgUrl} fallback={IMAGE_FALLBACK} width={80} preview="false" />;
 };
 
 const SupportImage = (props) => {
-  const db = useDB();
-  if (!db) return null;
-  let support = db.get("supports").find({ id: props.id }).value();
-  let imgUrl = "";
-  if (support) {
-    imgUrl = support.imgUrl;
-  }
+  const { supports } = useAppContext();
+  const imgUrl = supports.find((item) => item.id === props.id)?.imgUrl || "";
   return <Image src={CDN_SERVER + imgUrl} fallback={IMAGE_FALLBACK} width={80} preview="false" />;
 };
 

@@ -1,10 +1,9 @@
 import React from "react";
 
-import { CDN_SERVER } from "/src/config";
+import { CDN_SERVER } from "src/config";
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 import RaceTimeline from "../race/RaceTimeline";
-import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
@@ -25,16 +24,10 @@ const PlayerItem = ({ data }) => {
     </div>
   );
 };
-const PlayerDetail = (props) => {
+const PlayerDetail = ({ isNur, data }) => {
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
-  const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
-  const data = props.data || db.get("players").find({ id }).value();
   if (!data) return null;
-
   if (isNur) {
     return (
       <div className="w-full flex flex-col  p-3">

@@ -1,11 +1,9 @@
 import React from "react";
-// import MaterialTable from "material-table";
+
 import Slider from "@mui/material/Slider";
-
 import { useTranslation } from "react-i18next";
-import { useDB } from "/hooks/index.js";
 
-import { EFFECT_LIMITS } from "/src/config";
+import { useAppContext } from "context/state";
 
 const getEffectMark = (maxLevel) => {
   let marks = [
@@ -32,7 +30,7 @@ function valuetext(value) {
 }
 
 const EffectSlider = (props) => {
-  const db = useDB();
+  const { effects } = useAppContext();
   const { t } = useTranslation();
   const getMaxLevel = (rarity) => {
     switch (rarity) {
@@ -91,9 +89,6 @@ const EffectSlider = (props) => {
 
     return output;
   };
-  console.log({ selectingLevel });
-  if (!db) return null;
-  const effects = db.get("effects").value();
   return (
     <div>
       {props.unique_effect && (
@@ -131,7 +126,7 @@ const EffectSlider = (props) => {
         </>
       )}
       <div className="w-full flex items-center py-2">
-        <div className="mr-2">{t("设置等级")}</div>
+        <div className="mr-2 flex-shrink-0">{t("设置等级")}</div>
         <Slider
           aria-label="Temperature"
           defaultValue={maxLevel}

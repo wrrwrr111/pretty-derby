@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CDN_SERVER } from "/src/config";
+import { CDN_SERVER } from "src/config";
 import { useTranslation } from "react-i18next";
 const SkillCard = (props) => {
   const { data, onClick, className } = props;

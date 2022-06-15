@@ -4,12 +4,12 @@ import { useForm } from "react-hook-form";
 import CheckBox from "../common/CheckBox";
 import Input from "../common/Input";
 import { useTranslation } from "react-i18next";
-import { useDB } from "/hooks";
 import SkillFilterForm from "../skill/SkillFilterForm";
-
-import { SUPPORT_TYPE_OPTIONS } from "/src/config";
+import { SUPPORT_TYPE_OPTIONS } from "src/config";
+import { useAppContext } from "context/state";
 
 const SupportFilterForm = (props) => {
+  const { supports, effects, events } = useAppContext();
   const { t } = useTranslation();
   const { onUpdate, needId, formName = "sup" } = props;
   const { register, watch, setValue } = useForm();
@@ -19,10 +19,6 @@ const SupportFilterForm = (props) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const db = useDB();
-  if (!db) return null;
-  const allSupports = db.get("supports").value();
-  const effects = db.get("effects").value();
   const effectOptions = Object.keys(effects).map((key) => {
     return { label: effects[key].name, value: key };
   });
@@ -34,7 +30,7 @@ const SupportFilterForm = (props) => {
       value[`${formName}effect`] && value[`${formName}effect`]?.map((e) => e.replace(formName, ""));
     const type =
       value[`${formName}type`] && value[`${formName}type`]?.map((e) => e.replace(formName, ""));
-    let tempList = [...allSupports];
+    let tempList = [...supports];
 
     if (type?.length) {
       tempList = tempList.filter((support) => {
@@ -72,8 +68,7 @@ const SupportFilterForm = (props) => {
       });
     }
     if (q) {
-      const allEventList = db.get("events").value();
-      const eventIdList = allEventList
+      const eventIdList = events
         .filter((event) => {
           let jsonEvent = JSON.stringify(event);
           if (jsonEvent.indexOf(q) !== -1) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@material-tailwind/react/Button";
 // import shortid from 'shortid'
 // import axios from "axios";
@@ -9,27 +9,26 @@ import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 
-import { useDB } from "/hooks";
 import { useTranslation } from "react-i18next";
 
-import dbL from "/src/dbL.js";
-import EventList from "/components/event/EventList";
-import SkillList from "/components/skill/SkillList";
-import BuffTable from "/components/buff/BuffTable";
-import RaceTimeline from "/components/race/RaceTimeline";
-import RaceCheckbox from "/components/race/RaceCheckbox";
-import MyDecks from "/components/deck/MyDecks";
-import RecommendDecks from "/components/deck/RecommendDecks";
+import dbL from "src/dbL.js";
+import EventList from "components/event/EventList";
+import SkillList from "components/skill/SkillList";
+import BuffTable from "components/buff/BuffTable";
+import RaceTimeline from "components/race/RaceTimeline";
+import RaceCheckbox from "components/race/RaceCheckbox";
+import MyDecks from "components/deck/MyDecks";
+import RecommendDecks from "components/deck/RecommendDecks";
 
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 // import Race from './race.js'
-import SupportListWithFilter from "/components/support/SupportListWithFilter";
-import PlayerList from "/components/player/PlayerList";
+import SupportListWithFilter from "components/support/SupportListWithFilter";
+import PlayerList from "components/player/PlayerList";
 
-import { CDN_SERVER } from "/src/config";
+import { CDN_SERVER } from "src/config";
 
-import useViewport from "/hooks/useViewport";
+import { useAppContext } from "context/state";
 // const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
@@ -62,35 +61,46 @@ const layoutWithoutBlank = [
   { i: "s5", x: 25, y: 9, w: 7, h: 8 },
 ];
 const Nurturing = () => {
+  const { races, players: allPlayer, supports: allSupports } = useAppContext();
   const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
   const [needSelect, setNeedSelect] = useState(false);
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
   const [isSupportVisible, setIsSupportVisible] = useState(false);
   const [supportIndex, setSupportIndex] = useState(1);
 
-  const selected = dbL.get("selected").value();
-  const [supports, setSupports] = useState(selected.supports);
-  const [player, setPlayer] = useState(selected.player);
+  const [supports, setSupports] = useState([]);
+  const [player, setPlayer] = useState({});
 
-  const [raceFilterCondition, setRaceFilterCondition] = useState(
-    selected.raceFilterCondition || {
-      distanceType: [],
-      grade: [],
-      ground: [],
+  const [raceFilterCondition, setRaceFilterCondition] = useState({
+    distanceType: [],
+    grade: [],
+    ground: [],
+  });
+  const [filterRace, setFilterRace] = useState({});
+  const [layout, setLayout] = useState(layoutWithoutBlank);
+  const [gridWidth, setGridWidth] = useState(0);
+  const [gridRowHeight, setGridRowHeight] = useState(0);
+
+  useEffect(() => {
+    const selected = dbL.get("selected").value();
+    if (selected) {
+      const { supports, player, raceFilterCondition, filterRace } = selected;
+      supports && setSupports(supports);
+      player && setPlayer(player);
+      raceFilterCondition && setRaceFilterCondition(raceFilterCondition);
+      filterRace && setFilterRace(filterRace);
     }
-  );
-  const [filterRace, setFilterRace] = useState(selected.filterRace || {});
-  const db = useDB();
+    const originalLayout = dbL.get("layout").value();
+    if (originalLayout) {
+      setLayout(originalLayout);
+    }
+    setGridWidth(window.innerWidth - 10);
+    setGridRowHeight(Math.floor((window.innerHeight - 128 - 40) / 18));
+    setMounted(true);
+  }, []);
 
-  const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
-  const dynamicGridWidth = Math.floor(useViewport().width - 10);
-  const originalLayout = dbL.get("layout").value() || layoutWithoutBlank;
-  const [layout, setLayout] = useState(originalLayout);
-
-  if (typeof window === "undefined") return;
-  if (!db) return null;
-  const races = db.get("races").value();
   const showPlayer = () => {
     setIsPlayerVisible(true);
   };
@@ -126,24 +136,32 @@ const Nurturing = () => {
     setIsSupportVisible(false);
 
     // save
+    const selected = dbL.get("selected").value();
     selected.supports[supportIndex] = data;
-    dbL.get("selected").assign(selected).write();
+    dbL
+      .get("selected")
+      .assign({ ...selected })
+      .write();
   };
 
   const loadDeck = (deck) => {
+    const selected = dbL.get("selected").value();
     selected.supports = { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} };
     selected.player = {};
     if (deck.playerId) {
-      selected.player = db.get("players").find({ id: deck.playerId }).value();
+      selected.player = allPlayer.find((item) => item.id === deck.playerId);
     }
     setPlayer(selected.player);
     deck.supportsId.forEach((id, index) => {
       if (id) {
-        selected.supports[index] = db.get("supports").find({ id: id }).value();
+        selected.supports[index] = allSupports.find((item) => item.id === id);
       }
     });
     setSupports({ ...selected.supports });
-    dbL.get("selected").assign(selected).write();
+    dbL
+      .get("selected")
+      .assign({ ...selected })
+      .write();
   };
 
   // race checkbox发生变化
@@ -169,6 +187,7 @@ const Nurturing = () => {
     }
     //更新state
     setFilterRace(tmpFilterRace);
+    const selected = dbL.get("selected").value();
     selected.raceFilterCondition = filterCondition;
     selected.filterRace = tmpFilterRace;
     dbL
@@ -188,15 +207,15 @@ const Nurturing = () => {
   const pBodyStyle = {
     height: "calc(100% - 22px)",
   };
-  return (
+  return mounted ? (
     <>
       <GridLayout
         cols={32}
         layout={layout}
         draggableCancel=".panel-title"
         draggableHandle=".panel-heading"
-        rowHeight={dynamicRowHeight}
-        width={dynamicGridWidth}
+        rowHeight={gridRowHeight}
+        width={gridWidth}
         onLayoutChange={onLayoutChange}
         useCSSTransforms={false}
       >
@@ -204,7 +223,7 @@ const Nurturing = () => {
           <div className={headClass} onClick={showPlayer}>
             {t("选择马娘")}
           </div>
-          {player.id && (
+          {player?.id && (
             <img
               src={CDN_SERVER + player.imgUrl}
               alt={player.imgUrl}
@@ -274,7 +293,7 @@ const Nurturing = () => {
         </div>
         {[0, 1, 2, 3, 4, 5].map((index) => {
           let support = supports[index];
-          if (support.id) {
+          if (support?.id) {
             return (
               <div key={`s${index}`} className={panelClass}>
                 <div className={headClass}>
@@ -348,7 +367,7 @@ const Nurturing = () => {
         </ModalBody>
       </Modal>
     </>
-  );
+  ) : null;
 };
 
 export default Nurturing;

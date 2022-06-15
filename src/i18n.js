@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import zhCN from "/src/assert/locales/zh-CN.json";
-import en from "/src/assert/locales/en.json";
+import zhCN from "src/assert/locales/zh-CN.json";
+import en from "src/assert/locales/en.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -24,5 +24,5 @@ i18n
     load: "currentOnly",
   });
 
-// https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/src/assert/locales/zh_CN.json
+// https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@mastersrc/assert/locales/zh_CN.json
 export default i18n;

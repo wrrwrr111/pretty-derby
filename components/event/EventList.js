@@ -3,8 +3,10 @@ import React from "react";
 import EventCard from "./EventCard";
 import EventDetail from "./EventDetail";
 import List from "../common/List";
+import { useAppContext } from "context/state";
 
-const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }) => {
+const EventList = ({ dataList, idList = [], onClick, sortFlag = false, type = "all" }) => {
+  const { events } = useAppContext();
   const sort = sortFlag
     ? {
         data: [
@@ -23,8 +25,7 @@ const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }
   return (
     <List
       listKey="events"
-      dataList={dataList}
-      idList={idList}
+      dataList={dataList || events.filter((item) => idList.includes(item.id))}
       sort={sort}
       filterFunc={filterFunc}
       onClick={onClick}

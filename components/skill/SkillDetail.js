@@ -2,20 +2,14 @@ import React from "react";
 import SupportList from "../support/SupportList";
 import PlayerList from "../player/PlayerList";
 
-import { useDB } from "/hooks/index.js";
-import { SKILL_TYPES, CDN_SERVER } from "/src/config";
+import { SKILL_TYPES, CDN_SERVER } from "src/config";
 
 import { useTranslation } from "react-i18next";
-
-const SkillDetail = (props) => {
+import { useAppContext } from "context/state";
+const SkillDetail = ({ data, isNur }) => {
+  const { supports, players } = useAppContext();
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const id = props.id;
-  const data = props.data || db.get("skills").find({ id }).value();
-  const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
-  const supportList = db
-    .get("supports")
+  const supportList = supports
     .filter((support) => {
       let flag = 0;
       support.skillList.forEach((id) => {
@@ -25,11 +19,8 @@ const SkillDetail = (props) => {
       });
       return flag;
     })
-
-    .sort((a, b) => b.rarity - a.rarity)
-    .value();
-  const playerList = db
-    .get("players")
+    .sort((a, b) => b.rarity - a.rarity);
+  const playerList = players
     .filter((player) => {
       let flag = 0;
       player.skillList.forEach((id) => {
@@ -39,9 +30,7 @@ const SkillDetail = (props) => {
       });
       return flag;
     })
-    .sort((a, b) => b.rarity - a.rarity)
-    .value();
-
+    .sort((a, b) => b.rarity - a.rarity);
   if (!data) return null;
   return (
     <div

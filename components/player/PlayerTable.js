@@ -6,7 +6,7 @@ import {
   PLAYER_GROW_FILTERS,
   PLAYER_RARITIES,
   PLAYER_ADAPT_TITLES,
-} from "/src/config";
+} from "src/config";
 
 const coloredGradeText = (text) => {
   let color = "gray";

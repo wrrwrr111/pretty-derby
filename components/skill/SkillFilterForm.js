@@ -4,16 +4,17 @@ import { useForm } from "react-hook-form";
 import CheckBox from "../common/CheckBox";
 import Input from "../common/Input";
 
-import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "context/state";
 import {
   CDN_SERVER,
   SKILL_CONDITION_OPTIONS,
   SKILL_TYPE_OPTIONS,
   SKILL_RARITY_OPTIONS,
-} from "/src/config";
+} from "src/config";
 
 const SkillFilterForm = (props) => {
+  const { skills } = useAppContext();
   const { t } = useTranslation();
   const { onUpdate, needId, checkOnly, formName = "skill" } = props;
 
@@ -36,7 +37,7 @@ const SkillFilterForm = (props) => {
       onUpdate([]);
       return;
     }
-    let tempList = db.get("skills").orderBy("db_id").value();
+    let tempList = [...skills];
     if (q) {
       tempList = tempList.filter((item) => item.name.indexOf(q) > -1);
     }
@@ -78,8 +79,6 @@ const SkillFilterForm = (props) => {
     }
     onUpdate(tempList);
   };
-  const db = useDB();
-  if (!db) return null;
 
   return (
     <div className="flex flex-wrap">

@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import shortid from "shortid";
 import Button from "@material-tailwind/react/Button";
 
-import { useDB } from "/hooks";
-import dbL from "/src/dbL.js";
+import dbL from "src/dbL.js";
 import { useTranslation } from "react-i18next";
 import {
   Divider,
@@ -16,15 +15,16 @@ import {
   // Tooltip
 } from "antd";
 import { EditOutlined } from "@ant-design/icons";
-import SupportListWithFilter from "/components/support/SupportListWithFilter";
-import PlayerList from "/components/player/PlayerList.js";
-import RaceTimeline from "/components/race/RaceTimeline";
-import RaceCheckbox from "/components/race/RaceCheckbox";
-import { CDN_SERVER } from "/src/config";
-
+import SupportListWithFilter from "components/support/SupportListWithFilter";
+import PlayerList from "components/player/PlayerList.js";
+import RaceTimeline from "components/race/RaceTimeline";
+import RaceCheckbox from "components/race/RaceCheckbox";
+import { CDN_SERVER } from "src/config";
+import { useAppContext } from "context/state";
 // const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const Nurturing = (props) => {
+  const { races, players: allPlayer, supports: allSupports } = useAppContext();
   const { t } = useTranslation();
   const router = useRouter();
   const [needSelect, setNeedSelect] = useState(false);
@@ -47,10 +47,6 @@ const Nurturing = (props) => {
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
-  const db = useDB();
-  if (typeof window === "undefined") return;
-  if (!db) return null;
-  const races = db.get("races").value();
   const showPlayer = () => {
     setIsPlayerVisible(true);
   };
@@ -128,16 +124,16 @@ const Nurturing = (props) => {
     selected.supports = { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} };
     selected.player = {};
     if (deck.playerId) {
-      selected.player = db.get("players").find({ id: deck.playerId }).value();
+      selected.player = allPlayer.find((item) => item.id === deck.playerId);
     }
     setPlayer(selected.player);
     deck.supportsId.forEach((id, index) => {
       if (id) {
-        selected.supports[index] = db.get("supports").find({ id: id }).value();
+        selected.supports[index] = allSupports.find((item) => item.id === id);
       }
     });
     setSupports({ ...selected.supports });
-    db.get("selected").assign(selected).write();
+    dbL.get("selected").assign(selected).write();
   };
   const deleteDeck = (deck) => {
     dbL.get("myDecks").remove({ id: deck.id }).write();
@@ -175,10 +171,10 @@ const Nurturing = (props) => {
   };
 
   const toSupportDetail = (id) => {
-    router.push(`/support-detail/${id}`);
+    router.push(`/support/${id}`);
   };
   const toPlayerDetail = (id) => {
-    router.push(`/player-detail/${id}/1`);
+    router.push(`/player/${id}/1`);
   };
   const toBuffList = (id) => {
     router.push(`/buff`);

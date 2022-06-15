@@ -8,9 +8,9 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import { useTranslation } from "react-i18next";
-import { useDB } from "/hooks/index.js";
+import { useAppContext } from "context/state";
 
-import { EFFECT_LIMITS } from "/src/config";
+import { EFFECT_LIMITS } from "src/config";
 
 const getValue = (effect, cur) => {
   if (effect[cur] !== -1) {
@@ -50,11 +50,8 @@ const getValue = (effect, cur) => {
   }
 };
 const EffectTable = ({ effects, rarity }) => {
+  const { effects: allEffects } = useAppContext();
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const allEffects = db.get("effects").value();
-  console.log(effects[0]);
   let columns = [
     {
       title: t("效果"),
@@ -130,7 +127,7 @@ const EffectTable = ({ effects, rarity }) => {
         </TableHead>
         <TableBody>
           {effects.map((row) => (
-            <TableRow key={row.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+            <TableRow key={row.type} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
               {columns.map((column) => {
                 if (column.render) {
                   return (

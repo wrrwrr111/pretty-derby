@@ -41,7 +41,6 @@ const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }
       )}
       itemClass={"w-24 max-w-1/4"}
       detailRender={(data) => <SupportDetail data={data} isNur={false} />}
-      // detailModalSize='regular'
     />
   );
 };

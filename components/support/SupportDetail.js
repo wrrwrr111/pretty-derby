@@ -1,21 +1,17 @@
 import React from "react";
 
-import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
 
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 import EffectSlider from "../effect/EffectSlider";
 import EffectTable from "../effect/EffectTable";
-import { CDN_SERVER } from "/src/config";
+import { CDN_SERVER } from "src/config";
 
-const SupportDetail = (props) => {
+const SupportDetail = ({ data }) => {
   const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const id = props.id;
-  const data = props.data || db.get("supports").find({ id }).value();
-  return data ? (
+  if (!data) return null;
+  return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">
       <div className="h-16 w-full flex flex-shrink-0">
         <img alt={data.name} src={CDN_SERVER + data.imgUrl} height={64} width={48} />
@@ -43,6 +39,6 @@ const SupportDetail = (props) => {
       />
       <EffectTable effects={data.effects} rarity={data.rarity} />
     </div>
-  ) : null;
+  );
 };
 export default SupportDetail;

@@ -13,15 +13,14 @@ import NavLink from "@material-tailwind/react/NavLink";
 import { useTranslation } from "react-i18next";
 
 import useUa from "/hooks/useUa";
-import LanButton from "/components/LanButton";
-import dbL from "/src/dbL.js";
-import { CDN_SERVER, PC_MENU_LIST, MOBILE_MENU_LIST } from "/src/config";
+import LanButton from "components/LanButton";
+import dbL from "src/dbL.js";
+import { CDN_SERVER, PC_MENU_LIST, MOBILE_MENU_LIST } from "src/config";
 const Layout = ({ children, contentClass, rootClass }) => {
   const { t } = useTranslation();
   const [openNavbar, setOpenNavbar] = useState(false);
   const ua = useUa();
   const router = useRouter();
-  console.log(router);
   const resetNur = () => {
     dbL
       .set("selected", {

@@ -2,7 +2,16 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import SkillDetail from "./SkillDetail";
 import List from "../common/List";
-const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, size = "medium" }) => {
+import { useAppContext } from "context/state";
+const SkillList = ({
+  className,
+  idList = [],
+  dataList,
+  onClick,
+  sortFlag = false,
+  size = "medium",
+}) => {
+  const { skills } = useAppContext();
   const sort = {
     key: "rare",
     data: [
@@ -15,8 +24,7 @@ const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, siz
     <List
       className={className}
       listKey="skills"
-      idList={idList}
-      dataList={dataList}
+      dataList={dataList || skills.filter((item) => idList.includes(item.id))}
       sort={sortFlag && sort}
       itemRender={(data, setCur) => (
         <div
@@ -38,7 +46,6 @@ const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, siz
         </div>
       )}
       detailRender={(data) => <SkillDetail data={data} isNur={false} />}
-      // detailModalSize='regular'
     />
   );
 };
