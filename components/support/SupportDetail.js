@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
-import { EffectTable, TestEffectTable } from "../effect";
+import EffectSlider from "../effect/EffectSlider";
+import EffectTable from "../effect/EffectTable";
 import { CDN_SERVER } from "/src/config";
 
 const SupportDetail = (props) => {
@@ -35,7 +36,7 @@ const SupportDetail = (props) => {
       <SkillList idList={data.trainingEventSkill} />
       <div>{t("训练技能")}</div>
       <SkillList idList={data.possessionSkill} />
-      <TestEffectTable
+      <EffectSlider
         effects={data.effects}
         unique_effect={data.unique_effect}
         rarity={data.rarity}

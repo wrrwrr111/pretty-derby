@@ -6,7 +6,7 @@ import SupportListWithFilter from "/components/support/SupportListWithFilter";
 const Support = () => {
   return (
     <div className="container mx-auto flex">
-      <SupportListWithFilter />;
+      <SupportListWithFilter />
     </div>
   );
 };

@@ -3,12 +3,7 @@ import React from "react";
 import { CDN_SERVER } from "/src/config";
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
-// import RaceList from './player-race.js'
-import {
-  // RaceSchedule,
-  RaceTimeline,
-} from "../race";
-// import {EffectTable} from './effect.js'
+import RaceTimeline from "../race/RaceTimeline";
 import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
 const PlayerItem = ({ data }) => {

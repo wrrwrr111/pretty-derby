@@ -10,12 +10,12 @@ import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
 import Nav from "@material-tailwind/react/Nav";
 import NavLink from "@material-tailwind/react/NavLink";
 
-import useUa from "/hooks/useUa";
-import LanButton from "/components/lan-button.js";
-import { CDN_SERVER } from "/src/config";
-import dbL from "/src/dbL.js";
 import { useTranslation } from "react-i18next";
-import { PC_MENU_LIST, MOBILE_MENU_LIST } from "/src/config";
+
+import useUa from "/hooks/useUa";
+import LanButton from "/components/LanButton";
+import dbL from "/src/dbL.js";
+import { CDN_SERVER, PC_MENU_LIST, MOBILE_MENU_LIST } from "/src/config";
 const Layout = ({ children, contentClass, rootClass }) => {
   const { t } = useTranslation();
   const [openNavbar, setOpenNavbar] = useState(false);

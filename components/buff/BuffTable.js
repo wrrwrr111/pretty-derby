@@ -1,16 +1,8 @@
 import React from "react";
-import Button from "@material-tailwind/react/Button";
 // import {useState} from 'react';
 import { useDB } from "/hooks/index.js";
 import { useTranslation } from "react-i18next";
-const BuffButton = (props) => {
-  return (
-    <Button size="sm" buttonType="outline" data-tip="buff list">
-      Buff
-    </Button>
-  );
-};
-const BuffList = (props) => {
+const BuffTable = (props) => {
   const { t } = useTranslation();
   const db = useDB();
   if (!db) return null;
@@ -39,4 +31,4 @@ const BuffList = (props) => {
     </table>
   );
 };
-export { BuffButton, BuffList };
+export default BuffTable;

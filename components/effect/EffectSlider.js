@@ -1,154 +1,44 @@
 import React from "react";
-import { Table, Slider } from "antd";
+// import MaterialTable from "material-table";
+import Slider from "@mui/material/Slider";
 
 import { useTranslation } from "react-i18next";
 import { useDB } from "/hooks/index.js";
 
 import { EFFECT_LIMITS } from "/src/config";
 
-const getValue = (effect, cur) => {
-  if (effect[cur] !== -1) {
-    return effect[cur];
-  } else {
-    let index = EFFECT_LIMITS.indexOf(cur);
-    let min = 0;
-    let min_limit = "init";
-    let max = 0;
-    let max_limit = "limit_lv50";
-    for (let limit of EFFECT_LIMITS.slice(0, index)) {
-      if (effect[limit] > min) {
-        min = effect[limit];
-        min_limit = limit;
-      }
-    }
-    for (let limit of EFFECT_LIMITS.slice(index, EFFECT_LIMITS.length)) {
-      if (effect[limit] !== -1) {
-        max = effect[limit];
-        max_limit = limit;
-        break;
-      }
-    }
-    // cur=40 lv35=40 lv40=-1 lv50=-1
-    if (max <= min || max - min === 1 || min === 0) {
-      return min;
-    } else {
-      return (
-        <div data-tip="插值">
-          {Math.floor(
-            min +
-              ((max - min) * (EFFECT_LIMITS.indexOf(cur) - EFFECT_LIMITS.indexOf(min_limit))) /
-                (EFFECT_LIMITS.indexOf(max_limit) - EFFECT_LIMITS.indexOf(min_limit))
-          )}
-        </div>
-      );
-    }
-  }
-};
-const EffectTable = (props) => {
-  const { t } = useTranslation();
-  const db = useDB();
-  if (!db) return null;
-  const effects = db.get("effects").value();
-  let columns = [
-    {
-      title: t("效果"),
-      dataIndex: "type",
-      key: "type",
-      width: 200,
-      render: (type) => (
-        <p
-          data-tip={`<div><p>${effects[type].name}</p><p>${t(effects[type].name)}</p><p>${
-            effects[type].description
-          }</p><p>${t(effects[type].description)}</p></div>`}
-        >
-          {t(effects[type].name)}
-        </p>
-      ),
-    },
-    {
-      title: t("初始"),
-      dataIndex: "init",
-      key: "init",
-      render: (div, record) => getValue(record, "init"),
-    },
-    {
-      title: "lv25",
-      dataIndex: "limit_lv25",
-      key: "limit_lv25",
-      render: (div, record) => getValue(record, "limit_lv25"),
-    },
-    {
-      title: "lv30",
-      dataIndex: "limit_lv30",
-      key: "limit_lv30",
-      render: (div, record) => getValue(record, "limit_lv30"),
-    },
-    {
-      title: "lv35",
-      dataIndex: "limit_lv35",
-      key: "limit_lv35",
-      render: (div, record) => getValue(record, "limit_lv35"),
-    },
-    {
-      title: "lv40",
-      dataIndex: "limit_lv40",
-      key: "limit_lv40",
-      render: (div, record) => getValue(record, "limit_lv40"),
-    },
-    {
-      title: "lv45",
-      dataIndex: "limit_lv45",
-      key: "limit_lv45",
-      render: (div, record) => getValue(record, "limit_lv45"),
-    },
-    {
-      title: "lv50",
-      dataIndex: "limit_lv50",
-      key: "limit_lv50",
-      render: (div, record) => getValue(record, "limit_lv50"),
-    },
-  ];
-  if (props.rarity === 2) {
-    columns = columns.slice(0, columns.length - 1);
-  } else if (props.rarity === 1) {
-    columns = columns.slice(0, columns.length - 2);
-  }
-
-  return (
-    <div className="w-full overflow-x-auto">
-      <Table columns={columns} dataSource={props.effects} divKey="type" pagination={false}></Table>
-    </div>
-  );
-};
-
 const getEffectMark = (maxLevel) => {
-  let ok = {
-    1: "lv1",
-    5: "lv5",
-    10: "lv10",
-    15: "lv15",
-    20: "lv20",
-    25: "lv25",
-    30: "lv30",
-    35: "lv35",
-    40: "lv40",
-  };
+  let marks = [
+    { value: 1, label: "lv1" },
+    { value: 5, label: "lv5" },
+    { value: 10, label: "lv10" },
+    { value: 15, label: "lv15" },
+    { value: 20, label: "lv20" },
+    { value: 25, label: "lv25" },
+    { value: 30, label: "lv30" },
+    { value: 35, label: "lv35" },
+    { value: 40, label: "lv40" },
+  ];
   if (maxLevel >= 45) {
-    ok[45] = "lv45";
+    marks.push({ value: 45, label: "lv45" });
   }
   if (maxLevel === 50) {
-    ok[50] = "lv50";
+    marks.push({ value: 50, label: "lv50" });
   }
-  return ok;
+  return marks;
 };
+function valuetext(value) {
+  return `lv${value}`;
+}
 
-const TestEffectTable = (props) => {
+const EffectSlider = (props) => {
+  const db = useDB();
   const { t } = useTranslation();
   const getMaxLevel = (rarity) => {
     switch (rarity) {
       case 1:
         return 40;
-      case 2:
+      case 5:
         return 45;
       case 3:
         return 50;
@@ -201,14 +91,14 @@ const TestEffectTable = (props) => {
 
     return output;
   };
-  const db = useDB();
+  console.log({ selectingLevel });
   if (!db) return null;
   const effects = db.get("effects").value();
   return (
     <div>
       {props.unique_effect && (
         <>
-          <div className="flex w-full items-center justify-between p-2">
+          <div className="flex w-full items-center justify-between p-5">
             <div>{t("固有效果")}</div>
             <div>{`${t("激活等级")}:${props.unique_effect.lv}`}</div>
           </div>
@@ -240,17 +130,20 @@ const TestEffectTable = (props) => {
           </div>
         </>
       )}
-      <div className="w-full flex items-center">
+      <div className="w-full flex items-center py-2">
         <div className="mr-2">{t("设置等级")}</div>
         <Slider
-          className="flex-auto"
-          min={1}
-          max={maxLevel}
-          value={selectingLevel}
-          onChange={(value) => {
+          aria-label="Temperature"
+          defaultValue={maxLevel}
+          valueLabelDisplay="always"
+          getAriaValueText={valuetext}
+          onChange={(e, value) => {
             setSelectingLevel(value);
           }}
+          step={1}
           marks={getEffectMark(maxLevel)}
+          min={0}
+          max={maxLevel}
         />
       </div>
       <div className="w-full grid grid-cols-2 gap-2 ">
@@ -294,4 +187,4 @@ const TestEffectTable = (props) => {
   );
 };
 
-export { EffectTable, TestEffectTable };
+export default EffectSlider;

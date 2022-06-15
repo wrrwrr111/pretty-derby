@@ -18,8 +18,8 @@ import {
 import { EditOutlined } from "@ant-design/icons";
 import SupportListWithFilter from "/components/support/SupportListWithFilter";
 import PlayerList from "/components/player/PlayerList.js";
-import { RaceTimeline, RaceCheckbox } from "/components/race";
-
+import RaceTimeline from "/components/race/RaceTimeline";
+import RaceCheckbox from "/components/race/RaceCheckbox";
 import { CDN_SERVER } from "/src/config";
 
 // const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";

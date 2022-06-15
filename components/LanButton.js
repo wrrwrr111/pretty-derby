@@ -4,16 +4,16 @@ import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import Button from "@material-tailwind/react/Button";
 
-// import i18n from "../i18n";
+import i18n from "/src/i18n";
 const LanButton = () => {
   const [show, setShow] = useState(false);
-  // const changeLanguage = (lan) => {
-  //   i18n.changeLanguage(lan);
-  //   setShow(false);
-  // };
+  const changeLanguage = (lan) => {
+    i18n.changeLanguage(lan);
+    setShow(false);
+  };
   return (
     <>
-      {/* <Button size="sm" color="lightBlue" onClick={() => setShow(true)} ripple="light">
+      <Button size="sm" color="lightBlue" onClick={() => setShow(true)} ripple="light">
         {i18n.language}
       </Button>
       <Modal active={show} toggler={() => setShow(false)}>
@@ -25,7 +25,7 @@ const LanButton = () => {
             </Button>
           </div>
         </ModalBody>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

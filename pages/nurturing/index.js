@@ -15,10 +15,11 @@ import { useTranslation } from "react-i18next";
 import dbL from "/src/dbL.js";
 import EventList from "/components/event/EventList";
 import SkillList from "/components/skill/SkillList";
-import { BuffButton } from "/components/buff.js";
-
-import { RaceTimeline, RaceCheckbox } from "/components/race";
-import { MyDecks, RecommendDecks } from "/components/deck.js";
+import BuffTable from "/components/buff/BuffTable";
+import RaceTimeline from "/components/race/RaceTimeline";
+import RaceCheckbox from "/components/race/RaceCheckbox";
+import MyDecks from "/components/deck/MyDecks";
+import RecommendDecks from "/components/deck/RecommendDecks";
 
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
@@ -221,7 +222,11 @@ const Nurturing = () => {
             <Button size="sm" buttonType="outline" onClick={showSupport2}>
               {t("支援卡查询")}
             </Button>
-            <BuffButton />
+            <Popover content={<BuffTable />}>
+              <Button size="sm" buttonType="outline">
+                {t("Buff")}
+              </Button>
+            </Popover>
             <Popover
               content={
                 <RaceCheckbox onChange={onChangeRace} raceFilterCondition={raceFilterCondition} />
