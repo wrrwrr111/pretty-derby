@@ -3,10 +3,12 @@ import { appWithTranslation } from "next-i18next";
 import ReactTooltip from "react-tooltip";
 
 import "antd/dist/antd.css";
-import "@material-tailwind/react/tailwind.css";
-import "tailwindcss/tailwind.css";
+// import "@material-tailwind/react/tailwind.css";
 
+// import "tailwindcss/tailwind.css";
+import "public/styles/index.css";
 import "public/styles/global.css";
+
 import "src/i18n";
 
 import Layout from "components/common/Layout.js";
