@@ -35,3 +35,5 @@ src/styles/tailwind.css
 
 #next 
 .next
+
+yarn.lock
