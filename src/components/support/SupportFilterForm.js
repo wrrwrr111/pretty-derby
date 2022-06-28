@@ -35,7 +35,7 @@ const SupportFilterForm = (props) => {
     const type =
       value[`${formName}type`] && value[`${formName}type`]?.map((e) => e.replace(formName, ""));
     let tempList = [...allSupports];
-
+    console.log({effect})
     if (type?.length) {
       tempList = tempList.filter((support) => {
         let flag = 0;
@@ -52,7 +52,7 @@ const SupportFilterForm = (props) => {
         effect.forEach((value) => {
           support.effects &&
             support.effects.forEach((effect) => {
-              if (effect.type === value) {
+              if (effect.type == value) {
                 flag += 1;
               }
             });
