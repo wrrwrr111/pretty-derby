@@ -52,7 +52,7 @@ const SupportFilterForm = (props) => {
         effect.forEach((value) => {
           support.effects &&
             support.effects.forEach((effect) => {
-              if (effect.type === value) {
+              if (effect.type == value) {
                 flag += 1;
               }
             });
