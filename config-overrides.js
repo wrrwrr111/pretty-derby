@@ -20,8 +20,8 @@ module.exports = override(
     }
     const paths = require("react-scripts/config/paths");
     // 修改public path to github cdn
-    paths.publicUrl = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/";
-    config.output.publicPath = "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/";
+    paths.publicUrl = "https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@build2/build/";
+    config.output.publicPath = "https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@build2/build/";
     return config;
   }
 );

@@ -17,8 +17,8 @@ tool/node_modules
 /coverage
 # production
 # /build
-/build
-/public/img/support_card
+/build/img
+/public/img/
 
 # misc
 .DS_Store
