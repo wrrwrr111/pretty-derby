@@ -1,10 +1,10 @@
 // import classnames from "classnames";
 import React, { useState, useEffect } from "react";
 import { useDidRecover } from "react-router-cache-route";
-import Modal from "@material-tailwind/react/Modal";
-import ModalBody from "@material-tailwind/react/ModalBody";
-import ModalHeader from "@material-tailwind/react/ModalHeader";
-import Button from "@material-tailwind/react/Button";
+import Modal from "@/components/material-tailwind/Modal";
+import ModalBody from "@/components/material-tailwind/ModalBody";
+import ModalHeader from "@/components/material-tailwind/ModalHeader";
+import Button from "@/components/material-tailwind/Button";
 
 import { useDB } from "../../hooks";
 import { useTranslation } from "react-i18next";

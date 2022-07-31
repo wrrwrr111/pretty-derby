@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import shortid from "shortid";
 import { useDidRecover } from "react-router-cache-route";
-import Button from "@material-tailwind/react/Button";
+import Button from "@/components/material-tailwind/Button";
 
 import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";

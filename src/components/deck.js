@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import shortid from "shortid";
 import axios from "axios";
 
-import Button from "@material-tailwind/react/Button";
+import Button from "@/components/material-tailwind/Button";
 import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
 
 import dbL from "../dbL.js";

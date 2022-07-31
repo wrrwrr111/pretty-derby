@@ -13,7 +13,7 @@ const PlayerCard = (props) => {
         paddingBottom: "100%",
       }}
     >
-      <div className="absolute top-3 left-1 right-1 bottom-2 flex items-center justify-center flex-wrap border-2 border-solid border-gray-500 rounded-lg">
+      <div className="absolute top-3 left-1 right-1 bottom-2 flex items-center justify-center flex-wrap border-2 border-solid border-gray-500 rounded-lg" style={{ aspectRatio: "1" }}>
         <p className="truncate">{t(data.charaName)}</p>
         <p className="truncate">{t(data.name)}</p>
       </div>

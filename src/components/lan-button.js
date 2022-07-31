@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import Modal from "@material-tailwind/react/Modal";
-import ModalBody from "@material-tailwind/react/ModalBody";
-import Button from "@material-tailwind/react/Button";
+import Modal from "@/components/material-tailwind/Modal";
+import ModalBody from "@/components/material-tailwind/ModalBody";
+import Button from "@/components/material-tailwind/Button";
 
 import i18n from "../i18n";
 const LanButton = () => {

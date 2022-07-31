@@ -1,0 +1,25 @@
+{
+  "name": "material-ripple-effects",
+  "version": "2.0.1",
+  "description": "Material Design Ripple Effects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajadevo/material-ripple.git"
+  },
+  "keywords": [
+    "material design",
+    "ripple effect",
+    "material-ripple",
+    "ripple"
+  ],
+  "author": "Sajad Ahmad Nawabi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajadevo/material-ripple-effects/issues"
+  },
+  "homepage": "https://github.com/sajadevo/material-ripple-effects#readme"
+}

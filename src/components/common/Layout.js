@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 
-import Navbar from "@material-tailwind/react/Navbar";
-import NavbarContainer from "@material-tailwind/react/NavbarContainer";
-import NavbarWrapper from "@material-tailwind/react/NavbarWrapper";
-import NavbarBrand from "@material-tailwind/react/NavbarBrand";
-import NavbarToggler from "@material-tailwind/react/NavbarToggler";
-import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
-import Nav from "@material-tailwind/react/Nav";
-import NavLink from "@material-tailwind/react/NavLink";
+import Navbar from "@/components/material-tailwind/Navbar";
+import NavbarContainer from "@/components/material-tailwind/NavbarContainer";
+import NavbarWrapper from "@/components/material-tailwind/NavbarWrapper";
+import NavbarBrand from "@/components/material-tailwind/NavbarBrand";
+import NavbarToggler from "@/components/material-tailwind/NavbarToggler";
+import NavbarCollapse from "@/components/material-tailwind/NavbarCollapse";
+import Nav from "@/components/material-tailwind/Nav";
+import NavLink from "@/components/material-tailwind/NavLink";
 
 import useUa from "@/utils/ua.js";
 import LanButton from "@/components/lan-button.js";

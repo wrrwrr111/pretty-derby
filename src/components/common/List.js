@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 
-import Modal from "@material-tailwind/react/Modal";
-import ModalBody from "@material-tailwind/react/ModalBody";
-import ModalHeader from "@material-tailwind/react/ModalHeader";
+import Modal from "@/components/material-tailwind/Modal";
+import ModalBody from "@/components/material-tailwind/ModalBody";
+import ModalHeader from "@/components/material-tailwind/ModalHeader";
 
 import { useDB } from "../../hooks/index.js";
 import { useTranslation } from "react-i18next";

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@material-tailwind/react/Button";
+import Button from "@/components/material-tailwind/Button";
 // import {useState} from 'react';
 import { useDB } from "../hooks/index.js";
 import { useTranslation } from "react-i18next";

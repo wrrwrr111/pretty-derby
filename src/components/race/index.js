@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "@material-tailwind/react/Button";
+import Button from "@/components/material-tailwind/Button";
 
 import { Row, Col, Timeline, Checkbox } from "antd";
 import { useTranslation } from "react-i18next";
