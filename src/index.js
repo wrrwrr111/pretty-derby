@@ -5,8 +5,8 @@ import App from "./app";
 import "./i18n";
 
 import "antd/dist/antd.css";
-import "./styles/index.css";
 import "./styles/tailwind.css";
+import "./styles/index.css";
 
 const Index = () => {
   return (
