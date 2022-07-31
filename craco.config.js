@@ -13,8 +13,8 @@ module.exports = {
       }
       webpackConfig.output = {
         ...webpackConfig.output,
-        // publicPath: "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/build/",
-        publicPath: "/",
+        publicPath: "https://cdn.jsdelivr.net/gh/wrrwrr111/pretty-derby@build2/build/",
+        // publicPath: "/",
       };
       return webpackConfig;
     },
