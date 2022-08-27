@@ -79235,6 +79235,21 @@
       "id": "CVtoAnmgJBs"
     },
     {
+      "name": "全日本ジュニア優駿",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "1年目 12月後半",
+      "dateNum": "23",
+      "uniqueName": "全日本ジュニア優駿23",
+      "class": "ジュニア",
+      "grade": "G1",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "1600"
+    },
+    {
       "name": "フェアリーステークス",
       "date": "2年目 1月前半",
       "dateNum": 24,
@@ -79685,6 +79700,21 @@
       "id": "bLQQ-__hCag"
     },
     {
+      "name": "マリーンカップ",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 4月前半",
+      "dateNum": "30",
+      "uniqueName": "マリーンカップ30",
+      "class": "クラシック",
+      "grade": "G3",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1600"
+    },
+    {
       "name": "橘ステークス",
       "date": "2年目 4月後半",
       "dateNum": 31,
@@ -79985,6 +80015,21 @@
       "id": "aHQDsxINapB"
     },
     {
+      "name": "関東オークス",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 6月前半",
+      "dateNum": "34",
+      "uniqueName": "関東オークス34",
+      "class": "クラシック",
+      "grade": "G2",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "2100"
+    },
+    {
       "name": "ユニコーンステークス",
       "date": "2年目 6月後半",
       "dateNum": 35,
@@ -80240,6 +80285,21 @@
       "id": "BhKCLplc88X"
     },
     {
+      "name": "スパーキングレディーカップ",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 7月前半",
+      "dateNum": "36",
+      "uniqueName": "スパーキングレディーカップ36",
+      "class": "クラシック",
+      "grade": "G3",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "1600"
+    },
+    {
       "name": "中京記念",
       "date": "2年目 7月後半",
       "dateNum": 37,
@@ -80298,6 +80358,21 @@
       "direction": "右",
       "side": null,
       "id": "1DuLHy6svC"
+    },
+    {
+      "name": "マーキュリーカップ",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 7月後半",
+      "dateNum": "37",
+      "uniqueName": "マーキュリーカップ37",
+      "class": "クラシック",
+      "grade": "G3",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "2000"
     },
     {
       "name": "小倉記念",
@@ -80525,6 +80600,21 @@
       "id": "n-rwe5-3E7-"
     },
     {
+      "name": "クラスターカップ",
+      "distanceType": "短距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 8月後半",
+      "dateNum": "39",
+      "uniqueName": "クラスターカップ39",
+      "class": "クラシック",
+      "grade": "G3",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "1200"
+    },
+    {
       "name": "セントウルステークス",
       "date": "2年目 9月前半",
       "dateNum": 40,
@@ -80750,6 +80840,21 @@
       "id": "sYv0kTYuRR-"
     },
     {
+      "name": "さざんかテレビ杯",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 9月後半",
+      "dateNum": "41",
+      "uniqueName": "さざんかテレビ杯41",
+      "class": "クラシック",
+      "grade": "G2",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
       "name": "毎日王冠",
       "date": "2年目 10月前半",
       "dateNum": 42,
@@ -80868,6 +80973,51 @@
       "direction": "右",
       "side": null,
       "id": "buh8CdZ3_cn"
+    },
+    {
+      "name": "東京盃",
+      "distanceType": "短距離",
+      "direction": "右",
+      "side": null,
+      "id": null,
+      "date": "2年目 10月前半",
+      "dateNum": "42",
+      "uniqueName": "東京盃42",
+      "class": "クラシック",
+      "grade": "G2",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1200"
+    },
+    {
+      "name": "レディスプレリュード",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 10月前半",
+      "dateNum": "42",
+      "uniqueName": "レディスプレリュード42",
+      "class": "クラシック",
+      "grade": "G2",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
+      "name": "マイルチャンピオンシップ南部杯",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 10月前半",
+      "dateNum": "42",
+      "uniqueName": "マイルチャンピオンシップ南部杯42",
+      "class": "クラシック",
+      "grade": "G1",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "1600"
     },
     {
       "name": "スワンステークス",
@@ -81425,6 +81575,21 @@
       "id": "pgJSZtPzh-G"
     },
     {
+      "name": "クイーン賞",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "2年目 12月前半",
+      "dateNum": "46",
+      "uniqueName": "クイーン賞46",
+      "class": "クラシック",
+      "grade": "G3",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
       "name": "阪神カップ",
       "date": "2年目 12月後半",
       "dateNum": 47,
@@ -81740,6 +81905,21 @@
       "id": "rEAmVYLFFjY"
     },
     {
+      "name": "TCK女王盃",
+      "distanceType": "マイル",
+      "direction": "右",
+      "side": null,
+      "id": null,
+      "date": "3年目 1月後半",
+      "dateNum": "49",
+      "uniqueName": "TCK女王盃49",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
       "name": "京都記念",
       "date": "3年目 2月前半",
       "dateNum": 50,
@@ -81828,6 +82008,21 @@
       "direction": "左",
       "side": null,
       "id": "h8w-IcVNIQx"
+    },
+    {
+      "name": "川崎記念",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 2月前半",
+      "dateNum": "50",
+      "uniqueName": "川崎記念50",
+      "class": "シニア",
+      "grade": "G1",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "2100"
     },
     {
       "name": "中山記念",
@@ -82055,6 +82250,21 @@
       "id": "cVniTd-zeD"
     },
     {
+      "name": "エンプレス杯",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 3月前半",
+      "dateNum": "52",
+      "uniqueName": "エンプレス杯52",
+      "class": "シニア",
+      "grade": "G2",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "2100"
+    },
+    {
       "name": "阪神大賞典",
       "date": "3年目 3月後半",
       "dateNum": 53,
@@ -82158,6 +82368,21 @@
       "direction": "右",
       "side": "内",
       "id": "-9T1oDkamb"
+    },
+    {
+      "name": "ダイオライト記念",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 3月後半",
+      "dateNum": "53",
+      "uniqueName": "ダイオライト記念53",
+      "class": "シニア",
+      "grade": "G2",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "2400"
     },
     {
       "name": "阪神ウマ娘ステークス",
@@ -82280,6 +82505,21 @@
       "id": "HGTcqx4o_YU"
     },
     {
+      "name": "マリーンカップ",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 4月前半",
+      "dateNum": "54",
+      "uniqueName": "マリーンカップ54",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1600"
+    },
+    {
       "name": "マイラーズカップ",
       "date": "3年目 4月後半",
       "dateNum": 55,
@@ -82353,6 +82593,21 @@
       "direction": "右",
       "side": "外",
       "id": "I4VkVUYo1Lx"
+    },
+    {
+      "name": "東京スプリント",
+      "distanceType": "短距離",
+      "direction": "右",
+      "side": null,
+      "id": null,
+      "date": "3年目 4月後半",
+      "dateNum": "55",
+      "uniqueName": "東京スプリント55",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1200"
     },
     {
       "name": "京王杯スプリングカップ",
@@ -82488,6 +82743,21 @@
       "direction": "左",
       "side": null,
       "id": "5ZgocW0TSvk"
+    },
+    {
+      "name": "かしわ記念",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 5月前半",
+      "dateNum": "56",
+      "uniqueName": "かしわ記念56",
+      "class": "シニア",
+      "grade": "G1",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1600"
     },
     {
       "name": "目黒記念",
@@ -82895,6 +83165,21 @@
       "id": "YAwX2eW7Yo"
     },
     {
+      "name": "スパーキングレディーカップ",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 7月前半",
+      "dateNum": "60",
+      "uniqueName": "スパーキングレディーカップ60",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "川崎",
+      "ground": "ダート",
+      "distance": "1600"
+    },
+    {
       "name": "中京記念",
       "date": "3年目 7月後半",
       "dateNum": 61,
@@ -82953,6 +83238,21 @@
       "direction": "右",
       "side": null,
       "id": "mvjY5qTdab"
+    },
+    {
+      "name": "マーキュリーカップ",
+      "distanceType": "中距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 7月後半",
+      "dateNum": "61",
+      "uniqueName": "マーキュリーカップ61",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "2000"
     },
     {
       "name": "小倉記念",
@@ -83165,6 +83465,21 @@
       "id": "_lTjFI7OHXu"
     },
     {
+      "name": "クラスターカップ",
+      "distanceType": "短距離",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 8月後半",
+      "dateNum": "63",
+      "uniqueName": "クラスターカップ63",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "1200"
+    },
+    {
       "name": "セントウルステークス",
       "date": "3年目 9月前半",
       "dateNum": 64,
@@ -83330,6 +83645,21 @@
       "id": "BfCXwZKoFaU"
     },
     {
+      "name": "さざんかテレビ杯",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 9月後半",
+      "dateNum": "65",
+      "uniqueName": "さざんかテレビ杯65",
+      "class": "シニア",
+      "grade": "G2",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
       "name": "毎日王冠",
       "date": "3年目 10月前半",
       "dateNum": 66,
@@ -83448,6 +83778,51 @@
       "direction": "右",
       "side": null,
       "id": "oxVBkeczJwd"
+    },
+    {
+      "name": "東京盃",
+      "distanceType": "短距離",
+      "direction": "右",
+      "side": null,
+      "id": null,
+      "date": "3年目 10月前半",
+      "dateNum": "66",
+      "uniqueName": "東京盃66",
+      "class": "シニア",
+      "grade": "G2",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1200"
+    },
+    {
+      "name": "レディスプレリュード",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 10月前半",
+      "dateNum": "66",
+      "uniqueName": "レディスプレリュード66",
+      "class": "シニア",
+      "grade": "G2",
+      "place": "大井",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
+      "name": "マイルチャンピオンシップ南部杯",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 10月前半",
+      "dateNum": "66",
+      "uniqueName": "マイルチャンピオンシップ南部杯66",
+      "class": "シニア",
+      "grade": "G1",
+      "place": "盛岡",
+      "ground": "ダート",
+      "distance": "1600"
     },
     {
       "name": "スワンステークス",
@@ -83975,6 +84350,21 @@
       "id": "VCIZhnS_cE5"
     },
     {
+      "name": "クイーン賞",
+      "distanceType": "マイル",
+      "direction": "左",
+      "side": null,
+      "id": null,
+      "date": "3年目 12月前半",
+      "dateNum": "70",
+      "uniqueName": "クイーン賞70",
+      "class": "シニア",
+      "grade": "G3",
+      "place": "船橋",
+      "ground": "ダート",
+      "distance": "1800"
+    },
+    {
       "name": "阪神カップ",
       "date": "3年目 12月後半",
       "dateNum": 71,
@@ -84117,14 +84507,14 @@
       "describe": "身心都十分充实，元气满满！\n练习不容易失败"
     },
     {
-        "id": "14",
-        "name": "ファンとの約束",
-        "describe": "〇〇でのレースで勝利すると\nファンと再開して力をもらえる"
+      "id": "14",
+      "name": "ファンとの約束",
+      "describe": "〇〇でのレースで勝利すると\nファンと再開して力をもらえる"
     },
     {
-        "id": "15",
-        "name": "まだまだ準備中",
-        "describe": "身体がまだ本格化の時期に入つていない… …\nレースに出走すると疲れてしまラことがある"
+      "id": "15",
+      "name": "まだまだ準備中",
+      "describe": "身体がまだ本格化の時期に入つていない… …\nレースに出走すると疲れてしまラことがある"
     }
   ],
   "effects": {
