@@ -9,7 +9,7 @@ const SkillCard = (props) => {
     <div
       className={` rounded border-solid border flex items-center cursor-pointer ${
         data.rarity === 1 && "bg-white"
-      } ${data.rarity === 2 && "bg-yellow-200"} ${data.rarity === 3 && " bg-purple-400"} ${
+      } ${data.rarity === 2 && "bg-yellow-200"} ${data.rarity === 3 && " bg-purple-200"} ${
         data.rarity === 4 && " bg-purple-200"
       } ${data.rarity === 5 && " bg-purple-200"} ${className}`}
       onClick={onClick}
