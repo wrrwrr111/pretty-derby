@@ -1,6 +1,5 @@
 // import classnames from "classnames";
 import React, { useState, useEffect } from "react";
-import { useDidRecover } from "react-router-cache-route";
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
@@ -14,9 +13,6 @@ import SupportList from "@/components/support/SupportList";
 import SupportFilterForm from "@/components/support/SupportFilterForm";
 import useViewport from "@/utils/useViewport";
 
-const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
-
-document.title = TITLE;
 const SupportListWithFilter = (props) => {
   const { onClick, limitHeight, formName } = props;
   const { t } = useTranslation();
@@ -27,9 +23,6 @@ const SupportListWithFilter = (props) => {
   const [showMode, setShowMode] = useState(false);
   const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
 
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
   const db = useDB();
   useEffect(() => {
     if (db) setList(props.supportList || db.get("supports").value() || []);

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDidRecover } from "react-router-cache-route";
 import Button from "@material-tailwind/react/Button";
 // import shortid from 'shortid'
 // import axios from "axios";
@@ -28,8 +27,7 @@ import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList";
 
 import { CDN_SERVER } from "@/config";
-
-const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
   { i: "b", x: 2, y: 0, w: 7, h: 2 },
@@ -62,10 +60,7 @@ const layoutWithoutBlank = [
 ];
 const Nurturing = () => {
   const { t } = useTranslation();
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
+
   const [needSelect, setNeedSelect] = useState(false);
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
@@ -205,6 +200,9 @@ const Nurturing = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>育成 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       <GridLayout
         cols={32}
         layout={layout}

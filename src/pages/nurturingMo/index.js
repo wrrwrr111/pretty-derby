@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import shortid from "shortid";
-import { useDidRecover } from "react-router-cache-route";
 import Button from "@material-tailwind/react/Button";
 
 import { useDB } from "../../hooks";
@@ -22,16 +21,12 @@ import PlayerList from "@/components/player/PlayerList.js";
 import { RaceTimeline, RaceCheckbox } from "../../components/race";
 
 import { CDN_SERVER } from "@/config";
-
-const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 
 const Nurturing = (props) => {
   const { t } = useTranslation();
   const history = useHistory();
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
+
   const [needSelect, setNeedSelect] = useState(false);
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
@@ -190,6 +185,9 @@ const Nurturing = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>育成 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       <div style={{ display: "flex", justifyContent: "center" }}>
         {player.imgUrl && (
           <img

@@ -7,7 +7,6 @@ import { Image, Modal, Rate, Form, message } from "antd";
 //test
 import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 
 import dbL from "../../dbL";
@@ -18,8 +17,7 @@ import { useDB } from "../../hooks";
 import { useTranslation } from "react-i18next";
 
 import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "@/config";
-
-const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 let userId = dbL.get("userId").value();
 
 const PlayerInput = ({ value = {}, onChange }) => {
@@ -316,10 +314,6 @@ const SeedCard = (props) => {
 };
 const Seed = () => {
   const { t } = useTranslation();
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
 
   const [seedList, setSeedList] = useState([]);
   const search = async (value) => {
@@ -336,6 +330,9 @@ const Seed = () => {
   };
   return (
     <div className="w-full flex flex-wrap px-3">
+      <Helmet>
+        <title>分享 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       <SearchForm search={search} />
       <div className="w-full text-lg font-semibold">{t("结果")}</div>
       {seedList.map((seed) => {

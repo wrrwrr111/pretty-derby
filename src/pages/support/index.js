@@ -1,15 +1,15 @@
 import React from "react";
-import { useDidRecover } from "react-router-cache-route";
-
 import SupportListWithFilter from "../../components/support/SupportListWithFilter";
-const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 
 const Support = () => {
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
-
-  return <SupportListWithFilter />;
+  return (
+    <>
+      <Helmet>
+        <title>支援 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
+      <SupportListWithFilter />;
+    </>
+  );
 };
 export default Support;

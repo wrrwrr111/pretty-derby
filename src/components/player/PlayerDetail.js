@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { CDN_SERVER } from "@/config";
 import EventList from "../event/EventList";
@@ -11,6 +11,9 @@ import {
 // import {EffectTable} from './effect.js'
 import { useDB } from "../../hooks/index.js";
 import { useTranslation } from "react-i18next";
+
+import { Helmet } from "react-helmet";
+
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
   const { t } = useTranslation();
@@ -33,57 +36,72 @@ const PlayerItem = ({ data }) => {
 const PlayerDetail = (props) => {
   const { t } = useTranslation();
   const db = useDB();
-  if (!db) return null;
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
   const data = props.data || db.get("players").find({ id }).value();
+
   if (!data) return null;
 
-  if (isNur) {
-    return (
-      <div className="w-full flex flex-col  p-3">
-        <PlayerItem data={data} />
-        <div>{t("多选项事件")}</div>
-        <EventList idList={data.eventList0} />
-        <div>{t("赛后事件")}</div>
-        <EventList idList={data.eventList2} />
-        <div>{t("通用事件")}</div>
-        <EventList idList={data.eventList3} />
-        <div>{t("隐藏事件")}</div>
-        <EventList idList={data.hideEvent} type="all" />
-        <div>{t("赛程")}</div>
-        {/* <RaceSchedule raceList={data.raceList}/> */}
-        <RaceTimeline raceList={data.raceList} showButton={false} />
-        <div>{t("技能")}</div>
-        <SkillList idList={data.skillList} />
-      </div>
-    );
-  } else {
-    return (
-      <div className="w-full flex flex-col  p-3">
-        <PlayerItem data={data} />
-        <AdaptBox player={data} />
-        <div className="h-2"></div>
-        <GrowBox player={data} />
-        <div className="h-2"></div>
-        <SkillList idList={data.skillList} />
-        <div>{t("多选项事件")}</div>
-        <EventList idList={data.eventList0} />
-        <div>{t("无选项事件")}</div>
-        <EventList idList={data.eventList1} />
-        <div>{t("赛后事件")}</div>
-        <EventList idList={data.eventList2} />
-        <div>{t("通用事件")}</div>
-        <EventList idList={data.eventList3} />
-        <div>{t("隐藏事件")}</div>
-        <EventList idList={data.eventList4} />
-        <div>{t("赛程")}</div>
-        {/* <RaceSchedule raceList={data.raceList}/> */}
-        <RaceTimeline raceList={data.raceList} />
-      </div>
-    );
-  }
+  return (
+    <>
+      {props.page && (
+        <Helmet>
+          <title>
+            {t(data.name)} | {t(data.charaName)} | 角色 | 乌拉拉大胜利 | 赛马娘资料站
+          </title>
+          <meta
+            name="description"
+            content={`赛马娘角色卡 ${t(data.name)} ${t(data.charaName)} 的详细资料`}
+          />
+          <meta
+            property="keywords"
+            content={[data.name, t(data.name), data.charaName, t(data.charaName)].join(",")}
+          />
+        </Helmet>
+      )}
+      {isNur ? (
+        <div className="w-full flex flex-col p-3">
+          <PlayerItem data={data} />
+          <div>{t("多选项事件")}</div>
+          <EventList idList={data.eventList0} />
+          <div>{t("赛后事件")}</div>
+          <EventList idList={data.eventList2} />
+          <div>{t("通用事件")}</div>
+          <EventList idList={data.eventList3} />
+          <div>{t("隐藏事件")}</div>
+          <EventList idList={data.hideEvent} type="all" />
+          <div>{t("赛程")}</div>
+          {/* <RaceSchedule raceList={data.raceList}/> */}
+          <RaceTimeline raceList={data.raceList} showButton={false} />
+          <div>{t("技能")}</div>
+          <SkillList idList={data.skillList} />
+        </div>
+      ) : (
+        <div className="w-full flex flex-col p-3">
+          <PlayerItem data={data} />
+          <AdaptBox player={data} />
+          <div className="h-2"></div>
+          <GrowBox player={data} />
+          <div className="h-2"></div>
+          <SkillList idList={data.skillList} />
+          <div>{t("多选项事件")}</div>
+          <EventList idList={data.eventList0} />
+          <div>{t("无选项事件")}</div>
+          <EventList idList={data.eventList1} />
+          <div>{t("赛后事件")}</div>
+          <EventList idList={data.eventList2} />
+          <div>{t("通用事件")}</div>
+          <EventList idList={data.eventList3} />
+          <div>{t("隐藏事件")}</div>
+          <EventList idList={data.eventList4} />
+          <div>{t("赛程")}</div>
+          {/* <RaceSchedule raceList={data.raceList}/> */}
+          <RaceTimeline raceList={data.raceList} />
+        </div>
+      )}
+    </>
+  );
 };
 
 const coloredGradeText = (text) => {
