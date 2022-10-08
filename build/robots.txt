@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+# Sitemaps
+Sitemap: https://urarawin.com/sitemap.txt
