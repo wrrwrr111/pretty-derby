@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useDidRecover } from "react-router-cache-route";
-
-import Modal from "@/components/material-tailwind/Modal";
-import ModalBody from "@/components/material-tailwind/ModalBody";
-import ModalHeader from "@/components/material-tailwind/ModalHeader";
-import Button from "@/components/material-tailwind/Button";
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
+import Button from "@material-tailwind/react/Button";
 
 import SkillList from "@/components/skill/SkillList";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
@@ -12,15 +10,11 @@ import SkillFilterForm from "@/components/skill/SkillFilterForm";
 import useViewport from "@/utils/useViewport";
 
 import { useDB } from "../../hooks";
-const TITLE = "技能 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 
-document.title = TITLE;
 const Skill = (props) => {
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
   const [skillList, setSkillList] = useState();
   const db = useDB();
   useEffect(() => {
@@ -37,6 +31,9 @@ const Skill = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       {viewport?.width >= 768 ? (
         <div
           className="sticky top-20 hidden md:flex w-1/4 flex-col p-1 overflow-auto"

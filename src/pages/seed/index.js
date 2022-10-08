@@ -16,7 +16,7 @@ import {
   Input,
   // Space,
   Card,
-  message
+  message,
 } from "antd";
 //test
 import {
@@ -27,7 +27,6 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { useDidRecover } from "react-router-cache-route";
 import axios from "axios";
 import { useDB } from "../../hooks";
 import dbL from "@/dbL.js";
@@ -35,9 +34,9 @@ import dbL from "@/dbL.js";
 import PlayerList from "@/components/player/PlayerList";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "@/config";
+import { Helmet } from "react-helmet";
 
 let userId = dbL.get("userId").value();
-const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 
 /*
 userId 随机生成
@@ -481,10 +480,6 @@ const SupportImage = (props) => {
 };
 
 const Seed = () => {
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);
   const [seedList, setSeedList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -695,6 +690,9 @@ const Seed = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>分享 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       <div className="seed-container">
         <Card className="card" title="过滤条件">
           <SearchForm search={search} />

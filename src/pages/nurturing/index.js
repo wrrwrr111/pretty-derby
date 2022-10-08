@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { useDidRecover } from "react-router-cache-route";
-import Button from "@/components/material-tailwind/Button";
+import Button from "@material-tailwind/react/Button";
 // import shortid from 'shortid'
 // import axios from "axios";
 import ScrollBars from "react-custom-scrollbars";
 import { Popover } from "antd";
 
-import Modal from "@/components/material-tailwind/Modal";
-import ModalBody from "@/components/material-tailwind/ModalBody";
-import ModalHeader from "@/components/material-tailwind/ModalHeader";
+import Modal from "@material-tailwind/react/Modal";
+import ModalBody from "@material-tailwind/react/ModalBody";
+import ModalHeader from "@material-tailwind/react/ModalHeader";
 
 import { useDB } from "../../hooks";
 import { useTranslation } from "react-i18next";
@@ -28,8 +27,7 @@ import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList";
 
 import { CDN_SERVER } from "@/config";
-
-const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
+import { Helmet } from "react-helmet";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
   { i: "b", x: 2, y: 0, w: 7, h: 2 },
@@ -62,10 +60,7 @@ const layoutWithoutBlank = [
 ];
 const Nurturing = () => {
   const { t } = useTranslation();
-  document.title = TITLE;
-  useDidRecover(() => {
-    document.title = TITLE;
-  });
+
   const [needSelect, setNeedSelect] = useState(false);
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
@@ -205,6 +200,9 @@ const Nurturing = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>育成 - 乌拉拉大胜利 - 赛马娘资料站</title>
+      </Helmet>
       <GridLayout
         cols={32}
         layout={layout}

@@ -6,7 +6,7 @@ import { useDB } from "../../hooks/index.js";
 import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
 import { useTranslation } from "react-i18next";
-
+import { Helmet } from "react-helmet";
 const SkillDetail = (props) => {
   const { t } = useTranslation();
   const db = useDB();
@@ -50,6 +50,16 @@ const SkillDetail = (props) => {
         maxWidth: "calc(100vw - 40px)",
       }}
     >
+      {props.page && (
+        <Helmet>
+          <title>{t(data.name)} - 技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
+          <meta
+            name="description"
+            content={`赛马娘技能「${t(data.name)}」, ${t(data.describe)} `}
+          />
+          <meta property="keywords" content={[data.name, t(data.name)].join(",")} />
+        </Helmet>
+      )}
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
           <img alt={data.name} src={CDN_SERVER + data.imgUrl} className="w-14" />

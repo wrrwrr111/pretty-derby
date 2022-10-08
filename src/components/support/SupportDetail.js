@@ -7,15 +7,31 @@ import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 import { EffectTable, TestEffectTable } from "../effect";
 import { CDN_SERVER } from "@/config";
-
+import { Helmet } from "react-helmet";
 const SupportDetail = (props) => {
   const { t } = useTranslation();
   const db = useDB();
   if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();
-  return data ? (
+  if (!data) return null;
+  return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">
+      {props.page && (
+        <Helmet>
+          <title>
+            {t(data.charaName)} - {t(data.name)} - 支援卡 - 乌拉拉大胜利 - 赛马娘资料站
+          </title>
+          <meta
+            name="description"
+            content={`赛马娘支援卡 ${t(data.charaName)} ${t(data.name)} 的详细资料`}
+          />
+          <meta
+            property="keywords"
+            content={[data.name, t(data.name), data.charaName, t(data.charaName)].join(",")}
+          />
+        </Helmet>
+      )}
       <div className="h-16 w-full flex flex-shrink-0">
         <img alt={data.name} src={CDN_SERVER + data.imgUrl} height={64} width={48} />
         <div className="flex-auto flex flex-wrap h-full items-center">
@@ -42,6 +58,6 @@ const SupportDetail = (props) => {
       />
       <EffectTable effects={data.effects} rarity={data.rarity} />
     </div>
-  ) : null;
+  );
 };
 export default SupportDetail;
