@@ -1,0 +1,44 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+@import "tippy.js/dist/svg-arrow.css";
+@import "tippy.js/animations/scale.css";
+@import "tippy.js/animations/shift-away.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Tippy Boxx */
+.tippy-box:focus {
+  outline: none;
+}
+
+/* Tippy Animation */
+.tippy-box[data-animation="scale"] {
+  transform-origin: top left !important;
+}
+
+/* Tippy Arrow */
+.arrow-light .tippy-svg-arrow {
+  fill: #fff;
+}
+
+.arrow-dark .tippy-svg-arrow {
+  fill: rgba(0, 0, 0, 0.8);
+}
+
+/* Material Tailwind Radio Button Ripple Effect Animation */
+@keyframes radio-ripple {
+  from {
+    opacity: 0;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale3d(2, 2, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(3, 3, 1);
+  }
+}

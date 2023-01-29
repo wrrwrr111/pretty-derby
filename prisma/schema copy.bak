@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   // NOTE: When using postgresql, mysql or sqlserver, uncomment the @db.Text annotations in model Account below
   // Further reading:
   // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
@@ -15,24 +15,24 @@ datasource db {
 }
 
 model Example {
-  id        String   @id @default(cuid())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 // Necessary for Next auth
 model Account {
-  id                String  @id @default(cuid())
-  userId            String
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? // @db.Text
-  access_token      String? // @db.Text
+  refresh_token     String? @db.String
+  access_token      String? @db.String
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? // @db.Text
+  id_token          String? @db.String
   session_state     String?
   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -40,15 +40,15 @@ model Account {
 }
 
 model Session {
-  id           String   @id @default(cuid())
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
   sessionToken String   @unique
-  userId       String
+  userId       String   @db.ObjectId
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
   email         String?   @unique
   emailVerified DateTime?
@@ -58,6 +58,7 @@ model User {
 }
 
 model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
   identifier String
   token      String   @unique
   expires    DateTime
@@ -67,53 +68,5 @@ model VerificationToken {
 
 // 种马
 model Seed {
-  id             String @id
-  blue0          String
-  blueLevel0     Int
-  red0           String
-  redLevel0      Int
-  greenLevel0    Int
-  uraLevel0      Int
-  whiteNum0      Int
-  blue1          String
-  blueLevel1     Int
-  red1           String
-  redLevel1      Int
-  greenLevel1    Int
-  uraLevel1      Int
-  whiteNum1      Int
-  blue2          String
-  blueLevel2     Int
-  red2           String
-  redLevel2      Int
-  greenLevel2    Int
-  uraLevel2      Int
-  whiteNum2      Int
-  supportLevel   Int
-  gameId         String
-  userId         String
-  updateTime     Int
-  playerId0      String
-  playerId1      String
-  playerId2      String
-  supportId      String
-  speed          Int
-  stamina        Int
-  power          Int
-  guts           Int
-  wisdom         Int
-  grass          Int
-  dirt           Int
-  shortDistance  Int
-  mile           Int
-  mediumDistance Int
-  longDistance   Int
-  escapeR        Int
-  leadingR       Int
-  insertR        Int
-  trackingR      Int
-  white          Int
-  uraLevel       Int
-  likes          Int
-  dislikes       Int
+  id String @id @default(auto()) @map("_id") @db.ObjectId
 }

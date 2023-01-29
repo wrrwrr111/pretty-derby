@@ -1,12 +1,11 @@
-import low from "lowdb";
-import LocalStorage from "lowdb/adapters/LocalStorage";
-import Memory from 'lowdb/adapters/Memory'
+import { Low, Memory } from "lowdb";
+import { LocalStorage } from "lowdb/browser";
 import axios from "axios";
 // import jsonDB from './assert/db.json'
 
 const adapterL = new LocalStorage("db");
 const adapterM = new Memory();
-const db = typeof window !== "undefined" ? low(adapterL) : low(adapterM);
+const db = typeof window !== "undefined" ? new Low(adapterL) : new Low(adapterM);
 
 const d = async () => {
   // let res = await axios.get('https://urarawin.com/d')
