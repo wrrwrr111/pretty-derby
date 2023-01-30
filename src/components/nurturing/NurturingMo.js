@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 import shortid from "shortid";
-import {Button} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 
 import { useTranslation } from "react-i18next";
 import {
@@ -14,10 +14,10 @@ import {
   // Tooltip
 } from "antd";
 import { EditOutlined } from "@ant-design/icons";
-import SupportListWithFilter from "../../components/support/SupportListWithFilter";
-import PlayerList from "../../components/player/PlayerList";
-import RaceTimeline from "../../components/race/RaceTimeline";
-import RaceCheckbox from "../../components/race/RaceCheckbox";
+import SupportListWithFilter from "../support/SupportListWithFilter";
+import PlayerList from "../player/PlayerList";
+import RaceTimeline from "../race/RaceTimeline";
+import RaceCheckbox from "../race/RaceCheckbox";
 import { CDN_SERVER } from "../../config";
 import { useAtom } from "jotai";
 import { supportsAtom, racesAtom, playersAtom } from "../../hooks/atoms";
@@ -190,7 +190,7 @@ const Nurturing = (props) => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="flex justify-center">
         {selected.player.imgUrl && (
           <img
             src={CDN_SERVER + selected.player.imgUrl}
@@ -229,13 +229,13 @@ const Nurturing = (props) => {
                   {t("保存为新卡组")}
                 </Button>
                 {decks.map((deck) => (
-                  <Row key={deck.id}>
+                  <div className="grid grid-cols-8" key={deck.id}>
                     {deck.imgUrls.map((imgUrl) => (
-                      <Col span={3} key={imgUrl}>
+                      <div className="col-span-1" key={imgUrl}>
                         <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
-                      </Col>
+                      </div>
                     ))}
-                    <Col span={3}>
+                    <div className="col-span-1">
                       <Button
                         size="sm"
                         buttonType="outline"
@@ -254,8 +254,8 @@ const Nurturing = (props) => {
                           {t("删除卡组")}
                         </Button>
                       </Popconfirm>
-                    </Col>
-                  </Row>
+                    </div>
+                  </div>
                 ))}
               </>
             }
@@ -265,9 +265,9 @@ const Nurturing = (props) => {
         </div>
       </div>
 
-      <Row justify="space-around">
+      <div className="grid grid-cols-12 gap-2" justify="space-around">
         {[0, 1, 2, 3, 4, 5].map((index) => (
-          <Col span={7} key={index} style={{}}>
+          <div key={index} className="col-span-4">
             <Button
               size="sm"
               buttonType="outline"
@@ -284,12 +284,12 @@ const Nurturing = (props) => {
                 onClick={() => toSupportDetail(selected.supports[index].id)}
               />
             )}
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
 
       <Divider>比赛</Divider>
-      <div style={{ overflow: "auto", paddingTop: "10px", width: "100%", height: "400px" }}>
+      <div className="h-[400px] w-full overflow-auto pt-[10px]">
         <RaceTimeline raceList={selected.player.raceList} filterRace={selected.filterRace} />
       </div>
 

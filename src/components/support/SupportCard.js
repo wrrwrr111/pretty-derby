@@ -6,14 +6,8 @@ const SupportCard = (props) => {
   const { t } = useTranslation();
   const [show, setShow] = useState(true);
   return data ? (
-    <div
-      className={`relative cursor-pointer ${className}`}
-      onClick={onClick}
-      style={{
-        paddingBottom: "134%",
-      }}
-    >
-      <div className="absolute inset-1 flex items-center justify-center flex-wrap border-2 border-solid border-gray-500 rounded-lg">
+    <div className={`relative cursor-pointer ${className} pb-[134%]`} onClick={onClick}>
+      <div className="absolute inset-1 flex flex-wrap items-center justify-center rounded-lg border-2 border-solid border-gray-500">
         <p className="">{t(data.charaName)}</p>
         <p className="">{t(data.name)}</p>
       </div>

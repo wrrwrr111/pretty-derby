@@ -72,15 +72,6 @@ const Nurturing = () => {
   const [isSupportVisible, setIsSupportVisible] = useState(false);
   const [supportIndex, setSupportIndex] = useState(1);
 
-  // const [supports, setSupports] = useState([]);
-  // const [player, setPlayer] = useState({});
-  // const [raceFilterCondition, setRaceFilterCondition] = useState({
-  //   distanceType: [],
-  //   grade: [],
-  //   ground: [],
-  // });
-  // const [filterRace, setFilterRace] = useState({});
-
   const [layout, setLayout] = useState(layoutWithoutBlank);
   const [gridWidth, setGridWidth] = useState(0);
   const [gridRowHeight, setGridRowHeight] = useState(0);
@@ -172,9 +163,7 @@ const Nurturing = () => {
   };
   const panelClass = "bg-white border border-solid border-gray-500";
   const headClass = "panel-heading w-full text-center bg-gray-300 cursor-move";
-  const pBodyStyle = {
-    height: "calc(100% - 22px)",
-  };
+  const bodyClass = "!h-[calc(100%_-_22px)]";
   return (
     <>
       <GridLayout
@@ -193,9 +182,9 @@ const Nurturing = () => {
           </div>
           {selected.player?.id && (
             <img
+              className={bodyClass}
               src={CDN_SERVER + selected.player.imgUrl}
               alt={selected.player.imgUrl}
-              style={{ ...pBodyStyle }}
               onClick={showPlayer}
             />
           )}
@@ -239,20 +228,20 @@ const Nurturing = () => {
         </div>
         <div key="c" className={panelClass}>
           <div className={headClass}>{t("事件")}</div>
-          <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
+          <ScrollBars autoHide={true} className={bodyClass}>
             {/* <p>{player.id}</p> */}
             <EventList idList={selected.player?.eventList} sortFlag={true} />
           </ScrollBars>
         </div>
         <div key="d" className={panelClass}>
           <div className={headClass}>{t("技能")}</div>
-          <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
+          <ScrollBars autoHide={true} className={bodyClass}>
             <SkillList idList={selected.player?.skillList} isNur={true} size="small" />
           </ScrollBars>
         </div>
         <div key="e" className={panelClass}>
           <div className={headClass}>{t("比赛")}</div>
-          <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
+          <ScrollBars autoHide={true} className={bodyClass}>
             <RaceTimeline
               raceList={selected.player?.raceList || []}
               filterRace={selected.filterRace}
@@ -261,7 +250,7 @@ const Nurturing = () => {
         </div>
         <div key="f" className={panelClass}>
           <div className={headClass}>{t("隐藏事件")}</div>
-          <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
+          <ScrollBars autoHide={true} className={bodyClass}>
             <EventList idList={selected.player?.hideEvent} />
           </ScrollBars>
         </div>
@@ -271,39 +260,31 @@ const Nurturing = () => {
             return (
               <div key={`s${index}`} className={panelClass}>
                 <div className={headClass}>
-                  <span
-                    className="panel-title"
-                    onClick={() => showSupport(index)}
-                    style={{ cursor: "pointer" }}
-                  >
+                  <span className="panel-title cursor-pointer" onClick={() => showSupport(index)}>
                     {t("选择支援卡")}
                   </span>
                 </div>
-                <ScrollBars autoHide={true} style={{ ...pBodyStyle }}>
-                  <div style={{ display: "flex" }}>
+                <ScrollBars autoHide={true} className={bodyClass}>
+                  <div className="flex">
                     <img
-                      style={{ width: "26%", height: "39%" }}
+                      className="h-[39%] w-[26%]"
                       src={CDN_SERVER + support.imgUrl}
                       alt={support.imgUrl}
                     />
-                    <div style={{ flex: "1 1 auto" }}>
+                    <div className="flex-auto">
                       <EventList
                         idList={selected.supports[index]?.eventList}
                         pid={selected.supports[index]?.id}
                       />
                     </div>
                   </div>
-                  <div style={{ margin: "4px 0", background: "rgba(255,255,255,0.6)" }}>
-                    {t("培训技能")}
-                  </div>
+                  <div className="my-1 bg-white bg-opacity-60">{t("培训技能")}</div>
                   <SkillList
                     idList={selected.supports[index]?.possessionSkill}
                     isNur={true}
                     size="small"
                   />
-                  <div style={{ margin: "4px 0", background: "rgba(255,255,255,0.6)" }}>
-                    {t("事件技能")}
-                  </div>
+                  <div className="my-1 bg-white bg-opacity-60">{t("事件技能")}</div>
                   <SkillList
                     idList={selected.supports[index]?.trainingEventSkill}
                     isNur={true}
@@ -323,28 +304,21 @@ const Nurturing = () => {
           }
         })}
       </GridLayout>
-      <Dialog size="lg" open={isPlayerVisible} handler={setIsPlayerVisible}>
+      <Dialog size="xl" open={isPlayerVisible} handler={setIsPlayerVisible}>
         <DialogHeader toggler={closePlayer}>选择角色</DialogHeader>
-        <DialogBody>
-          <div className="h-full w-full" style={{ maxHeight: "80vh", overflow: "auto" }}>
-            <PlayerList onClick={handleSelectPlayer} sortFlag={true} />
-          </div>
+        <DialogBody className="h-full max-h-[80vh] w-full overflow-auto">
+          <PlayerList onClick={handleSelectPlayer} sortFlag={true} />
         </DialogBody>
       </Dialog>
-      <Dialog size="lg" open={isSupportVisible} handler={setIsSupportVisible}>
+      <Dialog size="xl" open={isSupportVisible} handler={setIsSupportVisible}>
         <DialogHeader toggler={closeSupport}>选择支援卡</DialogHeader>
-        <DialogBody>
-          <div
-            className="relative flex h-full w-full"
-            style={{ maxHeight: "80vh", overflow: "auto" }}
-          >
-            <SupportListWithFilter
-              formName="nurSup"
-              onClick={needSelect ? handleSelectSupport : null}
-              limitHeight={true}
-              sortFlag={true}
-            />
-          </div>
+        <DialogBody className="relative flex h-full max-h-[80vh] w-full overflow-auto">
+          <SupportListWithFilter
+            formName="nurSup"
+            onClick={needSelect ? handleSelectSupport : null}
+            limitHeight={true}
+            sortFlag={true}
+          />
         </DialogBody>
       </Dialog>
     </>

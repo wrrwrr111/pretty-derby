@@ -9,16 +9,16 @@ const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
   const { t } = useTranslation();
   return (
-    <div className="h-16 w-full flex flex-shrink-0">
+    <div className="flex h-16 w-full flex-shrink-0">
       <img alt={name} src={CDN_SERVER + imgUrl} height={64} width={64} />
-      <div className="flex-auto flex flex-wrap h-full items-center">
-        <div className="w-full flex items-center justify-between">
-          <div className=" text-xl font-semibold truncate">{name}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(name)}</div>
+      <div className="flex h-full flex-auto flex-wrap items-center">
+        <div className="flex w-full items-center justify-between">
+          <div className=" truncate text-xl font-semibold">{name}</div>
+          <div className="flex-shrink-0 truncate text-gray-700">{t(name)}</div>
         </div>
-        <div className="w-full flex items-center justify-between">
-          <div className=" text-xl font-semibold truncate">{charaName}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(charaName)}</div>
+        <div className="flex w-full items-center justify-between">
+          <div className=" truncate text-xl font-semibold">{charaName}</div>
+          <div className="flex-shrink-0 truncate text-gray-700">{t(charaName)}</div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@ const PlayerDetail = ({ isNur, data }) => {
   if (!data) return null;
   if (isNur) {
     return (
-      <div className="w-full flex flex-col  p-3">
+      <div className="flex w-full flex-col  p-3">
         <PlayerItem data={data} />
         <div>{t("多选项事件")}</div>
         <EventList idList={data.eventList0} />
@@ -49,7 +49,7 @@ const PlayerDetail = ({ isNur, data }) => {
     );
   } else {
     return (
-      <div className="w-full flex flex-col  p-3">
+      <div className="flex w-full flex-col  p-3">
         <PlayerItem data={data} />
         <AdaptBox player={data} />
         <div className="h-2"></div>
@@ -75,38 +75,34 @@ const PlayerDetail = ({ isNur, data }) => {
 };
 
 const coloredGradeText = (text) => {
-  let color = "gray";
+  let color = "";
   switch (text) {
     case "S":
-      color = "#FFD700";
+      color = "text-[#FFD700]";
       break;
     case "A":
-      color = "#FFA500";
+      color = "text-[#FFA500]";
       break;
     case "B":
-      color = "#BA55D3";
+      color = "text-[#BA55D3]";
       break;
     case "C":
-      color = "#90EE90";
+      color = "text-[#90EE90]";
       break;
     case "D":
-      color = "#87CEEB";
+      color = "text-[#87CEEB]";
       break;
     default:
-      color = "gray";
+      color = "text-gray";
   }
-  return (
-    <div style={{ fontSize: 22, fontWeight: 700, textShadow: "0 2px #33333370", color: color }}>
-      {text}
-    </div>
-  );
+  return <div className={`text-xl font-semibold drop-shadow ${color}`}>{text}</div>;
 };
 const AdaptBox = (props) => {
   const { t } = useTranslation();
 
   return (
-    <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+    <div className="my-1 grid grid-cols-5 rounded-lg border border-solid border-gray-500">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("场地适应")}
       </div>
       <div className="col-span-1 flex items-center justify-around">
@@ -116,7 +112,7 @@ const AdaptBox = (props) => {
         {[`${t("ダート")}`, coloredGradeText(props.player.dirt)]}
       </div>
       <div className="col-span-2"></div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("赛程适应")}
       </div>
       <div className="col-span-1 flex items-center justify-around">
@@ -131,7 +127,7 @@ const AdaptBox = (props) => {
       <div className="col-span-1 flex items-center justify-around">
         {[`${t("長距離")}`, coloredGradeText(props.player.longDistance)]}
       </div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("脚质适应")}
       </div>
       <div className="col-span-1 flex items-center justify-around">
@@ -153,20 +149,20 @@ const AdaptBox = (props) => {
 const GrowBox = (props) => {
   const { t } = useTranslation();
   return (
-    <div className="my-1 rounded-lg border border-solid border-gray-500 grid grid-cols-5">
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+    <div className="my-1 grid grid-cols-5 rounded-lg border border-solid border-gray-500">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("スピード")}
       </div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("スタミナ")}
       </div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("パワー")}
       </div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("根性")}
       </div>
-      <div className="col-span-1 md_text-xl bg-green-400 text-gray-700 flex justify-center items-center">
+      <div className="md_text-xl col-span-1 flex items-center justify-center bg-green-400 text-gray-700">
         {t("賢さ")}
       </div>
       <div className="col-span-1 flex items-center justify-around">{props.player.speedGrow}</div>

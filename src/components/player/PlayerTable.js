@@ -9,31 +9,27 @@ import {
 } from "src/config";
 
 const coloredGradeText = (text) => {
-  let color = "gray";
+  let color = "";
   switch (text) {
     case "S":
-      color = "#FFD700";
+      color = "text-[#FFD700]";
       break;
     case "A":
-      color = "#FFA500";
+      color = "text-[#FFA500]";
       break;
     case "B":
-      color = "#BA55D3";
+      color = "text-[#BA55D3]";
       break;
     case "C":
-      color = "#90EE90";
+      color = "text-[#90EE90]";
       break;
     case "D":
-      color = "#87CEEB";
+      color = "text-[#87CEEB]";
       break;
     default:
-      color = "gray";
+      color = "text-gray";
   }
-  return (
-    <div style={{ fontSize: 22, fontWeight: 700, textShadow: "0 2px #33333370", color: color }}>
-      {text}
-    </div>
-  );
+  return <div className={`text-xl font-semibold drop-shadow ${color}`}>{text}</div>;
 };
 const PlayerTable = (props) => {
   const { t } = useTranslation();

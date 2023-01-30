@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import shortid from "shortid";
 import axios from "axios";
 
-import {Button} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
 
 import { useTranslation } from "react-i18next";
@@ -77,10 +77,9 @@ const MyDecks = (props) => {
 
   return (
     <Popover
-      width={"100%"}
-      overlayStyle={{ maxHeight: 800, overflow: "auto" }}
+      overlayClassName="max-h-[800px] overflow-auto"
       content={
-        <>
+        <Fragment>
           <Button size="sm" buttonType="outline" onClick={() => saveDeck()}>
             {t("保存为新卡组")}
           </Button>
@@ -118,7 +117,7 @@ const MyDecks = (props) => {
               </div>
             </div>
           ))}
-        </>
+        </Fragment>
       }
     >
       <Button size="sm" buttonType="outline">

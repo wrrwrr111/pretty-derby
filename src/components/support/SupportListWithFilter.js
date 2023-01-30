@@ -42,12 +42,7 @@ const SupportListWithFilter = ({ supportList, onClick, limitHeight, formName }) 
 
   return (
     <>
-      <div
-        className="sticky top-20 hidden w-1/4 flex-col overflow-auto p-1 md:flex"
-        style={{
-          height: "calc(100vh - 120px)",
-        }}
-      >
+      <div className="sticky top-20 hidden h-[calc(100vh_-_120px)] w-1/4 flex-col overflow-auto p-1 md:flex">
         <Button className="my-1 flex-shrink-0" onClick={changeShowMode} ripple="light">
           {t("高亮我的卡组")}
         </Button>

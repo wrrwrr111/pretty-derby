@@ -16,6 +16,6 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/components/nurturing/Nurturing.js", "src/components/effect/EffectSlider.js", "src/components/common/List.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/components/nurturing/Nurturing.js", "src/components/effect/EffectSlider.js", "src/components/common/List.js", "src/components/nurturing/NurturingMo.js", "tailwind.config.js"],
   "exclude": ["node_modules", "src/**/*.js"]
 }

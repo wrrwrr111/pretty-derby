@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Row, Col, Timeline, Checkbox } from "antd";
+import React from "react";
 import { useAtom } from "jotai";
 import { racesAtom } from "../../hooks/atoms";
 const RaceSchedule = (props) => {
@@ -15,22 +14,17 @@ const RaceSchedule = (props) => {
     if (props.raceList && props.raceList[i]) {
       const curRace = races.find((item) => item.id === props.raceList[i].id);
       str.push(
-        <Col span={6} key={i} style={{ backgroundColor: "#ff6b81", border: "1px solid #2f3542" }}>
+        <div key={i} className="col-span-3 border border-solid border-[#2f3542] bg-[#ff6b81]">
           {getDate(i)}
           <br />
           {`${curRace.name}/${curRace.distanceType}/${props.raceList[i].goal}`}
-        </Col>
+        </div>
       );
     } else if (props.filterRace && props.filterRace[i]) {
       str.push(
-        <Col
-          span={6}
+        <div
           key={i}
-          style={{
-            backgroundColor: "#7bed9f",
-            border: "1px solid #2f3542",
-            whiteSpace: "pre-line",
-          }}
+          className="col-span-3 whitespace-pre-line border border-solid border-[#2f3542] bg-[#7bed9f]"
         >
           {getDate(i)}
           <br />
@@ -38,17 +32,17 @@ const RaceSchedule = (props) => {
             const curRace = races.find((item) => item.id === props.raceList[i].id);
             return `${curRace.name}/${curRace.grade}/${curRace.distanceType}\n`;
           })}
-        </Col>
+        </div>
       );
     } else {
       str.push(
-        <Col span={6} key={i} style={{ backgroundColor: "#a4b0be", border: "1px solid #2f3542" }}>
+        <div key={i} className="col-span-3 border border-solid border-[#2f3542] bg-[#a4b0be]">
           {getDate(i)}
-        </Col>
+        </div>
       );
     }
   }
-  return <Row style={{ color: "black" }}>{str}</Row>;
+  return <div className="grid grid-cols-12 text-black">{str}</div>;
 };
 
 export default RaceSchedule;

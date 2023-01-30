@@ -71,10 +71,10 @@ const RaceTimeline = React.memo((props) => {
         golds = getGolds(curRace);
         str.push(
           <Timeline.Item
+            key={id}
             label={index === 0 ? getDate(i) : null}
             color={getColor(curRace.grade)}
-            style={{ fontSize: "14px" }}
-            key={id}
+            className="text-sm"
           >
             {`${curRace.grade} / ${curRace.distanceType} / ${curRace.distance} / ${curRace.name}
             ${golds ? " / " + golds : ""}`}
@@ -85,11 +85,7 @@ const RaceTimeline = React.memo((props) => {
       //普通
       showSpare &&
         str.push(
-          <Timeline.Item
-            label={getDate(i)}
-            color={getColor("normal")}
-            style={{ fontSize: "12px" }}
-          />
+          <Timeline.Item label={getDate(i)} color={getColor("normal")} className="text-xs" />
         );
     }
   }

@@ -35,12 +35,7 @@ const SkillDetail = ({ data, isNur }) => {
     .sort((a, b) => b.rarity - a.rarity);
   if (!data) return null;
   return (
-    <div
-      className="flex w-full flex-col p-3"
-      style={{
-        maxWidth: "calc(100vw - 40px)",
-      }}
-    >
+    <div className="flex w-full max-w-[calc(100vw_-_40px)] flex-col p-3">
       <div className="mb-1 flex w-full items-center bg-gray-100">
         <div className="flex w-20 items-center justify-center">
           <img alt={data.name} src={CDN_SERVER + data.imgUrl} className="w-14" />

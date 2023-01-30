@@ -18,12 +18,7 @@ const Skill = (props) => {
 
   return (
     <div className="container mx-auto flex">
-      <div
-        className="sticky top-20 hidden w-1/4 flex-col overflow-auto p-1 md:flex"
-        style={{
-          height: "calc(100vh - 120px)",
-        }}
-      >
+      <div className="sticky top-20 hidden h-[calc(100vh_-_120px)] w-1/4 flex-col overflow-auto p-1 md:flex">
         <SkillFilterForm onUpdate={setSkillList} />
       </div>
       <Button className="fixed top-20 z-40 bg-opacity-80 md:hidden" onClick={() => setOpen(true)}>

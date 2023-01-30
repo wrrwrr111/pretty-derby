@@ -296,7 +296,7 @@ const SeedInput = (props) => {
               }),
             ]}
           >
-            <Input placeholder="id" style={{ width: "100%" }} />
+            <Input className="w-full" placeholder="id" />
           </Form.Item>
         </Col>
         <Col span={2} offset={2}>
@@ -372,12 +372,7 @@ const SearchOne = (props) => {
           </Row>
           <Row justify="start">
             <Form.Item>
-              <Button
-                type="dashed"
-                onClick={() => add()}
-                // style={{ width: '60%' }}
-                icon={<PlusOutlined />}
-              >
+              <Button type="dashed" onClick={() => add()} icon={<PlusOutlined />}>
                 添加过滤条件
               </Button>
 

@@ -4,24 +4,18 @@ import { buffsAtom } from "../../hooks/atoms";
 const BuffTable = () => {
   const { t } = useTranslation();
   const [buffs] = useAtom(buffsAtom);
-  const cellStyle = {
-    // width:'20%',
-    height: "32px",
-    fontSize: 16,
-    textAlign: "start" as "start",
-    paddingLeft: 16,
-    fontWeight: 500,
-    borderWidth: "thin",
-    borderStyle: "solid solid solid solid",
-    borderColor: "gray",
-  };
+
   return (
     <table>
       <tbody>
         {buffs.map((buff) => (
           <tr key={buff.name}>
-            <td style={{ ...cellStyle }}>{t(buff.name)}</td>
-            <td style={{ ...cellStyle }}>{t(buff.describe)}</td>
+            <td className="h-8 border border-solid border-gray-500 pl-4 text-center font-medium">
+              {t(buff.name)}
+            </td>
+            <td className="h-8 border border-solid border-gray-500 pl-4 text-center font-medium">
+              {t(buff.describe)}
+            </td>
           </tr>
         ))}
       </tbody>

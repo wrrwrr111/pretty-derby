@@ -89,7 +89,7 @@ const Race = (props) => {
     setSelectedRowKeys([]);
   };
   return (
-    <div className={"w-full overflow-x-auto"} style={{ height: `calc(100vh - 120px)` }}>
+    <div className="h-[calc(100vh_-_120px)] w-full overflow-x-auto">
       <Table
         className="h-full"
         rowSelection={props.onSelect ? rowSelection : null}
