@@ -54,14 +54,14 @@ export interface Support {
   possessionSkill: string[];
   charaName: string;
   db_id: number;
-  effects: Effect[];
+  effects: SupportEffect[];
   rarity: number;
   baseAbility: BaseAbility;
   unique_effect: UniqueEffect;
   type: string;
 }
 
-export interface Effect {
+export interface SupportEffect {
   id: number;
   type: number;
   init: number;
@@ -76,6 +76,19 @@ export interface Effect {
   limit_lv45: number;
   limit_lv50: number;
 }
+
+export type SupportEffectLimit =
+  | "init"
+  | "limit_lv5"
+  | "limit_lv10"
+  | "limit_lv15"
+  | "limit_lv20"
+  | "limit_lv25"
+  | "limit_lv30"
+  | "limit_lv35"
+  | "limit_lv40"
+  | "limit_lv45"
+  | "limit_lv50";
 
 export interface BaseAbility {
   name: string;
@@ -146,6 +159,12 @@ export interface Buff {
   id: string;
   name: string;
   describe: string;
+}
+
+export interface Effect {
+  id: string;
+  name: string;
+  description: string;
 }
 
 export interface Event {

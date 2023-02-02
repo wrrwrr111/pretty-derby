@@ -11,19 +11,7 @@ const MENU_LIST = [
   { path: "/seedMo", title: "种马", mobile: true },
 ];
 
-const EFFECT_LIMITS = [
-  "init",
-  "limit_lv5",
-  "limit_lv10",
-  "limit_lv15",
-  "limit_lv20",
-  "limit_lv25",
-  "limit_lv30",
-  "limit_lv35",
-  "limit_lv40",
-  "limit_lv45",
-  "limit_lv50",
-];
+
 // 角色过滤相关
 const PLAYER_ADAPT_FILTERS = [
   { text: "A", value: "A" },
@@ -238,7 +226,6 @@ const IMAGE_FALLBACK = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAADDCA
 export {
   CDN_SERVER,
   MENU_LIST,
-  EFFECT_LIMITS,
   PLAYER_ADAPT_FILTERS,
   PLAYER_GROW_FILTERS,
   PLAYER_RARITIES,

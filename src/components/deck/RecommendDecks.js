@@ -1,55 +1,54 @@
-import React, { useState } from "react";
-import shortid from "shortid";
+import { FC, useState } from "react";
 import axios from "axios";
 
-import {Button} from "@material-tailwind/react";
-import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
+import { Button, Popover, PopoverHandler, PopoverContent, Chip } from "@material-tailwind/react";
 
 import { useTranslation } from "react-i18next";
-import { CDN_SERVER, DECK_LABELS } from "src/config";
-const RecommendDecks = (props) => {
-  // const [recommendDecks,setRecommendDecks] = useState(res.data||[])
+import { CDN_SERVER } from "../../config";
+import useSWR from "swr";
+
+const RecommendDecks = ({ playerId, loadDeck }) => {
   const { t } = useTranslation();
-  const [recommendDecks, setRecommendDecks] = useState([]);
-  const [playerId, setPlayerId] = useState("");
-  const searchDeck = async () => {
-    if (playerId !== props.player.id) {
-      const formData = props.player ? { playerId: props.player.id } : {};
+  const { data: recommendDecks } = useSWR(
+    playerId ? ["api/sqlite/searchDeck", { playerId }] : null,
+    async () => {
+      const formData = { playerId };
       const res = await axios.post("https://urarawin.com/api/sqlite/searchDeck", formData);
-      setRecommendDecks(res.data || []);
-      setPlayerId(props.player.id);
+      return res.data || [];
     }
-  };
+  );
+
+  console.log(recommendDecks);
   // const deleteDeck = async (deck) => {
   //   const res = await axios.post("https://urarawin.com/api/sqlite/deleteDeck", deck)
   //   searchDeck()
   // }
   return (
-    <Popover
-      width={"100%"}
-      onVisibleChange={searchDeck}
-      overlayStyle={{ maxHeight: 800, overflow: "auto" }}
-      content={recommendDecks.map((deck) => (
-        <div key={deck.id} className="grid w-full grid-cols-8">
-          <div className="col-span-full">
-            {deck.tags && deck.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
-          </div>
-          {deck.imgUrls.map((imgUrl) => (
-            <div className="col-span-1" key={imgUrl}>
-              <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
+    <Popover>
+      <PopoverHandler>
+        <Button size="sm" buttonType="outline">
+          {t("推荐卡组")}
+        </Button>
+      </PopoverHandler>
+      <PopoverContent>
+        {recommendDecks?.map((deck) => (
+          <div key={deck.id} className="grid w-full grid-cols-8">
+            <div className="col-span-full">
+              {deck.tags && deck.tags.map((tag) => <Chip key={tag} value={tag} />)}
             </div>
-          ))}
-          <div className="col-span-1">
-            <Button type="primary" onClick={() => props.loadDeck(deck)}>
-              {t("读取卡组")}
-            </Button>
+            {deck.imgUrls.map((imgUrl) => (
+              <div className="col-span-1" key={imgUrl}>
+                <img src={CDN_SERVER + imgUrl} alt={imgUrl} width={"100"} />
+              </div>
+            ))}
+            <div className="col-span-1">
+              <Button type="primary" onClick={() => loadDeck(deck)}>
+                {t("读取卡组")}
+              </Button>
+            </div>
           </div>
-        </div>
-      ))}
-    >
-      <Button size="sm" buttonType="outline">
-        {t("推荐卡组")}
-      </Button>
+        ))}
+      </PopoverContent>
     </Popover>
   );
 };

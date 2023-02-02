@@ -1,9 +1,19 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Button, Dialog, DialogBody, DialogHeader } from "@material-tailwind/react";
+import {
+  Button,
+  Dialog,
+  DialogBody,
+  DialogHeader,
+  Card,
+  CardHeader,
+  CardBody,
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+} from "@material-tailwind/react";
 // import shortid from 'shortid'
 // import axios from "axios";
 import ScrollBars from "react-custom-scrollbars";
-import { Popover } from "antd";
 
 import { useTranslation } from "react-i18next";
 
@@ -59,6 +69,48 @@ const layoutWithoutBlank = [
   { i: "s4", x: 18, y: 9, w: 7, h: 8 },
   { i: "s5", x: 25, y: 9, w: 7, h: 8 },
 ];
+
+const CustomGridItemComponent = React.forwardRef(
+  ({ style, className, onMouseDown, onMouseUp, onTouchEnd, children, ...props }, ref) => {
+    return (
+      <Card
+        // divider
+        style={style}
+        // className={`relative flex flex-col overflow-auto border border-solid border-gray-500 bg-white ${className}`}
+        className={className}
+        ref={ref}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+        onTouchEnd={onTouchEnd}
+      >
+        {children}
+      </Card>
+    );
+  }
+);
+const CustomGridItemHead = ({ children, className, ...props }) => {
+  return (
+    <CardHeader
+      floated={false}
+      className="panel-heading mx-0 mt-0 text-center"
+      color="light-blue"
+      // className={`panel-heading stick top-0 h-6 w-full cursor-move overflow-hidden bg-gray-300 text-center ${className}`}
+      {...props}
+    >
+      {children}
+    </CardHeader>
+  );
+};
+const CustomGridItemBody = ({ children, className, ...props }) => {
+  return (
+    <CardBody className={`flex-auto p-2`} {...props}>
+      <ScrollBars autoHide={true} className={`h-full`}>
+        {children}
+      </ScrollBars>
+    </CardBody>
+  );
+};
+
 const Nurturing = () => {
   const { t } = useTranslation();
   const [races] = useAtom(racesAtom);
@@ -161,9 +213,7 @@ const Nurturing = () => {
   const onLayoutChange = (layout) => {
     setLayout(layout);
   };
-  const panelClass = "bg-white border border-solid border-gray-500";
-  const headClass = "panel-heading w-full text-center bg-gray-300 cursor-move";
-  const bodyClass = "!h-[calc(100%_-_22px)]";
+
   return (
     <>
       <GridLayout
@@ -175,96 +225,103 @@ const Nurturing = () => {
         width={gridWidth}
         onLayoutChange={onLayoutChange}
         useCSSTransforms={false}
+        className="bg-[#f8fafc]"
       >
-        <div key="a" className={panelClass}>
-          <div className={headClass} onClick={showPlayer}>
-            {t("选择马娘")}
-          </div>
-          {selected.player?.id && (
-            <img
-              className={bodyClass}
-              src={CDN_SERVER + selected.player.imgUrl}
-              alt={selected.player.imgUrl}
-              onClick={showPlayer}
-            />
-          )}
-        </div>
-        <div key="b" className={panelClass}>
-          <div className={headClass}>{t("操作")}</div>
-          <div className="flex flex-wrap">
-            <Button size="sm" buttonType="outline" className="add-player" onClick={showPlayer}>
-              {t("选择马娘")}
-            </Button>
-            <Button size="sm" buttonType="outline" onClick={showSupport2}>
-              {t("支援卡查询")}
-            </Button>
-            <Popover content={<BuffTable />}>
-              <Button size="sm" buttonType="outline">
-                {t("Buff")}
+        <CustomGridItemComponent key="a">
+          <CustomGridItemHead onClick={showPlayer}>{t("选择马娘")}</CustomGridItemHead>
+          <CustomGridItemBody>
+            {selected.player?.id && (
+              <img
+                src={CDN_SERVER + selected.player.imgUrl}
+                alt={selected.player.imgUrl}
+                onClick={showPlayer}
+              />
+            )}
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
+        <CustomGridItemComponent key="b">
+          <CustomGridItemHead>{t("操作")}</CustomGridItemHead>
+          <CustomGridItemBody>
+            <div className="flex flex-wrap gap-1">
+              <Button size="sm" buttonType="outline" className="add-player" onClick={showPlayer}>
+                {t("选择马娘")}
               </Button>
-            </Popover>
-            <Popover
-              content={
-                <RaceCheckbox
-                  onChange={onChangeRace}
-                  raceFilterCondition={selected.filterCondition}
-                />
-              }
-            >
-              <Button size="sm" buttonType="outline">
-                {t("比赛")}
+              <Button size="sm" buttonType="outline" onClick={showSupport2}>
+                {t("支援卡查询")}
               </Button>
-            </Popover>
-            <MyDecks player={selected.player} supports={selected.supports} loadDeck={loadDeck} />
-            <RecommendDecks player={selected.player} loadDeck={loadDeck} />
+              <Popover>
+                <PopoverHandler>
+                  <Button size="sm" buttonType="outline">
+                    {t("Buff")}
+                  </Button>
+                </PopoverHandler>
+                <PopoverContent>
+                  <BuffTable />
+                </PopoverContent>
+              </Popover>
+              <Popover>
+                <PopoverHandler>
+                  <Button size="sm" buttonType="outline">
+                    {t("比赛")}
+                  </Button>
+                </PopoverHandler>
+                <PopoverContent>
+                  <RaceCheckbox
+                    onChange={onChangeRace}
+                    raceFilterCondition={selected.filterCondition}
+                  />
+                </PopoverContent>
+              </Popover>
+              <MyDecks player={selected.player} supports={selected.supports} loadDeck={loadDeck} />
+              <RecommendDecks playerId={selected.player?.id} loadDeck={loadDeck} />
 
-            <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithBlank)}>
-              {t("初始化布局(有留白)")}
-            </Button>
-            <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithoutBlank)}>
-              {t("初始化布局(无留白)")}
-            </Button>
-          </div>
-        </div>
-        <div key="c" className={panelClass}>
-          <div className={headClass}>{t("事件")}</div>
-          <ScrollBars autoHide={true} className={bodyClass}>
-            {/* <p>{player.id}</p> */}
+              <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithBlank)}>
+                {t("初始化布局(有留白)")}
+              </Button>
+              <Button size="sm" buttonType="outline" onClick={() => setLayout(layoutWithoutBlank)}>
+                {t("初始化布局(无留白)")}
+              </Button>
+            </div>
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
+        <CustomGridItemComponent key="c">
+          <CustomGridItemHead>{t("事件")}</CustomGridItemHead>
+          <CustomGridItemBody>
             <EventList idList={selected.player?.eventList} sortFlag={true} />
-          </ScrollBars>
-        </div>
-        <div key="d" className={panelClass}>
-          <div className={headClass}>{t("技能")}</div>
-          <ScrollBars autoHide={true} className={bodyClass}>
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
+        <CustomGridItemComponent key="d">
+          <CustomGridItemHead>{t("技能")}</CustomGridItemHead>
+          <CustomGridItemBody>
             <SkillList idList={selected.player?.skillList} isNur={true} size="small" />
-          </ScrollBars>
-        </div>
-        <div key="e" className={panelClass}>
-          <div className={headClass}>{t("比赛")}</div>
-          <ScrollBars autoHide={true} className={bodyClass}>
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
+        <CustomGridItemComponent key="e">
+          <CustomGridItemHead>{t("比赛")}</CustomGridItemHead>
+          <CustomGridItemBody>
             <RaceTimeline
               raceList={selected.player?.raceList || []}
               filterRace={selected.filterRace}
             />
-          </ScrollBars>
-        </div>
-        <div key="f" className={panelClass}>
-          <div className={headClass}>{t("隐藏事件")}</div>
-          <ScrollBars autoHide={true} className={bodyClass}>
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
+        <CustomGridItemComponent key="f">
+          <CustomGridItemHead>{t("隐藏事件")}</CustomGridItemHead>
+          <CustomGridItemBody>
             <EventList idList={selected.player?.hideEvent} />
-          </ScrollBars>
-        </div>
+          </CustomGridItemBody>
+        </CustomGridItemComponent>
         {[0, 1, 2, 3, 4, 5].map((index) => {
-          let support = selected.supports[index];
-          if (support?.id) {
-            return (
-              <div key={`s${index}`} className={panelClass}>
-                <div className={headClass}>
-                  <span className="panel-title cursor-pointer" onClick={() => showSupport(index)}>
-                    {t("选择支援卡")}
-                  </span>
-                </div>
-                <ScrollBars autoHide={true} className={bodyClass}>
+          const support = selected.supports[index];
+          return (
+            <CustomGridItemComponent key={`s${index}`}>
+              <CustomGridItemHead>
+                <span className="panel-title cursor-pointer" onClick={() => showSupport(index)}>
+                  {t("选择支援卡")}
+                </span>
+              </CustomGridItemHead>
+              {support?.id && (
+                <CustomGridItemBody>
                   <div className="flex">
                     <img
                       className="h-[39%] w-[26%]"
@@ -290,18 +347,10 @@ const Nurturing = () => {
                     isNur={true}
                     size="small"
                   />
-                </ScrollBars>
-              </div>
-            );
-          } else {
-            return (
-              <div key={`s${index}`} className={panelClass}>
-                <Button size="sm" buttonType="outline" onClick={() => showSupport(index)}>
-                  {t("选择支援卡")}
-                </Button>
-              </div>
-            );
-          }
+                </CustomGridItemBody>
+              )}
+            </CustomGridItemComponent>
+          );
         })}
       </GridLayout>
       <Dialog size="xl" open={isPlayerVisible} handler={setIsPlayerVisible}>
