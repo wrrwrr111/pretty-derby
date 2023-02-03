@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { ITableProps, kaReducer, Table } from "ka-table";
-import { DataType, EditingMode, FilteringMode, SortingMode } from "ka-table/enums";
-import { DispatchFunc } from "ka-table/types";
+import { ITableProps, Table } from "ka-table";
+import { DataType, FilteringMode, SortingMode } from "ka-table/enums";
 
 import "ka-table/style.css";
 import { useAtom } from "jotai";
@@ -11,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const Page: React.FC = () => {
   const { t } = useTranslation();
+  const [races] = useAtom(racesAtom);
   const columns = [
     { key: "name", title: t("名称"), width: 200 },
     { key: "date", title: t("时间"), width: 150 },
@@ -24,36 +24,24 @@ const Page: React.FC = () => {
     { key: "side", title: t("赛道") },
   ];
 
-  const tablePropsInit: ITableProps = {
+  const tableProps: ITableProps = {
     columns: columns.map((column) => ({
       ...column,
       colGroup: { style: { minWidth: 100 } },
       dataType: DataType.String,
     })),
-    data: [],
-    editingMode: EditingMode.Cell,
+    data: races,
     rowKeyField: "id",
     sortingMode: SortingMode.Single,
     filteringMode: FilteringMode.HeaderFilter,
-  };
-
-  const [tableProps, changeTableProps] = useState(tablePropsInit);
-  const [races] = useAtom(racesAtom);
-
-  useEffect(() => {
-    if (races?.length) {
-      changeTableProps((prevState) => ({ ...prevState, data: races }));
-    }
-  }, [races]);
-
-  const dispatch: DispatchFunc = (action) => {
-    changeTableProps((prevState: ITableProps) => kaReducer(prevState, action));
+    format: ({ column, value }) => {
+      return t(value);
+    },
   };
 
   return (
     <Table
       {...tableProps}
-      dispatch={dispatch}
       childComponents={{
         // 去除第一列的 头过滤
         headFilterButton: {

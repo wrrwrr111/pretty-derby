@@ -38,7 +38,6 @@ import { supportsAtom, racesAtom, playersAtom } from "../../hooks/atoms";
 import { useImmerAtom } from "jotai-immer";
 import { selectedAtom } from "../../hooks/localAtoms";
 
-// const TITLE = "育成 - 乌拉拉大胜利 - 赛马娘资料站";
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
   { i: "b", x: 2, y: 0, w: 7, h: 2 },

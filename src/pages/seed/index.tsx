@@ -94,7 +94,7 @@ const PlayerInput = ({ value = {}, onChange }) => {
         width={"80%"}
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
-        <PlayerList sortFlag={true} onClick={handleSelectPlayer} />
+        <PlayerList onClick={handleSelectPlayer} />
       </Modal>
     </>
   );

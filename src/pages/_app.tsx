@@ -6,14 +6,11 @@ import React, { useEffect, useState } from "react";
 import { appWithTranslation } from "next-i18next";
 
 import Layout from "../components/common/Layout";
-
-import dynamic from "next/dynamic";
-
-const Tooltip = dynamic(() => import("react-tooltip").then((mod) => mod.Tooltip));
+import { Tooltip, TooltipProvider } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 import { api } from "../utils/api";
 
-// import "../styles/index.css";
 import "../styles/globals.css";
 
 import "../i18n";
@@ -25,9 +22,11 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <SessionProvider session={session}>
       <Layout>
-        <Component {...pageProps} />
+        <TooltipProvider>
+          <Component {...pageProps} />
+          <Tooltip className="z-[10000]" />
+        </TooltipProvider>
       </Layout>
-      <Tooltip className="z-max !hidden md:!inline-block" />
     </SessionProvider>
   );
 };

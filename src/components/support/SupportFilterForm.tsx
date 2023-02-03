@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import CheckBox from "../common/CheckBox";
-import Input from "../common/Input";
+import { Controller, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import SkillFilterForm from "../skill/SkillFilterForm";
 import { SUPPORT_TYPE_OPTIONS } from "src/config";
 import { useAtom } from "jotai";
 import { supportsAtom, effectsAtom, eventsAtom } from "../../hooks/atoms";
+
+import { Checkbox, Input } from "@material-tailwind/react";
 
 const SupportFilterForm = (props) => {
   const [supports] = useAtom(supportsAtom);
@@ -14,7 +14,7 @@ const SupportFilterForm = (props) => {
   const [events] = useAtom(eventsAtom);
   const { t } = useTranslation();
   const { onUpdate, needId, formName = "sup" } = props;
-  const { register, watch, setValue } = useForm();
+  const { register, watch, setValue, control } = useForm();
 
   useEffect(() => {
     const subscription = watch((value, { name, type }) => getFilterList(value));
@@ -106,14 +106,15 @@ const SupportFilterForm = (props) => {
   };
   return (
     <div className="flex flex-wrap">
-      <Input register={register} name="q" placeholder={t("事件关键词搜索")} />
+      <Input {...register(formName + "q")} name="q" placeholder={t("事件关键词搜索") || ""} />
       <p className="my-1 w-full text-gray-700">{t("类型")}</p>
       {SUPPORT_TYPE_OPTIONS.map(({ label, value }) => (
-        <CheckBox
+        <Checkbox
           key={formName + "type" + value}
-          register={register}
+          {...register(formName + "type")}
+          id={value}
           name={formName + "type"}
-          label={t(label)}
+          label={t(label) || ""}
           value={formName + value}
         />
       ))}
@@ -126,11 +127,12 @@ const SupportFilterForm = (props) => {
       />
       <p className="my-1 w-full text-gray-700">{t("育成效果")}</p>
       {effectOptions.map(({ label, value }) => (
-        <CheckBox
+        <Checkbox
           key={formName + "effect" + value}
-          register={register}
+          {...register(formName + "effect")}
+          id={value}
           name={formName + "effect"}
-          label={t(label)}
+          label={t(label) || ""}
           value={formName + value}
         />
       ))}

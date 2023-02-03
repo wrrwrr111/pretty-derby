@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 
 import { useForm } from "react-hook-form";
-import CheckBox from "../common/CheckBox";
-import Input from "../common/Input";
-
+import { Checkbox, Input } from "@material-tailwind/react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -88,32 +86,35 @@ const SkillFilterForm = (props) => {
       <Input register={register} name="q" placeholder={t("输入关键词")} />
       <p className="my-1  w-full text-gray-700">触发条件</p>
       {SKILL_CONDITION_OPTIONS.map(({ label, value }) => (
-        <CheckBox
+        <Checkbox
           key={formName + "condition" + value}
-          register={register}
+          {...register(formName + "condition")}
+          id={value}
           name={formName + "condition"}
-          label={t(label)}
+          label={t(label) || ""}
           value={formName + value}
         />
       ))}
       <p className="my-1 w-full text-gray-700">类型</p>
       {SKILL_TYPE_OPTIONS.map(({ label, value }) => (
-        <CheckBox
+        <Checkbox
           key={formName + "type" + value}
-          register={register}
+          {...register(formName + "type")}
+          id={value}
           name={formName + "type"}
-          label={t(label)}
+          label={t(label) || ""}
           value={formName + value}
-          icon={CDN_SERVER + "img/skill_icons/" + value + ".png"}
+          icon={<img alt="" src={CDN_SERVER + "img/skill_icons/" + value + ".png"} width={20} />}
         />
       ))}
       <p className="my-1  w-full text-gray-700">稀有度</p>
       {SKILL_RARITY_OPTIONS.map(({ label, value }) => (
-        <CheckBox
+        <Checkbox
           key={formName + "rare" + value}
-          register={register}
+          {...register(formName + "rare")}
+          id={value}
           name={formName + "rare"}
-          label={t(label)}
+          label={t(label) || ""}
           value={formName + value}
         />
       ))}

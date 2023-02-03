@@ -1,52 +1,24 @@
 import { atomWithStorage, createJSONStorage } from "jotai/utils";
 
-export const uraraDbAtom = atomWithStorage(
-  "db",
-  {},
-  {
-    ...createJSONStorage(() => localStorage),
-    delayInit: true,
-  }
-);
+export const uraraDbAtom = atomWithStorage("db", {});
 
-export const uraraUserIdAtom = atomWithStorage("uraraUserId", "", {
-  ...createJSONStorage(() => localStorage),
-  delayInit: true,
-});
+export const uraraUserIdAtom = atomWithStorage("uraraUserId", "");
 
-export const myDecksAtom = atomWithStorage("myDecks", [], {
-  ...createJSONStorage(() => localStorage),
-  delayInit: true,
-});
+export const myDecksAtom = atomWithStorage("myDecks", []);
 
-export const mySupportsAtom = atomWithStorage("mySupports", [], {
-  ...createJSONStorage(() => localStorage),
-  delayInit: true,
-});
+export const layoutAtom = atomWithStorage("layout", []);
 
-export const layoutAtom = atomWithStorage("layout", [], {
-  ...createJSONStorage(() => localStorage),
-  delayInit: true,
-});
-
-export const selectedAtom = atomWithStorage(
-  "selected",
-  {
-    supports: [],
-    player: {},
-    races: [],
-    filterCondition: {
-      distanceType: [],
-      grade: [],
-      ground: [],
-    },
-    filterRace: {},
+export const selectedAtom = atomWithStorage("selected", {
+  supports: [],
+  player: {},
+  races: [],
+  filterCondition: {
+    distanceType: [],
+    grade: [],
+    ground: [],
   },
-  {
-    ...createJSONStorage(() => localStorage),
-    delayInit: true,
-  }
-);
+  filterRace: {},
+});
 
 //  {
 //   lan: "cn",

@@ -1,12 +1,18 @@
 import React from "react";
 import PlayerCard from "./PlayerCard";
-import PlayerDetail from "./PlayerDetail";
+import { PlayerDetail } from "./PlayerDetail";
 import List from "../common/List";
 import useUa from "src/hooks/useUa";
 import { useRouter } from "next/router";
 import { playersAtom } from "../../hooks/atoms";
 import { useAtom } from "jotai";
-export const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
+import { Player } from "typings";
+export const PlayerList: React.FC<{
+  className?: string;
+  dataList?: Player[];
+  onClick?: Function;
+  sortFlag?: boolean;
+}> = ({ className, dataList, onClick, sortFlag = false }) => {
   const [players] = useAtom(playersAtom);
   const list = dataList || players;
   const ua = useUa();
@@ -22,7 +28,6 @@ export const PlayerList = ({ className, dataList, onClick, sortFlag = false }) =
   return (
     <List
       className={className}
-      listKey="players"
       dataList={list}
       sort={sortFlag && sort}
       itemRender={(data, setCur) => (
@@ -41,8 +46,7 @@ export const PlayerList = ({ className, dataList, onClick, sortFlag = false }) =
         </div>
       )}
       itemClass="w-24 max-w-1/4 "
-      detailRender={(data) => <PlayerDetail data={data} isNur={false} />}
-      // detailModalSize='regular'
+      detailRender={(data: any) => <PlayerDetail id={data?.id} />}
     />
   );
 };

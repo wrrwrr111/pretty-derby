@@ -1,38 +1,42 @@
 import React from "react";
 import SupportList from "../support/SupportList";
-import PlayerList from "../player/PlayerList";
+import { PlayerList } from "../player/PlayerList";
 
-import { SKILL_TYPES, CDN_SERVER } from "src/config";
+import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
 import { useTranslation } from "react-i18next";
-import { useAtom } from "jotai";
-import { skillsAtom, supportsAtom, playersAtom } from "../../hooks/atoms";
-const SkillDetail = ({ data, isNur }) => {
-  const [supports] = useAtom(supportsAtom);
-  const [players] = useAtom(playersAtom);
+import { atom, useAtom, Provider, useAtomValue } from "jotai";
+import { skillsAtom, supportsAtom, playersAtom, skillAtomFamily } from "../../hooks/atoms";
+import useTilg from "tilg";
+
+export const skillDetailIdAtom = atom("");
+
+const skillDetailSupportsAtom = atom((get) => {
+  const id = get(skillDetailIdAtom);
+  const supports = get(supportsAtom);
+  return supports
+    .filter((support) => support.skillList.includes(id))
+    .sort((a, b) => b.rarity - a.rarity);
+});
+
+const skillDetailPlayersAtom = atom((get) => {
+  const id = get(skillDetailIdAtom);
+  const players = get(playersAtom);
+  return players
+    .filter((player) => player.skillList.includes(id))
+    .sort((a, b) => Number(b.rare) - Number(a.rare));
+});
+
+const SkillDetail = ({ isNur = false }) => {
   const { t } = useTranslation();
-  const supportList = supports
-    .filter((support) => {
-      let flag = 0;
-      support.skillList.forEach((id) => {
-        if (id === data?.id) {
-          flag = 1;
-        }
-      });
-      return flag;
-    })
-    .sort((a, b) => b.rarity - a.rarity);
-  const playerList = players
-    .filter((player) => {
-      let flag = 0;
-      player.skillList.forEach((id) => {
-        if (id === data?.id) {
-          flag = 1;
-        }
-      });
-      return flag;
-    })
-    .sort((a, b) => b.rarity - a.rarity);
+  const id = useAtomValue(skillDetailIdAtom);
+  const data = useAtomValue(skillAtomFamily({ id }));
+
+  const skillDetailSupports = useAtomValue(skillDetailSupportsAtom);
+  const skillDetailPlayers = useAtomValue(skillDetailPlayersAtom);
+
+  useTilg({ skillDetailSupports, skillDetailPlayers });
+
   if (!data) return null;
   return (
     <div className="flex w-full max-w-[calc(100vw_-_40px)] flex-col p-3">
@@ -91,16 +95,16 @@ const SkillDetail = ({ data, isNur }) => {
       </div>
       {!isNur && (
         <>
-          {supportList.length > 0 && (
+          {skillDetailSupports.length > 0 && (
             <>
               <div>{t("支援卡")}</div>
-              <SupportList className="w-full" dataList={supportList} sortFlag={false} />
+              <SupportList className="w-full" dataList={skillDetailSupports} sortFlag={false} />
             </>
           )}
-          {playerList.length > 0 && (
+          {skillDetailPlayers.length > 0 && (
             <>
               <div>{t("角色")}</div>
-              <PlayerList className="w-full" dataList={playerList} />
+              <PlayerList dataList={skillDetailPlayers} />
             </>
           )}
           {/* {data.events?.length > 0 && (

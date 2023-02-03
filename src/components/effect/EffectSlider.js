@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 import Slider from "@mui/material/Slider";
 import { useTranslation } from "react-i18next";
 import { useAtom } from "jotai";
 import { effectsAtom } from "../../hooks/atoms";
+import { TooltipWrapper } from "react-tooltip";
 
 const getEffectMark = (maxLevel) => {
   let marks = [
@@ -26,7 +27,7 @@ const getEffectMark = (maxLevel) => {
   return marks;
 };
 
-function valuetext(value) {
+function valueText(value) {
   return `lv${value}`;
 }
 
@@ -101,26 +102,23 @@ const EffectSlider = (props) => {
           <div className="grid w-full grid-cols-2 gap-2">
             {["0", "1"].map((index) =>
               props.unique_effect[`type_${index}`] ? (
-                <div
-                  key={index}
-                  className="col-span-1 flex items-center rounded-xl border border-solid border-green-500 bg-green-300"
-                >
-                  <div
-                    className="flex-auto truncate pl-2"
-                    data-tip={`<div><p>${
-                      effects[props.unique_effect[`type_${index}`]]?.name
-                    }</p><p>${t(effects[props.unique_effect[`type_${index}`]]?.name)}</p><p>${
-                      effects[props.unique_effect[`type_${index}`]]?.description
-                    }</p><p>${t(
-                      effects[props.unique_effect[`type_${index}`]]?.description
-                    )}</p></div>`}
+                <Fragment key={index}>
+                  <TooltipWrapper
+                    html={`<p>${effects[props.unique_effect[`type_${index}`]]?.name}</p>
+                  <p>${t(effects[props.unique_effect[`type_${index}`]]?.name)}</p>
+                  <p>${effects[props.unique_effect[`type_${index}`]]?.description}</p>
+                  <p>${t(effects[props.unique_effect[`type_${index}`]]?.description)}</p>`}
                   >
-                    {t(effects[props.unique_effect[`type_${index}`]]?.name)}
-                  </div>
-                  <div className="flex h-full w-10 flex-shrink-0 items-center rounded-r-xl bg-white pl-2 md:w-24">
-                    {props.unique_effect[`value_${index}`]}
-                  </div>
-                </div>
+                    <div className="col-span-1 flex items-center rounded-xl border border-solid border-green-500 bg-green-300">
+                      <div className="flex-auto truncate pl-2">
+                        {t(effects[props.unique_effect[`type_${index}`]]?.name)}
+                      </div>
+                      <div className="flex h-full w-10 flex-shrink-0 items-center rounded-r-xl bg-white pl-2 md:w-24">
+                        {props.unique_effect[`value_${index}`]}
+                      </div>
+                    </div>
+                  </TooltipWrapper>
+                </Fragment>
               ) : null
             )}
           </div>
@@ -132,7 +130,7 @@ const EffectSlider = (props) => {
           aria-label="Temperature"
           defaultValue={maxLevel}
           valueLabelDisplay="always"
-          getAriaValueText={valuetext}
+          getAriaValueText={valueText}
           onChange={(e, value) => {
             setSelectingLevel(value);
           }}
@@ -158,24 +156,22 @@ const EffectSlider = (props) => {
             item.limit_lv50,
           ].filter((item) => item);
           return (
-            <div
+            <TooltipWrapper
               key={item.type}
-              className="col-span-1 flex items-center rounded-xl border border-solid border-green-500 bg-green-300"
+              html={`
+              <p>${effects[item.type]?.name}</p>
+              <p>${t(effects[item.type]?.name)}</p>
+              <p>${effects[item.type]?.description}</p>
+              <p>${t(effects[item.type]?.description)}</p>
+              `}
             >
-              <div
-                className="flex-auto truncate pl-2"
-                data-tip={`<div><p>${effects[item.type].name}</p><p>${t(
-                  effects[item.type].name
-                )}</p><p>${effects[item.type].description}</p><p>${t(
-                  effects[item.type].description
-                )}</p></div>`}
-              >
-                {t(effects[item.type].name)}
+              <div className="col-span-1 flex items-center rounded-xl border border-solid border-green-500 bg-green-300">
+                <div className="flex-auto truncate pl-2">{t(effects[item.type]?.name)}</div>
+                <div className="flex h-full w-10 flex-shrink-0 items-center rounded-r-xl bg-white pl-2 md:w-24">
+                  {calc(data, selectingLevel)}
+                </div>
               </div>
-              <div className="flex h-full w-10 flex-shrink-0 items-center rounded-r-xl bg-white pl-2 md:w-24">
-                {calc(data, selectingLevel)}
-              </div>
-            </div>
+            </TooltipWrapper>
           );
         })}
       </div>

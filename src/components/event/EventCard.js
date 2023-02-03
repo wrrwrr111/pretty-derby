@@ -1,10 +1,11 @@
+import { TooltipWrapper } from "react-tooltip";
+
 const EventCard = (props) => {
   const { data, onClick, className } = props;
-  return data ? (
-    <div
-      className={`border border-solid border-gray-700 px-2 rounded truncate cursor-pointer ${className}`}
-      onClick={onClick}
-      data-tip={`<div>${data.choiceList
+  if (!data) return null;
+  return (
+    <TooltipWrapper
+      html={`<div>${data.choiceList
         .map(
           (choice, index) =>
             `<div className="w-full flex"><div>${choice[0]}</div><div>------</div>${choice[1]
@@ -13,9 +14,14 @@ const EventCard = (props) => {
         )
         .join("<div>===========</div>")}</div>`}
     >
-      {data.name}
-    </div>
-  ) : null;
+      <div
+        className={`cursor-pointer truncate rounded border border-solid border-gray-700 px-2 ${className}`}
+        onClick={onClick}
+      >
+        {data.name}
+      </div>
+    </TooltipWrapper>
+  );
 };
 
 export default EventCard;

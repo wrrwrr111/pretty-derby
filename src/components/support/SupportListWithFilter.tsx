@@ -6,19 +6,29 @@ import { useTranslation } from "react-i18next";
 
 import SupportList from "src/components/support/SupportList";
 import SupportFilterForm from "src/components/support/SupportFilterForm";
-import { useAtom } from "jotai";
+import { atom, Atom, PrimitiveAtom, useAtom, WritableAtom } from "jotai";
 import { supportsAtom, effectsAtom, eventsAtom } from "../../hooks/atoms";
-import { mySupportsAtom } from "../../hooks/localAtoms";
-// const TITLE = "支援 - 乌拉拉大胜利 - 赛马娘资料站";
+// import { mySupportsAtom } from "../../hooks/localAtoms";
+import { Support } from "typings";
+import { atomWithStorage } from "jotai/utils";
+import { atomWithImmer, useImmerAtom, withImmer } from "jotai-immer";
 
-const SupportListWithFilter = ({ supportList, onClick, limitHeight, formName }) => {
+export const mySupportsAtom = atomWithStorage<string[]>("mySupports", []);
+
+const SupportListWithFilter: React.FC<{
+  supportList?: Support[];
+  onClick?: Function;
+  limitHeight?: boolean;
+  formName?: string;
+}> = ({ supportList, onClick, limitHeight, formName }) => {
   const [supports] = useAtom(supportsAtom);
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [list, setList] = useState(supportList || supports);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
-  const [mySupports, setMySupports] = useAtom(mySupportsAtom);
+
+  const [mySupports, setMySupports] = useImmerAtom(mySupportsAtom);
 
   const changeChooseMode = () => {
     setShowMode(!showMode);
@@ -30,27 +40,26 @@ const SupportListWithFilter = ({ supportList, onClick, limitHeight, formName }) 
   };
 
   const onSelect = (item) => {
-    let tmpList = [...mySupports];
-    const index = tmpList.indexOf(item.id);
-    if (index === -1) {
-      tmpList.push(item.id);
-    } else {
-      tmpList.splice(index, 1);
-    }
-    setMySupports([...tmpList]);
+    setMySupports((draft) => {
+      const index = draft.findIndex((id: string) => id === item.id);
+      if (index !== -1) {
+        return draft.splice(index, 1);
+      }
+      draft.push(item.id);
+    });
   };
 
   return (
     <>
       <div className="sticky top-20 hidden h-[calc(100vh_-_120px)] w-1/4 flex-col overflow-auto p-1 md:flex">
-        <Button className="my-1 flex-shrink-0" onClick={changeShowMode} ripple="light">
+        <Button className="my-1 flex-shrink-0" onClick={changeShowMode} variant="outlined">
           {t("高亮我的卡组")}
         </Button>
-        <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} ripple="light">
+        <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} variant="outlined">
           {t("配置卡组")}
         </Button>
         {chooseMode && (
-          <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} ripple="light">
+          <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} variant="outlined">
             {t("配置完成")}
           </Button>
         )}
@@ -60,7 +69,7 @@ const SupportListWithFilter = ({ supportList, onClick, limitHeight, formName }) 
         筛选
       </Button>
       <Dialog size="lg" open={open} handler={setOpen}>
-        <DialogHeader handler={setOpen}>{"筛选支援卡"}</DialogHeader>
+        <DialogHeader>{"筛选支援卡"}</DialogHeader>
         <DialogBody className="flex flex-col">
           <SupportFilterForm formName={formName} onUpdate={setList} />
         </DialogBody>

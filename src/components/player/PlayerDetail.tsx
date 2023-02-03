@@ -1,10 +1,14 @@
 import React from "react";
 
-import { CDN_SERVER } from "src/config";
+import { CDN_SERVER } from "../../config";
 import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 import RaceTimeline from "../race/RaceTimeline";
 import { useTranslation } from "react-i18next";
+import { atom, useAtomValue } from "jotai";
+import { playerAtomFamily } from "../../hooks/atoms";
+import useTilg from "tilg";
+
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
   const { t } = useTranslation();
@@ -24,8 +28,10 @@ const PlayerItem = ({ data }) => {
     </div>
   );
 };
-const PlayerDetail = ({ isNur, data }) => {
+export const PlayerDetail = ({ isNur = false, id = "" }) => {
   const { t } = useTranslation();
+  const data = useAtomValue(playerAtomFamily({ id }));
+  useTilg({ id, data });
   // 是否育成 育成顺序样式不同
   if (!data) return null;
   if (isNur) {
@@ -173,5 +179,3 @@ const GrowBox = (props) => {
     </div>
   );
 };
-
-export default PlayerDetail;

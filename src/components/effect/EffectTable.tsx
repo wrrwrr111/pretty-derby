@@ -1,14 +1,14 @@
-import React, { FC, useMemo, useState } from "react";
-import { ITableProps, kaReducer, Table } from "ka-table";
-import { DataType, EditingMode, FilteringMode, SortingMode } from "ka-table/enums";
+import { FC, useMemo } from "react";
+import { ITableProps, Table } from "ka-table";
+import { DataType } from "ka-table/enums";
 import "ka-table/style.css";
 
 import { useTranslation } from "react-i18next";
 
 import { useAtom } from "jotai";
 import { effectsAtom } from "../../hooks/atoms";
-import { DispatchFunc } from "ka-table/types";
-import { Support, SupportEffect, SupportEffectLimit } from "../../../typings";
+import { SupportEffect, SupportEffectLimit } from "../../../typings";
+import { TooltipWrapper } from "react-tooltip";
 
 export const EFFECT_LIMITS: SupportEffectLimit[] = [
   "init",
@@ -90,44 +90,37 @@ const EffectTable: FC<{ effects: SupportEffect[]; rarity: Number }> = ({ effects
     });
   }, [effects]);
 
-  const tablePropsInit: ITableProps = {
+  const tableProps: ITableProps = {
     columns: columns.map((column) => ({
       ...column,
       colGroup: { style: { minWidth: 80 } },
       dataType: DataType.String,
     })),
     data: data,
-    editingMode: EditingMode.Cell,
     rowKeyField: "id",
     format: ({ column, value }) => {
       if (column.key === "type") {
         const effect = allEffects?.[value];
         if (!effect) return value;
         return (
-          <div
-            data-tip={`<div>
+          <TooltipWrapper
+            html={`
             <p>${effect.name}</p>
             <p>${t(effect.name)}</p>
             <p>${effect.description}</p>
             <p>${t(effect.description)}</p>
-            </div>`}
+            `}
           >
             {t(effect.name)}
-          </div>
+          </TooltipWrapper>
         );
       }
     },
   };
 
-  const [tableProps, changeTableProps] = useState(tablePropsInit);
-  const dispatch: DispatchFunc = (action) => {
-    changeTableProps((prevState: ITableProps) => kaReducer(prevState, action));
-  };
-
   return (
     <Table
       {...tableProps}
-      dispatch={dispatch}
       childComponents={{
         // 去除第一列的 头过滤
         headFilterButton: {
@@ -166,34 +159,6 @@ const EffectTable: FC<{ effects: SupportEffect[]; rarity: Number }> = ({ effects
       }}
     />
   );
-  // return (
-  //   <TableContainer component={Paper}>
-  //     <Table sx={{ minWidth: 650 }} aria-label="simple table">
-  //       <TableHead>
-  //         <TableRow>
-  //           {columns.map((column) => (
-  //             <TableCell>{column.title}</TableCell>
-  //           ))}
-  //         </TableRow>
-  //       </TableHead>
-  //       <TableBody>
-  //         {effects.map((row) => (
-  //           <TableRow key={row.type} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-  //             {columns.map((column) => {
-  //               if (column.render) {
-  //                 return (
-  //                   <TableCell key={column.key}>{column.render(row[column.field], row)}</TableCell>
-  //                 );
-  //               } else {
-  //                 return <TableCell key={column.key}>{row[column.field]}</TableCell>;
-  //               }
-  //             })}
-  //           </TableRow>
-  //         ))}
-  //       </TableBody>
-  //     </Table>
-  //   </TableContainer>
-  // );
 };
 
 export default EffectTable;

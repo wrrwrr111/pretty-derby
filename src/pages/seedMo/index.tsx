@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@material-tailwind/react";
+import { Button, Dialog, DialogBody } from "@material-tailwind/react";
 
 import { Picker, List } from "antd-mobile";
 
@@ -19,19 +19,16 @@ import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "s
 import { useAtom } from "jotai";
 import { playersAtom, racesAtom, supportsAtom } from "../../hooks/atoms";
 import { uraraUserIdAtom, uraraDbAtom } from "../../hooks/localAtoms";
+import { Player } from "typings";
 // const TITLE = "分享 - 乌拉拉大胜利 - 赛马娘资料站";
 
 const PlayerInput = ({ value = {}, onChange }) => {
-  const [isPlayerVisible, setIsPlayerVisible] = useState(false);
-  const [data, setData] = useState({});
-  const showPlayer = (index) => {
-    setIsPlayerVisible(true);
-  };
-  const closePlayer = () => {
-    setIsPlayerVisible(false);
-  };
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen(!open);
+
+  const [data, setData] = useState<Player>();
   const triggerChange = (changedValue) => {
-    setIsPlayerVisible(false);
+    toggleOpen();
     onChange?.({
       ...data,
       ...value,
@@ -40,28 +37,23 @@ const PlayerInput = ({ value = {}, onChange }) => {
   };
   const handleSelectPlayer = (data) => {
     setData(data);
-    closePlayer();
+    toggleOpen();
     triggerChange(data);
   };
   return (
     <>
       <div className="h-16 w-16">
         <Image
-          src={data.imgUrl ? CDN_SERVER + data.imgUrl : ""}
-          preview="false"
+          src={data?.imgUrl ? CDN_SERVER + data.imgUrl : ""}
           fallback={IMAGE_FALLBACK}
-          onClick={showPlayer}
+          onClick={toggleOpen}
         />
       </div>
-      <Modal
-        visible={isPlayerVisible}
-        onOk={closePlayer}
-        onCancel={closePlayer}
-        width={"100%"}
-        bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
-      >
-        <PlayerList sortFlag={true} onClick={handleSelectPlayer} />
-      </Modal>
+      <Dialog size={"lg"} open={open} handler={toggleOpen}>
+        <DialogBody className="max-h-[80vh] overflow-auto">
+          <PlayerList onClick={handleSelectPlayer} />
+        </DialogBody>
+      </Dialog>
     </>
   );
 };

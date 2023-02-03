@@ -14,8 +14,25 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/components/nurturing/Nurturing.js", "src/components/effect/EffectSlider.js", "src/components/common/List.js", "src/components/nurturing/NurturingMo.js", "tailwind.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    "src/components/nurturing/Nurturing.js",
+    "src/components/effect/EffectSlider.js",
+    "src/components/common/List.tsx",
+    "src/components/nurturing/NurturingMo.js",
+    "tailwind.config.js",
+    "src/components/deck/RecommendDecks.js",
+    "src/components/deck/RecommendDecks.js"
+  ],
   "exclude": ["node_modules", "src/**/*.js"]
 }
