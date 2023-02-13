@@ -33,3 +33,5 @@ yarn-error.log*
 public/extract_card_assets.py
 src/styles/tailwind.css
 .history
+.env
+prisma/db.sqlite
