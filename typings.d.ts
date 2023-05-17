@@ -1,3 +1,8 @@
+export interface DB {
+  players: Player[];
+  supports: Support[];
+  skills: Skill[];
+}
 export interface PlayerRace {
   date: number;
   id: string;
@@ -16,11 +21,11 @@ export interface Player {
   leading: string;
   insert: string;
   tracking: string;
-  speedGrow: string;
-  staminaGrow: string;
-  powerGrow: string;
-  gutsGrow: string;
-  wisdomGrow: string;
+  speedGrow?: string;
+  staminaGrow?: string;
+  powerGrow?: string;
+  gutsGrow?: string;
+  wisdomGrow?: string;
   skillList: string[];
   eventList: string[];
   id: string;

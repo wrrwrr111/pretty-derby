@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,8 +21,15 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -26,13 +37,18 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "src/components/nurturing/Nurturing.js",
-    "src/components/effect/EffectSlider.js",
-    "src/components/common/List.tsx",
-    "src/components/nurturing/NurturingMo.js",
+    "_src/components/nurturing/Nurturing.js",
+    "_src/components/effect/EffectSlider.js",
+    "_src/components/common/List.tsx",
+    "_src/components/nurturing/NurturingMo.js",
     "tailwind.config.js",
-    "src/components/deck/RecommendDecks.js",
-    "src/components/deck/RecommendDecks.js"
+    "_src/components/deck/RecommendDecks.js",
+    "_src/components/deck/RecommendDecks.js",
+    "next.config.cjs",
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "src/**/*.js"]
+  "exclude": [
+    "node_modules",
+    "_src/**/*.js"
+  ]
 }
