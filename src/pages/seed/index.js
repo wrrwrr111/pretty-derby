@@ -285,10 +285,10 @@ const SeedInput = (props) => {
               { required: true },
               ({ getFieldValue }) => ({
                 validator(_, value) {
-                  if (value.match(/^[0-9]\d*$/g) && value.length === 9) {
+                  if (value.match(/^[0-9]\d*$/g)) {
                     return Promise.resolve();
                   }
-                  return Promise.reject(new Error("输入正确的9位数id"));
+                  return Promise.reject(new Error("输入正确的id"));
                 },
               }),
             ]}
