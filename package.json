@@ -59,6 +59,7 @@
     "i18next-http-backend": "^1.4.1",
     "intro.js": "^3.4.0",
     "intro.js-react": "^0.3.0",
+    "jotai": "^2.4.0",
     "js-md5": "^0.7.3",
     "json2csv": "^5.0.6",
     "lowdb": "^1.0.0",

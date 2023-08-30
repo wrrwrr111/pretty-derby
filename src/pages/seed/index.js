@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Button from "@/components/material-tailwind/Button";
+import React, { useEffect, useState } from "react";
+import Button from "@material-tailwind/react/Button";
 import {
   Row,
   Alert,
@@ -222,6 +222,7 @@ const SeedInput = (props) => {
               <Radio.Button value={"guts"}>{"根性"}</Radio.Button>
               <Radio.Button value={"wisdom"}>{"智力"}</Radio.Button>
             </Radio.Group>
+            
           </Form.Item>
           <Form.Item label="蓝色因子星数" name={`blueLevel${i}`} rules={[{ required: true }]}>
             <Rate count={3} />
@@ -296,6 +297,14 @@ const SeedInput = (props) => {
             <Input placeholder="id" style={{ width: "100%" }} />
           </Form.Item>
         </Col>
+        <Col>
+        <Form.Item label="区服" name={`server`} rules={[{ required: true }]}>
+                <Radio.Group>
+                  <Radio.Button value={"ja"}>{"日服"}</Radio.Button>
+                  <Radio.Button value={"cn"}>{"国服"}</Radio.Button>
+                </Radio.Group>
+              </Form.Item>
+              </Col>
         <Col span={2} offset={2}>
           <Form.Item>
             <Button type="primary" htmlType="submit">
@@ -421,14 +430,26 @@ const SearchForm = (props) => {
       formData.attrs.push(item.attr);
       formData.levels.push(item.level);
     });
-
+    if(value.server){
+      formData.attrs.push("server");
+      formData.levels.push(value.server);
+    }
     props.search(formData);
   };
   const onReset = () => {
     form.resetFields();
   };
+
   return (
     <Form name="搜索" form={form} onFinish={onFinish} className="seed-form">
+      <Row>
+          <Form.Item label="区服" name={`server`} rules={[{ required: true }]}>
+            <Radio.Group>
+              <Radio.Button value={"ja"}>{"日服"}</Radio.Button>
+              <Radio.Button value={"cn"}>{"国服"}</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+      </Row>
       <Row>
         <Form.Item label="角色" name={`player0`}>
           <PlayerInput />
