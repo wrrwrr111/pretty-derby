@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,46 +9,34 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
-    "**/*.mjs",
-    "_src/components/nurturing/Nurturing.js",
-    "_src/components/effect/EffectSlider.js",
-    "_src/components/common/List.tsx",
-    "_src/components/nurturing/NurturingMo.js",
-    "tailwind.config.js",
-    "_src/components/deck/RecommendDecks.js",
-    "_src/components/deck/RecommendDecks.js",
-    "next.config.cjs",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    ".next.development/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "_src/**/*.js"
+    "node_modules"
   ]
 }
