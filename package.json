@@ -23,7 +23,6 @@
     "@trpc/react-query": "^10.8.1",
     "@trpc/server": "^10.8.1",
     "axios": "^1.2.3",
-    "daisyui": "^2.51.6",
     "i18next-browser-languagedetector": "^7.0.1",
     "immer": "^9.0.19",
     "jotai": "^2.0.0",
