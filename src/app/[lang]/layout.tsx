@@ -13,16 +13,9 @@ import {
 import "./styles.css"
 import { getTranslation } from "@/i18n"
 
-const MENU_LIST = [
-  ["/", "角色"],
-  ["/support", "支援"],
-  ["/skill", "技能"],
-  ["/race", "比赛"],
-  ["/nurturing", "育成"],
-  ["/seed", "种马"],
-]
 
-export default async function LocaleLayout({children, modal,params:{lang}}: { children: React.ReactNode; modal: React.ReactNode,params: { lang: string}, }) {
+export default async function LocaleLayout({children, modal,params}: { children: React.ReactNode; modal: React.ReactNode,params: { lang: string}, }) {
+  const { lang } = await params;
   const { t } = await getTranslation(lang);
   return (
     <html lang={lang}>

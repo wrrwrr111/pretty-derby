@@ -4,19 +4,13 @@ import * as React from "react"
 import {
   AudioWaveform,
   Briefcase,
-  BookOpen,
   Bot,
-  Command,
   Gamepad2,
   Medal,
-  Settings2,
   Users,
 } from "lucide-react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
@@ -24,7 +18,6 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -80,7 +73,6 @@ const MENU_LIST = [
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarContent>
-
           <SidebarGroup >
             <SidebarGroupLabel>{"urarawin"}</SidebarGroupLabel>
             <SidebarGroupContent>
@@ -89,7 +81,10 @@ const MENU_LIST = [
                   <SidebarMenuItem key={item.title}>
                     {/* <SidebarMenuButton asChild isActive={item.isActive}> */}
                     <SidebarMenuButton asChild >
-                      <a href={item.url}>{item.title}</a>
+                    <a href={item.url}>
+                <item.icon />
+                <span>{item.title}</span>
+              </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}

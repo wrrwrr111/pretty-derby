@@ -3,7 +3,8 @@ import { CDN_SERVER } from "@/config";
 import Link from "next/link";
 import { getTranslation } from "@/i18n"
 
-export default async function TestPage({params:{lang}}: { params: { lang: string}, }) {
+export default async function TestPage({params}: { params: { lang: string}, }) {
+  const { lang } = await params;
   const { t } = await getTranslation(lang);
 
   const players = (dbJSON as any).players;
@@ -13,7 +14,7 @@ export default async function TestPage({params:{lang}}: { params: { lang: string
         return (
           <Link
             key={`player_${player.id}`}
-            href={`/player/${player.id}`}
+            href={`/${lang}/player/${player.id}`}
             className="max-w-1/4 w-24 p-1"
           >
             {/* <div className={`relative cursor-pointer pb-[100%]`}>

@@ -30,6 +30,7 @@
     "@trpc/next": "^10.8.1",
     "@trpc/react-query": "^10.8.1",
     "@trpc/server": "^10.8.1",
+    "accept-language": "^3.0.20",
     "axios": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

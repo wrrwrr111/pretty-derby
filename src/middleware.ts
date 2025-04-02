@@ -37,12 +37,8 @@ export function middleware(req) {
   } else {
     lng = newPathSegments[0] // 获取 URL 里的语言
   }
+console.log(lng)
 
-  // 5. 确保 `featured` 参数是 `0` 或 `1`
-  if (!['0', '1'].includes(newPathSegments[1] || '')) {
-    newPathSegments.splice(1, 0, '0') // 插入默认的 `featured`
-    shouldRedirect = true
-  }
 
   // 6. 需要修正路径？进行重定向
   if (shouldRedirect) {
