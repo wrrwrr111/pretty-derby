@@ -1,6 +1,6 @@
 import dbJSON from "@/assert/db.json";
 import Modal from "@/components/Modal";
-import { DB } from "@/DB";
+import { DB } from "../../../../../../DB";
 import { DialogTitle } from "@radix-ui/react-dialog";
 
 export default async function PlayerModal(props: { params: Promise<{ id: string }> }) {

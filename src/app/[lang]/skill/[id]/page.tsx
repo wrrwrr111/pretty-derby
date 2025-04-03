@@ -1,5 +1,5 @@
 import dbJSON from "@/assert/db.json";
-import { DB } from "@/DB";
+import { DB } from "../../../../../DB";
 export default async function PlayerPage(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const skill = (dbJSON as DB).skills.find((skill) => skill.id === params.id);
