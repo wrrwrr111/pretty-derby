@@ -1,0 +1,65 @@
+---
+import '@/styles/global.css';
+import Sidebar from '@/components/Sidebar';
+import { ClientRouter } from 'astro:transitions';
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from '@/components/ui/breadcrumb';
+import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/sonner';
+
+const defaultSidebarOpen = Astro.cookies.get('sidebar:state')?.value === 'true';
+
+interface Props {
+	title: string;
+	className?: string;
+}
+
+const { title, className = '' } = Astro.props;
+const { APPNAME: appName } = import.meta.env;
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <body class="flex flex-row">
+      <Toaster client:only="react" />
+      <Sidebar
+        appName={appName}
+        client:only="react"
+        defaultSidebarOpen={defaultSidebarOpen}
+        url={Astro.url}
+        className={className}
+        transition:persist
+      />
+
+      <main
+        class="relative flex min-h-svh flex-1 flex-col bg-background peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow"
+      >
+        <header class="flex h-12 shrink-0 items-center gap-2 border-b px-4">
+          <Breadcrumb className="" transition:persist>
+            <!-- Breadcrumb component... -->
+          </Breadcrumb>
+        </header>
+        <div class="flex flex-1 flex-col gap-4 p-4">
+          <slot />
+        </div>
+      </main>
+    </body>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

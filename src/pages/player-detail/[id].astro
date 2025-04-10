@@ -1,0 +1,10 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Page from "@/cra-project/pages/player/detail";
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  <Page client:only="react" id={id}/>
+</Layout>

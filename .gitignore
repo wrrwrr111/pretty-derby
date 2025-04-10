@@ -1,37 +1,24 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# build output
+dist/
+
+# generated types
+.astro/
 
 # dependencies
-/node_modules
+node_modules/
 
-# /build/getdata.js
-# /build/ma.js
-/pd-server
-/.pnp
-
-.pnp.js
-# tool
-tool/
-pd-tool/
-tool/node_modules
-# testing
-/coverage
-# production
-# /build
-/build
-/public/img/support_card
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-public/extract_card_assets.py
-src/styles/tailwind.css
-.history
+pnpm-debug.log*
+
+# environment variables
 .env
-prisma/db.sqlite
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
