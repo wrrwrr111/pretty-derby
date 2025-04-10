@@ -1,7 +1,7 @@
 import dbJSON from "@/assert/db.json";
 import Modal from "@/components/Modal";
 import Link from "next/link";
-import { DB } from "../../../../../../DB";
+import { DB } from "../../../../../assert/DB";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { getTranslation } from "@/i18n";
 

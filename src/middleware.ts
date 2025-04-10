@@ -5,7 +5,7 @@ import { fallbackLng, languages, cookieName } from '@/i18n/settings'
 acceptLanguage.languages(languages)
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|site.webmanifest).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|img|assets|favicon.ico|sw.js|site.webmanifest).*)'],
 }
 
 export function middleware(req) {

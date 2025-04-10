@@ -1,3 +1,5 @@
+import { SKILL_TYPES } from "./config";
+
 export interface DB {
   players: Player[];
   supports: Support[];
@@ -138,7 +140,7 @@ export interface Skill {
 }
 
 export interface Ability {
-  type: number;
+  type: keyof typeof SKILL_TYPES;
   value: number;
   target_type: number;
   target_value: number;
@@ -177,4 +179,8 @@ export interface Event {
   choiceList: [string, string[]][];
   id: string;
   pid: string;
+  rarity: 1 | 2 | 3 | 4 | 5;
+  imgUrl: string;
+  describe: string;
+  condition: string;
 }
