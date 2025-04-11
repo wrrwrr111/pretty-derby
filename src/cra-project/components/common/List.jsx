@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, Typography, IconButton } from "@material-tailwind/react";
+import { Xmark } from "iconoir-react";
 
 import { useDB } from "../../hooks/index";
 import { useTranslation } from "react-i18next";
@@ -46,19 +42,25 @@ const List = ({
   };
 
   const modal = (
-    <Dialog open={show} onOpenChange={setShow}>
-      <DialogContent
-        style={{
-          maxWidth: "80vw", // 最大宽度为屏幕宽度的80%
-          maxHeight: "80vh", // 最大高度为屏幕高度的80%
-          overflowY: "auto", // 内容过长时允许垂直滚动
-        }}
-      >
-        <DialogHeader>
-          <DialogTitle>{cur?.name}</DialogTitle>
-        </DialogHeader>
-        {detailRender(cur)}
-      </DialogContent>
+    <Dialog size="lg" open={show} onOpenChange={setShow}>
+      <Dialog.Overlay>
+        <Dialog.Content>
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <Typography type="h6">{cur?.name}</Typography>
+            <Dialog.DismissTrigger
+              as={IconButton}
+              size="sm"
+              variant="ghost"
+              color="secondary"
+              isCircular
+              className="absolute right-2 top-2"
+            >
+              <Xmark className="h-5 w-5" />
+            </Dialog.DismissTrigger>
+          </div>
+          <div className="overflow-y-auto">{detailRender(cur)}</div>
+        </Dialog.Content>
+      </Dialog.Overlay>
     </Dialog>
   );
 

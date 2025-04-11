@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, Typography, IconButton } from "@material-tailwind/react";
+import { Xmark } from "iconoir-react";
 
 import SkillList from "@cra/components/skill/SkillList";
 import SkillFilterForm from "@cra/components/skill/SkillFilterForm";
@@ -30,7 +26,8 @@ const Skill = (props) => {
 
   if (!db) return null;
 
-  localStorage.getItem("supportMode") === null && localStorage.setItem("supportMode", 0);
+  localStorage.getItem("supportMode") === null &&
+    localStorage.setItem("supportMode", 0);
 
   return (
     <>
@@ -53,18 +50,38 @@ const Skill = (props) => {
           >
             筛选
           </Button>
-          <Dialog open={show} onOpenChange={setShow}>
-            <DialogContent className="p-4">
-              <DialogHeader>
-                <DialogTitle>筛选技能</DialogTitle>
-              </DialogHeader>
-              <SkillFilterForm onUpdate={setSkillList} />
-            </DialogContent>
+
+          <Dialog size="lg" open={show} onOpenChange={setShow}>
+            <Dialog.Overlay>
+              <Dialog.Content>
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <Typography type="h6">筛选技能</Typography>
+                  <Dialog.DismissTrigger
+                    as={IconButton}
+                    size="sm"
+                    variant="ghost"
+                    color="secondary"
+                    isCircular
+                    className="absolute right-2 top-2"
+                  >
+                    <Xmark className="h-5 w-5" />
+                  </Dialog.DismissTrigger>
+                </div>
+
+                <div className="flex flex-col ">
+                  <SkillFilterForm onUpdate={setSkillList} />
+                </div>
+              </Dialog.Content>
+            </Dialog.Overlay>
           </Dialog>
         </>
       )}
 
-      <SkillList className="w-full md:w-3/4" dataList={skillList} sortFlag={true} />
+      <SkillList
+        className="w-full md:w-3/4"
+        dataList={skillList}
+        sortFlag={true}
+      />
     </>
   );
 };

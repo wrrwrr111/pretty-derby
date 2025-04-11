@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog } from "@material-tailwind/react";
 
 import i18n from "../i18n";
 const LanButton = () => {
@@ -26,8 +21,8 @@ const LanButton = () => {
         {i18n.language}
       </Button>
       <Dialog open={show} onOpenChange={setShow}>
-        <DialogContent>
-          <div className="grid grid-cols-3 gap-3">
+        <Dialog.Overlay>
+          <Dialog.Content className="grid grid-cols-3 gap-3">
             <Button onClick={() => changeLanguage("zh_CN")}>zh_CN</Button>
             <Button
               className="cursor-pointer"
@@ -35,8 +30,8 @@ const LanButton = () => {
             >
               en
             </Button>
-          </div>
-        </DialogContent>
+          </Dialog.Content>
+        </Dialog.Overlay>
       </Dialog>
     </>
   );

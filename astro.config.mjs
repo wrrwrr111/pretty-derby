@@ -9,7 +9,6 @@ import path from 'path';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx()],
-
   vite: {
     plugins: [tailwindcss()],
     resolve: {

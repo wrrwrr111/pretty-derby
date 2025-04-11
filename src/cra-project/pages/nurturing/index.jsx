@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, Typography, IconButton } from "@material-tailwind/react";
+import { Xmark } from "iconoir-react";
 
 // import shortid from 'shortid'
 // import axios from "axios";
@@ -377,36 +373,64 @@ const Nurturing = () => {
           }
         })}
       </GridLayout>
-      <Dialog open={isPlayerVisible} onOpenChange={setIsPlayerVisible}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>选择支援卡</DialogTitle>
-          </DialogHeader>
-          <div
-            className="w-full h-full"
-            style={{ maxHeight: "80vh", overflow: "auto" }}
-          >
-            <PlayerList onClick={handleSelectPlayer} sortFlag={true} />
-          </div>
-        </DialogContent>
+      <Dialog
+        size="lg"
+        open={isPlayerVisible}
+        onOpenChange={setIsPlayerVisible}
+      >
+        <Dialog.Overlay>
+          <Dialog.Content>
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <Typography type="h6">选择支援卡</Typography>
+              <Dialog.DismissTrigger
+                as={IconButton}
+                size="sm"
+                variant="ghost"
+                color="secondary"
+                isCircular
+                className="absolute right-2 top-2"
+              >
+                <Xmark className="h-5 w-5" />
+              </Dialog.DismissTrigger>
+            </div>
+
+            <div className="flex flex-col overflow-y-auto max-h-[80vh]">
+              <PlayerList onClick={handleSelectPlayer} sortFlag={true} />
+            </div>
+          </Dialog.Content>
+        </Dialog.Overlay>
       </Dialog>
-      <Dialog open={isSupportVisible} onOpenChange={set}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>选择支援卡</DialogTitle>
-          </DialogHeader>
-          <div
-            className="w-full h-full flex relative"
-            style={{ maxHeight: "80vh", overflow: "auto" }}
-          >
-            <SupportListWithFilter
-              formName="nurSup"
-              onClick={needSelect ? handleSelectSupport : null}
-              limitHeight={true}
-              sortFlag={true}
-            />
-          </div>
-        </DialogContent>
+      <Dialog
+        size="lg"
+        open={isSupportVisible}
+        onOpenChange={setIsSupportVisible}
+      >
+        <Dialog.Overlay>
+          <Dialog.Content>
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <Typography type="h6">选择支援卡</Typography>
+              <Dialog.DismissTrigger
+                as={IconButton}
+                size="sm"
+                variant="ghost"
+                color="secondary"
+                isCircular
+                className="absolute right-2 top-2"
+              >
+                <Xmark className="h-5 w-5" />
+              </Dialog.DismissTrigger>
+            </div>
+
+            <div className="flex-col overflow-y-auto max-h-[80vh] flex">
+              <SupportListWithFilter
+                formName="nurSup"
+                onClick={needSelect ? handleSelectSupport : null}
+                limitHeight={true}
+                sortFlag={true}
+              />
+            </div>
+          </Dialog.Content>
+        </Dialog.Overlay>
       </Dialog>
     </>
   );

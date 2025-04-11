@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 
+import { Dialog, Typography, IconButton } from "@material-tailwind/react";
+import { Xmark } from "iconoir-react";
+
 import { useDB } from "../../hooks";
 import { useTranslation } from "react-i18next";
 import dbL from "@cra/dbL";
@@ -91,16 +94,28 @@ const SupportListWithFilter = (props) => {
           >
             筛选
           </Button>
-          <Dialog open={show} onOpenChange={setShow}>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>筛选支援卡</DialogTitle>
-              </DialogHeader>
-              <div className="flex flex-col">
-              <SupportFilterForm formName={formName} onUpdate={setList} />
+          <Dialog size="lg" open={show} onOpenChange={setShow}>
+            <Dialog.Overlay>
+              <Dialog.Content>
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <Typography type="h6">筛选支援卡</Typography>
+                  <Dialog.DismissTrigger
+                    as={IconButton}
+                    size="sm"
+                    variant="ghost"
+                    color="secondary"
+                    isCircular
+                    className="absolute right-2 top-2"
+                  >
+                    <Xmark className="h-5 w-5" />
+                  </Dialog.DismissTrigger>
+                </div>
 
-              </div>
-            </DialogContent>
+                <div className="flex flex-col ">
+                  <SupportFilterForm formName={formName} onUpdate={setList} />
+                </div>
+              </Dialog.Content>
+            </Dialog.Overlay>
           </Dialog>
         </>
       )}
