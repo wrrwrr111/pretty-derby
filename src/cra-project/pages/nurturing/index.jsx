@@ -27,7 +27,7 @@ import PlayerList from "@cra/components/player/PlayerList";
 
 import { CDN_SERVER } from "@cra/config";
 import { Helmet } from "react-helmet";
-import { set } from "astro:schema";
+
 const layoutWithBlank = [
   { i: "a", x: 0, y: 0, w: 2, h: 2 },
   { i: "b", x: 2, y: 0, w: 7, h: 2 },
