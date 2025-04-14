@@ -1,6 +1,7 @@
 import React from "react";
 import PlayerList from "../../components/player/PlayerList";
 import { Helmet } from "react-helmet";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 //todo filter
 const Player = (props) => {
@@ -9,7 +10,11 @@ const Player = (props) => {
       <Helmet>
         <title>角色 - 乌拉拉大胜利 - 赛马娘资料站</title>
       </Helmet>
-      <PlayerList className="justify-between" sortFlag={true} onClick={props.onClick} />;
+      <PlayerList
+        className="justify-between"
+        sortFlag={true}
+        onClick={props.onClick}
+      />
     </>
   );
 };

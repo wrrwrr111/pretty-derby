@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @source "../../node_modules/@material-tailwind/react/";
 @source "../../src/";
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
 

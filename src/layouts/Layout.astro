@@ -1,16 +1,29 @@
 ---
 import "@/styles/global.css";
-import { cn } from "@/lib/utils";
-import NavMenu from "@/components/NavMenu";
+import { ClientRouter } from "astro:transitions";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+
+const { title } = Astro.props;
 ---
 
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>赛马娘</title>
+    <title>{title ?? "赛马娘"}</title>
+    <ClientRouter />
   </head>
-  <body class="flex flex-col w-screen min-h-screen relative">
-    <NavMenu client:only="react" />
-    <slot />
+  <body class="min-h-svh bg-background font-sans antialiased">
+    <div vaul-drawer-wrapper="">
+      <div class="relative flex min-h-svh flex-col bg-background">
+        <div data-wrapper="" class="border-grid flex flex-1 flex-col">
+          <SiteHeader client:only="react" />
+          <main class="flex flex-1 flex-col">
+            <slot />
+          </main>
+          <SiteFooter client:only="react" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
