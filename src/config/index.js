@@ -1,20 +1,5 @@
-const CDN_SERVER = "https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
-const PC_MENU_LIST = [
-  { path: "/", title: "角色" },
-  { path: "/support", title: "支援" },
-  { path: "/skill", title: "技能" },
-  { path: "/race", title: "比赛" },
-  { path: "/nurturing", title: "育成" },
-  { path: "/seed", title: "种马" },
-];
-const MOBILE_MENU_LIST = [
-  { path: "/", title: "角色" },
-  { path: "/support", title: "支援" },
-  { path: "/skill", title: "技能" },
-  { path: "/race", title: "比赛" },
-  { path: "/nurturingMo", title: "育成" },
-  { path: "/seedMo", title: "种马" },
-];
+const CDN_SERVER = "/";
+
 const EFFECT_LIMITS = [
   "init",
   "limit_lv5",

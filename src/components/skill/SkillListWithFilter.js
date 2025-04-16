@@ -11,7 +11,7 @@ import useViewport from "@/utils/useViewport";
 
 import { useDB } from "../../hooks";
 
-const Skill = (props) => {
+const SkillListWithFilter = (props) => {
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
   const [skillList, setSkillList] = useState();
@@ -30,9 +30,6 @@ const Skill = (props) => {
 
   return (
     <>
-      {/* <Helmet>
-        <title>技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
-      </Helmet> */}
       {viewport?.width >= 768 ? (
         <div
           className="sticky top-20 hidden md:flex w-1/4 flex-col p-1 overflow-auto"
@@ -64,4 +61,4 @@ const Skill = (props) => {
   );
 };
 
-export default Skill;
+export default SkillListWithFilter;

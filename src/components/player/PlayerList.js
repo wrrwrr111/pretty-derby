@@ -2,9 +2,7 @@ import React from "react";
 import PlayerCard from "./PlayerCard";
 import PlayerDetail from "./PlayerDetail";
 import List from "../common/List";
-import useUa from "../../utils/ua";
 const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
-  const ua = useUa();
 
   const sort = {
     key: "rare",

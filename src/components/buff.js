@@ -40,3 +40,4 @@ const BuffList = (props) => {
   );
 };
 export { BuffButton, BuffList };
+export default BuffList;

@@ -1,48 +1,29 @@
-'use client';
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import {
-  SidebarProvider,
-  Sidebar,
-  SidebarHeader,
-  SidebarContent,
-  SidebarFooter,
-  SidebarRail,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarInset,
-  SidebarTrigger,
-} from '@/components/animate-ui/radix-sidebar';
-import { Separator } from '@/components/ui/separator';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { ChevronsUpDown, LogOut } from 'lucide-react';
+import Navbar from "@material-tailwind/react/Navbar";
+import NavbarContainer from "@material-tailwind/react/NavbarContainer";
+import NavbarWrapper from "@material-tailwind/react/NavbarWrapper";
+import NavbarBrand from "@material-tailwind/react/NavbarBrand";
+import NavbarToggler from "@material-tailwind/react/NavbarToggler";
+import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
+import Nav from "@material-tailwind/react/Nav";
+import NavLink from "@material-tailwind/react/NavLink";
 
-import useUa from '@/utils/ua.js';
-import dbL from '@/dbL.js';
-import LanButton from '@/components/lan-button.js';
-import { PC_MENU_LIST, MOBILE_MENU_LIST, CDN_SERVER } from '@/config';
-
+import useUa from "@/utils/ua.js";
+import LanButton from "@/components/lan-button.js";
+import { CDN_SERVER } from "@/config";
+import dbL from "@/dbL.js";
+import { useTranslation } from "react-i18next";
 const Layout = ({ children, contentClass, rootClass }) => {
   const { t } = useTranslation();
+  const [openNavbar, setOpenNavbar] = useState(false);
   const ua = useUa();
   const location = useLocation();
-  const isMobile = useIsMobile();
-
-  const [openNavbar, setOpenNavbar] = useState(false);
-  const [activeTeam, setActiveTeam] = useState({
-    name: 'Default Team',
-    plan: 'Free',
-  });
 
   const resetNur = () => {
     dbL
-      .set('selected', {
+      .set("selected", {
         supports: { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} },
         player: {},
         races: [],
@@ -50,91 +31,61 @@ const Layout = ({ children, contentClass, rootClass }) => {
       .write();
   };
 
-  const menuList = ua.isPhone ? MOBILE_MENU_LIST : PC_MENU_LIST;
-
   return (
-    <SidebarProvider>
-      <div className={rootClass || 'flex flex-col w-screen min-h-screen'}>
-        <Sidebar collapsible="icon">
-          <SidebarHeader>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton size="lg">
-                  <div className="flex flex-col text-left">
-                    <span className="text-sm font-semibold">{activeTeam.name}</span>
-                    <span className="text-xs">{activeTeam.plan}</span>
-                  </div>
-                  <ChevronsUpDown className="ml-auto" />
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarHeader>
+    <div className={"flex flex-col w-screen min-h-screen relative"}>
+      <Navbar className="sticky top-0 z-50" color="lightBlue" navbar>
+        <NavbarContainer>
+          <NavbarWrapper>
+            <NavbarBrand>赛马娘</NavbarBrand>
+            <NavbarToggler
+              color="white"
+              onClick={() => setOpenNavbar(!openNavbar)}
+              ripple="light"
+            />
+          </NavbarWrapper>
 
-          <SidebarContent>
-            <SidebarGroup>
-              <SidebarGroupLabel>{t('Menu')}</SidebarGroupLabel>
-              <SidebarMenu>
-                {menuList.map((item) => (
-                  <SidebarMenuItem key={item.text}>
-                    <SidebarMenuButton asChild>
-                      <a
-                        href={item.link}
-                        className={
-                          location.pathname === item.link
-                            ? 'text-primary font-semibold'
-                            : ''
-                        }
-                      >
-                        <item.icon className="mr-2" />
-                        <span>{t(item.text)}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroup>
-          </SidebarContent>
-
-          <SidebarFooter>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton size="lg">
-                  <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage src={`${CDN_SERVER}/avatar.png`} alt="User" />
-                    <AvatarFallback>U</AvatarFallback>
-                  </Avatar>
-                  <div className="ml-2 flex-1 text-left text-sm">
-                    <div className="font-semibold">User</div>
-                    <div className="text-xs">user@example.com</div>
-                  </div>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton onClick={resetNur}>
-                  <LogOut />
-                  <span>{t('Reset')}</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <LanButton />
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarFooter>
-          <SidebarRail />
-        </Sidebar>
-
-        <SidebarInset>
-          <header className="flex h-16 items-center px-4">
-            <SidebarTrigger className="mr-2" />
-            <Separator orientation="vertical" className="h-4 mr-2" />
-            <span className="text-lg font-semibold">{t('Dashboard')}</span>
-          </header>
-
-          <main className={`flex-1 p-4 ${contentClass || ''}`}>{children}</main>
-        </SidebarInset>
+        </NavbarContainer>
+      </Navbar>
+      {children}
+      <div className="w-full flex items-center flex-wrap pb-10 md:pb-0">
+        <div className="cursor-pointer" data-tip="无法打开育成页面时点一哈" onClick={resetNur}>
+          {t("初始化育成")}
+        </div>
+        <LanButton />
+        <div className="flex-auto"></div>
+        <iframe
+          title="GitHub"
+          src="https://ghbtns.com/github-btn.html?user=wrrwrr111&repo=pretty-derby&type=star&count=true&size=large&v=2"
+          frameBorder="0"
+          scrolling="0"
+          width="160px"
+          height="30px"
+        ></iframe>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://qm.qq.com/cgi-bin/qm/qr?k=f2Q2MIqkkxiiYq-sfRYmI7E4v17-r3V2&jump_from=webapi"
+          data-tip={`
+          <img src=${CDN_SERVER + "img/q.jpg"} width={300} />
+          <p>${t("闲聊为主")}</p>
+          `}
+        >
+          <img
+            border="0"
+            src="//pub.idqqimg.com/wpa/images/group.png"
+            alt="轻 松 赛 马"
+            title="轻 松 赛 马"
+          />
+        </a>
+        <div
+          className="flex mx-2 items-center"
+          data-tip={`<img src=${CDN_SERVER + "img/weapp.jpg"} width={200} />`}
+        >
+          <img alt="reimu" src={CDN_SERVER + "reimu.gif"} preview="false" width={24} />
+          <div>{t("微信小程序")}</div>
+        </div>
       </div>
-    </SidebarProvider>
+    </div>
   );
 };
-
 export default Layout;
