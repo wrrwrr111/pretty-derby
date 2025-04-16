@@ -12,22 +12,21 @@ import {
 import { useDB } from "../../hooks/index.js";
 import { useTranslation } from "react-i18next";
 
-import { Helmet } from "react-helmet";
 
 const PlayerItem = ({ data }) => {
   const { name, imgUrl, charaName } = data;
   const { t } = useTranslation();
   return (
-    <div className="h-16 w-full flex flex-shrink-0">
+    <div className="h-16 w-full flex shrink-0">
       <img alt={name} src={CDN_SERVER + imgUrl} height={64} width={64} />
       <div className="flex-auto flex flex-wrap h-full items-center">
         <div className="w-full flex items-center justify-between">
           <div className=" text-xl font-semibold truncate">{name}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(name)}</div>
+          <div className="shrink-0 text-gray-700 truncate">{t(name)}</div>
         </div>
         <div className="w-full flex items-center justify-between">
           <div className=" text-xl font-semibold truncate">{charaName}</div>
-          <div className="flex-shrink-0 text-gray-700 truncate">{t(charaName)}</div>
+          <div className="shrink-0 text-gray-700 truncate">{t(charaName)}</div>
         </div>
       </div>
     </div>
@@ -45,7 +44,7 @@ const PlayerDetail = (props) => {
 
   return (
     <>
-      {props.page && (
+      {/* {props.page && (
         <Helmet>
           <title>
             {t(data.name)} | {t(data.charaName)} | 角色 | 乌拉拉大胜利 | 赛马娘资料站
@@ -59,7 +58,7 @@ const PlayerDetail = (props) => {
             content={[data.name, t(data.name), data.charaName, t(data.charaName)].join(",")}
           />
         </Helmet>
-      )}
+      )} */}
       {isNur ? (
         <div className="w-full flex flex-col p-3">
           <PlayerItem data={data} />

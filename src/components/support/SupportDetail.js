@@ -7,7 +7,7 @@ import EventList from "../event/EventList";
 import SkillList from "../skill/SkillList";
 import { EffectTable, TestEffectTable } from "../effect";
 import { CDN_SERVER } from "@/config";
-import { Helmet } from "react-helmet";
+
 const SupportDetail = (props) => {
   const { t } = useTranslation();
   const db = useDB();
@@ -17,7 +17,7 @@ const SupportDetail = (props) => {
   if (!data) return null;
   return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">
-      {props.page && (
+      {/* {props.page && (
         <Helmet>
           <title>
             {t(data.charaName)} - {t(data.name)} - 支援卡 - 乌拉拉大胜利 - 赛马娘资料站
@@ -31,17 +31,17 @@ const SupportDetail = (props) => {
             content={[data.name, t(data.name), data.charaName, t(data.charaName)].join(",")}
           />
         </Helmet>
-      )}
-      <div className="h-16 w-full flex flex-shrink-0">
+      )} */}
+      <div className="h-16 w-full flex shrink-0">
         <img alt={data.name} src={CDN_SERVER + data.imgUrl} height={64} width={48} />
         <div className="flex-auto flex flex-wrap h-full items-center">
           <div className="w-full flex items-center justify-between">
             <div className="flex-auto text-xl font-semibold truncate">{data.name}</div>
-            <div className="flex-shrink-0 text-gray-700 truncate">{t(data.name)}</div>
+            <div className="shrink-0 text-gray-700 truncate">{t(data.name)}</div>
           </div>
           <div className="w-full flex items-center justify-between">
             <div className="flex-auto text-xl font-semibold truncate">{data.charaName}</div>
-            <div className="flex-shrink-0 text-gray-700 truncate">{t(data.charaName)}</div>
+            <div className="shrink-0 text-gray-700 truncate">{t(data.charaName)}</div>
           </div>
         </div>
       </div>

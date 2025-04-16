@@ -2,7 +2,7 @@ const EventCard = (props) => {
   const { data, onClick, className } = props;
   return data ? (
     <div
-      className={`border border-solid border-gray-700 px-2 rounded truncate cursor-pointer ${className}`}
+      className={`border border-solid border-gray-700 px-2 rounded-sm truncate cursor-pointer ${className}`}
       onClick={onClick}
       data-tip={`<div>${data.choiceList
         .map(

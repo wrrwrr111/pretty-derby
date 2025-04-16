@@ -5,7 +5,7 @@ import { Picker, List } from "antd-mobile";
 
 import { Image, Modal, Rate, Form, message } from "antd";
 //test
-import { PlusOutlined, SmileOutlined, FrownOutlined, CopyOutlined } from "@ant-design/icons";
+import { Plus, Smile, Frown, Copy } from "lucide-react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 
@@ -17,7 +17,7 @@ import { useDB } from "../../hooks";
 import { useTranslation } from "react-i18next";
 
 import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "@/config";
-import { Helmet } from "react-helmet";
+
 let userId = dbL.get("userId").value();
 
 const PlayerInput = ({ value = {}, onChange }) => {
@@ -167,7 +167,7 @@ const SearchOne = (props) => {
             </Form.Item>
           ))}
           <List.Item>
-            <Button type="dashed" onClick={() => add()} icon={<PlusOutlined />}>
+            <Button type="dashed" onClick={() => add()} icon={<Plus />}>
               {t("添加过滤条件")}
             </Button>
           </List.Item>
@@ -278,7 +278,7 @@ const SeedCard = (props) => {
         <CopyToClipboard text={data.gameId} onCopy={() => message.info("成功")}>
           <div className="w-full flex text-lg">
             {data.gameId}
-            <CopyOutlined />
+            <Copy />
           </div>
         </CopyToClipboard>
         <div className="w-full flex items-center justify-around">
@@ -287,11 +287,11 @@ const SeedCard = (props) => {
           )}
           {support && <img alt={support.name} src={CDN_SERVER + support.imgUrl} className="w-10" />}
           <div className="text-lg flex" onClick={() => like(data)}>
-            <SmileOutlined />
+            <Smile />
             <div>{data.likes}</div>
           </div>
           <div className="text-lg flex" onClick={() => dislike(data)}>
-            <FrownOutlined />
+            <Frown />
             <div>{data.dislikes}</div>
           </div>
         </div>
@@ -330,9 +330,9 @@ const Seed = () => {
   };
   return (
     <div className="w-full flex flex-wrap px-3">
-      <Helmet>
+      {/* <Helmet>
         <title>分享 - 乌拉拉大胜利 - 赛马娘资料站</title>
-      </Helmet>
+      </Helmet> */}
       <SearchForm search={search} />
       <div className="w-full text-lg font-semibold">{t("结果")}</div>
       {seedList.map((seed) => {

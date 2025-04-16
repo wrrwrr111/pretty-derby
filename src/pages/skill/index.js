@@ -10,7 +10,6 @@ import SkillFilterForm from "@/components/skill/SkillFilterForm";
 import useViewport from "@/utils/useViewport";
 
 import { useDB } from "../../hooks";
-import { Helmet } from "react-helmet";
 
 const Skill = (props) => {
   const viewport = useViewport();
@@ -31,9 +30,9 @@ const Skill = (props) => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
-      </Helmet>
+      </Helmet> */}
       {viewport?.width >= 768 ? (
         <div
           className="sticky top-20 hidden md:flex w-1/4 flex-col p-1 overflow-auto"

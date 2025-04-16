@@ -12,7 +12,7 @@ const CheckBox = ({ register, name, value, label, icon }) => {
         htmlFor={value}
         className="flex items-center cursor-pointer text-gray-400 select-none transition-all duration-300"
       >
-        <span className="relative w-5 h-5 inline-block mr-2 rounded border border-gray-500 transition-all duration-300"></span>
+        <span className="relative w-5 h-5 inline-block mr-2 rounded-sm border border-gray-500 transition-all duration-300"></span>
         {icon && <img alt="" src={icon} width={20} />}
         {label}
       </label>

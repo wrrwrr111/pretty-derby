@@ -6,7 +6,7 @@ import { useDB } from "../../hooks/index.js";
 import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+
 const SkillDetail = (props) => {
   const { t } = useTranslation();
   const db = useDB();
@@ -50,7 +50,7 @@ const SkillDetail = (props) => {
         maxWidth: "calc(100vw - 40px)",
       }}
     >
-      {props.page && (
+      {/* {props.page && (
         <Helmet>
           <title>{t(data.name)} - 技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
           <meta
@@ -59,7 +59,7 @@ const SkillDetail = (props) => {
           />
           <meta property="keywords" content={[data.name, t(data.name)].join(",")} />
         </Helmet>
-      )}
+      )} */}
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
           <img alt={data.name} src={CDN_SERVER + data.imgUrl} className="w-14" />
@@ -70,21 +70,21 @@ const SkillDetail = (props) => {
         </div>
       </div>
       <div className="w-full flex mb-1">
-        <div className="w-20 text-center flex-shrink-0">{t("技能描述")}</div>
+        <div className="w-20 text-center shrink-0">{t("技能描述")}</div>
         <div className="flex-auto">
           <p>{t(data.describe)}</p>
           <p className="text-gray-500">{data.describe}</p>
         </div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
-        <div className="w-20 text-center flex-shrink-0">{t("触发条件")}</div>
+        <div className="w-20 text-center shrink-0">{t("触发条件")}</div>
         <div className="flex-auto">
           <p>{t(data.condition)}</p>
           <p className="text-gray-500">{data.condition}</p>
         </div>
       </div>
       <div className="w-full flex mb-1">
-        <div className="w-20 text-center flex-shrink-0">{t("技能效果")}</div>
+        <div className="w-20 text-center shrink-0">{t("技能效果")}</div>
         <div className="flex-auto">
           {data.ability?.map((ability) => {
             return (
@@ -96,21 +96,21 @@ const SkillDetail = (props) => {
         </div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
-        <div className="w-20 text-center flex-shrink-0">{t("持续时间")}</div>
+        <div className="w-20 text-center shrink-0">{t("持续时间")}</div>
         <div className="flex-auto">{`${data.ability_time / 10000}s * ${t(
           "赛道长度"
         )} / 1000}`}</div>
       </div>
       <div className="w-full flex mb-1">
-        <div className="w-20 text-center flex-shrink-0">{t("冷却时间")}</div>
+        <div className="w-20 text-center shrink-0">{t("冷却时间")}</div>
         <div className="flex-auto">{`${data.cooldown / 10000}s * ${t("赛道长度")} / 1000`}</div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
-        <div className="w-20 text-center flex-shrink-0">{t("技能价格")}</div>
+        <div className="w-20 text-center shrink-0">{t("技能价格")}</div>
         <div className="flex-auto">{data.need_skill_point}</div>
       </div>
       <div className="w-full flex mb-1">
-        <div className="w-20 text-center flex-shrink-0">{t("技能评分")}</div>
+        <div className="w-20 text-center shrink-0">{t("技能评分")}</div>
         <div className="flex-auto">{data.grade_value}</div>
       </div>
       {!isNur && (

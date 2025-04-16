@@ -1,5 +1,4 @@
 import React from "react";
-import { useDidRecover } from "react-router-cache-route";
 import SkillDetail from "../../components/skill/SkillDetail.js";
 
 const SkillDetailPage = (props) => {

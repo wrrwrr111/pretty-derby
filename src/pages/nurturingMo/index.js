@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router";
 import shortid from "shortid";
 import Button from "@material-tailwind/react/Button";
 
@@ -15,17 +14,15 @@ import {
   Popover,
   // Tooltip
 } from "antd";
-import { EditOutlined } from "@ant-design/icons";
+import { Edit } from "lucide-react";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
 import PlayerList from "@/components/player/PlayerList.js";
 import { RaceTimeline, RaceCheckbox } from "../../components/race";
 
 import { CDN_SERVER } from "@/config";
-import { Helmet } from "react-helmet";
 
 const Nurturing = (props) => {
   const { t } = useTranslation();
-  const history = useHistory();
 
   const [needSelect, setNeedSelect] = useState(false);
   const [isPlayerVisible, setIsPlayerVisible] = useState(false);
@@ -92,7 +89,8 @@ const Nurturing = (props) => {
     closeSupport();
   };
   const handleSelectSupportShow = (data) => {
-    history.push(`/support-detail/${data.id}`);
+    // TODO
+    // history.push(`/support-detail/${data.id}`);
     closeSupport();
   };
   // 卡组相关操作
@@ -173,21 +171,22 @@ const Nurturing = (props) => {
       .write();
   };
 
+  // TODO
   const toSupportDetail = (id) => {
-    props.history.push(`/support-detail/${id}`);
+    // props.history.push(`/support-detail/${id}`);
   };
   const toPlayerDetail = (id) => {
-    props.history.push(`/player-detail/${id}/1`);
+    // props.history.push(`/player-detail/${id}/1`);
   };
   const toBuffList = (id) => {
-    props.history.push(`/buff`);
+    // props.history.push(`/buff`);
   };
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>育成 - 乌拉拉大胜利 - 赛马娘资料站</title>
-      </Helmet>
+      </Helmet> */}
       <div style={{ display: "flex", justifyContent: "center" }}>
         {player.imgUrl && (
           <img
@@ -266,7 +265,7 @@ const Nurturing = (props) => {
             <Button
               size="sm"
               buttonType="outline"
-              icon={<EditOutlined />}
+              icon={<Edit />}
               onClick={() => showSupport(index)}
             >
               {t("选择支援卡")}

@@ -231,7 +231,7 @@ const TestEffectTable = (props) => {
                   >
                     {t(effects[props.unique_effect[`type_${index}`]]?.name)}
                   </div>
-                  <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center flex-shrink-0">
+                  <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center shrink-0">
                     {props.unique_effect[`value_${index}`]}
                   </div>
                 </div>
@@ -283,7 +283,7 @@ const TestEffectTable = (props) => {
               >
                 {t(effects[item.type].name)}
               </div>
-              <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center flex-shrink-0">
+              <div className="bg-white h-full w-10 md:w-24 rounded-r-xl pl-2 flex items-center shrink-0">
                 {calc(data, selectingLevel)}
               </div>
             </div>

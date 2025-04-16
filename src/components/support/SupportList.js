@@ -1,12 +1,12 @@
 import React from "react";
-import { useHistory } from "react-router";
+
 import SupportCard from "./SupportCard";
 import SupportDetail from "./SupportDetail";
 import List from "../common/List";
 import useUa from "../../utils/ua";
 const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }) => {
   const ua = useUa();
-  const history = useHistory();
+
   const sort = sortFlag
     ? {
         key: "rare",
@@ -29,13 +29,14 @@ const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }
           <SupportCard
             className={`${ownList?.length && !ownList?.includes(data.id) && "un-chosen-card"}`}
             data={data}
-            onClick={() =>
-              onClick
-                ? onClick(data)
-                : ua.isPhone
-                ? history.push(`/support-detail/${data.id}`)
-                : setCur(data)
-            }
+            // TODO
+            // onClick={() =>
+            //   onClick
+            //     ? onClick(data)
+            //     : ua.isPhone
+            //     ? history.push(`/support-detail/${data.id}`)
+            //     : setCur(data)
+            // }
           />
         </div>
       )}

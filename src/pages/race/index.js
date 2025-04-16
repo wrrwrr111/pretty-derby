@@ -3,7 +3,6 @@ import { Table } from "antd";
 import { useTranslation } from "react-i18next";
 import { useDB } from "../../hooks/index";
 import { RACE_FILTER_LIST } from "@/config";
-import { Helmet } from "react-helmet";
 
 const RACE_TABLE_LABELS = [
   "name",
@@ -104,9 +103,9 @@ const Race = (props) => {
   };
   return (
     <div className={"w-full overflow-x-auto"}>
-      <Helmet>
+      {/* <Helmet>
         <title>比赛 - 乌拉拉大胜利 - 赛马娘资料站</title>
-      </Helmet>
+      </Helmet> */}
       <Table
         rowSelection={props.onSelect ? rowSelection : null}
         columns={columns}

@@ -58,14 +58,14 @@ const SupportListWithFilter = (props) => {
             height: "calc(100vh - 120px)",
           }}
         >
-          <Button className="my-1 flex-shrink-0" onClick={changeShowMode} ripple="light">
+          <Button className="my-1 shrink-0" onClick={changeShowMode} ripple="light">
             {t("高亮我的卡组")}
           </Button>
-          <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} ripple="light">
+          <Button className="my-1 shrink-0" onClick={changeChooseMode} ripple="light">
             {t("配置卡组")}
           </Button>
           {chooseMode && (
-            <Button className="my-1 flex-shrink-0" onClick={changeChooseMode} ripple="light">
+            <Button className="my-1 shrink-0" onClick={changeChooseMode} ripple="light">
               {t("配置完成")}
             </Button>
           )}

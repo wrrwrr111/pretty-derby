@@ -35,3 +35,7 @@ src/styles/tailwind.css
 .history
 .env
 prisma/db.sqlite
+
+# ...
+.next
+next-env.d.ts
