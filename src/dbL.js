@@ -11,7 +11,7 @@ const db = low(adapterL)
 
 const d = async ()=>{
   // let res = await axios.get('https://urarawin.com/d')
-  let res = await axios.get('https://urarawin.com/api/sqlite/d')
+  let res = await axios.get('https://urarawin-worker.urarawin.workers.dev/api/sqlite/d')
   db.set('userId',res.data).write()
 }
 db.get('userId').value()||d()
