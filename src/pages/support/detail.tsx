@@ -1,5 +1,5 @@
 import React from "react";
-import SupportDetail from "@/components/support/SupportDetail.jsx";
+import SupportDetail from "@/components/support/SupportDetail";
 
 const SupportDetailPage = (props) => {
   const id = props.match?.params?.id;

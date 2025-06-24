@@ -3,9 +3,9 @@ import React from "react";
 import { useDB } from "@/hooks/index";
 import { useTranslation } from "react-i18next";
 
-import EventList from "@/components/event/EventList.jsx";
-import SkillList from "@/components/skill/SkillList.jsx";
-import { EffectTable, TestEffectTable } from "@/components/effect/index.jsx";
+import EventList from "@/components/event/EventList";
+import SkillList from "@/components/skill/SkillList";
+import { EffectTable, TestEffectTable } from "@/components/effect/index";
 import { CDN_SERVER } from "@/config";
 import { Helmet } from "react-helmet";
 const SupportDetail = (props) => {

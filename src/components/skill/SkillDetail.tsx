@@ -1,6 +1,6 @@
 import React from "react";
 import SupportList from "@/components/support/SupportList";
-import PlayerList from "@/components/player/PlayerList.jsx";
+import PlayerList from "@/components/player/PlayerList";
 
 import { useDB } from "@/hooks/index";
 import { SKILL_TYPES, CDN_SERVER } from "@/config";

@@ -1,8 +1,8 @@
 import React from "react";
 
 import { useForm } from "react-hook-form";
-import CheckBox from "@/components/common/CheckBox.jsx";
-import Input from "@/components/common/Input.jsx";
+import CheckBox from "@/components/common/CheckBox";
+import Input from "@/components/common/Input";
 
 import { useDB } from "@/hooks/index";
 import { useTranslation } from "react-i18next";

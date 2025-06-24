@@ -20,6 +20,8 @@ import LanButton from "@/components/lan-button";
 import { CDN_SERVER } from "@/config";
 import dbL from "@/dbL";
 import { PC_MENU_LIST, MOBILE_MENU_LIST } from "@/config";
+import { Toaster } from 'sonner';
+
 
 const Layout = ({ children }) => {
   const { t } = useTranslation();
@@ -95,7 +97,7 @@ const Layout = ({ children }) => {
         </div>
       </header>
       {children}
-
+      <Toaster position="top-right" richColors closeButton />
       <footer className="w-full flex items-center flex-wrap pb-10 md:pb-0 px-4 gap-4">
         <Button variant="link" onClick={resetNur} title="无法打开育成页面时点一哈">
           {t("初始化育成")}

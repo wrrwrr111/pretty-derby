@@ -1,5 +1,5 @@
 import React from "react";
-import PlayerDetail from "@/components/player/PlayerDetail.jsx";
+import PlayerDetail from "@/components/player/PlayerDetail";
 
 const PlayerDetailPage = (props) => {
   const id = props.match?.params?.id;

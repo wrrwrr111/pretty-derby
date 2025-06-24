@@ -1,5 +1,5 @@
 import React from "react";
-import SkillDetail from "@/components/skill/SkillDetail.jsx";
+import SkillDetail from "@/components/skill/SkillDetail";
 
 const SkillDetailPage = (props) => {
   const id = props.match?.params?.id;
