@@ -40,3 +40,5 @@ const BuffList = () => {
   );
 };
 export { BuffButton, BuffList };
+
+export default BuffList
