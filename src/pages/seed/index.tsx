@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Card, Modal, message } from "antd";
+import { Card, Modal, message, Button } from "antd";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import dbL from "@/dbL";
 import SeedInputForm from "@/components/seed/SeedInputForm";
 import SeedSearchForm from "@/components/seed/SeedSearchForm";
 import SeedTable from "@/components/seed/SeedTable";
-import { Button } from "@/components/ui/button";
 
 const Seed = () => {
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);

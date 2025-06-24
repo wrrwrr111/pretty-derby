@@ -1,13 +1,12 @@
 import React from "react";
-import { Image } from "antd";
 import { useDB } from "@/hooks";
-import { IMAGE_FALLBACK, CDN_SERVER } from "@/config";
+import { Image } from "@/components/ui/image";
 
-const SupportImage = ({ id }) => {
+const SupportImage = ({ id }: { id: string }) => {
   const db = useDB();
   if (!db) return null;
   const support = db.get("supports").find({ id }).value();
-  return <Image src={support?.imgUrl ? CDN_SERVER + support.imgUrl : ""} fallback={IMAGE_FALLBACK} width={80} preview={false} />;
+  return <Image src={support?.imgUrl} width={80} />;
 };
 
 export default SupportImage;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
-import { CDN_SERVER, IMAGE_FALLBACK } from "@/config";
-
+import { IMAGE_FALLBACK } from "@/config";
 import { Image } from "@/components/ui/image";
 
 const SupportInput = ({ value = {}, onChange }) => {
@@ -13,7 +12,7 @@ const SupportInput = ({ value = {}, onChange }) => {
   const closeSupport = () => setIsSupportVisible(false);
 
   const triggerChange = (changedValue) => {
-    setIsSupportVisible(false);
+    closeSupport();
     onChange?.({ ...data, ...value, ...changedValue });
   };
 
@@ -24,22 +23,22 @@ const SupportInput = ({ value = {}, onChange }) => {
 
   return (
     <>
-      <Image
-        src={data.imgUrl ? CDN_SERVER + data.imgUrl : ""}
-        preview="false"
-        fallback={IMAGE_FALLBACK}
-        width={80}
-        onClick={showSupport}
-      />
+      <div className="w-16 h-16">
+        <Image src={data.imgUrl} fallback={IMAGE_FALLBACK} onClick={showSupport} />
+      </div>
       <Modal
         visible={isSupportVisible}
         onOk={closeSupport}
         onCancel={closeSupport}
-        width={"80%"}
-        bodyStyle={{ height: "90vh" }}
+        width="100%"
+        bodyStyle={{ height: "80vh" }}
       >
         <div className="w-full h-full overflow-hidden flex relative">
-          <SupportListWithFilter formName="seedSup" onClick={handleSelectSupport} sortFlag={true} />
+          <SupportListWithFilter
+            formName="seedSupMo"
+            onClick={handleSelectSupport}
+            sortFlag={true}
+          />
         </div>
       </Modal>
     </>

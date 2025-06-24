@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
 import PlayerList from "@/components/player/PlayerList";
-import { CDN_SERVER, IMAGE_FALLBACK } from "@/config";
-
 import { Image } from "@/components/ui/image";
 
 const PlayerInput = ({ value = {}, onChange }) => {
@@ -13,29 +11,26 @@ const PlayerInput = ({ value = {}, onChange }) => {
   const closePlayer = () => setIsPlayerVisible(false);
 
   const triggerChange = (changedValue) => {
-    setIsPlayerVisible(false);
+    closePlayer();
     onChange?.({ ...data, ...value, ...changedValue });
   };
 
   const handleSelectPlayer = (data) => {
+    console.log("🚀 ~ handleSelectPlayer ~ data:", data);
     setData(data);
     triggerChange(data);
   };
 
   return (
     <>
-      <Image
-        src={data.imgUrl ? CDN_SERVER + data.imgUrl : ""}
-        preview="false"
-        fallback={IMAGE_FALLBACK}
-        width={80}
-        onClick={showPlayer}
-      />
+      <div className="w-16 h-16">
+        <Image src={data?.imgUrl} onClick={showPlayer} />
+      </div>
       <Modal
         visible={isPlayerVisible}
         onOk={closePlayer}
         onCancel={closePlayer}
-        width={"80%"}
+        width="100%"
         bodyStyle={{ maxHeight: "80vh", overflow: "auto" }}
       >
         <PlayerList sortFlag={true} onClick={handleSelectPlayer} />

@@ -1,6 +1,6 @@
 // components/ui/image.tsx
-import { useState } from "react";
-import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS, IMAGE_FALLBACK } from "@/config";
+import { useEffect, useState } from "react";
+import { IMAGE_FALLBACK } from "@/config";
 
 interface ImageProps {
   src?: string;
@@ -23,9 +23,13 @@ export const Image = ({
 }: ImageProps) => {
   const [imgSrc, setImgSrc] = useState(src);
 
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
   return (
     <img
-      src={imgSrc ? CDN_SERVER + imgSrc : fallback}
+      src={imgSrc ? imgSrc : fallback}
       alt={alt}
       width={width}
       height={height}

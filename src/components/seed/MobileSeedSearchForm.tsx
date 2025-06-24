@@ -5,7 +5,7 @@ import { Plus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PlayerInput from "./PlayerInput";
 import SupportInput from "./SupportInput";
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 const SearchOne = ({ name }) => {
   const { t } = useTranslation();
