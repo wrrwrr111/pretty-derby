@@ -18,6 +18,7 @@ tool/node_modules
 # production
 # /build
 /build
+/dist
 /public/img/support_card
 
 # misc

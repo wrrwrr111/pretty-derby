@@ -1,24 +1,12 @@
-# urarawin
-![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
-![forthebadge](https://forthebadge.com/images/badges/for-you.svg)
-![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
-![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
-![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)
+# React + Vite
 
-[https://urarawin.com](https://urarawin.com)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 更新版本时
-提交更新 /src/assert/master.mdb
+Currently, two official plugins are available:
 
-## 开发
-yarn start
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Expanding the ESLint configuration
 
-
-## 翻译文件
-翻译文件位置在 /src/assert/zh.json
-
-## 数据来源
-https://gamewith.jp/uma-musume/
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
