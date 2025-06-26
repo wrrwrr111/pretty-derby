@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import { Card, Modal, message, Button } from "antd";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import dbL from "@/dbL";
 import SeedInputForm from "@/components/seed/SeedInputForm";
 import SeedSearchForm from "@/components/seed/SeedSearchForm";
 import SeedTable from "@/components/seed/SeedTable";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { toast } from "sonner";
+
+interface SeedData {
+  id: string;
+  likes: number;
+  dislikes: number;
+  [key: string]: any;
+}
 
 const Seed = () => {
   const [isSeedInputVisible, setIsSeedInputVisible] = useState(false);
-  const [seedList, setSeedList] = useState([]);
+  const [seedList, setSeedList] = useState<SeedData[]>([]);
   const [total, setTotal] = useState(0);
   const [searchParams, setSearchParams] = useState({});
   const userId = dbL.get("userId").value();
@@ -21,7 +31,7 @@ const Seed = () => {
     search({ attrs: ["userId"], levels: [userId] });
   };
 
-  const search = async (params) => {
+  const search = async (params: any) => {
     setSearchParams(params);
     try {
       const res = await axios.post(
@@ -35,15 +45,15 @@ const Seed = () => {
         } else {
           setSeedList([]);
           setTotal(0);
-          message.info("暂无数据");
+          toast.info("暂无数据");
         }
       }
     } catch (error) {
-      message.error("搜索失败");
+      toast.error("搜索失败");
     }
   };
 
-  const handleTableChange = (pagination) => {
+  const handleTableChange = (pagination: any) => {
     search({
       ...searchParams,
       count: pagination.total,
@@ -51,9 +61,9 @@ const Seed = () => {
     });
   };
 
-  const like = async (seed) => {
+  const like = async (seed: SeedData) => {
     if (!userId) {
-      message.info("刷新后重试");
+      toast.info("刷新后重试");
       return;
     }
     try {
@@ -62,19 +72,19 @@ const Seed = () => {
         userId,
       });
       if (res.data) {
-        message.info("成功");
+        toast.info("操作成功");
         setSeedList((prev) =>
           prev.map((item) => (item.id === seed.id ? { ...item, likes: item.likes + 1 } : item))
         );
       }
     } catch (error) {
-      message.error("操作失败");
+      toast.error("操作失败");
     }
   };
 
-  const dislike = async (seed) => {
+  const dislike = async (seed: SeedData) => {
     if (!userId) {
-      message.info("刷新后重试");
+      toast.info("刷新后重试");
       return;
     }
     try {
@@ -83,7 +93,7 @@ const Seed = () => {
         { id: seed.id, userId }
       );
       if (res.data) {
-        message.info("成功");
+        toast.info("操作成功");
         setSeedList((prev) =>
           prev.map((item) =>
             item.id === seed.id ? { ...item, dislikes: item.dislikes + 1 } : item
@@ -91,23 +101,23 @@ const Seed = () => {
         );
       }
     } catch (error) {
-      message.error("操作失败");
+      toast.error("操作失败");
     }
   };
 
-  const deleteSeed = async (seed) => {
+  const deleteSeed = async (seed: SeedData) => {
     try {
       const res = await axios.post(
         "https://urarawin-worker.urarawin.workers.dev/api/sqlite/delete",
         seed
       );
       if (res.data) {
-        message.info("成功删除");
+        toast.info("成功删除");
         setSeedList((prev) => prev.filter((item) => item.id !== seed.id));
         setTotal((prev) => prev - 1);
       }
     } catch (error) {
-      message.error("删除失败");
+      toast.error("删除失败");
     }
   };
 
@@ -116,33 +126,45 @@ const Seed = () => {
       <Helmet>
         <title>分享 - 乌拉拉大胜利 - 赛马娘资料站</title>
       </Helmet>
-      <div className="seed-container">
-        <Card className="card" title="过滤条件">
-          <SeedSearchForm onSearch={search} />
-          <Button onClick={showSeedInput}>配置我的种子</Button>
-          <Button onClick={showMySeed}>查看我的种子</Button>
+      <div className="space-y-4 p-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>过滤条件</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <SeedSearchForm onSearch={search} />
+            <div className="flex space-x-2">
+              <Button onClick={showSeedInput}>配置我的种子</Button>
+              <Button variant="outline" onClick={showMySeed}>
+                查看我的种子
+              </Button>
+            </div>
+          </CardContent>
         </Card>
-        <Card className="card" title="结果">
-          <SeedTable
-            data={seedList}
-            total={total}
-            onChange={handleTableChange}
-            onLike={like}
-            onDislike={dislike}
-            onDelete={deleteSeed}
-            userId={userId}
-          />
+
+        <Card>
+          <CardHeader>
+            <CardTitle>结果</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <SeedTable
+              data={seedList}
+              total={total}
+              onChange={handleTableChange}
+              onLike={like}
+              onDislike={dislike}
+              onDelete={deleteSeed}
+              userId={userId}
+            />
+          </CardContent>
         </Card>
       </div>
-      <Modal
-        visible={isSeedInputVisible}
-        onOk={closeSeedInput}
-        onCancel={closeSeedInput}
-        footer={null}
-        width="80%"
-      >
-        <SeedInputForm onFinish={closeSeedInput} />
-      </Modal>
+
+      <Dialog open={isSeedInputVisible} onOpenChange={setIsSeedInputVisible}>
+        <DialogContent className="sm:max-w-[80%]">
+          <SeedInputForm onFinish={closeSeedInput} />
+        </DialogContent>
+      </Dialog>
     </>
   );
 };

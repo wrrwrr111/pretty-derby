@@ -1,146 +1,310 @@
 import React from "react";
-import { Table, Row, Rate } from "antd";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Smile, Frown, Copy, Delete } from "lucide-react";
-import { message } from "antd";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getPaginationRowModel,
+  flexRender,
+} from "@tanstack/react-table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Copy, ThumbsUp, ThumbsDown, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import PlayerImage from "./PlayerImage";
 import SupportImage from "./SupportImage";
 import { SEED_BLUE_LABELS, SEED_RED_LABELS } from "@/config";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const SeedTable = ({ data, total, onChange, onLike, onDislike, onDelete, userId }) => {
+interface SeedData {
+  id: string;
+  gameId: string;
+  playerId0: string;
+  blue0: string;
+  blueLevel0: string;
+  red0: string;
+  redLevel0: string;
+  greenLevel0: string;
+  uraLevel0: string;
+  playerId1: string;
+  playerId2: string;
+  supportId: string;
+  supportLevel: number;
+  uraLevel: string;
+  white: string;
+  likes: number;
+  dislikes: number;
+  userId: string;
+  [key: string]: any;
+}
+
+interface SeedTableProps {
+  data: SeedData[];
+  total: number;
+  onChange: (pagination: any) => void;
+  onLike: (seed: SeedData) => void;
+  onDislike: (seed: SeedData) => void;
+  onDelete: (seed: SeedData) => void;
+  userId: string;
+}
+
+const SeedTable: React.FC<SeedTableProps> = ({
+  data,
+  total,
+  onChange,
+  onLike,
+  onDislike,
+  onDelete,
+  userId,
+}) => {
   const columns = [
     {
-      title: "玩家id",
-      dataIndex: "gameId",
-      key: "gameId",
-      render: (text, seed) => (
-        <>
-          <Row>
-            <p>{text}</p>
-            <CopyToClipboard text={text} onCopy={() => message.info("成功")}>
-              <Copy />
+      accessorKey: "gameId",
+      header: "玩家id",
+      cell: ({ row }) => (
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-2">
+            <span>{row.original.gameId}</span>
+            <CopyToClipboard
+              text={row.original.gameId}
+              onCopy={() => toast.info("复制成功")}
+            >
+              <Button variant="ghost" size="icon" className="h-6 w-6">
+                <Copy className="h-4 w-4" />
+              </Button>
             </CopyToClipboard>
-          </Row>
-          <Row align="middle">
-            <Smile onClick={() => onLike(seed)} />
-            <p>{seed.likes}</p>
-          </Row>
-          <Row align="middle">
-            <Frown onClick={() => onDislike(seed)} />
-            <p>{seed.dislikes}</p>
-          </Row>
-          {seed.userId === userId && (
-            <Row align="middle">
-              <Delete onClick={() => onDelete(seed)} />
-            </Row>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-6 w-6"
+              onClick={() => onLike(row.original)}
+            >
+              <ThumbsUp className="h-4 w-4" />
+            </Button>
+            <span>{row.original.likes}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-6 w-6"
+              onClick={() => onDislike(row.original)}
+            >
+              <ThumbsDown className="h-4 w-4" />
+            </Button>
+            <span>{row.original.dislikes}</span>
+          </div>
+          {row.original.userId === userId && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-6 w-6"
+              onClick={() => onDelete(row.original)}
+            >
+              <Trash2 className="h-4 w-4" />
+            </Button>
           )}
-        </>
+        </div>
       ),
     },
     {
-      title: "主要",
-      dataIndex: "playerId0",
-      key: "playerId0",
-      render: (text) => <PlayerImage id={text} />,
+      accessorKey: "playerId0",
+      header: "主要",
+      cell: ({ row }) => <PlayerImage id={row.original.playerId0} />,
     },
     {
-      title: "蓝色因子",
-      dataIndex: "blue0",
-      key: "blue0",
-      render: (text, record) => (
-        <span className="rate-label">{`${SEED_BLUE_LABELS[text]}\xa0\xa0${record.blueLevel0}`}</span>
+      accessorKey: "blue0",
+      header: "蓝色因子",
+      cell: ({ row }) => (
+        <span className="whitespace-nowrap">
+          {`${SEED_BLUE_LABELS[row.original.blue0]}\xa0\xa0${row.original.blueLevel0}`}
+        </span>
       ),
     },
     {
-      title: "红色因子",
-      dataIndex: "red0",
-      key: "red0",
-      render: (text, record) => (
-        <span className="rate-label">{`${SEED_RED_LABELS[text]}\xa0\xa0${record.redLevel0}`}</span>
+      accessorKey: "red0",
+      header: "红色因子",
+      cell: ({ row }) => (
+        <span className="whitespace-nowrap">
+          {`${SEED_RED_LABELS[row.original.red0]}\xa0\xa0${row.original.redLevel0}`}
+        </span>
       ),
     },
     {
-      title: "绿色因子",
-      dataIndex: "greenLevel0",
-      key: "greenLevel0",
-      render: (text) => <span className="rate-label">{`固有\xa0\xa0${text}`}</span>,
+      accessorKey: "greenLevel0",
+      header: "绿色因子",
+      cell: ({ row }) => (
+        <span className="whitespace-nowrap">{`固有\xa0\xa0${row.original.greenLevel0}`}</span>
+      ),
     },
     {
-      title: "URA",
-      dataIndex: "uraLevel0",
-      key: "uraLevel0",
-      render: (text) => <span className="rate-label">{text ? `URA  ${text}` : ""}</span>,
+      accessorKey: "uraLevel0",
+      header: "URA",
+      cell: ({ row }) => (
+        <span className="whitespace-nowrap">
+          {row.original.uraLevel0 ? `URA  ${row.original.uraLevel0}` : ""}
+        </span>
+      ),
     },
     {
-      title: "父辈1",
-      dataIndex: "playerId1",
-      key: "playerId1",
-      render: (text) => <PlayerImage id={text} />,
+      accessorKey: "playerId1",
+      header: "父辈1",
+      cell: ({ row }) => <PlayerImage id={row.original.playerId1} />,
     },
     {
-      title: "父辈2",
-      dataIndex: "playerId2",
-      key: "playerId2",
-      render: (text) => <PlayerImage id={text} />,
+      accessorKey: "playerId2",
+      header: "父辈2",
+      cell: ({ row }) => <PlayerImage id={row.original.playerId2} />,
     },
     {
-      title: "总计蓝色",
-      key: "allBlue",
-      render: (_, record) =>
-        Object.keys(SEED_BLUE_LABELS).map((key) =>
-          record[key] ? (
-            <span key={key} className="rate-label">
-              {`${SEED_BLUE_LABELS[key]}\xa0\xa0${record[key]}`}
-            </span>
-          ) : null
-        ),
+      id: "allBlue",
+      header: "总计蓝色",
+      cell: ({ row }) => (
+        <div className="flex flex-col">
+          {Object.keys(SEED_BLUE_LABELS).map(
+            (key) =>
+              row.original[key] && (
+                <span key={key} className="whitespace-nowrap">
+                  {`${SEED_BLUE_LABELS[key]}\xa0\xa0${row.original[key]}`}
+                </span>
+              )
+          )}
+        </div>
+      ),
     },
     {
-      title: "总计红色",
-      key: "allRed",
-      render: (_, record) =>
-        Object.keys(SEED_RED_LABELS).map((key) =>
-          record[key] ? (
-            <span key={key} className="rate-label">
-              {`${SEED_RED_LABELS[key]}\xa0\xa0${record[key]}`}
-            </span>
-          ) : null
-        ),
-    },
-    { title: "总计URA", dataIndex: "uraLevel", key: "uraLevel" },
-    { title: "总计白色", dataIndex: "white", key: "white" },
-    {
-      title: "支援卡",
-      dataIndex: "supportId",
-      key: "supportId",
-      render: (text) => <SupportImage id={text} />,
+      id: "allRed",
+      header: "总计红色",
+      cell: ({ row }) => (
+        <div className="flex flex-col">
+          {Object.keys(SEED_RED_LABELS).map(
+            (key) =>
+              row.original[key] && (
+                <span key={key} className="whitespace-nowrap">
+                  {`${SEED_RED_LABELS[key]}\xa0\xa0${row.original[key]}`}
+                </span>
+              )
+          )}
+        </div>
+      ),
     },
     {
-      title: "突破等级",
-      dataIndex: "supportLevel",
-      key: "supportLevel",
-      render: (text) => (
-        <Row>
-          <Rate count={4} value={text} disabled />
-        </Row>
+      accessorKey: "uraLevel",
+      header: "总计URA",
+    },
+    {
+      accessorKey: "white",
+      header: "总计白色",
+    },
+    {
+      accessorKey: "supportId",
+      header: "支援卡",
+      cell: ({ row }) => <SupportImage id={row.original.supportId} />,
+    },
+    {
+      accessorKey: "supportLevel",
+      header: "突破等级",
+      cell: ({ row }) => (
+        <div className="flex">
+          {[...Array(4)].map((_, i) => (
+            <div
+              key={i}
+              className={`h-4 w-4 rounded-full mx-0.5 ${
+                i < row.original.supportLevel ? "bg-primary" : "bg-muted"
+              }`}
+            />
+          ))}
+        </div>
       ),
     },
   ];
 
-  return (
-    <Table
-      columns={columns}
-      dataSource={data}
-      onChange={onChange}
-      pagination={{
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    manualPagination: true,
+    pageCount: Math.ceil(total / 10),
+    state: {
+      pagination: {
+        pageIndex: 0,
         pageSize: 10,
+      },
+    },
+    onPaginationChange: (updater) => {
+      const newPagination =
+        typeof updater === "function"
+          ? updater({ pageIndex: 0, pageSize: 10 })
+          : updater;
+      onChange({
+        current: newPagination.pageIndex + 1,
+        pageSize: newPagination.pageSize,
         total,
-        simple: true,
-        showQuickJumper: false,
-        position: ["topRight", "bottomRight"],
-      }}
-      rowKey="id"
-    />
+      });
+    },
+  });
+
+  return (
+    <div className="rounded-md border">
+      <Table>
+        <TableHeader>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <TableHead key={header.id}>
+                  {flexRender(header.column.columnDef.header, header.getContext())}
+                </TableHead>
+              ))}
+            </TableRow>
+          ))}
+        </TableHeader>
+        <TableBody>
+          {table.getRowModel().rows?.length ? (
+            table.getRowModel().rows.map((row) => (
+              <TableRow key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                暂无数据
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+      <div className="flex items-center justify-end space-x-2 p-4">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
+        >
+          上一页
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
+        >
+          下一页
+        </Button>
+      </div>
+    </div>
   );
 };
 

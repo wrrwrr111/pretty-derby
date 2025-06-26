@@ -1,5 +1,19 @@
-import { Table } from "antd";
-import Card from "@/components/common/Card";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getFilteredRowModel,
+  flexRender,
+  ColumnDef,
+} from "@tanstack/react-table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import PlayerCard from "@/components/player/PlayerCard";
 import { useTranslation } from "react-i18next";
 import {
   PLAYER_ADAPT_FILTERS,
@@ -7,43 +21,61 @@ import {
   PLAYER_RARITIES,
   PLAYER_ADAPT_TITLES,
 } from "@/config";
+
 const PlayerTable = (props) => {
   const { t } = useTranslation();
 
-  const getColumn = (text, type) => {
-    if (type === "adapt") {
-      return {
-        title: t(text),
-        dataIndex: PLAYER_ADAPT_TITLES[text],
-        key: PLAYER_ADAPT_TITLES[text],
-        width: 80,
-        render: (value) => coloredGradeText(value),
-        filters: PLAYER_ADAPT_FILTERS,
-        onFilter: (value, record) => record[PLAYER_ADAPT_TITLES[text]] === value,
-      };
-    } else if (type === "grow") {
-      return {
-        title: t(text),
-        dataIndex: PLAYER_ADAPT_TITLES[text],
-        key: PLAYER_ADAPT_TITLES[text],
-        width: 100,
-        render: (value) => coloredGradeText(value),
-        filters: PLAYER_GROW_FILTERS,
-        onFilter: (value, record) => record[PLAYER_ADAPT_TITLES[text]] === value,
-      };
-    }
+  const coloredGradeText = (value) => {
+    // Implement your colored grade text rendering here
+    return <span>{value}</span>;
   };
-  const columns = [
+
+  const getColumn = (text, type) => {
+    const accessorKey = PLAYER_ADAPT_TITLES[text];
+    const filters = type === "adapt" ? PLAYER_ADAPT_FILTERS : PLAYER_GROW_FILTERS;
+
+    return {
+      accessorKey,
+      header: t(text),
+      cell: ({ row }) => coloredGradeText(row.getValue(accessorKey)),
+      meta: {
+        filterOptions: filters.map(filter => ({
+          label: filter.text,
+          value: filter.value,
+        })),
+      },
+      size: type === "adapt" ? 80 : 100,
+    };
+  };
+
+  const columns: ColumnDef<any>[] = [
     {
-      title: "角色",
-      dataIndex: "imgUrl",
-      key: "imgUrl",
-      width: 100,
-      render: (text, record) => <Card data={record} onSelect={props.onSelect} name={false}></Card>,
+      accessorKey: "imgUrl",
+      header: "角色",
+      cell: ({ row }) => (
+        <PlayerCard
+          data={row.original}
+          onSelect={props.onSelect}
+          name={false}
+        />
+      ),
+      size: 100,
     },
-    { title: "称号", dataIndex: "name", key: "name", render: (value) => t(value) },
-    { title: "角色名", dataIndex: "charaName", key: "charaName", render: (value) => t(value) },
-    { title: "稀有度", dataIndex: "rare", key: "rare", render: (value) => PLAYER_RARITIES[value] },
+    {
+      accessorKey: "name",
+      header: "称号",
+      cell: ({ row }) => t(row.getValue("name")),
+    },
+    {
+      accessorKey: "charaName",
+      header: "角色名",
+      cell: ({ row }) => t(row.getValue("charaName")),
+    },
+    {
+      accessorKey: "rare",
+      header: "稀有度",
+      cell: ({ row }) => PLAYER_RARITIES[row.getValue("rare")],
+    },
     getColumn("芝", "adapt"),
     getColumn("ダート", "adapt"),
     getColumn("短距離", "adapt"),
@@ -61,14 +93,63 @@ const PlayerTable = (props) => {
     getColumn("賢さ", "grow"),
   ];
 
+  const table = useReactTable({
+    data: props.list.sort((a, b) => b.rare - a.rare),
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    initialState: {
+      columnVisibility: {
+        // You can hide columns here if needed
+      },
+    },
+  });
+
   return (
-    <Table
-      columns={columns}
-      dataSource={props.list.sort((a, b) => b.rare - a.rare)}
-      pagination={false}
-      rowKey={"id"}
-      scroll={{ y: window.innerHeight - 200 }}
-    />
+    <div className="rounded-md border">
+      <Table>
+        <TableHeader>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <TableHead
+                  key={header.id}
+                  style={{ width: header.getSize() }}
+                >
+                  {flexRender(
+                    header.column.columnDef.header,
+                    header.getContext()
+                  )}
+                  {/* You can add filter UI here if needed */}
+                </TableHead>
+              ))}
+            </TableRow>
+          ))}
+        </TableHeader>
+        <TableBody>
+          {table.getRowModel().rows?.length ? (
+            table.getRowModel().rows.map((row) => (
+              <TableRow
+                key={row.id}
+                data-state={row.getIsSelected() && "selected"}
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                No results.
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </div>
   );
 };
 

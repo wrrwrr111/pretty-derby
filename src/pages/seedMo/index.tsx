@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { message } from "antd";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import MobileSeedSearchForm from "@/components/seed/MobileSeedSearchForm";
 import MobileSeedCard from "@/components/seed/MobileSeedCard";
+import { toast } from "sonner";
 
 const MobileSeedList = () => {
   const { t } = useTranslation();
@@ -20,11 +20,11 @@ const MobileSeedList = () => {
         if (res.data.count) {
           setSeedList(res.data.list);
         } else {
-          message.info(t("暂无数据"));
+          toast.info(t("暂无数据"));
         }
       }
     } catch (error) {
-      message.info(t("出错了"));
+      toast.error(t("出错了"));
     }
   };
 

@@ -5,7 +5,6 @@ import EventList from "@/components/event/EventList";
 import SkillList from "@/components/skill/SkillList";
 // import RaceList from './player-race.js'
 import {
-  // RaceSchedule,
   RaceTimeline,
 } from "@/components/race/index";
 // import {EffectTable} from './effect.js'
@@ -72,7 +71,6 @@ const PlayerDetail = (props) => {
           <div>{t("隐藏事件")}</div>
           <EventList idList={data.hideEvent} type="all" />
           <div>{t("赛程")}</div>
-          {/* <RaceSchedule raceList={data.raceList}/> */}
           <RaceTimeline raceList={data.raceList} showButton={false} />
           <div>{t("技能")}</div>
           <SkillList idList={data.skillList} />
@@ -96,7 +94,6 @@ const PlayerDetail = (props) => {
           <div>{t("隐藏事件")}</div>
           <EventList idList={data.eventList4} />
           <div>{t("赛程")}</div>
-          {/* <RaceSchedule raceList={data.raceList}/> */}
           <RaceTimeline raceList={data.raceList} />
         </div>
       )}

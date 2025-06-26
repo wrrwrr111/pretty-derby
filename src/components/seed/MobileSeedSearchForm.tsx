@@ -1,88 +1,93 @@
 import React from "react";
-import { Picker, List } from "antd-mobile";
-import { Form, Rate } from "antd";
+import { useForm, useFieldArray } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PlayerInput from "./PlayerInput";
 import SupportInput from "./SupportInput";
-import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
-const SearchOne = ({ name }) => {
-  const { t } = useTranslation();
-  const PICKER_LISTS = [
-    [
-      { value: "speed", label: t("速度") },
-      { value: "stamina", label: t("耐力") },
-      { value: "power", label: t("力量") },
-      { value: "guts", label: t("根性") },
-      { value: "wisdom", label: t("智力") },
-      { value: "grass", label: t("草地") },
-      { value: "dirt", label: t("泥地") },
-      { value: "shortDistance", label: t("短距离") },
-      { value: "mile", label: t("英里") },
-      { value: "mediumDistance", label: t("中距离") },
-      { value: "longDistance", label: t("长距离") },
-      { value: "escapeR", label: t("逃") },
-      { value: "leadingR", label: t("先") },
-      { value: "insertR", label: t("差") },
-      { value: "trackingR", label: t("追") },
-    ],
-    [
-      { value: 1, label: `1${t("星")}` },
-      { value: 2, label: `2${t("星")}` },
-      { value: 3, label: `3${t("星")}` },
-      { value: 4, label: `4${t("星")}` },
-      { value: 5, label: `5${t("星")}` },
-      { value: 6, label: `6${t("星")}` },
-      { value: 7, label: `7${t("星")}` },
-      { value: 8, label: `8${t("星")}` },
-      { value: 9, label: `9${t("星")}` },
-    ],
-  ];
+const formSchema = z.object({
+  player0: z.object({
+    id: z.string(),
+    imgUrl: z.string().optional(),
+  }).optional(),
+  support: z.object({
+    id: z.string(),
+    imgUrl: z.string().optional(),
+  }).optional(),
+  supportLevel: z.number().min(0).max(4),
+  p1: z.array(
+    z.object({
+      attr: z.tuple([z.string(), z.number()]),
+    })
+  ).optional(),
+});
 
-  return (
-    <Form.List name={name}>
-      {(fields, { add }) => (
-        <List>
-          {fields.map((field) => (
-            <Form.Item
-              {...field}
-              key={field.key}
-              name={[field.name, "attr"]}
-              fieldKey={[field.fieldKey, "attr"]}
-              rules={[{ required: true }]}
-              validateTrigger={["onChange", "onBlur"]}
-              noStyle
-            >
-              <Picker data={PICKER_LISTS} cascade={false} extra={t("请选择")}>
-                <List.Item arrow="horizontal">{t("过滤条件(总计)")}</List.Item>
-              </Picker>
-            </Form.Item>
-          ))}
-          <List.Item>
-            <Button type="dashed" onClick={() => add()} icon={<Plus />}>
-              {t("添加过滤条件")}
-            </Button>
-          </List.Item>
-        </List>
-      )}
-    </Form.List>
-  );
-};
+const attributeOptions = [
+  { value: "speed", label: "速度" },
+  { value: "stamina", label: "耐力" },
+  { value: "power", label: "力量" },
+  { value: "guts", label: "根性" },
+  { value: "wisdom", label: "智力" },
+  { value: "grass", label: "草地" },
+  { value: "dirt", label: "泥地" },
+  { value: "shortDistance", label: "短距离" },
+  { value: "mile", label: "英里" },
+  { value: "mediumDistance", label: "中距离" },
+  { value: "longDistance", label: "长距离" },
+  { value: "escapeR", label: "逃" },
+  { value: "leadingR", label: "先" },
+  { value: "insertR", label: "差" },
+  { value: "trackingR", label: "追" },
+];
+
+const levelOptions = Array.from({ length: 9 }, (_, i) => ({
+  value: i + 1,
+  label: `${i + 1}星`,
+}));
 
 const MobileSeedSearchForm = ({ onSearch }) => {
   const { t } = useTranslation();
-  const [form] = Form.useForm();
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      supportLevel: 0,
+      p1: [],
+    },
+  });
 
-  const onFinish = async (values) => {
+  const { fields, append, remove } = useFieldArray({
+    control: form.control,
+    name: "p1",
+  });
+
+  const onSubmit = async (values) => {
     let formData = { attrs: [], levels: [] };
 
-    if (values.player0) {
+    if (values.player0?.id) {
       formData.attrs.push("playerId0");
       formData.levels.push(values.player0.id);
     }
 
-    if (values.support) {
+    if (values.support?.id) {
       formData.attrs.push("supportId");
       formData.levels.push(values.support.id);
     }
@@ -95,43 +100,156 @@ const MobileSeedSearchForm = ({ onSearch }) => {
     onSearch(formData);
   };
 
-  const onReset = () => form.resetFields();
+  const onReset = () => form.reset();
 
   return (
-    <Form form={form} onFinish={onFinish} className="w-full">
-      <SearchOne name="p1" />
-      <div className="grid grid-cols-4 w-full" align="start">
-        <div>
-          {t("角色")}
-          <Form.Item name="player0">
-            <PlayerInput />
-          </Form.Item>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <ScrollArea className="h-[60vh]">
+          <div className="space-y-4 p-2">
+            {fields.map((field, index) => (
+              <div key={field.id} className="space-y-2">
+                <div className="flex gap-2">
+                  <FormField
+                    control={form.control}
+                    name={`p1.${index}.attr.0`}
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder={t("选择属性")} />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {attributeOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {t(option.label)}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name={`p1.${index}.attr.1`}
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder={t("选择等级")} />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {levelOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {t(option.label)}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => remove(index)}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            ))}
+
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => append({ attr: ["", 1] })}
+              className="w-full"
+            >
+              <Plus className="h-4 w-4 mr-2" />
+              {t("添加过滤条件")}
+            </Button>
+          </div>
+        </ScrollArea>
+
+        <div className="grid grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="player0"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t("角色")}</FormLabel>
+                <FormControl>
+                  <PlayerInput
+                    value={field.value}
+                    onChange={(value) => field.onChange(value)}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="support"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t("支援卡")}</FormLabel>
+                <FormControl>
+                  <SupportInput
+                    value={field.value}
+                    onChange={(value) => field.onChange(value)}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
-        <div>
-          {t("支援卡")}
-          <Form.Item name="support">
-            <SupportInput />
-          </Form.Item>
-        </div>
-        <div className="col-span-2">
-          {t("突破等级")}
-          <Form.Item name="supportLevel" initialValue={0}>
-            <Rate count={4} />
-          </Form.Item>
-        </div>
-      </div>
-      <div className="flex justify-end">
-        <Form.Item>
-          <Button htmlType="button" onClick={onReset}>
+
+        <FormField
+          control={form.control}
+          name="supportLevel"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("突破等级")}</FormLabel>
+              <FormControl>
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4].map((num) => (
+                    <Button
+                      key={num}
+                      variant={field.value >= num ? "default" : "outline"}
+                      type="button"
+                      size="sm"
+                      onClick={() => field.onChange(num)}
+                    >
+                      {num}
+                    </Button>
+                  ))}
+                </div>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <div className="flex justify-end gap-2">
+          <Button type="button" variant="outline" onClick={onReset}>
             {t("重置")}
           </Button>
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            {t("搜索")}
-          </Button>
-        </Form.Item>
-      </div>
+          <Button type="submit">{t("搜索")}</Button>
+        </div>
+      </form>
     </Form>
   );
 };

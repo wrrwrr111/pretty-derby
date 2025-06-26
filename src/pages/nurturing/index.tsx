@@ -328,7 +328,7 @@ const Nurturing = () => {
 
       {/* Player Selection Dialog */}
       <Dialog open={isPlayerVisible} onOpenChange={setIsPlayerVisible}>
-        <DialogContent className="max-w-[80vw] h-[80vh]">
+        <DialogContent className="max-w-[80vw]! h-[80vh]">
           <DialogHeader>
             <DialogTitle>{t("选择马娘")}</DialogTitle>
           </DialogHeader>
@@ -340,7 +340,7 @@ const Nurturing = () => {
 
       {/* Support Card Selection Dialog */}
       <Dialog open={isSupportVisible} onOpenChange={setIsSupportVisible}>
-        <DialogContent className="max-w-[80vw] h-[80vh]">
+        <DialogContent className="max-w-[80vw]! h-[80vh]">
           <DialogHeader>
             <DialogTitle>{t("选择支援卡")}</DialogTitle>
           </DialogHeader>

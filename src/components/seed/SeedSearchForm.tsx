@@ -1,91 +1,172 @@
 import React from "react";
-import { Form, Row, Col, Radio, Rate, Button } from "antd";
+import { useForm, useFieldArray } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Plus, X } from "lucide-react";
 import PlayerInput from "./PlayerInput";
 import SupportInput from "./SupportInput";
-
-import { Plus } from "lucide-react";
 import { SEED_BLUE_LABELS, SEED_RED_LABELS } from "@/config";
 
-const SearchOne = ({ name, max }) => {
+const attributeOptions = [
+  { value: "speed", label: "速度" },
+  { value: "stamina", label: "耐力" },
+  { value: "power", label: "力量" },
+  { value: "guts", label: "根性" },
+  { value: "wisdom", label: "智力" },
+  { value: "grass", label: "草地/芝" },
+  { value: "dirt", label: "泥地/ダート" },
+  { value: "shortDistance", label: "短距离" },
+  { value: "mile", label: "英里" },
+  { value: "mediumDistance", label: "中距离" },
+  { value: "longDistance", label: "长距离" },
+  { value: "escapeR", label: "逃" },
+  { value: "leadingR", label: "先" },
+  { value: "insertR", label: "差" },
+  { value: "trackingR", label: "追" },
+  { value: "uraLevel", label: "URA" },
+];
+
+const serverOptions = [
+  { value: "zh-CN", label: "简中" },
+  { value: "zh-TW", label: "繁中" },
+  { value: "ja", label: "日服" },
+];
+
+const formSchema = z.object({
+  server: z.string().min(1, "请选择区服"),
+  player0: z.object({
+    id: z.string(),
+    imgUrl: z.string().optional(),
+  }).optional(),
+  support: z.object({
+    id: z.string(),
+    imgUrl: z.string().optional(),
+  }).optional(),
+  supportLevel: z.number().min(0).max(4),
+  p0: z.array(
+    z.object({
+      attr: z.string(),
+      level: z.number().min(1).max(3),
+    })
+  ).optional(),
+  p1: z.array(
+    z.object({
+      attr: z.string(),
+      level: z.number().min(1).max(9),
+    })
+  ).optional(),
+});
+
+const SearchOne = ({ name, max, control }) => {
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name,
+  });
+
   return (
-    <Form.List name={name}>
-      {(fields, { add, remove }, { errors }) => (
-        <>
-          <Row>
-            {fields.map((field) => (
-              <Col key={field.key} lg={8} md={12} xs={24}>
-                <Row>
-                  <Form.Item
-                    {...field}
-                    name={[field.name, "attr"]}
-                    fieldKey={[field.fieldKey, "attr"]}
-                    rules={[{ required: true }]}
-                    validateTrigger={["onChange", "onBlur"]}
-                    noStyle
-                  >
-                    <Radio.Group>
-                      <Radio.Button value={"speed"}>{"速度"}</Radio.Button>
-                      <Radio.Button value={"stamina"}>{"耐力"}</Radio.Button>
-                      <Radio.Button value={"power"}>{"力量"}</Radio.Button>
-                      <Radio.Button value={"guts"}>{"根性"}</Radio.Button>
-                      <Radio.Button value={"wisdom"}>{"智力"}</Radio.Button>
-                      <br />
-                      <Radio.Button value={"grass"}>{"草地/芝"}</Radio.Button>
-                      <Radio.Button value={"dirt"}>{"泥地/ダート"}</Radio.Button>
-                      <br />
-                      <Radio.Button value={"shortDistance"}>{"短距离"}</Radio.Button>
-                      <Radio.Button value={"mile"}>{"英里"}</Radio.Button>
-                      <Radio.Button value={"mediumDistance"}>{"中距离"}</Radio.Button>
-                      <Radio.Button value={"longDistance"}>{"长距离"}</Radio.Button>
-                      <br />
-                      <Radio.Button value={"escapeR"}>{"逃"}</Radio.Button>
-                      <Radio.Button value={"leadingR"}>{"先"}</Radio.Button>
-                      <Radio.Button value={"insertR"}>{"差"}</Radio.Button>
-                      <Radio.Button value={"trackingR"}>{"追"}</Radio.Button>
-                      <br />
-                      <Radio.Button value={"uraLevel"}>{"URA"}</Radio.Button>
-                    </Radio.Group>
-                  </Form.Item>
-                </Row>
-                <Row>
-                  <Form.Item
-                    {...field}
-                    name={[field.name, "level"]}
-                    fieldKey={[field.fieldKey, "level"]}
-                    rules={[{ required: true }]}
-                  >
-                    <Rate count={max} />
-                  </Form.Item>
-                </Row>
-                <Col span={5}>
-                  <Button type="dashed" onClick={() => remove(field.name)}>
-                    移除
-                  </Button>
-                </Col>
-              </Col>
-            ))}
-          </Row>
-          <Row justify="start">
-            <Form.Item>
-              <Button type="dashed" onClick={() => add()} icon={<Plus />}>
-                添加过滤条件
-              </Button>
-              <Form.ErrorList errors={errors} />
-            </Form.Item>
-          </Row>
-        </>
-      )}
-    </Form.List>
+    <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {fields.map((field, index) => (
+          <div key={field.id} className="border p-4 rounded-lg space-y-2">
+            <FormField
+              control={control}
+              name={`${name}.${index}.attr`}
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                      className="flex flex-wrap gap-2"
+                    >
+                      {attributeOptions.map((option) => (
+                        <FormItem key={option.value} className="flex items-center space-x-1">
+                          <FormControl>
+                            <RadioGroupItem value={option.value} />
+                          </FormControl>
+                          <FormLabel className="font-normal">
+                            {option.label}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={control}
+              name={`${name}.${index}.level`}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>等级</FormLabel>
+                  <FormControl>
+                    <div className="flex items-center gap-1">
+                      {[...Array(max)].map((_, i) => (
+                        <Button
+                          key={i}
+                          variant={field.value > i ? "default" : "outline"}
+                          size="sm"
+                          type="button"
+                          onClick={() => field.onChange(i + 1)}
+                        >
+                          {i + 1}
+                        </Button>
+                      ))}
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => remove(index)}
+              className="mt-2"
+            >
+              <X className="h-4 w-4 mr-1" /> 移除
+            </Button>
+          </div>
+        ))}
+      </div>
+      <Button
+        type="button"
+        variant="outline"
+        onClick={() => append({ attr: "", level: 1 })}
+      >
+        <Plus className="h-4 w-4 mr-1" /> 添加过滤条件
+      </Button>
+    </div>
   );
 };
 
 const SeedSearchForm = ({ onSearch }) => {
-  const [form] = Form.useForm();
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      server: "",
+      supportLevel: 0,
+      p0: [],
+      p1: [],
+    },
+  });
 
-  const onFinish = (values) => {
+  const onSubmit = (values) => {
     let formData = { attrs: [], levels: [] };
 
-    if (values.player0) {
+    if (values.player0?.id) {
       formData.attrs.push("playerId0");
       formData.levels.push(values.player0.id);
     }
@@ -95,7 +176,7 @@ const SeedSearchForm = ({ onSearch }) => {
       formData.levels.push(values.supportLevel);
     }
 
-    if (values.support) {
+    if (values.support?.id) {
       formData.attrs.push("supportId");
       formData.levels.push(values.support.id);
     }
@@ -128,47 +209,117 @@ const SeedSearchForm = ({ onSearch }) => {
     onSearch(formData);
   };
 
-  const onReset = () => form.resetFields();
+  const onReset = () => form.reset();
 
   return (
-    <Form form={form} onFinish={onFinish} className="seed-form">
-      <Row>
-        <Form.Item label="区服" name="server" rules={[{ required: true }]}>
-          <Radio.Group>
-            <Radio.Button value="zh-CN">简中</Radio.Button>
-            <Radio.Button value="zh-TW">繁中</Radio.Button>
-            <Radio.Button value="ja">日服</Radio.Button>
-          </Radio.Group>
-        </Form.Item>
-      </Row>
-      <Row>
-        <Form.Item label="角色" name="player0">
-          <PlayerInput />
-        </Form.Item>
-      </Row>
-      <SearchOne name="p0" max="3" />
-      <div>总计:</div>
-      <SearchOne name="p1" max="9" />
-      <Row>
-        <Form.Item label="支援卡" name="support">
-          <SupportInput />
-        </Form.Item>
-        <Form.Item label="突破等级" name="supportLevel" initialValue={0}>
-          <Rate count={4} />
-        </Form.Item>
-      </Row>
-      <Row justify="end">
-        <Form.Item>
-          <Button htmlType="button" onClick={onReset}>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <FormField
+          control={form.control}
+          name="server"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>区服</FormLabel>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex gap-2"
+                >
+                  {serverOptions.map((option) => (
+                    <FormItem key={option.value} className="flex items-center space-x-1">
+                      <FormControl>
+                        <RadioGroupItem value={option.value} />
+                      </FormControl>
+                      <FormLabel className="font-normal">
+                        {option.label}
+                      </FormLabel>
+                    </FormItem>
+                  ))}
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="player0"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>角色</FormLabel>
+              <FormControl>
+                <PlayerInput
+                  value={field.value}
+                  onChange={(value) => field.onChange(value)}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <div>
+          <h4 className="mb-2">蓝色/红色/URA因子</h4>
+          <SearchOne name="p0" max={3} control={form.control} />
+        </div>
+
+        <div>
+          <h4 className="mb-2">总计</h4>
+          <SearchOne name="p1" max={9} control={form.control} />
+        </div>
+
+        <FormField
+          control={form.control}
+          name="support"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>支援卡</FormLabel>
+              <FormControl>
+                <SupportInput
+                  value={field.value}
+                  onChange={(value) => field.onChange(value)}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="supportLevel"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>突破等级</FormLabel>
+              <FormControl>
+                <div className="flex items-center gap-1">
+                  {[...Array(4)].map((_, i) => (
+                    <Button
+                      key={i}
+                      variant={field.value > i ? "default" : "outline"}
+                      size="sm"
+                      type="button"
+                      onClick={() => field.onChange(i + 1)}
+                    >
+                      {i + 1}
+                    </Button>
+                  ))}
+                </div>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <div className="flex justify-end gap-2">
+          <Button type="button" variant="outline" onClick={onReset}>
             重置
           </Button>
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            搜索
-          </Button>
-        </Form.Item>
-      </Row>
+          <Button type="submit">搜索</Button>
+        </div>
+      </form>
     </Form>
   );
 };

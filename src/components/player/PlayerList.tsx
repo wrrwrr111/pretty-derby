@@ -5,7 +5,7 @@ import PlayerDetail from "./PlayerDetail";
 import List from "@/components/common/List";
 import useUa from "@/utils/ua";
 
-const PlayerList = ({ className, dataList, onClick, sortFlag = false }) => {
+const PlayerList = ({ className = "", dataList = null, onClick, sortFlag = false }) => {
   const ua = useUa();
   const navigate = useNavigate();
   const sort = {

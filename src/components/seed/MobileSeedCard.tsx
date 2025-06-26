@@ -1,12 +1,12 @@
 import React from "react";
 import { useDB } from "@/hooks";
-import { message } from "antd";
 import { Smile, Frown, Copy } from "lucide-react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS } from "@/config";
 import dbL from "@/dbL";
+import { toast } from "sonner";
 
 const userId = dbL.get("userId").value();
 
@@ -21,7 +21,7 @@ const MobileSeedCard = ({ data }) => {
 
   const like = async (seed) => {
     if (!userId) {
-      message.info(t("刷新后重试"));
+      toast.info(t("刷新后重试"));
       return;
     }
     const res = await axios.post(
@@ -29,14 +29,14 @@ const MobileSeedCard = ({ data }) => {
       { id: seed.id, userId }
     );
     if (res.data) {
-      message.info(t("成功"));
+      toast.info(t("成功"));
       seed.likes += 1;
     }
   };
 
   const dislike = async (seed) => {
     if (!userId) {
-      message.info(t("刷新后重试"));
+      toast.info(t("刷新后重试"));
       return;
     } else if (seed.dislikes && seed.dislikes.indexOf(userId) !== -1) {
       return;
@@ -46,7 +46,7 @@ const MobileSeedCard = ({ data }) => {
       { id: seed.id, userId }
     );
     if (res.data) {
-      message.info(t("成功"));
+      toast.info(t("成功"));
       seed.dislikes += 1;
     }
   };

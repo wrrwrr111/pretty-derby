@@ -1,9 +1,18 @@
 import React from "react";
-import { Table, Slider } from "antd";
+import { useReactTable, getCoreRowModel, flexRender, ColumnDef } from "@tanstack/react-table";
+import { Badge } from "@/components/ui/badge";
 
+import {
+  Table as ShadTable,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Slider } from "@/components/ui/slider";
 import { useTranslation } from "react-i18next";
 import { useDB } from "@/hooks/index";
-
 import { EFFECT_LIMITS } from "@/config";
 
 const getValue = (effect, cur) => {
@@ -44,102 +53,135 @@ const getValue = (effect, cur) => {
     }
   }
 };
+
 const EffectTable = (props) => {
   const { t } = useTranslation();
   const db = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
-  let columns = [
+
+  // 定义列配置
+  let columns: ColumnDef<any>[] = [
     {
-      title: t("效果"),
-      dataIndex: "type",
-      key: "type",
-      width: 200,
-      render: (type) => (
+      accessorKey: "type",
+      header: t("效果"),
+      cell: ({ row }) => (
         <p
-          data-tip={`<div><p>${effects[type].name}</p><p>${t(effects[type].name)}</p><p>${
-            effects[type].description
-          }</p><p>${t(effects[type].description)}</p></div>`}
+          data-tip={`<div><p>${effects[row.original.type].name}</p><p>${t(
+            effects[row.original.type].name
+          )}</p><p>${effects[row.original.type].description}</p><p>${t(
+            effects[row.original.type].description
+          )}</p></div>`}
         >
-          {t(effects[type].name)}
+          {t(effects[row.original.type].name)}
         </p>
       ),
     },
     {
-      title: t("初始"),
-      dataIndex: "init",
-      key: "init",
-      render: (div, record) => getValue(record, "init"),
+      accessorKey: "init",
+      header: t("初始"),
+      cell: ({ row }) => getValue(row.original, "init"),
     },
     {
-      title: "lv25",
-      dataIndex: "limit_lv25",
-      key: "limit_lv25",
-      render: (div, record) => getValue(record, "limit_lv25"),
+      accessorKey: "limit_lv25",
+      header: "lv25",
+      cell: ({ row }) => getValue(row.original, "limit_lv25"),
     },
     {
-      title: "lv30",
-      dataIndex: "limit_lv30",
-      key: "limit_lv30",
-      render: (div, record) => getValue(record, "limit_lv30"),
+      accessorKey: "limit_lv30",
+      header: "lv30",
+      cell: ({ row }) => getValue(row.original, "limit_lv30"),
     },
     {
-      title: "lv35",
-      dataIndex: "limit_lv35",
-      key: "limit_lv35",
-      render: (div, record) => getValue(record, "limit_lv35"),
+      accessorKey: "limit_lv35",
+      header: "lv35",
+      cell: ({ row }) => getValue(row.original, "limit_lv35"),
     },
     {
-      title: "lv40",
-      dataIndex: "limit_lv40",
-      key: "limit_lv40",
-      render: (div, record) => getValue(record, "limit_lv40"),
+      accessorKey: "limit_lv40",
+      header: "lv40",
+      cell: ({ row }) => getValue(row.original, "limit_lv40"),
     },
     {
-      title: "lv45",
-      dataIndex: "limit_lv45",
-      key: "limit_lv45",
-      render: (div, record) => getValue(record, "limit_lv45"),
+      accessorKey: "limit_lv45",
+      header: "lv45",
+      cell: ({ row }) => getValue(row.original, "limit_lv45"),
     },
     {
-      title: "lv50",
-      dataIndex: "limit_lv50",
-      key: "limit_lv50",
-      render: (div, record) => getValue(record, "limit_lv50"),
+      accessorKey: "limit_lv50",
+      header: "lv50",
+      cell: ({ row }) => getValue(row.original, "limit_lv50"),
     },
   ];
+
+  // 根据稀有度过滤列
   if (props.rarity === 2) {
     columns = columns.slice(0, columns.length - 1);
   } else if (props.rarity === 1) {
     columns = columns.slice(0, columns.length - 2);
   }
 
+  // 使用 useReactTable hook
+  const table = useReactTable({
+    data: props.effects,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getRowId: (row) => row.type, // 使用 type 作为行 ID
+  });
+
   return (
     <div className="w-full overflow-x-auto">
-      <Table columns={columns} dataSource={props.effects} divKey="type" pagination={false}></Table>
+      <ShadTable>
+        <TableHeader>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <TableHead key={header.id}>
+                  {flexRender(header.column.columnDef.header, header.getContext())}
+                </TableHead>
+              ))}
+            </TableRow>
+          ))}
+        </TableHeader>
+        <TableBody>
+          {table.getRowModel().rows?.length ? (
+            table.getRowModel().rows.map((row) => (
+              <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                No results.
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </ShadTable>
     </div>
   );
 };
 
 const getEffectMark = (maxLevel) => {
-  let ok = {
-    1: "lv1",
-    5: "lv5",
-    10: "lv10",
-    15: "lv15",
-    20: "lv20",
-    25: "lv25",
-    30: "lv30",
-    35: "lv35",
-    40: "lv40",
-  };
+  let marks = [];
+  const levels = [1, 5, 10, 15, 20, 25, 30, 35, 40];
+
   if (maxLevel >= 45) {
-    ok[45] = "lv45";
+    levels.push(45);
   }
   if (maxLevel === 50) {
-    ok[50] = "lv50";
+    levels.push(50);
   }
-  return ok;
+
+  return levels.map((level) => ({
+    value: level,
+    label: `lv${level}`,
+  }));
 };
 
 const TestEffectTable = (props) => {
@@ -158,6 +200,7 @@ const TestEffectTable = (props) => {
   };
   const maxLevel = getMaxLevel(props.rarity);
   const [selectingLevel, setSelectingLevel] = React.useState(maxLevel);
+
   const calc = (data, input) => {
     let nodes = [];
     let output = 0;
@@ -175,7 +218,7 @@ const TestEffectTable = (props) => {
         nodes.push({ level: maxLevel, value: prevNode.value });
       }
     }
-    nodes.push({ level: 999, value: prevNode.value }); // 以后万一出SSSR？确保一定能找到区间。
+    nodes.push({ level: 999, value: prevNode.value });
 
     const level = Math.floor(input);
     let upperNode = { level: 0, value: 0 };
@@ -201,11 +244,13 @@ const TestEffectTable = (props) => {
 
     return output;
   };
+
   const db = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
+
   return (
-    <div>
+    <div className="space-y-4">
       {props.unique_effect && (
         <>
           <div className="flex w-full items-center justify-between p-2">
@@ -240,21 +285,25 @@ const TestEffectTable = (props) => {
           </div>
         </>
       )}
-      <div className="w-full flex items-center">
-        <div className="mr-2">{t("设置等级")}</div>
+
+      <div className="w-full flex items-center gap-4">
+        <div className="whitespace-nowrap">{t("设置等级")}</div>
         <Slider
-          className="flex-auto"
+          className="w-full"
           min={1}
           max={maxLevel}
-          value={selectingLevel}
-          onChange={(value) => {
-            setSelectingLevel(value);
-          }}
+          value={[selectingLevel]}
+          onValueChange={(value) => setSelectingLevel(value[0])}
+          step={1}
           marks={getEffectMark(maxLevel)}
         />
+        <Badge variant="outline" className="min-w-[3rem] justify-center">
+          lv{selectingLevel}
+        </Badge>
       </div>
-      <div className="w-full grid grid-cols-2 gap-2 ">
-        {props.effects?.map((item, index) => {
+
+      <div className="w-full grid grid-cols-2 gap-2">
+        {props.effects?.map((item) => {
           const data = [
             item.init,
             item.limit_lv5,
@@ -268,6 +317,7 @@ const TestEffectTable = (props) => {
             item.limit_lv45,
             item.limit_lv50,
           ].filter((item) => item);
+
           return (
             <div
               key={item.type}
