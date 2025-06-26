@@ -1,0 +1,1 @@
+import{j as r}from"./index-pzd77Z4S.js";import{i as p}from"./PlayerList-BtjsnH6o.js";import"./index-B2GkG6WS.js";import"./Helmet-WtT2JHsX.js";const x=e=>{var t,a;const o=(a=(t=e.match)==null?void 0:t.params)==null?void 0:a.id;return r.jsx("div",{className:"flex flex-auto w-full flex-wrap max-w-6xl mx-auto",children:r.jsx(p,{id:o,page:!0})})};export{x as default};
