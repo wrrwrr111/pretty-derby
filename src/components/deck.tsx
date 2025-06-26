@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import shortid from "shortid";
 import axios from "axios";
 
-import { Button } from "@/components/ui/button";;
+import { Button } from "@/components/ui/button";
 import { Tag, message, Popover, Popconfirm, Checkbox } from "antd";
 
 import dbL from "@/dbL";
@@ -54,7 +54,10 @@ const MyDecks = (props) => {
       ...deck,
       id: deck.playerId + deck.supportsId.sort((a, b) => a.localeCompare(b)).join(""),
     };
-    const res = await axios.post("https://urarawin-worker.urarawin.workers.dev/api/sqlite/addDeck", formData);
+    const res = await axios.post(
+      "https://urarawin-worker.urarawin.workers.dev/api/sqlite/addDeck",
+      formData
+    );
     const data = res.data;
     data && message.info(data.msg);
   };
@@ -70,7 +73,7 @@ const MyDecks = (props) => {
       overlayStyle={{ maxHeight: 800, overflow: "auto" }}
       content={
         <>
-          <Button size="sm" buttonType="outline" onClick={() => saveDeck()}>
+          <Button size="sm" variant="outline" onClick={() => saveDeck()}>
             {t("保存为新卡组")}
           </Button>
           {decks.map((deck) => (
@@ -88,21 +91,17 @@ const MyDecks = (props) => {
                 </div>
               ))}
               <div className="col-span-1">
-                <Button type="primary" onClick={() => props.loadDeck(deck)}>
+                <Button variant="outline" onClick={() => props.loadDeck(deck)}>
                   {t("读取卡组")}
                 </Button>
                 <Popconfirm title={t("确认覆盖？")} onConfirm={() => saveDeck(deck)}>
-                  <Button danger type="dashed">
-                    {t("覆盖卡组")}
-                  </Button>
+                  <Button variant="destructive">{t("覆盖卡组")}</Button>
                 </Popconfirm>
                 <Popconfirm title={t("确认删除？")} onConfirm={() => deleteDeck(deck)}>
-                  <Button danger type="dashed">
-                    {t("删除卡组")}
-                  </Button>
+                  <Button variant="destructive">{t("删除卡组")}</Button>
                 </Popconfirm>
                 <Popconfirm title={t("确认分享？")} onConfirm={() => shareDeck(deck)}>
-                  <Button>分享卡组</Button>
+                  <Button variant="outline">分享卡组</Button>
                 </Popconfirm>
               </div>
             </div>
@@ -110,7 +109,7 @@ const MyDecks = (props) => {
         </>
       }
     >
-      <Button size="sm" buttonType="outline">
+      <Button size="sm" variant="outline">
         {t("我的卡组")}
       </Button>
     </Popover>
@@ -125,7 +124,10 @@ const RecommendDecks = (props) => {
   const searchDeck = async () => {
     if (playerId !== props.player.id) {
       const formData = props.player ? { playerId: props.player.id } : {};
-      const res = await axios.post("https://urarawin-worker.urarawin.workers.dev/api/sqlite/searchDeck", formData);
+      const res = await axios.post(
+        "https://urarawin-worker.urarawin.workers.dev/api/sqlite/searchDeck",
+        formData
+      );
       setRecommendDecks(res.data || []);
       setPlayerId(props.player.id);
     }
