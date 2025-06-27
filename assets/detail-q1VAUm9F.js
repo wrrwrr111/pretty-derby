@@ -1,0 +1,1 @@
+import{j as o}from"./index-jacESoZy.js";import{k as e}from"./PlayerList-CSXDYawH.js";import"./index-Cf1etpk7.js";import"./Helmet-jrb3zR2c.js";const n=a=>{var t,r;const i=(r=(t=a.match)==null?void 0:t.params)==null?void 0:r.id;return o.jsx(e,{id:i,page:!0})};export{n as default};
