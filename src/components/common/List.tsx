@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+// List.tsx
+import React, { useState, useMemo, useCallback } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
 import { useDB } from "@/hooks/useDB";
 
-interface ListProps<T> {
+export type SortConfig<T extends ItemWithId> = {
+  key?: string;
+  data: Array<{
+    title: string;
+    value?: any;
+    func?: (item: T) => boolean;
+  }>;
+};
+
+export type ListProps<T extends ItemWithId> = {
   className?: string;
   listKey?: string;
-  sort?: {
-    data: Array<{
-      title: string;
-      value?: any;
-      func?: (item: T) => boolean;
-    }>;
-    key?: string;
-  };
+  sort?: SortConfig<T>;
   filterFunc?: (item: T) => boolean;
   idList?: string[];
   dataList?: T[];
@@ -21,9 +24,9 @@ interface ListProps<T> {
   itemClass?: string;
   detailRender: (item: T | null) => React.ReactNode;
   detailModalSize?: "sm" | "md" | "lg" | "xl" | "2xl";
-}
+};
 
-const List = <T extends { id: string; name?: string }>({
+const List = <T extends ItemWithId>({
   className,
   listKey,
   sort,
@@ -38,36 +41,35 @@ const List = <T extends { id: string; name?: string }>({
   const { t } = useTranslation();
   const [show, setShow] = useState(false);
   const [currentItem, setCurrentItem] = useState<T | null>(null);
-
   const { db } = useDB();
-  if (!db) return null;
 
-  const list = dataList
-    ? dataList
-    : idList
-      ? idList.reduce((list, cur) => {
-          return [...list, db.chain.get(listKey).find({ id: cur }).value()];
-        }, [])
-      : db.chain.get(listKey).value();
-
-  const showModal = (item: T) => {
+  const showModal = useCallback((item: T) => {
     setCurrentItem(item);
     setShow(true);
-  };
+  }, []);
 
-  if (!list) return null;
+  const list: T[] | null = useMemo(() => {
+    if (!db) return null;
 
-  const renderContent = () => {
+    if (dataList) return dataList;
+    if (idList && listKey) {
+      // @ts-ignore
+      return idList.map((id) => db.chain.get(listKey).find({ id }).value());
+    }
+    if (listKey) return db.chain.get(listKey).value();
+    return null;
+  }, [db, listKey, idList, dataList]);
+
+  const renderContent = useMemo(() => {
+    if (!list) return null;
+
     if (sort) {
       return sort.data.map((sortItem) => {
         const sortList = list.filter((item) => {
           if (sort.key && sortItem.value) {
             return item[sort.key as keyof T] === sortItem.value;
           }
-          if (sortItem.func) {
-            return sortItem.func(item);
-          }
-          return false;
+          return sortItem.func ? sortItem.func(item) : false;
         });
 
         if (!sortList.length) return null;
@@ -86,16 +88,18 @@ const List = <T extends { id: string; name?: string }>({
           </React.Fragment>
         );
       });
-    } else {
-      return list
-        .filter((data) => (filterFunc ? filterFunc(data) : true))
-        .map((data) => itemRender(data, showModal));
     }
-  };
+
+    return list
+      .filter((data) => (filterFunc ? filterFunc(data) : true))
+      .map((data) => itemRender(data, showModal));
+  }, [list, sort, filterFunc, itemRender, showModal, itemClass, t]);
+
+  if (!db || !list) return null;
 
   return (
     <div className={`flex flex-wrap ${className}`}>
-      {renderContent()}
+      {renderContent}
 
       <Dialog open={show} onOpenChange={setShow}>
         <DialogContent className={`max-w-${detailModalSize}`}>

@@ -21,10 +21,8 @@ interface SkillAbility {
 type SkillAbilities = SkillAbility[];
 
 /** 技能类型 */
-interface Skill {
+interface Skill extends ItemWithId{
   /** 基础信息 */
-  name: string;
-  id: string;
   describe: string;
   imgUrl: string;
   rare: SkillRarity;

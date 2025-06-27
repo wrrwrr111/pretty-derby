@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import lodash from "lodash";
 
 // Define your database schema
-type Schema = {
+export type Schema = {
   players: PlayerList;
   supports: SupportCardList;
-  skills: Skill[];
+  skills: SkillList[];
   events: any[];
   updateTime: string;
   races: any[];

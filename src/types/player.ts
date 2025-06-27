@@ -20,9 +20,7 @@ interface RaceList {
   [key: string]: RaceInfo; // key 是比赛编号字符串 (如 "28")
 }
 
-interface Player {
-  /** 玩家名称 */
-  name: string;
+interface Player extends ItemWithId {
 
   /** 跑道适性 */
   grass: TrackAffinity;
@@ -63,7 +61,6 @@ interface Player {
   hideEvent: string[];
 
   /** 标识信息 */
-  id: string;
   rare: string;
   gwId: string;
   charaName: string;

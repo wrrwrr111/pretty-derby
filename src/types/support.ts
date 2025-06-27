@@ -52,12 +52,10 @@ interface UniqueEffect {
 
 // src/types/support.ts
 
-interface SupportCard {
+interface SupportCard extends ItemWithId {
   /** 基本信息 */
-  name: string;
   rare: Rarity;
   type: SupportType;
-  id: string;
   gwId: string;
   imgUrl: string;
   charaName: string;
