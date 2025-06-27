@@ -1,1 +1,0 @@
-import{j as e}from"./index-kTOQ8-TP.js";import{k as o}from"./PlayerList-Blf72vC9.js";import"./Helmet-B3MzCiV0.js";const p=r=>{var t,a;const i=(a=(t=r.match)==null?void 0:t.params)==null?void 0:a.id;return e.jsx(o,{id:i,page:!0})};export{p as default};
