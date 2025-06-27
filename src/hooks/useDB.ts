@@ -1,13 +1,13 @@
 import { Low, Memory } from "lowdb";
 import { JSONFile } from "lowdb/node"; // If you need file storage later
 import { useState, useEffect } from "react";
-import lodash from 'lodash'
+import lodash from "lodash";
 
 // Define your database schema
 type Schema = {
   players: PlayerList;
   supports: SupportCardList;
-  skills: any[];
+  skills: Skill[];
   events: any[];
   updateTime: string;
   races: any[];
@@ -17,10 +17,10 @@ type Schema = {
 
 // Extend Low class with a new `chain` field
 class LowWithLodash<T> extends Low<T> {
-  chain: lodash.ExpChain<this['data']> = lodash.chain(this).get('data')
+  chain: lodash.ExpChain<this["data"]> = lodash.chain(this).get("data");
 }
 
-let db: LowWithLodash<Schema> | null = null;
+let db: LowWithLodash<Schema>;
 let dbReady = false;
 
 export function useDB() {

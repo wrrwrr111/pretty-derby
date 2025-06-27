@@ -4,7 +4,13 @@ import EventCard from "./EventCard";
 import EventDetail from "./EventDetail";
 import List from "@/components/common/List";
 
-const EventList = ({ dataList, idList, onClick, sortFlag = false, type = "all" }) => {
+const EventList = ({
+  dataList = [],
+  idList,
+  onClick = () => null,
+  sortFlag = false,
+  type = "all",
+}) => {
   const sort = sortFlag
     ? {
         data: [

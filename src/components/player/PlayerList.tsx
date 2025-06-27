@@ -5,7 +5,17 @@ import PlayerDetail from "./PlayerDetail";
 import List from "@/components/common/List";
 import useUa from "@/hooks/useUa";
 
-const PlayerList = ({ className = "", dataList = null, onClick, sortFlag = false }) => {
+const PlayerList = ({
+  className,
+  dataList,
+  onClick,
+  sortFlag = false,
+}: {
+  className?: string;
+  dataList: PlayerList;
+  onClick?: (e: Player) => void;
+  sortFlag?: boolean;
+}) => {
   const ua = useUa();
   const navigate = useNavigate();
   const sort = {
@@ -21,7 +31,7 @@ const PlayerList = ({ className = "", dataList = null, onClick, sortFlag = false
       className={className}
       listKey="players"
       dataList={dataList}
-      sort={sortFlag && sort}
+      sort={sortFlag ? sort : undefined}
       itemRender={(data, setCur) => (
         <div key={`player_${data.id}`} className="w-24 max-w-1/4 p-1">
           <PlayerCard
@@ -38,7 +48,7 @@ const PlayerList = ({ className = "", dataList = null, onClick, sortFlag = false
         </div>
       )}
       itemClass="w-24 max-w-1/4 "
-      detailRender={(data) => <PlayerDetail data={data} isNur={false} />}
+      detailRender={(data) => data && <PlayerDetail data={data} isNur={false} />}
       // detailModalSize='regular'
     />
   );

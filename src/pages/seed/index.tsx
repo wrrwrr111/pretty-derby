@@ -22,7 +22,7 @@ const Seed = () => {
   const [seedList, setSeedList] = useState<SeedData[]>([]);
   const [total, setTotal] = useState(0);
   const [searchParams, setSearchParams] = useState({});
-  const userId = dbL.get("userId").value();
+  const userId = dbL.chain.get("userId").value();
 
   const showSeedInput = () => setIsSeedInputVisible(true);
   const closeSeedInput = () => setIsSeedInputVisible(false);

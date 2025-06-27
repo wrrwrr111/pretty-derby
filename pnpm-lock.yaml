@@ -135,6 +135,9 @@ importers:
       '@eslint/js':
         specifier: ^9.25.0
         version: 9.29.0
+      '@types/lodash':
+        specifier: ^4.17.19
+        version: 4.17.19
       '@types/lowdb':
         specifier: ^2.0.3
         version: 2.0.3
@@ -1201,6 +1204,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/lodash@4.17.19':
+    resolution: {integrity: sha512-NYqRyg/hIQrYPT9lbOeYc3kIRabJDn/k4qQHIXUpx88CBDww2fD15Sg5kbXlW86zm2XEW4g0QxkTI3/Kfkc7xQ==}
 
   '@types/lowdb@2.0.3':
     resolution: {integrity: sha512-YZUXD9jLt2aLsi0FIeL490JQ3r//Osp9OZYJLTbhRk2cJjrrtFmD0DvZ+GeFOjMlVB6l8AWT2/80ufJR94dQBA==}
@@ -3353,6 +3359,8 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/lodash@4.17.19': {}
 
   '@types/lowdb@2.0.3':
     dependencies:

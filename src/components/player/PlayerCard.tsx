@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import { CDN_SERVER } from "@/config";
 import { useTranslation } from "react-i18next";
-const PlayerCard = (props) => {
+const PlayerCard = (props: {
+  data: Player;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+  className?: string;
+}) => {
   const { data, onClick, className } = props;
   const { t } = useTranslation();
   const [show, setShow] = useState(true);

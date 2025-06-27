@@ -2,7 +2,21 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import SkillDetail from "./SkillDetail";
 import List from "@/components/common/List";
-const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, size = "medium" }) => {
+const SkillList = ({
+  className,
+  idList,
+  dataList,
+  onClick,
+  sortFlag = false,
+  size = "medium",
+}: {
+  className?: string;
+  idList?: string[];
+  dataList?: Skill[];
+  onClick?: () => null;
+  sortFlag?: boolean;
+  size?: string;
+}) => {
   const sort = {
     key: "rare",
     data: [
@@ -28,9 +42,7 @@ const SkillList = ({ className, idList, dataList, onClick, sortFlag = false, siz
           <SkillCard
             className={"md:px-1 "}
             data={data}
-            onClick={
-              () => (onClick ? onClick(data) : setCur(data))
-            }
+            onClick={() => (onClick ? onClick(data) : setCur(data))}
           />
         </div>
       )}

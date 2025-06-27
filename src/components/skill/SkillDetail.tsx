@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import SupportList from "@/components/support/SupportList";
 import PlayerList from "@/components/player/PlayerList";
 
@@ -7,19 +7,33 @@ import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-const SkillDetail = (props) => {
+const SkillDetail = ({
+  id,
+  data,
+  isNur,
+  page,
+}: {
+  id?: string;
+  data?: Skill;
+  isNur?: boolean;
+  page?: boolean;
+}) => {
   const { t } = useTranslation();
   const { db } = useDB();
-  if (!db) return null;
-  const id = props.id;
-  const data = props.data || db.chain.get("skills").find({ id }).value();
-  const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
+
+  const fullData = useMemo(() => {
+    // 优先使用直接传入的data
+    if (data) return data;
+
+    return db.chain.get("skills").find({ id }).value();
+  }, [id, data, db]);
+
   const supportList = db.chain
     .get("supports")
     .filter((support) => {
       let flag = 0;
       support.skillList.forEach((id) => {
-        if (id === data?.id) {
+        if (id === fullData?.id) {
           flag = 1;
         }
       });
@@ -33,7 +47,7 @@ const SkillDetail = (props) => {
     .filter((player) => {
       let flag = 0;
       player.skillList.forEach((id) => {
-        if (id === data?.id) {
+        if (id === fullData?.id) {
           flag = 1;
         }
       });
@@ -42,7 +56,7 @@ const SkillDetail = (props) => {
     .sort((a, b) => b.rarity - a.rarity)
     .value();
 
-  if (!data) return null;
+  if (!fullData) return null;
   return (
     <div
       className="w-full flex flex-col p-3"
@@ -50,43 +64,43 @@ const SkillDetail = (props) => {
         maxWidth: "calc(100vw - 40px)",
       }}
     >
-      {props.page && (
+      {page && (
         <Helmet>
-          <title>{t(data.name)} - 技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
+          <title>{t(fullData.name)} - 技能 - 乌拉拉大胜利 - 赛马娘资料站</title>
           <meta
             name="description"
-            content={`赛马娘技能「${t(data.name)}」, ${t(data.describe)} `}
+            content={`赛马娘技能「${t(fullData.name)}」, ${t(fullData.describe)} `}
           />
-          <meta property="keywords" content={[data.name, t(data.name)].join(",")} />
+          <meta property="keywords" content={[fullData.name, t(fullData.name)].join(",")} />
         </Helmet>
       )}
       <div className="w-full flex mb-1 bg-gray-100 items-center">
         <div className="w-20 flex items-center justify-center">
-          <img alt={data.name} src={CDN_SERVER + data.imgUrl} className="w-14" />
+          <img alt={fullData.name} src={CDN_SERVER + fullData.imgUrl} className="w-14" />
         </div>
         <div className="flex-auto">
-          <p>{t(data.name)}</p>
-          <p className="text-gray-500">{data.name}</p>
+          <p>{t(fullData.name)}</p>
+          <p className="text-gray-500">{fullData.name}</p>
         </div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center shrink-0">{t("技能描述")}</div>
         <div className="flex-auto">
-          <p>{t(data.describe)}</p>
-          <p className="text-gray-500">{data.describe}</p>
+          <p>{t(fullData.describe)}</p>
+          <p className="text-gray-500">{fullData.describe}</p>
         </div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center shrink-0">{t("触发条件")}</div>
         <div className="flex-auto">
-          <p>{t(data.condition)}</p>
-          <p className="text-gray-500">{data.condition}</p>
+          <p>{t(fullData.condition)}</p>
+          <p className="text-gray-500">{fullData.condition}</p>
         </div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center shrink-0">{t("技能效果")}</div>
         <div className="flex-auto">
-          {data.ability?.map((ability) => {
+          {fullData.ability?.map((ability) => {
             return (
               <span key={ability.type}>{`${SKILL_TYPES[ability.type]} ${
                 ability.value / 10000
@@ -97,21 +111,21 @@ const SkillDetail = (props) => {
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center shrink-0">{t("持续时间")}</div>
-        <div className="flex-auto">{`${data.ability_time / 10000}s * ${t(
+        <div className="flex-auto">{`${fullData.ability_time / 10000}s * ${t(
           "赛道长度"
         )} / 1000}`}</div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center shrink-0">{t("冷却时间")}</div>
-        <div className="flex-auto">{`${data.cooldown / 10000}s * ${t("赛道长度")} / 1000`}</div>
+        <div className="flex-auto">{`${fullData.cooldown / 10000}s * ${t("赛道长度")} / 1000`}</div>
       </div>
       <div className="w-full flex mb-1 bg-gray-100">
         <div className="w-20 text-center shrink-0">{t("技能价格")}</div>
-        <div className="flex-auto">{data.need_skill_point}</div>
+        <div className="flex-auto">{fullData.need_skill_point}</div>
       </div>
       <div className="w-full flex mb-1">
         <div className="w-20 text-center shrink-0">{t("技能评分")}</div>
-        <div className="flex-auto">{data.grade_value}</div>
+        <div className="flex-auto">{fullData.grade_value}</div>
       </div>
       {!isNur && (
         <>

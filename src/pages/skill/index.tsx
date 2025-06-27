@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 import SkillList from "@/components/skill/SkillList";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
@@ -15,10 +10,10 @@ import useViewport from "@/hooks/useViewport";
 import { useDB } from "@/hooks/useDB";
 import { Helmet } from "react-helmet";
 
-const Skill = (props) => {
+const Skill = () => {
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
-  const [skillList, setSkillList] = useState();
+  const [skillList, setSkillList] = useState<Skill[]>();
   const { db } = useDB();
 
   useEffect(() => {
@@ -29,7 +24,7 @@ const Skill = (props) => {
   }, [db]);
 
   // init supportMode
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     localStorage.getItem("supportMode") === null && localStorage.setItem("supportMode", 0);
   }
 
