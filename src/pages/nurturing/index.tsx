@@ -72,7 +72,7 @@ const Nurturing = () => {
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
 
-  const db = useDB();
+  const { db } = useDB();
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const [height, setHeight] = React.useState(window.innerHeight);

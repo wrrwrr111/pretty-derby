@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";;
+import { Button } from "@/components/ui/button";
 // import {useState} from 'react';
 import { useDB } from "@/hooks/index";
 import { useTranslation } from "react-i18next";
@@ -12,7 +12,7 @@ const BuffButton = () => {
 };
 const BuffList = () => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const buffs = db.get("buffs").value();
   const cellStyle = {
@@ -41,4 +41,4 @@ const BuffList = () => {
 };
 export { BuffButton, BuffList };
 
-export default BuffList
+export default BuffList;

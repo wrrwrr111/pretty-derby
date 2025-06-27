@@ -39,7 +39,7 @@ const List = <T extends { id: string; name?: string }>({
   const [show, setShow] = useState(false);
   const [currentItem, setCurrentItem] = useState<T | null>(null);
 
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
 
   const list = dataList

@@ -54,7 +54,7 @@ const Nurturing = () => {
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
   const [decks, setDecks] = useState(dbL.get("myDecks").value());
 
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const races = db.get("races").value();
 

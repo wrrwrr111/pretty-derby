@@ -19,7 +19,7 @@ const SupportFilterForm = (props) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const allSupports = db.get("supports").value();
   const effects = db.get("effects").value();

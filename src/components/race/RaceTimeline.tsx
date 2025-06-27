@@ -17,7 +17,7 @@ const RaceTimeline: React.FC<RaceTimelineProps> = React.memo(({
 }) => {
   const { t } = useTranslation();
   const [showSpare, setShowSpare] = useState(false);
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
 
   return (

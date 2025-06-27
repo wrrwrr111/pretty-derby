@@ -24,7 +24,7 @@ const SupportListWithFilter = (props) => {
   const [showMode, setShowMode] = useState(false);
   const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
 
-  const db = useDB();
+  const { db } = useDB();
   useEffect(() => {
     if (db) setList(props.supportList || db.get("supports").value() || []);
   }, [db, props.supportList]);

@@ -12,7 +12,7 @@ const userId = dbL.get("userId").value();
 
 const MobileSeedCard = ({ data }) => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
 
   if (!db) return null;
 

@@ -66,7 +66,7 @@ const Race: React.FC<RaceProps> = ({ type, onSelect }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<number[]>([]);
   const [filters, setFilters] = useState<Record<string, string[]>>({});
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
 
   const useViewport = () => {
     const [height, setHeight] = React.useState(window.innerHeight);

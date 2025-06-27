@@ -10,7 +10,7 @@ import { CDN_SERVER } from "@/config";
 import { Helmet } from "react-helmet";
 const SupportDetail = (props) => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("supports").find({ id }).value();

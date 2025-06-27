@@ -78,7 +78,7 @@ const SkillFilterForm = (props) => {
     }
     onUpdate(tempList);
   };
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
 
   return (

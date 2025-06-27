@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "@/components/common/Layout";
+import { useDB } from "./hooks";
 
 // 使用 lazy 动态导入组件
 const Race = lazy(() => import("@/pages/race"));
@@ -16,14 +17,19 @@ const PlayerDetailPage = lazy(() => import("@/pages/player/detail"));
 const SkillDetailPage = lazy(() => import("@/pages/skill/detail"));
 const BuffList = lazy(() => import("@/components/buff"));
 
-// 加载中的占位组件
-const Loading = () => <div>Loading...</div>;
-
 const App = () => {
+  const { db, loading } = useDB();
+
+  useEffect(() => {
+    console.log(db, loading);
+  }, [db, loading]);
+
+  if (loading) return <div>Loading database...</div>;
+  if (!db) return <div>Failed to load database.</div>;
 
   return (
     <Layout>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Player />} />
           <Route path="/support" element={<Support />} />

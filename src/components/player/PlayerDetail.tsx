@@ -34,7 +34,7 @@ const PlayerItem = ({ data }) => {
 };
 const PlayerDetail = (props) => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);

@@ -56,7 +56,7 @@ const getValue = (effect, cur) => {
 
 const EffectTable = (props) => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
 
@@ -245,7 +245,7 @@ const TestEffectTable = (props) => {
     return output;
   };
 
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const effects = db.get("effects").value();
 

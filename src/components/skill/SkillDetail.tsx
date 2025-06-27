@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 const SkillDetail = (props) => {
   const { t } = useTranslation();
-  const db = useDB();
+  const { db } = useDB();
   if (!db) return null;
   const id = props.id;
   const data = props.data || db.get("skills").find({ id }).value();

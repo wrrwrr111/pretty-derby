@@ -19,7 +19,7 @@ const Skill = (props) => {
   const viewport = useViewport();
   const [show, setShow] = React.useState(false);
   const [skillList, setSkillList] = useState();
-  const db = useDB();
+  const { db } = useDB();
 
   useEffect(() => {
     if (db) {
