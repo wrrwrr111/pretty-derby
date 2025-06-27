@@ -1,0 +1,58 @@
+name: Deploy and Purge Cloudflare Cache
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 构建 vite 项目
+      - name: Build
+        run: npm run build
+
+      # 下载上一次构建存的 .cache.json
+      - name: Download previous .cache.json
+        uses: actions/download-artifact@v4
+        with:
+          name: cache-json
+          path: .
+
+      # 如果 artifact 不存在，创建空 .cache.json
+      - name: Ensure .cache.json exists
+        run: |
+          if [ ! -f .cache.json ]; then
+            echo '{}' > .cache.json
+          fi
+
+      # 检测文件是否变化并刷新 Cloudflare 缓存（如有变化）
+      - name: Run purge-cloudflare.js
+        run: node ./scripts/purge-cloudflare.js
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+
+      # 上传新的 .cache.json
+      - name: Upload .cache.json as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cache-json
+          path: .cache.json
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
