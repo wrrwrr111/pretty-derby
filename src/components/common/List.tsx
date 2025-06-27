@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 
 interface ListProps<T> {
   className?: string;
@@ -43,12 +43,12 @@ const List = <T extends { id: string; name?: string }>({
   if (!db) return null;
 
   const list = dataList
-  ? dataList
-  : idList
-  ? idList.reduce((list, cur) => {
-      return [...list, db.get(listKey).find({ id: cur }).value()];
-    }, [])
-  : db.get(listKey).value();;
+    ? dataList
+    : idList
+      ? idList.reduce((list, cur) => {
+          return [...list, db.chain.get(listKey).find({ id: cur }).value()];
+        }, [])
+      : db.chain.get(listKey).value();
 
   const showModal = (item: T) => {
     setCurrentItem(item);

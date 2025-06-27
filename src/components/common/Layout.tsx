@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-import useUa from "@/utils/ua";
+import useUa from "@/hooks/useUa";
 import LanButton from "@/components/lan-button";
 import { CDN_SERVER } from "@/config";
 import dbL from "@/dbL";
@@ -28,13 +28,12 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const navigate = useNavigate();
 
   const resetNur = () => {
-    dbL
-      .set("selected", {
-        supports: { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} },
-        player: {},
-        races: [],
-      })
-      .write();
+    dbL.chain.set("selected", {
+      supports: { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} },
+      player: {},
+      races: [],
+    });
+    dbL.write();
   };
 
   const list = ua.isPhone ? MOBILE_MENU_LIST : PC_MENU_LIST;

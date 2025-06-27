@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 import dbL from "@/dbL";
 import SupportList from "@/components/support/SupportList";
 import SupportFilterForm from "@/components/support/SupportFilterForm";
-import useViewport from "@/utils/useViewport";
+import useViewport from "@/hooks/useViewport";
 
 const SupportListWithFilter = (props) => {
   const { onClick, limitHeight, formName } = props;
@@ -22,11 +17,11 @@ const SupportListWithFilter = (props) => {
   const [list, setList] = useState(props.supportList || []);
   const [chooseMode, setChooseMode] = useState(false);
   const [showMode, setShowMode] = useState(false);
-  const [chosenList, setChosenList] = useState(dbL.get("mySupports").value() || []);
+  const [chosenList, setChosenList] = useState(dbL.chain.get("mySupports").value() || []);
 
   const { db } = useDB();
   useEffect(() => {
-    if (db) setList(props.supportList || db.get("supports").value() || []);
+    if (db) setList(props.supportList || db.chain.get("supports").value() || []);
   }, [db, props.supportList]);
 
   if (!db) return null;
@@ -48,7 +43,8 @@ const SupportListWithFilter = (props) => {
     } else {
       tmpList.splice(index, 1);
     }
-    dbL.update("mySupports", tmpList).write();
+    dbL.chain.update("mySupports", tmpList);
+    dbL.write();
     setChosenList([...tmpList]);
   };
 
@@ -91,7 +87,9 @@ const SupportListWithFilter = (props) => {
       )}
 
       {/* Main Content */}
-      <div className={`${limitHeight ? "h-[80vh]" : ""} ${viewport?.width >= 768 ? "w-3/4" : "w-full"}`}>
+      <div
+        className={`${limitHeight ? "h-[80vh]" : ""} ${viewport?.width >= 768 ? "w-3/4" : "w-full"}`}
+      >
         <ScrollArea className={limitHeight ? "h-full" : ""}>
           <SupportList
             className="justify-between"

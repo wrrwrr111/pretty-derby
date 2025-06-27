@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 
 import EventList from "@/components/event/EventList";
@@ -13,7 +13,7 @@ const SupportDetail = (props) => {
   const { db } = useDB();
   if (!db) return null;
   const id = props.id;
-  const data = props.data || db.get("supports").find({ id }).value();
+  const data = props.data || db.chain.get("supports").find({ id }).value();
   if (!data) return null;
   return (
     <div className="w-full flex flex-col p-3 overflow-x-hidden">

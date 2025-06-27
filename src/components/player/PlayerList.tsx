@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PlayerCard from "./PlayerCard";
 import PlayerDetail from "./PlayerDetail";
 import List from "@/components/common/List";
-import useUa from "@/utils/ua";
+import useUa from "@/hooks/useUa";
 
 const PlayerList = ({ className = "", dataList = null, onClick, sortFlag = false }) => {
   const ua = useUa();

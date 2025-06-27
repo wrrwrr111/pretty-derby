@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { getDate, getGolds, getColor } from "./race-utils";
 
 interface RaceTimelineProps {
@@ -36,7 +36,7 @@ const RaceTimeline: React.FC<RaceTimelineProps> = React.memo(({
           {Array.from({ length: 72 - 13 }, (_, i) => i + 13).map((i) => {
             if (raceList && raceList[i]) {
               const id = raceList[i].id;
-              const curRace = db.get("races").find({ id }).value();
+              const curRace = db.chain.get("races").find({ id }).value();
               const golds = getGolds(curRace);
               return (
                 <div key={`race-${id}`} className="relative">
@@ -55,7 +55,7 @@ const RaceTimeline: React.FC<RaceTimelineProps> = React.memo(({
               );
             } else if (filterRace && filterRace[i]) {
               return filterRace[i].map((id, index) => {
-                const curRace = db.get("races").find({ id }).value();
+                const curRace = db.chain.get("races").find({ id }).value();
                 const golds = getGolds(curRace);
                 const color = getColor(curRace.grade);
                 return (

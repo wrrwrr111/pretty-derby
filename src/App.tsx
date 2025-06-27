@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "@/components/common/Layout";
-import { useDB } from "./hooks";
+import { useDB } from "./hooks/useDB";
 
 // 使用 lazy 动态导入组件
 const Race = lazy(() => import("@/pages/race"));

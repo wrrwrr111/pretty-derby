@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Separator } from "@/components/ui/separator";
 import { SquarePen } from "lucide-react";
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import dbL from "@/dbL";
 import { useTranslation } from "react-i18next";
 import SupportListWithFilter from "@/components/support/SupportListWithFilter";
@@ -41,7 +41,7 @@ const Nurturing = () => {
     open: false,
   });
 
-  const selected = dbL.get("selected").value();
+  const selected = dbL.chain.get("selected").value();
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
   const [raceFilterCondition, setRaceFilterCondition] = useState(
@@ -52,11 +52,11 @@ const Nurturing = () => {
     }
   );
   const [filterRace, setFilterRace] = useState(selected.filterRace || {});
-  const [decks, setDecks] = useState(dbL.get("myDecks").value());
+  const [decks, setDecks] = useState(dbL.chain.get("myDecks").value());
 
   const { db } = useDB();
   if (!db) return null;
-  const races = db.get("races").value();
+  const races = db.chain.get("races").value();
 
   const showPlayer = () => setIsPlayerVisible(true);
   const closePlayer = () => setIsPlayerVisible(false);
@@ -64,7 +64,8 @@ const Nurturing = () => {
   const handleSelectPlayer = (data) => {
     setPlayer(data);
     selected.player = data;
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
     closePlayer();
   };
 
@@ -85,7 +86,8 @@ const Nurturing = () => {
     const newData = { ...supports, [supportIndex]: data };
     setSupports(newData);
     selected.supports[supportIndex] = data;
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
     closeSupport();
   };
 
@@ -116,15 +118,17 @@ const Nurturing = () => {
     });
 
     if (deck) {
-      dbL.get("myDecks").find({ id: deck.id }).assign(tmpDeck).write();
+      dbL.chain.get("myDecks").find({ id: deck.id }).assign(tmpDeck)
+      dbL.write();
       toast.info("卡组已更新");
     } else {
       tmpDeck.id = shortid.generate();
-      dbL.get("myDecks").push(tmpDeck).write();
+      dbL.chain.get("myDecks").push(tmpDeck)
+      dbL.write();
       toast.info("新卡组已保存");
     }
 
-    setDecks([...dbL.get("myDecks").value()]);
+    setDecks([...dbL.chain.get("myDecks").value()]);
   };
 
   const loadDeck = (deck) => {
@@ -132,25 +136,27 @@ const Nurturing = () => {
     selected.player = {};
 
     if (deck.playerId) {
-      selected.player = db.get("players").find({ id: deck.playerId }).value();
+      selected.player = db.chain.get("players").find({ id: deck.playerId }).value();
     }
 
     setPlayer(selected.player);
 
     deck.supportsId.forEach((id, index) => {
       if (id) {
-        selected.supports[index] = db.get("supports").find({ id }).value();
+        selected.supports[index] = db.chain.get("supports").find({ id }).value();
       }
     });
 
     setSupports({ ...selected.supports });
-    db.get("selected").assign(selected).write();
+    db.chain.get("selected").assign(selected)
+    dbL.write();
     toast.info("卡组已加载");
   };
 
   const deleteDeck = (deck) => {
-    dbL.get("myDecks").remove({ id: deck.id }).write();
-    setDecks([...dbL.get("myDecks").value()]);
+    dbL.chain.get("myDecks").remove({ id: deck.id })
+    dbL.write();
+    setDecks([...dbL.chain.get("myDecks").value()]);
     toast.info("卡组已删除");
   };
 
@@ -192,7 +198,8 @@ const Nurturing = () => {
     setFilterRace(tmpFilterRace);
     selected.raceFilterCondition = filterCondition;
     selected.filterRace = tmpFilterRace;
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
   };
 
   const toSupportDetail = (id) => navigate(`/support-detail/${id}`);

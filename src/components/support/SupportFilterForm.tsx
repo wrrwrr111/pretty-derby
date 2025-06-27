@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import CheckBox from "@/components/common/CheckBox";
 import Input from "@/components/common/Input";
 import { useTranslation } from "react-i18next";
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
 
 import { SUPPORT_TYPE_OPTIONS } from "@/config";
@@ -21,8 +21,8 @@ const SupportFilterForm = (props) => {
 
   const { db } = useDB();
   if (!db) return null;
-  const allSupports = db.get("supports").value();
-  const effects = db.get("effects").value();
+  const allSupports = db.chain.get("supports").value();
+  const effects = db.chain.get("effects").value();
   const effectOptions = Object.keys(effects).map((key) => {
     return { label: effects[key].name, value: key };
   });
@@ -72,7 +72,7 @@ const SupportFilterForm = (props) => {
       });
     }
     if (q) {
-      const allEventList = db.get("events").value();
+      const allEventList = db.chain.get("events").value();
       const eventIdList = allEventList
         .filter((event) => {
           let jsonEvent = JSON.stringify(event);

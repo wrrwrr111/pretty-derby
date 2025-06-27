@@ -35,7 +35,7 @@
     "i18next": "^25.2.1",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
-    "lowdb": "^1.0.0",
+    "lowdb": "^7.0.1",
     "lucide-react": "^0.522.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.0",
@@ -56,7 +56,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
-    "@types/lowdb": "^1.0.0",
+    "@types/lowdb": "^2.0.3",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.2",
     "@types/react-copy-to-clipboard": "^5.0.7",

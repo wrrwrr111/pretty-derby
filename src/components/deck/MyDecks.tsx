@@ -24,7 +24,7 @@ import { toast } from "sonner";
 
 const MyDecks: React.FC<DeckComponentProps> = ({ player, supports, loadDeck }) => {
   const { t } = useTranslation();
-  const [decks, setDecks] = useState(dbL.get("myDecks").value());
+  const [decks, setDecks] = useState(dbL.chain.get("myDecks").value());
   const [confirmAction, setConfirmAction] = useState<{
     type: "save" | "delete" | "share";
     deck?: Deck;
@@ -56,8 +56,9 @@ const MyDecks: React.FC<DeckComponentProps> = ({ player, supports, loadDeck }) =
   };
 
   const onChangeTag = (values: string[], deck: Deck) => {
-    dbL.get("myDecks").find({ id: deck.id }).assign({ tags: values }).write();
-    setDecks([...dbL.get("myDecks").value()]);
+    dbL.chain.get("myDecks").find({ id: deck.id }).assign({ tags: values });
+    dbL.write();
+    setDecks([...dbL.chain.get("myDecks").value()]);
   };
 
   return (

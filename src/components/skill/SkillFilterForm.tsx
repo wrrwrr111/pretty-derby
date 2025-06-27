@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import CheckBox from "@/components/common/CheckBox";
 import Input from "@/components/common/Input";
 
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 import {
   CDN_SERVER,
@@ -36,7 +36,7 @@ const SkillFilterForm = (props) => {
       onUpdate([]);
       return;
     }
-    let tempList = db.get("skills").orderBy("db_id").value();
+    let tempList = db.chain.get("skills").orderBy("db_id").value();
     if (q) {
       tempList = tempList.filter((item) => item.name.indexOf(q) > -1);
     }

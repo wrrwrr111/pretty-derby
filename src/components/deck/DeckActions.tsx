@@ -27,19 +27,22 @@ export const deckActions = {
 
     if (deck) {
       // Update existing deck
-      dbL.get("myDecks").find({ id: deck.id }).assign(tmpDeck).write();
+      dbL.chain.get("myDecks").find({ id: deck.id }).assign(tmpDeck)
+      dbL.write();
     } else {
       // Create new deck
       tmpDeck.id = shortid.generate();
-      dbL.get("myDecks").push(tmpDeck).write();
+      dbL.chain.get("myDecks").push(tmpDeck)
+      dbL.write();
     }
 
-    return [...dbL.get("myDecks").value()];
+    return [...dbL.chain.get("myDecks").value()];
   },
 
   deleteDeck: (deck: Deck) => {
-    dbL.get("myDecks").remove({ id: deck.id }).write();
-    return [...dbL.get("myDecks").value()];
+    dbL.chain.get("myDecks").remove({ id: deck.id })
+    dbL.write();
+    return [...dbL.chain.get("myDecks").value()];
   },
 
   shareDeck: async (deck: Deck) => {

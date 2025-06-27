@@ -2,7 +2,7 @@ import React from "react";
 import SupportList from "@/components/support/SupportList";
 import PlayerList from "@/components/player/PlayerList";
 
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { SKILL_TYPES, CDN_SERVER } from "@/config";
 
 import { useTranslation } from "react-i18next";
@@ -12,9 +12,9 @@ const SkillDetail = (props) => {
   const { db } = useDB();
   if (!db) return null;
   const id = props.id;
-  const data = props.data || db.get("skills").find({ id }).value();
+  const data = props.data || db.chain.get("skills").find({ id }).value();
   const isNur = props.isNur !== undefined ? props.isNur : parseInt(props.match?.params?.nur);
-  const supportList = db
+  const supportList = db.chain
     .get("supports")
     .filter((support) => {
       let flag = 0;
@@ -28,7 +28,7 @@ const SkillDetail = (props) => {
 
     .sort((a, b) => b.rarity - a.rarity)
     .value();
-  const playerList = db
+  const playerList = db.chain
     .get("players")
     .filter((player) => {
       let flag = 0;

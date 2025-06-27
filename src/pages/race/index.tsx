@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useTranslation } from "react-i18next";
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { RACE_FILTER_LIST } from "@/config";
 import { Helmet } from "react-helmet";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -82,7 +82,7 @@ const Race: React.FC<RaceProps> = ({ type, onSelect }) => {
 
   if (!db) return null;
 
-  const allRaceList: RaceData[] = db
+  const allRaceList: RaceData[] = db.chain
     .get("races")
     .value()
     .map((race, index) => ({
@@ -179,7 +179,7 @@ const Race: React.FC<RaceProps> = ({ type, onSelect }) => {
               ))}
             </TableRow>
           </TableHeader>
-          <TableBody style={{ maxHeight: `${dynamicTableHeight}px`, overflowY: 'auto' }}>
+          <TableBody style={{ maxHeight: `${dynamicTableHeight}px`, overflowY: "auto" }}>
             {filteredData.map((race) => (
               <TableRow key={race.key}>
                 {onSelect && (

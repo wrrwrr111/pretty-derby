@@ -8,7 +8,7 @@ import {
   RaceTimeline,
 } from "@/components/race/index";
 // import {EffectTable} from './effect.js'
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 
 import { Helmet } from "react-helmet";
@@ -38,7 +38,7 @@ const PlayerDetail = (props) => {
   const id = props.id || props.match?.params?.id;
   // 是否育成 育成顺序样式不同
   const isNur = props.isNur ?? parseInt(props.match?.params?.nur);
-  const data = props.data || db.get("players").find({ id }).value();
+  const data = props.data || db.chain.get("players").find({ id }).value();
 
   if (!data) return null;
 

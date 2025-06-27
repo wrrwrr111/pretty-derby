@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 // import {useState} from 'react';
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 const BuffButton = () => {
   return (
-    <Button size="sm" buttonType="outline" data-tip="buff list">
+    <Button size="sm" data-tip="buff list">
       Buff
     </Button>
   );
@@ -14,7 +14,7 @@ const BuffList = () => {
   const { t } = useTranslation();
   const { db } = useDB();
   if (!db) return null;
-  const buffs = db.get("buffs").value();
+  const buffs = db.chain.get("buffs").value();
   const cellStyle = {
     // width:'20%',
     height: "32px",

@@ -66,7 +66,7 @@ const formSchema = z.object({
 
 const SeedInputForm = ({ onFinish: onFinishProp }) => {
   const [seed, setSeed] = useState({});
-  const userId = dbL.get("userId").value();
+  const userId = dbL.data.userId.value();
 
   const form = useForm({
     resolver: zodResolver(formSchema),

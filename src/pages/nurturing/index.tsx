@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import { useTranslation } from "react-i18next";
 import dbL from "@/dbL";
 import EventList from "@/components/event/EventList";
@@ -60,7 +60,7 @@ const Nurturing = () => {
   const [isSupportVisible, setIsSupportVisible] = useState(false);
   const [supportIndex, setSupportIndex] = useState(1);
 
-  const selected = dbL.get("selected").value();
+  const selected = dbL.chain.get("selected").value();
   const [supports, setSupports] = useState(selected.supports);
   const [player, setPlayer] = useState(selected.player);
   const [raceFilterCondition, setRaceFilterCondition] = useState(
@@ -89,11 +89,11 @@ const Nurturing = () => {
 
   const dynamicRowHeight = Math.floor((useViewport().height - 128 - 40) / 18);
   const dynamicGridWidth = Math.floor(useViewport().width - 10);
-  const originalLayout = dbL.get("layout").value() || layoutWithoutBlank;
+  const originalLayout = dbL.chain.get("layout").value() || layoutWithoutBlank;
   const [layout, setLayout] = useState(originalLayout);
 
   if (!db) return null;
-  const races = db.get("races").value();
+  const races = db.chain.get("races").value();
 
   const showPlayer = () => setIsPlayerVisible(true);
   const closePlayer = () => setIsPlayerVisible(false);
@@ -101,7 +101,8 @@ const Nurturing = () => {
     setIsPlayerVisible(false);
     setPlayer(data);
     selected.player = data;
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
   };
 
   const showSupport = (index) => {
@@ -121,23 +122,25 @@ const Nurturing = () => {
     setSupports(newData);
     setIsSupportVisible(false);
     selected.supports[supportIndex] = data;
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
   };
 
   const loadDeck = (deck) => {
     selected.supports = { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {} };
     selected.player = {};
     if (deck.playerId) {
-      selected.player = db.get("players").find({ id: deck.playerId }).value();
+      selected.player = db.chain.get("players").find({ id: deck.playerId }).value();
     }
     setPlayer(selected.player);
     deck.supportsId.forEach((id, index) => {
       if (id) {
-        selected.supports[index] = db.get("supports").find({ id: id }).value();
+        selected.supports[index] = db.chain.get("supports").find({ id: id }).value();
       }
     });
     setSupports({ ...selected.supports });
-    dbL.get("selected").assign(selected).write();
+    dbL.chain.get("selected").assign(selected)
+    dbL.write();
   };
 
   const onChangeRace = (filterCondition) => {
@@ -163,11 +166,13 @@ const Nurturing = () => {
     setFilterRace(tmpFilterRace);
     selected.raceFilterCondition = filterCondition;
     selected.filterRace = tmpFilterRace;
-    dbL.get("selected").assign({ ...selected }).write();
+    dbL.chain.get("selected").assign({ ...selected })
+    dbL.write();
   };
 
   const onLayoutChange = (layout) => {
-    dbL.set("layout", layout).write();
+    dbL.chain.set("layout", layout)
+    dbL.write();
     setLayout(layout);
   };
 

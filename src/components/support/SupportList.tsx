@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SupportCard from "./SupportCard";
 import SupportDetail from "./SupportDetail";
 import List from "@/components/common/List";
-import useUa from "@/utils/ua";
+import useUa from "@/hooks/useUa";
 const SupportList = ({ className, dataList, onClick, sortFlag = false, ownList }) => {
   const ua = useUa();
   const navigate = useNavigate();

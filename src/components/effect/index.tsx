@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Slider } from "@/components/ui/slider";
 import { useTranslation } from "react-i18next";
-import { useDB } from "@/hooks/index";
+import { useDB } from "@/hooks/useDB";
 import { EFFECT_LIMITS } from "@/config";
 
 const getValue = (effect, cur) => {
@@ -58,7 +58,7 @@ const EffectTable = (props) => {
   const { t } = useTranslation();
   const { db } = useDB();
   if (!db) return null;
-  const effects = db.get("effects").value();
+  const effects = db.chain.get("effects").value();
 
   // 定义列配置
   let columns: ColumnDef<any>[] = [
@@ -247,7 +247,7 @@ const TestEffectTable = (props) => {
 
   const { db } = useDB();
   if (!db) return null;
-  const effects = db.get("effects").value();
+  const effects = db.chain.get("effects").value();
 
   return (
     <div className="space-y-4">

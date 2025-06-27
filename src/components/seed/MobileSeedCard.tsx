@@ -1,5 +1,5 @@
 import React from "react";
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import { Smile, Frown, Copy } from "lucide-react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useTranslation } from "react-i18next";
@@ -8,7 +8,7 @@ import { CDN_SERVER, SEED_BLUE_LABELS, SEED_RED_LABELS } from "@/config";
 import dbL from "@/dbL";
 import { toast } from "sonner";
 
-const userId = dbL.get("userId").value();
+const userId = dbL.chain.get("userId").value();
 
 const MobileSeedCard = ({ data }) => {
   const { t } = useTranslation();
@@ -16,8 +16,8 @@ const MobileSeedCard = ({ data }) => {
 
   if (!db) return null;
 
-  const player = db.get("players").find({ id: data.playerId0 }).value();
-  const support = db.get("supports").find({ id: data.supportId }).value();
+  const player = db.chain.get("players").find({ id: data.playerId0 }).value();
+  const support = db.chain.get("supports").find({ id: data.supportId }).value();
 
   const like = async (seed) => {
     if (!userId) {

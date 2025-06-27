@@ -10,9 +10,9 @@ import {
 import SkillList from "@/components/skill/SkillList";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
 
-import useViewport from "@/utils/useViewport";
+import useViewport from "@/hooks/useViewport";
 
-import { useDB } from "@/hooks";
+import { useDB } from "@/hooks/useDB";
 import { Helmet } from "react-helmet";
 
 const Skill = (props) => {
@@ -23,7 +23,7 @@ const Skill = (props) => {
 
   useEffect(() => {
     if (db) {
-      const allSkillList = db.get("skills").orderBy("db_id").value();
+      const allSkillList = db.chain.get("skills").orderBy("db_id").value();
       setSkillList(allSkillList);
     }
   }, [db]);
