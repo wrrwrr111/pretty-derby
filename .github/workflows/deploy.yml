@@ -16,11 +16,11 @@ jobs:
 
       # 安装依赖
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # 构建 vite 项目
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       # 下载上一次构建存的 .cache.json
       - name: Download previous .cache.json
