@@ -15,10 +15,9 @@ i18n
     fallbackLng: "zh_CN",
     load: "currentOnly",
     backend: {
-      loadPath: `https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/src/assert/locales/{{lng}}.json`,
-      crossDomain: true,
+      loadPath: `/locales/{{lng}}.json`,
+
     },
   });
 
-// https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby@master/src/assert/locales/zh_CN.json
 export default i18n;

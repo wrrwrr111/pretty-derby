@@ -1,4 +1,4 @@
-const CDN_SERVER = "https://fastly.jsdelivr.net/gh/wrrwrr111/pretty-derby/public/";
+const CDN_SERVER = "/";
 const PC_MENU_LIST = [
   { path: "/", title: "角色" },
   { path: "/support", title: "支援" },
