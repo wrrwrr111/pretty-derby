@@ -22,14 +22,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      # 下载上一次构建存的 .cache.json
-      - name: Download previous .cache.json
+      - name: Download previous .cache.json (optional)
+        continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           name: cache-json
           path: .
 
-      # 如果 artifact 不存在，创建空 .cache.json
       - name: Ensure .cache.json exists
         run: |
           if [ ! -f .cache.json ]; then
