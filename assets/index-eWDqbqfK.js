@@ -1,0 +1,1 @@
+import{j as t}from"./index-kTOQ8-TP.js";import{S as r}from"./SupportListWithFilter-BMQ7eDpd.js";import{H as o}from"./Helmet-B3MzCiV0.js";import"./PlayerList-Blf72vC9.js";import"./useViewport-ROgr3WGv.js";const x=()=>t.jsxs(t.Fragment,{children:[t.jsx(o,{children:t.jsx("title",{children:"支援 - 乌拉拉大胜利 - 赛马娘资料站"})}),t.jsx(r,{}),";"]});export{x as default};

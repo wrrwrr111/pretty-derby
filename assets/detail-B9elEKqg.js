@@ -1,0 +1,1 @@
+import{j as r}from"./index-kTOQ8-TP.js";import{i as p}from"./PlayerList-Blf72vC9.js";import"./Helmet-B3MzCiV0.js";const m=e=>{var t,a;const o=(a=(t=e.match)==null?void 0:t.params)==null?void 0:a.id;return r.jsx("div",{className:"flex flex-auto w-full flex-wrap max-w-6xl mx-auto",children:r.jsx(p,{id:o,page:!0})})};export{m as default};
