@@ -1,0 +1,1 @@
+import{am as e,j as a}from"./index-BAKeF-2C.js";import{i as r}from"./PlayerList-Bk6eXy37.js";import"./Helmet-l2yEWunx.js";const m=()=>{const{id:t}=e();return a.jsx("div",{className:"flex flex-auto w-full flex-wrap max-w-6xl mx-auto",children:a.jsx(r,{id:t,page:!0})})};export{m as default};
