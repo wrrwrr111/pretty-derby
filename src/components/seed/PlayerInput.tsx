@@ -28,7 +28,6 @@ const PlayerInput: React.FC<PlayerInputProps> = ({ value = {}, onChange }) => {
   };
 
   const handleSelectPlayer = (playerData: PlayerData) => {
-    console.log("🚀 ~ handleSelectPlayer ~ playerData:", playerData);
     setData(playerData);
     triggerChange(playerData);
   };

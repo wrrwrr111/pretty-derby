@@ -23,7 +23,6 @@ export type ListProps<T extends ItemWithId> = {
   itemRender: (item: T, showModal: (item: T) => void) => React.ReactNode;
   itemClass?: string;
   detailRender: (item: T | null) => React.ReactNode;
-  detailModalSize?: "sm" | "md" | "lg" | "xl" | "2xl";
 };
 
 const List = <T extends ItemWithId>({
@@ -36,7 +35,6 @@ const List = <T extends ItemWithId>({
   itemRender,
   itemClass,
   detailRender,
-  detailModalSize = "lg",
 }: ListProps<T>) => {
   const { t } = useTranslation();
   const [show, setShow] = useState(false);
@@ -102,7 +100,7 @@ const List = <T extends ItemWithId>({
       {renderContent}
 
       <Dialog open={show} onOpenChange={setShow}>
-        <DialogContent className={`max-w-${detailModalSize}`}>
+        <DialogContent>
           {currentItem?.name && (
             <DialogHeader>
               <DialogTitle>{currentItem.name}</DialogTitle>

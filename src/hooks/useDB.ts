@@ -37,7 +37,6 @@ export function useDB() {
         const res = await fetch("/db.json");
         if (!res.ok) throw new Error("Failed to load db.json");
         const jsonDB = await res.json();
-        console.log("🚀 ~ fetchData ~ jsonDB:", jsonDB);
 
         // Create in-memory database
         const adapter = new Memory<Schema>();

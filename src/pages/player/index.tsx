@@ -4,9 +4,6 @@ import { Helmet } from "react-helmet";
 
 //todo filter
 const Player = (props) => {
-  useEffect(() => {
-    console.log("!!!Player");
-  }, []);
 
   return (
     <>

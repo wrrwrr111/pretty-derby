@@ -8,7 +8,7 @@ import useUa from "@/hooks/useUa";
 
 interface PlayerListProps {
   className?: string;
-  dataList: PlayerList;
+  dataList?: PlayerList;
   onClick?: (player: Player) => void;
   sortFlag?: boolean;
 }

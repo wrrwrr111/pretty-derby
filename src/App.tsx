@@ -20,10 +20,6 @@ const BuffList = lazy(() => import("@/components/buff"));
 const App = () => {
   const { db, loading } = useDB();
 
-  useEffect(() => {
-    console.log(db, loading);
-  }, [db, loading]);
-
   if (loading) return <div>Loading database...</div>;
   if (!db) return <div>Failed to load database.</div>;
 
