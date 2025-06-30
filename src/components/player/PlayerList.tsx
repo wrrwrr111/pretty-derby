@@ -34,8 +34,11 @@ const PlayerList: React.FC<PlayerListProps> = ({
   const handleClick = (player: Player) => {
     if (onClick) {
       onClick(player);
-    } else if (ua.isPhone) {
+      return true;
+    }
+    if (ua.isPhone) {
       navigate(`/player-detail/${player.id}`);
+      return true;
     }
     return false;
   };

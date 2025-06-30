@@ -36,8 +36,11 @@ const SupportList: React.FC<SupportListProps> = ({
   const handleClick = (support: SupportCard) => {
     if (onClick) {
       onClick(support);
-    } else if (ua.isPhone) {
+      return true;
+    }
+    if (ua.isPhone) {
       navigate(`/support-detail/${support.id}`);
+      return true;
     }
     return false;
   };
