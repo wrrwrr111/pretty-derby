@@ -1,18 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-
-import CheckBox from "@/components/common/CheckBox";
-import Input from "@/components/common/Input";
 import { useTranslation } from "react-i18next";
 import { useDB } from "@/hooks/useDB";
 import SkillFilterForm from "@/components/skill/SkillFilterForm";
-
 import { SUPPORT_TYPE_OPTIONS } from "@/config";
+
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 const SupportFilterForm = (props) => {
   const { t } = useTranslation();
   const { onUpdate, needId, formName = "sup" } = props;
-  const { register, watch, setValue } = useForm();
+  const { register, watch, setValue, control } = useForm();
 
   React.useEffect(() => {
     const subscription = watch((value, { name, type }) => getFilterList(value));
@@ -26,8 +26,8 @@ const SupportFilterForm = (props) => {
   const effectOptions = Object.keys(effects).map((key) => {
     return { label: effects[key].name, value: key };
   });
+
   const getFilterList = (value) => {
-    // const { type, effect, q, skill } = value;
     const q = value[`${formName}q`];
     const skill = value["skill"];
     const effect =
@@ -104,39 +104,82 @@ const SupportFilterForm = (props) => {
     }
     onUpdate && onUpdate(tempList);
   };
+
   const handleSkillFilterFormChange = (list) => {
     setValue("skill", list);
   };
+
   return (
-    <div className="flex flex-wrap">
-      <Input register={register} name="q" placeholder={t("事件关键词搜索")} />
-      <p className="w-full my-1 text-gray-700">{t("类型")}</p>
-      {SUPPORT_TYPE_OPTIONS.map(({ label, value }) => (
-        <CheckBox
-          key={formName + "type" + value}
-          register={register}
-          name={formName + "type"}
-          label={t(label)}
-          value={formName + value}
+    <div className="flex flex-wrap gap-4">
+      <div className="w-full">
+        <Input {...register(`${formName}q`)} placeholder={t("事件关键词搜索")} />
+      </div>
+
+      <div className="w-full">
+        <Label className="text-sm font-medium leading-none">{t("类型")}</Label>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {SUPPORT_TYPE_OPTIONS.map(({ label, value }) => (
+            <div key={formName + "type" + value} className="flex items-center space-x-2">
+              <Checkbox
+                id={formName + "type" + value}
+                value={formName + value}
+                onCheckedChange={(checked) => {
+                  const currentValues = watch(`${formName}type`) || [];
+                  if (checked) {
+                    setValue(`${formName}type`, [...currentValues, formName + value]);
+                  } else {
+                    setValue(
+                      `${formName}type`,
+                      currentValues.filter((v) => v !== formName + value)
+                    );
+                  }
+                }}
+              />
+              <Label htmlFor={formName + "type" + value} className="text-sm font-normal">
+                {t(label)}
+              </Label>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full">
+        <Label className="text-sm font-medium leading-none mb-2">{t("技能筛选")}</Label>
+        <SkillFilterForm
+          formName={formName}
+          onUpdate={handleSkillFilterFormChange}
+          checkOnly={true}
+          needId={true}
         />
-      ))}
-      <p className="w-full my-1 text-gray-700">{t("技能筛选")}</p>
-      <SkillFilterForm
-        formName={formName}
-        onUpdate={handleSkillFilterFormChange}
-        checkOnly={true}
-        needId={true}
-      />
-      <p className="w-full my-1 text-gray-700">{t("育成效果")}</p>
-      {effectOptions.map(({ label, value }) => (
-        <CheckBox
-          key={formName + "effect" + value}
-          register={register}
-          name={formName + "effect"}
-          label={t(label)}
-          value={formName + value}
-        />
-      ))}
+      </div>
+
+      <div className="w-full">
+        <Label className="text-sm font-medium leading-none">{t("育成效果")}</Label>
+        <div className="mt-2 space-y-2">
+          {effectOptions.map(({ label, value }) => (
+            <div key={formName + "effect" + value} className="flex items-center space-x-2">
+              <Checkbox
+                id={formName + "effect" + value}
+                value={formName + value}
+                onCheckedChange={(checked) => {
+                  const currentValues = watch(`${formName}effect`) || [];
+                  if (checked) {
+                    setValue(`${formName}effect`, [...currentValues, formName + value]);
+                  } else {
+                    setValue(
+                      `${formName}effect`,
+                      currentValues.filter((v) => v !== formName + value)
+                    );
+                  }
+                }}
+              />
+              <Label htmlFor={formName + "effect" + value} className="text-sm font-normal">
+                {t(label)}
+              </Label>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
